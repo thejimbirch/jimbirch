@@ -2,3 +2,46 @@
  * This file should get overwritten if Method 1 is used. If Method 2 is chosen,
  * remove this comment and start adding your styles to this file.
  */
+html {
+    background: #000;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+    color: #111;
+}
+
+body {
+    background-color: transparent;
+    color: #111;
+    font-size: 16px;
+}
+
+h1 {
+    color: #111;
+    font-size: 48px;
+    text-shadow:    0px 1px 1px rgba(0,0,0,0.4),
+                    0px 8px 13px rgba(0,0,0,0.1),
+                    0px 18px 23px rgba(0,0,0,0.1);
+}
+
+a,a:active,a:hover,a:visited {
+    color: rgba(82, 168, 236, 1);
+    text-decoration: none;
+}
+
+a:hover {
+    text-shadow: 0 0 3px rgba(82, 168, 236, 0.6);
+}
+
+.well {
+    background-color: transparent;
+    background:rgba(255,255,255,0.7);
+    border: none;
+}
+
+blockquote p {
+    font-size: 150%;
+    font-weight: 300;
+    line-height: 1.25;
+}
