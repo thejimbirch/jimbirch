@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the MakeUp Line Quickstart feature.
+ */
+
+include_once 'makeup_line_quickstart.features.inc';

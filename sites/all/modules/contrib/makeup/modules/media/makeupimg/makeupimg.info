@@ -1,0 +1,12 @@
+name = MakeUp Image
+description = Imagefield formatter to display an image through a CSS declaration.
+package = MakeUp
+core = 7.x
+
+dependencies[] = image
+; Information added by Drupal.org packaging script on 2014-06-02
+version = "7.x-1.0-rc4"
+core = "7.x"
+project = "makeup"
+datestamp = "1401752028"
+

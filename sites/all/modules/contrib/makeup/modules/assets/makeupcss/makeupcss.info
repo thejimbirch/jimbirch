@@ -1,0 +1,12 @@
+name = MakeUp CSS
+description = Defines CSS field types.
+package = MakeUp
+core = 7.x
+dependencies[] = field
+
+; Information added by Drupal.org packaging script on 2014-06-02
+version = "7.x-1.0-rc4"
+core = "7.x"
+project = "makeup"
+datestamp = "1401752028"
+

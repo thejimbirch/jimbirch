@@ -1,0 +1,96 @@
+<?php
+
+/**
+ * @file
+ * Defines CSS field types.
+ */
+
+/**
+ * Implements hook_help().
+ * TODO: Give more details about the MakeUp CSS module in the about statement
+ */
+function makeupcss_help($path, $arg) {
+  switch ($path) {
+    case 'admin/help#makeupcss':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t("The Makeup module defines CSS field types for the Field module.") . '</p>';
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_field_info().
+ *
+ * Field settings:
+ *   - 
+ * Instance settings:
+ *   - 
+ */
+function makeupcss_field_info() {
+  return array(
+    'makeup_css' => array(
+      'label' => t('CSS code'),
+      'description' => t('This field stores CSS code in the database.'),
+      'default_widget' => 'makeup_textarea',
+      'default_formatter' => 'makeup_default',
+    ),
+  );
+}
+
+/**
+ * Implements hook_field_formatter_info().
+ */
+function makeupcss_field_formatter_info() {
+  return array(
+    // CSS can be displayed inline or as a file
+    'makeup_inlinecss' => array(
+      'label' => t('Inline CSS'),
+      'field types' => array('makeup_css'),
+    ),
+    'makeup_infilecss' => array(
+      'label' => t('CSS File'),
+      'field types' => array('makeup_css'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function makeupcss_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $element = array();
+  switch ($display['type']) {
+    case 'makeup_inlinecss':
+      foreach ($items as $delta => $item) {
+        $element[$delta] = array(
+          '#attached' => array(
+            'css' => drupal_add_css($item['value'], 'inline'),
+            ),
+          );
+      }
+      break;
+    case 'makeup_infilecss':
+      foreach ($items as $delta => $item) {
+        $cssfile_name = drupal_tempnam('public://makeup_css','css'); 
+        $file = file_save_data($item['value'], $cssfile_name);
+        $element[$delta] = array(
+          '#attached' => array(
+            'css' => drupal_add_css($file, 'file'),
+            ),
+          );
+      }
+      break;
+  }
+  return $element;
+}
+
+/**
+ * Implements hook_field_is_empty().
+ */
+function makeupcss_field_is_empty($item, $field) {
+  if (!isset($item['value']) || $item['value'] === '') {
+    return TRUE;
+  }
+  return FALSE;
+}

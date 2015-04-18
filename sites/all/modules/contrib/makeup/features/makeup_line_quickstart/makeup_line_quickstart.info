@@ -1,0 +1,43 @@
+name = MakeUp Line Quickstart
+description = A quick start feature for MakeUp Line: provides the needed Content types and Field settings. Read the README.txt for details.
+core = 7.x
+package = MakeUp
+version = 7.x-1.0-beta5
+project = makeup_line_quickstart
+dependencies[] = features
+dependencies[] = field_collection
+dependencies[] = image
+dependencies[] = makeup
+dependencies[] = makeupcss
+dependencies[] = makeupimg
+dependencies[] = taxonomy
+dependencies[] = text
+features[features_api][] = api:2
+features[field_base][] = body
+features[field_base][] = field_banner
+features[field_base][] = field_css
+features[field_base][] = field_image
+features[field_base][] = field_line_title
+features[field_base][] = field_lines
+features[field_base][] = field_tags
+features[field_instance][] = node-article-body
+features[field_instance][] = node-article-field_image
+features[field_instance][] = node-article-field_line_title
+features[field_instance][] = node-article-field_tags
+features[field_instance][] = node-hubpage-body
+features[field_instance][] = node-hubpage-field_banner
+features[field_instance][] = node-hubpage-field_css
+features[field_instance][] = node-hubpage-field_line_title
+features[field_instance][] = node-hubpage-field_lines
+features[image][] = makeup_3cols
+features[node][] = article
+features[node][] = hubpage
+features[taxonomy][] = tags
+project path = sites/all/modules/makeup/features
+
+; Information added by Drupal.org packaging script on 2014-06-02
+version = "7.x-1.0-rc4"
+core = "7.x"
+project = "makeup"
+datestamp = "1401752028"
+

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the MakeUp Line Deluxe feature.
+ */
+
+include_once 'makeup_line_deluxe.features.inc';
