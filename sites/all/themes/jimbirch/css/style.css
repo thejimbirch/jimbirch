@@ -19,16 +19,25 @@ body {
     letter-spacing: 0.01rem;
     line-height: 1.5;
     padding-top:69px;
+    padding-bottom:69px;
     text-rendering: optimizelegibility;
     -moz-osx-font-smoothing: grayscale;
 }
 
 h1 {
     color: #111;
-    font-family: 'Lato', sans-serif;
-    font-size: 48px;
+    font-size: 42px;
     font-weight: 900;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.4)
+}
+
+#clear-content h1, #clear-content p {
+    color: #FFF;
+}
+
+h1,h2,h3,h4 {
+    font-family: 'Lato', sans-serif;
+    margin-top: 0;
 }
 
 a,a:active,a:hover,a:visited {
@@ -51,12 +60,81 @@ p {
     border: none;
 }
 
+blockquote {
+    border-left: none;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D";
+}
+blockquote:before {
+    color: rgba(0, 0, 0, 0.8);
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+
+blockquote:after {
+    font-size: 4em;
+    line-height: 0.1em;
+    vertical-align: -0.4em;
+    content:"\201D";
+}
+
 blockquote p {
+    display: inline;
     font-size: 150%;
     font-weight: 300;
     line-height: 1.25;
+    margin-left:-20px;
 }
 
 .front h1, .front a, .front a:active, .front a:visited, .front p {
     color: #FFF;
+}
+
+.row img {
+    max-width: 100%;
+    height: auto;
+}
+
+.blog li {
+    margin-bottom: 20px;
+}
+
+.blog > li > a > img {
+    float: left;
+    margin: 0 20px 0 0;
+}
+
+.blog h2 a {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.primary-links {
+    float: left;
+    margin: 0 6px 0 0;
+    padding: 0;
+}
+
+.primary-links li {
+    list-style-type: none;
+    display: inline;
+}
+
+.primary-links li a {
+    color: #FFF;
+    display: inline-block;
+    font-family: 'Lora', serif;
+    padding: 0 10px 5px 0;
+}
+
+.primary-links .first a {
+    display: block;
+    font-family: 'Lato', sans-serif;
+    font-size: 48px;
+    font-weight: 900;
+    padding: 0;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.4)
 }

@@ -11,8 +11,10 @@ $plugin = array(
   'theme' => 'panels-main',
   'css' => 'main.css',
   'regions' => array(
-      'row-1' => t('Row 1'),
-      'row-2' => t('Row 2 Alt'),
-      'row-3' => t('Row 3 Well')
+      'system-content' => t('System Content'),
+      'clear-content' => t('Clear Content'),
+      'page-sidebar' => t('Page Sidebar'),
+      'main-content' => t('Main Content Well'),
+      'content-sidebar' => t('Content Sidebar Well')
   ),
 );
