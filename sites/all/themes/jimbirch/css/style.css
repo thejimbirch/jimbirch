@@ -8,6 +8,7 @@ html {
     -o-background-size: cover !important;
     background-size: cover !important;
     color: #111;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 }
 
 body {
@@ -33,11 +34,13 @@ h1 {
 
 #clear-content h1, #clear-content p {
     color: #FFF;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.4)
 }
 
 h1,h2,h3,h4 {
     font-family: 'Lato', sans-serif;
     margin-top: 0;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.4)
 }
 
 a,a:active,a:hover,a:visited {
@@ -72,6 +75,11 @@ ul li, ol li {
     background-color: transparent;
     background:rgba(255,255,255,0.7);
     border: none;
+}
+
+.well p, .well li, #clear-content .well p {
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 }
 
 blockquote {
@@ -142,6 +150,7 @@ blockquote p {
     display: inline-block;
     font-family: 'Lora', serif;
     padding: 0 10px 5px 0;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.4)
 }
 
 .primary-links .first a {
