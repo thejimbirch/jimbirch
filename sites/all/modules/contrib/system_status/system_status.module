@@ -1,0 +1,91 @@
+<?php
+/**
+ * @file
+ * Drupal system status
+ */
+
+/**
+ * Implements hook_help().
+ *
+ * Displays help and module information.
+ */
+function system_status_help($path, $arg) {
+  switch ($path) {
+    case 'admin/help#system_status':
+      $output = '<h2>' . t('System Status module information') .'</h2>';
+      $output .= '<p>' . t('System Status provides an easy way to get an overview of all the available updates for your Drupal websites.') . '<br/>';
+      $output .= t('Enable the System Status module on all your Drupal websites and allow reporting to DrupalStatus.org for a centralized overview and email summaries of available updates and installed versions.') . '</p>';
+      $output .= '<p>' . t('The accompanying service offered by DrupalStatus.org is free but if you do not want to use this service this lightweight module allows you to built your own overviews and dashboard.') . '</p>';
+      $output .= '<p>' . t('How does it work?') . '</p>';
+      $output .= '<ul>';
+      $output .= '<li>' . t('Enable the System Status module on your Drupal website') . '</li>';
+      $output .= '<li>' . t('Click the "Add this site to your DrupalStatus.org overview" button to be redirected to the DrupalStatus website with the necessary credentials.') . '</li>';
+      $output .= '</ul>';
+
+      return $output;
+    break;
+  }
+}
+
+/**
+ * Implements hook_menu().
+ */
+function system_status_menu() {
+  $items = array();
+
+  $items['admin/reports/system_status'] = array(
+    'title' => 'System Status',
+    'description' => 'Output of the System status module',
+    'access callback' => 'system_status_access_callback',
+    'access arguments' => array(3),
+    'page callback' => 'system_status_status_page',
+    'file' => 'system_status_status.page.inc',
+    'type' => MENU_CALLBACK,
+  );
+
+  $items['admin/config/system/system_status'] = array(
+    'title' => 'System Status',
+    'description' => 'Configuration for System status module',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('system_status_form'),
+    'file' => 'system_status.admin.inc',
+    'access arguments' => array('administer site configuration'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  return $items;
+}
+
+/**
+ * Access callback: Check authorized IP.
+ * 
+ * @see system_status_menu()
+ */
+function system_status_access_callback($token = FALSE) {
+
+  if ((variable_get('system_status_need_protect_token', 0) == 1 || variable_get('system_status_service_allow_drupalstatus', 1) == 1) && $token !== variable_get('system_status_token', "")) {
+    return FALSE;
+  }
+
+  $ip_address = ip_address();
+
+  if (variable_get('system_status_service_allow_drupalstatus', 1) == 1) {
+    if ($ip_address == gethostbyname("status.drupalstatus.org.")) {
+      return TRUE;
+    }
+  }
+
+  if (variable_get('system_status_public_allow_public', 0) == 1) {
+    // I took the easy way out here since i didn't want
+    // to bother writing something to match v6 subnets.
+    $allowed_ips = explode(',', variable_get('system_status_public_allow_ips', '127.0.0.1,::1'));
+
+    foreach ($allowed_ips as &$address) {
+      if ($ip_address === $address) {
+        return TRUE;
+      }
+    }
+  }
+
+  return FALSE;
+}
