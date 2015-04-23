@@ -65,10 +65,16 @@ ul li, ol li {
     font-family: 'Lora', serif;
 }
 
-.listheader {
+li.listheader {
     font-weight: bold;
     list-style: none;
     margin-left: -40px;
+}
+
+p.listheader {
+    font-weight: bold;
+    list-style: none;
+    margin-bottom: 0;
 }
 
 .well {
