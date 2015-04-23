@@ -10,3 +10,4 @@ sites/*/private
 nbproject
 nbproject/*
 Drupal.sublime-projectcompletions
+dploy.yaml
