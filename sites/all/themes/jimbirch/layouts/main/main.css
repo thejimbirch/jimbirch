@@ -1,6 +1,7 @@
 #panel-region-system-content,
 #panel-region-background-image {
     width: 100%;
+    float: left;
 }
 
 #panel-region-main-content,
