@@ -173,6 +173,14 @@ blockquote p {
     padding: 0 0 5px 0;
 }
 
+.page-node-add .node-type-list {
+    margin-left: 40px;
+}
+
+.page-node-add .node-type-list a {
+    color: #FFF;
+}
+
 @media screen and (max-width: 695px) {
     html {
         background: #111 !important;
