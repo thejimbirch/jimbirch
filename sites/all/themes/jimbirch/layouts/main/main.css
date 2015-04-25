@@ -1,5 +1,6 @@
-#panel-region-system-content {
-    width: 100;
+#panel-region-system-content,
+#panel-region-background-image {
+    width: 100%;
 }
 
 #panel-region-main-content,
