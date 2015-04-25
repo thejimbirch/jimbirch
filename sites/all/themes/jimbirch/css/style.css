@@ -167,18 +167,16 @@ blockquote p {
     text-shadow: 1px 1px 1px rgba(0,0,0,0.4)
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 695px) {
     html {
-        background: none !important;
+        background: #111 !important;
     }
 
     body {
         padding-top:20px;
         padding-bottom:20px;
     }
-}
 
-@media screen and (max-width: 520px) {
     .blog > li > a > img {
         float: none;
         margin: 0;
