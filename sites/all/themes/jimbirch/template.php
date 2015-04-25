@@ -37,3 +37,23 @@ function jimbirch_menu_local_tasks(&$variables) {
 
   return $output;
 }
+
+
+/**
+ * Display the list of available node types for node creation.
+ *
+ * @ingroup themeable
+ */
+function jimbirch_node_add_list($content) {
+  $output = '';
+
+  if ($content) {
+    $output = '<div id="main-content" class="full-width"><div class="container"><div class="row"><div class="col-sm-8 well well-lg"><dl class="node-type-list">';
+    foreach ($content as $item) {
+      $output .= '<dt>'. l($item['title'], $item['href'], $item['localized_options']) .'</dt>';      
+      $output .= '<dd>'. filter_xss_admin($item['description']) .'</dd>';
+    }
+    $output .= '</dl></div></div></div></div>';
+  }
+  return $output;
+}
