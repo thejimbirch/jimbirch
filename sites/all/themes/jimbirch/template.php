@@ -48,12 +48,12 @@ function jimbirch_node_add_list($content) {
   $output = '';
 
   if ($content) {
-    $output = '<div id="main-content" class="full-width"><div class="container"><div class="row"><div class="col-sm-8 well well-lg"><dl class="node-type-list">';
+    $output = '<dl class="node-type-list well">';
     foreach ($content as $item) {
       $output .= '<dt>'. l($item['title'], $item['href'], $item['localized_options']) .'</dt>';      
       $output .= '<dd>'. filter_xss_admin($item['description']) .'</dd>';
     }
-    $output .= '</dl></div></div></div></div>';
+    $output .= '</dl>';
   }
   return $output;
 }
