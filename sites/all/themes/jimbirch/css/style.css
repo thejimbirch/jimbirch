@@ -19,8 +19,8 @@ body {
     font-weight: 400;
     letter-spacing: 0.01rem;
     line-height: 1.5;
-    padding-top:69px;
-    padding-bottom:69px;
+    padding-top: 69px;
+    padding-bottom: 69px;
     text-rendering: optimizelegibility;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -115,7 +115,7 @@ blockquote p {
     font-size: 150%;
     font-weight: 300;
     line-height: 1.25;
-    margin-left:-20px;
+    margin-left: -20px;
 }
 
 .front h1, .front a, .front a:active, .front a:visited, .front p {
@@ -169,14 +169,26 @@ blockquote p {
     text-shadow: 1px 1px 1px rgba(0,0,0,0.4)
 }
 
+.primary-links li.last a {
+    padding: 0 0 5px 0;
+}
+
 @media screen and (max-width: 695px) {
     html {
         background: #111 !important;
     }
 
     body {
-        padding-top:20px;
-        padding-bottom:20px;
+        padding-top: 20px;
+        padding-bottom: 0;
+    }
+
+    .primary-links li a {
+        font-size: 18px;
+    }
+
+    .well, .well-lg {
+        border-radius: 0;
     }
 
     .blog > li > a > img {
