@@ -15,6 +15,7 @@ $plugin = array(
       'clear-content' => t('Clear Content'),
       'page-sidebar' => t('Page Sidebar'),
       'main-content' => t('Main Content Well'),
-      'content-sidebar' => t('Content Sidebar Well')
+      'content-sidebar' => t('Content Sidebar Well'),
+      'background-image' => t('Background Image')
   ),
 );

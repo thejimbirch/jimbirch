@@ -41,3 +41,6 @@
         </div>
     </div>
 <?php endif; ?>
+<?php if (!empty($content['background-image'])): ?>
+    <?php print $content['background-image']; ?>
+<?php endif; ?>
