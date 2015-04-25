@@ -134,6 +134,8 @@ blockquote p {
 .blog > li > a > img {
     float: left;
     margin: 0 20px 0 0;
+    width: 33%;
+    height: auto;
 }
 
 .blog h2 a {
@@ -179,7 +181,7 @@ blockquote p {
 
     .blog > li > a > img {
         float: none;
-        margin: 0;
+        margin: 0 0 20px 0;
         width: 100%;
         height: auto;
     }
