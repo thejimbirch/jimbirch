@@ -2,7 +2,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-8 well well-lg">
-                    <?php print render($content); ?>
+                    <?php print $content; ?>
                 </div>
             </div>
         </div>
