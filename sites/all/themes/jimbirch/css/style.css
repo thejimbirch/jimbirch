@@ -183,10 +183,6 @@ blockquote p {
         padding-bottom: 0;
     }
 
-    .primary-links li a {
-        font-size: 18px;
-    }
-
     .well, .well-lg {
         border-radius: 0;
     }
