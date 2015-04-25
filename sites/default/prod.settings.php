@@ -60,3 +60,5 @@ if ($_use_nodesquirrel) {
     ),
   );
 }
+
+$base_url = 'http://jimbir.ch';  // NO trailing slash!
