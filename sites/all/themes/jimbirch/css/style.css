@@ -158,6 +158,11 @@ blockquote p {
     color: rgba(0, 0, 0, 0.8);
 }
 
+.tweet-list {
+    padding-left: 0;
+    list-style: none;
+}
+
 .primary-links {
     float: left;
     padding: 0;
