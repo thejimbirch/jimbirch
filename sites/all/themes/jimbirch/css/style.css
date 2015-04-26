@@ -125,6 +125,13 @@ blockquote p {
 .btn-info {
     background-color: #ddd;
     border-color: #c6c6c6;
+    color: #c6c6c6;
+}
+
+.btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active, .open .dropdown-toggle.btn-info {
+    background-color: #b0b0b0;
+    border-color: #9a9a9a;
+    color: #fff;
 }
 
 .front h1, .front a, .front a:active, .front a:visited, .front p {
