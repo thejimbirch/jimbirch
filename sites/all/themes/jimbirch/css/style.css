@@ -170,13 +170,13 @@ blockquote p {
 
 .tweet-list img {
     float: left;
-    margin: 0 20px 20px 0;
+    margin: 8px 20px 20px 0;
 }
 
-.tweet-actions {
-    font-family: 'Lato', sans-serif;
+.tweet-actions a {
+    color: rgba(0, 0, 0, 0.8);
+    font-family: arial, sans-serif;
     font-size: 80%;
-    font-weight: normal;
 }
 
 .primary-links {
