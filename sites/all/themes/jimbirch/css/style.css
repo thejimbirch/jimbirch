@@ -163,6 +163,11 @@ blockquote p {
     list-style: none;
 }
 
+.tweet-list li {
+    clear: left;
+    margin: 0 20px 20px 0;
+}
+
 .tweet-list img {
     float: left;
 }
