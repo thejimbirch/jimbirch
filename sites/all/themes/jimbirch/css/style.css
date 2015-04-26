@@ -164,13 +164,17 @@ blockquote p {
 }
 
 .tweet {
+    padding-bottom: 20px;
+}
+
+.tweet img {
     float: left;
 }
 
 .tweet-actions {
-    float: left;
     font-family: 'Lato', sans-serif;
     font-size: 80%;
+    font-weight: normal;
 }
 
 .primary-links {
