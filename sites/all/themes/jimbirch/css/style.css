@@ -118,6 +118,15 @@ blockquote p {
     margin-left: -20px;
 }
 
+.views-exposed-form .views-exposed-widget .form-submit {
+    margin-top: 2.7em;
+}
+
+.btn-info {
+    background-color: #ddd;
+    border-color: #c6c6c6;
+}
+
 .front h1, .front a, .front a:active, .front a:visited, .front p {
     color: #FFF;
 }
