@@ -238,4 +238,7 @@ blockquote p {
         width: 100%;
         height: auto;
     }
+    .hi {
+        font-weight: bold;
+    }
 }
