@@ -13,3 +13,9 @@ body {
     max-width: 100%;
     height: auto;
 }
+
+@media screen and (max-width: 695px) {
+    html {
+        background: #FFF !important;
+    }
+}
