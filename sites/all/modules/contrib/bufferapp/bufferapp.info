@@ -8,9 +8,9 @@ dependencies[] = date
 dependencies[] = date_api
 files[] = bufferapp.admin.inc
 
-; Information added by Drupal.org packaging script on 2015-04-12
-version = "7.x-1.4"
+; Information added by Drupal.org packaging script on 2015-04-27
+version = "7.x-1.5"
 core = "7.x"
 project = "bufferapp"
-datestamp = "1428831397"
+datestamp = "1430144847"
 
