@@ -218,6 +218,64 @@ blockquote p {
     color: #FFF;
 }
 
+
+
+code, pre code {
+    white-space: normal;
+}
+
+/* Drupal and Bootstrap Resets */
+.confirm-parent, .password-parent,
+div.form-item div.password-suggestions {
+    width: 100%;
+}
+
+#edit-cancel {
+    color: #CCC;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857;
+    margin-bottom: 0;
+    padding: 6px 12px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.form-control.form-file {
+    padding: 0;
+}
+
+.radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] {
+    margin-top: 10px;
+}
+
+.messages {
+    border: 1px solid transparent;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.messages.warning {
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+    color: #8a6d3b;
+}
+
+.messages.info {
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+    color: #31708f;
+}
+
+.messages.success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #3c763d;
+}
+
 @media screen and (max-width: 695px) {
     html {
         background: #111 !important;
