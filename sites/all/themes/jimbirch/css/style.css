@@ -8,7 +8,6 @@ html {
     -o-background-size: cover !important;
     background-size: cover !important;
     color: #111;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 }
 
 body {
@@ -32,9 +31,8 @@ h1 {
     text-shadow: 1px 1px 1px rgba(0,0,0,0.4)
 }
 
-#clear-content h1, #clear-content p {
+#clear-content h1, #clear-content p, .front h1, .front a, .front a:active, .front a:visited, .front p {
     color: #FFF;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.4)
 }
 
 h1,h2,h3,h4 {
@@ -65,27 +63,10 @@ ul li, ol li {
     font-family: 'Lora', serif;
 }
 
-li.listheader {
-    font-weight: bold;
-    list-style: none;
-    margin-left: -40px;
-}
-
-p.listheader {
-    font-weight: bold;
-    list-style: none;
-    margin-bottom: 0;
-}
-
 .well {
     background-color: transparent;
     background:rgba(255,255,255,0.9);
     border: none;
-}
-
-.well p, .well li, #clear-content .well p {
-    color: rgba(0, 0, 0, 0.8);
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 }
 
 blockquote {
@@ -118,67 +99,7 @@ blockquote p {
     margin-left: -20px;
 }
 
-.views-exposed-form .views-exposed-widget .form-submit {
-    margin-top: 2.7em;
-}
-
-.btn-info {
-    background-color: #ddd;
-    border-color: #c6c6c6;
-    color: #9a9a9a;
-}
-
-.btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active, .open .dropdown-toggle.btn-info {
-    background-color: #b0b0b0;
-    border-color: #9a9a9a;
-    color: #fff;
-}
-
-.front h1, .front a, .front a:active, .front a:visited, .front p {
-    color: #FFF;
-}
-
-.row img {
-    max-width: 100%;
-    height: auto;
-}
-
-.blog li {
-    margin-bottom: 20px;
-}
-
-.blog > li > a > img {
-    float: left;
-    margin: 0 20px 0 0;
-    width: 33%;
-    height: auto;
-}
-
-.blog h2 a {
-    color: rgba(0, 0, 0, 0.8);
-}
-
-.tweet-list {
-    padding-left: 0;
-    list-style: none;
-}
-
-.tweet-list li {
-    clear: left;
-    margin: 0 0 20px 0;
-}
-
-.tweet-list img {
-    float: left;
-    margin: 8px 20px 20px 0;
-}
-
-.tweet-actions a {
-    color: rgba(0, 0, 0, 0.8);
-    font-family: arial, sans-serif;
-    font-size: 80%;
-}
-
+/* Primary Links / Main Menu */
 .primary-links {
     float: left;
     padding: 0;
@@ -210,6 +131,66 @@ blockquote p {
     padding: 0 0 5px 0;
 }
 
+/* Blog */
+.blog li {
+    margin-bottom: 20px;
+}
+
+.blog > li > a > img {
+    float: left;
+    margin: 0 20px 0 0;
+    width: 33%;
+    height: auto;
+}
+
+.blog h2 a {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+/* Twitter */
+.tweet-list {
+    padding-left: 0;
+    list-style: none;
+}
+
+.tweet-list li {
+    clear: left;
+    margin: 0 0 20px 0;
+}
+
+.tweet-list img {
+    float: left;
+    margin: 8px 20px 20px 0;
+}
+
+.tweet-actions a {
+    color: rgba(0, 0, 0, 0.8);
+    font-family: arial, sans-serif;
+    font-size: 80%;
+}
+
+.views-exposed-form .views-exposed-widget .form-submit {
+    margin-top: 2.7em;
+}
+
+/* Drupal and Bootstrap Resets */
+.btn-info {
+    background-color: #ddd;
+    border-color: #c6c6c6;
+    color: #9a9a9a;
+}
+
+.btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active, .open .dropdown-toggle.btn-info {
+    background-color: #b0b0b0;
+    border-color: #9a9a9a;
+    color: #fff;
+}
+
+.row img {
+    max-width: 100%;
+    height: auto;
+}
+
 .page-node-add .node-type-list {
     margin-left: 40px;
 }
@@ -218,13 +199,10 @@ blockquote p {
     color: #FFF;
 }
 
-
-
 code, pre code {
     white-space: normal;
 }
 
-/* Drupal and Bootstrap Resets */
 .confirm-parent, .password-parent,
 div.form-item div.password-suggestions {
     width: 100%;
@@ -264,7 +242,7 @@ div.form-item div.password-suggestions {
     color: #8a6d3b;
 }
 
-.messages.info {
+.messages.status {
     background-color: #d9edf7;
     border-color: #bce8f1;
     color: #31708f;
@@ -276,6 +254,14 @@ div.form-item div.password-suggestions {
     color: #3c763d;
 }
 
+/* Edit Screen */
+.vertical-tabs p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    margin-bottom: 10px;
+}
+
+/* Media Queries */
 @media screen and (max-width: 695px) {
     html {
         background: #111 !important;
