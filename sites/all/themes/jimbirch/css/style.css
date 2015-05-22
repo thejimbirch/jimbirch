@@ -254,12 +254,6 @@ div.form-item div.password-suggestions {
     color: #3c763d;
 }
 
-/* Edit Screen */
-.vertical-tabs {
-    font-family: Arial, Helvetica, sans-serif !important;
-    font-size: 80%;
-}
-
 /* Media Queries */
 @media screen and (max-width: 695px) {
     html {
@@ -281,4 +275,10 @@ div.form-item div.password-suggestions {
         width: 100%;
         height: auto;
     }
+}
+
+/* Admin Page Theming */
+.page-admin-appearance-styleguide {
+    background: rgba(0, 0, 0, 0) url("http://jimbir.ch/sites/default/files/styles/background/public/img/page/Jim%20Playing%20Theremin.jpg?itok=eHhZG3bm") no-repeat fixed center center;
+    background-size: cover !important;
 }
