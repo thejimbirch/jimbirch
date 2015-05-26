@@ -78,6 +78,7 @@ function features_builder_menu() {
  */
 function features_builder_get_exportables($component = NULL) {
   // Cache per request.
+  $ignored = drupal_static(__FUNCTION__);
   $exportables = &drupal_static(__FUNCTION__);
 
   if ($exportables === NULL) {
@@ -92,6 +93,27 @@ function features_builder_get_exportables($component = NULL) {
       ksort($exportables[$component_type]);
     }
     ksort($exportables);
+
+    // Parse config for ignored components.
+    if ($ignored === NULL) {
+      $ignored = array();
+      $config = variable_get('features_builder_ignore');
+      $config = explode("\n", $config);
+      $config = array_map('trim', $config);
+      foreach ($config as $line) {
+        $line = explode("|", $line);
+        if (count($line) > 1) {
+          $ignored[trim($line[0])][] = trim($line[1]);
+        }
+      }
+    }
+
+    // Ensure ignored components aren't listed.
+    foreach ($exportables as $type => $components) {
+      if (!empty($ignored[$type])) {
+      $exportables[$type] = array_diff_key($exportables[$type], array_flip($ignored[$type]));
+      }
+    }
   }
 
   if ($component) {

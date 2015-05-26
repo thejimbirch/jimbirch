@@ -13,6 +13,7 @@ class SiteFeaturesBuilder extends FeaturesBuilderBase {
     'default_nodes_main',
     'error_level',
     'features_builder_base_dir',
+    'features_builder_ignore',
     'features_builder_prefix_label',
     'features_builder_prefix_name',
     'node_admin_theme',

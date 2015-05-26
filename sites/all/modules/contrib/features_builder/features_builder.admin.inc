@@ -190,6 +190,15 @@ function features_builder_config_form() {
     '#default_value' => variable_get('features_builder_base_dir'),
   );
 
+  $text = 'Enter components which Features Builder will ignore when creating features modules. Enter one per line, in the format :format';
+  $args = array(':format' => t('component_type|component_name'));
+  $form['features_builder_ignore'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Ignored components'),
+    '#description' => t($text, $args),
+    '#default_value' => variable_get('features_builder_ignore'),
+  );
+
   return system_settings_form($form);
 }
 

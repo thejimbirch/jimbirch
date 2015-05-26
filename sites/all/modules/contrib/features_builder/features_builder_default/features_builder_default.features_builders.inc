@@ -22,6 +22,10 @@ function features_builder_default_features_builders_info() {
       'label' => t('Fields'),
       'class' => 'FieldFeaturesBuilder',
     ),
+    'features_builder_field_collection' => array(
+      'label' => t('Field Collection'),
+      'class' => 'FieldCollectionFeaturesBuilder',
+    ),
     'features_builder_flag' => array(
       'label' => t('Flags'),
       'class' => 'FlagFeaturesBuilder',
@@ -34,9 +38,17 @@ function features_builder_default_features_builders_info() {
       'label' => t('Menu'),
       'class' => 'MenuFeaturesBuilder',
     ),
+    'features_builder_message' => array(
+      'label' => t('Message'),
+      'class' => 'MessageFeaturesBuilder',
+    ),
     'features_builder_node' => array(
       'label' => t('Nodes'),
       'class' => 'NodeFeaturesBuilder',
+    ),
+    'features_builder_og' => array(
+      'label' => t('Organic Groups'),
+      'class' => 'OgFeaturesBuilder',
     ),
     'features_builder_panels' => array(
       'label' => t('Panels'),

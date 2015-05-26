@@ -38,6 +38,25 @@ class NodeFeaturesBuilder extends EntityFeaturesBuilder {
     $this->setNamedComponents('dependencies', array($this->prefix . '_fields'));
     $bundle = substr($this->name, 5);
     $this->setFields('node', $bundle);
+    $this->setAutoNodeTitle($bundle);
+  }
+
+  /**
+   * Adds auto_nodetitle configuration for the entity bundle.
+   *
+   * @param string $type
+   *   The bundle on the entity_type.
+   */
+  protected function setAutoNodeTitle($type) {
+    $vars[] = "ant_$type";
+    $vars[] = "ant_pattern_$type";
+    $vars[] = "ant_php_$type";
+    $this->setNamedComponents('variable', $vars);
+
+    // If we added any auto_nodetitle variables, add it as a dependency.
+    if (array_intersect($vars, $this->components['variable'])) {
+      $this->setNamedComponents('dependencies', array('auto_nodetitle'));
+    }
   }
 
 }

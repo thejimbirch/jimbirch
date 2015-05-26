@@ -1,11 +1,8 @@
 <?php
 
-class UserFeaturesBuilder extends FeaturesBuilderBase {
+class UserFeaturesBuilder extends EntityFeaturesBuilder {
 
-  protected $variables = array(
-    'anonymous',
-    'field_bundle_settings_user__user',
-  );
+  protected $variables = array('anonymous');
 
   /**
    * {@inheritdoc}
@@ -27,15 +24,10 @@ class UserFeaturesBuilder extends FeaturesBuilderBase {
   protected function setComponents() {
     $this->setAllComponents('user_role');
     $this->setAllComponents('user_permission');
-    $this->setRegexComponents('field_instance', '/^user-.*/');
+    $this->setFields('user', 'user');
     $this->setNamedComponents('variable', $this->variables);
     $this->setRegexComponents('variable', '/^user_.*/');
 
-    // Add field groups.
-    $this->setRegexComponents('field_group', "/^group_[a-z0-9_]*\|user\|/");
-    if (!empty($this->components['field_group'])) {
-      $dependencies[] = 'field_group';
-    }
   }
 
 }

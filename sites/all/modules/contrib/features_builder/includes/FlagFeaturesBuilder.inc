@@ -38,7 +38,9 @@ class FlagFeaturesBuilder extends EntityFeaturesBuilder {
 
     // Provides a feature module for each flag.
     foreach (features_builder_get_exportables('flag') as $name => $label) {
-      $features["flag_$name"] = $label;
+      if (flag_get_flag($name)) {
+        $features["flag_$name"] = $label;
+      }
     }
     return $features;
   }

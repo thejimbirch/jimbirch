@@ -5,9 +5,9 @@ core = 7.x
 
 dependencies[] = features_builder
 
-; Information added by Drupal.org packaging script on 2014-12-16
+; Information added by Drupal.org packaging script on 2015-05-13
 version = "7.x-1.x-dev"
 core = "7.x"
 project = "features_builder"
-datestamp = "1418761688"
+datestamp = "1431561482"
 
