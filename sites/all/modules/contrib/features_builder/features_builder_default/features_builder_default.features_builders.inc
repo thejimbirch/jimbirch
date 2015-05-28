@@ -18,6 +18,10 @@ function features_builder_default_features_builders_info() {
       'label' => t('ECK'),
       'class' => 'EckFeaturesBuilder',
     ),
+    'features_builder_entityqueue' => array(
+      'label' => t('Entityqueue'),
+      'class' => 'EntityqueueFeaturesBuilder',
+    ),
     'features_builder_field' => array(
       'label' => t('Fields'),
       'class' => 'FieldFeaturesBuilder',

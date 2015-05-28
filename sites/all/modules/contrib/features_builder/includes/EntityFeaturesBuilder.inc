@@ -19,6 +19,9 @@ abstract class EntityFeaturesBuilder extends FeaturesBuilderBase {
    */
   protected function setFields($entity_type, $bundle) {
     $this->setRegexComponents('field_instance', "/^{$entity_type}-{$bundle}-/");
+    if (!empty($this->components['field_instance'])) {
+      $this->setNamedComponents('dependencies', array($this->prefix . '_fields'));
+    }
     $this->setNamedComponents('variable', array("field_bundle_settings_{$entity_type}__{$bundle}"));
     $info = field_info_instances($entity_type);
     $dependencies = array();

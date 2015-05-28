@@ -47,6 +47,8 @@ class SiteFeaturesBuilder extends FeaturesBuilderBase {
   protected function setComponents() {
     $this->setNamedComponents('variable', $this->variables);
     $this->setRegexComponents('variable', '/^theme_[a-z0-9_]*_settings$/');
+    $this->setRegexComponents('variable', '/^date_format_[a-z0-9_]*$/');
+    $this->setRegexComponents('variable', '/^date_views_[a-z0-9_]*$/');
 
     if (module_exists('admin_menu')) {
       $this->setNamedComponents('dependencies', array('admin_menu'));

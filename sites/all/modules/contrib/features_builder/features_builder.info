@@ -13,6 +13,7 @@ files[] = includes/FeaturesBuilderBase.inc
 files[] = includes/ContextFeaturesBuilder.inc
 files[] = includes/EckFeaturesBuilder.inc
 files[] = includes/EntityFeaturesBuilder.inc
+files[] = includes/EntityqueueFeaturesBuilder.inc
 files[] = includes/FieldFeaturesBuilder.inc
 files[] = includes/FieldCollectionFeaturesBuilder.inc
 files[] = includes/FlagFeaturesBuilder.inc
@@ -29,9 +30,9 @@ files[] = includes/TaxonomyFeaturesBuilder.inc
 files[] = includes/UserFeaturesBuilder.inc
 files[] = includes/ViewsFeaturesBuilder.inc
 
-; Information added by Drupal.org packaging script on 2015-05-13
+; Information added by Drupal.org packaging script on 2015-05-28
 version = "7.x-1.x-dev"
 core = "7.x"
 project = "features_builder"
-datestamp = "1431561482"
+datestamp = "1432816937"
 

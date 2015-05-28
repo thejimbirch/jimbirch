@@ -49,14 +49,32 @@ class MediaFeaturesBuilder extends FeaturesBuilderBase {
       $this->dependencies[] = 'wysiwyg';
     }
 
+    if (module_exists('flexslider')) {
+      $this->dependencies[] = 'flexslider';
+      $this->setAllComponents('flexslider_optionset');
+    }
+
     if (module_exists('imce')) {
       $this->dependencies[] = 'imce';
       $this->setRegexComponents('variable', '/imce_.+/');
     }
 
+    if (module_exists('imce_mkdir')) {
+      $this->dependencies[] = 'imce_mkdir';
+    }
+
+    if (module_exists('imce_wysiwyg')) {
+      $this->dependencies[] = 'imce_wysiwyg';
+    }
+
     if (module_exists('linkit')) {
       $this->dependencies[] = 'linkit';
       $this->setAllComponents('linkit_profiles');
+    }
+
+    if (module_exists('video_embed_field')) {
+      $this->dependencies[] = 'video_embed_field';
+      $this->setAllComponents('vef_video_styles');
     }
 
     $this->setNamedComponents('dependencies', array_filter($this->dependencies));

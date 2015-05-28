@@ -16,14 +16,18 @@ function features_builder_build_batch($data, $temp_dir, &$context) {
     $context['results']['temp_dir'] = $temp_dir;
   }
 
-  // Pluck the next feature from the list to create.
   $keys = array_keys($context['sandbox']['data']);
-  $feature = reset($keys);
+  $count = 0;
 
-  // Build it.
-  _features_builder_build($feature, $context['sandbox']['data'][$feature], $temp_dir);
+  while ($count++ < 10 && count($keys)) {
+    // Pluck the next feature from the list to create.
+    $feature = array_shift($keys);
 
-  unset($context['sandbox']['data'][$feature]);
+    // Build it.
+    _features_builder_build($feature, $context['sandbox']['data'][$feature], $temp_dir);
+    unset($context['sandbox']['data'][$feature]);
+  }
+
   $context['message'] = t('Building feature @feature', array('@feature' =>  $feature));
   $context['finished'] = 1 - (count($context['sandbox']['data']) / $context['sandbox']['total']);
 }
@@ -40,12 +44,17 @@ function features_builder_move_batch($data, $temp_dir, &$context) {
 
   // Pluck the next feature from the list to move.
   $keys = array_keys($context['sandbox']['data']);
-  $feature = reset($keys);
+  $count = 0;
 
-  // Move it.
-  _features_builder_move($feature, $context['sandbox']['data'][$feature], $temp_dir);
+  while ($count++ < 10 && count($keys)) {
+    $feature = array_shift($keys);
 
-  unset($context['sandbox']['data'][$feature]);
+    // Move it.
+    _features_builder_move($feature, $context['sandbox']['data'][$feature], $temp_dir);
+
+    unset($context['sandbox']['data'][$feature]);
+  }
+
   $context['message'] = t('Moving feature @feature', array('@feature' =>  $feature));
   $context['finished'] = 1 - (count($context['sandbox']['data']) / $context['sandbox']['total']);
 }

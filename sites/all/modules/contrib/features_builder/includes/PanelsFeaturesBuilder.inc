@@ -37,6 +37,19 @@ class PanelsFeaturesBuilder extends FeaturesBuilderBase {
       $this->setRegexComponents('variable', '/panelizer_.+/');
     }
 
+    // Panels everywhere.
+    if (module_exists('panels_everywhere')) {
+      $this->setRegexComponents('variable', '/panels_everywhere_.+/');
+      $this->setNamedComponents('dependencies', array('panels_everywhere'));
+    }
+
+    // PM Existing Pages.
+    if (module_exists('pm_existing_pages')) {
+      $this->setNamedComponents('dependencies', array('pm_existing_pages'));
+      $this->setAllComponents('page_manager_existing_pages');
+      $this->setRegexComponents('variable', '/pm_existing_pages.+/');
+    }
+
     // Custom content panes.
     $this->setAllComponents('ctools_custom_content');
     if (!empty($this->components['ctools_custom_content'])) {
