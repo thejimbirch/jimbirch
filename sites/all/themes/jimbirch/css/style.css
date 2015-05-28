@@ -186,7 +186,7 @@ blockquote p {
     color: #fff;
 }
 
-img {
+.row img {
     max-width: 100%;
     height: auto;
 }
