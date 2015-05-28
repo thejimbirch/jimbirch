@@ -186,17 +186,9 @@ blockquote p {
     color: #fff;
 }
 
-.row img {
+img {
     max-width: 100%;
     height: auto;
-}
-
-.page-node-add .node-type-list {
-    margin-left: 40px;
-}
-
-.page-node-add .node-type-list a {
-    color: #FFF;
 }
 
 code, pre code {
@@ -278,7 +270,8 @@ div.form-item div.password-suggestions {
 }
 
 /* Admin Page Theming */
-.page-admin-appearance-styleguide {
+.page-admin-appearance-styleguide,
+.page-node-add {
     background: rgba(0, 0, 0, 0) url("http://jimbir.ch/sites/default/files/styles/background/public/img/page/Jim%20Playing%20Theremin.jpg?itok=eHhZG3bm") no-repeat fixed center center;
     background-size: cover !important;
 }
