@@ -63,7 +63,9 @@ ul li, ol li {
     font-family: 'Lora', serif;
 }
 
-.nav-tabs, .vertical-tabs-panes {
+.node-form .nav-tabs, .node-form .vertical-tabs-panes {
+    background: #fff;
+    background-color: #fff;
     font-family: Helvetica, arial, sans-serif !important;
     font-size: 80% !important;
 }
