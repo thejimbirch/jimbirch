@@ -63,6 +63,11 @@ ul li, ol li {
     font-family: 'Lora', serif;
 }
 
+.nav-tabs, .vertical-tabs-panes {
+    font-family: Helvetica, arial, sans-serif !important;
+    font-size: 80% !important;
+}
+
 .well {
     background-color: transparent;
     background:rgba(255,255,255,0.9);
