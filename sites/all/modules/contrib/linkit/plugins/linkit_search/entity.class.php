@@ -97,7 +97,7 @@ class LinkitSearchPluginEntity extends LinkitSearchPlugin {
    *   The entity label, or FALSE if not found.
    */
   function createLabel($entity) {
-    return check_plain(entity_label($this->plugin['entity_type'], $entity));
+    return entity_label($this->plugin['entity_type'], $entity);
   }
 
    /**
@@ -295,12 +295,10 @@ class LinkitSearchPluginEntity extends LinkitSearchPlugin {
       // Display the user documentation of placeholders.
       $form[$this->plugin['name']]['token_help'] = array(
         '#title' => t('Replacement patterns'),
-        '#type' => 'fieldset',
-        '#collapsible' => TRUE,
-        '#collapsed' => TRUE,
+        '#type' => 'markup',
       );
       $form[$this->plugin['name']]['token_help']['help'] = array(
-        '#theme' => 'token_tree',
+        '#theme' => 'token_tree_link',
         '#token_types' => array($this->plugin['entity_type']),
       );
     }
