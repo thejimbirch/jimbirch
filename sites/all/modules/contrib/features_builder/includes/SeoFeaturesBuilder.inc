@@ -3,6 +3,7 @@
 class SeoFeaturesBuilder extends FeaturesBuilderBase {
 
   protected $dependencies = array(
+    'globalredirect',
     'metatag',
     'pathauto',
     'xmlsitemap',
@@ -44,6 +45,7 @@ class SeoFeaturesBuilder extends FeaturesBuilderBase {
     $this->setNamedComponents('dependencies', $dependencies);
 
     $this->setAllComponents('metatag');
+    $this->setRegexComponents('variable', '/^globalredirect_settings$/');
     $this->setRegexComponents('variable', '/^pathauto_/');
     $this->setRegexComponents('variable', '/^xmlsitemap_.*/');
     if (!empty($this->components['variable'])) {

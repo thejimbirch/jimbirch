@@ -20,6 +20,11 @@ class FieldFeaturesBuilder extends FeaturesBuilderBase {
     foreach (field_info_fields() as $info) {
       $this->setNamedComponents('dependencies', array($info['module']));
     }
+
+    // Field permissions module, if enabled.
+    if (module_exists('field_permissions')) {
+      $this->setNamedComponents('dependencies', array('field_permissions'));
+    }
   }
 
 }

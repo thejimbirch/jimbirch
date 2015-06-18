@@ -70,6 +70,11 @@ class SiteFeaturesBuilder extends FeaturesBuilderBase {
       $this->setRegexComponents('variable', '/^honeypot_/');
     }
 
+    if (module_exists('jquery_update')) {
+      $this->setNamedComponents('dependencies', array('jquery_update'));
+      $this->setRegexComponents('variable', '/^jquery_update_/');
+    }
+
     if (module_exists('module_filter')) {
       $this->setNamedComponents('dependencies', array('module_filter'));
       $this->setRegexComponents('variable', '/^module_filter_/');
