@@ -1,5 +1,10 @@
 CHANGELOG for Disqus for Drupal 7
 
+Disqus 7.x-1.12
+=================================
+- #2508209 by Eric_A: Add Feeds support
+- #2501743 by PJnes: Default Disqus status is always TRUE
+
 Disqus 7.x-1.11
 =================================
 - #2499753 by Fanyalla: Reduce number of calls to the database
