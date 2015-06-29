@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the jb Panels feature.
+ */
+
+include_once 'jb_panels.features.inc';

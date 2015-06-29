@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the jb Media feature.
+ */
+
+include_once 'jb_media.features.inc';

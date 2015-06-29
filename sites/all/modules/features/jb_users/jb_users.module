@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the jb Users feature.
+ */
+
+include_once 'jb_users.features.inc';

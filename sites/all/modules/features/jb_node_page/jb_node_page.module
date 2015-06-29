@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the jb Page feature.
+ */
+
+include_once 'jb_node_page.features.inc';

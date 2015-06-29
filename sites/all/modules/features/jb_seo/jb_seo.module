@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the jb SEO feature.
+ */
+
+include_once 'jb_seo.features.inc';

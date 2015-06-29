@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the jb Blog Post feature.
+ */
+
+include_once 'jb_node_blog_post.features.inc';

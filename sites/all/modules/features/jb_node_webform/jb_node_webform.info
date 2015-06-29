@@ -1,0 +1,6 @@
+name = jb Webform
+core = 7.x
+package = Content
+dependencies[] = features
+features[node][] = webform
+features[features_api][] = api:2
