@@ -5,15 +5,12 @@
  */
 // Plugin definition
 $plugin = array(
-  'title' => t('Main'),
+  'title' => t('Content Area'),
   'category' => t('Jim Birch'),
-  'icon' => 'main.png',
-  'theme' => 'panels-main',
-  'css' => 'main.css',
+  'icon' => 'contentarea.png',
+  'theme' => 'panels-contentarea',
+  'css' => 'contentarea.css',
   'regions' => array(
-      'system-content' => t('System Content'),
-      'clear-content' => t('Clear Content'),
-      'page-sidebar' => t('Page Sidebar'),
       'main-content' => t('Main Content Well'),
       'content-sidebar' => t('Content Sidebar Well'),
       'background-image' => t('Background Image')

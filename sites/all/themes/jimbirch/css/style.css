@@ -31,7 +31,7 @@ h1 {
     text-shadow: 1px 1px 1px rgba(0,0,0,0.4)
 }
 
-#clear-content h1, #clear-content p, .front h1, .front a, .front a:active, .front a:visited, .front p {
+#clear-content h1, #clear-content p, .front a, .front a:active, .front a:visited, .front p {
     color: #FFF;
 }
 
@@ -139,6 +139,15 @@ blockquote p {
 
 .primary-links li.last a {
     padding: 0 0 5px 0;
+}
+
+/* Home */
+.front h1 {
+    opacity: 0;
+}
+
+.front .well {
+    background: transparent;
 }
 
 /* Blog */
@@ -285,5 +294,3 @@ div.form-item div.password-suggestions {
     background: rgba(0, 0, 0, 0) url("http://jimbir.ch/sites/default/files/styles/background/public/img/page/Jim%20Playing%20Theremin.jpg?itok=eHhZG3bm") no-repeat fixed center center;
     background-size: cover !important;
 }
-
-/* Adding a comment */

@@ -1,0 +1,21 @@
+#panel-region-system-content,
+#panel-region-background-image {
+    width: 100%;
+    float: left;
+}
+
+#panel-region-main-content,
+#panel-region-clear-content {
+    width: 74.6%;
+    float: left;
+}
+
+#panel-region-content-sidebar,
+#panel-region-page-sidebar {
+    width: 25%;
+    float: left;
+}
+
+#edit-buttons {
+    clear: left;
+}
