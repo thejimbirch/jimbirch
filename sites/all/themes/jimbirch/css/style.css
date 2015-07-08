@@ -63,6 +63,11 @@ ul li, ol li {
     font-family: 'Lora', serif;
 }
 
+pre, code, pre code, code pre {
+    background: #272822;
+    background-color: #272822;
+}
+
 .node-form .vertical-tab-button, .node-form .vertical-tabs-panes {
     font-family: Helvetica, arial, sans-serif !important;
     font-size: 80% !important;
