@@ -67,7 +67,16 @@ Disallow: /?q=user/password/
 Disallow: /?q=user/register/
 Disallow: /?q=user/login/
 Disallow: /?q=user/logout/
+# ========================================= #
 Allow: /*.js*
 Allow: /*.css*
+# the most specific rule based on the length of the [path] entry will trump the less specific (shorter) rule. 
+# The order of precedence for rules with wildcards is undefined
+# https://developers.google.com/webmasters/control-crawl-index/docs/robots_txt
+# Thanks to Marcel Jong and sunishabraham
+Allow: /misc/*.js
+Allow: /modules/*.js
+Allow: /modules/*.css
+# ========================================= #
 
 Sitemap: http://jimbir.ch/sitemap.xml
