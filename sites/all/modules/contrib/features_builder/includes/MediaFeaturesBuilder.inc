@@ -77,6 +77,11 @@ class MediaFeaturesBuilder extends FeaturesBuilderBase {
       $this->setAllComponents('vef_video_styles');
     }
 
+    if (module_exists('ckeditor')) {
+      $this->dependencies[] = 'ckeditor';
+      $this->setAllComponents('ckeditor_profile');
+    }
+
     $this->setNamedComponents('dependencies', array_filter($this->dependencies));
   }
 

@@ -24,6 +24,10 @@ class ViewsFeaturesBuilder extends FeaturesBuilderBase {
   protected function setComponents() {
     $this->setAllComponents('views_view');
     $this->setNamedComponents('variable', $this->variables);
+
+    if (module_exists('admin_views')) {
+      $this->setNamedComponents('dependencies', array('admin_views'));
+    }
   }
 
 }
