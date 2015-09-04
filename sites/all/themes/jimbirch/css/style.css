@@ -114,6 +114,10 @@ blockquote p {
     margin-left: -20px;
 }
 
+#main-content img {
+    margin-bottom: 20px;
+}
+
 /* Primary Links / Main Menu */
 .primary-links {
     float: left;
