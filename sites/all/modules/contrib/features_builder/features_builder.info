@@ -24,15 +24,16 @@ files[] = includes/NodeFeaturesBuilder.inc
 files[] = includes/OgFeaturesBuilder.inc
 files[] = includes/PanelsFeaturesBuilder.inc
 files[] = includes/Profile2FeaturesBuilder.inc
+files[] = includes/SearchApiBuilder.inc
 files[] = includes/SeoFeaturesBuilder.inc
 files[] = includes/SiteFeaturesBuilder.inc
 files[] = includes/TaxonomyFeaturesBuilder.inc
 files[] = includes/UserFeaturesBuilder.inc
 files[] = includes/ViewsFeaturesBuilder.inc
 
-; Information added by Drupal.org packaging script on 2015-07-27
+; Information added by Drupal.org packaging script on 2015-09-02
 version = "7.x-1.x-dev"
 core = "7.x"
 project = "features_builder"
-datestamp = "1438026860"
+datestamp = "1441207141"
 

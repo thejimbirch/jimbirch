@@ -11,6 +11,7 @@
  */
 function system_status_uninstall() {
   variable_del('system_status_service_allow_drupalstatus');
+  variable_del('system_status_service_allow_external');
   variable_del('system_status_public_allow_public');
   variable_del('system_status_public_allow_ips');
   variable_del('system_status_do_match_core');
