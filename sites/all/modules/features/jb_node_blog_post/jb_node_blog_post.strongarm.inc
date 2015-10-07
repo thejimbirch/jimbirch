@@ -70,6 +70,12 @@ function jb_node_blog_post_strongarm() {
             'visible' => FALSE,
           ),
         ),
+        'disqus' => array(
+          'default' => array(
+            'weight' => '1002',
+            'visible' => FALSE,
+          ),
+        ),
       ),
     ),
   );

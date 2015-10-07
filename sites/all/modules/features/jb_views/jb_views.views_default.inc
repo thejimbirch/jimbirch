@@ -904,7 +904,7 @@ function jb_views_views_default_views() {
       'separator' => '',
     ),
   );
-  /* Field: Twitter: Profile image */
+  /* Field: Twitter Account: Profile image */
   $handler->display->display_options['fields']['profile_image_url']['id'] = 'profile_image_url';
   $handler->display->display_options['fields']['profile_image_url']['table'] = 'twitter_account';
   $handler->display->display_options['fields']['profile_image_url']['field'] = 'profile_image_url';
@@ -929,7 +929,7 @@ function jb_views_views_default_views() {
   $handler->display->display_options['sorts']['created_time']['table'] = 'twitter';
   $handler->display->display_options['sorts']['created_time']['field'] = 'created_time';
   $handler->display->display_options['sorts']['created_time']['order'] = 'DESC';
-  /* Filter criterion: Twitter: Protected status */
+  /* Filter criterion: Twitter Account: Protected status */
   $handler->display->display_options['filters']['protected']['id'] = 'protected';
   $handler->display->display_options['filters']['protected']['table'] = 'twitter_account';
   $handler->display->display_options['filters']['protected']['field'] = 'protected';
@@ -1027,20 +1027,16 @@ function jb_views_views_default_views() {
   $handler->display->display_options['fields']['twitter_id']['label'] = '';
   $handler->display->display_options['fields']['twitter_id']['exclude'] = TRUE;
   $handler->display->display_options['fields']['twitter_id']['element_label_colon'] = FALSE;
-  /* Field: Twitter: Profile image */
+  /* Field: Twitter Account: Profile image */
   $handler->display->display_options['fields']['profile_image_url']['id'] = 'profile_image_url';
   $handler->display->display_options['fields']['profile_image_url']['table'] = 'twitter_account';
   $handler->display->display_options['fields']['profile_image_url']['field'] = 'profile_image_url';
   $handler->display->display_options['fields']['profile_image_url']['label'] = '';
-  /* Field: Twitter: Full name */
+  /* Field: Twitter Account: Full name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'twitter_account';
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['label'] = '';
-  $handler->display->display_options['fields']['name']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['name']['alter']['path'] = 'https://twitter.com/[screen_name]';
-  $handler->display->display_options['fields']['name']['alter']['absolute'] = TRUE;
-  $handler->display->display_options['fields']['name']['alter']['target'] = '_blank';
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
   /* Field: Twitter: Login name */
   $handler->display->display_options['fields']['screen_name']['id'] = 'screen_name';
@@ -1163,6 +1159,14 @@ function jb_views_views_default_views() {
   $handler->display->display_options['fields']['formatted_tweet']['field'] = 'formatted_tweet';
   $handler->display->display_options['fields']['formatted_tweet']['label'] = '';
   $handler->display->display_options['fields']['formatted_tweet']['element_label_colon'] = FALSE;
+  /* Field: Twitter: Image */
+  $handler->display->display_options['fields']['image']['id'] = 'image';
+  $handler->display->display_options['fields']['image']['table'] = 'twitter';
+  $handler->display->display_options['fields']['image']['field'] = 'image';
+  $handler->display->display_options['fields']['image']['label'] = '';
+  $handler->display->display_options['fields']['image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['image']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['image']['size'] = 'small';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Twitter: Login name */
   $handler->display->display_options['arguments']['screen_name']['id'] = 'screen_name';
@@ -1212,7 +1216,7 @@ function jb_views_views_default_views() {
     'text' => 'text',
   );
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
-  /* Field: Twitter: Profile image */
+  /* Field: Twitter Account: Profile image */
   $handler->display->display_options['fields']['profile_image_url']['id'] = 'profile_image_url';
   $handler->display->display_options['fields']['profile_image_url']['table'] = 'twitter_account';
   $handler->display->display_options['fields']['profile_image_url']['field'] = 'profile_image_url';
@@ -1237,7 +1241,7 @@ function jb_views_views_default_views() {
   $handler->display->display_options['sorts']['created_time']['table'] = 'twitter';
   $handler->display->display_options['sorts']['created_time']['field'] = 'created_time';
   $handler->display->display_options['sorts']['created_time']['order'] = 'DESC';
-  /* Filter criterion: Twitter: Protected status */
+  /* Filter criterion: Twitter Account: Protected status */
   $handler->display->display_options['filters']['protected']['id'] = 'protected';
   $handler->display->display_options['filters']['protected']['table'] = 'twitter_account';
   $handler->display->display_options['filters']['protected']['field'] = 'protected';
@@ -1266,21 +1270,46 @@ function jb_views_views_default_views() {
   $handler->display->display_options['filters']['text']['group_info']['identifier'] = 'topic';
   $handler->display->display_options['filters']['text']['group_info']['group_items'] = array(
     1 => array(
+      'title' => 'Accessibility',
+      'operator' => 'contains',
+      'value' => '#accessibility',
+    ),
+    2 => array(
       'title' => 'Drupal',
       'operator' => 'contains',
       'value' => '#drupal',
     ),
-    2 => array(
+    3 => array(
+      'title' => 'Drush',
+      'operator' => 'contains',
+      'value' => '#drush',
+    ),
+    4 => array(
+      'title' => 'eCommerce',
+      'operator' => 'contains',
+      'value' => '#ecommerce',
+    ),
+    5 => array(
+      'title' => 'Performance',
+      'operator' => 'contains',
+      'value' => '#performance',
+    ),
+    6 => array(
+      'title' => 'Productivity',
+      'operator' => 'contains',
+      'value' => '#productivity',
+    ),
+    7 => array(
       'title' => 'SEO',
       'operator' => 'contains',
       'value' => '#seo',
     ),
-    3 => array(
+    8 => array(
       'title' => 'User Experience',
       'operator' => 'contains',
       'value' => '#ux',
     ),
-    5 => array(
+    9 => array(
       'title' => 'Wordpress',
       'operator' => 'contains',
       'value' => '#wordpress',
@@ -1306,7 +1335,7 @@ function jb_views_views_default_views() {
   /* Display: @thejimbirch */
   $handler = $view->new_display('panel_pane', '@thejimbirch', 'twitter_pane');
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Twitter: Profile image */
+  /* Field: Twitter Account: Profile image */
   $handler->display->display_options['fields']['profile_image_url']['id'] = 'profile_image_url';
   $handler->display->display_options['fields']['profile_image_url']['table'] = 'twitter_account';
   $handler->display->display_options['fields']['profile_image_url']['field'] = 'profile_image_url';

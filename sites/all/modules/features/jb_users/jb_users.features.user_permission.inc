@@ -568,15 +568,6 @@ function jb_users_user_default_permissions() {
     'module' => 'system',
   );
 
-  // Exported permission: 'administer stage_file_proxy settings'.
-  $permissions['administer stage_file_proxy settings'] = array(
-    'name' => 'administer stage_file_proxy settings',
-    'roles' => array(
-      'Administrator' => 'Administrator',
-    ),
-    'module' => 'stage_file_proxy',
-  );
-
   // Exported permission: 'administer taxonomy'.
   $permissions['administer taxonomy'] = array(
     'name' => 'administer taxonomy',
@@ -594,6 +585,15 @@ function jb_users_user_default_permissions() {
       'Administrator' => 'Administrator',
     ),
     'module' => 'system',
+  );
+
+  // Exported permission: 'administer twitter'.
+  $permissions['administer twitter'] = array(
+    'name' => 'administer twitter',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'twitter',
   );
 
   // Exported permission: 'administer twitter accounts'.
@@ -1109,6 +1109,20 @@ function jb_users_user_default_permissions() {
       'Administrator' => 'Administrator',
     ),
     'module' => 'backup_migrate',
+  );
+
+  // Exported permission: 'post to twitter'.
+  $permissions['post to twitter'] = array(
+    'name' => 'post to twitter',
+    'roles' => array(),
+    'module' => 'twitter_post',
+  );
+
+  // Exported permission: 'post to twitter with global account'.
+  $permissions['post to twitter with global account'] = array(
+    'name' => 'post to twitter with global account',
+    'roles' => array(),
+    'module' => 'twitter_post',
   );
 
   // Exported permission: 'rename features'.
