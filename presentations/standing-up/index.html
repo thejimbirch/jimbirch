@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Standing up for the Content Creators: Site building and theming for the administrators | Drupal Presentation</title>
+		<meta name="description" content="This presentation by Jim Birch covers techniques and tools for site building and theming for the administrative users, and content creators of a Drupal site."/>
+		<link rel="canonical" href="http://jimbir.ch/presentations/standing-up"/>
+		<meta property="og:site_name" content="Jim Birch"/>
+		<meta property="og:type" content="public_figure"/>
+		<meta property="og:url" content="http://jimbir.ch/presentations/standing-up"/>
+		<meta property="og:title" content="Standing up for the Content Creators: Site building and theming for the administrators | Drupal Presentation"/>
+		<meta property="og:description" content="This presentation by Jim Birch covers techniques and tools for site building and theming for the administrative users, and content creators of a Drupal site."/>
+		<meta property="og:image" content="http://jimbir.ch/presentations/optimizing-drupal-7-html-markup/img/Lego-Uncle-Jim-at-The-Pool-Bar.jpg"/>
+		<meta name="twitter:site" content="@thejimbirch"/>
+		<meta name="twitter:site:id" content="2989027096"/>
+		<meta name="twitter:creator" content="@thejimbirch"/>
+		<meta name="twitter:creator:id" content="2989027096"/>
+		<meta name="twitter:url" content="http://jimbir.ch/presentations/standing-up"/>
+		<meta name="twitter:title" content="Standing up for the Content Creators: Site building and theming for the administrators | Drupal Presentation"/>
+		<meta name="twitter:description" content="This presentation by Jim Birch covers techniques and tools for site building and theming for the administrative users, and content creators of a Drupal site."/>
+		<meta name="twitter:image:src" content="http://jimbir.ch/presentations/optimizing-drupal-7-html-markup/img/Lego-Uncle-Jim-at-The-Pool-Bar.jpg"/>
+		<meta itemprop="name" content="Standing up for the Content Creators: Site building and theming for the administrators | Drupal Presentation"/>
+		<meta itemprop="description" content="This presentation by Jim Birch covers techniques and tools for site building and theming for the administrative users, and content creators of a Drupal site."/>
+		<meta itemprop="image" content="http://jimbir.ch/presentations/optimizing-drupal-7-html-markup/img/Lego-Uncle-Jim-at-The-Pool-Bar.jpg"/>
+		<meta name="author" content="Jim Birch">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<style type="text/css">
+			.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+				background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+				color: #fff;
+				text-shadow: 1px 1px 1px rgba(0,0,0,0.4)
+			}
+			.reveal a {
+				color: #fff;
+			}
+		</style>
+
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-9711088-12', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-The-Pool-Bar.jpg">
+					<h1 style="padding-left:20px;">Standing up for the Content Creators</h1>
+					<h3 style="padding-left:20px;">Site building and theming for the administrators</h3>
+					<p style="display:inline-block;background: rgba(0, 0, 0, 0.5);padding:20px;">Created by <a href="http://jimbir.ch">Jim Birch</a><br>
+					<a href="http://jimbir.ch/presentations/standing-up">jimbir.ch/standing-up</a><br>
+					<a href="http://twitter.com/thejimbirch">@thejimbirch</a><br>
+					<a href="http://www.xenomedia.com">Xeno Media, Inc.</a></p>
+				</section>
+
+				<section data-background="img/admin-menu.gif">
+					<h2>Admin Menu, Organized, but Still So Many Links!</h2>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h2>Another view, listing them all on one page</h2>
+						<img src="img/administration-jim-birch-01.png">
+					</section>
+					<section>
+						<h2>That keeps going...</h2>
+						<img src="img/administration-jim-birch-02.png">
+					</section>
+					<section>
+						<h2>and going...</h2>
+						<img src="img/administration-jim-birch-03.png">
+					</section>
+					<section>
+						<h2>and going...</h2>
+						<img src="img/administration-jim-birch-04.png">
+					</section>
+					<section>
+						<h2>and going...</h2>
+						<img src="img/administration-jim-birch-05.png">
+					</section>
+					<section>
+						<h2>and going...</h2>
+						<img src="img/administration-jim-birch-06.png">
+					</section>
+					<section>
+						<h2>and this is a pretty simple site!</h2>
+						<img src="img/administration-jim-birch-07.png">
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Same goes for the ckEditor.<br>So many options...</h2>
+						<img src="img/ckeditor-too-much.png">
+					</section>
+					<section>
+						<h2>But really, only a few things are truly needed.</h2>
+						<img src="img/ckeditor-clean.png">
+					</section>
+				</section>
+
+				<section data-background="img/Lego-Uncle-Jim-Blogs.jpg">
+					<h2>Who are our<br>Content Creators?</h2>
+				</section>
+
+				<section>
+					<section>
+						<h3>Common Additional Roles:</h3>
+						<ul>
+							<li class="fragment">Webmasters</li>
+							<li class="fragment">Editors</li>
+							<li class="fragment">Authors</li>
+						</ul>
+						<h3 class="fragment">Content Specific Roles such as:</h3>
+						<ul>
+							<li class="fragment">Bloggers</li>
+							<li class="fragment">Press Releasers</li>
+						</ul>
+						<h3 class="fragment">Task Specific Roles such as:</h3>
+						<ul>
+							<li class="fragment">Community Manager</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Planning &amp; Managing Drupal Projects by Dani Nordin</h3>
+						<p><a href="http://www.amazon.com/dp/1449305482/">http://www.amazon.com/dp/1449305482/</a></p>
+						<img src="img/Planning-Managing-Drupal-Projects.jpg" alt="Planning and Managing Drupal Projects by Dani Nordin">
+					</section>
+				</section>
+
+				<section data-background="img/Lego-Uncle-Jim-vs-the-Acquia-Bot.jpg">
+					<h2>Once we know who, we can start fighting for them.</h2>
+				</section>
+
+				<section>
+					<h2>Before we begin, let's talk about installing/uninstalling modules.</h2>
+					<h3 class="fragment">Using Drush</h3>
+					<ul>
+						<li class="fragment">drush dl -y module_name</li>
+						<li class="fragment">drush en -y module_name</li>
+						<li class="fragment">drush dis -y module_name</li>
+						<li class="fragment">drush pm-uninstall -y module_name</li>
+					</ul>
+				</section>
+				<section>
+					<h3>In the UI</h3>
+					<p>Turn off (disable)</p>
+					<p>Uninstall (removes database bits)</p>
+					<p>Delete module folder by hand/in git</p>
+					<p><img src="img/Uninstall-Modules.png" alt="Uninstall module"></p>
+				</section>
+
+				<section data-background="img/Lego-Uncle-Jim-on-National-Boss-Day.jpg">
+					<h2>Theming the Drupal Administration UI</h2>
+				</section>
+
+				<section data-background="img/Admin-Theme.jpg">
+					<h2>Choosing Admin Themes</h2>
+				</section>
+
+				<section>
+					<h3>Administration Theme Options</h3>
+					<ul>
+						<li class="fragment">Choose a separate admin theme</li>
+						<li class="fragment">Use your front end theme</li>
+						<li class="fragment">Develop your own admin theme</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Block System Applies to Admin Themes Too!</h3>
+					<img src="img/Block-Administration.png" alt="Block Administation Screen">
+				</section>
+
+				<section>
+					<h3>Global changes</h3>
+					<h4>Enable Admin Toolbar, Disable Overlay</h4>
+					<ul>
+						<li>drush en -y admin_menu admin_menu_toolbar</li>
+						<li>drush dis -y toolbar shortcut</li>
+						<li>drush dis -y overlay</li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h3>Content Type &amp; Taxonomy Defaults</h3>
+						<ul>
+							<li class="fragment">Title Label</li>
+							<li class="fragment">Explanation or submission guidelines (Help)</li>
+							<li class="fragment">Administrative Description</li>
+							<li class="fragment">Default Publishing State, Revisions</li>
+							<li class="fragment">Author, Menu, Sitemap, (other modules), etc</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Palantir.net Build Spec Spreadsheet</h3>
+						<p><a href="https://www.palantir.net/blog/developing-drupal-sites-plan-or-perish" style="font-size:80%;">https://www.palantir.net/blog/developing-drupal-sites-plan-or-perish</a></p>
+						<p><img src="img/Palantir-Drupal-Build-Spec-Spreadsheet.png" alt="Palantir.net Build Spec Spreadsheet"></p>
+					</section>
+				</section>
+
+				<section>
+					<h3>Field Defaults</h3>
+					<ul>
+						<li class="fragment">Help text</li>
+						<li class="fragment">Default text format</li>
+						<li class="fragment">Module Settings (Linkit, Fences)</li>
+						<li class="fragment">Number of values for the field</li>
+						<li class="fragment">Images: File Directory, Types, Alt, etc</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Title Module</h3>
+					<p><a href="https://www.drupal.org/project/title">https://www.drupal.org/project/title</a></p>
+					<p style="text-align:left;">Makes Title a field. Made for Translations, but great for gaining control of Title and using in Display Modes.</p>
+				</section>
+
+				<section>
+					<h3>Hide Sticky &amp; Promote</h3>
+					<p><a href="https://www.drupal.org/sandbox/studiozut/2303677">https://www.drupal.org/sandbox/studiozut/2303677</a></p>
+					<p style="text-align:left;">Simple custom module that removes the "promote to front page" and "sticky" checkboxes from the node add and edit screens.</p>
+					<h3>Override Node Options</h3>
+					<p><a href="https://www.drupal.org/project/override_node_options">https://www.drupal.org/project/override_node_options</a></p>
+					<p style="text-align:left;">Use this module if you need to control these settings and more per Role.</p>
+				</section>
+
+				<section>
+					<h3>Simplify</h3>
+					<p><a href="https://www.drupal.org/project/simplify">https://www.drupal.org/project/simplify</a></p>
+					<ul>
+						<li>Hide so many of the things</li>
+						<li>Globally or on each:
+							<ul>
+								<li>Content type</li>
+								<li>Taxonomy</li>
+								<li>Block</li>
+								<li>Comments</li>
+								<li>User</li>
+								<li>User profile</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Field Group</h3>
+					<p><a href="https://www.drupal.org/project/field_group">https://www.drupal.org/project/field_group</a></p>
+					<p style="text-align:left;">Add organizing elements to Node Add/Edit, and Node Displays.</p>
+				</section>
+
+				<section>
+					<h3>Field Group Types</h3>
+					<ul>
+						<li>Fieldsets</li>
+						<li>Horizontal tabs</li>
+						<li>Vertical tabs</li>
+						<li>Accordions</li>
+						<li>Divs (Good for Grid Systems)</li>
+						<li>HTML elements</li>
+					</ul>
+					<p>Lots of modules that extend.</p>
+				</section>
+
+				<section>
+					<section>
+						<h3>Environment Indicator</h3>
+						<p><a href="https://www.drupal.org/project/environment_indicator">https://www.drupal.org/project/environment_indicator</a></p>
+						<p>Not just for Developers!</p>
+						<p>Use when clients have access to test &amp; staging servers</p>
+					</section>
+					<section>
+						<img src="img/Environment-Indicator-on-Admin-Menu.png">
+					</section>
+					<section>
+						<img src="img/Environment-Indicator-on-Admin-Menu-Local.png">
+					</section>
+				</section>
+
+				<section>
+					<h3>Dashboard(s)</h3>
+					<p>There are many different ways to create a landing page for the logged in administrator.</p>
+					<ul>
+						<li>Default "content" screen</li>
+						<li>Dashboard module</li>
+						<li>Workbench Dashboard</li>
+						<li>Custom Made Admin View</li>
+					</ul>
+					<p>My suggestion is to choose one way, and make it great.</p>
+				</section>
+
+				<section data-background="img/Logo-Uncle-Jim-on-the-Bloomingdale-Trail.jpg">
+					<h2>Theming CKEditor</h2>
+				</section>
+
+				<section>
+					<h3>Common Tasks</h3>
+					<ul>
+						<li class="fragment">Add only relevant buttons needed for the field</li>
+						<li class="fragment">Exclude security risks (filters)</li>
+						<li class="fragment">Remove markup already in templates like H1, and add formats (classes).</li>
+						<li class="fragment">Configure Allowed content so classes aren't stripped, set height, etc.</li>
+						<li class="fragment">CKEditor 4.3+ Widgets -- <a href="http://2015.midcamp.org/session-proposal/widgetizing-wysiwyg" target="_blank">Widgitizing Widgets by bneil</a>.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Uploading Images in the WYSIWYG</h3>
+					<ul>
+						<li class="fragment">What types of files can be uploaded?</li>
+						<li class="fragment">What thumbnails are created for admin use?</li>
+						<li class="fragment">Where can they be uploaded?</li>
+					</ul>
+					<h3 class="fragment">ckFinder</h3>
+					<ul>
+						<li class="fragment">Set Different upload folders per Content Type.</li>
+						<li class="fragment">Make a Profile Type and Text Format for each Content Type.</li>
+					</ul>
+					<h3 class="fragment">IMCE</h3>
+					<ul>
+						<li class="fragment">Set Different upload folders per User Role.</li>
+						<li class="fragment">Can do user/userid or year/month (like Wordpress)</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Paragraphs Module</h3>
+					<p><a href="https://www.drupal.org/project/paragraphs">https://www.drupal.org/project/paragraphs</a></p>
+					<p>Instead of trying to make the WYSIWYG do everything, you can add different types of fields.</p>
+				</section>
+
+				<section data-background="img/Lego-Uncle-Jim-and-the-Swedish-Cats.jpg">
+					<h2>Administrative<br>Workflows</h2>
+				</section>
+
+				<section>
+					<h3>Scheduler</h3>
+					<ul>
+						<li>Each content type can be scheduled.</li>
+						<li>Which need to be?</li>
+						<li>Who can?</li>
+						<li>Set up external Cron</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Workbench</h2>
+					<ul>
+						<li class="fragment">Each content type can have more statuses than Published.  Workbench Moderation adds Draft and Needs Review by default, but can add custom ones you create.</li>
+						<li class="fragment">Workbench Access can restrict access to different sections of the site based on menu or taxonomies.</li>
+						<li class="fragment">Workbench Media adds integration with either the 1.x or 2.x of the Media Module!</li>
+					</ul>
+				</section>
+
+				<section data-background="img/Lego-Uncle-Jim-is-Global.jpg">
+					<h2>Documentation</h2>
+				</section>
+
+				<section>
+					<h3>Inline</h3>
+					<p>Content Types, Fields, Blocks, Views, Panels, etc all provide places to enter descriptive and instructional text for administrative users</p>
+					<p>Content Types and fields allow for HTML, (link to…)</p>
+				</section>
+
+				<section>
+					<h3>Advanced help Module</h3>
+					<p><a href="https://www.drupal.org/project/advanced_help">https://www.drupal.org/project/advanced_help</a></p>
+					<p>For custom modules, developers can include HTML files that can be linked to from any ADMIN UI screens the module creates.</p>
+				</section>
+
+				<section>
+					<h3>Google Docs/Dropbox/Company Intranet</h3>
+					<ul>
+						<li class="fragment">Keep a master copy, organized folder, shared with those who will help you maintain.</li>
+						<li class="fragment">Export PDF for users, shared with appropriately role'd users</li>
+						<li class="fragment">Authors can access author docs</li>
+						<li class="fragment">Editors can access author and editor docs</li>
+						<li class="fragment">Webmasters can access author, editor, and webmaster docs</li>
+						<li class="fragment">and so on.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Testing and Tweaking</h2>
+					<p>Things change up to the last minute before a launch, and many times after that!  Do not get stuck in the habit of just using the developer's administrator role.</p> 
+					<ul>
+						<li>Use the site early and often as the Webmaster, Editor, and Author.</li>
+						<li>Step through the documentation defined tasks, verify all can be done.</li>
+						<li>Adjust permissions as you go.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>How to be another</h3>
+					<ul>
+						<li>Masquerade Module</li>
+						<li>Create different accounts
+							<ul>
+								<li>Gmail Users can use the plus trick
+									<ul>
+										<li>jim+webmaster@</li>
+										<li>jim+editor@</li>
+										<li>jim+author@</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+				<section style="text-align: left;" data-background="img/Lego-Uncle-Jim-at-The-Pool-Bar.jpg">
+					<h1 style="padding-left:20px;">THE END</h1>
+					<h3 style="padding-left:20px;">Continuing the conversation:</h3>
+					<p style="display:inline-block;background: rgba(0, 0, 0, 0.5);padding:20px;">Created by <a href="http://jimbir.ch">Jim Birch</a><br>
+					<a href="http://jimbir.ch/presentations/standing-up">jimbir.ch/standing-up</a><br>
+					<a href="http://twitter.com/thejimbirch">@thejimbirch</a><br>
+					<a href="http://www.xenomedia.com">Xeno Media, Inc.</a></p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

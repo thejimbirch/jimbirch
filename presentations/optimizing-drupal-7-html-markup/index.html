@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Optimizing Drupal 7 HTML Markup | Drupal Presentation</title>
+		<meta name="description" content="This presentation by Jim Birch covers techniques for optimizing the HTML output of Drupal 7"/>
+		<link rel="canonical" href="http://jimbir.ch/presentations/optimizing-drupal-7-html-markup"/>
+		<meta property="og:site_name" content="Jim Birch"/>
+		<meta property="og:type" content="public_figure"/>
+		<meta property="og:url" content="http://jimbir.ch/presentations/optimizing-drupal-7-html-markup"/>
+		<meta property="og:title" content="Optimizing Drupal 7 HTML Markup | Drupal Presentation"/>
+		<meta property="og:description" content="This presentation by Jim Birch covers techniques for optimizing the HTML output of Drupal 7"/>
+		<meta property="og:image" content="http://jimbir.ch/presentations/optimizing-drupal-7-html-markup/img/Lego-Uncle-Jim-at-the-Marsh.jpg"/>
+		<meta name="twitter:site" content="@thejimbirch"/>
+		<meta name="twitter:site:id" content="2989027096"/>
+		<meta name="twitter:creator" content="@thejimbirch"/>
+		<meta name="twitter:creator:id" content="2989027096"/>
+		<meta name="twitter:url" content="http://jimbir.ch/presentations/optimizing-drupal-7-html-markup"/>
+		<meta name="twitter:title" content="Optimizing Drupal 7 HTML Markup | Drupal Presentation"/>
+		<meta name="twitter:description" content="This presentation by Jim Birch covers techniques for optimizing the HTML output of Drupal 7"/>
+		<meta name="twitter:image:src" content="http://jimbir.ch/presentations/optimizing-drupal-7-html-markup/img/Lego-Uncle-Jim-at-the-Marsh.jpg"/>
+		<meta itemprop="name" content="Optimizing Drupal 7 HTML Markup | Drupal Presentation"/>
+		<meta itemprop="description" content="This presentation by Jim Birch covers techniques for optimizing the HTML output of Drupal 7"/>
+		<meta itemprop="image" content="http://jimbir.ch/presentations/optimizing-drupal-7-html-markup/img/Lego-Uncle-Jim-at-the-Marsh.jpg"/>
+		<meta name="author" content="Jim Birch">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<style type="text/css">
+			.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+				background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+				color: #fff;
+				text-shadow: 1px 1px 1px rgba(0,0,0,0.4)
+			}
+			.reveal a {
+				color: #fff;
+			}
+		</style>
+
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-9711088-12', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-the-Marsh.jpg">
+					<h1 style="padding-left:20px;">Optimizing Drupal 7 HTML Markup</h1>
+					<h3 style="padding-left:20px;">Using Panels, Page Manager, and Fences to perfection.</h3>
+					<p style="display:inline-block;background: rgba(0, 0, 0, 0.5);padding:20px;">Created by <a href="http://jimbir.ch">Jim Birch</a><br>
+					<a href="http://jimbir.ch/presentations/optimizing-drupal-7-html-markup">jimbir.ch/optimizing-drupal-7-html-markup</a><br>
+					<a href="http://twitter.com/thejimbirch">@thejimbirch</a><br>
+					<a href="http://www.xenomedia.com">Xeno Media, Inc.</a></p>
+				</section>
+
+				<section>
+					<h3>Panels and Page Manager (ctools)</h3>
+					<p>Allows us to:</p>
+					<ul>
+						<li class="fragment">completely separate design from content and layout.</li>
+						<li class="fragment">easily create variations.</li>
+						<li class="fragment">configure customizations rapidly.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Fences Module</h3>
+					<p>Helps us to:</p>
+					<ul>
+						<li class="fragment">gain complete control of every field.</li>
+						<li class="fragment">reset all HTML no matter what field type.</li>
+						<li class="fragment">add additional field templates available to any field.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Panels are faster than blocks</h3>
+					<p>Going back to 2010, Developers have been writing about Panels' performance advantage</p>
+					<ul>
+						<li class="fragment"><a href="https://www.lullabot.com/articles/assembling-pages-with-drupal">Lullabot: Assembling Pages with Drupal [2010]</a></li>
+						<li class="fragment"><a href="https://www.codeenigma.com/community/blog/performance-panels">Code Enigma: Performance Of Panels [2012]</a></li>
+						<li class="fragment"><a href="http://koplowiczandsons.com/content/panels-vs-blocks">Koplowicz and Sons: Panels vs. Blocks [2013]</a></li>
+					</ul>
+				</section>
+
+				<section data-background="img/Lego-Uncle-Jim-Loves-America.jpg">
+					<h2>Normalizing our HTML</h2>
+				</section>
+
+				<section>
+					<h3><a href="https://www.drupal.org/project/fences">Fences Module</a></h3>
+					<p>Adds a new <b>Wrapper markup</b> option to all fields</p>
+					<img src="img/Drupal-Fences-Settings.png" alt="Drupal Fnces Settings">
+				</section>
+
+				<section>
+					<h4>Easily add More Field Templates</h4>
+					<p>Create a new TPL in your theme, and Fences will find it and add it to the list.</p>
+					<pre>
+						<code>
+	field--fences-NAMEOFELEMENT.tpl.php
+	and 
+	field--fences-NAMEOFELEMENT-multiple.tpl.php
+						</code>
+					</pre>
+				</section>
+
+				<section>
+					<h4>Resetting Templates</h4>
+					<p>Remove all excess HTML from Templates in out theme</p>
+					<img src="img/Resetting-Template-HTML.png" alt="Resetting HTML in Theme Templates">
+				</section>
+
+				<section data-background="img/Lego-Uncle-Jim-on-the-606.jpg">
+					<h2>Building the layout with Panels</h2>
+				</section>
+
+				<section>
+					<h3>Add Layout Plugin location to the .info file of your Theme</h3>
+					<pre>
+						<code>
+; Panels layouts. You can place multiple layouts in this folder.
+plugins[panels][layouts] = layouts
+						</code>
+					</pre>
+				</section>
+
+				<section>
+					<h3>Copy an existing layout plugin from:</h3>
+					<pre>
+						<code>
+/sites/all/modules/contrib/panels/plugins/layouts/
+						</code>
+					</pre>
+					<p>The plugin contains 4 files:</p>
+					<ul>
+						<li>.css - The CSS file used to layout the admin.</li>
+						<li>.inc - Defines the attributes of the layout.</li>
+						<li>.png - The icon for the layout, used in the admin.</li>
+						<li>.tpl - The template for layout.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h4>Define Regions in the Layout's .inc</h4>
+					<img src="img/panel-template-inc-file.png" alt="Panel Layout Plugin .inc">
+				</section>
+
+				<section>
+					<h4>Layout the Regions and the HTML structure in the .tpl</h4>
+					<img src="img/panel-template-content.png" alt="Panel Layout Plugin .tpl">
+				</section>
+
+				<section>
+					<h3><a href="https://www.drupal.org/project/panels_everywhere">Panels Everywhere</a></h3>
+					<p class="fragment">Traditionally, Panels replaces the "content" area of a Drupal layout.</p>
+					<p class="fragment">With the Panels Everywhere module, you can replace the Region system of Drupal.</p>
+				</section>
+
+				<section>
+					<h4>Nested Panel Regions</h4>
+					<p>Panels Everywhere is the darker regions, Traditional Panels, the lighter.</p>
+					<img src="img/Panels-Explanation-sm.jpg" alt="Panels Everywhere - Region Explanation">
+				</section>
+
+				<section data-background="img/Lego-Uncle-Jim-Builds-a-New-Chicago.jpg">
+					<h2>Putting it all together with Page Manager</h2>
+				</section>
+
+				<section>
+					<h3>Site Template</h3>
+					<p>Define the default layout, provided by the Panels Everywhere module.</p>
+					<span class="fragment">
+					<p><b>General Tab</b>: Remove Excess CSS</p>
+						<pre>
+							<code>
+	no-sidebars page-node- node-type-page not-logged-in html 
+	logged-in one-sidebar sidebar-first not-front
+							</code>
+						</pre>
+					</span>
+					<p class="fragment">You can also add classes, and ID, or additional CSS to be loaded inline.</p>
+				</section>
+
+				<section>
+					<h3>Site Template</h3>
+					<p>Choose the Layout from what we defined in the .inc file of the plugin.</p>
+					<img src="img/Page-Manager-Layout.png" alt="Page Manager - Choose Layout">
+				</section>
+
+				<section>
+					<h3>Site Template</h3>
+					<p>Add the Content</p>
+					<img src="img/Page-Manager-Content.png" alt="Page Manager - Choose Content">
+				</section>
+
+				<section>
+					<h3>Site Template</h3>
+					<p>Be sure to include</p>
+					<ul>
+						<li>Page Messages: Messages, Tabs, Help</li>
+						<li>Page Content: Pulls in subsequent node panels</li>
+				</section>
+
+				<section>
+					<h3>Node Template</h3>
+					<p>Create Variants for Node, or each Node Type</p>
+					<p>Selection Rules can be positive, or negative (NOT)</p>
+					<img src="img/Node-Template-Variants.png" alt="Panels Node Template">
+				</section>
+
+				<section>
+					<h3>Node Template</h3>
+					<p>Choose Layout, from the second layout we created earlier</p>
+					<img src="img/Node-Template-Layout.png" alt="Node Template - Choose Layout">
+				</section>
+
+				<section>
+					<h3>Node Template</h3>
+					<p>Choose Content: Individual fields, or Entity View Modes like Full Content or Teaser.<br>
+						Plus you can add Content Panes or Blocks.</p>
+					<img src="img/Node-Template-Content.png" alt="Node Template - Choose Content">
+				</section>
+
+				<section>
+					<h3>Node Template</h3>
+					<p>Here's another example, of a variant, Node Type = Blog.  I added the Disqus Comment Block</p>
+					<img src="img/Node-Template-Content-Blog-Variant.png" alt="Node Template - Choose Content - Blog Variant">
+				</section>
+
+				<section data-background="img/Lego-Uncle-Jim-at-Sunset.jpg">
+					<h2>To Sum Up</h2>
+				</section>
+
+				<section>
+					<h3>Summary</h3>
+					<ul>
+						<li>Using <b>Fences</b>, we can gain complete control over fields.</li>
+						<li class="fragment">Using the <b>Theme templates</b>, we can strip out any unwanted HTML inserted by Drupal core.</li>
+						<li class="fragment"><b>Page Manager</b> allows us to define layouts, and what content gets loaded gives us complete control over the page.</p>
+					</ul>
+				</section>
+
+				<section style="text-align: left;" data-background="img/Lego-Uncle-Jim-at-the-Marsh.jpg">
+					<h1 style="padding-left:20px;">THE END</h1>
+					<h3 style="padding-left:20px;">Continuing the conversation:</h3>
+					<p style="display:inline-block;background: rgba(0, 0, 0, 0.5);padding:20px;">Created by <a href="http://jimbir.ch">Jim Birch</a><br>
+					<a href="http://jimbir.ch/presentations/optimizing-drupal-7-html-markup">jimbir.ch/optimizing-drupal-7-html-markup</a><br>
+					<a href="http://twitter.com/thejimbirch">@thejimbirch</a><br>
+					<a href="http://www.xenomedia.com">Xeno Media, Inc.</a></p>
+				</section>
+
+				<section data-background="img/Lego-Uncle-Jim-at-the-Beach.jpg">
+					<h2>Bonus Points</h2>
+				</section>
+
+				<section>
+					<h3>Bonus Points</h3>
+					<ul>
+						<li><a href="http://jimbir.ch/blog/drupal-7-panels-page-manager-existing-pages">Page Manager Existing Pages</a> - For adding pages that already exist into Page Manager.</li>
+						<li>Panelizer - For allowing the overriding of invididual nodes.</li>
+						<li>Mini Panels - For adding more nesting of Panels inside of Panels</li>
+						<li>Custom content panes and Views content panes - Blocks are slow, use Content Panes instead!</li>
+					</ul>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
