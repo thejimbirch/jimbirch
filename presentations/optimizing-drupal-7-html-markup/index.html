@@ -86,33 +86,50 @@
 					<a href="http://www.xenomedia.com">Xeno Media, Inc.</a></p>
 				</section>
 
+				<section style="text-align:left;" data-background="img/divs-and-divs-and-divs.png">
+					<h1 class="fragment" style="padding-left:20px;">Why?</h1>
+					<h3 class="fragment" style="padding-left:20px;">Markup</h3>
+					<h3 class="fragment" style="padding-left:20px;">Performance</h3>
+					<h3 class="fragment" style="padding-left:20px;">Security</h3>
+				</section>
+
 				<section>
-					<h3>Panels and Page Manager (ctools)</h3>
+					<h3>Fences Module (Markup)</h3>
+					<p>Helps us to:</p>
+					<ul>
+						<li class="fragment">gain complete control of every field's markup.</li>
+						<li class="fragment">reset all HTML no matter the field type.</li>
+						<li class="fragment">add additional field templates.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Panels and Page Manager/ctools (Markup)</h3>
 					<p>Allows us to:</p>
 					<ul>
-						<li class="fragment">completely separate design from content and layout.</li>
+						<li class="fragment">completely separate layout from design and content.</li>
 						<li class="fragment">easily create variations.</li>
 						<li class="fragment">configure customizations rapidly.</li>
 					</ul>
 				</section>
 
 				<section>
-					<h3>Fences Module</h3>
-					<p>Helps us to:</p>
-					<ul>
-						<li class="fragment">gain complete control of every field.</li>
-						<li class="fragment">reset all HTML no matter what field type.</li>
-						<li class="fragment">add additional field templates available to any field.</li>
-					</ul>
-				</section>
-
-				<section>
-					<h3>Panels are faster than blocks</h3>
+					<h3>Panels are faster than blocks (Performance)</h3>
 					<p>Going back to 2010, Developers have been writing about Panels' performance advantage</p>
 					<ul>
 						<li class="fragment"><a href="https://www.lullabot.com/articles/assembling-pages-with-drupal">Lullabot: Assembling Pages with Drupal [2010]</a></li>
 						<li class="fragment"><a href="https://www.codeenigma.com/community/blog/performance-panels">Code Enigma: Performance Of Panels [2012]</a></li>
 						<li class="fragment"><a href="http://koplowiczandsons.com/content/panels-vs-blocks">Koplowicz and Sons: Panels vs. Blocks [2013]</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Panes are more secure than blocks (Security)</h3>
+					<p>Protect your content, and your user's access by using Panes.</p>
+					<ul>
+						<li class="fragment">The Block access permission, Administer blocks, is all or nothing.</li>
+						<li class="fragment">Custom Content Panes are configurable and feature-izable.</li>
+						<li class="fragment">Fieldable Panel Panes allow for Revisions, like nodes.</li>
 					</ul>
 				</section>
 
@@ -142,6 +159,12 @@
 					<h4>Resetting Templates</h4>
 					<p>Remove all excess HTML from Templates in out theme</p>
 					<img src="img/Resetting-Template-HTML.png" alt="Resetting HTML in Theme Templates">
+				</section>
+
+				<section>
+					<h4>Customizing Templates</h4>
+					<p>You can still add customized templates as you normally would.</p>
+					<img src="img/field-template-customization.png" alt="Customizing HTML in Theme Templates">
 				</section>
 
 				<section data-background="img/Lego-Uncle-Jim-on-the-606.jpg">
@@ -186,8 +209,10 @@ plugins[panels][layouts] = layouts
 
 				<section>
 					<h3><a href="https://www.drupal.org/project/panels_everywhere">Panels Everywhere</a></h3>
-					<p class="fragment">Traditionally, Panels replaces the "content" area of a Drupal layout.</p>
-					<p class="fragment">With the Panels Everywhere module, you can replace the Region system of Drupal.</p>
+					<ul>
+						<li class="fragment">Traditionally, Panels replaces the "content" area of a Drupal layout.</li>
+						<li class="fragment">With the Panels Everywhere module, you can replace the Region system of Drupal.</li>
+					</ul>
 				</section>
 
 				<section>
@@ -197,11 +222,69 @@ plugins[panels][layouts] = layouts
 				</section>
 
 				<section data-background="img/Lego-Uncle-Jim-Builds-a-New-Chicago.jpg">
+					<h2>About Page Manager Pages</h2>
+				</section>
+
+				<section>
+					<h3>Page Manager</h3>
+					<p>New and Existing pages can be added or controlled by admins or modules.</p>
+					<img src="img/Page-Manager.png" alt="Page Manager">
+				</section>
+
+				<section>
+					<h3>Page Manager Page - Summary</h3>
+					<p>Overview with quick links to common areas.</p>
+					<img src="img/Page-Manager-Page-1-Summary.png" alt="Page Manager Page - Summary">
+				</section>
+
+				<section>
+					<h3>Page Manager Page - Template</h3>
+					<p>Panels Everywhere allows you to have different Site templates.</p>
+					<img src="img/Page-Manager-Page-2-Template.png" alt="Page Manager Page - Template">
+				</section>
+
+				<section>
+					<h3>Page Manager Page - General</h3>
+					<p>Define general attributes of the page including CSS</p>
+					<img src="img/Page-Manager-Page-3-General.png" alt="Page Manager Page - General">
+				</section>
+
+				<section>
+					<h3>Page Manager Page - Selection Rules</h3>
+					<p>When this pane will be (or not be) used.</p>
+					<img src="img/Page-Manager-Page-4-Selection-Rules.png" alt="Page Manager Page - Selection Rules">
+				</section>
+
+				<section>
+					<h3>Page Manager Page - Contexts</h3>
+					<p>For more advanced rendering on pages.</p>
+					<img src="img/Page-Manager-Page-5-Contexts.png" alt="Page Manager Page - Contexts">
+				</section>
+
+				<section>
+					<h3>Page Manager Page - Meta tags</h3>
+					<p>Add to custom pages, or override existing pages' meta tags.</p>
+					<img src="img/Page-Manager-Page-6-Meta-tag.png" alt="Page Manager Page - Meta tags">
+				</section>
+
+				<section>
+					<h3>Page Manager Page - Layouts</h3>
+					<p>Choose the layout for the page.</p>
+					<img src="img/Page-Manager-Page-7-Layout.png" alt="Page Manager Page - Layout">
+				</section>
+
+				<section>
+					<h3>Page Manager Page - Content</h3>
+					<p>Select and add content to the page.</p>
+					<img src="img/Page-Manager-Page-8-Content.png" alt="Page Manager Page - Content">
+				</section>
+
+				<section data-background="img/Lego-Uncle-Jim-at-the-Pool-Waterfall.jpg">
 					<h2>Putting it all together with Page Manager</h2>
 				</section>
 
 				<section>
-					<h3>Site Template</h3>
+					<h3>Site Template Page</h3>
 					<p>Define the default layout, provided by the Panels Everywhere module.</p>
 					<span class="fragment">
 					<p><b>General Tab</b>: Remove Excess CSS</p>
@@ -268,9 +351,9 @@ plugins[panels][layouts] = layouts
 				<section>
 					<h3>Summary</h3>
 					<ul>
-						<li>Using <b>Fences</b>, we can gain complete control over fields.</li>
-						<li class="fragment">Using the <b>Theme templates</b>, we can strip out any unwanted HTML inserted by Drupal core.</li>
-						<li class="fragment"><b>Page Manager</b> allows us to define layouts, and what content gets loaded gives us complete control over the page.</p>
+						<li>Using <b>Fences</b> and <b>Theme templates</b>, we can gained control over field markup.</li>
+						<li class="fragment">Using <b>Panels</b>, <b>Panels Everywhere</b>, and <b>Layouts</b> we gain control of the layout markup.</li>
+						<li class="fragment"><b>Page Manager</b> allows us to put it all together by allowing us to select which layouts, and what content gets loaded in any scenario.</p>
 					</ul>
 				</section>
 
