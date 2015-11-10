@@ -320,3 +320,12 @@ div.form-item div.password-suggestions {
     background: rgba(0, 0, 0, 0) url("http://jimbir.ch/sites/default/files/styles/background/public/img/page/Jim%20Playing%20Theremin.jpg?itok=eHhZG3bm") no-repeat fixed center center;
     background-size: cover !important;
 }
+
+.blog-wrapper img {
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.blog-wrapper .blog-teaser {
+    margin-bottom: 20px;
+}
