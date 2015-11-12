@@ -56,6 +56,15 @@ function system_status_menu() {
 }
 
 /**
+ * Implements hook_menu_site_status_alter().
+ */
+function system_status_menu_site_status_alter(&$menu_site_status, $path) {
+  if (strpos($path, 'admin/reports/system_status') !== FALSE && $menu_site_status == MENU_SITE_OFFLINE) {
+    $menu_site_status = MENU_SITE_ONLINE;
+  }
+}
+
+/**
  * Access callback: Verify the used token
  * 
  * @see system_status_menu()
