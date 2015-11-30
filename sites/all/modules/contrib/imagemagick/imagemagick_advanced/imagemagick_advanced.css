@@ -1,0 +1,9 @@
+table.image-anchor td {
+  text-align: center;
+}
+
+table.image-anchor td > img {
+  padding: 0;
+  margin: 0;
+}
+

@@ -52,6 +52,20 @@ function imagemagick_advanced_form_system_image_toolkit_settings_alter(&$form, &
       '@color-url' => 'http://www.color.org/profiles.html',
     )),
   );
+  $im_form['imagemagick_advanced_interlace'] = array(
+    '#type' => 'select',
+    '#title' => t('Interlacing method'),
+    '#default_value' => variable_get('imagemagick_advanced_interlace', 0),
+    '#options' => array(
+      'line' => 'Line',
+      'plane' => 'Plane',
+    ),
+    '#empty_option' => t('- None -'),
+    '#empty_value' => 0,
+    '#description' => t('Specify the type of <a href="@help-url">interlacing</a> scheme. Use <strong>Line</strong>, or <strong>Plane</strong> to create an interlaced GIF or progressive JPEG image.', array(
+      '@help-url' => 'http://en.wikipedia.org/wiki/Interlacing_%28bitmaps%29',
+    )),
+  );
 }
 
 /**
@@ -75,6 +89,21 @@ function imagemagick_advanced_imagemagick_arguments_alter(&$args, $context) {
       $args['colorspace'] = '-colorspace ' . escapeshellarg($colorspace);
     }
   }
+  // Use interlace option.
+  if ($interlace = variable_get('imagemagick_advanced_interlace', 0)) {
+    $args['interlace'] = "-interlace {$interlace}";
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function imagemagick_advanced_theme() {
+  return array(
+    'imagemagick_advanced_perspective_anchor' => array(
+      'render element' => 'element',
+    ),
+  );
 }
 
 /**
@@ -153,6 +182,99 @@ function image_imagemagick_watermark(stdClass $image, $watermark) {
 }
 
 /**
+ * Adds a blur effect to an image.
+ *
+ * @param $image
+ *   An image object.
+ * @param $radius
+ *   (optional) Radius parameter
+ * @param $sigma
+ *   (optional) Sigma parameter
+ * @param $use_gaussian
+ *   (optional) Boolean indicating whether to use a gaussian blur or standard blur algorithm.
+ *
+ * @return
+ *   TRUE or FALSE, based on success.
+ *
+ * @see image_blur()
+ */
+function image_imagemagick_blur(stdClass $image, $sigma = 8, $radius = 0, $use_gaussian = FALSE) {
+  $blur_arg = '-channel RGBA '; // Handle transparent background images.
+  $blur_arg .= ($use_gaussian) ? '-gaussian-blur ' : '-blur ';
+  $blur_arg .= $radius . 'x' . $sigma;
+  $image->ops[] = $blur_arg;
+  return TRUE;
+}
+
+/**
+ * Adds a perspective transform to an image.
+ *
+ * @param $image
+ *   An image object.
+ * @param $percentage
+ *   (optional) The percentage of the perspective shift in relaion to the
+ *   height of the source image.
+ * @param $vanish
+ *   (optional) The vanishing point of the perspective shift. One of
+ *   top, right, bottom, or left.
+ *
+ * @return
+ *   TRUE or FALSE, based on success.
+ *
+ * @see image_perspective()
+ */
+function image_imagemagick_perspective(stdClass $image, $percentage = 10, $vanish = 'right') {
+  $width = $image->info['width'];
+  $height = $image->info['height'];
+
+  switch ($vanish) {
+    case "top":
+      $left = round($width * $percentage / 100);
+      $right = round($width * (100 - $percentage) / 100);
+      $perspective_arg = "0,0,$left,0 0,$height,0,$height $width,0,$right,0 $width,$height,$width,$height";
+      break;
+    case "right":
+      $bottom = round($height * $percentage / 100);
+      $top = round($height * (100 - $percentage) / 100);
+      $perspective_arg = "0,0,0,0 0,$height,0,$height $width,0,$width,$bottom $width,$height,$width,$top";
+      break;
+    case "bottom":
+      $left = round($width * $percentage / 100);
+      $right = round($width * (100 - $percentage) / 100);
+      $perspective_arg = "0,0,0,0 0,$height,$left,$height $width,0,$width,0 $width,$height,$right,$height";
+      break;
+    case "left":
+      $bottom = round($height * $percentage / 100);
+      $top = round($height * (100 - $percentage) / 100);
+      $perspective_arg = "0,0,0,$bottom 0,$height,0,$top $width,0,$width,0 $width,$height,$width,$height";
+      break;
+  }
+
+  $image->ops[] = '-matte -virtual-pixel transparent -distort Perspective \'' . $perspective_arg . '\'';
+  return TRUE;
+}
+
+/**
+ * Adds a drop shadow to an image.
+ *
+ * @param $image
+ *   An image object.
+ * @param $percentage
+ *   (optional) The percentage of the perspective shift in relaion to the
+ *   height of the source image.
+ *
+ * @return
+ *   TRUE or FALSE, based on success.
+ *
+ * @see image_shadow()
+ */
+function image_imagemagick_shadow(stdClass $image) {
+  $shadow_arg = "80x4-5+5";
+  $image->ops[] = "\\( +clone -background black -shadow $shadow_arg \\) +swap -background none -layers merge +repage";
+  return TRUE;
+}
+
+/**
  * Implements hook_image_effect_info().
  */
 function imagemagick_advanced_image_effect_info() {
@@ -166,6 +288,30 @@ function imagemagick_advanced_image_effect_info() {
     'label' => t('Automatically correct orientation'),
     'help' => t('Automatically rotates images according to orientation flag set by many phones and digital cameras.'),
     'effect callback' => 'imagemagick_advanced_auto_orient_effect',
+  );
+  $effects['imagemagick_sharpen'] = array(
+    'label' => t('Sharpen'),
+    'help' => t('Applies a sharpen mask to the image.'),
+    'effect callback' => 'imagemagick_advanced_sharpen_effect',
+    'dimensions passthrough' => TRUE,
+  );
+  $effects['imagemagick_shadow'] = array(
+    'label' => t('Drop shadow'),
+    'help' => t('Adds a drop shadow effect to the image.'),
+    'effect callback' => 'imagemagick_advanced_shadow_effect',
+    'dimensions passthrough' => TRUE,
+  );
+  $effects['imagemagick_blur'] = array(
+    'label' => t('Blur'),
+    'help' => t('Adds a blur effect to the image.'),
+    'effect callback' => 'imagemagick_advanced_blur_effect',
+    'form callback' => 'imagemagick_advanced_blur_form',
+  );
+  $effects['imagemagick_perspective'] = array(
+    'label' => t('Perspective transform'),
+    'help' => t('Adds a perspective transform to the image.'),
+    'effect callback' => 'imagemagick_advanced_perspective_effect',
+    'form callback' => 'imagemagick_advanced_perspective_form',
   );
   return $effects;
 }
@@ -181,7 +327,7 @@ function imagemagick_advanced_image_effect_info() {
  *
  * @see imagemagick_strip()
  */
-function imagemagick_advanced_strip_effect($image) {
+function imagemagick_advanced_strip_effect(&$image) {
   if (!image_toolkit_invoke('strip', $image)) {
     watchdog('imagemagick', 'Image strip failed using the %toolkit toolkit on %path (%mimetype, %dimensions)', array(
       '%toolkit' => $image->toolkit,
@@ -219,3 +365,261 @@ function imagemagick_advanced_auto_orient_effect($image) {
   return TRUE;
 }
 
+/**
+ * Image effect callback; Applies a sharpen effect to an image resouce.
+ *
+ * @param $image
+ *   An image object returned by image_load().
+ *
+ * @return
+ *   TRUE on success. FALSE on failure to resize image.
+ *
+ * @see imagemagick_sharpen()
+ */
+function imagemagick_advanced_sharpen_effect(&$image) {
+  if (!image_toolkit_invoke('sharpen', $image)) {
+    watchdog('imagemagick', 'Image sharpen failed using the %toolkit toolkit on %path (%mimetype, %dimensions)', array(
+      '%toolkit' => $image->toolkit,
+      '%path' => $image->source,
+      '%mimetype' => $image->info['mime_type'],
+      '%dimensions' => $image->info['height'] . 'x' . $image->info['height'],
+    ), WATCHDOG_ERROR);
+    return FALSE;
+  }
+  return TRUE;
+}
+
+/**
+ * Image effect callback; Applies a drop shadow to an image resouce.
+ *
+ * @param $image
+ *   An image object returned by image_load().
+ *
+ * @return
+ *   TRUE on success. FALSE on failure to resize image.
+ *
+ * @see imagemagick_shadow()
+ */
+function imagemagick_advanced_shadow_effect(&$image) {
+  if (!image_toolkit_invoke('shadow', $image)) {
+    watchdog('imagemagick', 'Image shadow failed using the %toolkit toolkit on %path (%mimetype, %dimensions)', array(
+      '%toolkit' => $image->toolkit,
+      '%path' => $image->source,
+      '%mimetype' => $image->info['mime_type'],
+      '%dimensions' => $image->info['height'] . 'x' . $image->info['height'],
+    ), WATCHDOG_ERROR);
+    return FALSE;
+  }
+  return TRUE;
+}
+
+/**
+ * Image effect callback; Applies a blur to an image resouce.
+ *
+ * @param $image
+ *   An image object returned by image_load().
+ *
+ * @return
+ *   TRUE on success. FALSE on failure to resize image.
+ *
+ * @see imagemagick_blur()
+ */
+function imagemagick_advanced_blur_effect(&$image, $data) {
+  if (!image_toolkit_invoke('blur', $image, $data)) {
+    watchdog('imagemagick', 'Image blur failed using the %toolkit toolkit on %path (%mimetype, %dimensions)', array(
+      '%toolkit' => $image->toolkit,
+      '%path' => $image->source,
+      '%mimetype' => $image->info['mime_type'],
+      '%dimensions' => $image->info['height'] . 'x' . $image->info['height'],
+    ), WATCHDOG_ERROR);
+    return FALSE;
+  }
+  return TRUE;
+}
+
+/**
+ * Image effect callback; Applies a perspective transform to an image resouce.
+ *
+ * @param $image
+ *   An image object returned by image_load().
+ *
+ * @return
+ *   TRUE on success. FALSE on failure to resize image.
+ *
+ * @see imagemagick_perspective()
+ */
+function imagemagick_advanced_perspective_effect(&$image, $data) {
+  if (!image_toolkit_invoke('perspective', $image, $data)) {
+    watchdog('imagemagick', 'Image perspective failed using the %toolkit toolkit on %path (%mimetype, %dimensions)', array(
+      '%toolkit' => $image->toolkit,
+      '%path' => $image->source,
+      '%mimetype' => $image->info['mime_type'],
+      '%dimensions' => $image->info['height'] . 'x' . $image->info['height'],
+    ), WATCHDOG_ERROR);
+    return FALSE;
+  }
+  return TRUE;
+}
+
+/**
+ * Form structure for the imagemagick_advanced blur form.
+ *
+ * Note that this is not a complete form, it only contains the portion of the
+ * form for configuring the crop options. Therefore it does not not need to
+ * include metadata about the effect, nor a submit button.
+ *
+ * @param $data
+ *   The current configuration for this crop effect.
+ */
+function imagemagick_advanced_blur_form($data) {
+
+  $data += array(
+    'sigma' => 8,
+    'radius' => 0,
+    'use_gaussian' => 0,
+  );
+
+  $form['sigma'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Sigma'),
+    '#size' => 5,
+    '#allow_negative' => FALSE,
+    '#default_value' => $data['sigma'],
+    '#element_validate' => array('imagemagick_advanced_element_validate_numeric'),
+    '#description' => t('The <em>sigma</em> can be thought of as an approximation of just how much your want the image to "spread" or blur, in pixels. Think of it as the size of the brush used to blur the image. The numbers are floating point values, so you can use a very small value like "0.5".'),
+  );
+
+  $form['radius'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Radius'),
+    '#size' => 5,
+    '#allow_negative' => FALSE,
+    '#default_value' => $data['radius'],
+    '#element_validate' => array('imagemagick_advanced_element_validate_numeric'),
+    '#description' => t('The <em>radius</em> controls how big an area the operator should look at when spreading pixels. This value should typically be either "0" or at a minimum double that of the <em>sigma</em>.'),
+  );
+
+  $form['use_gaussian'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Use Gaussian blur'),
+    '#default_value' => $data['use_gaussian'],
+    '#description' => t('Check this box to use a <em>gaussian blur</em> (2 dimensional cylindrical covolution filter) rather than a standard <em>blur</em> (2 pass, 1 demensional othorgonal convolution filter). In most cases, the standard blur is much faster and produces almost identical results.'),
+  );
+
+  return $form;
+}
+
+/**
+ * Form element validation handler for numeric.
+ */
+function imagemagick_advanced_element_validate_numeric($element, &$form_state) {
+  if (!is_numeric($element['#value'])) {
+    form_error($element, t('!name must be a numeric value', array('!name' => $element['#title'])));
+  }
+}
+
+/**
+ * Form structure for the imagemagick_advanced perspective form.
+ *
+ * Note that this is not a complete form, it only contains the portion of the
+ * form for configuring the crop options. Therefore it does not not need to
+ * include metadata about the effect, nor a submit button.
+ *
+ * @param $data
+ *   The current configuration for this crop effect.
+ */
+function imagemagick_advanced_perspective_form($data) {
+
+  $data += array(
+    'percentage' => 10,
+    'vanish' => 'right',
+  );
+
+  $form['percentage'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Percentage'),
+    '#field_suffix' => '%',
+    '#size' => 2,
+    '#maxlength' => 2,
+    '#allow_negative' => FALSE,
+    '#default_value' => $data['percentage'],
+    '#element_validate' => array('imagemagick_advanced_element_validate_percentage'),
+    '#description' => t('The percentage of the vanish. The closer this parameter is to 50%, the more stretched the part of the image that represents the foreground will become. For a pleasing effect, you should choose a number between 0 and 35%'),
+  );
+
+  $form['vanish'] = array(
+    '#type' => 'radios',
+    '#title' => t('Vanishing point'),
+    '#options' => array(
+      'top' => t('Top'),
+      'left' => t('Left'),
+      'right' => t('Right'),
+      'bottom' => t('Bottom'),
+    ),
+    '#theme' => 'imagemagick_advanced_perspective_anchor',
+    '#default_value' => $data['vanish'],
+    '#description' => t('The relative position of the vanishing point to the source image.'),
+  );
+
+  return $form;
+}
+
+/**
+ * Form element validation handler for percentage.
+ */
+function imagemagick_advanced_element_validate_percentage($element, &$form_state) {
+  if (!is_numeric($element['#value']) || $element['#value'] < 0 || $element['#value'] >= 50) {
+    form_error($element, t('!name must be a value between 0 and less than 50.', array('!name' => $element['#title'])));
+  }
+}
+/**
+ * Returns HTML for a 3x3 grid of checkboxes for image anchors.
+ *
+ * @param $variables
+ *   An associative array containing:
+ *   - element: A render element containing radio buttons.
+ *
+ * @ingroup themeable
+ */
+function theme_imagemagick_advanced_perspective_anchor($variables) {
+  $element = $variables['element'];
+
+  $rows = array();
+  $row = array();
+  $option = array();
+
+  $blank = array('#markup' => '');
+  $blank = drupal_render($blank);
+  $image = array(
+    '#markup' => theme('image', array('path' => drupal_get_path('module', 'image') . '/sample.png',  'attributes' => array('width' => "40", 'height' => "40"))),
+    '#attached' => array(
+      'css' => array(drupal_get_path('module', 'imagemagick_advanced') . '/imagemagick_advanced.css' => array()),
+    ),
+  );
+  $image = drupal_render($image);
+  foreach (element_children($element) as $n => $key) {
+    $element[$key]['#attributes']['title'] = $element[$key]['#title'];
+    unset($element[$key]['#title']);
+    $option[] = drupal_render($element[$key]);
+  }
+
+  $row[] = $blank;
+  $row[] = $option[0];
+  $row[] = $blank;
+  $rows[] = $row;
+  $row = array();
+
+  $row[] = $option[1];
+  $row[] = $image;
+  $row[] = $option[2];
+  $rows[] = $row;
+  $row = array();
+
+  $row[] = $blank;
+  $row[] = $option[3];
+  $row[] = $blank;
+  $rows[] = $row;
+  $row = array();
+
+  return theme('table', array('header' => array(), 'rows' => $rows, 'attributes' => array('class' => array('image-anchor'))));
+}
