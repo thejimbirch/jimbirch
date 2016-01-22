@@ -10,7 +10,7 @@
 function jb_node_blog_post_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-blog_post-body'
+  // Exported field_instance: 'node-blog_post-body'.
   $field_instances['node-blog_post-body'] = array(
     'bundle' => 'blog_post',
     'default_value' => NULL,
@@ -60,7 +60,7 @@ function jb_node_blog_post_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-blog_post-field_blog_category'
+  // Exported field_instance: 'node-blog_post-field_blog_category'.
   $field_instances['node-blog_post-field_blog_category'] = array(
     'bundle' => 'blog_post',
     'default_value' => NULL,
@@ -100,7 +100,7 @@ function jb_node_blog_post_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-blog_post-field_blog_tag'
+  // Exported field_instance: 'node-blog_post-field_blog_tag'.
   $field_instances['node-blog_post-field_blog_tag'] = array(
     'bundle' => 'blog_post',
     'default_value' => NULL,
@@ -140,7 +140,7 @@ function jb_node_blog_post_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-blog_post-field_drupal_project'
+  // Exported field_instance: 'node-blog_post-field_drupal_project'.
   $field_instances['node-blog_post-field_drupal_project'] = array(
     'bundle' => 'blog_post',
     'default_value' => NULL,
@@ -180,7 +180,7 @@ function jb_node_blog_post_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-blog_post-field_featured_image'
+  // Exported field_instance: 'node-blog_post-field_featured_image'.
   $field_instances['node-blog_post-field_featured_image'] = array(
     'bundle' => 'blog_post',
     'deleted' => 0,
@@ -245,7 +245,7 @@ function jb_node_blog_post_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-blog_post-title_field'
+  // Exported field_instance: 'node-blog_post-title_field'.
   $field_instances['node-blog_post-title_field'] = array(
     'bundle' => 'blog_post',
     'default_value' => NULL,

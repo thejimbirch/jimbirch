@@ -31,6 +31,7 @@ features[page_manager_handlers][] = user_password__panel_context_a9203783-3d49-4
 features[page_manager_handlers][] = user_register__panel_context_24cb7016-8ded-4156-9c4f-c4b3eb993c36
 features[page_manager_handlers][] = user_view__panel_context_d7969b3f-9673-4bd0-ba86-98d4797bd04c
 features[page_manager_handlers][] = users__panel_context_c57f9609-5746-4dcc-8757-850f56d994ff
+features[page_manager_pages][] = anchor_menu_demo
 features[variable][] = default_page_manager_handlers
 features[variable][] = page_manager_node_edit_disabled
 features[variable][] = page_manager_node_view_disabled

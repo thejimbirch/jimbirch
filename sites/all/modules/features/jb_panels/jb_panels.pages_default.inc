@@ -333,7 +333,7 @@ function jb_panels_default_page_manager_handlers() {
             'default-repeat' => 'no-repeat',
             'default-attachment' => 'fixed',
             'default-horizontal_position' => 'center',
-            'default-vertical_position' => 'top',
+            'default-vertical_position' => 'bottom',
             'default-important' => 0,
             'default-width' => 0,
             'default-height' => 0,
@@ -634,7 +634,7 @@ function jb_panels_default_page_manager_handlers() {
             'default-repeat' => 'no-repeat',
             'default-attachment' => 'fixed',
             'default-horizontal_position' => 'center',
-            'default-vertical_position' => 'top',
+            'default-vertical_position' => 'bottom',
             'default-important' => 0,
             'default-width' => 0,
             'default-height' => 0,
@@ -862,7 +862,7 @@ thejimbirch',
             'default-repeat' => 'no-repeat',
             'default-attachment' => 'fixed',
             'default-horizontal_position' => 'center',
-            'default-vertical_position' => 'top',
+            'default-vertical_position' => 'bottom',
             'default-important' => 0,
             'default-width' => 0,
             'default-height' => 0,
@@ -1054,7 +1054,7 @@ thejimbirch',
             'default-repeat' => 'no-repeat',
             'default-attachment' => 'fixed',
             'default-horizontal_position' => 'center',
-            'default-vertical_position' => 'top',
+            'default-vertical_position' => 'bottom',
             'default-important' => 0,
             'default-width' => 0,
             'default-height' => 0,
@@ -2537,4 +2537,130 @@ thejimbirch',
   $export['users__panel_context_c57f9609-5746-4dcc-8757-850f56d994ff'] = $handler;
 
   return $export;
+}
+
+/**
+ * Implements hook_default_page_manager_pages().
+ */
+function jb_panels_default_page_manager_pages() {
+  $page = new stdClass();
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
+  $page->name = 'anchor_menu_demo';
+  $page->task = 'page';
+  $page->admin_title = 'Table of Contents Example';
+  $page->admin_description = '';
+  $page->path = 'blog/drupal-7-anchor-menu/demo';
+  $page->access = array();
+  $page->menu = array();
+  $page->arguments = array();
+  $page->conf = array(
+    'admin_paths' => FALSE,
+  );
+  $page->default_handlers = array();
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_anchor_menu_demo__panel';
+  $handler->task = 'page';
+  $handler->subtask = 'anchor_menu_demo';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'Panel',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => 'html not-front logged-in no-sidebars page-node page-node-',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'name' => 'panel',
+    'metatag_panels' => array(
+      'enabled' => 1,
+      'metatags' => array(
+        'title' => array(
+          'value' => 'Add an Anchor Menu/Table of Contents to Drupal 7 Demo | [site:name]',
+        ),
+        'description' => array(
+          'value' => 'Demo for the Add an Anchor Menu/Table of Contents to Drupal 7 blog post.',
+        ),
+        'og:site_name' => array(
+          'value' => 'jimbir.ch',
+        ),
+        'og:type' => array(
+          'value' => 'public_figure',
+        ),
+        'og:title' => array(
+          'value' => 'Add an Anchor Menu/Table of Contents to Drupal 7 Demo | [site:name]',
+        ),
+        'og:description' => array(
+          'value' => 'Demo for the Add an Anchor Menu/Table of Contents to Drupal 7 blog post.',
+        ),
+      ),
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'contentarea';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'main-content' => NULL,
+      'content-sidebar' => NULL,
+      'background-image' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = 'a3a49622-6523-407a-b487-7446709f21c8';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-5587fe05-7a2d-46a6-8043-acf77615d072';
+    $pane->panel = 'main-content';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'toc-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '5587fe05-7a2d-46a6-8043-acf77615d072';
+    $display->content['new-5587fe05-7a2d-46a6-8043-acf77615d072'] = $pane;
+    $display->panels['main-content'][0] = 'new-5587fe05-7a2d-46a6-8043-acf77615d072';
+    $pane = new stdClass();
+    $pane->pid = 'new-5d19c40b-e194-4420-a698-60111070318d';
+    $pane->panel = 'main-content';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'toc-panel_pane_2';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '5d19c40b-e194-4420-a698-60111070318d';
+    $display->content['new-5d19c40b-e194-4420-a698-60111070318d'] = $pane;
+    $display->panels['main-content'][1] = 'new-5d19c40b-e194-4420-a698-60111070318d';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = 'new-5587fe05-7a2d-46a6-8043-acf77615d072';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['anchor_menu_demo'] = $page;
+
+  return $pages;
+
 }

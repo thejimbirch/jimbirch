@@ -1,5 +1,7 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the jb Fields feature.
  */
+
+include_once 'jb_fields.features.inc';

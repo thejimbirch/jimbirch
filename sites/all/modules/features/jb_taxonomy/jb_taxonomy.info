@@ -2,7 +2,6 @@ name = jb Taxonomy
 core = 7.x
 package = Configuration
 dependencies[] = jb_fields
-dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = title
 dependencies[] = url

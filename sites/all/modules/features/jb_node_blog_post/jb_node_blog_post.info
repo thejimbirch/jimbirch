@@ -4,7 +4,6 @@ package = Content
 dependencies[] = field_group
 dependencies[] = image
 dependencies[] = jb_fields
-dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = title
 features[ctools][] = field_group:field_group:1

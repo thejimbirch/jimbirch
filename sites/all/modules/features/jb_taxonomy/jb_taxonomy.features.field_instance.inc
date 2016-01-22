@@ -10,7 +10,7 @@
 function jb_taxonomy_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'taxonomy_term-blog_categories-description_field'
+  // Exported field_instance: 'taxonomy_term-blog_categories-description_field'.
   $field_instances['taxonomy_term-blog_categories-description_field'] = array(
     'bundle' => 'blog_categories',
     'default_value' => NULL,
@@ -49,7 +49,7 @@ function jb_taxonomy_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-blog_categories-name_field'
+  // Exported field_instance: 'taxonomy_term-blog_categories-name_field'.
   $field_instances['taxonomy_term-blog_categories-name_field'] = array(
     'bundle' => 'blog_categories',
     'default_value' => NULL,
@@ -90,7 +90,7 @@ function jb_taxonomy_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-blog_tag-description_field'
+  // Exported field_instance: 'taxonomy_term-blog_tag-description_field'.
   $field_instances['taxonomy_term-blog_tag-description_field'] = array(
     'bundle' => 'blog_tag',
     'default_value' => NULL,
@@ -129,7 +129,7 @@ function jb_taxonomy_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-blog_tag-name_field'
+  // Exported field_instance: 'taxonomy_term-blog_tag-name_field'.
   $field_instances['taxonomy_term-blog_tag-name_field'] = array(
     'bundle' => 'blog_tag',
     'default_value' => NULL,
@@ -170,7 +170,7 @@ function jb_taxonomy_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-drupal_projects-description_field'
+  // Exported field_instance: 'taxonomy_term-drupal_projects-description_field'.
   $field_instances['taxonomy_term-drupal_projects-description_field'] = array(
     'bundle' => 'drupal_projects',
     'default_value' => NULL,
@@ -209,7 +209,7 @@ function jb_taxonomy_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-drupal_projects-field_url'
+  // Exported field_instance: 'taxonomy_term-drupal_projects-field_url'.
   $field_instances['taxonomy_term-drupal_projects-field_url'] = array(
     'bundle' => 'drupal_projects',
     'default_value' => NULL,
@@ -248,7 +248,7 @@ function jb_taxonomy_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'taxonomy_term-drupal_projects-name_field'
+  // Exported field_instance: 'taxonomy_term-drupal_projects-name_field'.
   $field_instances['taxonomy_term-drupal_projects-name_field'] = array(
     'bundle' => 'drupal_projects',
     'default_value' => NULL,

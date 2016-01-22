@@ -1,10 +1,12 @@
 name = jb Fields
 core = 7.x
 package = Configuration
+dependencies[] = features
 dependencies[] = image
-dependencies[] = jb_taxonomy
+dependencies[] = jb_seo
 dependencies[] = taxonomy
 dependencies[] = url
+features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
 features[field_base][] = body
 features[field_base][] = description_field

@@ -10,7 +10,7 @@
 function jb_fields_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'body'
+  // Exported field_base: 'body'.
   $field_bases['body'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -31,7 +31,7 @@ function jb_fields_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
-  // Exported field_base: 'description_field'
+  // Exported field_base: 'description_field'.
   $field_bases['description_field'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -50,7 +50,7 @@ function jb_fields_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
-  // Exported field_base: 'field_blog_category'
+  // Exported field_base: 'field_blog_category'.
   $field_bases['field_blog_category'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -76,7 +76,7 @@ function jb_fields_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_blog_tag'
+  // Exported field_base: 'field_blog_tag'.
   $field_bases['field_blog_tag'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -102,7 +102,7 @@ function jb_fields_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_drupal_project'
+  // Exported field_base: 'field_drupal_project'.
   $field_bases['field_drupal_project'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -128,7 +128,7 @@ function jb_fields_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_featured_image'
+  // Exported field_base: 'field_featured_image'.
   $field_bases['field_featured_image'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -150,7 +150,7 @@ function jb_fields_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_url'
+  // Exported field_base: 'field_url'.
   $field_bases['field_url'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -165,7 +165,7 @@ function jb_fields_field_default_field_bases() {
     'type' => 'url',
   );
 
-  // Exported field_base: 'name_field'
+  // Exported field_base: 'name_field'.
   $field_bases['name_field'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -186,7 +186,7 @@ function jb_fields_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'title_field'
+  // Exported field_base: 'title_field'.
   $field_bases['title_field'] = array(
     'active' => 1,
     'cardinality' => 1,
