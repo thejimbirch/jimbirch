@@ -14,6 +14,7 @@ features[field_base][] = field_blog_category
 features[field_base][] = field_blog_tag
 features[field_base][] = field_drupal_project
 features[field_base][] = field_featured_image
+features[field_base][] = field_new_field
 features[field_base][] = field_url
 features[field_base][] = name_field
 features[field_base][] = title_field

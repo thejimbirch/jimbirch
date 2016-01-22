@@ -58,6 +58,9 @@ function jb_node_blog_post_strongarm() {
         'redirect' => array(
           'weight' => '6',
         ),
+        'twitter' => array(
+          'weight' => '1',
+        ),
       ),
       'display' => array(
         'webform' => array(

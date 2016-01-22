@@ -245,6 +245,56 @@ function jb_node_blog_post_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-blog_post-field_new_field'.
+  $field_instances['node-blog_post-field_new_field'] = array(
+    'bundle' => 'blog_post',
+    'default_value' => array(
+      0 => array(
+        'value' => 'Test Field default',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Fill this out',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 7,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'no_wrapper',
+    'field_name' => 'field_new_field',
+    'label' => 'New Field',
+    'required' => 0,
+    'settings' => array(
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 8,
+    ),
+  );
+
   // Exported field_instance: 'node-blog_post-title_field'.
   $field_instances['node-blog_post-title_field'] = array(
     'bundle' => 'blog_post',
@@ -301,7 +351,9 @@ function jb_node_blog_post_field_default_field_instances() {
   t('Body');
   t('Drupal Project');
   t('Featured Image');
+  t('Fill this out');
   t('Is there a Drupal project that this post relates to?');
+  t('New Field');
   t('Title');
 
   return $field_instances;
