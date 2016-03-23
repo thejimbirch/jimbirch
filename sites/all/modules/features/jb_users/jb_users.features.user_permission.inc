@@ -651,6 +651,13 @@ function jb_users_user_default_permissions() {
     'module' => 'system',
   );
 
+  // Exported permission: 'bypass advanced aggregation'.
+  $permissions['bypass advanced aggregation'] = array(
+    'name' => 'bypass advanced aggregation',
+    'roles' => array(),
+    'module' => 'advagg',
+  );
+
   // Exported permission: 'bypass honeypot protection'.
   $permissions['bypass honeypot protection'] = array(
     'name' => 'bypass honeypot protection',
