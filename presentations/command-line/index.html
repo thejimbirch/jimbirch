@@ -92,7 +92,7 @@
 				</section>
 
 				<section>
-					<h3>Where is the Terminal?</h3>
+					<h3>Where is this Command Line?</h3>
 					<ul>
 						<li class="fragment">Linux - Built in</li>
 						<li class="fragment">Mac - Built in or additional apps like iTerm available.</li>
@@ -167,11 +167,58 @@
 				</section>
 
 				<section>
+					<h3>Creating SSH keys</h3>
+					<ul>
+						<li>Check for existing keys<br><code>$ ls -al ~/.ssh</code></li>
+						<li class="fragment">Create a new key<br><code>ssh-keygen -t rsa -C "yourname@domain.com"</code></li>
+						<li class="fragment">-t = Key Type, -C = Comment</li>
+						<li class="fragment">Enter file in which to save the key (/Users/Jim/.ssh/id_rsa):<br><code>/Users/Jim/.ssh/clientname</code></li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Putting your Key on the server</h3>
+					<ul>
+						<li>UI Interfaces like CPanel and Plesk</li>
+						<li class="fragment">Apache - Add your key to /%USER%/.etc/authorized_keys</li>
+						<li class="fragment">nginx - Install openssh and add your key to /%USER%/.ssh/authorized_keys</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Connecting to server</h3>
+					<ul>
+						<li><code>ssh username@domain.name</code></li>
+						<li class="fragment">Enter your password</li>
+					</ul>
+					<h3 class="fragment">Set up an SSH Alias</h3>
+					<ul>
+						<li class="fragment"><code>nano ~/.ssh/config</code></li>
+						<li class="fragment">
+<code>
+Host hostname<br>
+    User usernameatserver<br>
+    HostName IP Address or domain.name<br>
+    Port 7822<br>
+    IdentityFile ~/.ssh/id_rsa<br>
+</code></li>
+					</ul>
+				</section>
+
+				<section data-background="img/Lego-Uncle-Jim-on-the-Deck.jpg">
+					<h2>Git for Version Control</h2>
+					<p class="fragment" style="display:inline-block;background: rgba(0, 0, 0, 0.5);padding:20px;text-align:left;width:60%;float:left;">Git (/ɡɪt/) is a widely used source code management system for software development. It is a distributed revision control system with an emphasis on speed, data integrity, and support for distributed, non-linear workflows. - <a href="https://en.wikipedia.org/wiki/Git_%28software%29">Wikipedia</a></p>
+				</section>
+
+				<section>
 					<h3>Summary</h3>
 					<ul>
-						<li><b>Fences</b> and <b>Theme templates</b> give us control of field markup.</li>
-						<li class="fragment"><b>Panels</b>, <b>Panels Everywhere</b>, and <b>Layouts</b> give us control of the layout markup.</li>
-						<li class="fragment"><b>Page Manager</b> puts it all together by enabling us to select which layouts are used and what content is loaded in any scenario.</p>
+						<li>Command Line Basics</li>
+						<li class="fragment">SSH to connect to servers</li>
+						<li class="fragment">Git for version control</li>
+						<li class="fragment">WP-CLI for interfacing with WordPress</li>
+						<li class="fragment">Aliases and Bash scripts for common tasks</li>
+						<li class="fragment">Automation/task runners like Grunt and Gulp</li>
 					</ul>
 				</section>
 
