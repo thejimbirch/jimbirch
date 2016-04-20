@@ -319,7 +319,7 @@ function jb_panels_default_page_manager_handlers() {
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'hidden',
-      'formatter' => 'makeupimg_infilecss',
+      'formatter' => 'makeupimg_inlinecss',
       'delta_limit' => 0,
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
@@ -620,7 +620,7 @@ function jb_panels_default_page_manager_handlers() {
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'hidden',
-      'formatter' => 'makeupimg_infilecss',
+      'formatter' => 'makeupimg_inlinecss',
       'delta_limit' => 0,
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
@@ -1074,7 +1074,7 @@ thejimbirch',
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'hidden',
-      'formatter' => 'makeupimg_infilecss',
+      'formatter' => 'makeupimg_inlinecss',
       'delta_limit' => 0,
       'delta_offset' => '0',
       'delta_reversed' => FALSE,

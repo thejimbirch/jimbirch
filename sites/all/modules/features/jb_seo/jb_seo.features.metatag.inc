@@ -219,7 +219,7 @@ function jb_seo_metatag_export_default() {
       'twitter:description' => array(
         'value' => '[node:summary]',
       ),
-      'twitter:image:src' => array(
+      'twitter:image' => array(
         'value' => '[node:field_featured_image]',
       ),
     ),

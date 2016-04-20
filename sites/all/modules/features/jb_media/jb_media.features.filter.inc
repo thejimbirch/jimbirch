@@ -20,6 +20,16 @@ function jb_media_filter_default_formats() {
     'filters' => array(),
   );
 
+  // Exported format: Full HTML No WYSIWYG.
+  $formats['full_html_no_wysiwyg'] = array(
+    'format' => 'full_html_no_wysiwyg',
+    'name' => 'Full HTML No WYSIWYG',
+    'cache' => 1,
+    'status' => 1,
+    'weight' => 0,
+    'filters' => array(),
+  );
+
   // Exported format: Plain text.
   $formats['plain_text'] = array(
     'format' => 'plain_text',

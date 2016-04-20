@@ -1,6 +1,6 @@
 name = jb Panels
 core = 7.x
-package = Ctools
+package = CTools
 dependencies[] = page_manager
 dependencies[] = panels
 dependencies[] = panels_everywhere
