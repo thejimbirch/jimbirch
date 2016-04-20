@@ -29,7 +29,10 @@ function drush_features_builder_features_build() {
   }
 
   $options['enable'] = drush_get_option('enable', FALSE);
-  $batch = features_builder_prep_batch($options);
+  if (!$batch = features_builder_prep_batch($options)) {
+    drush_log(dt('Features Builder does not include any builders, install the "Features Builder Default" module to utilize the standard configuration packaging methodology.'), 'error');
+    return FALSE;
+  }
   $batch['progressive'] = FALSE;
   batch_set($batch);
   drush_backend_batch_process();

@@ -280,13 +280,18 @@ function features_builder_get_class($name, $feature) {
  *   An array of builder names keyed by the feature's machine name.
  */
 function features_builder_get_features() {
-  $features = array();
-  $builders = features_builder_get_builders();
-  foreach ($builders as $builder => $info) {
-    foreach (array_keys($info['class']::listFeatures()) as $feature) {
-      $features[$feature] = $builder;
+  $features = &drupal_static(__FUNCTION__);
+
+  if ($features === NULL) {
+    $features = array();
+    $builders = features_builder_get_builders();
+    foreach ($builders as $builder => $info) {
+      foreach (array_keys($info['class']::listFeatures()) as $feature) {
+        $features[$feature] = $builder;
+      }
     }
   }
+
   return $features;
 }
 
@@ -304,6 +309,9 @@ function features_builder_prep_batch($options = array()) {
 
   module_load_include('inc', 'features_builder', 'features_builder.build');
   $manifest = features_builder_get_manifest();
+  if (empty($manifest)) {
+    return;
+  }
   $dependencies = features_builder_build_get_dependencies($manifest);
   $manifest = features_builder_build_order_manifest($manifest, $dependencies);
   $manifest = features_builder_build_set_dependencies($manifest, $dependencies);

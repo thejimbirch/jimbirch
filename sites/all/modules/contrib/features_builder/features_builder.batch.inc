@@ -40,6 +40,12 @@ function features_builder_build_batch($manifest, $options, &$context) {
 }
 
 function features_builder_batch_finalize($success, $results, $operations) {
+
+  if (module_exists('fxx')) {
+    module_load_include('inc', 'fxx', 'fxx.explode');
+    fxx_export_explode();
+  }
+
   drupal_flush_all_caches();
   drupal_set_message(t('Features build complete.'));
 }

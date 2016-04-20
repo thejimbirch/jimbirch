@@ -121,7 +121,8 @@ function features_builder_build_diff($export, $component_types) {
  *   A manifest array.
  *
  * @return array
- *   An array of dependencies, keyed by feature.
+ *   An array of dependencies, keyed by feature. Values are arrays of the
+ *   component's owner, keyed by "component_type|component".
  */
 function features_builder_build_get_dependencies($manifest) {
   $dependencies = array();
@@ -137,11 +138,6 @@ function features_builder_build_get_dependencies($manifest) {
         }
       }
     }
-  }
-
-  // Remove duplicates.
-  foreach ($dependencies as &$dependency) {
-    $dependency = array_unique($dependency);
   }
 
   return $dependencies;
@@ -188,10 +184,15 @@ function features_builder_build_order_manifest($manifest, $dependencies) {
   $order = array();
   $features = array_keys($manifest);
 
-  $continue = TRUE;
+  // Sort features by builder weight.
+  uasort($features, '_features_builder_manifest_sort');
 
-  while (!empty($features) && $continue) {
+  // Iterate until all features have been added.
+  while (!empty($features)) {
     $count = count($order);
+
+    // Iterate over the list of remaining features, add all which have
+    // dependencies which are satisfied.
     foreach ($features as $key => $feature) {
       $diff = !empty($dependencies[$feature]) ? array_diff($dependencies[$feature], $order) : array();
 
@@ -201,9 +202,12 @@ function features_builder_build_order_manifest($manifest, $dependencies) {
       }
     }
 
-    // Insure we've added at least one feature to the list before running
-    // through the list again.
-    $continue = count($order) != $count;
+    // If we've not been able to add at least one feature during this iteration,
+    // just take the next one on the list which was previously ordered by
+    // weight.
+    if (count($order) == $count) {
+      $order[] = array_shift($features);
+    }
   }
 
   // Build a new array in the order we just computed.
@@ -213,6 +217,23 @@ function features_builder_build_order_manifest($manifest, $dependencies) {
   }
 
   return $new_manifest;
+}
+
+/**
+ * Sort callback for ordering features by builders' weights.
+ */
+function _features_builder_manifest_sort($a, $b) {
+  $builders = features_builder_get_builders();
+  $features = features_builder_get_features();
+
+  $a = $builders[$features[$a]];
+  $b = $builders[$features[$b]];
+
+  if ($a['weight'] < $b['weight']) {
+    return -1;
+  } elseif ($a['weight'] > $b['weight']) {
+    return 1;
+  }
 }
 
 /**
@@ -289,7 +310,11 @@ function features_builder_build($feature, $component_types) {
     if (!in_array($extension, array('module', 'info'))) {
       $extension .= '.inc';
     }
-    file_put_contents("{$directory}/$module_name.$extension", $file_contents);
+    $filepath = "{$directory}/{$module_name}.{$extension}";
+    file_put_contents($filepath, $file_contents);
+    if (function_exists('drupal_clear_opcode_cache')) {
+      drupal_clear_opcode_cache($filepath);
+    }
   }
 
 }

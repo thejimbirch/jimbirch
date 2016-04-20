@@ -22,9 +22,18 @@ function features_builder_default_features_builders_info() {
       'label' => t('Entityqueue'),
       'class' => 'EntityqueueFeaturesBuilder',
     ),
+    'features_builder_feeds' => array(
+      'label' => t('Feeds'),
+      'class' => 'FeedsFeaturesBuilder',
+    ),
     'features_builder_field' => array(
       'label' => t('Fields'),
       'class' => 'FieldFeaturesBuilder',
+      'weight' => -100,
+    ),
+    'features_builder_fieldable_panels_panes' => array(
+      'label' => t('Fieldable Panels Panes'),
+      'class' => 'FieldablePanelsPanesFeaturesBuilder',
     ),
     'features_builder_field_collection' => array(
       'label' => t('Field Collection'),
@@ -66,6 +75,10 @@ function features_builder_default_features_builders_info() {
       'label' => t('Profile2'),
       'class' => 'Profile2FeaturesBuilder',
     ),
+    'features_builder_rules' => array(
+      'label' => t('Rules'),
+      'class' => 'RulesFeatureBuilder',
+    ),
     'features_builder_search_api' => array(
       'label' => t('Search'),
       'class' => 'SearchApiBuilder',
@@ -73,6 +86,10 @@ function features_builder_default_features_builders_info() {
     'features_builder_seo' => array(
       'label' => t('SEO'),
       'class' => 'SeoFeaturesBuilder',
+    ),
+    'features_builder_services' => array(
+      'label' => t('Services'),
+      'class' => 'ServicesFeaturesBuilder',
     ),
     'features_builder_site' => array(
       'label' => t('Site'),
