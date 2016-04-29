@@ -55,9 +55,6 @@
 				color: #fff;
 				text-shadow: 1px 1px 1px rgba(0,0,0,0.4)
 			}
-			.reveal a {
-				color: #fff;
-			}
 		</style>
 
 		<script>
@@ -102,6 +99,20 @@
 				</section>
 
 				<section>
+					<h3>What does the Terminal look like?</h3>
+					<img src="img/Terminal.png" alt="The Terminal" style="width:60%;">
+				</section>
+
+				<section>
+					<h3>Customize Most Terminal Apps</h3>
+					<img src="img/Customize-Terminal.png" alt="Customize the Terminal" style="width:60%;">
+				</section>
+
+				<section data-background="img/Lego-Uncle-Jim-in-Outer-Space.jpg">
+					<h2>The Commands</h2>
+				</section>
+
+				<section>
 					<h3>Anatomy of a command</h3>
 					<p><code>$ command -flag argument/operand</code></p>
 					<ul>
@@ -141,6 +152,15 @@
 						<li class="fragment">rm - Remove<br><code>$ rm -rf whatyouwantremoved</code></li>
 						<li class="fragment">sudo - Superuser Do<br><code>$ sudo anycommand</code><br>Use sudo if you need administrative access to run the command.</li>
 						<li class="fragment">touch - Touch<br><code>$ touch newfilename.txt</code></li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Flags</h3>
+					<p>For most cases I have found, flags that are full words use two dashes, flags that are acronyms use one dash.</p>
+					<ul>
+						<li>--all</li>
+						<li>-a</li>
 					</ul>
 				</section>
 
@@ -207,8 +227,154 @@ Host hostname<br>
 					</ul>
 				</section>
 
+				<section data-background="img/Lego-Uncle-Jim-at-the-Car-Wash.jpg">
+					<h2>Archiving and Unarchiving</h2>
+					<p class="fragment" style="display:inline-block;background: rgba(0, 0, 0, 0.5);padding:20px;text-align:left;width:60%;float:left;">Archive and compress; extract files and folders quickly and easily right from the command line.</p>
+				</section>
+
+				<section>
+					<h3>Zip and Unzip</h3>
+					<ul>
+						<li>To compress a folder using zip:</li>
+						<li class="fragment"><code>zip -r zip-file-name.zip path/to/folder</code></li>
+						<li class="fragment"><code>zip -r zip-file-name.zip file1 file2 file3</code></li>
+						<li class="fragment">To extract:</li>
+						<li class="fragment"><code>unzip zip-file-name.zip</code></li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Tar and Untar</h3>
+					<ul>
+						<li>To compress a folder using tar:</li>
+						<li class="fragment"><code>tar -zcvf tar-file-name.tar.gz path/to/folder</code></li>
+						<li class="fragment">To extract:</li>
+						<li class="fragment"><code>tar -zxvf tar-file-name.tar.gz</code></li>
+					</ul>
+				</section>
+
+				<section data-background="img/Lego-Uncle-Jim-by-the-pool-at-dusk.jpg">
+					<h2>MySQL</h2>
+					<p class="fragment" style="display:inline-block;background: rgba(0, 0, 0, 0.5);padding:20px;text-align:left;width:60%;float:left;">Manage MySQL databases from the command line, including importing and exporting.</p>
+				</section>
+
+				<section>
+					<h3>Connecting to MySQL</h3>
+					<p><code>mysql -u username -p</code><br>You will be prompted for password.</p>
+					<p>* Note: You want to avoid using the password inline, as it would be available in logs</p>
+				</section>
+
+				<section>
+					<h3>Importing a database</h3>
+					<p><code>mysql -u username -p < database.sql</code></p>
+				</section>
+
+				<section>
+					<h3>Exporting a database</h3>
+					<p><code>mysqldump -u username -p > database.sql</code></p>
+				</section>
+
+				<section>
+					<h3>Once you have connected to MySQL, you can run any SQL command</h3>
+					<p><code>
+CREATE TABLE newtablename (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,<br>
+name_of_table VARCHAR(30),<br>
+sub_title VARCHAR(20),<br>
+yes_or_no CHAR(1),<br>
+date_of_thing DATE);
+					</code></p>
+				</section>
+
+
 				<section data-background="img/Lego-Uncle-Jim-on-the-Rocks.jpg">
 					<h2>Aliases</h2>
+					<p class="fragment" style="display:inline-block;background: rgba(0, 0, 0, 0.5);padding:20px;text-align:left;width:60%;float:left;">In computing, alias is a command in various command line interpreters (shells) ... which enables a replacement of a word by another string. - <a href="https://en.wikipedia.org/wiki/Alias_%28command%29">Wikipedia</a></p>
+				</section>
+
+				<section>
+					<h3>Anatomy of an alias</h3>
+					<p><code>name="command"</code></p>
+					<ul>
+						<li class="fragment">name - The name of the alias</li>
+						<li class="fragment">command - The action we want to happen</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Where to put Aliases</h3>
+					<h3 class="fragment">Mac OS</h3>
+					<ul>
+						<li class="fragment">Temporary - <code>alias name="command"</code></li>
+						<li class="fragment">Permanent - <code>nano ~/.bash_profile</code></li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Where to put Aliases</h3>
+					<h3>Ubuntu</h3>
+					<ul>
+						<li class="fragment">Temporary - <code>alias name="command"</code></li>
+						<li class="fragment">Permanent - <code>nano ~/.bash_aliases</code></li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Where to put Aliases</h3>
+					<h3>Windows</h3>
+					<ul>
+						<li class="fragment">Temporary - <code>DOSKEY name="command"</code></li>
+						<li class="fragment">Permanent - A lot more complicated!</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Common Use Cases for Aliases</h3>
+					<ul>
+						<li class="fragment">
+							Navigate to common folders<br>
+							<code>
+alias htdocs="cd /var/www/public_html"<br>
+alias backdropcms="cd /Users/Jim/jim.local/backdropcms.org"
+							</code>
+						</li>
+						<li class="fragment">
+							Run Common Tasks<br>
+							<code>alias restart='sudo apachectl restart'</code>
+						</li>
+				</section>
+
+				<section>
+					<h3>Common Use Cases for Aliases</h3>
+					<ul>
+						<li class="fragment">
+							Open Common Files<br>
+							<code>
+alias bashprofile='sudo nano /Users/Jim/.bash_profile'<br>
+alias sshconfig='nano ~/.ssh/config'
+							</code>
+						</li>
+						<li class="fragment">
+							Open Applications<br>
+							<code>alias github='open -a Firefox https://github.com/thejimbirch?tab=repositories\'</code>
+						</li>
+				</section>
+
+				<section>
+					<h3>Common Use Cases for Aliases</h3>
+					<ul>
+						<li class="fragment">
+							Complex Example<br>
+							Accepts a url, opens chrome in 5 different sized browsers<br>
+							<script src="https://gist.github.com/zachleat/539c00c076b721d9f7fb.js"></script>
+						</li>
+				</section>
+
+				<section>
+					<h3>See also</h3>
+					<ul>
+						<li class="fragment"><a href="https://en.wikipedia.org/wiki/Symbolic_link">Symbolic link (Symlinks)</a></li>
+						<li class="fragment"><a href="https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29">Bash Scripts</a></li>
+					</ul>
 				</section>
 
 				<section data-background="img/Lego-Uncle-Jim-on-the-Deck.jpg">
@@ -226,20 +392,52 @@ Host hostname<br>
 					</ul>
 				</section>
 
+				<section>
+					<h3>Really great git tutorial</h3>
+					<p><a href="https://git-scm.com/docs/gittutorial">https://git-scm.com/docs/gittutorial</a></p>
+				</section>
+
+				<section>
+					<h3>Common Git Commands</h3>
+					<ul>
+						<li class="fragment"><code>git clone repo.url</code><br>Clones a repository to your computer</li>
+						<li class="fragment"><code>git fetch</code><br>Gets updated code from repository</li>
+						<li class="fragment"><code>git merge origin/master</code><br>Merges code from repository, master branch</li>
+						<li class="fragment"><code>git pull</code><br>Fetch and merge in one step!</li>
+						<li class="fragment"><code>git checkout -b branchname</code><br>Makes a new branch</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Common Git Commands</h3>
+					<ul>
+						<li class="fragment"><code>git diff filename</code><br>Shows the changes you have made to the file</li>
+						<li class="fragment"><code>git add -A</code><br>Adds all files to "staging area"</li>
+						<li class="fragment"><code>git commit</code><br>Moves from "staging area" to a commit</li>
+						<li class="fragment"><code>git push origin master</code><br>Pushes local master branch to origin master</li>
+						<li class="fragment"><code>git log</code><br>Lists history of commits</li>
+					</ul>
+				</section>
+
 				<section data-background="img/Lego-Uncle-Jim-in-the-Cabana.jpg">
 					<h2>WP-CLI</h2>
+					<p class="fragment" style="display:inline-block;background: rgba(0, 0, 0, 0.5);padding:20px;text-align:left;width:60%;float:left;">WP-CLI is a set of command-line tools for managing WordPress installations. You can update plugins, set up multisite installs and much more, without using a web browser. - <a href="http://wp-cli.org/">wp-cli.org</a></p>
 				</section>
 
-				<section data-background="img/Lego-Uncle-Jim-by-the-pool-at-dusk.jpg">
-					<h2>MySQL</h2>
+				<section>
+					<h3>Common WP-CLI Commands</h3>
+					<p><a href="http://wp-cli.org/commands/">http://wp-cli.org/commands/</a></p>
+					<ul>
+						<li class="fragment"><code>wp help</code><br>Lists all commands and help</li>
+						<li class="fragment"><code>wp core update</code><br>Updates Wordpress core</li>
+						<li class="fragment"><code>wp theme list</code><br>Lists all themes in the site</li>
+						<li class="fragment"><code>wp plugin install hello-dolly</code><br>Installs Hello Dolly Plugin</li>
+					</ul>
 				</section>
 
-				<section data-background="img/Lego-Uncle-Jim-at-the-Car-Wash.jpg">
-					<h2>Zip/Unzip and Tar/Untar</h2>
-				</section>
-
-				<section data-background="img/Lego-Uncle-Jim-at-the-Waterfall.jpg">
-					<h2>Bash scripts</h2>
+				<section>
+					<h3>Common WP-CLI Commands</h3>
+					<!-- Start here -->
 				</section>
 
 				<section data-background="img/Lego-Uncle-Jim-and-the-Achievement-Duck.jpg">
@@ -255,10 +453,13 @@ Host hostname<br>
 					<ul>
 						<li>Command Line Basics</li>
 						<li class="fragment">SSH to connect to servers</li>
+						<li class="fragment">Archiving, and Extracting</li>
+						<li class="fragment">MySQL</li>
+						<li class="fragment">Aliases for increased productivity</li>
 						<li class="fragment">Git for version control</li>
 						<li class="fragment">WP-CLI for interfacing with WordPress</li>
-						<li class="fragment">Aliases and Bash scripts for common tasks</li>
 						<li class="fragment">Automation/task runners like Grunt and Gulp</li>
+						<li class="fragment">Dependency/Package Managers like Composer and Bower</li>
 					</ul>
 				</section>
 
