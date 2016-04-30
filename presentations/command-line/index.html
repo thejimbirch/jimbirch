@@ -305,6 +305,19 @@ date_of_thing DATE);
 					</code></p>
 				</section>
 
+				<section data-background="img/Lego-Uncle-Jim-Reads-Email-by-Chrissy.jpg">
+					<h2>Secure Copy Protocol (SCP)</h2>
+					<p class="fragment" style="display:inline-block;background: rgba(0, 0, 0, 0.5);padding:20px;text-align:left;width:60%;float:left;">Secure copy or SCP is a means of securely transferring computer files between a local host and a remote host or between two remote hosts. It is based on the Secure Shell (SSH) protocol. - <a href="https://en.wikipedia.org/wiki/Secure_copy">Wikipedia</a></p>
+				</section>
+
+				<section>
+					<h3>Copy file from local to server</h3>
+					<p class="fragment">scp example.txt username@server:myfile.txt</p>
+					<h3 class="fragment">Copy all files in remote site to local (folder you are in)</h3>
+					<p class="fragment">scp serveralias:/home/hope/* .</p>
+					<h3 class="fragment">Copy files from one server to another</h3>
+					<p class="fragment">scp serveralias:/var/www/public_html/wp-content/files/file1.zip secondserveralias:/var/www/public_html/wp-content/files/file1.zip</p>
+				</section>
 
 				<section data-background="img/Lego-Uncle-Jim-on-the-Rocks.jpg">
 					<h2>Aliases</h2>
@@ -381,19 +394,36 @@ alias sshconfig='nano ~/.ssh/config'
 
 				<section>
 					<h3>Common Use Cases for Aliases</h3>
-					<ul>
-						<li class="fragment">
-							Complex Example<br>
-							Accepts a url, opens chrome in 5 different sized browsers<br>
-							<script src="https://gist.github.com/zachleat/539c00c076b721d9f7fb.js"></script>
-						</li>
+					<p>Complex Example<br>Accepts a url, opens chrome in 5 different sized browsers</p>
+<script src="https://gist.github.com/zachleat/539c00c076b721d9f7fb.js"></script>
 				</section>
 
 				<section>
 					<h3>See also</h3>
 					<ul>
-						<li class="fragment"><a href="https://en.wikipedia.org/wiki/Symbolic_link">Symbolic link (Symlinks)</a></li>
-						<li class="fragment"><a href="https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29">Bash Scripts</a></li>
+						<li>
+							<a href="https://en.wikipedia.org/wiki/Symbolic_link">Symbolic link (Symlinks)</a><br>
+							<code>ln -s /path/to/file /path/to/symlink</code><br>
+							Example: htdocs > /var/www/public_html
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>See also</h3>
+					<ul>
+						<li>
+							<a href="https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29">Bash Scripts</a><br>
+							<code>
+    fullpath=`pwd`
+    if [[ $fullpath =~ /Users/Jim/jim.local/.* ]]; then
+    IFS='/' array=($fullpath)
+        open "http://${array[4]}.xenostaging.com"
+    else
+        echo Nothing happens here.
+    fi
+							</code>
+						</li>
 					</ul>
 				</section>
 
@@ -454,16 +484,21 @@ alias sshconfig='nano ~/.ssh/config'
 					<h3>Common WP-CLI Commands</h3>
 					<p><a href="http://wp-cli.org/commands/">http://wp-cli.org/commands/</a></p>
 					<ul>
-						<li class="fragment"><code>wp help</code><br>Lists all commands and help</li>
-						<li class="fragment"><code>wp core update</code><br>Updates Wordpress core</li>
-						<li class="fragment"><code>wp theme list</code><br>Lists all themes in the site</li>
+						<li class="fragment"><code>wp media regenerate</code><br>Regenerates all thumbnails</li>
+						<li class="fragment"><code>wp post list</code><br>List all the posts of a site</li>
+						<li class="fragment"><code>wp user delete 123 --reassign=567</code><br>Delete a user, and assign their posts to another.</li>
 						<li class="fragment"><code>wp plugin install hello-dolly</code><br>Installs Hello Dolly Plugin</li>
 					</ul>
 				</section>
 
 				<section>
 					<h3>Common WP-CLI Commands</h3>
-					<!-- Start here -->
+					<ul>
+						<li class="fragment"><code>wp help</code><br>Lists all commands and help</li>
+						<li class="fragment"><code>wp core update</code><br>Updates Wordpress core</li>
+						<li class="fragment"><code>wp theme list</code><br>Lists all themes in the site</li>
+						<li class="fragment"><code>wp package</code><br><a href="http://wp-cli.org/commands/package/">http://wp-cli.org/commands/package/</a></li>
+					</ul>
 				</section>
 
 				<section data-background="img/Lego-Uncle-Jim-and-the-Achievement-Duck.jpg">
@@ -490,7 +525,7 @@ alias sshconfig='nano ~/.ssh/config'
 				</section>
 
 				<section>
-					<h3>Now you be all like...</h3>
+					<h3>Now you can be all like...</h3>
 					<img src="img/JIX9t2j0ZTN9S.gif" alt="Cat typing" style="width:50%;">
 					<p><small><a href="http://www.reddit.com/r/reactiongifs/comments/3a8akf/my_cats_reaction_when_i_leave_home/">Source</a></small></p>
 				</section>
