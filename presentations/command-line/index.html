@@ -106,7 +106,7 @@
 					<h3>Where is this Command Line?</h3>
 					<ul>
 						<li class="fragment">Linux - Built in</li>
-						<li class="fragment">Mac - Built in or additional apps like <a href="https://www.iterm2.com/">iTerm</a> available.</li>
+						<li class="fragment">Mac - Terminal built in or additional apps like <a href="https://www.iterm2.com/">iTerm</a> available.</li>
 						<li class="fragment">Windows - <a href="https://www.cygwin.com/">Cygwin</a>, or the brand new <a href="https://blogs.msdn.microsoft.com/commandline/2016/04/06/bash-on-ubuntu-on-windows-download-now-3/">Bash on Ubuntu on Windows</a></li>
 						<li class="fragment"><a href="http://superuser.com/questions/708811/can-i-use-a-chromebook-as-a-ssh-workstation/708816#708816">Chromebook - Apps that provide limited functionality</a></li>
 					</ul>
@@ -137,10 +137,6 @@
 					<p class="fragment">Most of the time you find commands written, they will be prefaced with a $</p>
 				</section>
 
-				<section data-background="img/Lego-Uncle-Jim-Builds-a-New-Chicago.jpg">
-					<h2>Common Commands</h2>
-				</section>
-
 				<section>
 					<h3>Common Commands</h3>
 					<ul>
@@ -163,6 +159,15 @@
 				</section>
 
 				<section>
+					<h3>Common Commands</h3>
+					<p>If you enter a screen that has a page of information, like a help screen:</p>
+					<ul>
+						<li class="fragment">Use your arrow keys to navigate up and down.</li>
+						<li class="fragment">Type <code>q</code> to exit.</li>
+					</ul>
+				</section>
+
+				<section>
 					<h3>Flags</h3>
 					<p>For most cases I have found, flags that are full words use two dashes, flags that are acronyms use one dash.</p>
 					<ul>
@@ -172,7 +177,39 @@
 				</section>
 
 				<section>
-					<h3>Getting a little closer</h3>
+					<h3>Escaping</h3>
+					<p>If you ever need to cancel a command:</p>
+					<p>Hold the Control key and <code>C</code></p>
+				</section>
+
+				<section data-background="img/Lego-Uncle-Jim-at-the-Car-Wash.jpg">
+					<h2>Archiving and Unarchiving</h2>
+					<p class="fragment" style="display:inline-block;background: rgba(0, 0, 0, 0.5);padding:20px;text-align:left;width:60%;float:left;">Archive and compress; extract files and folders quickly and easily right from the command line.</p>
+				</section>
+
+				<section>
+					<h3>Zip and Unzip</h3>
+					<ul>
+						<li>To compress a folder using zip:</li>
+						<li class="fragment"><code>zip -r zip-file-name.zip path/to/folder</code></li>
+						<li class="fragment"><code>zip -r zip-file-name.zip file1 file2 file3</code></li>
+						<li class="fragment">To extract:</li>
+						<li class="fragment"><code>unzip zip-file-name.zip</code></li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Tar and Untar</h3>
+					<ul>
+						<li>To compress a folder using tar:</li>
+						<li class="fragment"><code>tar -zcvf tar-file-name.tar.gz path/to/folder</code></li>
+						<li class="fragment">To extract:</li>
+						<li class="fragment"><code>tar -zxvf tar-file-name.tar.gz</code></li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>You have survived the Beginner levels!</h3>
 					<img src="img/computer-working-cat-LHZyixOnHwDDy.gif" alt="Cat typing" style="width:50%;">
 					<p><small><a href="http://gifs-for-refrence.tumblr.com/post/38294927972">Source</a></small></p>
 				</section>
@@ -231,8 +268,8 @@
 <code>
 Host hostname<br>
     User usernameatserver<br>
-    HostName IP Address or domain.name<br>
-    Port 7822<br>
+    HostName (IP Address or domain.name)<br>
+    Port 22<br>
     IdentityFile ~/.ssh/id_rsa<br>
 </code>
 						</li>
@@ -240,30 +277,9 @@ Host hostname<br>
 					</ul>
 				</section>
 
-				<section data-background="img/Lego-Uncle-Jim-at-the-Car-Wash.jpg">
-					<h2>Archiving and Unarchiving</h2>
-					<p class="fragment" style="display:inline-block;background: rgba(0, 0, 0, 0.5);padding:20px;text-align:left;width:60%;float:left;">Archive and compress; extract files and folders quickly and easily right from the command line.</p>
-				</section>
-
 				<section>
-					<h3>Zip and Unzip</h3>
-					<ul>
-						<li>To compress a folder using zip:</li>
-						<li class="fragment"><code>zip -r zip-file-name.zip path/to/folder</code></li>
-						<li class="fragment"><code>zip -r zip-file-name.zip file1 file2 file3</code></li>
-						<li class="fragment">To extract:</li>
-						<li class="fragment"><code>unzip zip-file-name.zip</code></li>
-					</ul>
-				</section>
-
-				<section>
-					<h3>Tar and Untar</h3>
-					<ul>
-						<li>To compress a folder using tar:</li>
-						<li class="fragment"><code>tar -zcvf tar-file-name.tar.gz path/to/folder</code></li>
-						<li class="fragment">To extract:</li>
-						<li class="fragment"><code>tar -zxvf tar-file-name.tar.gz</code></li>
-					</ul>
+					<h3>To disconnect from a server:</h3>
+					<p>Type <code>exit</code></p>
 				</section>
 
 				<section data-background="img/Lego-Uncle-Jim-by-the-pool-at-dusk.jpg">
@@ -298,19 +314,36 @@ date_of_thing DATE);
 					</code></p>
 				</section>
 
-				<section data-background="img/Lego-Uncle-Jim-Reads-Email-by-Chrissy.jpg">
-					<h2>Secure Copy Protocol (SCP)</h2>
-					<p class="fragment" style="display:inline-block;background: rgba(0, 0, 0, 0.5);padding:20px;text-align:left;width:60%;float:left;">Secure copy or SCP is a means of securely transferring computer files between a local host and a remote host or between two remote hosts. It is based on the Secure Shell (SSH) protocol. - <a href="https://en.wikipedia.org/wiki/Secure_copy">Wikipedia</a></p>
+				<section data-background="img/Lego-Uncle-Jim-in-the-Cabana.jpg">
+					<h2>WP-CLI</h2>
+					<p class="fragment" style="display:inline-block;background: rgba(0, 0, 0, 0.5);padding:20px;text-align:left;width:60%;float:left;">WP-CLI is a set of command-line tools for managing WordPress installations. You can update plugins, set up multisite installs and much more, without using a web browser. - <a href="http://wp-cli.org/">wp-cli.org</a></p>
 				</section>
 
 				<section>
-					<h3>Copy file from local to server</h3>
-					<p class="fragment">scp example.txt username@server:myfile.txt</p>
-					<h3 class="fragment">Copy all files in remote site to local (folder you are in)</h3>
-					<p class="fragment">scp serveralias:/home/hope/* .</p>
-					<h3 class="fragment">Copy files from one server to another</h3>
-					<p class="fragment">scp serveralias:/var/www/public_html/wp-content/files/file1.zip secondserveralias:/var/www/public_html/wp-content/files/file1.zip</p>
+					<h3>Common WP-CLI Commands</h3>
+					<p><a href="http://wp-cli.org/commands/">http://wp-cli.org/commands/</a></p>
+					<ul>
+						<li class="fragment"><code>wp media regenerate</code><br>Regenerates all thumbnails</li>
+						<li class="fragment"><code>wp post list</code><br>List all the posts of a site</li>
+						<li class="fragment"><code>wp user delete 123 --reassign=567</code><br>Delete a user, and assign their posts to another.</li>
+						<li class="fragment"><code>wp plugin install hello-dolly</code><br>Installs Hello Dolly Plugin</li>
+					</ul>
 				</section>
+
+				<section>
+					<h3>Common WP-CLI Commands</h3>
+					<ul>
+						<li class="fragment"><code>wp help</code><br>Lists all commands and help</li>
+						<li class="fragment"><code>wp core update</code><br>Updates Wordpress core</li>
+						<li class="fragment"><code>wp theme list</code><br>Lists all themes in the site</li>
+						<li class="fragment"><code>wp package</code><br><a href="http://wp-cli.org/commands/package/">http://wp-cli.org/commands/package/</a></li>
+					</ul>
+				</section>
+
+				<section data-background="img/Lego-Uncle-Jim-Builds-a-New-Chicago.jpg">
+          <h2>Drush</h2>
+          <p class="fragment" style="display:inline-block;background: rgba(0, 0, 0, 0.5);padding:20px;text-align:left;width:60%;float:left;">Drush is a command line shell and Unix scripting interface for Drupal. - <a href="http://www.drush.org/en/master/">drush.org</a></p>
+        </section>
 
 				<section data-background="img/Lego-Uncle-Jim-on-the-Rocks.jpg">
 					<h2>Aliases</h2>
@@ -408,20 +441,44 @@ alias sshconfig='nano ~/.ssh/config'
 						<li>
 							<a href="https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29">Bash Scripts</a><br>
 							<code>
-    fullpath=`pwd`
-    if [[ $fullpath =~ /Users/Jim/jim.local/.* ]]; then
-    IFS='/' array=($fullpath)
-        open "http://${array[4]}.xenostaging.com"
-    else
-        echo Nothing happens here.
-    fi
+fullpath=`pwd`<br>
+if [[ $fullpath =~<br>
+/Users/Jim/Sites/.* ]];
+then<br>
+IFS='/' array=($fullpath)<br>
+    open "http://${array[4]}.xenostaging.com"<br>
+else<br>
+    echo You are not in a webroot.<br>
+fi
 							</code>
 						</li>
 					</ul>
 				</section>
 
 				<section>
-					<h3>So close now!</h3>
+					<h3><a href="https://github.com/Bash-it/bash-it">Bash-it</a></h3>
+					<p>Bash-it is a collection of community Bash commands and scripts. (And a shameless ripoff of oh-my-zsh :smiley:)</p>
+					<p>Includes autocompletion, themes, aliases, custom functions, a few stolen pieces from Steve Losh, and more.</p>
+					<p><a href="https://github.com/Bash-it/bash-it">https://github.com/Bash-it/bash-it</a></p>
+					</ul>
+				</section>
+
+				<section data-background="img/Lego-Uncle-Jim-Reads-Email-by-Chrissy.jpg">
+					<h2>Secure Copy Protocol (SCP)</h2>
+					<p class="fragment" style="display:inline-block;background: rgba(0, 0, 0, 0.5);padding:20px;text-align:left;width:60%;float:left;">Secure copy or SCP is a means of securely transferring computer files between a local host and a remote host or between two remote hosts. It is based on the Secure Shell (SSH) protocol. - <a href="https://en.wikipedia.org/wiki/Secure_copy">Wikipedia</a></p>
+				</section>
+
+				<section>
+					<h3>Copy file from local to server</h3>
+					<p class="fragment">scp example.txt username@server:myfile.txt</p>
+					<h3 class="fragment">Copy all files in remote site to local (folder you are in)</h3>
+					<p class="fragment">scp serveralias:/home/hope/* .</p>
+					<h3 class="fragment">Copy files from one server to another</h3>
+					<p class="fragment">scp serveralias:/var/www/public_html/wp-content/files/file1.zip secondserveralias:/var/www/public_html/wp-content/files/file1.zip</p>
+				</section>
+
+				<section>
+					<h3>You have surpassed the intermediate levels with ease!</h3>
 					<img src="img/ign-describe-plans-13HBDT4QSTpveU.gif" alt="Cat typing" style="width:50%;">
 					<p><small><a href="http://www.ign.com/boards/threads/itt-describe-your-weekend-plans-in-gifs.453923111/">Source</a></small></p>
 				</section>
@@ -468,32 +525,6 @@ alias sshconfig='nano ~/.ssh/config'
 					</ul>
 				</section>
 
-				<section data-background="img/Lego-Uncle-Jim-in-the-Cabana.jpg">
-					<h2>WP-CLI</h2>
-					<p class="fragment" style="display:inline-block;background: rgba(0, 0, 0, 0.5);padding:20px;text-align:left;width:60%;float:left;">WP-CLI is a set of command-line tools for managing WordPress installations. You can update plugins, set up multisite installs and much more, without using a web browser. - <a href="http://wp-cli.org/">wp-cli.org</a></p>
-				</section>
-
-				<section>
-					<h3>Common WP-CLI Commands</h3>
-					<p><a href="http://wp-cli.org/commands/">http://wp-cli.org/commands/</a></p>
-					<ul>
-						<li class="fragment"><code>wp media regenerate</code><br>Regenerates all thumbnails</li>
-						<li class="fragment"><code>wp post list</code><br>List all the posts of a site</li>
-						<li class="fragment"><code>wp user delete 123 --reassign=567</code><br>Delete a user, and assign their posts to another.</li>
-						<li class="fragment"><code>wp plugin install hello-dolly</code><br>Installs Hello Dolly Plugin</li>
-					</ul>
-				</section>
-
-				<section>
-					<h3>Common WP-CLI Commands</h3>
-					<ul>
-						<li class="fragment"><code>wp help</code><br>Lists all commands and help</li>
-						<li class="fragment"><code>wp core update</code><br>Updates Wordpress core</li>
-						<li class="fragment"><code>wp theme list</code><br>Lists all themes in the site</li>
-						<li class="fragment"><code>wp package</code><br><a href="http://wp-cli.org/commands/package/">http://wp-cli.org/commands/package/</a></li>
-					</ul>
-				</section>
-
 				<section data-background="img/Lego-Uncle-Jim-and-the-Achievement-Duck.jpg">
 					<h2>Automation/task runners like Grunt and Gulp</h2>
 					<img src="img/node-grunt-gulp-logos.png" alt="logos" style="background: rgba(0, 0, 0, 0.5);float:left;width:40%;">
@@ -505,7 +536,7 @@ alias sshconfig='nano ~/.ssh/config'
 						<li class="fragment">Node.js® is a JavaScript runtime built that runs </li>
 						<li class="fragment">NPM (Node Package Manager), the largest ecosystem of open source libraries in the world</li>
 					</ul>
-					<p>I use Node.js® to install NPM to install Grunt which installs...</p>
+					<p class="fragment">I use Node.js® to install NPM to install Grunt which installs...</p>
 				</section>
 
 				<section>
@@ -521,30 +552,74 @@ alias sshconfig='nano ~/.ssh/config'
 				<section>
 					<h3>Tools for our CSS files:</h3>
 					<ul>
-						<li class="fragment">csslint - </li>
-						<li class="fragment">cssmin - </li>
-						<li class="fragment">csscomb - </li>
-						<li class="fragment">copy - </li>
+						<li class="fragment">grunt-contrib-less, grunt-sass - Compile LESS/SASS files to CSS</li>
+						<li class="fragment">csslint - Checks syntax checking and applys a set of rules that look for problematic patterns or signs of inefficiency.</li>
+						<li class="fragment">cssmin - Minimizes CSS files</li>
+						<li class="fragment">csscomb - Formats and sorts style sheets to make them organized and consistent.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>So many uses:</h3>
+					<ul>
+						<li class="fragment">imagemin - Minify images seamlessly.</li>
+						<li class="fragment">copy - automate the copying of files or directories.</li>
+						<li class="fragment">Thousands more... [<a href="http://gruntjs.com/plugins">Grunt Plugins</a>] [<a href="http://gulpjs.com/plugins/">Gulp Plugins</a>]</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Watch!</h3>
+					<p>Once these tasks have been assembled in a Gruntfile.js file, you can run the following command to implement these tasks on any changes:</p>
+					<p><code>grunt watch</code></p>
+					<ul>
+						<li class="fragment">Any JS/CSS/LESS/SASS files changed will be checked and organized!</li>
+						<li class="fragment">Images put in the folder I am watching will be minified.</li>
+						<li class="fragment">Any errors will be reported immediately!</li>
 					</ul>
 				</section>
 
 				<section data-background="img/Lego-Uncle-Jim-at-the-Turkish-Cafe.jpg">
-					<h2>Dependency/Package Managers like Composer and Bower</h2>
+					<h2>Dependency/Package Managers like Composer</h2>
 				</section>
 
 				<section>
-					<h3>Summary</h3>
-					<ul>
-						<li>Command Line Basics</li>
-						<li class="fragment">SSH to connect to servers</li>
-						<li class="fragment">Archiving, and Extracting</li>
-						<li class="fragment">MySQL</li>
-						<li class="fragment">Aliases for increased productivity</li>
-						<li class="fragment">Git for version control</li>
-						<li class="fragment">WP-CLI for interfacing with WordPress</li>
-						<li class="fragment">Automation/task runners like Grunt and Gulp</li>
-						<li class="fragment">Dependency/Package Managers like Composer and Bower</li>
-					</ul>
+					<h2>Summary</h2>
+					<div class="fragment">
+					  <h3>Beginner</h3>
+					  <ul>
+					    <li>Command Line Basics</li>
+					    <li>Commands and Flags</li>
+					    <li>Archiving and Unarchiving</li>
+					    <li>Editors</li>
+					  </ul>
+					</div>
+				</section>
+
+				<section>
+					<h2>Summary</h2>
+					<div class="fragment">
+					  <h3>Intermediate</h3>
+					  <ul>
+					    <li>Connecting to Servers with SSH</li>
+					    <li>MySQL</li>
+					    <li>WP-CLI</li>
+					    <li>Aliases</li>
+					    <li>Secure Copy Protocol - SCP</li>
+					  </ul>
+					</div>
+				</section>
+
+				<section>
+					<div class="fragment">
+						<h2>Summary</h2>
+					  <h3>Advanced</h3>
+					  <ul>
+					    <li>Git for Version Control</li>
+					    <li>Automation/task runners like Grunt and Gulp</li>
+					    <li>Dependency/Package Managers like Composer</li>
+					  </ul>
+					</div>
 				</section>
 
 				<section>
