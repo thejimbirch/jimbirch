@@ -79,7 +79,7 @@
 			<div class="slides">
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Paradise.jpg">
 					<h1 style="padding-left:20px;">Command Line for the Beginner</h1>
-					<h3 style="padding-left:20px;">Using the command line in developing for the web</h3>
+					<h3 style="float:left;padding-left:20px;width:75%;">Using the command line in developing for the web</h3>
 					<p style="display:inline-block;background: rgba(0, 0, 0, 0.5);padding:20px;">Created by <a href="http://jimbir.ch">Jim Birch</a><br>
 					<a href="http://jimbir.ch/presentations/command-line">jimbir.ch/cmd</a><br>
 					<a href="http://twitter.com/thejimbirch">@thejimbirch</a><br>
