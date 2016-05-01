@@ -143,7 +143,7 @@
 						<li>cd - Change Directory<br><code>$ cd /path/to/folder</code><br><code>$ cd ../../../</code> to move up the tree.</li>
 						<li class="fragment">cp - Copy<br><code>$ cp wp-config-sample.php wp-config.php</code></li>
 						<li class="fragment">grep - globally search a regular expression and print<br><code>$ grep term filetosearchin.txt</code></li>
-						<li class="fragment">ls - List<br><code>$ ls -la</code> <small>(l = long format, a = all files, even hidden)</small></li>
+						<li class="fragment">ls - List<br><code>$ ls -la</code><br><small>(l = long format, a = all files, even hidden)</small></li>
 						<li class="fragment">mkdir - Make Directory<br><code>$ mkdir directoryname</code></li>
 				</section>
 
