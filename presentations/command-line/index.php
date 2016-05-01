@@ -152,7 +152,7 @@
 					<ul>
 						<li>mv - Move<br><code>$ mv wp-config.php ../</code></li>
 						<li class="fragment">pwd - Print Working Directory<br><code>$ pwd</code></li>
-						<li class="fragment">rm - Remove<br><code>$ rm -rf whatyouwantremoved</code> <small>(r = recursive, f = force)</small></li>
+						<li class="fragment">rm - Remove<br><code>$ rm -rf whatyouwantremoved</code><br><small>(r = recursive, f = force)</small></li>
 						<li class="fragment">sudo - Superuser Do<br><code>$ sudo anycommand</code><br><small>(Use sudo if you need administrative access to run the command.)</small></li>
 						<li class="fragment">touch - Touch<br><code>$ touch newfilename.txt</code></li>
 					</ul>
@@ -226,9 +226,10 @@
 				</section>
 
 				<section>
-					<h3>You have survived the Beginner levels!</h3>
+					<h3>You have survived the Beginner level!</h3>
 					<img src="img/computer-working-cat-LHZyixOnHwDDy.gif" alt="Cat typing" style="width:50%;">
 					<p><small><a href="http://gifs-for-refrence.tumblr.com/post/38294927972">Source</a></small></p>
+					<p style="background:#444;border:1px solid #42affa;display:block;float:right;font-size:80%;padding:0 10px;text-transform:uppercase"><a href="/presentations/command-line/#/64">Skip to end</a></p>
 				</section>
 
 				<section data-background="img/Lego-Uncle-Jim-at-the-Ballgame.jpg">
@@ -437,26 +438,13 @@ alias sshconfig='nano ~/.ssh/config'
 
 				<section>
 					<h3>See also</h3>
-					<ul>
-						<li>
-							<a href="https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29">Bash Scripts</a><br>
-							<code>
-fullpath=`pwd`<br>
-if [[ $fullpath =~<br>
-/Users/Jim/Sites/.* ]];
-then<br>
-IFS='/' array=($fullpath)<br>
-    open "http://${array[4]}.xenostaging.com"<br>
-else<br>
-    echo You are not in a webroot.<br>
-fi
-							</code>
-						</li>
-					</ul>
+					<p><a href="https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29">Bash Scripts</a></p>
+<script src="https://gist.github.com/thejimbirch/cb933c5c92c461f500fefc21e0da5205.js"></script>
 				</section>
 
 				<section>
-					<h3><a href="https://github.com/Bash-it/bash-it">Bash-it</a></h3>
+					<h3>See also</h3>
+					<h4><a href="https://github.com/Bash-it/bash-it">Bash-it</a></h4>
 					<p>Bash-it is a collection of community Bash commands and scripts. (And a shameless ripoff of oh-my-zsh :smiley:)</p>
 					<p>Includes autocompletion, themes, aliases, custom functions, a few stolen pieces from Steve Losh, and more.</p>
 					<p><a href="https://github.com/Bash-it/bash-it">https://github.com/Bash-it/bash-it</a></p>
@@ -472,15 +460,16 @@ fi
 					<h3>Copy file from local to server</h3>
 					<p class="fragment">scp example.txt username@server:myfile.txt</p>
 					<h3 class="fragment">Copy all files in remote site to local (folder you are in)</h3>
-					<p class="fragment">scp serveralias:/home/hope/* .</p>
+					<p class="fragment">scp serveralias:/var/www/public_html/wp-uploads/* .</p>
 					<h3 class="fragment">Copy files from one server to another</h3>
 					<p class="fragment">scp serveralias:/var/www/public_html/wp-content/files/file1.zip secondserveralias:/var/www/public_html/wp-content/files/file1.zip</p>
 				</section>
 
 				<section>
-					<h3>You have surpassed the intermediate levels with ease!</h3>
+					<h3>You have surpassed the intermediate level with ease!</h3>
 					<img src="img/ign-describe-plans-13HBDT4QSTpveU.gif" alt="Cat typing" style="width:50%;">
 					<p><small><a href="http://www.ign.com/boards/threads/itt-describe-your-weekend-plans-in-gifs.453923111/">Source</a></small></p>
+					<p style="background:#444;border:1px solid #42affa;display:block;float:right;font-size:80%;padding:0 10px;text-transform:uppercase"><a href="/presentations/command-line/#/64">Skip to end</a></p>
 				</section>
 
 				<section data-background="img/Lego-Uncle-Jim-on-the-Deck.jpg">
@@ -593,12 +582,12 @@ fi
 				<section>
 					<h3>An overarching maintainer of your website and it's needs</h3>
 					<p>A composer.json file defines all of the things your website needs.  These are called dependencies.</p>
-					<p class="fragment">This would include Wordpress itself, plugins, and themes.  It could also include outside libraries like jQuery, Bootstrap, Foundation, and more.</p>
+					<p class="fragment">This would include Wordpress/Drupal core, plugins/modules, and themes.  It could also include outside libraries like jQuery, Bootstrap, Foundation, Masonry, and more.</p>
 				</section>
 
 				<section>
 					<h3>Rebuild this project in a moment's notice</h3>
-					<p>If all depenencies are defined in a composer.json file, <code>composer install</code> could be run to install the site anywhere.</p>
+					<p>If all dependencies are defined in a composer.json file, <code>composer install</code> could be run to install the site anywhere.</p>
 					<p class="fragment">All you would need to do then is setup the database and move the files.</p>
 				</section>
 
@@ -610,7 +599,7 @@ fi
               <li>Command Line Basics</li>
               <li>Commands and Flags</li>
               <li>Archiving and Unarchiving</li>
-              <li>Editors</li>
+              <li>Command Line Editors</li>
             </ul>
           </div>
         </section>
@@ -630,8 +619,8 @@ fi
         </section>
 
         <section>
+        	<h2>Summary</h2>
           <div class="fragment">
-            <h2>Summary</h2>
             <h3>Advanced</h3>
             <ul>
               <li>Git for Version Control</li>
