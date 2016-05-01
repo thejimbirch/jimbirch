@@ -151,10 +151,10 @@
 					<h3>Common Commands</h3>
 					<ul>
 						<li>mv - Move<br><code>$ mv wp-config.php ../</code></li>
-						<li class="fragment">pwd - Print Working Directory<br><code>$ pwd</code></li>
+						<li class="fragment">pwd - Print Working Directory<br><code>$ pwd</code><br><small>Where you are</small></li>
 						<li class="fragment">rm - Remove<br><code>$ rm -rf whatyouwantremoved</code><br><small>(r = recursive, f = force)</small></li>
-						<li class="fragment">sudo - Superuser Do<br><code>$ sudo anycommand</code><br><small>(Use sudo if you need administrative access to run the command.)</small></li>
-						<li class="fragment">touch - Touch<br><code>$ touch newfilename.txt</code></li>
+						<li class="fragment">sudo - Superuser Do<br><code>$ sudo anycommand</code><br><small>Use sudo if you need administrative access to run the command.</small></li>
+						<li class="fragment">touch - Touch<br><code>$ touch newfilename.txt</code><br><small>Creates file/Updates Last modified</small></li>
 					</ul>
 				</section>
 
