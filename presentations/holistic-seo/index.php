@@ -58,6 +58,9 @@
 			.backgrounds .slide-background{
 				background-position: bottom center;
 			}
+			.reveal .controls {
+				bottom: 30px;
+			}
 		</style>
 
 		<script>
@@ -76,10 +79,14 @@
 
 		<div class="reveal">
 			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="footer" style="font-size:16px;position:fixed;bottom:20px;left:30px;width:95%;margin:0 auto;z-index:1000;">
+				<div style="float:left;"><a href="http://www.twitter.com/thejimbirch" title="@thejimbirch">@thejimbirch</a></div>
+				<div style="float:right;"><a href="http://www.xenomedia.com" title="Xeno Media, Inc">Xeno Media, Inc</a></div>
+			</div>
 			<div class="slides">
-				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Paradise.jpg">
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-reads-email.jpg">
 					<h1 style="padding-left:20px;">Holistic SEO and Drupal</h1>
-					<h3 style="float:left;padding-left:20px;width:75%;">Best SEO practices for web developers</h3>
+					<h3 style="float:left;padding-left:20px;width:75%;">Best practices in an ever changing search landscape</h3>
 					<p style="display:inline-block;background: rgba(0, 0, 0, 0.5);padding:20px;">Created by <a href="http://jimbir.ch">Jim Birch</a><br>
 					<a href="http://jimbir.ch/presentations/holistic-seo">jimbir.ch/presentations/holistic-seo</a><br>
 					<a href="http://twitter.com/thejimbirch">@thejimbirch</a><br>
@@ -87,29 +94,38 @@
 				</section>
 
 				<section>
-					<h3>Developers be all like...</h3>
-					<img src="img/JIX9t2j0ZTN9S.gif" alt="Cat typing" style="width:50%;">
-					<p><small><a href="http://www.reddit.com/r/reactiongifs/comments/3a8akf/my_cats_reaction_when_i_leave_home/">Source</a></small></p>
+					<img src="img/SearchEngineLand.png" alt="Search Engine Land">
+					<h2>As of May 24th, 2016, Google reveals that they now handle at least <em><u>2 trillion</u></em> searches per year</h2>
+					<p><small><a href="http://searchengineland.com/google-now-handles-2-999-trillion-searches-per-year-250247">Google now handles at least 2 trillion searches per year - Danny Sullivan, Search Engine Land</a></small></p>
+				</section>
+
+				<section>
+					<img src="img/SearchEngineLand.png" alt="Search Engine Land">
+					<h3>How that breaks down</h3>
+					<ul>
+						<li class="fragment">Searches per year: 2 trillion</li>
+						<li class="fragment">Searches per month: 167 billion</li>
+						<li class="fragment">Searches per day: 5.5 billion</li>
+						<li class="fragment">Searches per hour: 228 million</li>
+						<li class="fragment">Searches per minute: 3.8 million</li>
+						<li class="fragment">Searches per second: 63,000</li>
+					</ul>
+				</section>
+
+				<section>
+					<img src="img/inc.png" alt="Inc Magazine">
+					<ul>
+						<li>Over half of those searches happen on smartphones.</li>
+						<li class="fragment">Nearly one third of all mobile searches on Google are related to location.</li>
+						<li class="fragment">Location-related mobile searches are growing 50% faster than mobile searches in general.</li>
+						<li class="fragment">More than half of all web traffic for the millions of website owners using Google Analytics now comes from smartphones and tablets.</li>
+					</ul>
+					<p><small><a href="http://www.inc.com/larry-kim/google-execs-share-10-incredible-new-mobile-web-stats.html">Google Execs Share 10 Incredible New Mobile Web Stats - Larry Kim, Inc.</a></small></p>
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-Xeno.jpg">
 					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);">What is the Command Line?</h1>
 					<p class="fragment" style="display:inline-block;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;float:left;">A command-line interface ... is a means of interacting with a computer program where the user (or client) issues commands to the program in the form of successive lines of text (command lines). - <a href="https://en.wikipedia.org/wiki/Command-line_interface">Wikipedia</a></p>
-				</section>
-
-				<section>
-					<h3>Often referred to as CLI</h3>
-					<p><strong>C</strong> - Command<br><strong>L</strong> - Line<br><strong>I</strong> - Interface</p>
-				</section>
-
-				<section>
-					<h3>Where is this Command Line?</h3>
-					<ul>
-						<li class="fragment">Linux - Built in</li>
-						<li class="fragment">Mac - Terminal built in or additional apps like <a href="https://www.iterm2.com/">iTerm</a> available.</li>
-						<li class="fragment">Windows - <a href="https://www.cygwin.com/">Cygwin</a>, or the brand new <a href="https://blogs.msdn.microsoft.com/commandline/2016/04/06/bash-on-ubuntu-on-windows-download-now-3/">Bash on Ubuntu on Windows</a></li>
-						<li class="fragment"><a href="http://superuser.com/questions/708811/can-i-use-a-chromebook-as-a-ssh-workstation/708816#708816">Chromebook - Apps that provide limited functionality</a></li>
-					</ul>
 				</section>
 
 				<section>
