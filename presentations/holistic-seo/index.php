@@ -201,7 +201,7 @@ http://giphy.com/gifs/l2JHY1hsE8l9SWDba
 					<h1 style="padding-left:20px;">THE END</h1>
 					<h3 style="padding-left:20px;">Continuing the conversation:</h3>
 					<p style="display:inline-block;background: rgba(0, 0, 0, 0.5);padding:20px;">Created by <a href="http://jimbir.ch">Jim Birch</a><br>
-					<a href="http://jimbir.ch/presentations/holistic-seo">jimbir.ch/cmd</a><br>
+					<a href="http://jimbir.ch/presentations/holistic-seo">jimbir.ch/presentations/holistic-seo</a><br>
 					<a href="http://twitter.com/thejimbirch">@thejimbirch</a><br>
 					<a href="http://www.xenomedia.com">Xeno Media, Inc.</a></p>
 				</section>
