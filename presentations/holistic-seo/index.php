@@ -149,7 +149,66 @@ http://giphy.com/gifs/l2JHY1hsE8l9SWDba
 
 
 				<section>
-					<p>Holistic SEO is a term used to describe building sites in which content, marketing, technical SEO, performance, security, user experience, and much more come together to create an ideal url on the internet.</p>
+					<p>Holistic SEO is a term used to describe building sites in which content, marketing, technical SEO, performance, security, user experience, and much more come together to create an ideal url on the internet, about a certain topic.</p>
+				</section>
+
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-Xeno.jpg">
+					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);">Why take a Holistic approach to seo?</h1>
+					<p class="fragment" style="display:inline-block;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;float:left;">We can't control or predict the changes of the other's search algorithms.</p>
+					<p class="fragment" style="display:inline-block;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;float:left;">As algorithms get more complex and intelligent, they will be come much more complicated to decifer.</p>
+				</section>
+
+				<section>
+					<img src="img/exact-match-page.jpg" alt="a page we created containing a very specific search term" style="width:60%;">
+					<p>Once upon a time, we were able to create small pieces of keyword specific content...</p>
+				</section>
+
+				<section>
+					<img src="img/exact-match.jpg" alt="ranking for a very specific search term">
+					<p>And we were able to get it to rank on the search engines!</p>
+				</section>
+
+				<!-- <section>
+					<img src="img/lil-bub-video-search-result.jpg" alt="searching for little bub fireplace on google" style="width:60%;">
+					<p>Now, Google knows the piece of content I need, even if I get 2 of the 3 words wrong!</p>
+					<p><small>little nor fireplace exist on the page that is listed first.</small></p>
+				</section> -->
+
+				<section>
+					<img src="img/floor-finish/Hardwood-Floor-Finishes-Best-Hardwood-Floor-Finish-HouseLogic-top.png" alt="Floor Finish Guide">
+					<p>These days, one piece of holisticly created content can be returned for multiple worded search terms.</p>
+				</section>
+
+				<section>
+					<p>HouseLogic.com's <a href="https://www.houselogic.com/remodel/windows-doors-and-floors/hardwood-floor-finishes/">Guide to Hardwood Floor Finishes</a></p>
+					<p>Is listed for the following search terms:</p>
+
+					<ul>
+						<li class="fragment">hardwood floor finishes</li>
+						<li class="fragment">wood floor finish</li>
+						<li class="fragment">how to finish a hardwood floor</li>
+						<li class="fragment">wood floor finishing</li>
+					</ul>
+				</section>
+
+				<section>
+					<img src="img/floor-finish/hardwood-floor-finishes.png" alt="search results - hardwood floor finishes">
+				</section>
+
+				<section>
+					<h2>#1 Result</h2>
+					<p>Assuming Google classifies this as an information search, with the possibility of commerce.</p>
+					<p>Notice the Image section, and the shopping section.</p>
+					<p class="fragment">We also have similar results for "wood floor finish"</p>
+				</section>
+
+				<section>
+					<img src="img/floor-finish/wood-floor-finish.png" alt="search results - wood floor finish">
+				</section>
+
+				<section>
+					<p>Here's where it gets interesting:<br>"how to finish a hardwood floor"</p>
+					<img src="img/floor-finish/how-to-finish-a-hardwood-floor.png" alt="search results - how to finish a hardwood floor">
 				</section>
 
 				<section>
