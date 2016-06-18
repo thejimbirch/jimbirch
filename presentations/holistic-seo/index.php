@@ -94,89 +94,12 @@
 				</section>
 
 				<!-- Roadmap
-Search engine ranking factors
-- http://www.searchmetrics.com/knowledge-base/ranking-factors/
-- https://moz.com/search-ranking-factors
-- http://searchengineland.com/now-know-googles-top-three-search-ranking-factors-245882
-
-- Nice Visual Takes
-- http://www.searchmetrics.com/knowledge-base/ranking-factors-infographic-2015/
-- http://searchengineland.com/seotable
-
-- Rankbrain, AI, Verticals and the unfairness of things.
-- http://searchengineland.com/faq-all-about-the-new-google-rankbrain-algorithm-234440
-- https://en.wikipedia.org/wiki/RankBrain
-- http://techcrunch.com/2016/06/04/artificial-intelligence-is-changing-seo-faster-than-you-think/
-
-Content strategy and how it can guide development.
-
-Quality writing
-Keyword Research
-Freshness
-Images
-Video
-
-Tools for Content Creators:
-Google AdWords Keyword Planner
-https://adwords.google.com/KeywordPlanner
-
-Searchmetrics Essentials
-http://www.searchmetrics.com/essentials/
-
-Moz Pro Keyword Explorer
-https://moz.com/products/pro/keyword-explorer
-
-Technical SEO best practices in Drupal
-- Site Architecture, Crawlability
-- Responsive
-- Speed
-- URL Strcuture
-- Sucure
-- Titles
-- Accessible headers
-- Meta
-- Schema (Schema.org, JSON-LD)
-
-Stay up to date:
-http://searchengineland.com/
-https://moz.com/blog
-https://webmasters.googleblog.com/
-
-Tools for Developers:
-=====================
-Google Defines Best Practices:
-https://developers.google.com/web/
-
-Tools:
-Google Structured Data Testing Tool (Schema)
-https://search.google.com/structured-data/testing-tool/u/0/
-
-Google Structured Data Markup Helper (Schema)
-https://www.google.com/webmasters/markup-helper/u/1/?hl=en
-
-Google PageSpeed Insights:
-https://developers.google.com/speed/pagespeed/insights/
-
-Google Mobile-Friendly Test
-https://www.google.com/webmasters/tools/mobile-friendly/
-
-Google Email Markup Tester
-https://www.google.com/webmasters/markup-tester/u/1?hl=en
-
-Google Search Console
-* View (and fix) Crawl Errors
-* Fetch as Google
-* robots.txt Tester
-* Submit Sitemaps
-* Configure URL Parameters
-https://www.google.com/webmasters/#?modal_active=none
-
-Gifs:
-http://giphy.com/gifs/giftdelivery-3oEduPYHQCqxnwGeQw
-http://giphy.com/gifs/cheezburger-workplace-fun-YhyAJUCpno53y
-http://giphy.com/gifs/dog-shiba-inu-typing-mCRJDo24UvJMA
-http://giphy.com/gifs/l2JHY1hsE8l9SWDba
--->
+				Gifs:
+					http://giphy.com/gifs/giftdelivery-3oEduPYHQCqxnwGeQw
+					http://giphy.com/gifs/cheezburger-workplace-fun-YhyAJUCpno53y
+					http://giphy.com/gifs/dog-shiba-inu-typing-mCRJDo24UvJMA
+					http://giphy.com/gifs/l2JHY1hsE8l9SWDba
+				-->
 
 
 				<section>
@@ -185,8 +108,17 @@ http://giphy.com/gifs/l2JHY1hsE8l9SWDba
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-Xeno.jpg">
 					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);">Why take a Holistic approach to seo?</h1>
-					<p class="fragment" style="display:inline-block;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;float:left;">We can't control or predict the changes of the other's search algorithms.</p>
-					<p class="fragment" style="display:inline-block;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;float:left;">As algorithms get more complex and intelligent, they will be come much more complicated to decifer.</p>
+					<p class="fragment" style="display:inline-block;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;float:left;">As algorithms get more complex and intelligent, we won't be able to control or predict changes.</p>
+					<p class="fragment" style="display:inline-block;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;float:left;">It benefits the user.</p>
+				</section>
+
+				<section>
+					<h2>The three types of Searches</h2>
+					<ul>
+						<li class="fragment">Navigational</li>
+						<li class="fragment">Informational</li>
+						<li class="fragment">Transactional</li>
+					</ul>
 				</section>
 
 				<section>
@@ -232,8 +164,8 @@ http://giphy.com/gifs/l2JHY1hsE8l9SWDba
 				</section>
 
 				<section>
-					<h2>#1 Result</h2>
-					<p>Looks like Google classifies this as an Informational and a Transactional search</p>
+					<h2>1st Result</h2>
+					<p>Informational Search, but with a little Transactional</p>
 					<p>Notice the Image section, and the shopping section.</p>
 					<p class="fragment">We also have similar results for "wood floor finish"</p>
 				</section>
@@ -248,11 +180,28 @@ http://giphy.com/gifs/l2JHY1hsE8l9SWDba
 				</section>
 
 				<section>
-					<h2>#8 Result</h2>
-					<p>Definitely an Informational Search</p>
-					<p class="fragment">Knowledge box and videos all are "How to"</p>
-					<p class="fragment">Knowledge box is from the 7th result, same site as our page</p>
-					<p class="fragment">Not directly related to the search term!</p>
+					<h2>8th Result</h2>
+					<p>Informational Search</p>
+					<ul>
+						<li class="fragment">Knowledge box and videos all are "How to"</li>
+						<li class="fragment">Knowledge box is from the 7th result, same site as our page</li>
+						<li class="fragment">Not directly related (keyword or specificity) to the search term!</li>
+					</ul>
+				</section>
+
+				<section>
+					<img src="img/floor-finish/wood-floor-finishing.png" alt="search results - wood floor finishing">
+				</section>
+
+				<section>
+					<h2>3rd Result</h2>
+					<p>Transactional Search</p>
+					<ul>
+						<li class="fragment">Business listing showing floor finishing companies near me</li>
+						<li class="fragment">Yelp business reviews, and Home advisor business listings.</li>
+						<li class="fragment">Contractor websites</li>
+						<li class="fragment">The page in question does not fit in with Transactions, but is still listed!</li>
+					</ul>
 				</section>
 
 				<section>
@@ -270,11 +219,9 @@ http://giphy.com/gifs/l2JHY1hsE8l9SWDba
 					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:60%;">Let's talk about scale</h1>
 				</section>
 
-
-
 				<section>
 					<img src="img/SearchEngineLand.png" alt="Search Engine Land">
-					<h2>As of May 24th, 2016 Google reveals that they now handle at least <em><u>2 trillion</u></em> searches per year</h2>
+					<h2>On May 24th, 2016 Google revealed that users make at least <em><u>2 trillion</u></em> searches per year</h2>
 					<p><small><a href="http://searchengineland.com/google-now-handles-2-999-trillion-searches-per-year-250247">Google now handles at least 2 trillion searches per year - Danny Sullivan, Search Engine Land</a></small></p>
 				</section>
 
@@ -312,9 +259,118 @@ http://giphy.com/gifs/l2JHY1hsE8l9SWDba
 					<p><small><a href="http://www.inc.com/larry-kim/google-execs-share-10-incredible-new-mobile-web-stats.html">Google Execs Share 10 Incredible New Mobile Web Stats - Larry Kim, Inc.</a></small></p>
 				</section>
 
-				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-Xeno.jpg">
-					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);">What can we do?</h1>
-					<p class="fragment" style="display:inline-block;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;float:left;">A command-line interface ... is a means of interacting with a computer program where the user (or client) issues commands to the program in the form of successive lines of text (command lines). - <a href="https://en.wikipedia.org/wiki/Command-line_interface">Wikipedia</a></p>
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-and-the-Acheivement-Duck.jpg">
+					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:85%;">Search engine ranking factors</h1>
+				</section>
+
+				<section>
+					<h2>Those who monitor and decipher</h2>
+					- http://www.searchmetrics.com/knowledge-base/ranking-factors/
+					- https://moz.com/search-ranking-factors
+					- http://searchengineland.com/now-know-googles-top-three-search-ranking-factors-245882
+
+					- Nice Visual Takes
+					- http://www.searchmetrics.com/knowledge-base/ranking-factors-infographic-2015/
+					- http://searchengineland.com/seotable
+
+					- Rankbrain, AI, Verticals and the unfairness of things.
+					- http://searchengineland.com/faq-all-about-the-new-google-rankbrain-algorithm-234440
+					- https://en.wikipedia.org/wiki/RankBrain
+					- http://techcrunch.com/2016/06/04/artificial-intelligence-is-changing-seo-faster-than-you-think/
+				</section>
+
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-the-Parthenon.jpg">
+					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:60%;">Content Strategy</h1>
+				</section>
+
+				<section>
+					<h2>Client Side</h2>
+				</section>
+
+				<section>
+					Content strategy and how it can guide development.
+
+					Quality writing
+					Keyword Research
+					Freshness
+					Images
+					Video
+
+					Tools for Content Creators:
+					Google AdWords Keyword Planner
+					https://adwords.google.com/KeywordPlanner
+
+					Searchmetrics Essentials
+					http://www.searchmetrics.com/essentials/
+
+					Moz Pro Keyword Explorer
+					https://moz.com/products/pro/keyword-explorer
+				</section>
+
+				<section>
+					<h2>Development Side</h2>
+				</section>
+
+				<section>
+					Properly Identified Content Types
+					Entity Reference Fields
+					Paragraphs
+					Inline Entity Forms
+				</section>
+
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-the-cabana.jpg">
+					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:75%;">Technical SEO best practices in Drupal</h1>
+				</section>
+
+				<section>
+					Technical SEO best practices in Drupal
+				- Site Architecture, Crawlability
+				- Responsive
+				- Speed
+				- URL Strcuture
+				- Sucure
+				- Titles
+				- Accessible headers
+				- Meta
+				- Schema (Schema.org, JSON-LD)
+				</section>
+
+				<section>
+					Stay up to date:
+					http://searchengineland.com/
+					https://moz.com/blog
+					https://webmasters.googleblog.com/
+				</section>
+
+				<section>
+					Tools for Developers:
+					=====================
+					Google Defines Best Practices:
+					https://developers.google.com/web/
+
+					Tools:
+					Google Structured Data Testing Tool (Schema)
+					https://search.google.com/structured-data/testing-tool/u/0/
+
+					Google Structured Data Markup Helper (Schema)
+					https://www.google.com/webmasters/markup-helper/u/1/?hl=en
+
+					Google PageSpeed Insights:
+					https://developers.google.com/speed/pagespeed/insights/
+
+					Google Mobile-Friendly Test
+					https://www.google.com/webmasters/tools/mobile-friendly/
+
+					Google Email Markup Tester
+					https://www.google.com/webmasters/markup-tester/u/1?hl=en
+
+					Google Search Console
+					* View (and fix) Crawl Errors
+					* Fetch as Google
+					* robots.txt Tester
+					* Submit Sitemaps
+					* Configure URL Parameters
+					https://www.google.com/webmasters/#?modal_active=none
 				</section>
 
 				<section style="text-align: left;" data-background="img/Lego-Uncle-Jim-at-Sunset.jpg">
