@@ -109,15 +109,22 @@ Search engine ranking factors
 - http://techcrunch.com/2016/06/04/artificial-intelligence-is-changing-seo-faster-than-you-think/
 
 Content strategy and how it can guide development.
-- Ranking for unique term (jim site)
-- User Intent - Lil bub video
-- https://www.google.com/#q=little+bub+fireplace
 
 Quality writing
 Keyword Research
 Freshness
 Images
 Video
+
+Tools for Content Creators:
+Google AdWords Keyword Planner
+https://adwords.google.com/KeywordPlanner
+
+Searchmetrics Essentials
+http://www.searchmetrics.com/essentials/
+
+Moz Pro Keyword Explorer
+https://moz.com/products/pro/keyword-explorer
 
 Technical SEO best practices in Drupal
 - Site Architecture, Crawlability
@@ -135,10 +142,34 @@ http://searchengineland.com/
 https://moz.com/blog
 https://webmasters.googleblog.com/
 
+Tools for Developers:
+=====================
+Google Defines Best Practices:
+https://developers.google.com/web/
+
 Tools:
-Schema
-Speed
-Mobile
+Google Structured Data Testing Tool (Schema)
+https://search.google.com/structured-data/testing-tool/u/0/
+
+Google Structured Data Markup Helper (Schema)
+https://www.google.com/webmasters/markup-helper/u/1/?hl=en
+
+Google PageSpeed Insights:
+https://developers.google.com/speed/pagespeed/insights/
+
+Google Mobile-Friendly Test
+https://www.google.com/webmasters/tools/mobile-friendly/
+
+Google Email Markup Tester
+https://www.google.com/webmasters/markup-tester/u/1?hl=en
+
+Google Search Console
+* View (and fix) Crawl Errors
+* Fetch as Google
+* robots.txt Tester
+* Submit Sitemaps
+* Configure URL Parameters
+https://www.google.com/webmasters/#?modal_active=none
 
 Gifs:
 http://giphy.com/gifs/giftdelivery-3oEduPYHQCqxnwGeQw
@@ -168,21 +199,14 @@ http://giphy.com/gifs/l2JHY1hsE8l9SWDba
 					<p>And we were able to get it to rank on the search engines!</p>
 				</section>
 
-				<!-- <section>
-					<img src="img/lil-bub-video-search-result.jpg" alt="searching for little bub fireplace on google" style="width:60%;">
-					<p>Now, Google knows the piece of content I need, even if I get 2 of the 3 words wrong!</p>
-					<p><small>little nor fireplace exist on the page that is listed first.</small></p>
-				</section> -->
-
 				<section>
 					<img src="img/floor-finish/Hardwood-Floor-Finishes-Best-Hardwood-Floor-Finish-HouseLogic-top.png" alt="Floor Finish Guide">
-					<p>These days, one piece of holisticly created content can be returned for multiple worded search terms.</p>
+					<p>These days, one piece of holisticly created content can be returned for different worded search terms.</p>
 				</section>
 
 				<section>
 					<p>HouseLogic.com's <a href="https://www.houselogic.com/remodel/windows-doors-and-floors/hardwood-floor-finishes/">Guide to Hardwood Floor Finishes</a></p>
 					<p>Is listed for the following search terms:</p>
-
 					<ul>
 						<li class="fragment">hardwood floor finishes</li>
 						<li class="fragment">wood floor finish</li>
@@ -192,12 +216,24 @@ http://giphy.com/gifs/l2JHY1hsE8l9SWDba
 				</section>
 
 				<section>
+					<p>It is a very well written article in an excellently architected site, from a domain with value.</p>
+					<ul>
+						<li class="fragment">Nice big image</li>
+						<li class="fragment">Over 1000 words</li>
+						<li class="fragment">Great meta tags</li>
+						<li class="fragment">LD/JSON Markup</li>
+						<li class="fragment">Fast</li>
+						<li class="fragment">Mobile</li>
+						<li class="fragment">etc</li>
+				</section>
+
+				<section>
 					<img src="img/floor-finish/hardwood-floor-finishes.png" alt="search results - hardwood floor finishes">
 				</section>
 
 				<section>
 					<h2>#1 Result</h2>
-					<p>Assuming Google classifies this as an information search, with the possibility of commerce.</p>
+					<p>Looks like Google classifies this as an Informational and a Transactional search</p>
 					<p>Notice the Image section, and the shopping section.</p>
 					<p class="fragment">We also have similar results for "wood floor finish"</p>
 				</section>
@@ -210,6 +246,31 @@ http://giphy.com/gifs/l2JHY1hsE8l9SWDba
 					<p>Here's where it gets interesting:<br>"how to finish a hardwood floor"</p>
 					<img src="img/floor-finish/how-to-finish-a-hardwood-floor.png" alt="search results - how to finish a hardwood floor">
 				</section>
+
+				<section>
+					<h2>#8 Result</h2>
+					<p>Definitely an Informational Search</p>
+					<p class="fragment">Knowledge box and videos all are "How to"</p>
+					<p class="fragment">Knowledge box is from the 7th result, same site as our page</p>
+					<p class="fragment">Not directly related to the search term!</p>
+				</section>
+
+				<section>
+					<img src="img/lil-bub-video.jpg" alt="Little Bub Video">
+					<p>One more example, showing how semantic Google is.</p></p>
+				</section>
+
+				<section>
+					<img src="img/lil-bub-video-search-result.jpg" alt="searching for little bub fireplace on google" style="width:60%;">
+					<p>Now, Google knows the piece of content I need, even if I get 2 of the 3 words wrong!</p>
+					<p><small>"little" nor "fireplace" exist on the page, yet I get the result.</small></p>
+				</section>
+
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Greece-Bay-View.jpg">
+					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:60%;">Let's talk about scale</h1>
+				</section>
+
+
 
 				<section>
 					<img src="img/SearchEngineLand.png" alt="Search Engine Land">
