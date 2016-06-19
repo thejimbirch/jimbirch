@@ -101,7 +101,6 @@
 					http://giphy.com/gifs/l2JHY1hsE8l9SWDba
 				-->
 
-
 				<section>
 					<p>Holistic SEO is a term used to describe building sites in which content, marketing, technical SEO, performance, security, user experience, and much more come together to create an ideal url on the internet, about a certain topic.</p>
 				</section>
@@ -113,7 +112,7 @@
 				</section>
 
 				<section>
-					<h2>The three types of Searches</h2>
+					<h2>There are three types of Searches</h2>
 					<ul>
 						<li class="fragment">Navigational</li>
 						<li class="fragment">Informational</li>
@@ -215,6 +214,15 @@
 					<p><small>"little" nor "fireplace" exist on the page, yet I get the result.</small></p>
 				</section>
 
+				<section>
+					<iframe width="640" height="360" src="https://www.youtube.com/embed/ZuHZSbPJhaY" frameborder="0" allowfullscreen></iframe>
+					<h2>Google is</h2>
+					<ul>
+						<li class="fragment"><strong>Semantic</strong> - Understands synonyms, pluralities, mispellings, and more</li>
+						<li class="fragment">Focused on <strong>User Intent</strong></li>
+					</ul>
+				</section>
+
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Greece-Bay-View.jpg">
 					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:60%;">Let's talk about scale</h1>
 				</section>
@@ -260,62 +268,137 @@
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-and-the-Acheivement-Duck.jpg">
-					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:85%;">Search engine ranking factors</h1>
+					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:85%;">Search Engine Ranking Factors</h1>
 				</section>
 
 				<section>
-					<h2>Those who monitor and decipher</h2>
-					- http://www.searchmetrics.com/knowledge-base/ranking-factors/
-					- https://moz.com/search-ranking-factors
-					- http://searchengineland.com/now-know-googles-top-three-search-ranking-factors-245882
+					<h2>Search Engine Ranking Factors</h2>
+					<p>Search engine ranking factors are tangible on- and off-site items that search engines use to evaluate a web property's placement in the search results for a certain query.</p>
+				</section>
 
-					- Nice Visual Takes
-					- http://www.searchmetrics.com/knowledge-base/ranking-factors-infographic-2015/
-					- http://searchengineland.com/seotable
+				<section>
+					<h2>Search Engine Ranking Factors</h2>
+					<ul>
+						<li class="fragment">Each search engine has their own factors.</li>
+						<li class="fragment">No search engines publish the factors they use.</li>
+						<li class="fragment">Factors may be ranked differently for each and every search term!</li>
+					</ul>
+				</section>
 
-					- Rankbrain, AI, Verticals and the unfairness of things.
-					- http://searchengineland.com/faq-all-about-the-new-google-rankbrain-algorithm-234440
-					- https://en.wikipedia.org/wiki/RankBrain
-					- http://techcrunch.com/2016/06/04/artificial-intelligence-is-changing-seo-faster-than-you-think/
+				<section>
+					<img src="img/SearchEngineLand.png" alt="Search Engine Land">
+					<h2>On Mar 23, 2016 Google's Andrey Lipattsevm stated that links, content and RankBrain are the top three ranking signals in Google's search algorithm.</h2>
+					<p><small><a href="http://searchengineland.com/now-know-googles-top-three-search-ranking-factors-245882">Now we know: Here are Google's top 3 search ranking factors - Barry Schwartz, Search Engine Land</a></small></p>
+				</section>
+
+				<section>
+					<h2>What is Rankbrain?</h2>
+					<ul>
+						<li class="fragment">RankBrain is a machine learning artificial intelligence system ... </li>
+						<li class="fragment">If RankBrain sees a word or phrase it isn’t familiar with, the machine can make a guess as to what words or phrases might have a similar meaning and filter the result accordingly, making it more effective at handling never-before-seen search queries. - <small><a href="https://en.wikipedia.org/wiki/RankBrain">Wikipedia</a></small></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>More in depth writing about Rankbrain</h2>
+					<ul>
+						<li><a href="https://www.searchenginejournal.com/google-rankbrain-affect-seo-2016/162153/">How to Use Google RankBrain in SEO - Search Engine Journal</a></li>
+						<li><a href="http://searchengineland.com/faq-all-about-the-new-google-rankbrain-algorithm-234440">FAQ: All About The New Google RankBrain Algorithm - Search Engine Land</a></li>
+						<li><a href="http://techcrunch.com/2016/06/04/artificial-intelligence-is-changing-seo-faster-than-you-think/">Artificial intelligence is changing SEO faster than you think - Techcrunch</a></li>
+				</section>
+
+				<section>
+					<h2>Those who monitor and decipher Search Engine Ranking Factors</h2>
+					<ul>
+						<li class="fragment"><a href="http://searchengineland.com/now-know-googles-top-three-search-ranking-factors-245882">Search Engine Land</a></li>
+						<li class="fragment"><a href="http://www.searchmetrics.com/knowledge-base/ranking-factors/">Searchmetrics</a></li>
+						<li class="fragment"><a href="https://moz.com/search-ranking-factors">Moz</a></li>
+						<li class="fragment"><a href="http://backlinko.com/google-ranking-factors">Backlinko</li>
+					</ul>
+				</section>
+
+				<section>
+					<img src="img/backlinko.png" alt="Backlinko">
+					<h2>According to Backlinko, there are over 200 Search Engine Ranking Factors</h2>
+					<p>"Some are proven. Some are controversial. Others are SEO nerd speculation.But they’re all here." - <a href="http://backlinko.com/google-ranking-factors">Google’s 200 Ranking Factors: The Complete List by Brian Dean</a>
+				</section>
+
+				<section>
+					<a href="http://www.searchmetrics.com/knowledge-base/ranking-factors-infographic-2015/"><img src="http://www.searchmetrics.com/wp-content/uploads/searchmetrics-ranking-factors-poster-US-Web.jpg" alt="Searchmetrics Ranking Factors 2015" style="width:80%;"></a>
+					<p><small><a href="http://www.searchmetrics.com/knowledge-base/ranking-factors-infographic-2015/">Searchmetrics Search Ranking Factors Infographic 2015</a></small></p>
+				</section>
+
+				<section>
+					<p>Searchmetrics separated the ranking factors into the following categories:</p>
+					<ul>
+						<li class="fragment">Content</li>
+						<li class="fragment">User Experience</li>
+						<li class="fragment">Technical</li>
+						<li class="fragment">Backlinks</li>
+						<li class="fragment">Social</li>
+					</ul>
+				</section>
+
+				<section>
+					<a href="http://searchengineland.com/seotable"><img src="http://searchengineland.com/figz/wp-content/seloads/2011/06/periodic-table-of-seo-2015.png" alt="The Periodic Table Of SEO Success Factors" style="width:80%;"></a>
+					<p><small><a href="http://searchengineland.com/seotable">The Periodic Table Of SEO Success Factors</a></small></p>
+				</section>
+
+				<section>
+					<p>Search Engine Land separated the ranking factors into the following categories:</p>
+					<ul>
+						<li class="fragment">Content - On Site</li>
+						<li class="fragment">Architecture</li>
+						<li class="fragment">HTML</li>
+						<li class="fragment">Trust - Off Site</li>
+						<li class="fragment">Links</li>
+						<li class="fragment">Personal</li>
+						<li class="fragment">Social</li>
+					</ul>
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-the-Parthenon.jpg">
-					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:60%;">Content Strategy</h1>
+					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:70%;">Content strategy and how it can guide development.</h1>
 				</section>
 
 				<section>
-					<h2>Client Side</h2>
+					<h2>Content needs to have</h2>
+					<ul>
+						<li class="fragment">Quality writing</li>
+						<li class="fragment">Keyword Research</li>
+						<li class="fragment">Freshness</li>
+						<li class="fragment">Images, Video, News related to content or vertical</li>
+						<li class="fragment">Does the content answer questions?</li>
+					</ul>
 				</section>
 
 				<section>
-					Content strategy and how it can guide development.
-
-					Quality writing
-					Keyword Research
-					Freshness
-					Images
-					Video
-
-					Tools for Content Creators:
-					Google AdWords Keyword Planner
-					https://adwords.google.com/KeywordPlanner
-
-					Searchmetrics Essentials
-					http://www.searchmetrics.com/essentials/
-
-					Moz Pro Keyword Explorer
-					https://moz.com/products/pro/keyword-explorer
+					<h2>The Basics of Content Strategy</h2>
+					<ul>
+						<li class="fragment"><strong>Identify Goals and Substance</strong> - focuses on what content is required to successfully execute your core strategy.</li>
+						<li class="fragment"><strong>Determine Structure</strong> - focuses on how content is prioritized, organized, and accessed.</li>
+					</ul>
+					<p><small><a href="https://www.usability.gov/what-and-why/content-strategy.html">Content Strategy Basics - Usability.gov</a></small></p>
 				</section>
 
 				<section>
-					<h2>Development Side</h2>
+					<p>Once you can define your Content Types and Entities, you can use these Drupal tools to connect them.</p>
+					<ul>
+						<li class="fragment"><a href="https://www.drupal.org/project/token">Token module</a> can be used to bridge your entities fields and Metatag fields and LD/JSON Views</li>
+						<li class="fragment"><a href="https://www.drupal.org/project/references">Entity Reference Fields</a> can be used to render other entities inside your main entity</li>
+						<li class="fragment"><a href="https://www.drupal.org/project/inline_entity_form">Inline Entity Form</a> can be used on top of reference fields to all ow the user to add new, or select existing entities.</li>
+						<li class="fragment"><a href="https://www.drupal.org/project/paragraphs">Paragraphs</a> is a great module to build reorderable, custom entities that reference other structured data entities</li>
+					</ul>
 				</section>
 
 				<section>
-					Properly Identified Content Types
-					Entity Reference Fields
-					Paragraphs
-					Inline Entity Forms
+					<h2>Tools for Content Creators</h2>
+					<ul>
+						<li class="fragment"><a href="https://adwords.google.com/KeywordPlanner">Google AdWords Keyword Planner</a></li>
+						<li class="fragment"><a href="http://www.searchmetrics.com/essentials/">Searchmetrics Essentials</a></li>
+						<li class="fragment"><a href="https://moz.com/products/pro/keyword-explorer">Moz Pro Keyword Explorer</a></li>
+						<li class="fragment"><a href="https://readability-score.com/">Readability Score</a></li>
+					</ul>
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-the-cabana.jpg">
@@ -336,41 +419,36 @@
 				</section>
 
 				<section>
-					Stay up to date:
-					http://searchengineland.com/
-					https://moz.com/blog
-					https://webmasters.googleblog.com/
+					<h2>Tips &amp; Tools for Developers</h2>
+					<ul>
+						<li class="fragment"><a href="https://developers.google.com/web/">Google Defines Best Practices</a></li>
+						<li class="fragment"><a href="https://search.google.com/structured-data/testing-tool/u/0/">Google Structured Data Testing Tool (Schema)</a></li>
+						<li class="fragment"><a href="https://www.google.com/webmasters/markup-helper/u/1/?hl=en">Google Structured Data Markup Helper (Schema)</a></li>
+						<li class="fragment"><a href="https://developers.google.com/speed/pagespeed/insights/">Google PageSpeed Insights</a></li>
+						<li class="fragment"><a href="https://www.google.com/webmasters/tools/mobile-friendly/">Google Mobile-Friendly Test</a></li>
+						<li class="fragment"><a href="https://www.google.com/webmasters/markup-tester/u/1?hl=en">Google Email Markup Tester</a></li>
+						<li class="fragment"><a href="https://www.google.com/webmasters/#?modal_active=none">Google Search Console</a></li>
+					</ul>
 				</section>
 
 				<section>
-					Tools for Developers:
-					=====================
-					Google Defines Best Practices:
-					https://developers.google.com/web/
+					<h2>Google Search Console</h2>
+					<ul>
+						<li>View (and fix) Crawl Errors</li>
+						<li>Fetch as Google</li>
+						<li>robots.txt Tester</li>
+						<li>Submit Sitemaps</li>
+						<li>Configure URL Parameters</li>
+					</ul>
+				</section>
 
-					Tools:
-					Google Structured Data Testing Tool (Schema)
-					https://search.google.com/structured-data/testing-tool/u/0/
-
-					Google Structured Data Markup Helper (Schema)
-					https://www.google.com/webmasters/markup-helper/u/1/?hl=en
-
-					Google PageSpeed Insights:
-					https://developers.google.com/speed/pagespeed/insights/
-
-					Google Mobile-Friendly Test
-					https://www.google.com/webmasters/tools/mobile-friendly/
-
-					Google Email Markup Tester
-					https://www.google.com/webmasters/markup-tester/u/1?hl=en
-
-					Google Search Console
-					* View (and fix) Crawl Errors
-					* Fetch as Google
-					* robots.txt Tester
-					* Submit Sitemaps
-					* Configure URL Parameters
-					https://www.google.com/webmasters/#?modal_active=none
+				<section>
+					<h2>Stay up to date:</h2>
+					<ul>
+						<li><a href="http://searchengineland.com/">Search Engine Land</a></li>
+						<li><a href="http://searchenginejournal.com/">Search Engine Journal</a></li>
+						<li><a href="https://moz.com/blog">Mox Blog</a></li>
+						<li><a href="https://webmasters.googleblog.com/">Google Webmasters</a></li>
 				</section>
 
 				<section style="text-align: left;" data-background="img/Lego-Uncle-Jim-at-Sunset.jpg">
