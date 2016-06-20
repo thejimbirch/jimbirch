@@ -406,16 +406,79 @@
 				</section>
 
 				<section>
-					Technical SEO best practices in Drupal
-				- Site Architecture, Crawlability
-				- Responsive
-				- Speed
-				- URL Strcuture
-				- Sucure
-				- Titles
-				- Accessible headers
-				- Meta
-				- Schema (Schema.org, JSON-LD)
+					<h2>Is the site easily crawlable?</h2>
+					<ul>
+						<li class="fragment">Well thought out menu</li>
+						<li class="fragment">Breadcrumbs with <a href="https://schema.org/BreadcrumbList">Schema.org Markup</a></li>
+						<li class="fragment"><a href="https://www.drupal.org/project/xmlsitemap">XML Sitemap module</a></li>
+						<li class="fragment">Friendly URLs from <a href="https://www.drupal.org/project/pathauto">Pathauto module</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>No Duplicate content</h2>
+					<ul>
+						<li class="fragment"><a href="https://www.drupal.org/project/redirect">Redirect module</a></li>
+						<li class="fragment"><a href="https://www.drupal.org/project/metatag">Metatag module</a>, set Canonical URL</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Does the site work on mobile?</h2>
+					<p>Make sure you use a responsive theme, and it passes the <a href="https://www.google.com/webmasters/tools/mobile-friendly/">Google Mobile-Friendly Test</a></p>
+				</section>
+
+				<section>
+					<h2>Does the site load quickly?</h2>
+					<ul>
+						<li class="fragment">So many different types of Caching available in Drupal.</li>
+						<li class="fragment">CDN like <a href="https://www.cloudflare.com">Cloudflare</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Does the site contain keywords in the url?</h2>
+					<p>Use the <a href="https://www.drupal.org/project/pathauto">Pathauto module</a> to set friendly URLs</p>
+				</section>
+
+				<section>
+					<h2>Is the site secure?</h2>
+					<ul>
+						<li class="fragment">Use HTTPS with an SSL certificate for all sites here on out.</li>
+						<li class="fragment">Keep core and all modules up to date</li>
+						<li class="fragment">Limit server access, and keep server up to date if not managed</li>
+						<li class="fragment">Require strong passwords - <a href="https://www.drupal.org/project/password_policy">Require Strong Passwords module</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Does the Page Title contain keywords?</h2>
+					<p>Properly set up html title in Metatag module</p>
+				</section>
+
+				<section>
+					<h2>Does the Meta Description describe the pages?</h2>
+					<ul>
+						<li class="fragment">Add a "Teaser" field which can me used for meta description and search results.</li>
+						<li class="fragment">Same goes for a Feature Image field, used for OG/Twitter Card Meta Images.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Does the site use Structured data?</h2>
+					<ul>
+						<li class="fragment">Schema markup in theme</li>
+						<li class="fragment">LD/JSON View block/pane</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Proper use of headers</h2>
+					<ul>
+						<li class="fragment">Proper, ordered use of h1, h2, h3</li>
+						<li class="fragment">Remove h1 from WYSIWYG if set by template</li>
+						<li class="fragment">In the theme, remove h3 from block headers, to reserve for content use.</li>
+					</ul>
 				</section>
 
 				<section>
@@ -433,12 +496,13 @@
 
 				<section>
 					<h2>Google Search Console</h2>
+					<p>Has the followign tools:</p>
 					<ul>
 						<li>View (and fix) Crawl Errors</li>
 						<li>Fetch as Google</li>
 						<li>robots.txt Tester</li>
 						<li>Submit Sitemaps</li>
-						<li>Configure URL Parameters</li>
+						<li>Cgonfigure URL Parameters</li>
 					</ul>
 				</section>
 
