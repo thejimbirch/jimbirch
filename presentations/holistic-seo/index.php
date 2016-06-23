@@ -108,16 +108,11 @@
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-Xeno.jpg">
 					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);">Why take a Holistic approach to seo?</h1>
 					<p class="fragment" style="display:inline-block;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;float:left;">As algorithms get more complex and intelligent, we won't be able to control or predict changes.</p>
-					<p class="fragment" style="display:inline-block;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;float:left;">It benefits the user.</p>
+					<p class="fragment" style="display:inline-block;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;float:left;">It ultimately benefits the user.</p>
 				</section>
 
-				<section>
-					<h2>There are three types of Searches</h2>
-					<ul>
-						<li class="fragment">Navigational</li>
-						<li class="fragment">Informational</li>
-						<li class="fragment">Transactional</li>
-					</ul>
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-the-Jungle.jpg">
+					<h2 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:60%;">Today's Google algorythm puts more value on Topic and User Intent than Keywords.</h2>
 				</section>
 
 				<section>
@@ -163,10 +158,20 @@
 				</section>
 
 				<section>
-					<h2>1st Result</h2>
-					<p>Informational Search, but with a little Transactional</p>
-					<p>Notice the Image section, and the shopping section.</p>
-					<p class="fragment">We also have similar results for "wood floor finish"</p>
+					<h2>hardwood floor finishes<br>1st Result</h2>
+					<div style="background:#444;float:right;font-size:75%;margin:0 0 40px 5%;padding:20px;width:30%;">
+						<h4>Basic types of searches</h4>
+						<ul>
+							<li>Navigational</li>
+							<li>Informational</li>
+							<li>Transactional</li>
+						</ul>
+					</div>
+					<ul style="width:55%;">
+						<li class="fragment">Primarily Informational, but also has Transactional elements</li>
+						<li class="fragment">Lots of informative links, and a shopping box.</li>
+						<li class="fragment">We also have similar results for "wood floor finish"</li>
+					</ul>
 				</section>
 
 				<section>
@@ -179,12 +184,12 @@
 				</section>
 
 				<section>
-					<h2>8th Result</h2>
+					<h2><span style="font-size:80%;">how to finish a hardwood floor</span><br>8th Result</h2>
 					<p>Informational Search</p>
 					<ul>
 						<li class="fragment">Knowledge box and videos all are "How to"</li>
 						<li class="fragment">Knowledge box is from the 7th result, same site as our page</li>
-						<li class="fragment">Not directly related (keyword or specificity) to the search term!</li>
+						<li class="fragment">Our page is a product guide, not a How to, but the information is still percieved as valuable.</li>
 					</ul>
 				</section>
 
@@ -193,11 +198,11 @@
 				</section>
 
 				<section>
-					<h2>3rd Result</h2>
+					<h2>Wood Floor Finishing<br>3rd Result</h2>
 					<p>Transactional Search</p>
 					<ul>
-						<li class="fragment">Business listing showing floor finishing companies near me</li>
-						<li class="fragment">Yelp business reviews, and Home advisor business listings.</li>
+						<li class="fragment">Business listing showing local floor finishing companies</li>
+						<li class="fragment">Yelp business reviews, and Home advisor business listings</li>
 						<li class="fragment">Contractor websites</li>
 						<li class="fragment">The page in question does not fit in with Transactions, but is still listed!</li>
 					</ul>
@@ -209,6 +214,7 @@
 				</section>
 
 				<section>
+					<h2>little bub fireplace</h2>
 					<img src="img/lil-bub-video-search-result.jpg" alt="searching for little bub fireplace on google" style="width:60%;">
 					<p>Now, Google knows the piece of content I need, even if I get 2 of the 3 words wrong!</p>
 					<p><small>"little" nor "fireplace" exist on the page, yet I get the result.</small></p>
@@ -219,7 +225,7 @@
 					<h2>Google is</h2>
 					<ul>
 						<li class="fragment"><strong>Semantic</strong> - Understands synonyms, pluralities, mispellings, and more</li>
-						<li class="fragment">Focused on <strong>User Intent</strong></li>
+						<li class="fragment">Focused on <strong>User Intent</strong> - What the user is trying to acheive by searching</li>
 					</ul>
 				</section>
 
