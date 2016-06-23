@@ -5,24 +5,24 @@
 		<meta charset="utf-8">
 		<title>Holistic SEO and Drupal | Web Development Presentation</title>
 		<meta name="description" content="This presentation reviews the most common search engine ranking factors and how to take a holistic approach to SEO best practices when developing in Drupal."/>
-		<link rel="canonical" href="http://jimbir.ch/presentations/holistic-seo"/>
+		<link rel="canonical" href="http://jimbir.ch/presentations/holistic-seo/"/>
 		<meta property="og:site_name" content="Jim Birch"/>
 		<meta property="og:type" content="public_figure"/>
-		<meta property="og:url" content="http://jimbir.ch/presentations/holistic-seo"/>
+		<meta property="og:url" content="http://jimbir.ch/presentations/holistic-seo/"/>
 		<meta property="og:title" content="Holistic SEO and Drupal | Web Development Presentation"/>
 		<meta property="og:description" content="This presentation reviews the most common search engine ranking factors and how to take a holistic approach to SEO best practices when developing in Drupal."/>
-		<meta property="og:image" content="http://jimbir.ch/presentations/holistic-seo/img/Lego-Uncle-Jim-in-Paradise.jpg"/>
+		<meta property="og:image" content="http://jimbir.ch/presentations/holistic-seo/img/Lego-Uncle-Jim-reads-email.jpg"/>
 		<meta name="twitter:site" content="@thejimbirch"/>
 		<meta name="twitter:site:id" content="2989027096"/>
 		<meta name="twitter:creator" content="@thejimbirch"/>
 		<meta name="twitter:creator:id" content="2989027096"/>
-		<meta name="twitter:url" content="http://jimbir.ch/presentations/holistic-seo"/>
+		<meta name="twitter:url" content="http://jimbir.ch/presentations/holistic-seo/"/>
 		<meta name="twitter:title" content="Holistic SEO and Drupal | Web Development Presentation"/>
 		<meta name="twitter:description" content="This presentation reviews the most common search engine ranking factors and how to take a holistic approach to SEO best practices when developing in Drupal."/>
-		<meta name="twitter:image:src" content="http://jimbir.ch/presentations/holistic-seo/img/Lego-Uncle-Jim-in-Paradise.jpg"/>
+		<meta name="twitter:image:src" content="http://jimbir.ch/presentations/holistic-seo/img/Lego-Uncle-Jim-reads-email.jpg"/>
 		<meta itemprop="name" content="Holistic SEO and Drupal | Web Development Presentation"/>
 		<meta itemprop="description" content="This presentation reviews the most common search engine ranking factors and how to take a holistic approach to SEO best practices when developing in Drupal."/>
-		<meta itemprop="image" content="http://jimbir.ch/presentations/holistic-seo/img/Lego-Uncle-Jim-in-Paradise.jpg"/>
+		<meta itemprop="image" content="http://jimbir.ch/presentations/holistic-seo/img/Lego-Uncle-Jim-reads-email.jpg"/>
 		<meta name="author" content="Jim Birch">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
