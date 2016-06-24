@@ -101,18 +101,18 @@
 					http://giphy.com/gifs/l2JHY1hsE8l9SWDba
 				-->
 
-				<section>
-					<p>Holistic SEO is a term used to describe building sites in which content, marketing, technical SEO, performance, security, user experience, and much more come together to create an ideal url on the internet, about a certain topic.</p>
-				</section>
-
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-Xeno.jpg">
 					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);">Why take a Holistic approach to seo?</h1>
 					<p class="fragment" style="display:inline-block;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;float:left;">As algorithms get more complex and intelligent, we won't be able to control or predict changes.</p>
 					<p class="fragment" style="display:inline-block;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;float:left;">It ultimately benefits the user.</p>
 				</section>
 
+				<section>
+					<p>Holistic SEO is a term used to describe building sites in which content, marketing, technical SEO, performance, security, user experience, and much more come together to create an ideal url on the internet, about a certain topic.</p>
+				</section>
+
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-the-Jungle.jpg">
-					<h2 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:60%;">Today's Google algorythm puts more value on Topic and User Intent than Keywords.</h2>
+					<h2 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:60%;">Today's Google algorythm puts more value on <u>Topic</u> and <u>User Intent</u> than Keywords.</h2>
 				</section>
 
 				<section>
@@ -150,7 +150,7 @@
 						<li class="fragment">LD/JSON Markup</li>
 						<li class="fragment">Fast</li>
 						<li class="fragment">Mobile</li>
-						<li class="fragment">etc</li>
+						<li class="fragment">and more</li>
 				</section>
 
 				<section>
@@ -285,16 +285,36 @@
 				<section>
 					<h2>Search Engine Ranking Factors</h2>
 					<ul>
-						<li class="fragment">Each search engine has their own factors.</li>
-						<li class="fragment">No search engines publish the factors they use.</li>
+						<li class="fragment">Each search engine has their own algorithm to how they weigh factors.</li>
+						<li class="fragment">Search engines will publish factors from time to time.  (Mobilegeddon, Page Speed)</li>
 						<li class="fragment">Factors may be ranked differently for each and every search term!</li>
 					</ul>
 				</section>
 
 				<section>
 					<img src="img/SearchEngineLand.png" alt="Search Engine Land">
-					<h2>On Mar 23, 2016 Google's Andrey Lipattsevm stated that links, content and RankBrain are the top three ranking signals in Google's search algorithm.</h2>
+					<h2>On Mar 23, 2016 Google's Andrey Lipattsevm stated that <u>links</u>, <u>content</u> and <u>RankBrain</u> are the top three ranking signals in Google's search algorithm.</h2>
 					<p><small><a href="http://searchengineland.com/now-know-googles-top-three-search-ranking-factors-245882">Now we know: Here are Google's top 3 search ranking factors - Barry Schwartz, Search Engine Land</a></small></p>
+				</section>
+
+				<section>
+					<h2>Links</h2>
+					<ul>
+						<li class="fragment">Quality of links</li>
+						<li class="fragment">Keywords in links</li>
+						<li class="fragment">Quantity</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Content</h2>
+					<ul>
+						<li class="fragment">Quality writing</li>
+						<li class="fragment">Keyword Research</li>
+						<li class="fragment">Freshness</li>
+						<li class="fragment">Images, Video, News related to content or vertical</li>
+						<li class="fragment">Does the content answer questions?</li>
+					</ul>
 				</section>
 
 				<section>
@@ -321,12 +341,6 @@
 						<li class="fragment"><a href="https://moz.com/search-ranking-factors">Moz</a></li>
 						<li class="fragment"><a href="http://backlinko.com/google-ranking-factors">Backlinko</li>
 					</ul>
-				</section>
-
-				<section>
-					<img src="img/backlinko.png" alt="Backlinko">
-					<h2>According to Backlinko, there are over 200 Search Engine Ranking Factors</h2>
-					<p>"Some are proven. Some are controversial. Others are SEO nerd speculation.But they’re all here." - <a href="http://backlinko.com/google-ranking-factors">Google’s 200 Ranking Factors: The Complete List by Brian Dean</a>
 				</section>
 
 				<section>
@@ -363,23 +377,25 @@
 					</ul>
 				</section>
 
+				<section>
+					<img alt="Moz" src="img/moz_blue.png" style="padding:40px;">
+					<p><a href="https://moz.com/search-ranking-factors">Search Engine Ranking Factors 2015<br>Expert Survey and Correlation Data</a></p>
+					<p>"Every two years, Moz surveys the opinions of dozens of the world's brightest search marketers and runs correlation studies to better understand the workings of search engine algorithms."</p>
+				</section>
+
+				<section>
+					<img src="img/backlinko.png" alt="Backlinko">
+					<h2>According to Backlinko, there are over 200 Search Engine Ranking Factors</h2>
+					<p>"Some are proven. Some are controversial. Others are SEO nerd speculation. But they’re all here." - <a href="http://backlinko.com/google-ranking-factors">Google’s 200 Ranking Factors: The Complete List by Brian Dean</a>
+				</section>
+
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-the-Parthenon.jpg">
 					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:70%;">Content strategy and how it can guide development.</h1>
 				</section>
 
 				<section>
-					<h2>Content needs to have</h2>
-					<ul>
-						<li class="fragment">Quality writing</li>
-						<li class="fragment">Keyword Research</li>
-						<li class="fragment">Freshness</li>
-						<li class="fragment">Images, Video, News related to content or vertical</li>
-						<li class="fragment">Does the content answer questions?</li>
-					</ul>
-				</section>
-
-				<section>
 					<h2>The Basics of Content Strategy</h2>
+					<p>Content-oriented Components</p>
 					<ul>
 						<li class="fragment"><strong>Identify Goals and Substance</strong> - focuses on what content is required to successfully execute your core strategy.</li>
 						<li class="fragment"><strong>Determine Structure</strong> - focuses on how content is prioritized, organized, and accessed.</li>
@@ -388,22 +404,42 @@
 				</section>
 
 				<section>
-					<p>Once you can define your Content Types and Entities, you can use these Drupal tools to connect them.</p>
+					<h2>Identify Goals and Substance</h2>
 					<ul>
-						<li class="fragment"><a href="https://www.drupal.org/project/token">Token module</a> can be used to bridge your entities fields and Metatag fields and LD/JSON Views</li>
-						<li class="fragment"><a href="https://www.drupal.org/project/references">Entity Reference Fields</a> can be used to render other entities inside your main entity</li>
-						<li class="fragment"><a href="https://www.drupal.org/project/inline_entity_form">Inline Entity Form</a> can be used on top of reference fields to all ow the user to add new, or select existing entities.</li>
-						<li class="fragment"><a href="https://www.drupal.org/project/paragraphs">Paragraphs</a> is a great module to build reorderable, custom entities that reference other structured data entities</li>
+						<li class="fragment">Who are the users the client wants to visit the website?</li>
+						<li class="fragment">What content is the client going to be able to create and publish?</li>
+						<li class="fragment">Who are the client's competitors, and what content are they ranking for?</li>
 					</ul>
 				</section>
 
 				<section>
 					<h2>Tools for Content Creators</h2>
 					<ul>
-						<li class="fragment"><a href="https://adwords.google.com/KeywordPlanner">Google AdWords Keyword Planner</a></li>
-						<li class="fragment"><a href="http://www.searchmetrics.com/essentials/">Searchmetrics Essentials</a></li>
-						<li class="fragment"><a href="https://moz.com/products/pro/keyword-explorer">Moz Pro Keyword Explorer</a></li>
-						<li class="fragment"><a href="https://readability-score.com/">Readability Score</a></li>
+						<li><a href="https://adwords.google.com/KeywordPlanner">Google AdWords Keyword Planner</a></li>
+						<li><a href="http://www.searchmetrics.com/essentials/">Searchmetrics Essentials</a></li>
+						<li><a href="https://moz.com/products/pro/keyword-explorer">Moz Pro Keyword Explorer</a></li>
+						<li><a href="https://readability-score.com/">Readability Score</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Determine Structure</h2>
+					<ul>
+						<li class="fragment">Content Types and Entities</li>
+						<li class="fragment">Sitemap</li>
+						<li class="fragment">Menu Structure</li>
+						<li class="fragment">Functionality/Views</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Drupal Tools</h2>
+					<p>Once you can define your Content Types and Entities, you can use these Drupal tools to connect them.</p>
+					<ul>
+						<li class="fragment"><a href="https://www.drupal.org/project/token">Token module</a> can be used to bridge your entities fields and Metatag fields and LD/JSON Views</li>
+						<li class="fragment"><a href="https://www.drupal.org/project/references">Entity Reference Fields</a> can be used to render other entities inside your main entity</li>
+						<li class="fragment"><a href="https://www.drupal.org/project/inline_entity_form">Inline Entity Form</a> can be used on top of reference fields to allow the user to add new, or select existing entities.</li>
+						<li class="fragment"><a href="https://www.drupal.org/project/paragraphs">Paragraphs</a> is a great module to build reorderable, custom entities that reference other structured data entities</li>
 					</ul>
 				</section>
 
@@ -502,13 +538,13 @@
 
 				<section>
 					<h2>Google Search Console</h2>
-					<p>Has the followign tools:</p>
+					<p>Has the following tools:</p>
 					<ul>
 						<li>View (and fix) Crawl Errors</li>
 						<li>Fetch as Google</li>
 						<li>robots.txt Tester</li>
 						<li>Submit Sitemaps</li>
-						<li>Cgonfigure URL Parameters</li>
+						<li>Configure URL Parameters</li>
 					</ul>
 				</section>
 
@@ -517,7 +553,8 @@
 					<ul>
 						<li><a href="http://searchengineland.com/">Search Engine Land</a></li>
 						<li><a href="http://searchenginejournal.com/">Search Engine Journal</a></li>
-						<li><a href="https://moz.com/blog">Mox Blog</a></li>
+						<li><a href="http://blog.searchmetrics.com/us/">Searchmetrics Blog</a></li>
+						<li><a href="https://moz.com/blog">Moz Blog</a></li>
 						<li><a href="https://webmasters.googleblog.com/">Google Webmasters</a></li>
 				</section>
 
