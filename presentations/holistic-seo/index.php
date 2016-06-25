@@ -59,7 +59,10 @@
 				background-position: bottom center;
 			}
 			.reveal .controls {
-				bottom: 30px;
+				bottom: 14px;
+			}
+			.navigate-down, .navigate-up {
+				display: none;
 			}
 		</style>
 
@@ -80,8 +83,8 @@
 		<div class="reveal">
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="footer" style="font-size:16px;position:fixed;bottom:20px;left:30px;width:95%;margin:0 auto;z-index:1000;">
-				<div style="float:left;"><a href="http://www.twitter.com/thejimbirch" title="@thejimbirch">@thejimbirch</a></div>
-				<div style="float:right;"><a href="http://www.xenomedia.com" title="Xeno Media, Inc">Xeno Media, Inc</a></div>
+				<div style="float:left;"><a href="http://jimbir.ch/presentations/holistic-seo/">Holistic SEO and Drupal</a> - <a href="http://www.twitter.com/thejimbirch" title="@thejimbirch">@thejimbirch</a></div>
+				<div style="float:right;"><a href="http://www.xenomedia.com" title="Xeno Media, Inc"><img src="img/xeno-media-logo.png" alt="Xeno Media, Inc" style="height:14px;width:auto;"></a></div>
 			</div>
 			<div class="slides">
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-reads-email.jpg">
@@ -147,7 +150,7 @@
 						<li class="fragment">Nice big image</li>
 						<li class="fragment">Over 1000 words</li>
 						<li class="fragment">Great meta tags</li>
-						<li class="fragment">LD/JSON Markup</li>
+						<li class="fragment">JSON-LD Markup</li>
 						<li class="fragment">Fast</li>
 						<li class="fragment">Mobile</li>
 						<li class="fragment">and more</li>
@@ -273,20 +276,20 @@
 					<p><small><a href="http://www.inc.com/larry-kim/google-execs-share-10-incredible-new-mobile-web-stats.html">Google Execs Share 10 Incredible New Mobile Web Stats - Larry Kim, Inc.</a></small></p>
 				</section>
 
-				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-and-the-Acheivement-Duck.jpg">
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-the-cabana.jpg">
 					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:85%;">Search Engine Ranking Factors</h1>
 				</section>
 
 				<section>
 					<h2>Search Engine Ranking Factors</h2>
-					<p>Search engine ranking factors are tangible on- and off-site items that search engines use to evaluate a web property's placement in the search results for a certain query.</p>
+					<p>Search engine ranking factors are on- and off-site items that search engines use to evaluate a web property's placement in the search results for a certain query.</p>
 				</section>
 
 				<section>
 					<h2>Search Engine Ranking Factors</h2>
 					<ul>
 						<li class="fragment">Each search engine has their own algorithm to how they weigh factors.</li>
-						<li class="fragment">Search engines will publish factors from time to time.  (Mobilegeddon, Page Speed)</li>
+						<li class="fragment">On occasion, search engines will publish factors. Pay attention! (Mobilegeddon, Page Speed)</li>
 						<li class="fragment">Factors may be ranked differently for each and every search term!</li>
 					</ul>
 				</section>
@@ -361,7 +364,7 @@
 
 				<section>
 					<a href="http://searchengineland.com/seotable"><img src="http://searchengineland.com/figz/wp-content/seloads/2011/06/periodic-table-of-seo-2015.png" alt="The Periodic Table Of SEO Success Factors" style="width:80%;"></a>
-					<p><small><a href="http://searchengineland.com/seotable">The Periodic Table Of SEO Success Factors</a></small></p>
+					<p><small><a href="http://searchengineland.com/seotable">Search Engine Land - The Periodic Table Of SEO Success Factors</a></small></p>
 				</section>
 
 				<section>
@@ -384,7 +387,7 @@
 				</section>
 
 				<section>
-					<img src="img/backlinko.png" alt="Backlinko">
+					<img src="img/backlinko.png" alt="Backlinko" style="padding:40px;">
 					<h2>According to Backlinko, there are over 200 Search Engine Ranking Factors</h2>
 					<p>"Some are proven. Some are controversial. Others are SEO nerd speculation. But they’re all here." - <a href="http://backlinko.com/google-ranking-factors">Google’s 200 Ranking Factors: The Complete List by Brian Dean</a>
 				</section>
@@ -436,14 +439,14 @@
 					<h2>Drupal Tools</h2>
 					<p>Once you can define your Content Types and Entities, you can use these Drupal tools to connect them.</p>
 					<ul>
-						<li class="fragment"><a href="https://www.drupal.org/project/token">Token module</a> can be used to bridge your entities fields and Metatag fields and LD/JSON Views</li>
+						<li class="fragment"><a href="https://www.drupal.org/project/token">Token module</a> can be used to bridge your entities fields and Metatag fields and JSON-LD Views</li>
 						<li class="fragment"><a href="https://www.drupal.org/project/references">Entity Reference Fields</a> can be used to render other entities inside your main entity</li>
 						<li class="fragment"><a href="https://www.drupal.org/project/inline_entity_form">Inline Entity Form</a> can be used on top of reference fields to allow the user to add new, or select existing entities.</li>
 						<li class="fragment"><a href="https://www.drupal.org/project/paragraphs">Paragraphs</a> is a great module to build reorderable, custom entities that reference other structured data entities</li>
 					</ul>
 				</section>
 
-				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-the-cabana.jpg">
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-and-the-Acheivement-Duck.jpg">
 					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:75%;">Technical SEO best practices in Drupal</h1>
 				</section>
 
@@ -508,10 +511,43 @@
 
 				<section>
 					<h2>Does the site use Structured data?</h2>
-					<ul>
-						<li class="fragment">Schema markup in theme</li>
-						<li class="fragment">LD/JSON View block/pane</li>
-					</ul>
+					<p>Schema markup in content &amp; themes</p>
+						<pre>
+							<code>
+<div itemscope itemtype="http://schema.org/BroadcastService">
+  <span itemprop="name">WAAY-TV</span>
+  <span itemprop="broadcastDisplayName">ABC</span>
+  <span itemprop="videoFormat">SD</span>
+  <span itemprop="broadcastTimezone" content="-8:00">PST</span>
+  <div itemprop="broadcastAffiliateOf" itemscope itemtype="http://schema.org/Organization">
+    <span itemprop="name">ABC</span>
+  </div>
+</div>
+							</code>
+						</pre>
+				</section>
+
+				<section>
+					<h2>Does the site use Structured data?</h2>
+					<p>JavaScript Object Notation for Linked Data (JSON-LD)<br>View block/pane using a contextual filter</p>
+						<pre>
+							<code>
+<script type="application/ld+json">
+{
+  "@context":"http://schema.org",
+  "@type":"BroadcastService",
+  "name":"WAAY-TV",
+  "broadcastDisplayName":"ABC",
+  "videoFormat":"SD",
+  "broadcastTimezone": "-8:00",
+  "broadcastAffiliateOf":{
+    "@type":"Organization",
+    "name":"ABC"
+  }
+}
+</script>
+							</code>
+						</pre>
 				</section>
 
 				<section>
