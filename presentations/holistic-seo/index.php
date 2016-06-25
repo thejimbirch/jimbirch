@@ -104,14 +104,14 @@
 					http://giphy.com/gifs/l2JHY1hsE8l9SWDba
 				-->
 
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Greece-by-the-steps.jpg">
+					<p class="fragment" style="display:inline-block;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;float:left;">Holistic SEO is a term used to describe development in which content, marketing, technical SEO, performance, security, user experience and user intent come together to create an ideal url on the internet, about a certain topic.</p>
+				</section>
+
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-Xeno.jpg">
 					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);">Why take a Holistic approach to seo?</h1>
 					<p class="fragment" style="display:inline-block;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;float:left;">As algorithms get more complex and intelligent, we won't be able to control or predict changes.</p>
 					<p class="fragment" style="display:inline-block;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;float:left;">It ultimately benefits the user.</p>
-				</section>
-
-				<section>
-					<p>Holistic SEO is a term used to describe building sites in which content, marketing, technical SEO, performance, security, user experience, and much more come together to create an ideal url on the internet, about a certain topic.</p>
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-the-Jungle.jpg">
@@ -280,16 +280,15 @@
 					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:85%;">Search Engine Ranking Factors</h1>
 				</section>
 
-				<section>
-					<h2>Search Engine Ranking Factors</h2>
-					<p>Search engine ranking factors are on- and off-site items that search engines use to evaluate a web property's placement in the search results for a certain query.</p>
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-by-the-pool-at-dusk.jpg">
+					<p style="display:inline-block;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;float:left;">Search engine ranking factors are on- and off-site items that search engines use to evaluate a web property's placement in the search results for a certain query.</p>
 				</section>
 
 				<section>
 					<h2>Search Engine Ranking Factors</h2>
 					<ul>
 						<li class="fragment">Each search engine has their own algorithm to how they weigh factors.</li>
-						<li class="fragment">On occasion, search engines will publish factors. Pay attention! (Mobilegeddon, Page Speed)</li>
+						<li class="fragment">On occasion, Google will publish factors. Pay attention! (Mobilegeddon, Page Speed)</li>
 						<li class="fragment">Factors may be ranked differently for each and every search term!</li>
 					</ul>
 				</section>
@@ -324,7 +323,7 @@
 					<h2>What is Rankbrain?</h2>
 					<ul>
 						<li class="fragment">RankBrain is a machine learning artificial intelligence system ... </li>
-						<li class="fragment">If RankBrain sees a word or phrase it isn’t familiar with, the machine can make a guess as to what words or phrases might have a similar meaning and filter the result accordingly, making it more effective at handling never-before-seen search queries. - <small><a href="https://en.wikipedia.org/wiki/RankBrain">Wikipedia</a></small></li>
+						<li class="fragment">If RankBrain sees a word or phrase it isn’t familiar with, the machine can make a guess as to what words or phrases might have a similar meaning and filter the result accordingly, making it more effective at handling never-before-seen search queries. - <a href="https://en.wikipedia.org/wiki/RankBrain">Wikipedia</a></li>
 					</ul>
 				</section>
 
@@ -439,10 +438,10 @@
 					<h2>Drupal Tools</h2>
 					<p>Once you can define your Content Types and Entities, you can use these Drupal tools to connect them.</p>
 					<ul>
-						<li class="fragment"><a href="https://www.drupal.org/project/token">Token module</a> can be used to bridge your entities fields and Metatag fields and JSON-LD Views</li>
 						<li class="fragment"><a href="https://www.drupal.org/project/references">Entity Reference Fields</a> can be used to render other entities inside your main entity</li>
 						<li class="fragment"><a href="https://www.drupal.org/project/inline_entity_form">Inline Entity Form</a> can be used on top of reference fields to allow the user to add new, or select existing entities.</li>
 						<li class="fragment"><a href="https://www.drupal.org/project/paragraphs">Paragraphs</a> is a great module to build reorderable, custom entities that reference other structured data entities</li>
+						<li class="fragment"><a href="https://www.drupal.org/project/token">Token module</a> can be used to bridge your entities fields and Metatag fields and JSON-LD Views</li>
 					</ul>
 				</section>
 
@@ -478,6 +477,7 @@
 					<ul>
 						<li class="fragment">So many different types of Caching available in Drupal.</li>
 						<li class="fragment">CDN like <a href="https://www.cloudflare.com">Cloudflare</a></li>
+						<li class="fragment">Responsive Images/Small image sizes in Image Presets</li>
 					</ul>
 				</section>
 
@@ -504,14 +504,14 @@
 				<section>
 					<h2>Does the Meta Description describe the pages?</h2>
 					<ul>
-						<li class="fragment">Add a "Teaser" field which can me used for meta description and search results.</li>
+						<li class="fragment">Add a "Teaser" field which can be used with the Token and Metatag modules for meta description and search results.</li>
 						<li class="fragment">Same goes for a Feature Image field, used for OG/Twitter Card Meta Images.</li>
 					</ul>
 				</section>
 
 				<section>
 					<h2>Does the site use Structured data?</h2>
-					<p>Schema markup in content &amp; themes</p>
+					<p><a href="http://schema.org/">Schema.org</a> markup in content &amp; themes</p>
 						<pre>
 							<code>
 <div itemscope itemtype="http://schema.org/BroadcastService">
@@ -529,7 +529,7 @@
 
 				<section>
 					<h2>Does the site use Structured data?</h2>
-					<p>JavaScript Object Notation for Linked Data (JSON-LD)<br>View block/pane using a contextual filter</p>
+					<p><a href="http://json-ld.org/">JavaScript Object Notation for Linked Data (JSON-LD)</a><br>View block/pane using a contextual filter</p>
 						<pre>
 							<code>
 <script type="application/ld+json">
@@ -557,6 +557,10 @@
 						<li class="fragment">Remove h1 from WYSIWYG if set by template</li>
 						<li class="fragment">In the theme, remove h3 from block headers, to reserve for content use.</li>
 					</ul>
+				</section>
+
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-the-Turkish-Cafe.jpg">
+					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:75%;">Tips &amp; Tools for Developers</h1>
 				</section>
 
 				<section>
