@@ -110,8 +110,8 @@
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-Xeno.jpg">
 					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);">Why take a Holistic approach to seo?</h1>
-					<p class="fragment" style="display:inline-block;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;float:left;">As algorithms get more complex and intelligent, we won't be able to control or predict changes.</p>
-					<p class="fragment" style="display:inline-block;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;float:left;">It ultimately benefits the user.</p>
+					<p class="fragment" style="display:inline-block;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;float:left;">As search engine algorithms get more complex and intelligent, we won't be able to control or predict changes.</p>
+					<p class="fragment" style="display:inline-block;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;float:left;">It defines a set of best practices that ultimately benefits the user.</p>
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-the-Jungle.jpg">
