@@ -55,14 +55,33 @@
 				color: #fff;
 				text-shadow: 1px 1px 1px rgba(0,0,0,0.4)
 			}
+
 			.backgrounds .slide-background{
 				background-position: bottom center;
 			}
+
 			.reveal .controls {
 				bottom: 14px;
 			}
+
 			.navigate-down, .navigate-up {
 				display: none;
+			}
+
+			.fixed-footer {
+				font-size:16px;
+				position:fixed;
+				bottom:20px;
+				left:30px;
+				width:95%;
+				margin:0 auto;
+				z-index:1000;
+			}
+
+			@media print {
+		    .fixed-footer {
+		        display: none;
+		    }
 			}
 		</style>
 
@@ -82,7 +101,7 @@
 
 		<div class="reveal">
 			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="footer" style="font-size:16px;position:fixed;bottom:20px;left:30px;width:95%;margin:0 auto;z-index:1000;">
+			<div class="fixed-footer">
 				<div style="float:left;"><a href="http://jimbir.ch/presentations/holistic-seo/">Holistic SEO and Drupal</a> - <a href="http://www.twitter.com/thejimbirch" title="@thejimbirch">@thejimbirch</a></div>
 				<div style="float:right;"><a href="http://www.xenomedia.com" title="Xeno Media, Inc"><img src="img/xeno-media-logo.png" alt="Xeno Media, Inc" style="height:14px;width:auto;"></a></div>
 			</div>
@@ -96,22 +115,14 @@
 					<a href="http://www.xenomedia.com">Xeno Media, Inc.</a></p>
 				</section>
 
-				<!-- Roadmap
-				Gifs:
-					http://giphy.com/gifs/giftdelivery-3oEduPYHQCqxnwGeQw
-					http://giphy.com/gifs/cheezburger-workplace-fun-YhyAJUCpno53y
-					http://giphy.com/gifs/dog-shiba-inu-typing-mCRJDo24UvJMA
-					http://giphy.com/gifs/l2JHY1hsE8l9SWDba
-				-->
-
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Greece-by-the-steps.jpg">
-					<p class="fragment" style="display:inline-block;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;float:left;">Holistic SEO is a term used to describe development in which content, marketing, technical SEO, performance, security, user experience and user intent come together to create an ideal url on the internet, about a certain topic.</p>
+					<p class="fragment" style="display:inline-block;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Holistic SEO is a term used to describe development in which content, marketing, technical SEO, performance, security, user experience and user intent come together to create an ideal url on the internet, about a certain topic.</p>
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-Xeno.jpg">
 					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);">Why take a Holistic approach to seo?</h1>
-					<p class="fragment" style="display:inline-block;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;float:left;">As search engine algorithms get more complex and intelligent, we won't be able to control or predict changes.</p>
-					<p class="fragment" style="display:inline-block;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;float:left;">It defines a set of best practices that ultimately benefits the user.</p>
+					<p class="fragment" style="background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">As search engine algorithms get more complex and intelligent, we won't be able to control or predict changes.</p>
+					<p class="fragment" style="background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">It defines a set of best practices that ultimately benefits the user.</p>
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-the-Jungle.jpg">
@@ -281,7 +292,7 @@
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-by-the-pool-at-dusk.jpg">
-					<p style="display:inline-block;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;float:left;">Search engine ranking factors are on- and off-site items that search engines use to evaluate a web property's placement in the search results for a certain query.</p>
+					<p style="display:inline-block;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Search engine ranking factors are on- and off-site items that search engines use to evaluate a web property's placement in the search results for a certain query.</p>
 				</section>
 
 				<section>
