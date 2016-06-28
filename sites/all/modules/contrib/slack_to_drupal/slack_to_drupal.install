@@ -1,0 +1,152 @@
+<?php
+
+/**
+ * @file
+ * Install file for the slack_to_drupal module.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function slack_to_drupal_schema() {
+  $schema = array();
+
+  $schema['slack_to_drupal'] = array(
+    'description' => 'Table for storing properties of files imported from slack.',
+    'fields' => array(
+      'fid' => array(
+        'description' => 'Slack file id.',
+        'type' => 'varchar',
+        'length' => '255',
+        'not null' => TRUE,
+      ),
+      'name' => array(
+        'description' => 'File name.',
+        'type' => 'text',
+        'not null' => TRUE,
+      ),
+    ),
+    'primary key' => array('fid'),
+  );
+
+  return $schema;
+}
+
+/**
+ * Implements hook_install()
+ */
+function slack_to_drupal_install() {
+  // Create the file type
+  $type = new stdClass();
+  $type->type = 'slack_image';
+  $type->label = 'Slack Image';
+  $s = file_type_save($type);
+
+  // Create the fields.
+  if (!field_info_field('slack_image_approved')) {
+    $field = array(
+      'field_name' => 'slack_image_approved',
+      'type' => 'list_boolean',
+      'cardinality' => 1,
+      'settings' => array(
+        // Add the default values for the checkbox.
+        'allowed_values' => array(
+           0 => 0,
+           1 => 1,
+         ),
+      ),
+    );
+    field_create_field($field);
+
+    // Create the instance on the bundle.
+    $instance = array(
+      'field_name' => 'slack_image_approved',
+      'label' => st('Slack Image Approved'),
+      'entity_type' => 'file',
+      'bundle' => 'slack_image',
+      'required' => FALSE,
+      'widget' => array(
+        'type' => 'options_onoff',
+        'settings' => array('display_label' => 1),
+        'weight' => 8,
+      ),
+    );
+    field_create_instance($instance);
+  }
+
+  if (!field_info_field('slack_image_title_text')) {
+    $field = array(
+      'field_name' => 'slack_image_title_text',
+      'type' => 'text',
+    );
+    field_create_field($field);
+
+    // Create the instance on the bundle.
+    $instance = array(
+      'field_name' => 'slack_image_title_text',
+      'entity_type' => 'file',
+      'label' => 'Title Text',
+      'bundle' => 'slack_image',
+    );
+    field_create_instance($instance);
+
+    if (!field_info_field('slack_user')) {
+      $field = array(
+        'field_name' => 'slack_user',
+        'type' => 'text',
+      );
+      field_create_field($field);
+
+      // Create the instance on the bundle.
+      $instance = array(
+        'field_name' => 'slack_user',
+        'entity_type' => 'file',
+        'label' => 'Slack User',
+        'bundle' => 'slack_image',
+      );
+      field_create_instance($instance);
+    }
+
+
+    if (!field_info_field('slack_date_uploaded')) {
+      $field = array(
+        'field_name' => 'slack_date_uploaded',
+        'type' => 'datestamp',
+      );
+      field_create_field($field);
+
+      // Create the instance on the bundle.
+      $instance = array(
+        'field_name' => 'slack_date_uploaded',
+        'entity_type' => 'file',
+        'label' => 'Upload Date',
+        'bundle' => 'slack_image',
+      );
+      field_create_instance($instance);
+    }
+  }
+}
+
+/**
+* Implements hook_uninstall()
+*/
+function slack_to_drupal_uninstall() {
+  // Delete the database table.
+  db_drop_table('slack_to_drupal');
+
+  // Delete the variables.
+  variable_del('slack_to_drupal_token');
+  variable_del('slack_to_drupal_channel_id');
+  variable_deL('slack_to_drupal_folder_name');
+  variable_deL('slack_to_drupal_client_id');
+  variable_deL('slack_to_drupal_client_secret');
+
+  // Delete the file type.
+  file_type_delete('slack_image');
+
+  // Delete the fields.
+  field_delete_field('slack_image_approved');
+  field_delete_field('slack_image_title_text');
+  field_delete_field('slack_user');
+  field_delete_field('slack_date_uploaded');
+}

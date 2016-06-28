@@ -1,0 +1,245 @@
+<?php
+
+/**
+ * @file
+ * Module file for the slack_to_drupal module.
+ */
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function slack_to_drupal_ctools_plugin_directory($owner, $plugin_type) {
+  if ($owner == 'ctools' && $plugin_type == 'content_types') {
+    return 'plugins/' . $plugin_type;
+  }
+}
+
+/**
+ * Implements hook_menu().
+ */
+function slack_to_drupal_menu() {
+  $items['admin/config/services/slack_to_drupal'] = array(
+    'title' => 'Approve Slack Images',
+    'description' => 'Approve Slack Images.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('slack_to_drupal_approve'),
+    'access arguments' => array('administer site configuration'),
+    'file' => 'slack_to_drupal.admin.inc',
+  );
+
+  $items['admin/config/services/slack_to_drupal/approve'] = array(
+    'type' => MENU_DEFAULT_LOCAL_TASK,
+    'title' => 'Approve Slack Images',
+  );
+
+  $items['admin/config/services/slack_to_drupal/configuration'] = array(
+    'type' => MENU_LOCAL_TASK,
+    'title' => 'Slack to Drupal Configuration',
+    'description' => 'Configure Slack to Drupal.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('slack_to_drupal_admin_config'),
+    'access arguments' => array('administer site configuration'),
+    'file' => 'slack_to_drupal.admin.inc',
+  );
+
+  $items['admin/config/services/slack_to_drupal/token'] = array(
+    'type' => MENU_NORMAL_ITEM,
+    'title' => 'Slack to Drupal Token Configuration',
+    'description' => 'Configure Slack to Drupal Token.',
+    'page callback' => 'slack_to_drupal_admin_token_config',
+    'access arguments' => array('administer site configuration'),
+    'file' => 'slack_to_drupal.admin.inc',
+  );
+
+  $items['admin/config/services/slack_to_drupal/channel'] = array(
+    'type' => MENU_NORMAL_ITEM,
+    'title' => 'Slack Channel',
+    'description' => 'Configure Slack Channel.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('slack_to_drupal_admin_channel_config'),
+    'access arguments' => array('administer site configuration'),
+    'file' => 'slack_to_drupal.admin.inc',
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_cron().
+ */
+function slack_to_drupal_cron() {
+  slack_to_drupal_import_images();
+}
+
+/**
+ * Implements hook_field_formatter_info().
+ */
+function slack_to_drupal_field_formatter_info() {
+  return array(
+    'slack_image_display' => array( // Machine name of the formatter
+      'label' => t('Slack Image Display'),
+      'field types' => array('file'),
+      'settings'  => array( // Array of the settings we'll create
+        'image_style' => 'medium', // Give a default value for when the form is first loaded
+      ),
+    ),
+  );
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function slack_to_drupal_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $element = array();
+  $settings = $display['settings'];
+  $element[0]['#markup'] = theme('image_style', array('style_name' => $settings['image_style'], 'path' => $entity->uri));
+  return $element;
+}
+
+/**
+ * Implements hook_field_formatter_settings_form().
+ */
+function slack_to_drupal_field_formatter_settings_form($field, $instance, $view_mode, $form, &$form_state) {
+  // This gets the view_mode where our settings are stored.
+  $display = $instance['display'][$view_mode];
+  // This gets the actual settings.
+  $settings = $display['settings'];
+  // Initialize the element variable.
+  $element = array();
+  // Add your select box.
+  $element['image_style'] = array(
+    '#type'           => 'select',
+    '#title'          => t('Image Style'),
+    '#description'    => t('Select the image style to render the image'), // Helper text
+    '#default_value'  => $settings['image_style'],
+    '#options'        => image_style_options(FALSE),
+  );
+
+  return $element;
+}
+
+/**
+ * Implements hook_field_formatter_settings_summary().
+ */
+function slack_to_drupal_field_formatter_settings_summary($field, $instance, $view_mode) {
+  $display = $instance['display'][$view_mode];
+  $settings = $display['settings'];
+  $summary = t('Format the Slack Image using @style image style', array(
+    '@style'     => $settings['image_style'],
+  ));
+  return $summary;
+}
+
+/**
+ * Function to import images from slack
+ */
+function slack_to_drupal_import_images() {
+  // Get variables entered into admin form.
+  $token = variable_get('slack_to_drupal_token');
+  $channel = variable_get('slack_to_drupal_channel_id');
+  $folder_name = variable_get('slack_to_drupal_folder_name');
+
+  // Get all the files uploaded into the channel.
+  $url = 'https://slack.com/api/files.list?token=' . $token . '&channel=' . $channel . '&types=image';
+  $request = drupal_http_request($url);
+  $json_response = drupal_json_decode($request->data);
+
+  // Loop through the files.
+  foreach ($json_response['files'] as $f) {
+    // First check if this image is already imported
+    $result = db_select('slack_to_drupal', 'si')
+      ->fields('si')
+      ->condition('fid', $f['id'], '=')
+      ->execute()
+      ->rowCount();
+
+    // If image is not imported already, get it!
+    if (!$result) {
+      // Grab image from slack and save to local file system.
+      $slack_image = drupal_http_request($f['url_private'], array('headers' => array('Authorization' => 'Bearer ' . $token)));
+      if (!is_dir('public://' . $folder_name)) {
+        // Directory does not exist, so lets create it.
+        mkdir('public://' . $folder_name, 0755);
+      }
+
+      // Save the file - handle the same file name possibilities.
+      if (!file_exists('public://' . $folder_name . '/' . $f['name'])) {
+        $save = file_put_contents('public://' . $folder_name . '/' . $f['name'], $slack_image->data);
+      }
+      else {
+        for ($i = 0; $i < 10; $i++) {
+          $name_parts = explode('.', $f['name']);
+          $f['name'] = $name_parts[0] . '_' . $i . '.' . $name_parts[1];
+          if (!file_exists('public://' . $folder_name . '/' . $f['name'])) {
+            $save = file_put_contents('public://' . $folder_name . '/' . $f['name'], $slack_image->data);
+            break;
+          }
+        }
+      }
+
+      // Create file entity.
+      $uri = 'public://' . $folder_name . '/' . $f['name'];
+      $image = new stdClass;
+      $image->uid = 1;
+      $image->filename = $f['title'];
+      $image->timestamp = $f['timestamp'];
+      $image->uri = $uri;
+      $image->filesize = filesize($uri);
+      $image->status = 1;
+      $image->type = 'slack_image';
+
+      // Get the caption text.
+      $comment = '';
+      if (!empty($f['initial_comment'])) {
+        foreach ($f['initial_comment'] as $key => $value) {
+          if ($key == 'comment') {
+            $comment = $value;
+          }
+        }
+      }
+      $image->slack_image_approved = array('und' => array(0 => array('value' => 0)));
+      $image->slack_image_title_text = array('und' => array(0 => array('value' => $comment)));
+
+      //Get the slack user.
+      $url = 'https://slack.com/api/users.info?token=' . $token . '&user=' . $f['user'];
+      $request = drupal_http_request($url);
+      $json_response = drupal_json_decode($request->data);
+      $image->slack_user = array('und' => array(0 => array('value' => $json_response['user']['real_name'])));
+
+      // Populate date uploaded field.
+      $image->slack_date_uploaded = array('und' => array(0 => array('value' => $f['timestamp'])));
+
+      // Save the image file.
+      $fs = file_save($image);
+
+      // Grab the slack file id to save to our custom table in order to not try
+      // to import the same image.
+      $nid = db_insert('slack_to_drupal')
+        ->fields(array(
+          'fid' => $f['id'],
+          'name' => $f['name'],
+        ))
+        ->execute();
+    }
+  }
+}
+
+/**
+ * Get all channels from your Slack account.
+ *
+ * @return array   Array of channel id as key and channel name as value.
+ */
+function slack_to_drupal_get_channels() {
+  $channels = array();
+  $result = drupal_http_request('https://slack.com/api/channels.list?token=' . variable_get('slack_to_drupal_token'));
+  if ($result->code == 200) {
+    $data = json_decode($result->data);
+    if ($data->ok == TRUE) {
+      foreach ($data->channels as $channel) {
+        $channels[$channel->id] = '#' . $channel->name;
+      }
+    }
+  }
+
+  return $channels;
+}

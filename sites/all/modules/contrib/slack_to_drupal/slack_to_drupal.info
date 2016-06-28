@@ -1,0 +1,18 @@
+name = Slack to Drupal
+description = This module integrates images posted to a Slack channel into Drupal.
+version = "7.x-1.0"
+core = "7.x"
+dependencies[] = file_entity
+dependencies[] = date
+dependencies[] = system
+dependencies[] = ctools
+dependencies[] = field
+
+configure = admin/config/services/slack_to_drupal/configuration
+
+; Information added by Drupal.org packaging script on 2016-06-27
+version = "7.x-1.0"
+core = "7.x"
+project = "slack_to_drupal"
+datestamp = "1467053340"
+

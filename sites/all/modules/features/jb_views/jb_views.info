@@ -1,6 +1,7 @@
 name = jb Views
 core = 7.x
 package = CTools
+dependencies[] = media
 dependencies[] = redirect
 dependencies[] = taxonomy
 dependencies[] = twitter
@@ -15,6 +16,7 @@ features[views_view][] = ddddd
 features[views_view][] = drupal_planet
 features[views_view][] = frontpage
 features[views_view][] = glossary
+features[views_view][] = media_default
 features[views_view][] = redirects
 features[views_view][] = taxonomy_term
 features[views_view][] = toc

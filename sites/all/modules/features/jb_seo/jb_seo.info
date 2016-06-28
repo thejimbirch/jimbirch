@@ -25,6 +25,7 @@ features[metatag][] = taxonomy_term:drupal_projects
 features[metatag][] = user
 features[variable][] = pathauto_blog_pattern
 features[variable][] = pathauto_case
+features[variable][] = pathauto_file_pattern
 features[variable][] = pathauto_forum_pattern
 features[variable][] = pathauto_ignore_words
 features[variable][] = pathauto_max_component_length

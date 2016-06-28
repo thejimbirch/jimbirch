@@ -1,0 +1,21 @@
+/* Approval screen Layout */
+#slack-to-drupal-approve .fieldset-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+#slack-to-drupal-approve .fieldset-wrapper .form-wrapper {
+  width: 30%;
+}
+
+#slack-to-drupal-approve .fieldset-wrapper .form-wrapper img {
+  max-width: 100%;
+  height: auto;
+}
+
+#slack-to-drupal-approve .form-type-textfield input {
+  margin: 20px auto;
+  max-width: 100%;
+  width: 100%;
+}

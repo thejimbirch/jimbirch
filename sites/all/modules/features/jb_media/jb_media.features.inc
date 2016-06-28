@@ -8,6 +8,12 @@
  * Implements hook_ctools_plugin_api().
  */
 function jb_media_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "file_entity" && $api == "file_default_displays") {
+    return array("version" => "1");
+  }
+  if ($module == "file_entity" && $api == "file_type") {
+    return array("version" => "1");
+  }
   if ($module == "linkit" && $api == "linkit_profiles") {
     return array("version" => "1");
   }
@@ -129,6 +135,21 @@ function jb_media_image_default_styles() {
       ),
     ),
     'label' => 'linkit_thumb',
+  );
+
+  // Exported image style: media_thumbnail.
+  $styles['media_thumbnail'] = array(
+    'label' => 'Media thumbnail (100x100)',
+    'effects' => array(
+      0 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 100,
+          'height' => 100,
+        ),
+        'weight' => 0,
+      ),
+    ),
   );
 
   // Exported image style: medium.
