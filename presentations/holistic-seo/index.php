@@ -69,13 +69,16 @@
 			}
 
 			.fixed-footer {
-				font-size:16px;
 				position:fixed;
 				bottom:20px;
 				left:30px;
 				width:95%;
 				margin:0 auto;
 				z-index:1000;
+			}
+
+			.fixed-footer > div > a {
+				font-size: 16px;
 			}
 
 			@media print {
