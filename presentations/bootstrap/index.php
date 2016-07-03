@@ -86,6 +86,17 @@
 		        display: none;
 		    }
 			}
+
+			.grid-item {
+				float: left;
+				width: 25%
+			}
+
+			.reveal section .grid-item img {
+				margin: 0;
+			}
+
+
 		</style>
 
 		<script>
@@ -126,22 +137,87 @@
     			<p>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.</p>
 				</section>
 
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-and-the-White-Moog.jpg">
+					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:65%;">Who uses Bootstrap?</h1>
+				</section>
 
-<!--
-    What makes up the Bootstrap framework.
-			The Bootstrap framework includes a responsive grid system; a large amount of theme-able HTML and CSS content elements, a very readable Typography base, and a number of Javascript components that add additional functionality.
+				<section>
+					<div class="grid-item"><img src="img/examples/apple.png" alt="Apple"><br><small>Apple</small></div>
+					<div class="grid-item"><img src="img/examples/fifa.png" alt="FIFA"><br><small>FIFA</small></div>
+					<div class="grid-item"><img src="img/examples/hbo.png" alt="HBO"><br><small>HBO</small></div>
+					<div class="grid-item"><img src="img/examples/ing.png" alt="Ing"><br><small>Ing</small></div>
+					<div class="grid-item"><img src="img/examples/instacart.png" alt="Instacart"><br><small>Instacart</small></div>
+					<div class="grid-item"><img src="img/examples/lyft.png" alt="Lyft"><br><small>Lyft</small></div>
+					<div class="grid-item"><img src="img/examples/microsoft.png" alt="Microsoft"><br><small>Microsoft</small></div>
+					<div class="grid-item"><img src="img/examples/nasa.png" alt="NASA"><br><small>NASA</small></div>
+					<div class="grid-item"><img src="img/examples/new-relic.png" alt="New Relic"><br><small>New Relic</small></div>
+					<div class="grid-item"><img src="img/examples/newsweek.png" alt="Newsweek"><br><small>Newsweek</small></div>
+					<div class="grid-item"><img src="img/examples/spotify.png" alt="Spotify"><br><small>Spotify</small></div>
+					<div class="grid-item"><img src="img/examples/vogue.png" alt="Vogue"><br><small>Vogue</small></div>
+				</section>
 
+				<section>
+					<p>And about 10 million more! <small><a href="http://trends.builtwith.com/docinfo/Twitter-Bootstrap">BuiltWith.com</a></small></p>
+					<a href="http://trends.builtwith.com/docinfo/Twitter-Bootstrap"><img src="img/bootstrap-usage-builtwith.png" alt="Usage statistics of Bootstrap"></a>
+				</section>
 
-    The advantages and disadvantages of using the Bootstrap framework.
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-plays-chess.jpg">
+					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:65%;">What makes up the Bootstrap framework?</h1>
+				</section>
 
-    Using the Bootstrap contributed theme as a base theme for your project.
-			The Bootstrap contributed Drupal theme is the second most popular on Drupal.org with over 100,000 installs from 650,000 downloads!
+				<section>
+					<p>The Bootstrap framework includes a responsive grid system; a large amount of theme-able HTML and CSS content elements, a very readable Typography base, and a number of Javascript components that add additional functionality.</p>
+				</section>
 
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-the-Car-Wash.jpg">
+					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:65%;">Pros &amp; Cons of using the Bootstrap framework</h1>
+				</section>
 
-    Compiling your own Bootstrap framework using Grunt.
-    Creating your own theme with the Bootstrap framework.
--->
+				<section>
+					<h2>Advantages:</h2>
+					<ul>
+			    	<li class="fragment">Standardization helps teams become more productive</li>
+			    	<li class="fragment">Onboarding new developers is quicker</li>
+			    	<li class="fragment">Completely customizable for large projects</li>
+			    	<li class="fragment">Best practices for small/low budget projects</li>
+			    	<li class="fragment">Styles the basic HTML elements oft forgotten about</li>
+			    	<li class="fragment">The Responsive Grid</li>
+			    	<li class="fragment">Open Source - MIT License</li>
+			    </ul>
+				</section>
 
+				<section>
+					<h2>Disadvantages:</h2>
+					<ul>
+			    	<li class="fragment">Bootstrap is large/bloated/heavy</li>
+			    	<li class="fragment">Bootstrap sites all look the same</li>
+			    	<li class="fragment">Upgrading is very difficult</li>
+			    	<li class="fragment">Can lead to non-semantic HTML</li>
+			    </ul>
+			  </section>
+
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-the-Turkish-Cafe.jpg">
+					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:80%;">Using the Bootstrap contrib theme as a base theme</h1>
+				</section>
+
+				<section>
+					<p>The Bootstrap contributed Drupal theme is the second most popular on Drupal.org with over 100,000 installs from 650,000 downloads!</p>
+				</section>
+
+				<section>
+					<p>Using the Bootstrap contributed theme as a base theme for your project.</p>
+				</section>
+
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Greece-by-the-cactus-by-the-sea.jpg">
+					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:65%;">Compiling your own Bootstrap</h1>
+				</section>
+
+				<section>
+					<p>Compiling your own Bootstrap framework using Grunt.</p>
+					<p>Javascript in Gruntfile.js</p>
+					<p>less files</p>
+					<p>The future is sass</p>
+				</section>
 
 				<section style="text-align: left;" data-background="img/Lego-Uncle-Jim-at-Sunset.jpg">
 					<h1 style="padding-left:20px;">THE END</h1>
