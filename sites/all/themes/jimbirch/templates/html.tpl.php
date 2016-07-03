@@ -23,6 +23,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-TileImage" content="/sites/all/themes/jimbirch/icons/mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    <meta name="google-site-verification" content="bROGQBpvmP5vKcy4Q1KKrIwy1Wu7fg7Y7kXg20MYr4E" />
       <?php print $styles; ?>
       <?php print $scripts; ?>
   </head>
