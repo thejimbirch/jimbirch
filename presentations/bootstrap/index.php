@@ -319,9 +319,10 @@
 			    	<li class="fragment">Customizable
 							<ul>
 					    	<li class="fragment">Completely customizable for large projects</li>
-					    	<li class="fragment">Best practices for small/low budget projects</li>
+					    	<li class="fragment">Mixins for adding existing styles to semantic html</li>
 					    </ul>
 					  </li>
+					  <li class="fragment">Best practices for small/low budget projects</li>
 			    	<li class="fragment">Open Source - MIT License</li>
 			    </ul>
 				</section>
