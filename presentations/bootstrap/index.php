@@ -89,6 +89,7 @@
 
 			.grid-item {
 				float: left;
+				min-height: 250px;
 				width: 25%
 			}
 
@@ -116,7 +117,7 @@
 		<div class="reveal">
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="fixed-footer">
-				<div style="float:left;"><a href="http://jimbir.ch/presentations/bootstrap/">Bootstrap Framework and Drupal</a> - <a href="http://www.twitter.com/thejimbirch" title="@thejimbirch">@thejimbirch</a></div>
+				<div style="float:left;"><a href="http://jimbir.ch/presentations/bootstrap/">Bootstrap Framework and Drupal</a> <a href="http://www.twitter.com/thejimbirch" title="@thejimbirch">@thejimbirch</a></div>
 				<div style="float:right;"><a href="http://www.xenomedia.com" title="Xeno Media, Inc"><img src="img/xeno-media-logo.png" alt="Xeno Media, Inc" style="height:14px;width:auto;"></a></div>
 			</div>
 			<div class="slides">
@@ -166,7 +167,123 @@
 				</section>
 
 				<section>
-					<p>The Bootstrap framework includes a responsive grid system; a large amount of theme-able HTML and CSS content elements, a very readable Typography base, and a number of Javascript components that add additional functionality.</p>
+					<h2>The Bootstrap framework includes:</h2>
+					<ul>
+						<li class="fragment">a responsive grid system</li>
+						<li class="fragment">a large amount of theme-able HTML and CSS content elements</li>
+						<li class="fragment">a very readable Typography base</li>
+						<li class="fragment">a number of Javascript components that add additional functionality</li>
+						<li class="fragment">and documentation about all of it!</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Responsive Grid System</h3>
+					<ul>
+						<li class="fragment">Container Fluid (full width), or Container (fixed width)</li>
+						<li class="fragment">Row</li>
+						<li class="fragment">Columns (12)</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Responsive Grid System</h3>
+<pre>
+	<code>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-8">Lorem ipsum...</div>
+		<div class="col-md-4">Sed ut perspiciatis...</div>
+	</div>
+</div>
+	</code>
+</pre>
+				</section>
+
+				<section>
+					<h3>Responsive Grid System</h3>
+					<img src="img/bootstrap-grid-example.png" alt="Bootstrap Grid Example">
+				</section>
+
+				<section>
+					<h3>Responsive Grid System</h3>
+					<ul>
+						<li class="fragment">Columns will wrap if more that 12</li>
+						<li class="fragment">Columns can be set per responsive screen size</li>
+						<li class="fragment">Columns can be offset</li>
+						<li class="fragment">Columns can be ordered</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Content Elements</h3>
+					<p>Over a dozen reusable components built to provide iconography, dropdowns, input groups, navigation, alerts, and much more.</p>
+				</section>
+
+				<section>
+					<div class="grid-item"><img src="img/content-elements/Dropdowns.png" alt="Dropdowns"><br><small>Dropdowns</small></div>
+					<div class="grid-item"><img src="img/content-elements/Buttons-Button-Groups.png" alt="Buttons"><br><small>Buttons</small></div>
+					<div class="grid-item"><img src="img/content-elements/inputs.png" alt="Inputs"><br><small>Inputs</small></div>
+					<div class="grid-item"><img src="img/content-elements/Navs.png" alt="Navs"><br><small>Navs</small><br><img src="img/content-elements/Navbar.png" alt="Navbars"><br><small>Navbars</small></div>
+					<div class="grid-item"><img src="img/content-elements/Breadcrumbs.png" alt="Breadcrumbs"><br><small>Breadcrumbs</small><br><img src="img/content-elements/Pagination.png" alt="Pagination"><br><small>Pagination</small></div>
+					<div class="grid-item"><img src="img/content-elements/Jumbotron.png" alt="Jumbotron"><br><small>Jumbotron</small></div>
+					<div class="grid-item"><img src="img/content-elements/Thumbnails.png" alt="Thumbnails"><br><small>Thumbnails</small></div>
+					<div class="grid-item"><img src="img/content-elements/Alerts-variations.png" alt="Alert variations"><br><small>Alerts</small></div>
+					<div class="grid-item"><img src="img/content-elements/Progress-bar-variations.png" alt="Progress Bars"><br><small>Progress Bars</small></div>
+					<div class="grid-item"><img src="img/content-elements/List-groups.png" alt="List Groups"><br><small>List Groups</small></div>
+					<div class="grid-item"><img src="img/content-elements/Panels.png" alt="Panels"><br><small>Panels</small></div>
+					<div class="grid-item"><img src="img/content-elements/Wells.png" alt="Wells"><br><small>Wells</small></div>
+				</section>
+
+				<section>
+					<h3>Cards, coming in Bootstrap 4</h3>
+					<p>Replaces wells, thumbnails, and panels</p>
+					<img src="img/content-elements/Cards.png" alt="Cards" style="width: 450px; height: auto;">
+				</section>
+
+				<section>
+					<h3>Typography base</h3>
+					<h4>Headers</h4>
+					<img src="img/content-elements/Headers.png" alt="Headers">
+				</section>
+
+				<section>
+					<h3>Typography base</h3>
+					<h4>Blockquotes</h4>
+					<img src="img/content-elements/Blockquotes.png" alt="Blockquotes">
+					<h4>Tables</h4>
+					<img src="img/content-elements/Table.png" alt="Tables">
+				</section>
+
+				<section>
+					<h3>Typography base</h3>
+					<h4>Forms</h4>
+					<img src="img/content-elements/Forms.png" alt="Forms">
+				</section>
+
+				<section>
+					<h3>Javascripts</h3>
+					<p>Bring Bootstrap's components to life with jQuery plugins. Easily include them all, or one by one.</p>
+				</section>
+
+				<section>
+					<div class="grid-item"><img src="img/javascripts/Modal.png" alt="Modal"><br><small>Modal</small></div>
+					<div class="grid-item"><img src="img/javascripts/Dropdown.png" alt="Dropdown"><br><small>Dropdown</small></div>
+					<div class="grid-item"><img src="img/javascripts/Scrollspy.png" alt="Scrollspy"><br><small>Scrollspy</small></div>
+					<div class="grid-item"><img src="img/javascripts/Tabs.png" alt="Tabs"><br><small>Tabs</small></div>
+					<div class="grid-item"><img src="img/javascripts/Tooltip.png" alt="Tooltip"><br><small>Tooltip</small></div>
+					<div class="grid-item"><img src="img/javascripts/Popover.png" alt="Popover"><br><small>Popover</small></div>
+					<div class="grid-item"><img src="img/javascripts/Collapsible-Alerts.png" alt="Alerts"><br><small>Collapsible Alerts</small></div>
+					<div class="grid-item"><img src="img/javascripts/Button-states.png" alt="Button states"><br><small>Button states</small></div>
+					<div class="grid-item"><img src="img/javascripts/Collapsible-accordions.png" alt="Collapsible/Accordions"><br><small>Collapsible/Accordions</small></div>
+					<div class="grid-item"><img src="img/javascripts/Carousel.png" alt="Carousel"><br><small>Carousel</small></div>
+					<div class="grid-item"><img src="img/javascripts/Affix.png" alt="Affix"><br><small>Affix</small></div>
+				</section>
+
+				<section>
+					<h3>Documentation</h3>
+					<p>Every feature of Bootstrap is documented.  This documentation is always available online, and can be easily set up in local, development, and staging environments.</p>
+					<img src="img/Bootstrap-Documentation.jpg" alt="Bootstrap Documentation">
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-the-Car-Wash.jpg">
@@ -176,12 +293,18 @@
 				<section>
 					<h2>Advantages:</h2>
 					<ul>
-			    	<li class="fragment">Standardization helps teams become more productive</li>
-			    	<li class="fragment">Onboarding new developers is quicker</li>
-			    	<li class="fragment">Completely customizable for large projects</li>
-			    	<li class="fragment">Best practices for small/low budget projects</li>
-			    	<li class="fragment">Styles the basic HTML elements oft forgotten about</li>
-			    	<li class="fragment">The Responsive Grid</li>
+						<li class="fragment">Documentation
+							<ul>
+				    		<li class="fragment">Standardization helps teams become more productive</li>
+				    		<li class="fragment">Onboarding new developers is quicker</li>
+				    	</ul>
+				    </li>
+			    	<li class="fragment">Customizable
+							<ul>
+					    	<li class="fragment">Completely customizable for large projects</li>
+					    	<li class="fragment">Best practices for small/low budget projects</li>
+					    </ul>
+					  </li>
 			    	<li class="fragment">Open Source - MIT License</li>
 			    </ul>
 				</section>
@@ -201,11 +324,39 @@
 				</section>
 
 				<section>
-					<p>The Bootstrap contributed Drupal theme is the second most popular on Drupal.org with over 100,000 installs from 650,000 downloads!</p>
+					<p style="text-align: left;">The Bootstrap contributed Drupal theme is the second most popular on Drupal.org with over 110,000 installs almost 700,000 downloads!</p>
+					<img src="img/bootstrap-theme.jpg" alt="Bootstrap Drupal Theme">
+				</section>
+
+				<section>
+					<a href="https://www.ostraining.com/blog/coding/bootstrap-winning/"><img src="img/OSTraining.png" alt="OS Training" style="padding: 20px;"></a>
+					<ul>
+						<li>Joomla uses Bootstrap in core.</li>
+						<li>WordPress has 221 Bootstrap-based themes, 11% of all their themes.</li>
+						<li>Themeforest lists 19,645 designs and an incredible 34% of those refer to using Bootstrap</li>
+					</ul>
+					<p><small><a href="https://www.ostraining.com/blog/coding/bootstrap-winning/">Love it or Hate it, Bootstrap is Winning the Web - August 12, 2015</a></small></p>
 				</section>
 
 				<section>
 					<p>Using the Bootstrap contributed theme as a base theme for your project.</p>
+				</section>
+
+				<section>
+					<h3>Drupal Modules</h3>
+					<p>As of the writing of this presentation, there were 332 modules that contain "Bootstrap" in their name.</p>
+				</section>
+
+				<section>
+					<h3>Drupal Modules</h3>
+					<h4><a href="https://www.drupal.org/project/views_bootstrap">Views Bootstrap</a></h4>
+					<a href="https://www.drupal.org/project/views_bootstrap"><img src="img/drupal-module-views-bootstrap.jpg" alt="Views Bootstrap"></a>
+				</section>
+
+				<section>
+					<h3>Drupal Modules</h3>
+					<h4><a href="https://www.drupal.org/project/bootstrap_layouts">Bootstrap Layouts</a></h4>
+					<a href="https://www.drupal.org/project/bootstrap_layouts"><img src="img/drupal-module-bootstrap-layouts.jpg" alt="Bootstrap Layouts"></a>
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Greece-by-the-cactus-by-the-sea.jpg">
