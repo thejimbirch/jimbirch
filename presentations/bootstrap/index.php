@@ -138,6 +138,23 @@
     			<p>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.</p>
 				</section>
 
+				<section>
+					<h2>Similar Projects</h2>
+					<ul>
+						<li><a href="http://foundation.zurb.com/">Foundation</a></li>
+						<li><a href="http://purecss.io/">Pure CSS</a></li>
+					</ul>
+					<h3>Predecessors</h3>
+					<ul>
+						<li><a href="http://960.gs/">960 Grids</a></li>
+						<li><a href="https://en.wikipedia.org/wiki/YUI_Library#CSS_resources">YUI Grids</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<p>Originally developed at Twitter to document and share common design patterns and assets within the company.</p>
+				</section>
+
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-and-the-White-Moog.jpg">
 					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:65%;">Who uses Bootstrap?</h1>
 				</section>
@@ -314,6 +331,7 @@
 					<ul>
 			    	<li class="fragment">Bootstrap is large/bloated/heavy</li>
 			    	<li class="fragment">Bootstrap sites all look the same</li>
+			    	<li class="fragment">Javascript not robust enough</li>
 			    	<li class="fragment">Upgrading is very difficult</li>
 			    	<li class="fragment">Can lead to non-semantic HTML</li>
 			    </ul>
@@ -345,6 +363,7 @@
 				<section>
 					<h3>Drupal Modules</h3>
 					<p>As of the writing of this presentation, there were 332 modules that contain "Bootstrap" in their name.</p>
+					<p><a href="https://www.drupal.org/search/site/bootstrap?f[0]=ss_meta_type%3Amodule">Drupal.org Bootstrap Modules</a></p>
 				</section>
 
 				<section>
