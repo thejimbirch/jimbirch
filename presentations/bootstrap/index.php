@@ -56,7 +56,7 @@
 				text-shadow: 1px 1px 1px rgba(0,0,0,0.4)
 			}
 
-			.backgrounds .slide-background{
+			.backgrounds .slide-background {
 				background-position: bottom center;
 			}
 
@@ -152,7 +152,7 @@
 				</section>
 
 				<section>
-					<p>Originally developed at Twitter to document and share common design patterns and assets within the company.</p>
+					<p>Originally developed at Twitter by <a href="https://twitter.com/mdo">@mdo</a> and <a href="https://twitter.com/fat">@fat</a> to document and share common design patterns and assets within the company.</p>
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-and-the-White-Moog.jpg">
@@ -177,6 +177,21 @@
 				<section>
 					<p>And about 10 million more! <small><a href="http://trends.builtwith.com/docinfo/Twitter-Bootstrap">BuiltWith.com</a></small></p>
 					<a href="http://trends.builtwith.com/docinfo/Twitter-Bootstrap"><img src="img/bootstrap-usage-builtwith.png" alt="Usage statistics of Bootstrap"></a>
+				</section>
+
+				<section>
+					<p style="text-align: left;">The Bootstrap contributed Drupal theme is the second most popular theme on Drupal.org with over 110,000 installs almost 700,000 downloads!</p>
+					<img src="img/bootstrap-theme.jpg" alt="Bootstrap Drupal Theme">
+				</section>
+
+				<section>
+					<a href="https://www.ostraining.com/blog/coding/bootstrap-winning/"><img src="img/OSTraining.png" alt="OS Training" style="padding: 20px;"></a>
+					<ul>
+						<li>Joomla uses Bootstrap in core.</li>
+						<li>WordPress has 221 Bootstrap-based themes, 11% of all their themes.</li>
+						<li>Themeforest lists 19,645 designs and an incredible 34% of those refer to using Bootstrap</li>
+					</ul>
+					<p><small><a href="https://www.ostraining.com/blog/coding/bootstrap-winning/">Love it or Hate it, Bootstrap is Winning the Web - August 12, 2015</a></small></p>
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-plays-chess.jpg">
@@ -332,6 +347,7 @@
 					<ul>
 			    	<li class="fragment">Bootstrap is large/bloated/heavy</li>
 			    	<li class="fragment">Bootstrap sites all look the same</li>
+			    	<li class="fragment">Decisions are made for you</li>
 			    	<li class="fragment">Javascript not robust enough</li>
 			    	<li class="fragment">Upgrading is very difficult</li>
 			    	<li class="fragment">Can lead to non-semantic HTML</li>
@@ -339,44 +355,109 @@
 			  </section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-the-Turkish-Cafe.jpg">
-					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:80%;">Using the Bootstrap contrib theme as a base theme</h1>
+					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:80%;">Using the <a href="https://www.drupal.org/project/bootstrap">Bootstrap Drupal theme</a></h1>
 				</section>
 
 				<section>
-					<p style="text-align: left;">The Bootstrap contributed Drupal theme is the second most popular on Drupal.org with over 110,000 installs almost 700,000 downloads!</p>
-					<img src="img/bootstrap-theme.jpg" alt="Bootstrap Drupal Theme">
-				</section>
-
-				<section>
-					<a href="https://www.ostraining.com/blog/coding/bootstrap-winning/"><img src="img/OSTraining.png" alt="OS Training" style="padding: 20px;"></a>
+					<h3><a href="https://www.drupal.org/project/bootstrap">Bootstrap Drupal theme</a></h3>
 					<ul>
-						<li>Joomla uses Bootstrap in core.</li>
-						<li>WordPress has 221 Bootstrap-based themes, 11% of all their themes.</li>
-						<li>Themeforest lists 19,645 designs and an incredible 34% of those refer to using Bootstrap</li>
+						<li class="fragment">Very mature for Drupal 7</li>
+						<li class="fragment">Release candidate for Drupal 8</li>
+						<li class="fragment">Comes with Subtheme right out of the box.</li>
+						<li class="fragment">Great documentation at <a href="http://drupal-bootstrap.org/api/bootstrap">drupal-bootstrap.org</a></li>
 					</ul>
-					<p><small><a href="https://www.ostraining.com/blog/coding/bootstrap-winning/">Love it or Hate it, Bootstrap is Winning the Web - August 12, 2015</a></small></p>
 				</section>
 
 				<section>
-					<p>Using the Bootstrap contributed theme as a base theme for your project.</p>
+					<h3>Two Options to creating a subtheme</h3>
+					<ul>
+						<li class="fragment">Loading Bootstrap Framework from a Content Delivery Network (CDN)</li>
+						<li class="fragment">Compiling your own using a local <a href="http://lesscss.org/usage/index.html#third-party-compilers">LESS preprocessor</a></li>
+					</ul>
 				</section>
 
 				<section>
-					<h3>Drupal Modules</h3>
-					<p>As of the writing of this presentation, there were 332 modules that contain "Bootstrap" in their name.</p>
-					<p><a href="https://www.drupal.org/search/site/bootstrap?f[0]=ss_meta_type%3Amodule">Drupal.org Bootstrap Modules</a></p>
+					<h3>Creating a subtheme - CDN (D7)</h3>
+					<ul>
+						<li class="fragment">Download the Bootstrap theme as you normally would.</li>
+						<li class="fragment">In the theme, copy the <code>starterkits/cdn/</code> folder to <code>/sites/all/themes/</code></li>
+						<li class="fragment">Rename the folder to your new theme name</li>
+						<li class="fragment">Rename <code>starterkit.cdn</code> to <code>YOURNEWTHEMENAME.info</code></li>
+						<li class="fragment">Edit the .info file.</li>
+						<li class="fragment">Activate and Set Default your new theme!</li>
+					</ul>
 				</section>
 
 				<section>
-					<h3>Drupal Modules</h3>
-					<h4><a href="https://www.drupal.org/project/views_bootstrap">Views Bootstrap</a></h4>
-					<a href="https://www.drupal.org/project/views_bootstrap"><img src="img/drupal-module-views-bootstrap.jpg" alt="Views Bootstrap"></a>
+					<h3>Creating a subtheme - CDN (D7)</h3>
+					<img src="img/cdn-starterkit-d7.png" alt="Creating a subtheme - CDN (D7)">
 				</section>
 
 				<section>
-					<h3>Drupal Modules</h3>
-					<h4><a href="https://www.drupal.org/project/bootstrap_layouts">Bootstrap Layouts</a></h4>
-					<a href="https://www.drupal.org/project/bootstrap_layouts"><img src="img/drupal-module-bootstrap-layouts.jpg" alt="Bootstrap Layouts"></a>
+					<h3>Creating a subtheme - CDN (D8)</h3>
+					<ul>
+						<li class="fragment">Download the Bootstrap theme as you normally would.</li>
+						<li class="fragment">In the theme, copy the <code>starterkits/cdn/</code> folder to <code>/themes/custom/</code></li>
+						<li class="fragment">Rename the folder to your new theme name</li>
+						<li class="fragment">Rename 5 files >>></li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Creating a subtheme - CDN (D8)</h3>
+					<ul>
+						<li class="fragment">Rename <code>THEMENAME.theme</code> to <code>YOURNEWTHEMENAME.theme</code></li>
+						<li class="fragment">Rename <code>THEMENAME.starterkit.yml</code> to <code>YOURNEWTHEMENAME.info.yml</code></li>
+						<li class="fragment">Rename <code>THEMENAME.libraries.yml</code> to <code>YOURNEWTHEMENAME.libraries.yml</code></li>
+						<li class="fragment">Rename <code>config/install/THEMENAME.settings.yml</code> to <code>config/install/YOURNEWTHEMENAME.settings.yml</code></li>
+						<li class="fragment">Rename <code>config/schema/THEMENAME.schema.yml</code> to <code>config/schema/YOURNEWTHEMENAME.schema.yml</code></li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Creating a subtheme - CDN (D8)</h3>
+					<img src="img/cdn-starterkit-d8.png" alt="Creating a subtheme - CDN (D8)">
+				</section>
+
+				<section>
+					<h3>Creating a subtheme - CDN (D8)</h3>
+					<ul>
+						<li class="fragment">Edit YOURNEWTHEMENAME.info.yml</li>
+						<li class="fragment">Edit config/schema/YOURNEWTHEMENAME.schema.yml and rename - THEMENAME.settings: and "THEMETITLE settings"</li>
+						<li class="fragment">Activate and Set Default your new theme!</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Creating a subtheme - CDN versions</h3>
+					<ul>
+						<li class="fragment">/css/style.css to add your custom style overrides</li>
+						<li class="fragment">Grab what you need to override from the parent theme/modules/core and add to your new theme.</li>
+						<li class="fragment">Don't forget to add your own logo.png, screenshot.png, and favicon.ico</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Creating a subtheme - LESS versions</h3>
+					<ul>
+						<li class="fragment"></li>
+						<li class="fragment"></li>
+						<li class="fragment"></li>
+					</ul>
+				</section>
+
+				<section>
+					<h3><a href="https://www.drupal.org/project/radix">Radix Theme</a></h3>
+					<p>Radix is another base theme for Drupal. It has Bootstrap, Sass, Gulp, BrowserSync and Font Awesome built-in.</p>
+					<ul>
+						<li>Used in a lot of distributions</li>
+						<li>Has various Panels/Views/etc contrib modules</li>
+						<li>Alpha release for Drupal 8</li>
+					</ul>
+				</section>
+
+				<section>
+					<p>There are currently <a href="https://www.drupal.org/project/project_theme?&text=bootstrap">171 themes</a> with the word Bootstrap in them on Drupal.org</p>
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Greece-by-the-cactus-by-the-sea.jpg">
@@ -388,6 +469,36 @@
 					<p>Javascript in Gruntfile.js</p>
 					<p>less files</p>
 					<p>The future is sass</p>
+				</section>
+
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Greece-by-the-cactus-by-the-road.jpg">
+					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:65%;">Bootstrap Drupal Modules</h1>
+				</section>
+
+				<section>
+					<h3><a href="https://www.drupal.org/project/jquery_update">jQuery Update</a></h3>
+					<p>Required for Drupal 7 to bring jQuery up to modern times.  Not needed for Drupal 8</p>
+					<a href="https://www.drupal.org/project/jquery_update"><img src="img/jQuery-Update.jpg" alt="jQuery Update"></a>
+				</section>
+
+				<section>
+					<h3>Drupal Modules</h3>
+					<p>As of the writing of this presentation, there were 332 modules that contain "Bootstrap" in their name.</p>
+					<p><a href="https://www.drupal.org/search/site/bootstrap?f[0]=ss_meta_type%3Amodule">Drupal.org Bootstrap Modules</a></p>
+				</section>
+
+				<section>
+					<h3>Drupal Modules</h3>
+					<h4><a href="https://www.drupal.org/project/views_bootstrap">Views Bootstrap</a></h4>
+					<p>No release yet for D8</p>
+					<a href="https://www.drupal.org/project/views_bootstrap"><img src="img/drupal-module-views-bootstrap.jpg" alt="Views Bootstrap"></a>
+				</section>
+
+				<section>
+					<h3>Drupal Modules</h3>
+					<h4><a href="https://www.drupal.org/project/bootstrap_layouts">Bootstrap Layouts</a></h4>
+					<p>This project is a combination of <a href="https://www.drupal.org/project/ds_bootstrap_layouts">Display Suite Bootstrap Layouts</a> and <a href="https://www.drupal.org/project/panels_bootstrap_layouts">Panels Bootstrap Layouts</a> for Drupal 8.</p>
+					<a href="https://www.drupal.org/project/bootstrap_layouts"><img src="img/drupal-module-bootstrap-layouts.jpg" alt="Bootstrap Layouts"></a>
 				</section>
 
 				<section style="text-align: left;" data-background="img/Lego-Uncle-Jim-at-Sunset.jpg">
