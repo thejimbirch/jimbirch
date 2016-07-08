@@ -520,6 +520,15 @@
 				</section>
 
 				<section>
+					<h3>Creating your own theme</h3>
+					<ul>
+						<li class="fragment">Create an empty theme</li>
+						<li class="fragment">Download the Bootstrap Framework source files</li>
+						<li class="fragment">Update <code>Gruntfile.js</code> to output your css file to <code>css/THEMENAME.css</code></li>
+						<li class="fragment">Update <code>Gruntfile.js</code> to output your js file to <code>js/THEMENAME.css</code></li>
+					</ul>
+
+				<section>
 					<p>Compiling your own Bootstrap framework using Grunt.</p>
 					<p>Javascript in Gruntfile.js</p>
 					<p>less files</p>
