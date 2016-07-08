@@ -97,6 +97,9 @@
 				margin: 0;
 			}
 
+			code {
+				color: #ffa837;
+			}
 
 		</style>
 
@@ -380,7 +383,7 @@
 					<h3>Creating a subtheme - CDN (D7)</h3>
 					<ul>
 						<li class="fragment">Download the Bootstrap theme as you normally would.</li>
-						<li class="fragment">In the theme, copy the <code>starterkits/cdn/</code> folder to <code>/sites/all/themes/</code></li>
+						<li class="fragment">In the theme, copy the <code>/starterkits/cdn/</code> folder to <code>/sites/all/themes/</code></li>
 						<li class="fragment">Rename the folder to your new theme name</li>
 						<li class="fragment">Rename <code>starterkit.cdn</code> to <code>YOURNEWTHEMENAME.info</code></li>
 						<li class="fragment">Edit the .info file.</li>
@@ -440,13 +443,31 @@
 				<section>
 					<h3>Creating a subtheme - LESS versions</h3>
 					<ul>
-						<li class="fragment"></li>
-						<li class="fragment"></li>
-						<li class="fragment"></li>
+						<li>Set up is the same, but with these additional steps:</li>
+						<li class="fragment">Download the <a href="https://github.com/twbs/bootstrap/releases">Bootstrap Framework Source Files</a> into the root of your new theme.  <code>/THEMENAME/bootstrap/</code></li>
+						<li class="fragment">You will need a <a href="https://www.google.com/#q=less+compiler">LESS compiler</a> - Grunt/Gulp</li>
+						<li class="fragment">After you make changes to the less files, you have to compile them into the <code>/THEMENAME/css/styles.css</code></li>
 					</ul>
 				</section>
 
 				<section>
+					<h3>Creating a subtheme - LESS versions</h3>
+					<ul>
+						<li><code>/THEMENAME/less/variable-overrides.less</code> - Allows you to override the variables provided by the Bootstrap Framework</li>
+						<li class="fragment"><code>/THEMENAME/less/bootstrap.less</code> - A copy of the Bootstrap Framework's file, with the addition of including variable-overrides.less</li>
+						<li class="fragment"><code>/THEMENAME/less/overrides.less</code> - Contains overrides to properly integrate Drupal with the Bootstrap Framework</li>
+						<li class="fragment"><code>/THEMENAME/less/style.less</code> - The glue that combines the bootstrap.less and overrides.less files together. Generally, you will not need to modify this file.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Creating a subtheme - LESS versions</h3>
+					<p style="text-align: left;">Once you have compiled, all of the mixing will be run, and the less files will be concatenated into one css file.</p>
+					<p><code>/THEMENAME/css/styles.css</code></p>
+				</section>
+
+				<section>
+					<h3>See Also:</h3>
 					<h3><a href="https://www.drupal.org/project/radix">Radix Theme</a></h3>
 					<p>Radix is another base theme for Drupal. It has Bootstrap, Sass, Gulp, BrowserSync and Font Awesome built-in.</p>
 					<ul>
@@ -454,14 +475,48 @@
 						<li>Has various Panels/Views/etc contrib modules</li>
 						<li>Alpha release for Drupal 8</li>
 					</ul>
-				</section>
-
-				<section>
-					<p>There are currently <a href="https://www.drupal.org/project/project_theme?&text=bootstrap">171 themes</a> with the word Bootstrap in them on Drupal.org</p>
+					<p>There are also currently <a href="https://www.drupal.org/project/project_theme?&text=bootstrap">171 themes</a> with the word Bootstrap in them on Drupal.org</p>
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Greece-by-the-cactus-by-the-sea.jpg">
-					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:65%;">Compiling your own Bootstrap</h1>
+					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:65%;">Compiling your own Theme using Bootstrap</h1>
+				</section>
+
+				<section>
+					<h2>Why build your own theme?</h2>
+					<ul>
+						<li class="fragment">For complete control of markup</li>
+						<li class="fragment">If your designer is "designing in the browser" and providing Bootstrap html/css</li>
+						<li class="fragment">If you are making Bootstrap html/css prototypes before moving to Drupal.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Drupal 7</h3>
+					<p>BADcamp 2015 session <a href="http://jimbir.ch/presentations/optimizing-drupal-7-html-markup">Optimizing Drupal 7 HTML Markup</a></p>
+					<p>The origin blog post: <a href="http://jimbir.ch/blog/using-fences-page-manager-optimize-html-markup-drupal-7">Using Fences and Page Manager to optimize HTML markup in Drupal 7</a></p>
+					<a href="http://jimbir.ch/presentations/optimizing-drupal-7-html-markup"><img src="img/presentation-optimizing-720.jpg" alt="Optimizing Drupal 7 HTML"></a>
+				</section>
+
+				<section>
+					<h3>Drupal 7</h3>
+					<ul>
+						<li class="fragment">Fences module to reset field markup</li>
+						<li class="fragment">Node/Page/Region/Block/etc templates to reset that markup</li>
+						<li class="fragment">Panels layouts to add semantic HTML</li>
+						<li class="fragment">Page Manager (ctools) to place content</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Drupal 8</h3>
+					<ul>
+						<li class="fragment"><a href="https://www.drupal.org/project/fences">Fences</a> has an Alpha release</li>
+						<li class="fragment">Twig templates give us ultra specificity</li>
+						<li class="fragment"><a href="https://www.drupal.org/project/layout_plugin">Layout plugin module</a> works and will eventually be moved to core.</li>
+						<li class="fragment"><a href="https://www.drupal.org/project/page_manager">Page Manager</a> is a stand alon module now, or</li>
+						<li class="fragment"><a href="https://www.drupal.org/project/panelizer">Panelizer</a> allows you to set defaults, and override on individual nodes.</li>
+					</ul>
 				</section>
 
 				<section>
