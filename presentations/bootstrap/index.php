@@ -612,6 +612,39 @@
 </pre>
 				</section>
 
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-the-Car-Wash.jpg">
+					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:65%;"><a href="http://jimbir.ch/blog/bootstrap-navbar-drupal-8-4-easy-template-changes">Bootstrap Navbar in Drupal 8 with 4 easy template changes</a></h1>
+				</section>
+
+				<section>
+					<h3>page.html.twig</h3>
+					<script src="https://gist.github.com/thejimbirch/5dd08853ee635cd0c54121845b0e1d41.js"></script>
+				</section>
+
+				<section>
+					<h3>block--system-branding-block.html.twig</h3>
+					<p>Upload your logo in the UI at<br><code>/admin/appearance/settings/theme_name</code></p>
+					<script src="https://gist.github.com/thejimbirch/c411a8d985e490d83a079e1ce90d8197.js"></script>
+				</section>
+
+				<section>
+					<h3>block--THEME_NAME-main-menu.html.twig</h3>
+					<script src="https://gist.github.com/thejimbirch/ec29f15697d90ec9b026c1fcfd846cca.js"></script>
+				</section>
+
+				<section>
+					<h3>menu--main.html.twig</h3>
+					<script src="https://gist.github.com/thejimbirch/826c367f085c7750c7690c31509c5225.js"></script>
+				</section>
+
+				<section>
+					<img src="img/xeno-bootstrap-menu.png" alt="Xeno Media Navbar">
+				</section>
+
+				<section>
+					<img src="img/xeno-bootstrap-menu-mobile.png" alt="Xeno Media Navbar Mobile">
+				</section>
+
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Greece-by-the-cactus-by-the-road.jpg">
 					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:65%;">Bootstrap Drupal Modules</h1>
 				</section>
