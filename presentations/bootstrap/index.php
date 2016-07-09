@@ -486,8 +486,20 @@
 					<h2>Why build your own theme?</h2>
 					<ul>
 						<li class="fragment">For complete control of markup</li>
-						<li class="fragment">If your designer is "designing in the browser" and providing Bootstrap html/css</li>
-						<li class="fragment">If you are making Bootstrap html/css prototypes before moving to Drupal.</li>
+						<li class="fragment">If your designer is "designing in the browser" and providing html/css</li>
+						<li class="fragment">If you are using a prototyping tool like <a href="https://www.sketchapp.com">Sketch</a> which exports html/css</li>
+						<li class="fragment">If you are making your own html/css prototypes before moving to Drupal.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Themeable Drupal Elements</h3>
+					<ul>
+						<li class="fragment">Fields</li>
+						<li class="fragment">Entities/Blocks/Panes</li>
+						<li class="fragment">Regions</li>
+						<li class="fragment">Layouts</li>
+						<li class="fragment">Pages</li>
 					</ul>
 				</section>
 
@@ -524,15 +536,80 @@
 					<ul>
 						<li class="fragment">Create an empty theme</li>
 						<li class="fragment">Download the Bootstrap Framework source files</li>
-						<li class="fragment">Update <code>Gruntfile.js</code> to output your css file to <code>css/THEMENAME.css</code></li>
-						<li class="fragment">Update <code>Gruntfile.js</code> to output your js file to <code>js/THEMENAME.css</code></li>
+						<li class="fragment">Update <code>Gruntfile.js</code> to output your css file to <code>css/THEMENAME.css</code> and your js file to <code>js/THEMENAME.css</code></li>
+						<li class="fragment">Add your own less files</li>
+						<li class="fragment">Include them in your <code>bootstrap.less</code></li>
 					</ul>
+				</section>
 
 				<section>
-					<p>Compiling your own Bootstrap framework using Grunt.</p>
-					<p>Javascript in Gruntfile.js</p>
-					<p>less files</p>
-					<p>The future is sass</p>
+					<h4>Gruntfile.js</h4>
+					<img src="img/Bootstrap-Grunfile-js.png" alt="Bootstrap Gruntfile.js" style="width:60%;height:auto;">
+				</section>
+
+				<section>
+					<h4>bootstrap.less</h4>
+					<img src="img/Drupal-Theme-Bootstrap-less.png" alt="Drupal Theme Bootstrap less" style="width:75%;height:auto;">
+				</section>
+
+				<section>
+					<h3>Compiling Bootstrap</h3>
+					<p>Grunt or Gulp</p>
+					<ul>
+						<li class="fragment"><code>cd sites/all/themes/THEMENAME/bootstrap/</code></li>
+						<li class="fragment"><code>grunt dist</code> - Compiles all the files</li>
+						<li class="fragment"><code>grunt watch</code> - Watches the folder, and automatically updates after file changes.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>The wonderful world of mixins</h3>
+					<img src="img/Bootstrap-mixins.png" alt="Creating a subtheme - CDN (D7)">
+				</section>
+
+				<section>
+					<h3>Use mixins on your own semantic html</h3>
+<pre>
+	<code>
+#main-content {
+	.container();
+}
+
+#main-content > section {
+	.make-row();
+}
+
+#main-content > section > article {
+	.make-md-column(9);
+	.make-sm-column(8);
+}
+
+#main-content > section > aside {
+	.make-md-column(3);
+	.make-sm-column(4);
+}
+	</code>
+</pre>
+				</section>
+
+								<section>
+					<h3>Use mixins on your own semantic html</h3>
+<pre>
+	<code>
+.live-chat-button {
+  .btn-primary();
+  padding: 10px 30px;
+  border-radius: 4px;
+  background: @live-chat-button-background;
+
+  &:hover {
+    text-decoration: none;
+    color: @btn-primary-color;
+    background: darken(@live-chat-button-background, 5%);
+  }
+}
+	</code>
+</pre>
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Greece-by-the-cactus-by-the-road.jpg">
