@@ -77,6 +77,7 @@
 				z-index:1000;
 			}
 
+			.fixed-footer > div,
 			.fixed-footer > div > a {
 				font-size: 16px;
 			}
@@ -120,7 +121,7 @@
 		<div class="reveal">
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="fixed-footer">
-				<div style="float:left;"><a href="http://jimbir.ch/presentations/bootstrap/">Bootstrap Framework and Drupal</a> <a href="http://www.twitter.com/thejimbirch" title="@thejimbirch">@thejimbirch</a></div>
+				<div style="float:left;"><a href="http://jimbir.ch/presentations/bootstrap/">Bootstrap Framework and Drupal</a> | <a href="http://www.twitter.com/thejimbirch" title="@thejimbirch">@thejimbirch</a></div>
 				<div style="float:right;"><a href="http://www.xenomedia.com" title="Xeno Media, Inc"><img src="img/xeno-media-logo.png" alt="Xeno Media, Inc" style="height:14px;width:auto;"></a></div>
 			</div>
 			<div class="slides">
@@ -425,8 +426,8 @@
 				<section>
 					<h3>Creating a subtheme - CDN (D8)</h3>
 					<ul>
-						<li class="fragment">Edit YOURNEWTHEMENAME.info.yml</li>
-						<li class="fragment">Edit config/schema/YOURNEWTHEMENAME.schema.yml and rename - THEMENAME.settings: and "THEMETITLE settings"</li>
+						<li class="fragment">Edit <code>YOURNEWTHEMENAME.info.yml</code></li>
+						<li class="fragment">Edit <code>config/schema/YOURNEWTHEMENAME.schema.yml</code> and rename - <code>THEMENAME.settings:</code> and <code>"THEMETITLE settings"</code></li>
 						<li class="fragment">Activate and Set Default your new theme!</li>
 					</ul>
 				</section>
@@ -434,8 +435,8 @@
 				<section>
 					<h3>Creating a subtheme - CDN versions</h3>
 					<ul>
-						<li class="fragment">/css/style.css to add your custom style overrides</li>
-						<li class="fragment">Grab what you need to override from the parent theme/modules/core and add to your new theme.</li>
+						<li class="fragment"><code>/css/style.css</code> to add your custom style overrides</li>
+						<li class="fragment">Grab what you need to override from the parent <code>theme/modules/core</code> and add to your new theme.</li>
 						<li class="fragment">Don't forget to add your own logo.png, screenshot.png, and favicon.ico</li>
 					</ul>
 				</section>
@@ -613,7 +614,7 @@
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-the-Car-Wash.jpg">
-					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:65%;"><a href="http://jimbir.ch/blog/bootstrap-navbar-drupal-8-4-easy-template-changes">Bootstrap Navbar in Drupal 8 with 4 easy template changes</a></h1>
+					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:65%;"><a href="http://jimbir.ch/blog/bootstrap-navbar-drupal-8-4-easy-template-changes">Bootstrap Navbar in Drupal 8</a></h1>
 				</section>
 
 				<section>
