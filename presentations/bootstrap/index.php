@@ -526,7 +526,7 @@
 						<li class="fragment"><a href="https://www.drupal.org/project/fences">Fences</a> has an Alpha release</li>
 						<li class="fragment">Twig templates give us ultra specificity</li>
 						<li class="fragment"><a href="https://www.drupal.org/project/layout_plugin">Layout plugin module</a> works and will eventually be moved to core.</li>
-						<li class="fragment"><a href="https://www.drupal.org/project/page_manager">Page Manager</a> is a stand alon module now, or</li>
+						<li class="fragment"><a href="https://www.drupal.org/project/page_manager">Page Manager</a> is a stand alone module now, or</li>
 						<li class="fragment"><a href="https://www.drupal.org/project/panelizer">Panelizer</a> allows you to set defaults, and override on individual nodes.</li>
 					</ul>
 				</section>
