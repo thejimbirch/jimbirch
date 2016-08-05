@@ -241,7 +241,8 @@
 					<iframe width="640" height="360" src="https://www.youtube.com/embed/ZuHZSbPJhaY" frameborder="0" allowfullscreen></iframe>
 					<h2>Google is</h2>
 					<ul>
-						<li class="fragment"><strong>Semantic</strong> - Understands synonyms, pluralities, mispellings, and more</li>
+						<li class="fragment"><strong>Topic based</strong> - Returns good content that is related, but not specific to the search term.</li>
+						<li class="fragment"><strong>Semantic</strong> - Understands synonyms, pluralities, misspellings, homonyms and more</li>
 						<li class="fragment">Focused on <strong>User Intent</strong> - What the user is trying to acheive by searching</li>
 					</ul>
 				</section>
