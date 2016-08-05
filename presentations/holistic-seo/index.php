@@ -77,7 +77,7 @@
 				z-index:1000;
 			}
 
-			.fixed-footer > div > a {
+			.fixed-footer > div {
 				font-size: 16px;
 			}
 
@@ -105,7 +105,7 @@
 		<div class="reveal">
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="fixed-footer">
-				<div style="float:left;"><a href="http://jimbir.ch/presentations/holistic-seo/">Holistic SEO and Drupal</a> - <a href="http://www.twitter.com/thejimbirch" title="@thejimbirch">@thejimbirch</a></div>
+				<div style="float:left;"><a href="http://jimbir.ch/presentations/holistic-seo/">Holistic SEO and Drupal</a> | <a href="http://www.twitter.com/thejimbirch" title="@thejimbirch">@thejimbirch</a></div>
 				<div style="float:right;"><a href="http://www.xenomedia.com" title="Xeno Media, Inc"><img src="img/xeno-media-logo.png" alt="Xeno Media, Inc" style="height:14px;width:auto;"></a></div>
 			</div>
 			<div class="slides">
@@ -119,13 +119,13 @@
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Greece-by-the-steps.jpg">
-					<p class="fragment" style="display:inline-block;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Holistic SEO is a term used to describe development in which content, marketing, technical SEO, performance, security, user experience and user intent come together to create an ideal url on the internet, about a certain topic.</p>
+					<p class="fragment" style="display:inline-block;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;"><strong>Holistic SEO</strong> is a term used to describe development in which content, marketing, technical SEO, performance, security, user experience and user intent come together to create an ideal url on the internet, about a certain topic.</p>
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-Xeno.jpg">
 					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);">Why take a Holistic approach to seo?</h1>
-					<p class="fragment" style="background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">As search engine algorithms get more complex and intelligent, we won't be able to control or predict changes.</p>
 					<p class="fragment" style="background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">It defines a set of best practices that ultimately benefits the user.</p>
+					<p class="fragment" style="background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">As search engine algorithms get more complex and intelligent, we won't be able to control or predict changes.</p>
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-the-Jungle.jpg">
@@ -135,6 +135,7 @@
 				<section>
 					<img src="img/exact-match-page.jpg" alt="a page we created containing a very specific search term" style="width:60%;">
 					<p>Once upon a time, we were able to create small pieces of keyword specific content...</p>
+					<p><small><a href="http://jimbir.ch/kr2fowdogudo999dvwdlkvnldkvn">kr2fowdogudo999dvwdlkvnldkvn</a></small></p>
 				</section>
 
 				<section>
@@ -296,14 +297,14 @@
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-by-the-pool-at-dusk.jpg">
-					<p style="display:inline-block;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Search engine ranking factors are on- and off-site items that search engines use to evaluate a web property's placement in the search results for a certain query.</p>
+					<p style="display:inline-block;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;"><strong>Search engine ranking factors</strong> are on- and off-site items that search engines use to evaluate a web property's placement in the search results for a certain query.</p>
 				</section>
 
 				<section>
 					<h2>Search Engine Ranking Factors</h2>
 					<ul>
 						<li class="fragment">Each search engine has their own algorithm to how they weigh factors.</li>
-						<li class="fragment">On occasion, Google will publish factors. Pay attention! (Mobilegeddon, Page Speed)</li>
+						<li class="fragment">On occasion, Google will publish factors. Pay attention! (<a href="https://webmasters.googleblog.com/2015/02/finding-more-mobile-friendly-search.html" target="_blank">Mobilegeddon</a>, <a href="https://webmasters.googleblog.com/2014/05/making-your-site-more-mobile-friendly.html" target="_blank">Page Speed</a>, <a href="https://webmasters.googleblog.com/2016/08/amp-your-content-preview-of-amped.html" target="_blank">AMP'ed results in Search</a>)</li>
 						<li class="fragment">Factors may be ranked differently for each and every search term!</li>
 					</ul>
 				</section>
