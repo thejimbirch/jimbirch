@@ -129,7 +129,7 @@
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-the-Jungle.jpg">
-					<h2 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:60%;">Today's Google algorythm puts more value on <u>Topic</u> and <u>User Intent</u> than Keywords.</h2>
+					<h2 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:60%;">Today's Google algorithm puts more value on <u>Topic</u> and <u>User Intent</u> than Keywords.</h2>
 				</section>
 
 				<section>
