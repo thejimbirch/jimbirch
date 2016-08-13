@@ -204,6 +204,13 @@ function jb_users_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: 'add JS snippets for google analytics'.
+  $permissions['add JS snippets for google analytics'] = array(
+    'name' => 'add JS snippets for google analytics',
+    'roles' => array(),
+    'module' => 'googleanalytics',
+  );
+
   // Exported permission: 'add authenticated twitter accounts'.
   $permissions['add authenticated twitter accounts'] = array(
     'name' => 'add authenticated twitter accounts',
@@ -330,6 +337,16 @@ function jb_users_user_default_permissions() {
     'module' => 'field_group',
   );
 
+  // Exported permission: 'administer fields'.
+  $permissions['administer fields'] = array(
+    'name' => 'administer fields',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+      'Webmaster' => 'Webmaster',
+    ),
+    'module' => 'field',
+  );
+
   // Exported permission: 'administer file types'.
   $permissions['administer file types'] = array(
     'name' => 'administer file types',
@@ -449,6 +466,13 @@ function jb_users_user_default_permissions() {
       'Administrator' => 'Administrator',
     ),
     'module' => 'module_filter',
+  );
+
+  // Exported permission: 'administer module missing message fixer'.
+  $permissions['administer module missing message fixer'] = array(
+    'name' => 'administer module missing message fixer',
+    'roles' => array(),
+    'module' => 'module_missing_message_fixer',
   );
 
   // Exported permission: 'administer modules'.
