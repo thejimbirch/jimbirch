@@ -3,7 +3,7 @@
 class FeedsFeaturesBuilder extends FeaturesBuilderBase {
 
   public static function listFeatures() {
-    return array('feeds' => t('Feeds'));
+    return array('feeds' => 'Feeds');
   }
 
   /**

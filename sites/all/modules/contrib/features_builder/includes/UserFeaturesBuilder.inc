@@ -8,7 +8,7 @@ class UserFeaturesBuilder extends EntityFeaturesBuilder {
    * {@inheritdoc}
    */
   public static function listFeatures() {
-    return array('users' => t('Users'));
+    return array('users' => 'Users');
   }
 
   /**

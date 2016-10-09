@@ -3,7 +3,7 @@
 class RulesFeatureBuilder extends FeaturesBuilderBase {
 
   public static function listFeatures() {
-    return array('rules' => t('Rules'));
+    return array('rules' => 'Rules');
   }
 
   /**

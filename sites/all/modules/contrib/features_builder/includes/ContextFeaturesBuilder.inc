@@ -3,7 +3,7 @@
 class ContextFeaturesBuilder extends FeaturesBuilderBase {
 
   public static function listFeatures() {
-    return array('context' => t('Context'));
+    return array('context' => 'Context');
   }
 
   /**

@@ -14,7 +14,7 @@ class ViewsFeaturesBuilder extends FeaturesBuilderBase {
   );
 
   public static function listFeatures() {
-    return array('views' => t('Views'));
+    return array('views' => 'Views');
   }
 
   public function package() {

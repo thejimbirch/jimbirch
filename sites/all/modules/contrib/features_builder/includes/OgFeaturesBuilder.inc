@@ -75,12 +75,11 @@ class OgFeaturesBuilder extends EntityFeaturesBuilder {
 
         case 'og_membership_type':
           // Create feature module per og_membership_type bundle.
-          $entity_type = 'og_membership_type';
           foreach ($exportables as $bundle => $value) {
-            $name = "{$og_component}_{$entity_type}_$bundle";
+            $name = "{$og_component}_$bundle";
             OgFeaturesBuilder::$info[$name] = array(
               'component' => $og_component,
-              'entity_type' => $entity_type,
+              'entity_type' => $og_component,
               'bundle' => $bundle,
             );
             $features[$name] = $value . ' ' . str_replace('_', ' ', $og_component);

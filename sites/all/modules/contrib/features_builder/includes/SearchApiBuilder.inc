@@ -9,7 +9,7 @@ class SearchApiBuilder extends FeaturesBuilderBase {
    * {@inheritdoc}
    */
   public static function listFeatures() {
-    return array('search_api' => t('Search API'));
+    return array('search_api' => 'Search API');
   }
 
   /**
@@ -35,6 +35,29 @@ class SearchApiBuilder extends FeaturesBuilderBase {
       if (!empty($index->enabled)) {
         $this->setIndexDependencies($index);
       }
+    }
+
+    $modules = array(
+      'search_api_attachments_entityreference',
+      'search_api_attachments_references',
+      'search_api_attachments_field_collections',
+      'search_api_multi',
+      'search_api_views',
+    );
+    foreach ($modules as $module) {
+      if (module_exists($module)) {
+        $this->setNamedComponents('dependencies', array($module));
+      }
+    }
+
+    $this->setAllComponents('search_api_autocomplete_search');
+    if (!empty($this->components['search_api_autocomplete_search'])) {
+      $this->setNamedComponents('dependencies', array('search_api_autocomplete'));
+    }
+
+    $this->setAllComponents('search_api_page');
+    if (!empty($this->components['search_api_page'])) {
+      $this->setNamedComponents('dependencies', array('search_api_page'));
     }
   }
 

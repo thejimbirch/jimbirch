@@ -3,7 +3,7 @@
 class TaxonomyFeaturesBuilder extends EntityFeaturesBuilder {
 
   public static function listFeatures() {
-    return array('taxonomy' => t('Taxonomy'));
+    return array('taxonomy' => 'Taxonomy');
   }
 
   /**

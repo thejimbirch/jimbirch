@@ -17,7 +17,7 @@ class MediaFeaturesBuilder extends EntityFeaturesBuilder {
   );
 
   public static function listFeatures() {
-    return array('media' => t('Media'));
+    return array('media' => 'Media');
   }
   
   /**

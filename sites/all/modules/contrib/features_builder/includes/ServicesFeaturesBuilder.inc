@@ -3,7 +3,7 @@
 class ServicesFeaturesBuilder extends FeaturesBuilderBase {
 
   public static function listFeatures() {
-    return array('services' => t('Services'));
+    return array('services' => 'Services');
   }
 
   /**

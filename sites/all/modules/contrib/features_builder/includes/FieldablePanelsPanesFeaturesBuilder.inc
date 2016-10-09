@@ -3,7 +3,7 @@
 class FieldablePanelsPanesFeaturesBuilder extends EntityFeaturesBuilder {
 
   public static function listFeatures() {
-    return array('fieldable_panels_panes' => t('Fieldable Panels Panes'));
+    return array('fieldable_panels_panes' => 'Fieldable Panels Panes');
   }
 
   /**

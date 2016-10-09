@@ -3,7 +3,7 @@
 class PanelsFeaturesBuilder extends FeaturesBuilderBase {
 
   public static function listFeatures() {
-    return array('panels' => t('Panels'));
+    return array('panels' => 'Panels');
   }
 
   /**

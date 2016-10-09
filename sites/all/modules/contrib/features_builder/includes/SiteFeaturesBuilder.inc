@@ -34,7 +34,7 @@ class SiteFeaturesBuilder extends FeaturesBuilderBase {
   );
 
   public static function listFeatures() {
-    return array('site' => t('Site'));
+    return array('site' => 'Site');
   }
 
   /**
@@ -52,6 +52,15 @@ class SiteFeaturesBuilder extends FeaturesBuilderBase {
 
     if (module_exists('admin_menu')) {
       $this->setNamedComponents('dependencies', array('admin_menu'));
+      $this->setRegexComponents('variable', '/^admin_menu_/');
+    }
+
+    if (module_exists('composer_manager')) {
+      $this->setNamedComponents('dependencies', array('composer_manager'));
+      $this->setNamedComponents('variable', array(
+        'composer_manager_file_dir',
+        'composer_manager_vendor_dir'
+      ));
       $this->setRegexComponents('variable', '/^admin_menu_/');
     }
 

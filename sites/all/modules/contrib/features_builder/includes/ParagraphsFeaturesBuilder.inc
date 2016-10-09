@@ -3,7 +3,7 @@
 class ParagraphsFeaturesBuilder extends EntityFeaturesBuilder {
 
   public static function listFeatures() {
-    return array('paragraphs' => t('Paragraphs'));
+    return array('paragraphs' => 'Paragraphs');
   }
 
   /**

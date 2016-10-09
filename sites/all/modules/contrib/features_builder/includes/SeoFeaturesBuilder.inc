@@ -25,7 +25,7 @@ class SeoFeaturesBuilder extends FeaturesBuilderBase {
   );
 
   public static function listFeatures() {
-    return array('seo' => t('SEO'));
+    return array('seo' => 'SEO');
   }
 
   /**

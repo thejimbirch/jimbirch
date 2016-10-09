@@ -3,7 +3,7 @@
 class MenuFeaturesBuilder extends FeaturesBuilderBase {
 
   public static function listFeatures() {
-    return array('menu' => t('Menu'));
+    return array('menu' => 'Menu');
   }
 
   /**

@@ -3,7 +3,7 @@
 class FieldCollectionFeaturesBuilder extends EntityFeaturesBuilder {
 
   public static function listFeatures() {
-    return array('field_collection' => t('Field Collection'));
+    return array('field_collection' => 'Field Collection');
   }
 
   /**

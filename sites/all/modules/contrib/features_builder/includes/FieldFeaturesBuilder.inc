@@ -3,7 +3,7 @@
 class FieldFeaturesBuilder extends FeaturesBuilderBase {
 
   public static function listFeatures() {
-    return array('fields' => t('Fields'));
+    return array('fields' => 'Fields');
   }
 
   /**

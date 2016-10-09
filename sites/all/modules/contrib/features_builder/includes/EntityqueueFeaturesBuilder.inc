@@ -3,7 +3,7 @@
 class EntityqueueFeaturesBuilder extends FeaturesBuilderBase {
 
   public static function listFeatures() {
-    return array('entityqueue' => t('Entityqueue'));
+    return array('entityqueue' => 'Entityqueue');
   }
 
   /**
