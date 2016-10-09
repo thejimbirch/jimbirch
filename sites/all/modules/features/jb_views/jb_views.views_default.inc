@@ -408,7 +408,7 @@ function jb_views_views_default_views() {
   $handler->display->display_options['fields']['path']['label'] = '';
   $handler->display->display_options['fields']['path']['exclude'] = TRUE;
   $handler->display->display_options['fields']['path']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['path']['alter']['text'] = '[path]?utm_source=feed&utm_medium=drupal-planet&utm_campaign=node/[nid]';
+  $handler->display->display_options['fields']['path']['alter']['text'] = '[path]?utm_source=feed&utm_medium=drupal-planet&utm_campaign=node-[nid]';
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['path']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['path']['absolute'] = TRUE;

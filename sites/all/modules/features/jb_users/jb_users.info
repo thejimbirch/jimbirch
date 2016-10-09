@@ -134,6 +134,7 @@ features[user_permission][] = administer users
 features[user_permission][] = administer views
 features[user_permission][] = administer xmlsitemap
 features[user_permission][] = block IP addresses
+features[user_permission][] = bypass access in place editing
 features[user_permission][] = bypass advanced aggregation
 features[user_permission][] = bypass file access
 features[user_permission][] = bypass honeypot protection

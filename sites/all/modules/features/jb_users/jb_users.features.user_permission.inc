@@ -712,6 +712,13 @@ function jb_users_user_default_permissions() {
     'module' => 'system',
   );
 
+  // Exported permission: 'bypass access in place editing'.
+  $permissions['bypass access in place editing'] = array(
+    'name' => 'bypass access in place editing',
+    'roles' => array(),
+    'module' => 'panels',
+  );
+
   // Exported permission: 'bypass advanced aggregation'.
   $permissions['bypass advanced aggregation'] = array(
     'name' => 'bypass advanced aggregation',
