@@ -304,9 +304,24 @@
 					<h2>Search Engine Ranking Factors</h2>
 					<ul>
 						<li class="fragment">Each search engine has their own algorithm to how they weigh factors.</li>
-						<li class="fragment">On occasion, Google will publish factors. Pay attention! (<a href="https://webmasters.googleblog.com/2015/02/finding-more-mobile-friendly-search.html" target="_blank">Mobilegeddon</a>, <a href="https://webmasters.googleblog.com/2014/05/making-your-site-more-mobile-friendly.html" target="_blank">Page Speed</a>, <a href="https://webmasters.googleblog.com/2016/08/amp-your-content-preview-of-amped.html" target="_blank">AMP'ed results in Search</a>)</li>
+						<li class="fragment">On occasion, Google will publish factors. Pay attention!
+							<ul>
+								<li><a href="https://webmasters.googleblog.com/2015/02/finding-more-mobile-friendly-search.html" target="_blank">Mobilegeddon</a></li>
+								<li><a href="https://webmasters.googleblog.com/2014/05/making-your-site-more-mobile-friendly.html" target="_blank">Page Speed</a></li>
+								<li><a href="https://webmasters.googleblog.com/2015/12/indexing-https-pages-by-default.html">HTTPS</a></li>
+								<li><a href="https://webmasters.googleblog.com/2016/08/amp-your-content-preview-of-amped.html" target="_blank">AMP'ed results in Search</a></li>
+								<li>Schema markup (<a href="https://webmasters.googleblog.com/2016/09/showcase-your-sites-reviews-in-search.html">Reviews in Search</a>), (<a href="https://webmasters.googleblog.com/2016/05/introducing-rich-cards.html">Rich cards</a>)</li>
+							</ul>
+						</li>
 						<li class="fragment">Factors may be ranked differently for each and every search term!</li>
 					</ul>
+				</section>
+
+				<section>
+					<h3>There are possibly</h3>
+					<h4><span style="font-size: 600%;">200</span></h4>
+					<h3>ranking factors</h3>
+					<p><small><a href="http://backlinko.com/google-ranking-factors">Google’s 200 Ranking Factors: The Complete List - Backlinko</a></small></p>
 				</section>
 
 				<section>
@@ -349,6 +364,14 @@
 						<li><a href="https://www.searchenginejournal.com/google-rankbrain-affect-seo-2016/162153/">How to Use Google RankBrain in SEO - Search Engine Journal</a></li>
 						<li><a href="http://searchengineland.com/faq-all-about-the-new-google-rankbrain-algorithm-234440">FAQ: All About The New Google RankBrain Algorithm - Search Engine Land</a></li>
 						<li><a href="http://techcrunch.com/2016/06/04/artificial-intelligence-is-changing-seo-faster-than-you-think/">Artificial intelligence is changing SEO faster than you think - Techcrunch</a></li>
+				</section>
+
+				<section>
+					<h2>Optimizing for Rankbrain</h2>
+					<ul>
+						<li><a href="https://moz.com/blog/optimizing-for-rankbrain-whiteboard-friday">Optimizing for RankBrain... Should We Do It? (Is It Even Possible?) - Rand Fishkin on SEOmoz</a></li>
+						<li><a href="https://moz.com/blog/seo-trek-the-search-for-google-rankbrain-new-data">SEO Trek: The Search for Google RankBrain by Larry King on SEOmoz</a></li>
+					</ul>
 				</section>
 
 				<section>
