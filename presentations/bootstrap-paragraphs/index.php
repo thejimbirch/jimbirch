@@ -294,6 +294,7 @@
 						<li><a href="http://jeroen.pro">Jeroen Bobbeldijk</a>, <a href="https://www.drupal.org/vdmi">.VDMi/</a>, <a href="https://www.drupal.org/md-systems">MD Systems</a> for supporting the <a href="https://www.drupal.org/project/paragraphs">Paragraphs module</a>.</li>
 						<li>Les Lim and David Needham's presentation <a href="https://www.youtube.com/watch?v=nRB4n09Ekpg">Using Paragraphs to Weave a Beautiful Content Tapestry</a></li>
 						<li>Morten, Danny Englander, Greg Boggs, Mark Conroy, and everyone else in the <a href="https://slackinvite.me/to/drupaltwig">Drupal Twig Slack</a></li>
+						<li>So many people in Stack Overflow/Drupal Answers!</li>
 					</ul>
 				</section>
 
