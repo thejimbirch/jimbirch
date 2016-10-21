@@ -31,7 +31,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -127,7 +127,7 @@
 			<div class="slides">
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-the-Pool-Waterfall.jpg">
 					<h1 style="font-size:2.25em;padding-left:20px;width:75%">Bootstrap Framework and Drupal Paragraphs</h1>
-					<p style="display:inline-block;background: rgba(0, 0, 0, 0.5);padding:20px;">Created by <a href="http://jimbir.ch">Jim Birch</a><br>
+					<p style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.5);padding:20px;">Created by <a href="http://jimbir.ch">Jim Birch</a><br>
 					<a href="http://jimbir.ch/presentations/bootstrap-paragraphs/">jimbir.ch/bsp</a><br>
 					<a href="http://twitter.com/thejimbirch">@thejimbirch</a><br>
 					<a href="http://www.xenomedia.com">Xeno Media, Inc.</a></p>
@@ -135,12 +135,12 @@
 
 				<section style="text-align:left;" data-background="img/bootstrap-paragraphs-module.jpg">
 					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:65%;"><a href="https://www.drupal.org/project/bootstrap_paragraphs">Bootstrap Paragraphs Module</a></h1>
-					<p class="fragment" style="background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">A suite of content and layout Paragraph bundles made with the Bootstrap framework and Entity reference fields.</p>
+					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">A suite of content and layout Paragraph bundles made with the Bootstrap framework and Entity reference fields.</p>
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-Xeno.jpg">
 					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);">Bootstrap Framework</h1>
-					<p class="fragment" style="background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.</p>
+					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.</p>
 				</section>
 
 				<section>
@@ -172,7 +172,7 @@
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-Waterfall.jpg">
 					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);">Drupal Paragraphs</h1>
-					<p class="fragment" style="background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Paragraphs is a contrib module for Drupal that allows creation, administration, and display of customizable content components.</p>
+					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Paragraphs is a contrib module for Drupal that allows creation, administration, and display of customizable content components.</p>
 				</section>
 
 				<section>
@@ -196,7 +196,7 @@
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-Blogs.jpg">
 					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);">Let's make some Paragraphs!</h1>
-					<p class="fragment" style="background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Thanks to a great <a href="https://www.youtube.com/watch?v=nRB4n09Ekpg">presentation I saw at Twin Cities Drupal Camp by Les Lim and David Needham</a>, I was presented the idea of separating Content and Layout paragraph bundles.</p>
+					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Thanks to a great <a href="https://www.youtube.com/watch?v=nRB4n09Ekpg">presentation I saw at Twin Cities Drupal Camp by Les Lim and David Needham</a>, I was presented the idea of separating Content and Layout paragraph bundles.</p>
 				</section>
 
 				<section>
@@ -224,7 +224,7 @@
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-the-Water.jpg">
 					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:80%;">Widths</h1>
-					<p class="fragment" style="background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Every paragraph, whether content or layout has the option to set one of five widths, from narrow to full screen using a List/Text field.</p>
+					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Every paragraph, whether content or layout has the option to set one of five widths, from narrow to full screen using a List/Text field.</p>
 				</section>
 
 				<section>
@@ -254,7 +254,7 @@
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Greece-by-the-cactus-by-the-sea.jpg">
 					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:65%;">Colors</h1>
-					<p class="fragment" style="background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Similar to widths, we have a list field with colors from <a href="http://mdbootstrap.com/css/colors/#rgba-colors">Material Design for Bootstrap</a> and five ready to style bootstrap-like classes (Primary, Secondary, Info, Warning, etc...)</p>
+					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Similar to widths, we have a list field with colors from <a href="http://mdbootstrap.com/css/colors/#rgba-colors">Material Design for Bootstrap</a> and five ready to style bootstrap-like classes (Primary, Secondary, Info, Warning, etc...)</p>
 				</section>
 
 				<section>
@@ -290,7 +290,7 @@
 				<section style="text-align: left;" data-background="img/Lego-Uncle-Jim-at-Sunset.jpg">
 					<h1 style="padding-left:20px;">THE END</h1>
 					<h3 style="padding-left:20px;">Continuing the conversation:</h3>
-					<p style="display:inline-block;background: rgba(0, 0, 0, 0.5);padding:20px;">Created by <a href="http://jimbir.ch">Jim Birch</a><br>
+					<p style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.5);padding:20px;">Created by <a href="http://jimbir.ch">Jim Birch</a><br>
 					<a href="http://jimbir.ch/presentations/bootstrap-paragraphs/">jimbir.ch/bsp</a><br>
 					<a href="http://twitter.com/thejimbirch">@thejimbirch</a><br>
 					<a href="http://www.xenomedia.com">Xeno Media, Inc.</a></p>
