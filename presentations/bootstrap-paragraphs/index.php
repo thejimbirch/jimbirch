@@ -191,12 +191,6 @@
 								<li>Ability to add semantic markup, Schema.org, JSON-LD</li>
 							</ul>
 						</li>
-						<li class="fragment">Administrator experience
-							<ul>
-								<li>Provide a consistent system</li>
-								<li>Rely on, and participate in the community since we are a small shop</li>
-							</ul>
-						</li>
 					</ul>
 				</section>
 
