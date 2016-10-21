@@ -224,7 +224,7 @@
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-the-Water.jpg">
 					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:80%;">Widths</h1>
-					<p class="fragment" style="background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Every paragraph, whether content or layout has the option to sent one of five widths, from narrow to full screen.</p>
+					<p class="fragment" style="background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Every paragraph, whether content or layout has the option to set one of five widths, from narrow to full screen using a List/Text field.</p>
 				</section>
 
 				<section>
@@ -254,7 +254,7 @@
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Greece-by-the-cactus-by-the-sea.jpg">
 					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:65%;">Colors</h1>
-					<p class="fragment" style="background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Similar to widths, we included a number of colors from <a href="http://mdbootstrap.com/css/colors/#rgba-colors">Material Design for Bootstrap</a> and five ready to style bootstrap-like classes (Primary, Secondary, Info, Warning, etc...)</p>
+					<p class="fragment" style="background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Similar to widths, we have a list field with colors from <a href="http://mdbootstrap.com/css/colors/#rgba-colors">Material Design for Bootstrap</a> and five ready to style bootstrap-like classes (Primary, Secondary, Info, Warning, etc...)</p>
 				</section>
 
 				<section>
@@ -275,11 +275,6 @@
 				<section>
 					<h2>Manage Display</h2>
 					<img src="img/Manage-Display.png">
-				</section>
-
-				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Greece-by-the-cactus-by-the-road.jpg">
-					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:65%;"><a href="https://www.drupal.org/project/bootstrap_paragraphs">Bootstrap Paragraphs Module</a></h1>
-					<p class="fragment" style="background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Couldn't have been done without the Drupal community!</li>
 				</section>
 
 				<section>
