@@ -121,7 +121,7 @@
 		<div class="reveal">
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="fixed-footer">
-				<div style="float:left;"><a href="http://jimbir.ch/presentations/bootstrap-paragraphs/">Bootstrap and Paragraphs</a> | <a href="http://www.twitter.com/thejimbirch" title="@thejimbirch">@thejimbirch</a></div>
+				<div style="float:left;"><a href="http://jimbir.ch/presentations/bootstrap-paragraphs/">jimbir.ch/bsp</a> | <a href="http://www.twitter.com/thejimbirch" title="@thejimbirch">@thejimbirch</a></div>
 				<div style="float:right;"><a href="http://www.xenomedia.com" title="Xeno Media, Inc"><img src="img/xeno-media-logo.png" alt="Xeno Media, Inc" style="height:14px;width:auto;"></a></div>
 			</div>
 			<div class="slides">
@@ -181,14 +181,14 @@
 						<li class="fragment">Different widths for different content elements
 							<ul>
 								<li>Better typography - Best readability at 60 to 70 characters wide</li>
-								<li>But wanting Images and Videos wider than that text column.</li>
+								<li>But wanting Images and Videos wider</li>
 							</ul>
 						</li>
 						<li class="fragment">Structured content
 							<ul>
 								<li>Frustrated with Rich Text Editors since '97</li>
-								<li>WYSIWYG integration with Media, or any database-driven solution for audio, images and videos were buggy at best</li>
-								<li>Need for modern semantic markup, Schema.org, JSON-LD</li>
+								<li>WYSIWYG integration with Media, was buggy at best</li>
+								<li>Ability to add semantic markup, Schema.org, JSON-LD</li>
 							</ul>
 						</li>
 						<li class="fragment">Administrator experience
@@ -234,7 +234,28 @@
 				</section>
 
 				<section>
-					Show template/less/fields here
+					<h2>Widths - Twig</h2>
+					<img src="img/Twig-Widths.png" alt="">
+				</section>
+
+				<section>
+					<h2>Widths - LESS</h2>
+					<img src="img/LESS-widths.png" style="width:70%;height:auto;">
+				</section>
+
+				<section>
+					<h2>Carousel - Twig</h2>
+					<img src="img/Twig-Carousel.png">
+				</section>
+
+				<section>
+					<h2>Columns Field Template</h2>
+					<img src="img/Twig-Column-Field.png">
+				</section>
+
+				<section>
+					<h2>Columns - LESS</h2>
+					<img src="img/LESS-columns.png">
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Greece-by-the-cactus-by-the-sea.jpg">
@@ -243,7 +264,23 @@
 				</section>
 
 				<section>
-					Show template/less/fields here
+					<h2>Colors</h2>
+					<img src="img/Twig-Colors.png" alt="">
+				</section>
+
+				<section>
+					<h2>Adding Classes</h2>
+					<img src="img/Twig-Adding-Classes.png" alt="" style="width:70%;height:auto;">
+				</section>
+
+				<section>
+					<h2>Rendering content without fields</h2>
+					<img src="img/Rendering-Content.png" alt="">
+				</section>
+
+				<section>
+					<h2>Manage Display</h2>
+					<img src="img/Manage-Display.png">
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Greece-by-the-cactus-by-the-road.jpg">
