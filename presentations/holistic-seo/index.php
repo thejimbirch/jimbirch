@@ -31,7 +31,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -105,27 +105,27 @@
 		<div class="reveal">
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="fixed-footer">
-				<div style="float:left;"><a href="http://jimbir.ch/presentations/holistic-seo/">Holistic SEO and Drupal</a> | <a href="http://www.twitter.com/thejimbirch" title="@thejimbirch">@thejimbirch</a></div>
+				<div style="float:left;"><a href="http://jimbir.ch/presentations/holistic-seo/" style="color:#111;">jimbir.ch/holistic-seo</a> | <a href="http://www.twitter.com/thejimbirch" title="@thejimbirch" style="color:#111;">@thejimbirch</a></div>
 				<div style="float:right;"><a href="http://www.xenomedia.com" title="Xeno Media, Inc"><img src="img/xeno-media-logo.png" alt="Xeno Media, Inc" style="height:14px;width:auto;"></a></div>
 			</div>
 			<div class="slides">
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-reads-email.jpg">
 					<h1 style="padding-left:20px;">Holistic SEO and Drupal</h1>
 					<h3 style="float:left;padding-left:20px;width:75%;">Best practices in an ever changing search landscape</h3>
-					<p style="display:inline-block;background: rgba(0, 0, 0, 0.5);padding:20px;">Created by <a href="http://jimbir.ch">Jim Birch</a><br>
+					<p style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.5);padding:20px;">Created by <a href="http://jimbir.ch">Jim Birch</a><br>
 					<a href="http://jimbir.ch/presentations/holistic-seo">jimbir.ch/holistic-seo</a><br>
 					<a href="http://twitter.com/thejimbirch">@thejimbirch</a><br>
 					<a href="http://www.xenomedia.com">Xeno Media, Inc.</a></p>
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Greece-by-the-steps.jpg">
-					<p class="fragment" style="display:inline-block;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;"><strong>Holistic SEO</strong> is a term used to describe development in which content, marketing, technical SEO, performance, security, user experience and user intent come together to create an ideal url on the internet, about a certain topic.</p>
+					<p class="fragment" style="display:inline-block;color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;"><strong>Holistic SEO</strong> is a term used to describe development in which content, marketing, technical SEO, performance, security, user experience and user intent come together to create an ideal url on the internet, about a certain topic.</p>
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-Xeno.jpg">
 					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);">Why take a Holistic approach to seo?</h1>
-					<p class="fragment" style="background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">It defines a set of best practices that ultimately benefits the user.</p>
-					<p class="fragment" style="background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">As search engine algorithms get more complex and intelligent, we won't be able to control or predict changes.</p>
+					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">It defines a set of best practices that ultimately benefits the user.</p>
+					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">As search engine algorithms get more complex and intelligent, we won't be able to control or predict changes.</p>
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-the-Jungle.jpg">
@@ -177,7 +177,7 @@
 
 				<section>
 					<h2>hardwood floor finishes<br>1st Result</h2>
-					<div style="background:#444;float:right;font-size:75%;margin:0 0 40px 5%;padding:20px;width:30%;">
+					<div style="color:#fff;background:#444;float:right;font-size:75%;margin:0 0 40px 5%;padding:20px;width:30%;">
 						<h4>Basic types of searches</h4>
 						<ul>
 							<li>Navigational</li>
@@ -297,7 +297,7 @@
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-by-the-pool-at-dusk.jpg">
-					<p style="display:inline-block;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;"><strong>Search engine ranking factors</strong> are on- and off-site items that search engines use to evaluate a web property's placement in the search results for a certain query.</p>
+					<p style="display:inline-block;color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;"><strong>Search engine ranking factors</strong> are on- and off-site items that search engines use to evaluate a web property's placement in the search results for a certain query.</p>
 				</section>
 
 				<section>
@@ -311,9 +311,10 @@
 								<li><a href="https://webmasters.googleblog.com/2015/12/indexing-https-pages-by-default.html">HTTPS</a></li>
 								<li><a href="https://webmasters.googleblog.com/2016/08/amp-your-content-preview-of-amped.html" target="_blank">AMP'ed results in Search</a></li>
 								<li>Schema markup (<a href="https://webmasters.googleblog.com/2016/09/showcase-your-sites-reviews-in-search.html">Reviews in Search</a>), (<a href="https://webmasters.googleblog.com/2016/05/introducing-rich-cards.html">Rich cards</a>)</li>
+								<li><a href="http://searchengineland.com/google-divide-index-giving-mobile-users-better-fresher-content-261037">Separate Mobile Search Index</a></li>
 							</ul>
 						</li>
-						<li class="fragment">Factors may be ranked differently for each and every search term!</li>
+						<li class="fragment">Factors can be ranked differently for each and every search term!</li>
 					</ul>
 				</section>
 
@@ -321,7 +322,11 @@
 					<h3>There are possibly</h3>
 					<h4><span style="font-size: 600%;">200</span></h4>
 					<h3>ranking factors</h3>
-					<p><small><a href="http://backlinko.com/google-ranking-factors">Google’s 200 Ranking Factors: The Complete List - Backlinko</a></small></p>
+					<p>
+						<small><a href="http://backlinko.com/google-ranking-factors">Google’s 200 Ranking Factors: The Complete List - Backlinko</a></small><br>
+						<small><a href="https://www.searchenginejournal.com/infographic-googles-200-ranking-factors/64316/">Google's 200 Ranking Factors - Search Engine Journal</a></small><br>
+						<small><a href="https://webmasters.googleblog.com/2016/09/penguin-is-now-part-of-our-core.html">Penguin is now part of our core algorithm - Google Webmaster Central Blog</a></small>
+					</p>
 				</section>
 
 				<section>
@@ -359,19 +364,15 @@
 				</section>
 
 				<section>
-					<h2>More in depth writing about Rankbrain</h2>
+					<h2>Learn more about Rankbrain</h2>
 					<ul>
-						<li><a href="https://www.searchenginejournal.com/google-rankbrain-affect-seo-2016/162153/">How to Use Google RankBrain in SEO - Search Engine Journal</a></li>
-						<li><a href="http://searchengineland.com/faq-all-about-the-new-google-rankbrain-algorithm-234440">FAQ: All About The New Google RankBrain Algorithm - Search Engine Land</a></li>
-						<li><a href="http://techcrunch.com/2016/06/04/artificial-intelligence-is-changing-seo-faster-than-you-think/">Artificial intelligence is changing SEO faster than you think - Techcrunch</a></li>
-				</section>
-
-				<section>
-					<h2>Optimizing for Rankbrain</h2>
-					<ul>
-						<li><a href="https://moz.com/blog/optimizing-for-rankbrain-whiteboard-friday">Optimizing for RankBrain... Should We Do It? (Is It Even Possible?) - Rand Fishkin on SEOmoz</a></li>
-						<li><a href="https://moz.com/blog/seo-trek-the-search-for-google-rankbrain-new-data">SEO Trek: The Search for Google RankBrain by Larry King on SEOmoz</a></li>
-					</ul>
+						<li><a href="https://www.searchenginejournal.com/google-rankbrain-affect-seo-2016/162153/">How to Use Google RankBrain in SEO</a></li>
+						<li><a href="http://searchengineland.com/faq-all-about-the-new-google-rankbrain-algorithm-234440">FAQ: All About The New Google RankBrain Algorithm</a></li>
+						<li><a href="http://techcrunch.com/2016/06/04/artificial-intelligence-is-changing-seo-faster-than-you-think/">Artificial intelligence is changing SEO faster than you think</a></li>
+						<li><a href="https://moz.com/blog/optimizing-for-rankbrain-whiteboard-friday">Optimizing for RankBrain... Should We Do It? (Is It Even Possible?)</a></li>
+						<li><a href="https://moz.com/blog/seo-trek-the-search-for-google-rankbrain-new-data">SEO Trek: The Search for Google RankBrain* [New Data]</a></li>
+						<li><a href="http://www.outbrain.com/blog/content-marketing-and-seo">Content Marketing and SEO</a></li>
+						<li><a href="http://searchengineland.com/four-pillars-future-seo-259590">The four pillars of the future of SEO</a></li>
 				</section>
 
 				<section>
@@ -425,13 +426,32 @@
 				</section>
 
 				<section>
-					<img src="img/backlinko.png" alt="Backlinko" style="padding:40px;">
+					<img src="img/backlinko.png" alt="Backlinko" style="background:#111;padding:40px;">
 					<h2>According to Backlinko, there are over 200 Search Engine Ranking Factors</h2>
 					<p>"Some are proven. Some are controversial. Others are SEO nerd speculation. But they’re all here." - <a href="http://backlinko.com/google-ranking-factors">Google’s 200 Ranking Factors: The Complete List by Brian Dean</a>
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-the-Parthenon.jpg">
 					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:70%;">Content strategy and how it can guide development.</h1>
+				</section>
+
+				<section>
+					<h2>The Content Strategy Quad</h2>
+					<ul>
+						<li class="fragment">Content Components
+							<ul>
+								<li>Substance</li>
+								<li>Structure</li>
+							</ul>
+						</li>
+						<li class="fragment">People Components
+							<ul>
+								<li>Workflow</li>
+								<li>Governance</li>
+							</ul>
+						</li>
+					</ul>
+					<p><small><a href="http://blog.braintraffic.com/2012/07/from-the-archive-brain-traffic-lands-the-quad/">Brain Traffic Lands the Quad -  March 2011</a></small></p>
 				</section>
 
 				<section>
@@ -479,13 +499,14 @@
 					<ul>
 						<li class="fragment"><a href="https://www.drupal.org/project/references">Entity Reference Fields</a> can be used to render other entities inside your main entity</li>
 						<li class="fragment"><a href="https://www.drupal.org/project/inline_entity_form">Inline Entity Form</a> can be used on top of reference fields to allow the user to add new, or select existing entities.</li>
-						<li class="fragment"><a href="https://www.drupal.org/project/paragraphs">Paragraphs</a> is a great module to build reorderable, custom entities that reference other structured data entities</li>
+						<li class="fragment"><a href="https://www.drupal.org/project/paragraphs">Paragraphs</a>, and <a href="https://www.drupal.org/project/eck">Entity Construction Kit (ECK)</a> are great modules to build reorderable, custom entities that reference other structured data entities</li>
 						<li class="fragment"><a href="https://www.drupal.org/project/token">Token module</a> can be used to bridge your entities fields and Metatag fields and JSON-LD Views</li>
 					</ul>
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-and-the-Acheivement-Duck.jpg">
 					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:75%;">Technical SEO best practices in Drupal</h1>
+					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Let's review the major ranking factors, and present ideas how we can implement in Drupal.</p>
 				</section>
 
 				<section>
@@ -612,6 +633,7 @@
 						<li class="fragment"><a href="https://www.google.com/webmasters/tools/mobile-friendly/">Google Mobile-Friendly Test</a></li>
 						<li class="fragment"><a href="https://www.google.com/webmasters/markup-tester/u/1?hl=en">Google Email Markup Tester</a></li>
 						<li class="fragment"><a href="https://www.google.com/webmasters/#?modal_active=none">Google Search Console</a></li>
+						<li class="fragment"><a href="https://search.google.com/search-console/amp">Google Amp Test</a></li>
 					</ul>
 				</section>
 
@@ -640,7 +662,7 @@
 				<section style="text-align: left;" data-background="img/Lego-Uncle-Jim-at-Sunset.jpg">
 					<h1 style="padding-left:20px;">THE END</h1>
 					<h3 style="padding-left:20px;">Continuing the conversation:</h3>
-					<p style="display:inline-block;background: rgba(0, 0, 0, 0.5);padding:20px;">Created by <a href="http://jimbir.ch">Jim Birch</a><br>
+					<p style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.5);padding:20px;">Created by <a href="http://jimbir.ch">Jim Birch</a><br>
 					<a href="http://jimbir.ch/presentations/holistic-seo">jimbir.ch/holistic-seo</a><br>
 					<a href="http://twitter.com/thejimbirch">@thejimbirch</a><br>
 					<a href="http://www.xenomedia.com">Xeno Media, Inc.</a></p>
