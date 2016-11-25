@@ -23,8 +23,10 @@ explicitly for use with this base theme and has maintainers in both projects.
 **Supported modules:**
 - [Admin Menu](https://www.drupal.org/project/admin_menu)
 - [Bootstrap Core](https://www.drupal.org/project/bootstrap_core)
+- [Disable Messages](https://www.drupal.org/project/disable_messages)
 - [jQuery Update](https://www.drupal.org/project/jquery_update)
 - [Icon API](https://www.drupal.org/project/icon)
+- [Path Breadcrumbs](https://www.drupal.org/project/path_breadcrumbs)
 - [Picture](https://www.drupal.org/project/picture)
 - [Views](https://www.drupal.org/project/picture) _(partial support)_
 - [Webform](https://www.drupal.org/project/webform) _(partial support)_
