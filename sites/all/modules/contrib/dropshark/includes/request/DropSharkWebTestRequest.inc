@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Class DropSharkRequestTest.
+ * Class DropSharkWebTestRequest.
  */
-class DropSharkRequestTest extends DropSharkRequestDefault {
+class DropSharkWebTestRequest extends DropSharkRequest {
 
   /**
    * {@inheritdoc}

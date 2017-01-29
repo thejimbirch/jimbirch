@@ -4,30 +4,36 @@ core = 7.x
 php = 5.2
 configure = admin/config/services/dropshark
 
-files[] = includes/collector/DropSharkCollector.inc
+files[] = includes/collector/DropSharkCollectorInterface.inc
 files[] = includes/collector/DropSharkCollectorBase.inc
 files[] = includes/collector/drupal/DropSharkDrupalStatusCollector.inc
 files[] = includes/collector/drupal/DropSharkDrupalUpdateStatusCollector.inc
 files[] = includes/collector/memcache/DropSharkMemcacheCollector.inc
+files[] = includes/collector/node/DropSharkNodeCollector.inc
 files[] = includes/collector/php/DropSharkPhpApcCollector.inc
 files[] = includes/collector/php/DropSharkPhpOpcacheCollector.inc
 files[] = includes/collector/system/DropSharkDiskCollector.inc
 files[] = includes/collector/system/DropSharkLinfoCollector.inc
+files[] = includes/collector/system/DropSharkLoadCollector.inc
 files[] = includes/collector/system/DropSharkMemoryCollector.inc
 files[] = includes/collector/system/DropSharkSwapCollector.inc
+files[] = includes/collector/user/DropSharkUserCollector.inc
+files[] = includes/collector/user/DropSharkUserPassResetCollector.inc
+files[] = includes/collector/user/DropSharkUserSessionCollector.inc
 
-files[] = includes/queue/DropSharkQueue.inc
+files[] = includes/queue/DropSharkQueueInterface.inc
 files[] = includes/queue/DropSharkDbQueue.inc
+files[] = includes/request/DropSharkRequestInterface.inc
 files[] = includes/request/DropSharkRequest.inc
-files[] = includes/request/DropSharkRequestDefault.inc
-files[] = includes/request/DropSharkRequestTest.inc
+files[] = includes/request/DropSharkUnitTestRequest.inc
+files[] = includes/request/DropSharkWebTestRequest.inc
 
 files[] = tests/DropSharkAdminTestCase.test
 files[] = tests/DropSharkDbQueueTestCase.test
 
-; Information added by Drupal.org packaging script on 2016-03-22
-version = "7.x-1.0-beta3"
+; Information added by Drupal.org packaging script on 2016-12-12
+version = "7.x-1.0-beta4"
 core = "7.x"
 project = "dropshark"
-datestamp = "1458649148"
+datestamp = "1481563990"
 

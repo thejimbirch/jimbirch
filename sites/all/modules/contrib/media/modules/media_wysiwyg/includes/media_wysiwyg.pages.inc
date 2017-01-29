@@ -92,8 +92,12 @@ function media_wysiwyg_format_form($form, &$form_state, $file) {
   $instance = field_info_instances('file', $file->type);
   foreach ($instance as $field_name => $field_value) {
     $info = field_info_field($field_name);
-    // Only single valued fields can be overridden.
-    $allow = $info['cardinality'] == 1 && !empty($instance[$field_name]['settings']['wysiwyg_override']);
+    $allow = !empty($instance[$field_name]['settings']['wysiwyg_override']);
+    // Only single valued fields can be overridden normally, unless Media is
+    // configured otherwise with "media_wysiwyg_wysiwyg_override_multivalue".
+    if ($allow && $info['cardinality'] != 1) {
+      $allow = variable_get('media_wysiwyg_wysiwyg_override_multivalue', FALSE);
+    }
     $form['options']['fields'][$field_name]['#access'] = $allow;
   }
 
@@ -139,7 +143,7 @@ function media_wysiwyg_format_form_view_mode(&$form, $form_state, $file)  {
 
   $form['preview'] = array();
   $form['preview']['#prefix'] = '<div class="media-item"><div class="media-thumbnail">';
-  $form['preview']['#suffix'] = '</div><div class="label-wrapper"><label class="media-filename">' . $file->filename . '</label></div></div>';
+  $form['preview']['#suffix'] = '</div><div class="label-wrapper"><label class="media-filename">' . check_plain($file->filename) . '</label></div></div>';
   $form['preview']['thumbnail'] = file_view_file($file, $view_mode);
   $form['preview']['thumbnail']['#prefix'] = '<div id="media-preview">';
   $form['preview']['thumbnail']['#suffix'] = '</div>';

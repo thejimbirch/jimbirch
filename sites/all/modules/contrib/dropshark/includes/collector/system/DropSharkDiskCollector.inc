@@ -14,19 +14,19 @@ class DropSharkDiskCollector extends DropSharkLinfoCollector {
   public function collect($event, $data = array()) {
 
     if (!$this->respond($event)) {
-      return DropSharkCollector::RESPONSE_NONE;
+      return;
     }
 
     $data = $this->defaultResult();
 
     if (!$this->checkLinfo($data)) {
-      return DropSharkCollector::RESPONSE_COMPLETE;
+      return;
     }
 
     if (!$disk = $this->defaultDisk()) {
       $data['code'] = 'unable_to_determine_disk';
-      dropshark_queue_data($data);
-      return DropSharkCollector::RESPONSE_COMPLETE;
+      $this->queue->add($data);
+      return;
     }
 
     $data['ds_collector_id'] .= "|{$disk}";
@@ -34,16 +34,14 @@ class DropSharkDiskCollector extends DropSharkLinfoCollector {
     $disks = $this->getData();
     $disk_info = $disks[$disk];
 
-    $data['code'] = 0;
+    $data['code'] = DropSharkCollectorInterface::STATUS_SUCCESS;
     $data['device'] = $disk;
     $data['mount'] = $disk;
     $data['free'] = $disk_info['free'];
     $data['used'] = $disk_info['used'];
     $data['size'] = $data['free'] + $data['used'];
     $data['used_percent'] = $data['used'] / $data['size'];
-
-    dropshark_queue_data($data);
-    return DropSharkCollector::RESPONSE_COMPLETE;
+    $this->queue->add($data);
   }
 
   /**

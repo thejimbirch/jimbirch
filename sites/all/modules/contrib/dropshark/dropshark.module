@@ -9,7 +9,7 @@ define('DROPSHARK_HOST_DEFAULT', 'https://data.dropshark.io');
 define('DROPSHARK_QUEUE_DEFAULT', 'DropSharkDbQueue');
 define('DROPSHARK_QUEUE_LOCK_MAX_DEFAULT', 300);
 define('DROPSHARK_QUEUE_MAX_PROCESS_DEFAULT', 100);
-define('DROPSHARK_REQUEST_DEFAULT', 'DropSharkRequestDefault');
+define('DROPSHARK_REQUEST_DEFAULT', 'DropSharkRequest');
 define('DROPSHARK_LINFO_AUTOLOADER', 'sites/all/libraries/linfo/standalone_autoload.php');
 
 /**
@@ -41,8 +41,8 @@ function dropshark_menu() {
 /**
  * Gets the configured DropShark queue processing class.
  *
- * @return DropSharkQueue
- *   The queue processor configured for use.
+ * @return \DropSharkQueueInterface
+ *   The queue processing class configured for use.
  */
 function dropshark_get_queue() {
   $queue = &drupal_static(__FUNCTION__);
@@ -57,88 +57,35 @@ function dropshark_get_queue() {
   return $queue;
 }
 
-
 /**
  * Gets the configured DropShark request handling class.
  *
- * @return DropSharkRequest
- *   The request handler configured for use.
+ * @return \DropSharkRequestInterface
+ *   The request handling class configured for use.
  */
 function dropshark_get_request() {
   $request = &drupal_static(__FUNCTION__);
 
   if (!$request) {
     $class = variable_get('dropshark_request_class', DROPSHARK_REQUEST_DEFAULT);
-    $request = new $class();
+    $host = variable_get('dropshark_host', DROPSHARK_HOST_DEFAULT);
+    $token = variable_get('dropshark_site_token');
+    $request = new $class($host, $token);
   }
 
   return $request;
 }
 
 /**
- * Set data to be added to the queue
- *
- * Data is held in a static queue and added to the processing queue at the end
- * of the page request.
- *
- * @param array $data
- *   Data to add to the static queue.
- * @param bool $reset
- *   Reset the static queue.
- *
- * @return array
- *   The queued data.
+ * Registers dropshark_finalize_request() as a shutdown function.
  */
-function dropshark_queue_data($data = NULL, $reset = FALSE) {
-  static $queue = array();
+function dropshark_set_shutdown_function() {
   static $registered = FALSE;
 
   if (!$registered) {
     drupal_register_shutdown_function('dropshark_finalize_request');
     $registered = TRUE;
   }
-
-  if ($reset) {
-    $queue = array();
-  }
-
-  if ($data !== NULL) {
-    $data['ds_timestamp'] = time();
-    $queue[] = $data;
-  }
-
-  return $queue;
-}
-
-/**
- * Handles queuing of a collector for deferred processing.
- *
- * @param string $collector
- *   The name of the collector.
- * @param bool $reset
- *   Reset the static queue.
- *
- * @return array
- *   The queued collectors.
- */
-function dropshark_queue_processing($collector = NULL, $reset = FALSE) {
-  static $queue = array();
-  static $registered = FALSE;
-
-  if (!$registered) {
-    drupal_register_shutdown_function('dropshark_finalize_request');
-    $registered = TRUE;
-  }
-
-  if ($reset) {
-    $queue = array();
-  }
-
-  if ($collector !== NULL) {
-    $queue[$collector] = TRUE;
-  }
-
-  return $queue;
 }
 
 /**
@@ -148,27 +95,14 @@ function dropshark_queue_processing($collector = NULL, $reset = FALSE) {
  * saves data from static request queue into persistent a queue.
  */
 function dropshark_finalize_request() {
+  $queue = dropshark_get_queue();
+  $queue->processDeferred();
 
-  foreach (array_keys(dropshark_queue_processing()) as $collector_name) {
-    /** @var DropSharkCollector $collector */
-    $collector = dropshark_get_collector($collector_name);
-    $collector->finalize();
+  if ($queue->needsImmediateTransmit()) {
+    $queue->transmit();
   }
 
-  // TODO: investigate adding multiple queued data items in a single call.
-  $queue = dropshark_get_queue();
-  foreach (dropshark_queue_data() as $data) {
-    $queue->add($data);
-  }
-  dropshark_queue_data(NULL, TRUE);
-}
-
-/**
- * Process items in the DropShark queue.
- */
-function dropshark_queue_process() {
-  $queue = dropshark_get_queue();
-  $queue->process();
+  $queue->persist();
 }
 
 /**
@@ -197,13 +131,21 @@ function dropshark_get_collector_info($reset = FALSE) {
 
 /**
  * Instantiate a collector.
+ *
+ * @param string $collector_id
+ *   The collector's ID.
+ * @param \DropSharkQueueInterface
+ *   A queue handling object.
+ *
+ * @return \DropSharkCollectorInterface
+ *   The collector.
  */
-function dropshark_get_collector($collector_id) {
+function dropshark_get_collector($collector_id, $queue) {
   $collectors = dropshark_get_collector_info();
 
   if (!empty($collectors[$collector_id]['class'])) {
     $class = $collectors[$collector_id]['class'];
-    return new $class($collectors[$collector_id]);
+    return new $class($collectors[$collector_id], $queue);
   }
 }
 
@@ -227,6 +169,10 @@ function dropshark_dropshark_collector_info() {
     'class' => 'DropSharkDrupalUpdateStatusCollector',
   );
 
+  $collectors['load'] = array(
+    'class' => 'DropSharkLoadCollector',
+  );
+
   $collectors['memcache'] = array(
     'class' => 'DropSharkMemcacheCollector',
   );
@@ -235,12 +181,28 @@ function dropshark_dropshark_collector_info() {
     'class' => 'DropSharkMemoryCollector',
   );
 
+  $collectors['node'] = array(
+    'class' => 'DropSharkNodeCollector',
+  );
+
   $collectors['opcache'] = array(
     'class' => 'DropSharkPhpOpcacheCollector',
   );
 
   $collectors['swap'] = array(
     'class' => 'DropSharkSwapCollector',
+  );
+
+  $collectors['user'] = array(
+    'class' => 'DropSharkUserCollector',
+  );
+
+  $collectors['user_pass_reset'] = array(
+    'class' => 'DropSharkUserPassResetCollector',
+  );
+
+  $collectors['user_sessions'] = array(
+    'class' => 'DropSharkUserSessionCollector',
   );
 
   return $collectors;
@@ -256,26 +218,31 @@ function dropshark_dropshark_collector_info() {
  *   A value indicating an event or type of an event which has occurred.
  * @param array $data
  *   Additional data to send to the collector.
+ * @param bool $immediate
+ *   Indicates if the data should be transmitted as a part of this HTTP request.
  */
-function dropshark_handle_event($event, $data = array()) {
+function dropshark_handle_event($event, $data = array(), $immediate = FALSE) {
+  $queue = dropshark_get_queue();
 
   foreach (dropshark_get_collector_info() as $name => $info) {
-    /** @var DropSharkCollector $collector */
-    $collector = dropshark_get_collector($name);
-    $status = $collector->collect($event, $data);
-
-    // Queue deferred processing.
-    if ($status == DropSharkCollector::RESPONSE_DEFERRED) {
-      dropshark_queue_processing($name);
-    }
+    $collector = dropshark_get_collector($name, $queue);
+    $collector->collect($event, $data);
   }
 
+  if ($immediate) {
+    $queue->setImmediateTransmit();
+  }
+
+  if ($queue->needsImmediateTransmit() || $queue->hasDeferred()) {
+    dropshark_set_shutdown_function();
+  }
 }
 
 /**
  * Instantiate the Linfo library.
  *
- * @return \Linfo\Linfo
+ * @return \Linfo\Linfo|false
+ *   The Linfo library, or FALSE if not present.
  */
 function dropshark_get_linfo() {
   $linfo = &drupal_static(__FUNCTION__, NULL);
@@ -294,8 +261,7 @@ function dropshark_get_linfo() {
 
     // If it's still not there, then we can't do anything.
     if (!class_exists('\Linfo\Linfo')) {
-      $linfo = FALSE;
-      return $linfo;
+      return $linfo = FALSE;
     }
 
     $linfo = new \Linfo\Linfo($settings);
@@ -309,8 +275,7 @@ function dropshark_get_linfo() {
  */
 function dropshark_cron() {
   if (variable_get('dropshark_cron', TRUE)) {
-    dropshark_handle_event('all');
-    dropshark_queue_process();
+    dropshark_handle_event('all', array(), TRUE);
   }
 }
 
@@ -344,4 +309,86 @@ function dropshark_site_fingerprint() {
   }
 
   return $fingerprint;
+}
+
+/**
+ * Implements hook_node_insert().
+ */
+function dropshark_node_insert($node) {
+  dropshark_handle_event('node_insert', $node);
+}
+
+/**
+ * Implements hook_node_update().
+ */
+function dropshark_node_update($node) {
+  dropshark_handle_event('node_update', $node);
+}
+
+/**
+ * Implements hook_node_delete().
+ */
+function dropshark_node_delete($node) {
+  dropshark_handle_event('node_delete', $node);
+}
+
+/**
+ * Implements hook_user_login().
+ */
+function dropshark_user_login(&$edit, $account) {
+  dropshark_handle_event('user_login', $account);
+}
+
+/**
+ * Implements hook_user_logout().
+ */
+function dropshark_user_logout($account) {
+  dropshark_handle_event('user_logout', $account);
+}
+
+/**
+ * Implements hook_user_insert().
+ */
+function dropshark_user_insert(&$edit, $account, $category) {
+  $data['edit'] = $edit;
+  $data['account'] = $account;
+  $data['category'] = $category;
+  dropshark_handle_event('user_insert', $data);
+}
+
+/**
+ * Implements hook_user_update().
+ */
+function dropshark_user_update(&$edit, $account, $category) {
+  $data['edit'] = $edit;
+  $data['account'] = $account;
+  $data['category'] = $category;
+  dropshark_handle_event('user_update', $data);
+}
+
+/**
+ * Implements hook_user_cancel().
+ */
+function dropshark_user_cancel($edit, $account, $method) {
+  $data['edit'] = $edit;
+  $data['account'] = $account;
+  $data['method'] = $method;
+  dropshark_handle_event('user_cancel', $data);
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function dropshark_form_user_pass_alter(&$form) {
+  if (!in_array('dropshark_user_pass_reset', $form['#submit'])) {
+    $form['#submit'][] = 'dropshark_user_pass_reset';
+  }
+}
+
+/**
+ * Submit callback for user_pass form.
+ */
+function dropshark_user_pass_reset($form, $form_state) {
+  $account = $form_state['values']['account'];
+  dropshark_handle_event('user_pass_reset', $account);
 }

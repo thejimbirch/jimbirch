@@ -162,7 +162,6 @@ function dropshark_admin_config_reset_submit() {
  * Form submit handler for performing a data collection and submission.
  */
 function dropshark_admin_config_collect_submit() {
-  dropshark_handle_event('all');
-  dropshark_queue_process();
+  dropshark_handle_event('all', array(), TRUE);
   drupal_set_message(t('Data collection complete.'));
 }

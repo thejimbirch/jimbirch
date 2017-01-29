@@ -11,30 +11,28 @@ class DropSharkMemoryCollector extends DropSharkLinfoCollector {
   public function collect($event, $data = array()) {
 
     if (!$this->respond($event)) {
-      return DropSharkCollector::RESPONSE_NONE;
+      return;
     }
 
     $data = $this->defaultResult();
 
     if (!$this->checkLinfo($data)) {
-      return DropSharkCollector::RESPONSE_COMPLETE;
+      return;
     }
 
     $memory = $this->getData();
 
     if (empty($memory)) {
       $data['code'] = 'unable_to_determine_memory';
-      dropshark_queue_data($data);
-      return DropSharkCollector::RESPONSE_COMPLETE;
+      $this->queue->add($data);
+      return;
     }
 
-    $data['code'] = 0;
+    $data['code'] = DropSharkCollectorInterface::STATUS_SUCCESS;
     $data['free'] = $memory['free'];
     $data['total'] = $memory['total'];
     $data['used_percent'] = 1 - $memory['free'] / $memory['total'];
-
-    dropshark_queue_data($data);
-    return $data;
+    $this->queue->add($data);
   }
 
   /**

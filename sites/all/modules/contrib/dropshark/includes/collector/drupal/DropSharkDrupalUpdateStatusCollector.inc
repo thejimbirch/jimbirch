@@ -11,15 +11,15 @@ class DropSharkDrupalUpdateStatusCollector extends DropSharkCollectorBase {
   public function collect($event, $data = array()) {
 
     if (!$this->respond($event)) {
-      return DropSharkCollector::RESPONSE_NONE;
+      return;
     }
 
     $data = $this->defaultResult();
 
     if (!module_exists('update')) {
       $data['code'] = 'update_not_enabled';
-      dropshark_queue_data($data);
-      return DropSharkCollector::RESPONSE_COMPLETE;
+      $this->queue->add($data);
+      return;
     }
 
     $data['projects'] = array();
@@ -48,14 +48,13 @@ class DropSharkDrupalUpdateStatusCollector extends DropSharkCollectorBase {
         }
         $data['projects'][$project['name']] = $project['existing_version'];
       }
-      $data['code'] = 0;
+      $data['code'] = DropSharkCollectorInterface::STATUS_SUCCESS;
     }
     else {
       $data['code'] = 'unable_to_get_update_data';
     }
 
-    dropshark_queue_data($data);
-    return DropSharkCollector::RESPONSE_COMPLETE;
+    $this->queue->add($data);
   }
 
 }

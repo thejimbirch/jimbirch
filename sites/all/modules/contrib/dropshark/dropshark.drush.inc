@@ -44,7 +44,7 @@ function drush_dropshark_collect() {
   }
 
   if (!$key = variable_get('dropshark_site_id')) {
-    drush_log(dt('Invalid site URL.'), 'error');
+    drush_log(dt('DropShark not properly registered.'), 'error');
     return;
   }
 
@@ -65,6 +65,8 @@ function drush_dropshark_collect() {
     drush_log(dt('Sending data to DropShark.'), 'ok');
   }
 
-  dropshark_queue_process();
+  $queue = dropshark_get_queue();
+  $queue->transmit();
+
   drush_log(dt('Collection complete.'), 'ok');
 }

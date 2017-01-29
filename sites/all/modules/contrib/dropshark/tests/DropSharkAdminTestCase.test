@@ -5,8 +5,18 @@
  */
 class DropSharkAdminTestCase extends DrupalWebTestCase {
 
+  /**
+   * Administrative user.
+   *
+   * @var \stdClass
+   */
   protected $adminUser;
 
+  /**
+   * Defines test information.
+   *
+   * @return array
+   */
   public static function getInfo() {
     return array(
       'name' => 'DropShark admin',
@@ -15,12 +25,18 @@ class DropSharkAdminTestCase extends DrupalWebTestCase {
     );
   }
 
+  /**
+   * {@inheritdoc}
+   */
   function setUp() {
     parent::setUp('dropshark');
-    variable_set('dropshark_request_class', 'DropSharkRequestTest');
+    variable_set('dropshark_request_class', 'DropSharkWebTestRequest');
     $this->adminUser = $this->drupalCreateUser(array('administer site configuration'));
   }
 
+  /**
+   * Tests the configuration screen found at admin/config/services/dropshark.
+   */
   function testConfigScreen() {
     $initial_help_text = 'In order to register your site with the DropShark service, you\'ll need to enter your credentials and site identifier.';
     $configured_help_text = 'Your site is registered and will send data to DropShark. Log in to DropShark to analyze your data.';
@@ -64,6 +80,9 @@ class DropSharkAdminTestCase extends DrupalWebTestCase {
     $this->assertText($initial_help_text);
   }
 
+  /**
+   * Tests requirements set on status report page.
+   */
   function testRequirements() {
     $reg_text = 'Information collected from your site cannot be submitted to DropShark. Please register your site to utilize DropShark.';
     $conn_text = 'Information collected from your site cannot be submitted to DropShark. Please check your DropShark configuration.';

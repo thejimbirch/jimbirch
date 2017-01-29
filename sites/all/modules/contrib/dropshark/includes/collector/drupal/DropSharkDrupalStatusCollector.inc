@@ -11,7 +11,7 @@ class DropSharkDrupalStatusCollector extends DropSharkCollectorBase {
   public function collect($event, $data = array()) {
 
     if (!$this->respond($event)) {
-      return DropSharkCollector::RESPONSE_NONE;
+      return;
     }
 
     $data = $this->defaultResult();
@@ -48,12 +48,10 @@ class DropSharkDrupalStatusCollector extends DropSharkCollectorBase {
       }
     }
 
-    $data['code'] = 0;
+    $data['code'] = DropSharkCollectorInterface::STATUS_SUCCESS;
     $data['requirements'] = $requirements;
     $data['severity'] = $severities;
-
-    dropshark_queue_data($data);
-    return DropSharkCollector::RESPONSE_COMPLETE;
+    $this->queue->add($data);
   }
 
 }

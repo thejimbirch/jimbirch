@@ -1,40 +1,107 @@
 <?php
 
 /**
- * Interface DropSharkRequest.
+ * Class DropSharkRequest.
  */
-interface DropSharkRequest {
+class DropSharkRequest implements DropSharkRequestInterface {
 
   /**
-   * Get the hostname of the DropShark server.
+   * Authentication token.
    *
-   * @return string
-   *   The hostname of the DropShark server.
+   * @var string
    */
-  public function getHost();
+  protected $auth;
 
   /**
-   * Get data from DropShark.
+   * The DropShark backend host.
    *
-   * @param $endpoint
-   *   The endpoint to get data.
-   * @param array $data
-   *   Data to be sent in the request.
-   *
-   * @return stdClass
+   * @var string
    */
-  public function get($endpoint, $data = array());
+  protected $host;
 
   /**
-   * Post data to DropShark.
+   * DropSharkRequest constructor.
    *
-   * @param $endpoint
-   *   The endpoint to post data.
-   * @param array $data
-   *   Data to be sent in the request.
-   *
-   * @return stdClass
+   * @param string $host
+   *   The DropShark backend host.
+   * @param string $auth
+   *   Authentication token.
    */
-  public function post($endpoint, $data = array());
+  public function __construct($host, $auth) {
+    $this->host = $host;
+    $this->auth = $auth;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getHost() {
+    return $this->host;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function get($endpoint, $data = array()) {
+    $url = $this->host . '/' . $endpoint;
+
+    if ($data) {
+      $url .= '?' . drupal_http_build_query($data);
+    }
+
+    return $this->execute($url);
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function post($endpoint, $data = array()) {
+    $url = $this->host . '/' . $endpoint;
+    $options['method'] = 'POST';
+    $options['headers']['Content-Type'] = 'application/x-www-form-urlencoded';
+
+    if ($data) {
+      $options['data'] = drupal_http_build_query($data);
+    }
+
+    return $this->execute($url, $options);
+  }
+
+  /**
+   * Execute the HTTP request.
+   *
+   * @param $url
+   *   The URL which is being requested.
+   * @param array $options
+   *   An array of options to send to drupal_http_request().
+   *
+   * @return object
+   *   The result from drupal_http_request().
+   */
+  protected function execute($url, $options = array()) {
+    $options = $this->setAuth($options);
+    $result = drupal_http_request($url, $options);
+    if (isset($result->data)) {
+      $result->data = json_decode($result->data);
+    }
+    return $result;
+  }
+
+  /**
+   * Sets the site token into the request header.
+   *
+   * @param $options
+   *   The drupal_http_request() $options array.
+   *
+   * @return mixed
+   *   The resulting drupal_http_request() $options array.
+   */
+  protected function setAuth($options) {
+    if ($this->auth) {
+      $options['headers']['Authorization'] = $this->auth;
+    }
+
+    return $options;
+  }
 
 }

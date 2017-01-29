@@ -10,29 +10,27 @@ class DropSharkPhpApcCollector extends DropSharkCollectorBase {
 
   public function collect($event, $data = array()) {
     if (!$this->respond($event)) {
-      return DropSharkCollector::RESPONSE_NONE;
+      return;
     }
 
     $data = $this->defaultResult();
 
     if (!function_exists('apc_cache_info')) {
       $data['code'] = 'no_apc';
-      dropshark_queue_data($data);
-      return DropSharkCollector::RESPONSE_COMPLETE;
+      $this->queue->add($data);
+      return;
     }
 
     if (!$info = apc_cache_info('', TRUE)) {
       $data['code'] = 'apc_not_enabled';
-      dropshark_queue_data($data);
-      return DropSharkCollector::RESPONSE_COMPLETE;
+      $this->queue->add($data);
+      return;
     }
 
     $data += $info;
     $data['sma'] = apc_sma_info(TRUE);
-    $data['code'] = 0;
-
-    dropshark_queue_data($data);
-    return DropSharkCollector::RESPONSE_COMPLETE;
+    $data['code'] = DropSharkCollectorInterface::STATUS_SUCCESS;
+    $this->queue->add($data);
   }
 
 }

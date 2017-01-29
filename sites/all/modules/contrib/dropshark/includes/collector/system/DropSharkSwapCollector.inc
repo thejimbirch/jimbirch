@@ -14,32 +14,30 @@ class DropSharkSwapCollector extends DropSharkMemoryCollector {
   public function collect($event, $data = array()) {
 
     if (!$this->respond($event)) {
-      return DropSharkCollector::RESPONSE_NONE;
+      return;
     }
 
     $data = $this->defaultResult();
 
     if (!$this->checkLinfo($data)) {
-      return DropSharkCollector::RESPONSE_COMPLETE;
+      return;
     }
 
     $memory = $this->getData();
 
     if (empty($memory['swapInfo'][0])) {
       $data['code'] = 'unable_to_determine_swap';
-      dropshark_queue_data($data);
-      return DropSharkCollector::RESPONSE_COMPLETE;
+      $this->queue->add($data);
+      return;
     }
 
     $swap = $memory['swapInfo'][0];
 
-    $data['code'] = 0;
+    $data['code'] = DropSharkCollectorInterface::STATUS_SUCCESS;
     $data['used'] = $swap['used'];
     $data['size'] = $swap['size'];
     $data['used_percent'] = $swap['size'] ? $swap['used'] / $swap['size'] : NULL;
-
-    dropshark_queue_data($data);
-    return DropSharkCollector::RESPONSE_COMPLETE;
+    $this->queue->add($data);
   }
 
 }

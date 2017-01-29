@@ -21,4 +21,6 @@ function dropshark_collect_page() {
     'code' => 200,
     'result' => 'Data collection complete.',
   ));
+
+  drupal_exit();
 }
