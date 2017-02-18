@@ -171,20 +171,29 @@
 						<li class="fragment">and more</li>
 				</section>
 
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-Fermilab.jpg">
+					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);">Three basic types of searches</h1>
+					<div class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">
+						<ul>
+							<li>Navigational<br>
+								<small class="fragment">Searcher want to go somewhere, online or offline.</small>
+							</li>
+							<li class="fragment">Informational<br>
+								<small class="fragment">Searcher want to learn something.</small>
+							</li>
+							<li class="fragment">Transactional<br>
+								<small class="fragment">Searcher want to buy, sell, sign up, etc.</small>
+							</li>
+						</ul>
+					</div>
+				</section>
+
 				<section>
 					<img src="img/floor-finish/hardwood-floor-finishes.png" alt="search results - hardwood floor finishes">
 				</section>
 
 				<section>
 					<h2>hardwood floor finishes<br>1st Result</h2>
-					<div style="color:#fff;background:#444;float:right;font-size:75%;margin:0 0 40px 5%;padding:20px;width:30%;">
-						<h4>Basic types of searches</h4>
-						<ul>
-							<li>Navigational</li>
-							<li>Informational</li>
-							<li>Transactional</li>
-						</ul>
-					</div>
 					<ul style="width:55%;">
 						<li class="fragment">Primarily Informational, but also has Transactional elements</li>
 						<li class="fragment">Lots of informative links, and a shopping box.</li>
@@ -228,7 +237,7 @@
 
 				<section>
 					<img src="img/lil-bub-video.jpg" alt="Little Bub Video">
-					<p>One more example, showing how semantic Google is.</p></p>
+					<p>Another example showing how semantic Google is.</p></p>
 				</section>
 
 				<section>
@@ -294,10 +303,7 @@
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-the-cabana.jpg">
 					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:85%;">Search Engine Ranking Factors</h1>
-				</section>
-
-				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-by-the-pool-at-dusk.jpg">
-					<p style="display:inline-block;color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;"><strong>Search engine ranking factors</strong> are on- and off-site items that search engines use to evaluate a web property's placement in the search results for a certain query.</p>
+					<p class="fragment" style="display:inline-block;color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;"><strong>Search engine ranking factors</strong> are on- and off-site items that search engines use to evaluate a web property's placement in the search results for a certain query.</p>
 				</section>
 
 				<section>
@@ -314,7 +320,7 @@
 								<li><a href="http://searchengineland.com/google-divide-index-giving-mobile-users-better-fresher-content-261037">Separate Mobile Search Index</a></li>
 							</ul>
 						</li>
-						<li class="fragment">Factors can be ranked differently for each and every search term!</li>
+						<li class="fragment">Factors can be ranked differently for each and every search term.</li>
 					</ul>
 				</section>
 
@@ -386,37 +392,24 @@
 				</section>
 
 				<section>
-					<a href="http://www.searchmetrics.com/knowledge-base/ranking-factors-infographic-2015/"><img src="http://www.searchmetrics.com/wp-content/uploads/searchmetrics-ranking-factors-poster-US-Web.jpg" alt="Searchmetrics Ranking Factors 2015" style="width:80%;"></a>
-					<p><small><a href="http://www.searchmetrics.com/knowledge-base/ranking-factors-infographic-2015/">Searchmetrics Search Ranking Factors Infographic 2015</a></small></p>
+					<p><small><a href="http://www.searchmetrics.com/knowledge-base/ranking-factors/">Searchmetrics General Search Ranking Factors</a></small></p>
+					<a href="http://www.searchmetrics.com/knowledge-base/ranking-factors/"><img src="http://www.searchmetrics.com/wp-content/uploads/Searchmetrics-Ranking-Factors-Infographic-EN.jpg?x98318" alt="Searchmetrics General Ranking Factors 2016" style="width:80%;"></a>
 				</section>
 
 				<section>
-					<p>Searchmetrics separated the ranking factors into the following categories:</p>
+					<p>Moving forward, Searchmetrics is going to be publishing detailed industry report, instead of a general report.</p>
 					<ul>
-						<li class="fragment">Content</li>
-						<li class="fragment">User Experience</li>
-						<li class="fragment">Technical</li>
-						<li class="fragment">Backlinks</li>
-						<li class="fragment">Social</li>
+						<li>Travel</li>
+						<li>eCommerce</li>
+						<li>Finance</li>
+						<li>Health</li>
+						<li>Media</li>
 					</ul>
 				</section>
 
 				<section>
 					<a href="http://searchengineland.com/seotable"><img src="http://searchengineland.com/figz/wp-content/seloads/2011/06/periodic-table-of-seo-2015.png" alt="The Periodic Table Of SEO Success Factors" style="width:80%;"></a>
 					<p><small><a href="http://searchengineland.com/seotable">Search Engine Land - The Periodic Table Of SEO Success Factors</a></small></p>
-				</section>
-
-				<section>
-					<p>Search Engine Land separated the ranking factors into the following categories:</p>
-					<ul>
-						<li class="fragment">Content - On Site</li>
-						<li class="fragment">Architecture</li>
-						<li class="fragment">HTML</li>
-						<li class="fragment">Trust - Off Site</li>
-						<li class="fragment">Links</li>
-						<li class="fragment">Personal</li>
-						<li class="fragment">Social</li>
-					</ul>
 				</section>
 
 				<section>
@@ -432,19 +425,20 @@
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-the-Parthenon.jpg">
-					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:70%;">Content strategy and how it can guide development.</h1>
+					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:70%;">Content strategy should guide development.</h1>
 				</section>
 
 				<section>
 					<h2>The Content Strategy Quad</h2>
+					<img src="http://blog.braintraffic.com/wp-content/uploads/content-strategy-quad.gif" alt="Content Strategy Quad by Brain Traffic" style="width:45%;float:left;">
 					<ul>
-						<li class="fragment">Content Components
+						<li>Content Components
 							<ul>
 								<li>Substance</li>
 								<li>Structure</li>
 							</ul>
 						</li>
-						<li class="fragment">People Components
+						<li>People Components
 							<ul>
 								<li>Workflow</li>
 								<li>Governance</li>
@@ -474,7 +468,8 @@
 				</section>
 
 				<section>
-					<h2>Tools for Content Creators</h2>
+					<h2>Identify Goals and Substance</h2>
+					<h3>Tools for Content Creators</h3>
 					<ul>
 						<li><a href="https://adwords.google.com/KeywordPlanner">Google AdWords Keyword Planner</a></li>
 						<li><a href="http://www.searchmetrics.com/essentials/">Searchmetrics Essentials</a></li>
@@ -494,7 +489,8 @@
 				</section>
 
 				<section>
-					<h2>Drupal Tools</h2>
+					<h2>Determine Structure</h2>
+					<h3>Drupal Tools</h3>
 					<p>Once you can define your Content Types and Entities, you can use these Drupal tools to connect them.</p>
 					<ul>
 						<li class="fragment"><a href="https://www.drupal.org/project/references">Entity Reference Fields</a> can be used to render other entities inside your main entity</li>
@@ -510,7 +506,34 @@
 				</section>
 
 				<section>
-					<h2>Is the site easily crawlable?</h2>
+					<h2>Ranking Factor Categories</h2>
+					<div style="float:left;width: 50%">
+						<h3>On Site</h3>
+						<ul>
+							<li>Content</li>
+							<li>Architecture</li>
+							<li>HTML</li>
+						</ul>
+					</div>
+					<div style="float:left;width: 50%">
+						<h3>Off Site</h3>
+						<ul>
+							<li>Trust</li>
+							<li>Links</li>
+							<li>Personal</li>
+							<li>Social</li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					<h2>Content</h2>
+					<p>Are the pages well written, include keywords, new, include related content, answer questions?</p>
+				</section>
+
+				<section>
+					<h2>Architecture</h2>
+					<h3>Is the site easily crawlable?</h3>
 					<ul>
 						<li class="fragment">Well thought out menu</li>
 						<li class="fragment">Breadcrumbs with <a href="https://schema.org/BreadcrumbList">Schema.org Markup</a></li>
@@ -520,7 +543,8 @@
 				</section>
 
 				<section>
-					<h2>No Duplicate content</h2>
+					<h2>Architecture</h2>
+					<h3>No Duplicate content</h3>
 					<ul>
 						<li class="fragment"><a href="https://www.drupal.org/project/redirect">Redirect module</a></li>
 						<li class="fragment"><a href="https://www.drupal.org/project/metatag">Metatag module</a>, set Canonical URL</li>
@@ -528,12 +552,15 @@
 				</section>
 
 				<section>
-					<h2>Does the site work on mobile?</h2>
+					<h2>Architecture</h2>
+					<h3>Does the site work on mobile?</h3>
 					<p>Make sure you use a responsive theme, and it passes the <a href="https://www.google.com/webmasters/tools/mobile-friendly/">Google Mobile-Friendly Test</a></p>
+					<p class="fragment">Consider adding Accelerated Mobile Pages (AMP) structured markup to your site. <a href="https://www.drupal.org/project/amp">Drupal AMP module</a>.</p>
 				</section>
 
 				<section>
-					<h2>Does the site load quickly?</h2>
+					<h2>Architecture</h2>
+					<h3>Does the site load quickly?</h3>
 					<ul>
 						<li class="fragment">So many different types of Caching available in Drupal.</li>
 						<li class="fragment">CDN like <a href="https://www.cloudflare.com">Cloudflare</a></li>
@@ -542,12 +569,14 @@
 				</section>
 
 				<section>
-					<h2>Does the site contain keywords in the url?</h2>
+					<h2>Architecture</h2>
+					<h3>Does the site contain keywords in the url?</h3>
 					<p>Use the <a href="https://www.drupal.org/project/pathauto">Pathauto module</a> to set friendly URLs</p>
 				</section>
 
 				<section>
-					<h2>Is the site secure?</h2>
+					<h2>Architecture</h2>
+					<h3>Is the site secure?</h3>
 					<ul>
 						<li class="fragment">Use HTTPS with an SSL certificate for all sites here on out.</li>
 						<li class="fragment">Keep core and all modules up to date</li>
@@ -557,12 +586,14 @@
 				</section>
 
 				<section>
-					<h2>Does the Page Title contain keywords?</h2>
+					<h2>HTML</h2>
+					<h3>Does the Page Title contain keywords?</h3>
 					<p>Properly set up html title in Metatag module</p>
 				</section>
 
 				<section>
-					<h2>Does the Meta Description describe the pages?</h2>
+					<h2>HTML</h2>
+					<h3>Does the Meta Description describe the pages?</h3>
 					<ul>
 						<li class="fragment">Add a "Teaser" field which can be used with the Token and Metatag modules for meta description and search results.</li>
 						<li class="fragment">Same goes for a Feature Image field, used for OG/Twitter Card Meta Images.</li>
@@ -570,7 +601,8 @@
 				</section>
 
 				<section>
-					<h2>Does the site use Structured data?</h2>
+					<h2>HTML</h2>
+					<h3>Does the site use Structured data?</h3>
 					<p><a href="http://schema.org/">Schema.org</a> markup in content &amp; themes</p>
 						<pre>
 							<code>
@@ -588,7 +620,8 @@
 				</section>
 
 				<section>
-					<h2>Does the site use Structured data?</h2>
+					<h2>HTML</h2>
+					<h3>Does the site use Structured data?</h3>
 					<p><a href="http://json-ld.org/">JavaScript Object Notation for Linked Data (JSON-LD)</a><br>View block/pane using a contextual filter</p>
 						<pre>
 							<code>
@@ -611,7 +644,8 @@
 				</section>
 
 				<section>
-					<h2>Proper use of headers</h2>
+					<h2>HTML</h2>
+					<h3>Proper use of headers</h3>
 					<ul>
 						<li class="fragment">Proper, ordered use of h1, h2, h3</li>
 						<li class="fragment">Remove h1 from WYSIWYG if set by template</li>
