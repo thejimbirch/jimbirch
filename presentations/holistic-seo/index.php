@@ -125,7 +125,7 @@
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-Xeno.jpg">
 					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);">Why take a Holistic approach to seo?</h1>
 					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">It defines a set of best practices that ultimately benefits the user.</p>
-					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">As search engine algorithms get more complex and intelligent, we won't be able to control or predict changes.</p>
+					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">As search engine algorithms get more personalized, complex and intelligent, we won't be able to control or predict changes.</p>
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-the-Jungle.jpg">
@@ -645,12 +645,66 @@
 
 				<section>
 					<h2>HTML</h2>
+					<h3>Does the site use Structured data?</h3>
+					<p><a href="http://ogp.me/">Open Graph Protocol</a><br>The Open Graph protocol enables any web page to become a rich object in a social graph.</p>
+					<p><small><a href="https://developers.facebook.com/tools/debug/">Facebook Debugger</a></small></p>
+					<pre>
+						<code>
+<meta property="og:site_name" content="jimbir.ch"/>
+<meta property="og:type" content="public_figure"/>
+<meta property="og:url" content="http://jimbir.ch/blog/one-or-multiple-make-bootstrap-carousel-multiple-value-drupal-field"/>
+<meta property="og:title" content="One or Multiple. Make a Bootstrap Carousel from a Multiple Value Drupal Field"/>
+<meta property="og:description" content="Earlier this week I wrote how to create a Bootstrap Carousel using the Drupal Paragraphs module.  We can modify this approach to add a Bootstrap Carousel on a field.  I use this most on nodes that have a Featured Image field, one where we can use as a hero image, and one where we can set the Open Graph Meta image on a per node basis."/>
+<meta property="og:image" content="http://jimbir.ch/sites/default/files/img/blog/Lego%20Uncle%20Jim%20in%20Greece%20at%20the%20cafe.JPG"/>
+						</code>
+					</pre>
+				</section>
+
+				<section>
+					<h2>HTML</h2>
+					<h3>Does the site use Structured data?</h3>
+					<p><a href="https://dev.twitter.com/cards/overview">Twitter Cards</a><br>With Twitter Cards, you can attach rich photos, videos and media experiences to Tweets.</p>
+					<p><small><a href="https://cards-dev.twitter.com/validator">Twitter Card Validator</a></small></p>
+					<pre>
+						<code>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:site" content="@thejimbirch"/>
+<meta name="twitter:site:id" content="2989027096"/>
+<meta name="twitter:creator" content="@thejimbirch"/>
+<meta name="twitter:creator:id" content="2989027096"/>
+<meta name="twitter:url" content="http://jimbir.ch/blog/one-or-multiple-make-bootstrap-carousel-multiple-value-drupal-field"/>
+<meta name="twitter:title" content="One or Multiple. Make a Bootstrap Carousel from a Multiple Value Drupal Field"/>
+<meta name="twitter:description" content="Earlier this week I wrote how to create a Bootstrap Carousel using the Drupal Paragraphs module.  We can modify this approach to add a Bootstrap Carousel on a field.  I use this most on nodes that have a Featured Image field, one where we can use as a hero image, and one where we can set the Open Graph Meta image on a per node basis."/>
+<meta name="twitter:image" content="http://jimbir.ch/sites/default/files/img/blog/Lego%20Uncle%20Jim%20in%20Greece%20at%20the%20cafe.JPG"/>
+						</code>
+					</pre>
+				</section>
+
+				<section>
+					<h2>HTML</h2>
+					<h3>Does the site use Structured data?</h3>
+					<p><a href="https://www.ampproject.org/">Accelerated Mobile Pages (AMP)</a><br>Allows publishers to create mobile optimized content <u>on Google</u>.<br>
+					<small><a href="https://www.drupal.org/project/amp">AMP Drupal Module</a></small></p>
+					<img src="https://www.drupal.org/files/styles/grid-3/public/project-images/drupal-amp-text-white-on-blue.png?itok=tKWMe9fA" alt="Drupal AMP Drupal Module">
+				</section>
+
+				<section>
+					<h2>HTML</h2>
+					<h3>Does the site use Structured data?</h3>
+					<p><a href="https://instantarticles.fb.com/">Facebook Instant Articles</a><br>Allows publishers to create fast, interactive articles <u>on Facebook</u>.<br>
+					<small><a href="https://www.drupal.org/project/fb_instant_articles">Facebook Instant Articles Drupal Module</a></small></p>
+					<img src="img/Drupal-Facebook-Instant-Articles.png" alt="Facebook Instant Articles Drupal Module">
+				</section>
+
+				<section>
+					<h2>HTML</h2>
 					<h3>Proper use of headers</h3>
 					<ul>
 						<li class="fragment">Proper, ordered use of h1, h2, h3</li>
 						<li class="fragment">Remove h1 from WYSIWYG if set by template</li>
 						<li class="fragment">In the theme, remove h3 from block headers, to reserve for content use.</li>
 					</ul>
+					<p class="fragment">This is also good for Accessibility.  As a rule of thumb, what is good for A11Y is good for SEO.</p>
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-the-Turkish-Cafe.jpg">
