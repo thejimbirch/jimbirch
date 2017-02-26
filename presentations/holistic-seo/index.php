@@ -112,10 +112,10 @@
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-reads-email.jpg">
 					<h1 style="padding-left:20px;">Holistic SEO and Drupal</h1>
 					<h3 style="float:left;padding-left:20px;width:75%;">Best practices in an ever changing search landscape</h3>
-					<p style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.5);padding:20px;">Created by <a href="http://jimbir.ch">Jim Birch</a><br>
-					<a href="http://jimbir.ch/presentations/holistic-seo">jimbir.ch/holistic-seo</a><br>
-					<a href="http://twitter.com/thejimbirch">@thejimbirch</a><br>
-					<a href="http://www.xenomedia.com">Xeno Media, Inc.</a></p>
+					<p style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.5);padding:20px;">Created by <a href="http://jimbir.ch" style="color: #fff; border-bottom: 1px dotted #ededed;">Jim Birch</a><br>
+					<a href="http://jimbir.ch/presentations/holistic-seo" style="color: #fff; border-bottom: 1px dotted #ededed;">jimbir.ch/holistic-seo</a><br>
+					<a href="http://twitter.com/thejimbirch" style="color: #fff; border-bottom: 1px dotted #ededed;">@thejimbirch</a><br>
+					<a href="http://www.xenomedia.com" style="color: #fff; border-bottom: 1px dotted #ededed;">Xeno Media, Inc.</a></p>
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Greece-by-the-steps.jpg">
@@ -236,8 +236,14 @@
 				</section>
 
 				<section>
+					<h3>rekkyvajavick coffee</h3>
+					<h4>How Americans search for coffee in Iceland</h4>
+					<img src="img/coffee-search.jpg" alt="search results - coffee in Iceland">
+				</section>
+
+				<section>
 					<img src="img/lil-bub-video.jpg" alt="Little Bub Video">
-					<p>Another example showing how semantic Google is.</p></p>
+					<p>One more example showing how semantic Google is.</p></p>
 				</section>
 
 				<section>
@@ -496,7 +502,7 @@
 						<li class="fragment"><a href="https://www.drupal.org/project/references">Entity Reference Fields</a> can be used to render other entities inside your main entity</li>
 						<li class="fragment"><a href="https://www.drupal.org/project/inline_entity_form">Inline Entity Form</a> can be used on top of reference fields to allow the user to add new, or select existing entities.</li>
 						<li class="fragment"><a href="https://www.drupal.org/project/paragraphs">Paragraphs</a>, and <a href="https://www.drupal.org/project/eck">Entity Construction Kit (ECK)</a> are great modules to build reorderable, custom entities that reference other structured data entities</li>
-						<li class="fragment"><a href="https://www.drupal.org/project/token">Token module</a> can be used to bridge your entities fields and Metatag fields and JSON-LD Views</li>
+						<li class="fragment"><a href="https://www.drupal.org/project/token">Token module</a> can be used to bridge your entities fields and Metatag fields, Views and more</li>
 					</ul>
 				</section>
 
@@ -528,7 +534,14 @@
 
 				<section>
 					<h2>Content</h2>
-					<p>Are the pages well written, include keywords, new, include related content, answer questions?</p>
+					<ul>
+						<li class="fragment">Are the pages well written?</li>
+						<li class="fragment">Does is include keywords and phrases around your topic?</li>
+						<li class="fragment">Is the content new?</li>
+						<li class="fragment">Does the content include related content (Images, News, Video, etc)?</li>
+						<li class="fragment">Does the content answer questions?</li>
+						<li class="fragment" style="color: #ff0000;">Negative Factor: Is the Content thin?</li>
+					</ul>
 				</section>
 
 				<section>
@@ -586,9 +599,15 @@
 				</section>
 
 				<section>
+					<h2>Architecture</h2>
+					<h3>Cloaking</h3>
+					<p style="color: #ff0000;">Negative Factor: Showing different content to humans and search engines.</p>
+				</section>
+
+				<section>
 					<h2>HTML</h2>
 					<h3>Does the Page Title contain keywords?</h3>
-					<p>Properly set up html title in Metatag module</p>
+					<p>Properly set up html title using Token values in Metatag module</p>
 				</section>
 
 				<section>
@@ -598,6 +617,12 @@
 						<li class="fragment">Add a "Teaser" field which can be used with the Token and Metatag modules for meta description and search results.</li>
 						<li class="fragment">Same goes for a Feature Image field, used for OG/Twitter Card Meta Images.</li>
 					</ul>
+				</section>
+
+				<section>
+					<h2>HTML</h2>
+					<h3>Does the Meta Description describe the pages?</h3>
+					<img src="img/teaser-and-image-field.png" alt="Teaser and Image Field on XenoMedia.com">
 				</section>
 
 				<section>
@@ -707,6 +732,60 @@
 					<p class="fragment">This is also good for Accessibility.  As a rule of thumb, what is good for A11Y is good for SEO.</p>
 				</section>
 
+				<section>
+					<h2>HTML</h2>
+					<h3 style="color: #ff0000;">Negative Factors: Hiding and Stuffing</h3>
+					<ul>
+						<li style="color: #ff0000;">Don't overuse keywords just for Search engines.</li>
+						<li style="color: #ff0000;">Don't use CSS or JS to hide words you want to be ranked for.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Offsite Factors</h2>
+					<h3>Trust</h3>
+					<ul>
+						<li><b>Authority:</b> Is the site a trusted authority? External links</li>
+						<li><b>Engage:</b> Bounce Rate</li>
+						<li><b>History:</b> Has the domain/site been around?</li>
+						<li><b>Identity:</b> </li>
+						<li style="color: #ff0000;"><b>Negative Factor - Piracy:</b> Flagged for pirated content</li>
+						<li style="color: #ff0000;"><b>Negative Factor - Ads:</b> Too many ads above the fold</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Offsite Factors</h2>
+					<h3>Links</h3>
+					<ul>
+						<li><b>Quality:</b> Links, shares, social</li>
+						<li><b>Text:</b> Bounce Rate</li>
+						<li><b>Number:</b> Has the domain/site been around?</li>
+						<li style="color: #ff0000;"><b>Negative Factor - Paid Links:</b> Don't buy links!</li>
+						<li style="color: #ff0000;"><b>Negative Factor - Spam:</b> Comment/Forum Spam</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Offsite Factors</h2>
+					<h3>Personal</h3>
+					<ul>
+						<li><b>Country:</b> Same country as searcher</li>
+						<li><b>Locality:</b> Same city/town</li>
+						<li><b>History:</b> Has the user visited the site before?</li>
+						<li><b>Social:</b> Has the site been shared in circles?</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Offsite Factors</h2>
+					<h3>Social</h3>
+					<ul>
+						<li><b>Reputation:</b> Is your site respected on social networks?</li>
+						<li><b>Shares:</b> Content shares</li>
+					</ul>
+				</section>
+
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-the-Turkish-Cafe.jpg">
 					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:75%;">Tips &amp; Tools for Developers</h1>
 				</section>
@@ -750,10 +829,10 @@
 				<section style="text-align: left;" data-background="img/Lego-Uncle-Jim-at-Sunset.jpg">
 					<h1 style="padding-left:20px;">THE END</h1>
 					<h3 style="padding-left:20px;">Continuing the conversation:</h3>
-					<p style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.5);padding:20px;">Created by <a href="http://jimbir.ch">Jim Birch</a><br>
-					<a href="http://jimbir.ch/presentations/holistic-seo">jimbir.ch/holistic-seo</a><br>
-					<a href="http://twitter.com/thejimbirch">@thejimbirch</a><br>
-					<a href="http://www.xenomedia.com">Xeno Media, Inc.</a></p>
+					<p style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.5);padding:20px;">Created by <a href="http://jimbir.ch" style="color: #fff; border-bottom: 1px dotted #ededed;">Jim Birch</a><br>
+					<a href="http://jimbir.ch/presentations/holistic-seo" style="color: #fff; border-bottom: 1px dotted #ededed;">jimbir.ch/holistic-seo</a><br>
+					<a href="http://twitter.com/thejimbirch" style="color: #fff; border-bottom: 1px dotted #ededed;">@thejimbirch</a><br>
+					<a href="http://www.xenomedia.com" style="color: #fff; border-bottom: 1px dotted #ededed;">Xeno Media, Inc.</a></p>
 				</section>
 
 			</div>
