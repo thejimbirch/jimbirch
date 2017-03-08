@@ -1,0 +1,13 @@
+# Ignore configuration files for the local envronment.
+sites/*/local.settings.php
+sites/*/drush/local.aliases.php
+# Ignore paths that contain user-generated content.
+sites/*/files
+sites/*/private
+.htaccess
+*.sublime-project
+*.sublime-workspace
+nbproject
+nbproject/*
+Drupal.sublime-projectcompletions
+dploy.yaml
