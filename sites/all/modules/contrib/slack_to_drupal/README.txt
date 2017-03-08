@@ -42,6 +42,9 @@ REQUIREMENTS
  * Slack App (See instruction below on creating a Slack app)
  * File Entity
  * Date
+ * Ctools
+ * System
+ * Field
 
 
 INSTALLATION

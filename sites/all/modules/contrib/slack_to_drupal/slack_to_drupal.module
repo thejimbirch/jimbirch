@@ -167,13 +167,12 @@ function slack_to_drupal_import_images() {
         $save = file_put_contents('public://' . $folder_name . '/' . $f['name'], $slack_image->data);
       }
       else {
-        for ($i = 0; $i < 10; $i++) {
-          $name_parts = explode('.', $f['name']);
-          $f['name'] = $name_parts[0] . '_' . $i . '.' . $name_parts[1];
-          if (!file_exists('public://' . $folder_name . '/' . $f['name'])) {
-            $save = file_put_contents('public://' . $folder_name . '/' . $f['name'], $slack_image->data);
-            break;
-          }
+        // Using file id in that case to make the file name unique (when
+        // uploading to app it names the files the same).
+        $name_parts = explode('.', $f['name']);
+        $f['name'] = $name_parts[0] . '_' . $f['id'] . '.' . $name_parts[1];
+        if (!file_exists('public://' . $folder_name . '/' . $f['name'])) {
+          $save = file_put_contents('public://' . $folder_name . '/' . $f['name'], $slack_image->data);
         }
       }
 

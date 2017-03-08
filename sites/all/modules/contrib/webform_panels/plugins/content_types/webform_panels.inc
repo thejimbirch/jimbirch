@@ -182,7 +182,7 @@ function webform_panels_webform_panels_render($subtype, $conf, $panel_args, $con
   if($access){
 
     $render = node_view($node, $view_mode);
-    $block->content .= render($render);
+    $block->content = render($render);
   }
 
   return $block;
