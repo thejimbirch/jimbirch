@@ -1,41 +1,35 @@
 <!doctype html>
 <html lang="en">
-
 	<head>
 		<meta charset="utf-8">
-		<title>Bootstrap and Paragraphs | Web Development Presentation</title>
-		<meta name="description" content="This presentation reviews the implementation of Drupal Paragraphs and the Bootstrap framework."/>
+		<title>Bootstrap Paragraphs | Web Development Presentation | Drupalcon Baltimore 2017</title>
+		<meta name="description" content="This presentation covers the Bootstrap Paragraphs Drupal module which provides a suite of content and layout Paragraph bundles made with the Bootstrap front-end framework."/>
 		<link rel="canonical" href="http://jimbir.ch/presentations/bootstrap-paragraphs/"/>
 		<meta property="og:site_name" content="Jim Birch"/>
 		<meta property="og:type" content="public_figure"/>
 		<meta property="og:url" content="http://jimbir.ch/presentations/bootstrap-paragraphs/"/>
-		<meta property="og:title" content="Bootstrap and Paragraphs | Web Development Presentation"/>
-		<meta property="og:description" content="This presentation reviews the implementation of Drupal Paragraphs and the Bootstrap framework."/>
+		<meta property="og:title" content="Bootstrap and Paragraphs | Web Development Presentation | Drupalcon Baltimore 2017"/>
+		<meta property="og:description" content="This presentation covers the Bootstrap Paragraphs Drupal module which provides a suite of content and layout Paragraph bundles made with the Bootstrap front-end framework."/>
 		<meta property="og:image" content="http://jimbir.ch/presentations/bootstrap/img/Lego-Uncle-Jim-at-the-Pool-Waterfall.jpg"/>
 		<meta name="twitter:site" content="@thejimbirch"/>
 		<meta name="twitter:site:id" content="2989027096"/>
 		<meta name="twitter:creator" content="@thejimbirch"/>
 		<meta name="twitter:creator:id" content="2989027096"/>
 		<meta name="twitter:url" content="http://jimbir.ch/presentations/bootstrap-paragraphs/"/>
-		<meta name="twitter:title" content="Bootstrap and Paragraphs | Web Development Presentation"/>
-		<meta name="twitter:description" content="This presentation reviews the implementation of Drupal Paragraphs and the Bootstrap framework."/>
+		<meta name="twitter:title" content="Bootstrap and Paragraphs | Web Development Presentation | Drupalcon Baltimore 2017"/>
+		<meta name="twitter:description" content="This presentation covers the Bootstrap Paragraphs Drupal module which provides a suite of content and layout Paragraph bundles made with the Bootstrap front-end framework."/>
 		<meta name="twitter:image:src" content="http://jimbir.ch/presentations/bootstrap/img/Lego-Uncle-Jim-at-the-Pool-Waterfall.jpg"/>
-		<meta itemprop="name" content="Bootstrap and Paragraphs | Web Development Presentation"/>
-		<meta itemprop="description" content="This presentation reviews the implementation of Drupal Paragraphs and the Bootstrap framework."/>
+		<meta itemprop="name" content="Bootstrap and Paragraphs | Web Development Presentation | Drupalcon Baltimore 2017"/>
+		<meta itemprop="description" content="This presentation covers the Bootstrap Paragraphs Drupal module which provides a suite of content and layout Paragraph bundles made with the Bootstrap front-end framework."/>
 		<meta itemprop="image" content="http://jimbir.ch/presentations/bootstrap/img/Lego-Uncle-Jim-at-the-Pool-Waterfall.jpg"/>
 		<meta name="author" content="Jim Birch">
-
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/white.css" id="theme">
-
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
-
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -44,16 +38,24 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
-
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
-
 		<style type="text/css">
 			.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
-				background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+				background: rgba(0, 0, 0, 0.7) none repeat scroll 0 0;
 				color: #fff;
 				text-shadow: 1px 1px 1px rgba(0,0,0,0.4)
+			}
+
+			.reveal .box a,
+			.fixed-footer a {
+		    color: #9dcccc;
+			}
+
+			.reveal .box a:hover,
+			.fixed-footer a:hover {
+		    color: #fff;
 			}
 
 			.backgrounds .slide-background {
@@ -69,6 +71,7 @@
 			}
 
 			.fixed-footer {
+				color: #9dcccc;
 				position:fixed;
 				bottom:20px;
 				left:30px;
@@ -115,27 +118,29 @@
 
 		</script>
 	</head>
-
 	<body>
-
 		<div class="reveal">
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="fixed-footer">
-				<div style="float:left;"><a href="http://jimbir.ch/presentations/bootstrap-paragraphs/">jimbir.ch/bsp</a> | <a href="http://www.twitter.com/thejimbirch" title="@thejimbirch">@thejimbirch</a></div>
+				<div style="float:left;"><a href="http://jimbir.ch/presentations/bootstrap-paragraphs/">jimbir.ch/bp</a> | <a href="http://www.twitter.com/thejimbirch" title="@thejimbirch">@thejimbirch</a></div>
 				<div style="float:right;"><a href="http://www.xenomedia.com" title="Xeno Media, Inc"><img src="img/xeno-media-logo.png" alt="Xeno Media, Inc" style="height:14px;width:auto;"></a></div>
 			</div>
 			<div class="slides">
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-the-Pool-Waterfall.jpg">
-					<h1 style="font-size:2.25em;padding-left:20px;width:75%">Bootstrap Framework and Drupal Paragraphs</h1>
-					<p style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.5);padding:20px;">Created by <a href="http://jimbir.ch">Jim Birch</a><br>
-					<a href="http://jimbir.ch/presentations/bootstrap-paragraphs/">jimbir.ch/bsp</a><br>
-					<a href="http://twitter.com/thejimbirch">@thejimbirch</a><br>
-					<a href="http://www.xenomedia.com">Xeno Media, Inc.</a></p>
+					<h1 style="font-size:2.25em;padding-left:20px;width:75%">Bootstrap Paragraphs</h1>
+					<div style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.7);padding-left:20px;width:75%">
+						<a href="https://events.drupal.org/baltimore2017"><img src="img/drupalcon-baltimore-logo.png" alt="DrupalCon Baltimore 2017" style="float: left; width: 200px; height: auto;"></a><br>
+						<div class="box" style="float: left;padding-left:20px;padding-bottom:20px;margin-top:-30px">Created by <a href="http://jimbir.ch">Jim Birch</a><br>
+							<a href="http://jimbir.ch/presentations/bootstrap-paragraphs/">jimbir.ch/bp</a><br>
+							<a href="http://twitter.com/thejimbirch">@thejimbirch</a><br>
+							<a href="http://www.xenomedia.com">Xeno Media, Inc.</a>
+						</div>
+					</div>
 				</section>
 
-				<section style="text-align:left;" data-background="img/bootstrap-paragraphs-module.jpg">
-					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:65%;"><a href="https://www.drupal.org/project/bootstrap_paragraphs">Bootstrap Paragraphs Module</a></h1>
-					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">A suite of content and layout Paragraph bundles made with the Bootstrap framework and Entity reference fields.</p>
+				<section style="text-align:left;" data-background="img/bootstrap-paragraphs-module.png">
+					<h1 class="fragment box" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:65%;"><a href="https://www.drupal.org/project/bootstrap_paragraphs">Bootstrap Paragraphs Module</a></h1>
+					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px 0 20px 20px;width:65%;">A suite of content and layout Paragraph bundles made with the Bootstrap framework and Entity reference fields.</p>
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-Xeno.jpg">
@@ -196,7 +201,7 @@
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-Blogs.jpg">
 					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);">Let's make some Paragraphs!</h1>
-					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Thanks to a great <a href="https://www.youtube.com/watch?v=nRB4n09Ekpg">presentation I saw at Twin Cities Drupal Camp by Les Lim and David Needham</a>, I was presented the idea of separating Content and Layout paragraph bundles.</p>
+					<p class="fragment box" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Thanks to a great <a href="https://www.youtube.com/watch?v=nRB4n09Ekpg">presentation I saw at Twin Cities Drupal Camp by Les Lim and David Needham</a>, I was presented the idea of separating Content and Layout paragraph bundles.</p>
 				</section>
 
 				<section>
@@ -287,13 +292,37 @@
 					</ul>
 				</section>
 
+				<section>
+					<h2>Join Us for Contribution Sprints</h2>
+					<h3>Friday, April 28, 2017</h3>
+					<div style="float: left; width: 32%;margin-bottom: 30px;">
+						<strong>First-Time Sprinter Workshop</strong><br>
+						9:00am-12:00pm<br>
+						Room: 307-308
+					</div>
+					<div style="float: left; padding-left: 1%; width: 32%;margin-bottom: 30px;">
+						<strong>Mentored Core Sprint</strong><br>
+						9:00am-12:00pm<br>
+						Room: 301-303
+					</div>
+					<div style="float: left; padding-left: 1%; width: 32%;margin-bottom: 30px;">
+						<strong>General Sprints</strong><br><br>
+						9:00am-6:00pm<br>
+						Room: 309-310
+					</div>
+					<h4 style="clear: left;">#drupalsprints</h4>
+				</section>
+
 				<section style="text-align: left;" data-background="img/Lego-Uncle-Jim-at-Sunset.jpg">
-					<h1 style="padding-left:20px;">THE END</h1>
+					<h1 style="padding-left:20px;">The End</h1>
 					<h3 style="padding-left:20px;">Continuing the conversation:</h3>
-					<p style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.5);padding:20px;">Created by <a href="http://jimbir.ch">Jim Birch</a><br>
-					<a href="http://jimbir.ch/presentations/bootstrap-paragraphs/">jimbir.ch/bsp</a><br>
-					<a href="http://twitter.com/thejimbirch">@thejimbirch</a><br>
-					<a href="http://www.xenomedia.com">Xeno Media, Inc.</a></p>
+					<div class="box" style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.7);padding:20px;">
+						<a href="http://jimbir.ch/presentations/bootstrap-paragraphs/">jimbir.ch/bp</a><br>
+						<a href="http://twitter.com/thejimbirch">@thejimbirch</a><br>
+						<a href="http://www.xenomedia.com">Xeno Media, Inc.</a><br>
+						<a href="https://events.drupal.org/baltimore2017/sessions/bootstrap-paragraphs">Leave feedback about this presentation</a><br>
+						<a href="https://www.surveymonkey.com/r/drupalconbaltimore">Take the DrupalCon survey</a>
+					</div>
 				</section>
 
 			</div>
