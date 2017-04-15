@@ -140,11 +140,11 @@
 
 				<section style="text-align:left;" data-background="img/bootstrap-paragraphs-module.png">
 					<h1 class="fragment box" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:65%;"><a href="https://www.drupal.org/project/bootstrap_paragraphs">Bootstrap Paragraphs Module</a></h1>
-					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px 0 20px 20px;width:65%;">A suite of content and layout Paragraph bundles made with the Bootstrap framework and Entity reference fields.</p>
+					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px 0 20px 20px;width:65%;">The Bootstrap Paragraphs module provides a suite of content and layout Paragraph bundles made with the Bootstrap front-end framework.</p>
 				</section>
 
-				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-Xeno.jpg">
-					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);">Bootstrap Framework</h1>
+				<section>
+					<h1 class="box" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);"><a href="http://getbootstrap.com/">Bootstrap Framework</a></h1>
 					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.</p>
 				</section>
 
@@ -196,12 +196,31 @@
 								<li>Ability to add semantic markup, Schema.org, JSON-LD</li>
 							</ul>
 						</li>
+						<li class="fragment">Easy to administer layouts
+							<ul>
+								<li>Multiple columns</li>
+								<li>Quickly restructuring rows</li>
+								<li>Heros, Slideshows and more!</li>
+							</ul>
+						</li>
 					</ul>
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-Blogs.jpg">
-					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);">Let's make some Paragraphs!</h1>
-					<p class="fragment box" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Thanks to a great <a href="https://www.youtube.com/watch?v=nRB4n09Ekpg">presentation I saw at Twin Cities Drupal Camp by Les Lim and David Needham</a>, I was presented the idea of separating Content and Layout paragraph bundles.</p>
+					<h1 style="padding-left:20px;padding-right:20px;background: rgba(0, 0, 0, 0.8);width:70%;">Strategy</h1>
+					<div class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:70%;">
+						<ul>
+							<li>One module that would create the base bundles needed for every site.</li>
+							<li class="fragment">Create base templates &amp; CSS that can be used with any site that includes Bootstrap.</li>
+							<li class="fragment">Harness the power of Entity Reference Revisions fields to nest Paragraph bundles.</li>
+							<li class="fragment">Have global width &amp; background color options on all bundles.</li>
+						</ul>
+					</div>
+				</section>
+
+				<section>
+					<h2>Inspiration</h2>
+					<p>Thanks to Les Lim and David Needham's great presentation <a href="https://www.youtube.com/watch?v=nRB4n09Ekpg">Using Paragraphs to Weave a Beautiful Content Tapestry</a>, I was started the practice of separating paragraph bundles into Content, Layout and Ponies categories.</p>
 				</section>
 
 				<section>
@@ -210,20 +229,21 @@
 					<ul>
 						<li>Simple HTML</li>
 						<li>Image</li>
-						<li>Block (Drupal and Custom)</li>
-						<li>Contact Forms</li>
+						<li>Blank</li>
+						<li>Contact Form</li>
+						<li>Drupal Blocks</li>
 						<li>Views</li>
-						<li>Media</li>
+						<li>Media <small style="padding-top:12px;">(Coming soon to a core near you!)</small></li>
 					</ul>
 				</section>
 
 				<section>
 					<h2>Layout bundles</h2>
-					<p>Bootstrap functionality, with Entity Reference fields to allow any content bundles.</p>
+					<p>Entity Reference Revisions fields to other Paragraph bundles.</p>
 					<ul>
 						<li>Columns - Multi-value Paragraphs reference field, that prints Bootstrap grid.</li>
 						<li>Carousel - Multi-value Paragraphs reference field, that prints Bootstrap carousel. Also has slide interval field.</li>
-						<li>Accordion, Tabs, Modal...</li>
+						<li>Accordion, Modal, Tabs, and Views.</li>
 					</ul>
 				</section>
 
@@ -280,6 +300,57 @@
 				<section>
 					<h2>Manage Display</h2>
 					<img src="img/Manage-Display.png">
+				</section>
+
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-Xeno.jpg">
+					<h1 class="fragment box" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);"><a href="http://www.xenomedia.com">Xeno Media</a></h1>
+					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Xeno Media, Inc. is a Chicago-based agency providing Drupal Development, Web Consulting and Design to the world's greatest clients.</p>
+				</section>
+
+				<section>
+					<h2>Many thanks to:</h2>
+					<ul>
+						<li>All my amazing co-workers and clients at Xeno Media.</li>
+						<li>Albert Jankowski (<a href="https://www.drupal.org/u/albertski">albertski</a>) for helping me develop this module and always helping me debug all the Drupal 8 things!</li>
+					</ul>
+				</section>
+
+				<section style="text-align:left;" data-background="img/about-zoomdata.png" data-background-position="center top">
+				</section>
+
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-Zoomdata.jpg">
+					<h1 class="box" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);"><a href="https://www.zoomdata.com">Zoomdata</a></h1>
+					<div class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:47%;float:left;">
+						<ul>
+							<li><strong>Founded:</strong> 2012</li>
+							<li><strong>Employees:</strong> 125</li>
+							<li><strong>Offices:</strong>
+								<ul>
+									<li>San Mateo, CA</li>
+									<li>Reston, VA</li>
+									<li>New York, NY</li>
+									<li>Kyiv, Ukraine</li>
+								</ul>
+							</li>
+						</ul>
+						<p><strong>Zoomdata is Hiring!</strong><br>Visit <a href="https://www.zoomdata.com">zoomdata.com/careers</a></p>
+					</div>
+					<div class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px 20px 60px;width:44.4%;float:left;">
+						<ul>
+							<li><strong>Customers:</strong>
+								<ul>
+									<li>Goldman Sachs</li>
+									<li>Amazon</li>
+									<li>Cisco</li>
+									<li>Juniper</li>
+									<li>Deloitte</li>
+									<li>Abbvie</li>
+									<li>DHS</li>
+									<li>ClickFox</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
 				</section>
 
 				<section>

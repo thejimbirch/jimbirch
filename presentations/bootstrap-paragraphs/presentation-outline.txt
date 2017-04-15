@@ -1,0 +1,51 @@
+# Bootstrap Paragraphs
+
+The Bootstrap Paragraphs module provides a suite of content and layout Paragraph bundles made with the Bootstrap front-end framework.
+
+## Why use the Bootstrap Paragraphs module?
+A suite of content and layout Paragraph bundles made with the Bootstrap framework and Entity reference fields.
+
+## Why use the Bootstrap Framework
+
+## Why use Paragraphs
+
+## Module Strategy
+
+### Content Bundles
+#### Simple HTML
+#### Image
+#### Blank
+#### Contact Forms
+#### Drupal Blocks
+#### Views
+
+### Layout Bundles
+#### Grids
+##### Columns (Even, up to 6)
+##### Columns (3 Uneven)
+##### Columns (2 Uneven)
+#### Accordion
+#### Carousel
+#### Modal
+#### Tabs
+
+### Global Settings
+#### Widths
+#### Backgrounds
+
+## Template Strategy
+
+## Uninstall this module!
+
+## Extend the module
+### Custom Blocks
+### Xeno Hero
+
+## Building a module using config
+
+## Use this approach with other frameworks
+### Singularity
+### Foundation
+### etc...
+
+## What's next?
