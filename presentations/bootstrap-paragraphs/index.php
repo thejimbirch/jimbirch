@@ -207,11 +207,11 @@
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-Blogs.jpg">
-					<h1 style="padding-left:20px;padding-right:20px;background: rgba(0, 0, 0, 0.8);width:70%;">Strategy</h1>
-					<div class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:70%;">
+					<h1 style="padding-left:20px;padding-right:20px;background: rgba(0, 0, 0, 0.9);width:70%;">Strategy</h1>
+					<div class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.9);padding:20px;width:70%;">
 						<ul>
-							<li>One module that would create the base bundles needed for every site.</li>
-							<li class="fragment">Create base templates &amp; CSS that can be used with any site that includes Bootstrap.</li>
+							<li>One module that would create the basics needed for every site.</li>
+							<li class="fragment">Create base templates &amp; CSS that could be used with any theme that includes Bootstrap.</li>
 							<li class="fragment">Harness the power of Entity Reference Revisions fields to nest Paragraph bundles.</li>
 							<li class="fragment">Have global width &amp; background color options on all bundles.</li>
 						</ul>
@@ -220,7 +220,8 @@
 
 				<section>
 					<h2>Inspiration</h2>
-					<p>Thanks to Les Lim and David Needham's great presentation <a href="https://www.youtube.com/watch?v=nRB4n09Ekpg">Using Paragraphs to Weave a Beautiful Content Tapestry</a>, I was started the practice of separating paragraph bundles into Content, Layout and Ponies categories.</p>
+					<p>Thanks to Les Lim and David Needham's great presentation <a href="https://www.youtube.com/watch?v=nRB4n09Ekpg">Using Paragraphs to Weave a Beautiful Content Tapestry</a>, I learned the idea of separating paragraph bundles into Content, Layout and Ponies categories.</p>
+					<p>This idea helped me solidify the structure of this module.</p>
 				</section>
 
 				<section>
@@ -239,12 +240,85 @@
 
 				<section>
 					<h2>Layout bundles</h2>
-					<p>Entity Reference Revisions fields to other Paragraph bundles.</p>
+					<p>Entity Reference Revisions fields to other Paragraphs.</p>
 					<ul>
-						<li>Columns - Multi-value Paragraphs reference field, that prints Bootstrap grid.</li>
-						<li>Carousel - Multi-value Paragraphs reference field, that prints Bootstrap carousel. Also has slide interval field.</li>
-						<li>Accordion, Modal, Tabs, and Views.</li>
+						<li>Columns - Multi-value Paragraphs reference field, that renders in a Bootstrap grid.</li>
+						<li>Carousel - Multi-value Paragraphs reference field, that renders a Bootstrap carousel/slideshow.</li>
+						<li>Accordion - Uses Bootstrap Collapse Javascript to create collapsible content sections.</li>
+						<li>Modal - Uses Bootstrap Modal Javascript to create popup content sections.</li>
+						<li>Tabs - Uses Bootstrap Tabs Javascript to create tabbed content sections.</li>
 					</ul>
+				</section>
+
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Iceland.jpg">
+					<h1 style="padding-left:20px;padding-right:20px;background: rgba(0, 0, 0, 0.9);width:70%;">Paragraph Bundle Types</h1>
+				</section>
+
+				<section>
+					<h2>Simple</h2>
+					<p>This Paragraphs type has a formatted long text field, which we configured to use the Full HTML text format during installation.  This is essentially what you would expect from a normal body field.</p>
+					<img src="http://live-bootstrap-paragraphs.pantheonsite.io/sites/default/files/2017-01/Bootstrap-Paragraphs-Bundle-Type-Simple_0.png" alt="Bootstrap Paragraphs - Simple">
+				</section>
+
+				<section>
+					<h2>Image</h2>
+					<p>This Paragraphs type has an Image reference field, and a Link field if you want to link the image.  Because this uses Drupal core's Image module, we get to set the default field attributes, and require an ALT tag, which is required for proper accessibility.</p>
+					<img src="http://live-bootstrap-paragraphs.pantheonsite.io/sites/default/files/2017-01/Bootstrap-Paragraphs-Bundle-Type-Image_1.png" alt="Bootstrap Paragraphs - Image">
+				</section>
+
+				<section>
+					<h2>Blank</h2>
+					<p>The Blank Paragraphs type is perfect for less restrictive HTML and JavaScript.&nbsp; I use these paragraphs for thinks like scripts from external services like <a href="https://mailchimp.com/">Mailchimp</a>, <a href="http://www.pardot.com/">Pardot</a>, <a href="https://www.oracle.com/marketingcloud/products/marketing-automation/index.html">Eloqua</a>, <a href="https://www.marketo.com/">Marketo</a>; and adding page specific <a href="http://json-ld.org/">JSON-LD</a> for SEO.</p>
+					<img src="http://live-bootstrap-paragraphs.pantheonsite.io/sites/default/files/2017-01/Bootstrap-Paragraphs-Bundle-Type-Blank.png" alt="Bootstrap Paragraphs - Blank">
+				</section>
+
+				<section>
+					<h2>Contact Form</h2>
+					<p>The Bootstrap Paragraphs Contact Form type allows you to embed one of Drupal 8 core's Contact Forms anywhere you need it, including inside of Accordions, Carousels, Columns, Modals, and Tabs. This is possible thanks to the <a href="https://www.drupal.org/project/contact_formatter">Contact Formatter module</a>.</p>
+					<p>Add <a href="https://www.drupal.org/project/inline_entity_form">Inline Entity Form</a> to allow your administrators to add new, or select existing Contact Forms.</p>
+					<img src="http://live-bootstrap-paragraphs.pantheonsite.io/sites/default/files/2017-01/Bootstrap-Paragraphs-Type-Contact-Form.png" alt="Bootstrap Paragraphs - Contact Form">
+				</section>
+
+				<section>
+					<h2>Drupal Blocks</h2>
+					<p>The Drupal Block Paragraphs type has a reference field to Drupal core, System, and Menus blocks for easy inclusion in your content.</p>
+					<p>You can also use this type as an example for creating a Paragraphs type for your custom blocks.</p>
+					<img src="http://live-bootstrap-paragraphs.pantheonsite.io/sites/default/files/2017-01/Bootstrap-Paragraphs-Type-Drupal-Block.png" alt="Bootstrap Paragraphs - Drupal Block">
+				</section>
+
+				<section>
+					<h2>Drupal Blocks</h2>
+					<p>Some Drupal blocks do not render.&nbsp; Here is the list of working and not working at the time DrupalCon Baltimore.</p>
+					<div style="width:47%;float:left;">
+						<p><strong>Working</strong></p>
+						<ul>
+							<li>Footer menu</li>
+							<li>Main navigation</li>
+							<li>Powered by Drupal</li>
+							<li>Site branding</li>
+							<li>Status messages</li>
+							<li>Tabs</li>
+						</ul>
+					</div>
+					<div style="width:44.4%;float:left;">
+						<p><strong>Not Working</strong></p>
+						<ul>
+							<li>Administration menu</li>
+							<li>Breadcrumbs</li>
+							<li>Main page Content</li>
+							<li>Page title</li>
+							<li>Primary admin actions</li>
+							<li>Syndicate</li>
+							<li>Tools</li>
+							<li>User account menu</li>
+							<li>User login</li>
+						</ul>
+					</div>
+				</section>
+				<section>
+					<h2>Views</h2>
+					<p>The Bootstrap Paragraphs Views type allows you to easily embed a view in and around your other Paragraphs.</p>
+					<img src="http://live-bootstrap-paragraphs.pantheonsite.io/sites/default/files/2017-01/Bootstrap-Paragraphs-Type-Views.png" alt="Bootstrap Paragraphs - Views">
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-the-Water.jpg">
