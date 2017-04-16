@@ -35,17 +35,14 @@ A suite of content and layout Paragraph bundles made with the Bootstrap framewor
 
 ## Template Strategy
 
-## Uninstall this module!
+## Overriding -- Uninstall this module!
 
 ## Extend the module
 ### Custom Blocks
 ### Xeno Hero
-
-## Building a module using config
+### Building a module using config
 
 ## Use this approach with other frameworks
-### Singularity
-### Foundation
-### etc...
+### Singularity, Foundation, etc...
 
 ## What's next?

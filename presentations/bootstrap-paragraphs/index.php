@@ -207,13 +207,13 @@
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-Blogs.jpg">
-					<h1 style="padding-left:20px;padding-right:20px;background: rgba(0, 0, 0, 0.9);width:70%;">Strategy</h1>
+					<h1 style="padding-left:20px;padding-right:20px;background: rgba(0, 0, 0, 0.9);width:70%;">Module Strategy</h1>
 					<div class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.9);padding:20px;width:70%;">
 						<ul>
-							<li>One module that would create the basics needed for every site.</li>
+							<li>Create a module that would make the basics structure needed for every site.</li>
 							<li class="fragment">Create base templates &amp; CSS that could be used with any theme that includes Bootstrap.</li>
-							<li class="fragment">Harness the power of Entity Reference Revisions fields to nest Paragraph bundles.</li>
-							<li class="fragment">Have global width &amp; background color options on all bundles.</li>
+							<li class="fragment">Harness the power of Entity Reference Revisions fields to nest Paragraphs.</li>
+							<li class="fragment">Have global width &amp; background color options.</li>
 						</ul>
 					</div>
 				</section>
@@ -315,65 +315,263 @@
 						</ul>
 					</div>
 				</section>
+
 				<section>
 					<h2>Views</h2>
-					<p>The Bootstrap Paragraphs Views type allows you to easily embed a view in and around your other Paragraphs.</p>
+					<p>The Bootstrap Paragraphs Views type allows you to easily embed a view in and around your other Paragraphs using a <a href="https://www.drupal.org/project/viewsreference">Views Reference Field</a>.</p>
 					<img src="http://live-bootstrap-paragraphs.pantheonsite.io/sites/default/files/2017-01/Bootstrap-Paragraphs-Type-Views.png" alt="Bootstrap Paragraphs - Views">
 				</section>
 
-				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-the-Water.jpg">
-					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:80%;">Widths</h1>
-					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Every paragraph, whether content or layout has the option to set one of five widths, from narrow to full screen using a List/Text field.</p>
+				<section>
+					<h2>Columns</h2>
+					<p style="text-align:left;">The three Bootstrap Paragraphs Column types allows content creators to add column structure into their content using a <strong>Column Content field</strong> which is a reference to other Paragraphs.  The field allows for multiple, so columns can be easily reordered.</p>
+					<p style="text-align:left;">The Columns (Equal) type allows for up to 6 references, and distributes the content evenly between however many columns are there.  The Three Column and Two Column Uneven types allow for 3 and 2 items respectively, and have an additional Column Style option to choose the style of the grid.</p>
 				</section>
 
 				<section>
-					<h2>Widths - Twig</h2>
-					<img src="img/Twig-Widths.png" alt="">
+					<h2>Equal Columns</h2>
+					<img src="http://live-bootstrap-paragraphs.pantheonsite.io/sites/default/files/2017-01/Bootstrap-Paragraphs-Type-Columns.png" alt="Bootstrap Paragraphs - Columns">
 				</section>
 
 				<section>
-					<h2>Widths - LESS</h2>
-					<img src="img/LESS-widths.png" style="width:70%;height:auto;">
+					<h2>Two Uneven Columns</h2>
+					<img src="http://live-bootstrap-paragraphs.pantheonsite.io/sites/default/files/2017-01/Bootstrap-Paragraphs-Type-Columns-2.png" alt="Bootstrap Paragraphs - Two Columns">
 				</section>
 
 				<section>
-					<h2>Carousel - Twig</h2>
-					<img src="img/Twig-Carousel.png">
+					<h2>Three Uneven Columns</h2>
+					<img src="http://live-bootstrap-paragraphs.pantheonsite.io/sites/default/files/2017-01/Bootstrap-Paragraphs-Type-Columns-2.png" alt="Bootstrap Paragraphs - Three Columns">
 				</section>
 
 				<section>
-					<h2>Columns Field Template</h2>
-					<img src="img/Twig-Column-Field.png">
+					<h2>Carousel</h2>
+					<p>The Bootstrap Paragraphs Views type allows you to easily embed a view in and around your other Paragraphs using a <a href="https://www.drupal.org/project/viewsreference">Views Reference Field</a>.</p>
+					<img src="img/bp_carousel_gif.gif" alt="Bootstrap Paragraphs - Views">
 				</section>
 
 				<section>
-					<h2>Columns - LESS</h2>
-					<img src="img/LESS-columns.png">
+					<h2>Accordion</h2>
+					<p>The Bootstrap Paragraphs Accordion implements the <a href="http://getbootstrap.com/javascript/#collapse">Bootstrap Collapse Javascript</a> to create an accordion with the panel/card component. The Accordion references the Accordion Section Paragraph Type which has a title and a Paragraph reference section for the accordion body.</p>
+					<img src="img/bp_accordion_gif.gif" alt="Bootstrap Paragraphs - Accordion">
+				</section>
+
+				<section>
+					<h2>Modal</h2>
+					<p>The Bootstrap Paragraphs Modal allows for content creators to easily add modals to the site.</p>
+					<p>The bundle has 4 fields:</p>
+					<ul>
+						<li>Modal Button Text - the trigger that launches the modal</li>
+						<li>Modal Title - the title of the modal</li>
+						<li>Modal Body - Paragraph reference field</li>
+						<li>Modal Footer - Paragraph reference field</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Modal</h2>
+					<img src="img/bp_modal_gif.gif" alt="Bootstrap Paragraphs - Modal" style="width: 60%;">
+				</section>
+
+				<section>
+					<h2>Tabs</h2>
+					<p>The Bootstrap Paragraphs Tabs allows for other Paragraph entities to be loaded in the Tab Section field.</p>
+					<img src="img/bp_tabs_gif.gif" alt="Bootstrap Paragraphs - Tabs">
+				</section>
+
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-the-Water.jpg" data-background-position="center top">
+					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:80%;">Global Settings</h1>
+					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Every paragraph, whether content or layout has the option to set background color and one of five widths, from narrow to full using List/Text Select fields.</p>
+				</section>
+
+				<section>
+					<h2>Widths</h2>
+					<p>Each Paragraph has an option where you can set one of 5 widths.  As the width gets narrower, the content becomes centered using Bootstraps offset classes.  The widths are:</p>
+					<ul>
+				    <li><strong>Tiny</strong>: col-4, offset-4</li>
+				    <li><strong>Narrow</strong>: col-6, offset-3</li>
+				    <li><strong>Medium</strong>: col-8, offset-2</li>
+				    <li><strong>Wide</strong>: col-10, offset-1</li>
+				    <li><strong>Full</strong>: col-12</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Widths</h2>
+					<img src="img/bp_widths.jpg" alt="Bootstrap Paragraphs - Widths" style="width: 30%;">
+				</section>
+
+				<section>
+					<h2>Background Colors</h2>
+					<p>Each Paragraph has a background color option. Included are over 50 background colors and five empty background classes for you to customize in your own theme.</p>
+					<p>Empty classes follow the Bootstrap nomenclature:</p>
+					<ul>
+						<li>.paragraph--color--primary</li>
+						<li>.paragraph--color--secondary</li>
+						<li>.paragraph--color--success</li>
+						<li>.paragraph--color--info</li>
+						<li>.paragraph--color--warning</li>
+						<li>.paragraph--color--danger</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Background Colors</h2>
+					<img src="img/bp_colors.jpg" alt="Bootstrap Paragraphs - Colors" style="width:75%;">
+				</section>
+
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Berkeley.jpg">
+					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:80%;">Template Strategy</h1>
+				</section>
+
+				<section>
+					<h2>Markup - div.paragraph</h2>
+					<pre>
+						<code>
+ <div class="paragraph">
+
+ </div>
+						</code>
+					</pre>
+					<ul>
+						<li>We apply the Bootstrap <code>.row</code> rules</li>
+						<li>Stretches to the edge in a <code>.container</code> or <code>.container-fluid</code></li>
+						<li>Also works if <a href="http://getbootstrap.com/css/#grid-nesting">nested in another column</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Markup - div.paragraph</h2>
+					<pre>
+						<code>
+ <div class="paragraph paragraph-type--simple
+ 	 paragraph--view-mode--default paragraph--width--full
+	 paragraph--color paragraph--color--rgba-blue-light">
+
+ </div>
+						</code>
+					</pre>
+					<ul>
+						<li>Name: <code>.paragraph-type--name</code></li>
+						<li>View Mode: <code>.paragraph--view-mode--default</code></li>
+						<li>Widths: <code>.paragraph--width--name</code></li>
+						<li>Colors: <code>.paragraph--color</code><br><code>.paragraph--color--color-name</code></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Markup - div.paragraph__column</h2>
+					<pre>
+						<code>
+ <div class="paragraph paragraph-type--simple
+ 	 paragraph--view-mode--default paragraph--width--full">
+ 	 <div class="paragraph__column">
+
+ 	 </div>
+ </div>
+						</code>
+					</pre>
+					<p>We apply the appropriate Bootstrap column rules based on the width selected.</p>
+				</section>
+
+				<section>
+					<h2>Markup - The Content</h2>
+					<pre>
+						<code>
+ <div class="paragraph paragraph-type--simple
+ 	 paragraph--view-mode--default paragraph--width--full">
+ 	 <div class="paragraph__column">
+		{{ content|without('bp_width', 'bp_background') }}
+ 	 </div>
+ </div>
+						</code>
+					</pre>
+					<p>The content is added without the background color and width fields.</p>
+				</section>
+
+				<section>
+					<h2>Twig - Width example</h2>
+					<img src="img/twig-width-field.png" alt="Twig markup for Width Field">
+				</section>
+
+				<section>
+					<h2>Drupal Asset libraries</h2>
+					<p>In our Paragraphs templates we use a library to load our two CSS files only on pages that need it.</p>
+					<small><code>{{ attach_library('bootstrap_paragraphs/bootstrap-paragraphs') }}</code></small>
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Greece-by-the-cactus-by-the-sea.jpg">
-					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:65%;">Colors</h1>
-					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Similar to widths, we have a list field with colors from <a href="http://mdbootstrap.com/css/colors/#rgba-colors">Material Design for Bootstrap</a> and five ready to style bootstrap-like classes (Primary, Secondary, Info, Warning, etc...)</p>
+					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:65%;">Overriding</h1>
+					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Customize Bootstrap Paragraphs in your own them after you've installed.</p>
 				</section>
 
 				<section>
-					<h2>Colors</h2>
-					<img src="img/Twig-Colors.png" alt="">
+					<h2>Bundles and Fields</h2>
+					<p>After installation, Bundles and Fields are kept in your <strong>database</strong> and in your <strong>configuration</strong>.</p>
+					<p>Any changes you make will be yours.</p>
 				</section>
 
 				<section>
-					<h2>Adding Classes</h2>
-					<img src="img/Twig-Adding-Classes.png" alt="" style="width:70%;height:auto;">
+					<h2>CSS &amp; Templates</h2>
+					<p>Your theme has a higher priority than this module.  Move the template files, and Overwrite the CSS from your theme if desired.</p>
 				</section>
 
 				<section>
-					<h2>Rendering content without fields</h2>
-					<img src="img/Rendering-Content.png" alt="">
+					<h2>Uninstall this module!</h2>
+					<p>In fact, you can uninstall this module after installation and still keep all the functionality.</p>
+					<ul>
+						<li>Move the templates to your theme, and remove the <code>attach_library</code> call.</li>
+						<li>Move the CSS files to your theme and call them from you theme's library file.</li>
+					</ul>
+				</section>
+
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Greece-by-the-cactus-by-the-road.jpg">
+					<h1 class="fragment box" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:60%;">Extending Bootstrap Paragraphs</h1>
 				</section>
 
 				<section>
-					<h2>Manage Display</h2>
-					<img src="img/Manage-Display.png">
+					<h2>Create a new Paragraphs Bundle Type</h2>
+				</section>
+
+				<section>
+					<h2>1</h2>
+				</section>
+
+				<section>
+					<h2>2</h2>
+				</section>
+
+				<section>
+					<h2>Xeno Hero</h2>
+				</section>
+
+				<section>
+					<h2>1</h2>
+				</section>
+
+				<section>
+					<h2>2</h2>
+				</section>
+
+				<section>
+					<h2>Building a module using config</h2>
+				</section>
+
+				<section>
+					<h2>1</h2>
+				</section>
+
+				<section>
+					<h2>2</h2>
+				</section>
+
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-Fermilab.jpg">
+					<h1 class="fragment box" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:60%;">Thanks</h1>
+				</section>
+
+				<section>
+					<h2>To Sum up</h2>
+					<p>Using Frameworks benefits productivity (Drupal, Bootstrap, Paragraphs).  That is what I was trying to acheive by building this module.</p>
+					<p>But you can also use this approach with other front end frameworks -- Singularity, Foundation, Slick, etc...</p>
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-Xeno.jpg">
@@ -394,36 +592,38 @@
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-Zoomdata.jpg">
 					<h1 class="box" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);"><a href="https://www.zoomdata.com">Zoomdata</a></h1>
-					<div class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:47%;float:left;">
-						<ul>
-							<li><strong>Founded:</strong> 2012</li>
-							<li><strong>Employees:</strong> 125</li>
-							<li><strong>Offices:</strong>
-								<ul>
-									<li>San Mateo, CA</li>
-									<li>Reston, VA</li>
-									<li>New York, NY</li>
-									<li>Kyiv, Ukraine</li>
-								</ul>
-							</li>
-						</ul>
-						<p><strong>Zoomdata is Hiring!</strong><br>Visit <a href="https://www.zoomdata.com">zoomdata.com/careers</a></p>
-					</div>
-					<div class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px 20px 60px;width:44.4%;float:left;">
-						<ul>
-							<li><strong>Customers:</strong>
-								<ul>
-									<li>Goldman Sachs</li>
-									<li>Amazon</li>
-									<li>Cisco</li>
-									<li>Juniper</li>
-									<li>Deloitte</li>
-									<li>Abbvie</li>
-									<li>DHS</li>
-									<li>ClickFox</li>
-								</ul>
-							</li>
-						</ul>
+					<div class="fragment">
+						<div style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:47%;float:left;">
+							<ul>
+								<li><strong>Founded:</strong> 2012</li>
+								<li><strong>Employees:</strong> 125</li>
+								<li><strong>Offices:</strong>
+									<ul>
+										<li>San Mateo, CA</li>
+										<li>Reston, VA</li>
+										<li>New York, NY</li>
+										<li>Kyiv, Ukraine</li>
+									</ul>
+								</li>
+							</ul>
+							<p><strong>Zoomdata is Hiring!</strong><br>Visit <a href="https://www.zoomdata.com">zoomdata.com/careers</a></p>
+						</div>
+						<div style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px 20px 60px;width:44.4%;float:left;">
+							<ul>
+								<li><strong>Customers:</strong>
+									<ul>
+										<li>Goldman Sachs</li>
+										<li>Amazon</li>
+										<li>Cisco</li>
+										<li>Juniper</li>
+										<li>Deloitte</li>
+										<li>Abbvie</li>
+										<li>DHS</li>
+										<li>ClickFox</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</section>
 
