@@ -345,7 +345,7 @@
 
 				<section>
 					<h2>Carousel</h2>
-					<p>The Bootstrap Paragraphs Views type allows you to easily embed a view in and around your other Paragraphs using a <a href="https://www.drupal.org/project/viewsreference">Views Reference Field</a>.</p>
+					<p>The Bootstrap Paragraphs Carousel allows for other Paragraph entities to be loaded in the Slide Content field.  Cycle through images, simples, or multi-column pieces of content.  The Carousel also has a Slide Interval speed option.</p>
 					<img src="img/bp_carousel_gif.gif" alt="Bootstrap Paragraphs - Views">
 				</section>
 
