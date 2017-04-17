@@ -1,3 +1,3 @@
-# Optimizing Drupal 7 HTML Markup
+# Bootstrap Paragraphs
 
-Reveal.js presentation slides by Jim Birch that cover techniques for optimizing the HTML output of Drupal 7
+Reveal.js presentation slides by Jim Birch that cover the Bootstrap Paragraphs Drupal 8 module.
