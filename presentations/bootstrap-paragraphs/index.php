@@ -105,6 +105,15 @@
 				color: #ffa837;
 			}
 
+			.reveal pre {
+				margin: 0 auto 0 -12.5%;
+				width: 125%;
+			}
+
+			.reveal pre code {
+				max-height: none;
+			}
+
 		</style>
 
 		<script>
@@ -141,6 +150,27 @@
 				<section style="text-align:left;" data-background="img/bootstrap-paragraphs-module.png">
 					<h1 class="fragment box" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:65%;"><a href="https://www.drupal.org/project/bootstrap_paragraphs">Bootstrap Paragraphs Module</a></h1>
 					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px 0 20px 20px;width:65%;">The Bootstrap Paragraphs module provides a suite of content and layout Paragraph bundles made with the Bootstrap front-end framework.</p>
+				</section>
+
+				<section>
+					<h2>Already using Paragraphs?</h2>
+					<p class="fragment">How many times have you built...</p>
+					<ul>
+						<li class="fragment">Three Column Paragraph</li>
+						<li class="fragment">Text and Image Paragraph</li>
+						<li class="fragment">Text Paragraph</li>
+					</ul>
+				</section>
+
+				<section>
+					<p>And how many times have you or your co-workers build it just a little bit different?</p>
+					<p><img src="https://media.giphy.com/media/6uMqzcbWRhoT6/giphy.gif" alt="Cat Gif"></p>
+				</section>
+
+				<section>
+					<h2>If you're not using Paragraphs yet</h2>
+					<p>Install this module on a test site and start exploring all the possibilities Paragraphs offers, and how you can customize to fit your needs.</p>
+					<p><img src="https://media.giphy.com/media/UmO1IuCwW14k/giphy.gif" alt="Rainbow Cat Gif"></p>
 				</section>
 
 				<section>
@@ -242,11 +272,11 @@
 					<h2>Layout bundles</h2>
 					<p>Entity Reference Revisions fields to other Paragraphs.</p>
 					<ul>
-						<li>Columns - Multi-value Paragraphs reference field, that renders in a Bootstrap grid.</li>
-						<li>Carousel - Multi-value Paragraphs reference field, that renders a Bootstrap carousel/slideshow.</li>
-						<li>Accordion - Uses Bootstrap Collapse Javascript to create collapsible content sections.</li>
-						<li>Modal - Uses Bootstrap Modal Javascript to create popup content sections.</li>
-						<li>Tabs - Uses Bootstrap Tabs Javascript to create tabbed content sections.</li>
+						<li>Columns</li>
+						<li>Carousel</li>
+						<li>Accordion</li>
+						<li>Modal</li>
+						<li>Tabs</li>
 					</ul>
 				</section>
 
@@ -324,23 +354,30 @@
 
 				<section>
 					<h2>Columns</h2>
-					<p style="text-align:left;">The three Bootstrap Paragraphs Column types allows content creators to add column structure into their content using a <strong>Column Content field</strong> which is a reference to other Paragraphs.  The field allows for multiple, so columns can be easily reordered.</p>
-					<p style="text-align:left;">The Columns (Equal) type allows for up to 6 references, and distributes the content evenly between however many columns are there.  The Three Column and Two Column Uneven types allow for 3 and 2 items respectively, and have an additional Column Style option to choose the style of the grid.</p>
+					<p style="text-align:left;">The three Bootstrap Paragraphs Column types allows content creators to add column structure into their content using a <strong>Column Content field</strong>.</p>
+					<p style="text-align:left;">The field allows for multiple, so columns can be easily reordered by drag and drop in the admin UI.</p>
+				</section>
+
+				<section>
+					<h2>Columns</h2>
+					<ul>
+						<li><strong>Columns (Equal)</strong> - allows for up to 6 references, and distributes the content evenly, up to 6 columns</li>
+						<li class="fragment"><strong>3 and 2 Column Uneven</strong> - allow for 3 and 2 items respectively, and have an additional Column Style option to choose the layout of the grid.</p>
 				</section>
 
 				<section>
 					<h2>Equal Columns</h2>
-					<img src="http://live-bootstrap-paragraphs.pantheonsite.io/sites/default/files/2017-01/Bootstrap-Paragraphs-Type-Columns.png" alt="Bootstrap Paragraphs - Columns">
+					<img src="img/bp_columns_equal.png" alt="Bootstrap Paragraphs - Columns">
 				</section>
 
 				<section>
 					<h2>Two Uneven Columns</h2>
-					<img src="http://live-bootstrap-paragraphs.pantheonsite.io/sites/default/files/2017-01/Bootstrap-Paragraphs-Type-Columns-2.png" alt="Bootstrap Paragraphs - Two Columns">
+					<img src="img/bp_columns_2.png" alt="Bootstrap Paragraphs - Two Columns">
 				</section>
 
 				<section>
 					<h2>Three Uneven Columns</h2>
-					<img src="http://live-bootstrap-paragraphs.pantheonsite.io/sites/default/files/2017-01/Bootstrap-Paragraphs-Type-Columns-2.png" alt="Bootstrap Paragraphs - Three Columns">
+					<img src="img/bp_columns_3.png" alt="Bootstrap Paragraphs - Three Columns">
 				</section>
 
 				<section>
@@ -376,6 +413,11 @@
 					<h2>Tabs</h2>
 					<p>The Bootstrap Paragraphs Tabs allows for other Paragraph entities to be loaded in the Tab Section field.</p>
 					<img src="img/bp_tabs_gif.gif" alt="Bootstrap Paragraphs - Tabs">
+				</section>
+
+				<section>
+					<h2>Those are the basic Paragraph Types</h2>
+					<img src="https://media.giphy.com/media/cHqUlvvPvperS/giphy.gif" alt="Dancing Cat">
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-the-Water.jpg" data-background-position="center top">
@@ -420,18 +462,16 @@
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Berkeley.jpg">
-					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:80%;">Template Strategy</h1>
+					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:80%;">Template &amp; Markup Strategy</h1>
 				</section>
 
 				<section>
 					<h2>Markup - div.paragraph</h2>
-					<pre>
-						<code>
+					<pre><code>
  <div class="paragraph">
 
  </div>
-						</code>
-					</pre>
+						</code></pre>
 					<ul>
 						<li>We apply the Bootstrap <code>.row</code> rules</li>
 						<li>Stretches to the edge in a <code>.container</code> or <code>.container-fluid</code></li>
@@ -441,17 +481,15 @@
 
 				<section>
 					<h2>Markup - div.paragraph</h2>
-					<pre>
-						<code>
+					<pre><code>
  <div class="paragraph paragraph-type--simple
  	 paragraph--view-mode--default paragraph--width--full
 	 paragraph--color paragraph--color--rgba-blue-light">
 
  </div>
-						</code>
-					</pre>
+						</code></pre>
 					<ul>
-						<li>Name: <code>.paragraph-type--name</code></li>
+						<li>Type: <code>.paragraph-type--type</code></li>
 						<li>View Mode: <code>.paragraph--view-mode--default</code></li>
 						<li>Widths: <code>.paragraph--width--name</code></li>
 						<li>Colors: <code>.paragraph--color</code><br><code>.paragraph--color--color-name</code></li>
@@ -460,31 +498,27 @@
 
 				<section>
 					<h2>Markup - div.paragraph__column</h2>
-					<pre>
-						<code>
+					<pre><code>
  <div class="paragraph paragraph-type--simple
  	 paragraph--view-mode--default paragraph--width--full">
  	 <div class="paragraph__column">
 
  	 </div>
  </div>
-						</code>
-					</pre>
+						</code></pre>
 					<p>We apply the appropriate Bootstrap column rules based on the width selected.</p>
 				</section>
 
 				<section>
 					<h2>Markup - The Content</h2>
-					<pre>
-						<code>
+					<pre><code>
  <div class="paragraph paragraph-type--simple
  	 paragraph--view-mode--default paragraph--width--full">
  	 <div class="paragraph__column">
 		{{ content|without('bp_width', 'bp_background') }}
  	 </div>
  </div>
-						</code>
-					</pre>
+						</code></pre>
 					<p>The content is added without the background color and width fields.</p>
 				</section>
 
@@ -497,6 +531,41 @@
 					<h2>Drupal Asset libraries</h2>
 					<p>In our Paragraphs templates we use a library to load our two CSS files only on pages that need it.</p>
 					<small><code>{{ attach_library('bootstrap_paragraphs/bootstrap-paragraphs') }}</code></small>
+				</section>
+
+				<section>
+					<h2>Page Template Suggestions</h2>
+					<p>For Full Width Colors, add a new Region into your <code>page.html.twig</code></p>
+					<pre><code>
+ {% if page.structured_content %}
+   {% block structured_content %}
+     <div class="structured-content container">
+       {{ page.structured_content }}
+     </div>
+   {% endblock %}
+ {% endif %}
+						</code></pre>
+				</section>
+
+				<section>
+					<p>And add the following CSS to your theme.</p>
+					<pre><code>
+ /* Adds full width, margin-less and padding-less container for Paragraphs. */
+ /* This is so colors go full width.  Padding is on interior elements. */
+ .structured-content.container {
+   padding-left: 0;
+   padding-right: 0;
+   width: 100%;
+ }
+ .structured-content.container > div {
+   margin-left: 0;
+   margin-right: 0;
+ }
+ .structured-content.container > div > div {
+   padding-left: 0;
+   padding-right: 0;
+ }
+						</code></pre>
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Greece-by-the-cactus-by-the-sea.jpg">
@@ -519,8 +588,8 @@
 					<h2>Uninstall this module!</h2>
 					<p>In fact, you can uninstall this module after installation and still keep all the functionality.</p>
 					<ul>
-						<li>Move the templates to your theme, and remove the <code>attach_library</code> call.</li>
-						<li>Move the CSS files to your theme and call them from you theme's library file.</li>
+						<li class="fragment">Move the templates to your theme, and remove the <code>attach_library</code> call.</li>
+						<li class="fragment">Move the CSS files to your theme and call them from you theme's library file.</li>
 					</ul>
 				</section>
 
@@ -529,49 +598,110 @@
 				</section>
 
 				<section>
-					<h2>Create a new Paragraphs Bundle Type</h2>
+					<h2>Create a new "Custom Block" Paragraphs Bundle Type</h2>
+					<p>Use the Drupal Block Paragraph to provide the example.</p>
+					<img src="img/Custom-Block-1-Drupal-Block-Example.png" alt="Screenshot of Custom Block">
 				</section>
 
 				<section>
-					<h2>1</h2>
+					<h2>Custom Block</h2>
+					<p>Add a new Paragraph Type.</p>
+					<img src="img/Custom-Block-2-Add-Paragraph-Type.png" alt="Screenshot of Custom Block 1">
 				</section>
 
 				<section>
-					<h2>2</h2>
+					<h2>Custom Block</h2>
+					<p>Add the existing Background field.</p>
+					<img src="img/Custom-Block-3-Add-Background-Field.png" alt="Screenshot of Custom Block 2">
 				</section>
 
 				<section>
-					<h2>Xeno Hero</h2>
+					<h2>Custom Block</h2>
+					<p>Add the existing Width field.</p>
+					<img src="img/Custom-Block-4-Add-Width-Field.png" alt="Screenshot of Custom Block 3">
 				</section>
 
 				<section>
-					<h2>1</h2>
+					<h2>Custom Block</h2>
+					<p>Add a new Reference field, select Other for type.</p>
+					<img src="img/Custom-Block-5-Field-Select-Other.png" alt="Screenshot of Custom Block 4">
 				</section>
 
 				<section>
-					<h2>2</h2>
+					<h2>Custom Block</h2>
+					<p>Select Custom Block in the Reference field.</p>
+					<img src="img/Custom-Block-6-Field-Select-Custom-Block.png" alt="Screenshot of Custom Block 5">
+				</section>
+
+				<section>
+					<h2>Custom Block</h2>
+					<p>Select which Custom Block Type Bundles.</p>
+					<img src="img/Custom-Block-7-Select-Which-Block-Bundles.png" alt="Screenshot of Custom Block 6">
+				</section>
+
+				<section>
+					<h2>Custom Block</h2>
+					<p>Manage Display</p>
+					<img src="img/Custom-Block-8-Manage-Display.png" alt="Screenshot of Custom Block 7">
+				</section>
+
+				<section>
+					<h2>Hero</h2>
+					<p>Here is a more complex example for a Hero Paragraph bundle which has:</p>
+					<ul>
+						<li>Paragraph Reference field for content</li>
+						<li>Background Image</li>
+						<li>Parallax Option</li>
+						<li>Image Overlay Option</li>
+						<li>Image Overlay Invert Option</li>
+						<li>Zoom/Ken Burns Effect Option</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Hero</h2>
+				</section>
+
+				<section>
+					<h2>Hero</h2>
 				</section>
 
 				<section>
 					<h2>Building a module using config</h2>
+					<p>Create Once, Reuse Everywhere!</p>
+					<ul>
+						<li>Create bundle structure in a blank Drupal install</li>
+						<li>Create module structure</li>
+						<li>Add Templates, CSS, and JS</li>
+						<li>Add Function to override Template</li>
+						<li>Export Config, delete UUIDs, and Namespace</li>
+					</ul>
 				</section>
 
 				<section>
-					<h2>1</h2>
+					<h2>Create module structure</h2>
 				</section>
 
 				<section>
-					<h2>2</h2>
+					<h2>Add Templates, CSS, and JS</h2>
+				</section>
+
+				<section>
+					<h2>Add Function to override Template</h2>
+				</section>
+
+				<section>
+					<h2>Export Config, delete UUIDs, and Namespace</h2>
+				</section>
+
+				<section>
+					<h2>Share the finished product</h2>
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-Fermilab.jpg">
-					<h1 class="fragment box" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:60%;">Thanks</h1>
-				</section>
-
-				<section>
-					<h2>To Sum up</h2>
-					<p>Using Frameworks benefits productivity (Drupal, Bootstrap, Paragraphs).  That is what I was trying to acheive by building this module.</p>
-					<p>But you can also use this approach with other front end frameworks -- Singularity, Foundation, Slick, etc...</p>
+					<h1 class="fragment box" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:100%;">Summary &amp; Thanks</h1>
+					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:70%;">Using Frameworks benefits productivity (Drupal, Bootstrap, Paragraphs).  That is what I was trying to achieve by building this module.</p>
+					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:70%;">But you can also use this approach with other front end frameworks -- Singularity, Foundation, Slick, etc...</p>
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-Xeno.jpg">
@@ -633,7 +763,7 @@
 						<li><a href="http://jeroen.pro">Jeroen Bobbeldijk</a>, <a href="https://www.drupal.org/vdmi">.VDMi/</a>, <a href="https://www.drupal.org/md-systems">MD Systems</a> for supporting the <a href="https://www.drupal.org/project/paragraphs">Paragraphs module</a>.</li>
 						<li>Les Lim and David Needham's presentation <a href="https://www.youtube.com/watch?v=nRB4n09Ekpg">Using Paragraphs to Weave a Beautiful Content Tapestry</a></li>
 						<li>Morten, Danny Englander, Greg Boggs, Mark Conroy, and everyone else in the <a href="https://slackinvite.me/to/drupaltwig">Drupal Twig Slack</a></li>
-						<li>So many people in Stack Overflow/Drupal Answers!</li>
+						<li>So many people in Stack Overflow, especially Scott Reeves (Cottser)!</li>
 					</ul>
 				</section>
 
