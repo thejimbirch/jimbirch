@@ -148,8 +148,10 @@
 				</section>
 
 				<section style="text-align:left;" data-background="img/bootstrap-paragraphs-module.png">
-					<h1 class="fragment box" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:65%;"><a href="https://www.drupal.org/project/bootstrap_paragraphs">Bootstrap Paragraphs Module</a></h1>
-					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px 0 20px 20px;width:65%;">The Bootstrap Paragraphs module provides a suite of content and layout Paragraph bundles made with the Bootstrap front-end framework.</p>
+					<div class="fragment">
+						<h1 class="box" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:65%;"><a href="https://www.drupal.org/project/bootstrap_paragraphs">Bootstrap Paragraphs Module</a></h1>
+						<p style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px 0 20px 20px;width:65%;">The Bootstrap Paragraphs module provides a suite of content and layout Paragraph bundles made with the Bootstrap front-end framework.</p>
+					</div>
 				</section>
 
 				<section>
@@ -169,12 +171,12 @@
 
 				<section>
 					<h2>If you're not using Paragraphs yet</h2>
-					<p>Install this module on a test site and start exploring all the possibilities Paragraphs offers, and how you can customize to fit your needs.</p>
+					<p>Install this module on a test site and start exploring all the possibilities Paragraphs offers.</p>
 					<p><img src="https://media.giphy.com/media/UmO1IuCwW14k/giphy.gif" alt="Rainbow Cat Gif"></p>
 				</section>
 
-				<section>
-					<h1 class="box" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);"><a href="http://getbootstrap.com/">Bootstrap Framework</a></h1>
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-the-controls.jpg">
+					<h1 class="box" style="padding-left:20px;padding-right:20px;background: rgba(0, 0, 0, 0.8);width:60%;"><a href="http://getbootstrap.com/">Bootstrap Framework</a></h1>
 					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.</p>
 				</section>
 
@@ -506,7 +508,7 @@
  	 </div>
  </div>
 						</code></pre>
-					<p>We apply the appropriate Bootstrap column rules based on the width selected.</p>
+					<p>We apply the appropriate Bootstrap widths here.</p>
 				</section>
 
 				<section>
@@ -589,7 +591,7 @@
 					<p>In fact, you can uninstall this module after installation and still keep all the functionality.</p>
 					<ul>
 						<li class="fragment">Move the templates to your theme, and remove the <code>attach_library</code> call.</li>
-						<li class="fragment">Move the CSS files to your theme and call them from you theme's library file.</li>
+						<li class="fragment">Move the CSS files to your theme and call them from your theme's library file.</li>
 					</ul>
 				</section>
 
@@ -712,7 +714,7 @@
 
 				<section>
 					<h2>Create bundle structure in a blank Drupal install</h2>
-					<p>Spin up a sandbox on your favorite hosting platform or you local dev environment and build your bundle.</p>
+					<p>Spin up a sandbox on your favorite hosting platform or on your local dev environment and build your bundle.</p>
 				</section>
 
 				<section>
@@ -723,7 +725,7 @@
 				<section>
 					<h2>Add Templates, CSS, and JS</h2>
 					<ul>
-						<li>Copy the default template from the Bootstrap Paragraphs module.</li>
+						<li>Copy and rename the default template from the Bootstrap Paragraphs module.</li>
 						<li>Add a CSS file.</li>
 						<li>Add a JS file if needed.</li>
 						<li>Configure them in the module's .libraries file.</li>
