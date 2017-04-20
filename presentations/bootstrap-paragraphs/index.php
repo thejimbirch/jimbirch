@@ -282,6 +282,11 @@
 					</ul>
 				</section>
 
+				<section>
+					<h2>Let's dig in</h2>
+					<img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" alt="Cat at a Computer Keyboard">
+				</section>
+
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Iceland.jpg">
 					<h1 style="padding-left:20px;padding-right:20px;background: rgba(0, 0, 0, 0.9);width:70%;">Paragraph Bundle Types</h1>
 				</section>
@@ -536,6 +541,11 @@
 				</section>
 
 				<section>
+					<h2>Bonus Round</h2>
+					<img src="https://media.giphy.com/media/13HBDT4QSTpveU/giphy.gif" alt="Cat typing GIF">
+				</section>
+
+				<section>
 					<h2>Page Template Suggestions</h2>
 					<p>For Full Width Colors, add a new Region into your <code>page.html.twig</code></p>
 					<pre><code>
@@ -571,8 +581,8 @@
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Greece-by-the-cactus-by-the-sea.jpg">
-					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:65%;">Overriding</h1>
-					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Customize Bootstrap Paragraphs in your own them after you've installed.</p>
+					<h1 class="fragment" style="padding-left:20px;padding-right:20px;background: rgba(0, 0, 0, 0.8);width:65%;">Overriding</h1>
+					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:65%;">Customize Bootstrap Paragraphs in your own them after you've installed.</p>
 				</section>
 
 				<section>
@@ -593,6 +603,11 @@
 						<li class="fragment">Move the templates to your theme, and remove the <code>attach_library</code> call.</li>
 						<li class="fragment">Move the CSS files to your theme and call them from your theme's library file.</li>
 					</ul>
+				</section>
+
+				<section>
+					<h2>Play us off keyboard cat</h2>
+					<img src="https://media.giphy.com/media/bMLZaUFVmgu6k/giphy.gif" alt="Keyboard Cat">
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Greece-by-the-cactus-by-the-road.jpg">
@@ -645,6 +660,11 @@
 					<h2>Custom Block</h2>
 					<p>Manage Display</p>
 					<img src="img/Custom-Block-8-Manage-Display.png" alt="Screenshot of Custom Block 7">
+				</section>
+
+				<section>
+					<h2>Up next, the hero</h2>
+					<img src="https://media.giphy.com/media/56Vd97ywRR2Cs/giphy.gif" alt="Cat in a box GIF">
 				</section>
 
 				<section>
@@ -701,8 +721,14 @@
 				</section>
 
 				<section>
+					<h2>Up next, working globally</h2>
+					<img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" alt="Cat GIF">
+				</section>
+
+				<section>
 					<h2>Building a module using config</h2>
 					<p>Create Once, Reuse Everywhere!</p>
+					<p>Build a custom module to install a Paragraph bundle.</p>
 					<ul>
 						<li>Create bundle structure in a blank Drupal install</li>
 						<li>Create module structure</li>
