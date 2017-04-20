@@ -660,10 +660,42 @@
 
 				<section>
 					<h2>Hero</h2>
+					<img src="img/hero-paragraphs.jpg" alt="Hero Paragraph">
 				</section>
 
 				<section>
-					<h2>Hero</h2>
+					<h2>Hero - Fields</h2>
+					<img src="img/hero-paragraphs-fields.png" alt="Hero Paragraph Fields">
+				</section>
+
+				<section>
+					<h2>Hero - Display</h2>
+					<img src="img/hero-paragraphs-display.png" alt="Hero Paragraph Displays">
+				</section>
+
+				<section>
+					<h2>Hero - Overlay</h2>
+					<img src="img/hero-paragraphs-template-1-library-overlay.png" alt="Hero Paragraph Template">
+				</section>
+
+				<section>
+					<h2>Hero - Parallax</h2>
+					<img src="img/hero-paragraphs-template-2-parallax.png" alt="Hero Paragraph Template">
+				</section>
+
+				<section>
+					<h2>Hero - Invert</h2>
+					<img src="img/hero-paragraphs-template-3-invert.png" alt="Hero Paragraph Template">
+				</section>
+
+				<section>
+					<h2>Hero - Zoom</h2>
+					<img src="img/hero-paragraphs-template-4-zoom.png" alt="Hero Paragraph Template">
+				</section>
+
+				<section>
+					<h2>Hero - Putting it all together</h2>
+					<img src="img/hero-paragraphs-template-5-printing.png" alt="Hero Paragraph Template">
 				</section>
 
 				<section>
@@ -679,23 +711,39 @@
 				</section>
 
 				<section>
+					<h2>Create bundle structure in a blank Drupal install</h2>
+					<p>Spin up a sandbox on your favorite hosting platform or you local dev environment and build your bundle.</p>
+				</section>
+
+				<section>
 					<h2>Create module structure</h2>
+					<img src="img/hero-paragraphs-module-structure.png" alt="Hero Paragraph Module Structure">
 				</section>
 
 				<section>
 					<h2>Add Templates, CSS, and JS</h2>
+					<ul>
+						<li>Copy the default template from the Bootstrap Paragraphs module.</li>
+						<li>Add a CSS file.</li>
+						<li>Add a JS file if needed.</li>
+						<li>Configure them in the module's .libraries file.</li>
+					</ul>
 				</section>
 
 				<section>
-					<h2>Add Function to override Template</h2>
+					<h2>Add Function to override Template in .module file</h2>
+					<img src="img/hero-paragraphs-module.png" alt="Hero Paragraph Function">
 				</section>
 
 				<section>
 					<h2>Export Config, delete UUIDs, and Namespace</h2>
+					<img src="img/hero-paragraphs-config.jpg" alt="Hero Paragraph Config">
 				</section>
 
 				<section>
-					<h2>Share the finished product</h2>
+					<h2>Install, Test, &amp; Share the finished product</h2>
+					<p>This example can be found at <a href="https://github.com/xenomedia/xeno_hero">Xeno Hero</a> on Github.</p>
+					<img src="img/xeno-hero.png" alt="Xeno Hero on Github">
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-Fermilab.jpg">
@@ -705,8 +753,10 @@
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-Xeno.jpg">
-					<h1 class="fragment box" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);"><a href="http://www.xenomedia.com">Xeno Media</a></h1>
-					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Xeno Media, Inc. is a Chicago-based agency providing Drupal Development, Web Consulting and Design to the world's greatest clients.</p>
+					<div class="fragment">
+						<h1 class="box" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);"><a href="http://www.xenomedia.com">Xeno Media</a></h1>
+						<p style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Xeno Media, Inc. is a Chicago-based agency providing Drupal Development, Web Consulting and Design to the world's greatest clients.</p>
+					</div>
 				</section>
 
 				<section>
