@@ -165,14 +165,14 @@
 				</section>
 
 				<section>
-					<p>And how many times have you or your co-workers build it just a little bit different?</p>
+					<p>How many times have you or your co-workers built it just a little bit different?</p>
 					<p><img src="https://media.giphy.com/media/6uMqzcbWRhoT6/giphy.gif" alt="Cat Gif"></p>
 				</section>
 
 				<section>
 					<h2>If you're not using Paragraphs yet</h2>
 					<p>Install this module on a test site and start exploring all the possibilities Paragraphs offers.</p>
-					<p><img src="https://media.giphy.com/media/UmO1IuCwW14k/giphy.gif" alt="Rainbow Cat Gif"></p>
+					<p><img src="https://media.giphy.com/media/UmO1IuCwW14k/giphy.gif" alt="Rainbow Cat Gif" style="width: 55%;"></p>
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-the-controls.jpg">
@@ -208,7 +208,7 @@
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-Waterfall.jpg">
-					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);">Drupal Paragraphs</h1>
+					<h1 style="padding-left:20px;background: rgba(0, 0, 0, 0.8);">Drupal Paragraphs</h1>
 					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Paragraphs is a contrib module for Drupal that allows creation, administration, and display of customizable content components.</p>
 				</section>
 
@@ -284,7 +284,7 @@
 
 				<section>
 					<h2>Let's dig in</h2>
-					<img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" alt="Cat at a Computer Keyboard">
+					<img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" alt="Cat at a Computer Keyboard" style="width: 55%;">
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Iceland.jpg">
@@ -305,7 +305,7 @@
 
 				<section>
 					<h2>Blank</h2>
-					<p>The Blank Paragraphs type is perfect for less restrictive HTML and JavaScript.&nbsp; I use these paragraphs for thinks like scripts from external services like <a href="https://mailchimp.com/">Mailchimp</a>, <a href="http://www.pardot.com/">Pardot</a>, <a href="https://www.oracle.com/marketingcloud/products/marketing-automation/index.html">Eloqua</a>, <a href="https://www.marketo.com/">Marketo</a>; and adding page specific <a href="http://json-ld.org/">JSON-LD</a> for SEO.</p>
+					<p>The Blank Paragraphs type is perfect for less restrictive HTML and JavaScript.&nbsp; I use these paragraphs for things like scripts from external services like <a href="https://mailchimp.com/">Mailchimp</a>, <a href="http://www.pardot.com/">Pardot</a>, <a href="https://www.oracle.com/marketingcloud/products/marketing-automation/index.html">Eloqua</a>, <a href="https://www.marketo.com/">Marketo</a>; and adding page specific <a href="http://json-ld.org/">JSON-LD</a> for SEO.</p>
 					<img src="http://live-bootstrap-paragraphs.pantheonsite.io/sites/default/files/2017-01/Bootstrap-Paragraphs-Bundle-Type-Blank.png" alt="Bootstrap Paragraphs - Blank">
 				</section>
 
@@ -324,8 +324,7 @@
 				</section>
 
 				<section>
-					<h2>Drupal Blocks</h2>
-					<p>Some Drupal blocks do not render.&nbsp; Here is the list of working and not working at the time DrupalCon Baltimore.</p>
+					<p>Some <strong>Drupal blocks</strong> do not render.&nbsp; Here is the list of working/not working blocks April, 2017.</p>
 					<div style="width:47%;float:left;">
 						<p><strong>Working</strong></p>
 						<ul>
@@ -355,14 +354,14 @@
 
 				<section>
 					<h2>Views</h2>
-					<p>The Bootstrap Paragraphs Views type allows you to easily embed a view in and around your other Paragraphs using a <a href="https://www.drupal.org/project/viewsreference">Views Reference Field</a>.</p>
+					<p>The Bootstrap Paragraphs Views type allows you to easily embed a View in and around your other Paragraphs using a <a href="https://www.drupal.org/project/viewsreference">Views Reference Field</a>.</p>
 					<img src="http://live-bootstrap-paragraphs.pantheonsite.io/sites/default/files/2017-01/Bootstrap-Paragraphs-Type-Views.png" alt="Bootstrap Paragraphs - Views">
 				</section>
 
 				<section>
 					<h2>Columns</h2>
 					<p style="text-align:left;">The three Bootstrap Paragraphs Column types allows content creators to add column structure into their content using a <strong>Column Content field</strong>.</p>
-					<p style="text-align:left;">The field allows for multiple, so columns can be easily reordered by drag and drop in the admin UI.</p>
+					<p style="text-align:left;">The field allows for multiple values, so columns can be easily reordered by drag and drop in the admin UI.</p>
 				</section>
 
 				<section>
@@ -428,7 +427,7 @@
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-the-Water.jpg" data-background-position="center top">
-					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:80%;">Global Settings</h1>
+					<h1 style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:80%;">Global Settings</h1>
 					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Every paragraph, whether content or layout has the option to set background color and one of five widths, from narrow to full using List/Text Select fields.</p>
 				</section>
 
@@ -446,7 +445,7 @@
 
 				<section>
 					<h2>Widths</h2>
-					<img src="img/bp_widths.jpg" alt="Bootstrap Paragraphs - Widths" style="width: 30%;">
+					<img src="img/bp_widths.jpg" alt="Bootstrap Paragraphs - Widths" style="width: 28%;">
 				</section>
 
 				<section>
@@ -469,7 +468,7 @@
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Berkeley.jpg">
-					<h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:80%;">Template &amp; Markup Strategy</h1>
+					<h1 style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:80%;">Template &amp; Markup Strategy</h1>
 				</section>
 
 				<section>
@@ -581,7 +580,7 @@
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Greece-by-the-cactus-by-the-sea.jpg">
-					<h1 class="fragment" style="padding-left:20px;padding-right:20px;background: rgba(0, 0, 0, 0.8);width:65%;">Overriding</h1>
+					<h1 style="padding-left:20px;padding-right:20px;background: rgba(0, 0, 0, 0.8);width:65%;">Overriding</h1>
 					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:65%;">Customize Bootstrap Paragraphs in your own them after you've installed.</p>
 				</section>
 
@@ -611,7 +610,7 @@
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Greece-by-the-cactus-by-the-road.jpg">
-					<h1 class="fragment box" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:60%;">Extending Bootstrap Paragraphs</h1>
+					<h1 class="box" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:60%;">Extending Bootstrap Paragraphs</h1>
 				</section>
 
 				<section>
@@ -775,7 +774,7 @@
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-Fermilab.jpg">
-					<h1 class="fragment box" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:100%;">Summary &amp; Thanks</h1>
+					<h1 class="box" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:100%;">Summary &amp; Thanks</h1>
 					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:70%;">Using Frameworks benefits productivity (Drupal, Bootstrap, Paragraphs).  That is what I was trying to achieve by building this module.</p>
 					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:70%;">But you can also use this approach with other front end frameworks -- Singularity, Foundation, Slick, etc...</p>
 				</section>
