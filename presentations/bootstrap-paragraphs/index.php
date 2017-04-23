@@ -324,7 +324,7 @@
 				</section>
 
 				<section>
-					<p>Some <strong>Drupal blocks</strong> do not render.&nbsp; Here is the list of working/not working blocks April, 2017.</p>
+					<p>Some <strong>Drupal blocks</strong> do not render.&nbsp; Here is the list of working/not working blocks as of April, 2017.</p>
 					<div style="width:47%;float:left;">
 						<p><strong>Working</strong></p>
 						<ul>
@@ -417,7 +417,7 @@
 
 				<section>
 					<h2>Tabs</h2>
-					<p>The Bootstrap Paragraphs Tabs allows for other Paragraph entities to be loaded in the Tab Section field.</p>
+					<p>The Bootstrap Paragraphs Tabs lets you put Paragraph entities in different tabs using the Tab Section bundle.</p>
 					<img src="img/bp_tabs_gif.gif" alt="Bootstrap Paragraphs - Tabs">
 				</section>
 
