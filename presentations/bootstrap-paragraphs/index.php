@@ -135,7 +135,7 @@
 				<div style="float:right;"><a href="http://www.xenomedia.com" title="Xeno Media, Inc"><img src="img/xeno-media-logo.png" alt="Xeno Media, Inc" style="height:14px;width:auto;"></a></div>
 			</div>
 			<div class="slides">
-				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-the-Pool-Waterfall.jpg">
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-the-Pool-Waterfall.jpg" data-transition="zoom">
 					<h1 style="font-size:2.25em;padding-left:20px;width:75%">Bootstrap Paragraphs</h1>
 					<div style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.7);padding-left:20px;width:75%">
 						<a href="https://events.drupal.org/baltimore2017"><img src="img/drupalcon-baltimore-logo.png" alt="DrupalCon Baltimore 2017" style="float: left; width: 200px; height: auto;"></a><br>
@@ -155,17 +155,23 @@
 				</section>
 
 				<section>
+					<h2 class="box"><a href="http://live-bootstrap-paragraphs.pantheonsite.io/">Demo Site</a></h2>
+					<a href="http://live-bootstrap-paragraphs.pantheonsite.io/"><img src="img/bootstrap-paragraphs-demo.gif" alt="Boostrap Paragraphs Demo"></a>
+				</section>
+
+				<section>
 					<h2>Already using Paragraphs?</h2>
-					<p class="fragment">How many times have you built...</p>
-					<ul>
-						<li class="fragment">Three Column Paragraph</li>
-						<li class="fragment">Text and Image Paragraph</li>
-						<li class="fragment">Text Paragraph</li>
+					<p>How many times have you built...</p>
+					<ul class="fragment">
+						<li>Three Column Paragraph</li>
+						<li>Text and Image Paragraph</li>
+						<li>Slideshow Paragraph</li>
+						<li>Simple HTML Paragraph</li>
 					</ul>
 				</section>
 
 				<section>
-					<p>How many times have you or your co-workers built it just a little bit different?</p>
+					<p>How many times have you built it just a little bit different???</p>
 					<p><img src="https://media.giphy.com/media/6uMqzcbWRhoT6/giphy.gif" alt="Cat Gif"></p>
 				</section>
 
@@ -175,39 +181,19 @@
 					<p><img src="https://media.giphy.com/media/UmO1IuCwW14k/giphy.gif" alt="Rainbow Cat Gif" style="width: 55%;"></p>
 				</section>
 
-				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-the-controls.jpg">
-					<h1 class="box" style="padding-left:20px;padding-right:20px;background: rgba(0, 0, 0, 0.8);width:60%;"><a href="http://getbootstrap.com/">Bootstrap Framework</a></h1>
-					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.</p>
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-Blogs.jpg" data-transition="zoom">
+					<h1 style="padding-left:20px;padding-right:20px;background: rgba(0, 0, 0, 0.9);width:70%;">Module Strategy</h1>
+					<div class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.9);padding:20px;width:70%;">
+						<ul>
+							<li>Create a module that would make the basic paragraphs needed for every site.</li>
+							<li class="fragment">Create base templates &amp; CSS that could be used with any theme that includes Bootstrap.</li>
+							<li class="fragment">Harness the power of Entity Reference Revisions fields to nest Paragraphs.</li>
+							<li class="fragment">Have global width &amp; background color options.</li>
+						</ul>
+					</div>
 				</section>
 
-				<section>
-					<h2>Why we use Bootstrap</h2>
-					<ul>
-						<li class="fragment">Core functionality
-							<ul>
-				    		<li>Responsive Grid Markup and CSS</li>
-				    		<li>Themable Content and Javascript Components</li>
-				    		<li>Readable Typography base</li>
-				    	</ul>
-				    </li>
-						<li class="fragment">Documentation
-							<ul>
-				    		<li>Standardization helps teams become more productive</li>
-				    		<li>Onboarding new developers is quicker</li>
-				    	</ul>
-				    </li>
-			    	<li class="fragment">Customizable
-							<ul>
-					    	<li>Completely customizable for large projects</li>
-					    	<li>Mixins for adding existing styles to semantic html</li>
-					    </ul>
-					  </li>
-					  <li class="fragment">Best practices for small/low budget projects</li>
-			    	<li class="fragment">Open Source - MIT License</li>
-			    </ul>
-				</section>
-
-				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-Waterfall.jpg">
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-Waterfall.jpg" data-transition="zoom">
 					<h1 style="padding-left:20px;background: rgba(0, 0, 0, 0.8);">Drupal Paragraphs</h1>
 					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Paragraphs is a contrib module for Drupal that allows creation, administration, and display of customizable content components.</p>
 				</section>
@@ -238,16 +224,36 @@
 					</ul>
 				</section>
 
-				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-Blogs.jpg">
-					<h1 style="padding-left:20px;padding-right:20px;background: rgba(0, 0, 0, 0.9);width:70%;">Module Strategy</h1>
-					<div class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.9);padding:20px;width:70%;">
-						<ul>
-							<li>Create a module that would make the basics structure needed for every site.</li>
-							<li class="fragment">Create base templates &amp; CSS that could be used with any theme that includes Bootstrap.</li>
-							<li class="fragment">Harness the power of Entity Reference Revisions fields to nest Paragraphs.</li>
-							<li class="fragment">Have global width &amp; background color options.</li>
-						</ul>
-					</div>
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-the-controls.jpg" data-transition="zoom">
+					<h1 class="box" style="padding-left:20px;padding-right:20px;background: rgba(0, 0, 0, 0.8);width:60%;"><a href="http://getbootstrap.com/">Bootstrap Framework</a></h1>
+					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.</p>
+				</section>
+
+				<section>
+					<h2>Why we use Bootstrap</h2>
+					<ul>
+						<li class="fragment">Core functionality
+							<ul>
+				    		<li>Responsive Grid Markup and CSS</li>
+				    		<li>Themable Content and Javascript Components</li>
+				    		<li>Readable Typography base</li>
+				    	</ul>
+				    </li>
+						<li class="fragment">Documentation
+							<ul>
+				    		<li>Standardization helps teams become more productive</li>
+				    		<li>Onboarding new developers is quicker</li>
+				    	</ul>
+				    </li>
+			    	<li class="fragment">Customizable
+							<ul>
+					    	<li>Completely customizable for large projects</li>
+					    	<li>Mixins for adding existing styles to semantic html</li>
+					    </ul>
+					  </li>
+					  <li class="fragment">Best practices for small/low budget projects</li>
+			    	<li class="fragment">Open Source - MIT License</li>
+			    </ul>
 				</section>
 
 				<section>
@@ -282,12 +288,7 @@
 					</ul>
 				</section>
 
-				<section>
-					<h2>Let's dig in</h2>
-					<img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" alt="Cat at a Computer Keyboard" style="width: 55%;">
-				</section>
-
-				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Iceland.jpg">
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Iceland.jpg" data-transition="zoom">
 					<h1 style="padding-left:20px;padding-right:20px;background: rgba(0, 0, 0, 0.9);width:70%;">Paragraph Bundle Types</h1>
 				</section>
 
@@ -300,7 +301,7 @@
 				<section>
 					<h2>Image</h2>
 					<p>This Paragraphs type has an Image reference field, and a Link field if you want to link the image.  Because this uses Drupal core's Image module, we get to set the default field attributes, and require an ALT tag, which is required for proper accessibility.</p>
-					<img src="http://live-bootstrap-paragraphs.pantheonsite.io/sites/default/files/2017-01/Bootstrap-Paragraphs-Bundle-Type-Image_1.png" alt="Bootstrap Paragraphs - Image">
+					<img src="http://live-bootstrap-paragraphs.pantheonsite.io/sites/default/files/2017-01/Bootstrap-Paragraphs-Bundle-Type-Image_1.png" alt="Bootstrap Paragraphs - Image" style="width: 75%;">
 				</section>
 
 				<section>
@@ -426,7 +427,7 @@
 					<img src="https://media.giphy.com/media/cHqUlvvPvperS/giphy.gif" alt="Dancing Cat">
 				</section>
 
-				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-the-Water.jpg" data-background-position="center top">
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-the-Water.jpg" data-background-position="center top" data-transition="zoom">
 					<h1 style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:80%;">Global Settings</h1>
 					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Every paragraph, whether content or layout has the option to set background color and one of five widths, from narrow to full using List/Text Select fields.</p>
 				</section>
@@ -467,7 +468,7 @@
 					<img src="img/bp_colors.jpg" alt="Bootstrap Paragraphs - Colors" style="width:75%;">
 				</section>
 
-				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Berkeley.jpg">
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Berkeley.jpg" data-transition="zoom">
 					<h1 style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:80%;">Template &amp; Markup Strategy</h1>
 				</section>
 
@@ -486,7 +487,7 @@
 				</section>
 
 				<section>
-					<h2>Markup - div.paragraph</h2>
+					<h2>Markup - div.paragraph Modifiers</h2>
 					<pre><code>
  <div class="paragraph paragraph-type--simple
  	 paragraph--view-mode--default paragraph--width--full
@@ -579,14 +580,14 @@
 						</code></pre>
 				</section>
 
-				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Greece-by-the-cactus-by-the-sea.jpg">
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Greece-by-the-cactus-by-the-sea.jpg" data-transition="zoom">
 					<h1 style="padding-left:20px;padding-right:20px;background: rgba(0, 0, 0, 0.8);width:65%;">Overriding</h1>
-					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:65%;">Customize Bootstrap Paragraphs in your own them after you've installed.</p>
+					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:65%;">Customize Bootstrap Paragraphs in your own theme after you've installed.</p>
 				</section>
 
 				<section>
 					<h2>Bundles and Fields</h2>
-					<p>After installation, Bundles and Fields are kept in your <strong>database</strong> and in your <strong>configuration</strong>.</p>
+					<p>After installation, Paragraph Bundles and Fields are kept in your <strong>database</strong> and in your <strong>configuration</strong>.</p>
 					<p>Any changes you make will be yours.</p>
 				</section>
 
@@ -609,14 +610,14 @@
 					<img src="https://media.giphy.com/media/bMLZaUFVmgu6k/giphy.gif" alt="Keyboard Cat">
 				</section>
 
-				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Greece-by-the-cactus-by-the-road.jpg">
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Greece-by-the-cactus-by-the-road.jpg" data-transition="zoom">
 					<h1 class="box" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:60%;">Extending Bootstrap Paragraphs</h1>
 				</section>
 
 				<section>
 					<h2>Create a new "Custom Block" Paragraphs Bundle Type</h2>
 					<p>Use the Drupal Block Paragraph to provide the example.</p>
-					<img src="img/Custom-Block-1-Drupal-Block-Example.png" alt="Screenshot of Custom Block">
+					<img src="img/Custom-Block-1-Drupal-Block-Example.png" alt="Screenshot of Custom Block" style="width: 78%;">
 				</section>
 
 				<section>
@@ -639,13 +640,13 @@
 
 				<section>
 					<h2>Custom Block</h2>
-					<p>Add a new Reference field, select Other for type.</p>
+					<p>Add a new Reference Revisions field, select Other for type.</p>
 					<img src="img/Custom-Block-5-Field-Select-Other.png" alt="Screenshot of Custom Block 4">
 				</section>
 
 				<section>
 					<h2>Custom Block</h2>
-					<p>Select Custom Block in the Reference field.</p>
+					<p>Select Custom Block in the Reference Revisions field settings.</p>
 					<img src="img/Custom-Block-6-Field-Select-Custom-Block.png" alt="Screenshot of Custom Block 5">
 				</section>
 
@@ -716,12 +717,16 @@
 
 				<section>
 					<h2>Hero - Putting it all together</h2>
-					<img src="img/hero-paragraphs-template-5-printing.png" alt="Hero Paragraph Template">
+					<script src="https://gist.github.com/thejimbirch/fb0485b82e82ae85c85c64ecdbe67e4f.js"></script>
 				</section>
 
 				<section>
 					<h2>Up next, working globally</h2>
 					<img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" alt="Cat GIF">
+				</section>
+
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Iceland-Mike-Miles.jpg" data-transition="zoom">
+					<h1 class="box" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:60%;">Building a module using config</h1>
 				</section>
 
 				<section>
@@ -773,13 +778,18 @@
 					<img src="img/xeno-hero.png" alt="Xeno Hero on Github">
 				</section>
 
-				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-Fermilab.jpg">
-					<h1 class="box" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:100%;">Summary &amp; Thanks</h1>
-					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:70%;">Using Frameworks benefits productivity (Drupal, Bootstrap, Paragraphs).  That is what I was trying to achieve by building this module.</p>
-					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:70%;">But you can also use this approach with other front end frameworks -- Singularity, Foundation, Slick, etc...</p>
+				<section>
+					<h2>Let's finish up!</h2>
+					<img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" alt="Cat at a Computer Keyboard" style="width: 55%;">
 				</section>
 
-				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-Xeno.jpg">
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-Fermilab.jpg" data-transition="zoom">
+					<h1 class="box" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:100%;">To Sum Up</h1>
+					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:70%;">Using frameworks benefits productivity (Drupal, Bootstrap, Paragraphs).  That is what I was trying to achieve by building this module.</p>
+					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:70%;">You can also use this approach with other front end frameworks and scripts -- Singularity, Foundation, Slick, etc...</p>
+				</section>
+
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-Xeno.jpg" data-transition="zoom">
 					<div class="fragment">
 						<h1 class="box" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);"><a href="http://www.xenomedia.com">Xeno Media</a></h1>
 						<p style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Xeno Media, Inc. is a Chicago-based agency providing Drupal Development, Web Consulting and Design to the world's greatest clients.</p>
@@ -794,7 +804,7 @@
 					</ul>
 				</section>
 
-				<section style="text-align:left;" data-background="img/about-zoomdata.png" data-background-position="center top">
+				<section style="text-align:left;" data-background="img/about-zoomdata.png" data-background-position="center top" data-transition="zoom">
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-Zoomdata.jpg">
