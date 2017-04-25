@@ -155,8 +155,8 @@
 				</section>
 
 				<section>
-					<h2 class="box"><a href="http://live-bootstrap-paragraphs.pantheonsite.io/">Demo Site</a></h2>
-					<a href="http://live-bootstrap-paragraphs.pantheonsite.io/"><img src="img/bootstrap-paragraphs-demo.gif" alt="Boostrap Paragraphs Demo"></a>
+					<h2 class="box"><a href="http://bp.jimbir.ch">Demo Site</a></h2>
+					<a href="http://bp.jimbir.ch"><img src="img/bootstrap-paragraphs-demo.gif" alt="Boostrap Paragraphs Demo"></a>
 				</section>
 
 				<section>
@@ -295,33 +295,33 @@
 				<section>
 					<h2>Simple</h2>
 					<p>This Paragraphs type has a formatted long text field, which we configured to use the Full HTML text format during installation.  This is essentially what you would expect from a normal body field.</p>
-					<img src="http://live-bootstrap-paragraphs.pantheonsite.io/sites/default/files/2017-01/Bootstrap-Paragraphs-Bundle-Type-Simple_0.png" alt="Bootstrap Paragraphs - Simple">
+					<img src="img/Bootstrap-Paragraphs-Bundle-Type-Simple.png" alt="Bootstrap Paragraphs - Simple">
 				</section>
 
 				<section>
 					<h2>Image</h2>
 					<p>This Paragraphs type has an Image reference field, and a Link field if you want to link the image.  Because this uses Drupal core's Image module, we get to set the default field attributes, and require an ALT tag, which is required for proper accessibility.</p>
-					<img src="http://live-bootstrap-paragraphs.pantheonsite.io/sites/default/files/2017-01/Bootstrap-Paragraphs-Bundle-Type-Image_1.png" alt="Bootstrap Paragraphs - Image" style="width: 75%;">
+					<img src="img/Bootstrap-Paragraphs-Bundle-Type-Image.png" alt="Bootstrap Paragraphs - Image" style="width: 75%;">
 				</section>
 
 				<section>
 					<h2>Blank</h2>
 					<p>The Blank Paragraphs type is perfect for less restrictive HTML and JavaScript.&nbsp; I use these paragraphs for things like scripts from external services like <a href="https://mailchimp.com/">Mailchimp</a>, <a href="http://www.pardot.com/">Pardot</a>, <a href="https://www.oracle.com/marketingcloud/products/marketing-automation/index.html">Eloqua</a>, <a href="https://www.marketo.com/">Marketo</a>; and adding page specific <a href="http://json-ld.org/">JSON-LD</a> for SEO.</p>
-					<img src="http://live-bootstrap-paragraphs.pantheonsite.io/sites/default/files/2017-01/Bootstrap-Paragraphs-Bundle-Type-Blank.png" alt="Bootstrap Paragraphs - Blank">
+					<img src="img/Bootstrap-Paragraphs-Bundle-Type-Blank.png" alt="Bootstrap Paragraphs - Blank">
 				</section>
 
 				<section>
 					<h2>Contact Form</h2>
 					<p>The Bootstrap Paragraphs Contact Form type allows you to embed one of Drupal 8 core's Contact Forms anywhere you need it, including inside of Accordions, Carousels, Columns, Modals, and Tabs. This is possible thanks to the <a href="https://www.drupal.org/project/contact_formatter">Contact Formatter module</a>.</p>
 					<p>Add <a href="https://www.drupal.org/project/inline_entity_form">Inline Entity Form</a> to allow your administrators to add new, or select existing Contact Forms.</p>
-					<img src="http://live-bootstrap-paragraphs.pantheonsite.io/sites/default/files/2017-01/Bootstrap-Paragraphs-Type-Contact-Form.png" alt="Bootstrap Paragraphs - Contact Form">
+					<img src="img/Bootstrap-Paragraphs-Type-Contact-Form.png" alt="Bootstrap Paragraphs - Contact Form">
 				</section>
 
 				<section>
 					<h2>Drupal Blocks</h2>
 					<p>The Drupal Block Paragraphs type has a reference field to Drupal core, System, and Menus blocks for easy inclusion in your content.</p>
 					<p>You can also use this type as an example for creating a Paragraphs type for your custom blocks.</p>
-					<img src="http://live-bootstrap-paragraphs.pantheonsite.io/sites/default/files/2017-01/Bootstrap-Paragraphs-Type-Drupal-Block.png" alt="Bootstrap Paragraphs - Drupal Block">
+					<img src="img/Bootstrap-Paragraphs-Type-Drupal-Block.png" alt="Bootstrap Paragraphs - Drupal Block">
 				</section>
 
 				<section>
@@ -356,7 +356,7 @@
 				<section>
 					<h2>Views</h2>
 					<p>The Bootstrap Paragraphs Views type allows you to easily embed a View in and around your other Paragraphs using a <a href="https://www.drupal.org/project/viewsreference">Views Reference Field</a>.</p>
-					<img src="http://live-bootstrap-paragraphs.pantheonsite.io/sites/default/files/2017-01/Bootstrap-Paragraphs-Type-Views.png" alt="Bootstrap Paragraphs - Views">
+					<img src="img/Bootstrap-Paragraphs-Type-Views.png" alt="Bootstrap Paragraphs - Views">
 				</section>
 
 				<section>
