@@ -804,7 +804,7 @@
 					</ul>
 				</section>
 
-				<section style="text-align:left;" data-background="img/about-zoomdata.jpg" data-background-position="center top" data-transition="zoom">
+				<section style="text-align:left;" data-background="img/about-zoomdata.png" data-background-position="center top" data-transition="zoom">
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-Zoomdata.jpg">
