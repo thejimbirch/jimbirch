@@ -132,13 +132,13 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="fixed-footer">
 				<div style="float:left;"><a href="http://jimbir.ch/presentations/bootstrap-paragraphs/">jimbir.ch/bp</a> | <a href="http://www.twitter.com/thejimbirch" title="@thejimbirch">@thejimbirch</a></div>
-				<div style="float:right;"><a href="http://www.xenomedia.com" title="Xeno Media, Inc"><img src="img/xeno-media-logo.png" alt="Xeno Media, Inc" style="height:14px;width:auto;"></a></div>
+				<div style="float:right;"><a href="http://www.xenomedia.com" title="Xeno Media, Inc"><img src="img/xeno-media-logo.jpg" alt="Xeno Media, Inc" style="height:14px;width:auto;"></a></div>
 			</div>
 			<div class="slides">
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-the-Pool-Waterfall.jpg" data-transition="zoom">
 					<h1 style="font-size:2.25em;padding-left:20px;width:75%">Bootstrap Paragraphs</h1>
 					<div style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.7);padding-left:20px;width:75%">
-						<a href="https://events.drupal.org/baltimore2017"><img src="img/drupalcon-baltimore-logo.png" alt="DrupalCon Baltimore 2017" style="float: left; width: 200px; height: auto;"></a><br>
+						<a href="https://events.drupal.org/baltimore2017"><img src="img/drupalcon-baltimore-logo.jpg" alt="DrupalCon Baltimore 2017" style="float: left; width: 200px; height: auto;"></a><br>
 						<div class="box" style="float: left;padding-left:20px;padding-bottom:20px;margin-top:-30px">Created by <a href="http://jimbir.ch">Jim Birch</a><br>
 							<a href="http://jimbir.ch/presentations/bootstrap-paragraphs/">jimbir.ch/bp</a><br>
 							<a href="http://twitter.com/thejimbirch">@thejimbirch</a><br>
@@ -147,7 +147,7 @@
 					</div>
 				</section>
 
-				<section style="text-align:left;" data-background="img/bootstrap-paragraphs-module.png">
+				<section style="text-align:left;" data-background="img/bootstrap-paragraphs-module.jpg">
 					<div class="fragment">
 						<h1 class="box" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:65%;"><a href="https://www.drupal.org/project/bootstrap_paragraphs">Bootstrap Paragraphs Module</a></h1>
 						<p style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px 0 20px 20px;width:65%;">The Bootstrap Paragraphs module provides a suite of content and layout Paragraph bundles made with the Bootstrap front-end framework.</p>
@@ -295,33 +295,33 @@
 				<section>
 					<h2>Simple</h2>
 					<p>This Paragraphs type has a formatted long text field, which we configured to use the Full HTML text format during installation.  This is essentially what you would expect from a normal body field.</p>
-					<img src="img/Bootstrap-Paragraphs-Bundle-Type-Simple.png" alt="Bootstrap Paragraphs - Simple">
+					<img src="img/Bootstrap-Paragraphs-Bundle-Type-Simple.jpg" alt="Bootstrap Paragraphs - Simple">
 				</section>
 
 				<section>
 					<h2>Image</h2>
 					<p>This Paragraphs type has an Image reference field, and a Link field if you want to link the image.  Because this uses Drupal core's Image module, we get to set the default field attributes, and require an ALT tag, which is required for proper accessibility.</p>
-					<img src="img/Bootstrap-Paragraphs-Bundle-Type-Image.png" alt="Bootstrap Paragraphs - Image" style="width: 75%;">
+					<img src="img/Bootstrap-Paragraphs-Bundle-Type-Image.jpg" alt="Bootstrap Paragraphs - Image" style="width: 75%;">
 				</section>
 
 				<section>
 					<h2>Blank</h2>
 					<p>The Blank Paragraphs type is perfect for less restrictive HTML and JavaScript.&nbsp; I use these paragraphs for things like scripts from external services like <a href="https://mailchimp.com/">Mailchimp</a>, <a href="http://www.pardot.com/">Pardot</a>, <a href="https://www.oracle.com/marketingcloud/products/marketing-automation/index.html">Eloqua</a>, <a href="https://www.marketo.com/">Marketo</a>; and adding page specific <a href="http://json-ld.org/">JSON-LD</a> for SEO.</p>
-					<img src="img/Bootstrap-Paragraphs-Bundle-Type-Blank.png" alt="Bootstrap Paragraphs - Blank">
+					<img src="img/Bootstrap-Paragraphs-Bundle-Type-Blank.jpg" alt="Bootstrap Paragraphs - Blank">
 				</section>
 
 				<section>
 					<h2>Contact Form</h2>
 					<p>The Bootstrap Paragraphs Contact Form type allows you to embed one of Drupal 8 core's Contact Forms anywhere you need it, including inside of Accordions, Carousels, Columns, Modals, and Tabs. This is possible thanks to the <a href="https://www.drupal.org/project/contact_formatter">Contact Formatter module</a>.</p>
 					<p>Add <a href="https://www.drupal.org/project/inline_entity_form">Inline Entity Form</a> to allow your administrators to add new, or select existing Contact Forms.</p>
-					<img src="img/Bootstrap-Paragraphs-Type-Contact-Form.png" alt="Bootstrap Paragraphs - Contact Form">
+					<img src="img/Bootstrap-Paragraphs-Type-Contact-Form.jpg" alt="Bootstrap Paragraphs - Contact Form">
 				</section>
 
 				<section>
 					<h2>Drupal Blocks</h2>
 					<p>The Drupal Block Paragraphs type has a reference field to Drupal core, System, and Menus blocks for easy inclusion in your content.</p>
 					<p>You can also use this type as an example for creating a Paragraphs type for your custom blocks.</p>
-					<img src="img/Bootstrap-Paragraphs-Type-Drupal-Block.png" alt="Bootstrap Paragraphs - Drupal Block">
+					<img src="img/Bootstrap-Paragraphs-Type-Drupal-Block.jpg" alt="Bootstrap Paragraphs - Drupal Block">
 				</section>
 
 				<section>
@@ -356,7 +356,7 @@
 				<section>
 					<h2>Views</h2>
 					<p>The Bootstrap Paragraphs Views type allows you to easily embed a View in and around your other Paragraphs using a <a href="https://www.drupal.org/project/viewsreference">Views Reference Field</a>.</p>
-					<img src="img/Bootstrap-Paragraphs-Type-Views.png" alt="Bootstrap Paragraphs - Views">
+					<img src="img/Bootstrap-Paragraphs-Type-Views.jpg" alt="Bootstrap Paragraphs - Views">
 				</section>
 
 				<section>
@@ -374,17 +374,17 @@
 
 				<section>
 					<h2>Equal Columns</h2>
-					<img src="img/bp_columns_equal.png" alt="Bootstrap Paragraphs - Columns">
+					<img src="img/bp_columns_equal.jpg" alt="Bootstrap Paragraphs - Columns">
 				</section>
 
 				<section>
 					<h2>Two Uneven Columns</h2>
-					<img src="img/bp_columns_2.png" alt="Bootstrap Paragraphs - Two Columns">
+					<img src="img/bp_columns_2.jpg" alt="Bootstrap Paragraphs - Two Columns">
 				</section>
 
 				<section>
 					<h2>Three Uneven Columns</h2>
-					<img src="img/bp_columns_3.png" alt="Bootstrap Paragraphs - Three Columns">
+					<img src="img/bp_columns_3.jpg" alt="Bootstrap Paragraphs - Three Columns">
 				</section>
 
 				<section>
@@ -531,7 +531,7 @@
 
 				<section>
 					<h2>Twig - Width example</h2>
-					<img src="img/twig-width-field.png" alt="Twig markup for Width Field">
+					<img src="img/twig-width-field.jpg" alt="Twig markup for Width Field">
 				</section>
 
 				<section>
@@ -617,49 +617,49 @@
 				<section>
 					<h2>Create a new "Custom Block" Paragraphs Bundle Type</h2>
 					<p>Use the Drupal Block Paragraph to provide the example.</p>
-					<img src="img/Custom-Block-1-Drupal-Block-Example.png" alt="Screenshot of Custom Block" style="width: 78%;">
+					<img src="img/Custom-Block-1-Drupal-Block-Example.jpg" alt="Screenshot of Custom Block" style="width: 78%;">
 				</section>
 
 				<section>
 					<h2>Custom Block</h2>
 					<p>Add a new Paragraph Type.</p>
-					<img src="img/Custom-Block-2-Add-Paragraph-Type.png" alt="Screenshot of Custom Block 1">
+					<img src="img/Custom-Block-2-Add-Paragraph-Type.jpg" alt="Screenshot of Custom Block 1">
 				</section>
 
 				<section>
 					<h2>Custom Block</h2>
 					<p>Add the existing Background field.</p>
-					<img src="img/Custom-Block-3-Add-Background-Field.png" alt="Screenshot of Custom Block 2">
+					<img src="img/Custom-Block-3-Add-Background-Field.jpg" alt="Screenshot of Custom Block 2">
 				</section>
 
 				<section>
 					<h2>Custom Block</h2>
 					<p>Add the existing Width field.</p>
-					<img src="img/Custom-Block-4-Add-Width-Field.png" alt="Screenshot of Custom Block 3">
+					<img src="img/Custom-Block-4-Add-Width-Field.jpg" alt="Screenshot of Custom Block 3">
 				</section>
 
 				<section>
 					<h2>Custom Block</h2>
 					<p>Add a new Reference Revisions field, select Other for type.</p>
-					<img src="img/Custom-Block-5-Field-Select-Other.png" alt="Screenshot of Custom Block 4">
+					<img src="img/Custom-Block-5-Field-Select-Other.jpg" alt="Screenshot of Custom Block 4">
 				</section>
 
 				<section>
 					<h2>Custom Block</h2>
 					<p>Select Custom Block in the Reference Revisions field settings.</p>
-					<img src="img/Custom-Block-6-Field-Select-Custom-Block.png" alt="Screenshot of Custom Block 5">
+					<img src="img/Custom-Block-6-Field-Select-Custom-Block.jpg" alt="Screenshot of Custom Block 5">
 				</section>
 
 				<section>
 					<h2>Custom Block</h2>
 					<p>Select which Custom Block Type Bundles.</p>
-					<img src="img/Custom-Block-7-Select-Which-Block-Bundles.png" alt="Screenshot of Custom Block 6">
+					<img src="img/Custom-Block-7-Select-Which-Block-Bundles.jpg" alt="Screenshot of Custom Block 6">
 				</section>
 
 				<section>
 					<h2>Custom Block</h2>
 					<p>Manage Display</p>
-					<img src="img/Custom-Block-8-Manage-Display.png" alt="Screenshot of Custom Block 7">
+					<img src="img/Custom-Block-8-Manage-Display.jpg" alt="Screenshot of Custom Block 7">
 				</section>
 
 				<section>
@@ -687,32 +687,32 @@
 
 				<section>
 					<h2>Hero - Fields</h2>
-					<img src="img/hero-paragraphs-fields.png" alt="Hero Paragraph Fields">
+					<img src="img/hero-paragraphs-fields.jpg" alt="Hero Paragraph Fields">
 				</section>
 
 				<section>
 					<h2>Hero - Display</h2>
-					<img src="img/hero-paragraphs-display.png" alt="Hero Paragraph Displays">
+					<img src="img/hero-paragraphs-display.jpg" alt="Hero Paragraph Displays">
 				</section>
 
 				<section>
 					<h2>Hero - Overlay</h2>
-					<img src="img/hero-paragraphs-template-1-library-overlay.png" alt="Hero Paragraph Template">
+					<img src="img/hero-paragraphs-template-1-library-overlay.jpg" alt="Hero Paragraph Template">
 				</section>
 
 				<section>
 					<h2>Hero - Parallax</h2>
-					<img src="img/hero-paragraphs-template-2-parallax.png" alt="Hero Paragraph Template">
+					<img src="img/hero-paragraphs-template-2-parallax.jpg" alt="Hero Paragraph Template">
 				</section>
 
 				<section>
 					<h2>Hero - Invert</h2>
-					<img src="img/hero-paragraphs-template-3-invert.png" alt="Hero Paragraph Template">
+					<img src="img/hero-paragraphs-template-3-invert.jpg" alt="Hero Paragraph Template">
 				</section>
 
 				<section>
 					<h2>Hero - Zoom</h2>
-					<img src="img/hero-paragraphs-template-4-zoom.png" alt="Hero Paragraph Template">
+					<img src="img/hero-paragraphs-template-4-zoom.jpg" alt="Hero Paragraph Template">
 				</section>
 
 				<section>
@@ -749,7 +749,7 @@
 
 				<section>
 					<h2>Create module structure</h2>
-					<img src="img/hero-paragraphs-module-structure.png" alt="Hero Paragraph Module Structure">
+					<img src="img/hero-paragraphs-module-structure.jpg" alt="Hero Paragraph Module Structure">
 				</section>
 
 				<section>
@@ -764,7 +764,7 @@
 
 				<section>
 					<h2>Add Function to override Template in .module file</h2>
-					<img src="img/hero-paragraphs-module.png" alt="Hero Paragraph Function">
+					<img src="img/hero-paragraphs-module.jpg" alt="Hero Paragraph Function">
 				</section>
 
 				<section>
@@ -775,7 +775,7 @@
 				<section>
 					<h2>Install, Test, &amp; Share the finished product</h2>
 					<p>This example can be found at <a href="https://github.com/xenomedia/xeno_hero">Xeno Hero</a> on Github.</p>
-					<img src="img/xeno-hero.png" alt="Xeno Hero on Github">
+					<img src="img/xeno-hero.jpg" alt="Xeno Hero on Github">
 				</section>
 
 				<section>
@@ -804,7 +804,7 @@
 					</ul>
 				</section>
 
-				<section style="text-align:left;" data-background="img/about-zoomdata.png" data-background-position="center top" data-transition="zoom">
+				<section style="text-align:left;" data-background="img/about-zoomdata.jpg" data-background-position="center top" data-transition="zoom">
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-Zoomdata.jpg">
