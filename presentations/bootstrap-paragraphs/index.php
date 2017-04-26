@@ -738,7 +738,7 @@
 						<li>Create module structure</li>
 						<li>Add Templates, CSS, and JS</li>
 						<li>Add Function to override Template</li>
-						<li>Export Config, delete UUIDs, and Namespace</li>
+						<li>Export Config, delete UUIDs, Name space/change file names</li>
 					</ul>
 				</section>
 
@@ -768,7 +768,7 @@
 				</section>
 
 				<section>
-					<h2>Export Config, delete UUIDs, and Namespace</h2>
+					<h2>Export Config, delete UUIDs, Name space/change file names</h2>
 					<img src="img/hero-paragraphs-config.jpg" alt="Hero Paragraph Config">
 				</section>
 
