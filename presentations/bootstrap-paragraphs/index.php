@@ -138,7 +138,7 @@
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-the-Pool-Waterfall.jpg" data-transition="zoom">
 					<h1 style="font-size:2.25em;padding-left:20px;width:75%">Bootstrap Paragraphs</h1>
 					<div style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.7);padding-left:20px;width:75%">
-						<a href="https://events.drupal.org/baltimore2017"><img src="img/drupalcon-baltimore-logo.png" alt="DrupalCon Baltimore 2017" style="float: left; width: 200px; height: auto;"></a><br>
+						<a href="https://joind.in/event/texas-camp/bootstrap-paragraphs"><img src="img/texas-camp-300.png" alt="Texas Camp 2017" style="padding:32px 20px;background: #fff;float: left; width: 200px; height: auto;"></a><br>
 						<div class="box" style="float: left;padding-left:20px;padding-bottom:20px;margin-top:-30px">Created by <a href="http://jimbir.ch">Jim Birch</a><br>
 							<a href="http://jimbir.ch/presentations/bootstrap-paragraphs/">jimbir.ch/bp</a><br>
 							<a href="http://twitter.com/thejimbirch">@thejimbirch</a><br>
@@ -361,7 +361,7 @@
 
 				<section>
 					<h2>Columns</h2>
-					<p style="text-align:left;">The three Bootstrap Paragraphs Column types allows content creators to add column structure into their content using a <strong>Column Content field</strong>.</p>
+					<p style="text-align:left;">The three Bootstrap Paragraphs Column types allow content creators to add column structure into their content using a <strong>Column Content field</strong>.</p>
 					<p style="text-align:left;">The field allows for multiple values, so columns can be easily reordered by drag and drop in the admin UI.</p>
 				</section>
 
@@ -369,7 +369,8 @@
 					<h2>Columns</h2>
 					<ul>
 						<li><strong>Columns (Equal)</strong> - allows for up to 6 references, and distributes the content evenly, up to 6 columns</li>
-						<li class="fragment"><strong>3 and 2 Column Uneven</strong> - allow for 3 and 2 items respectively, and have an additional Column Style option to choose the layout of the grid.</p>
+						<li class="fragment"><strong>3 and 2 Column Uneven</strong> - allow for 3 and 2 items respectively, and have an additional Column Style option to choose the layout of the grid.</li>
+					</ul>
 				</section>
 
 				<section>
@@ -385,6 +386,26 @@
 				<section>
 					<h2>Three Uneven Columns</h2>
 					<img src="img/bp_columns_3.jpg" alt="Bootstrap Paragraphs - Three Columns">
+				</section>
+
+				<section>
+					<h2>Column Wrapper</h2>
+					<div style="float: left; margin: 0 30px 30px 0;width:340px;">
+						<img src="img/texas-camp-300.png" alt="Texas Camp" style="border:0;box-shadow:none;">
+						<p><small><i>New for Texas Camp!</i></small></p>
+					</div>
+					<p style="text-align:left;">Allows you to add multiple Paragraphs in a column.  Basically, it is another level of nesting, if you need to add an image and a simple to a column.</p>
+					<p style="text-align:left;">Works in all three column types.</p>
+				</section>
+
+				<section>
+					<h2>Column Wrapper</h2>
+					<img src="img/bp_columns_wrapper_equal.jpg" alt="Bootstrap Paragraphs - Column Wrapper Example - Equal Columns">
+				</section>
+
+				<section>
+					<h2>Column Wrapper</h2>
+					<img src="img/bp_columns_wrapper_2_uneven.jpg" alt="Bootstrap Paragraphs - Column Wrapper Example - Two Uneven Columns">
 				</section>
 
 				<section>
@@ -569,15 +590,12 @@
    padding-right: 0;
    width: 100%;
  }
- .structured-content.container > div {
-   margin-left: 0;
-   margin-right: 0;
- }
- .structured-content.container > div > div {
-   padding-left: 0;
-   padding-right: 0;
- }
 						</code></pre>
+				</section>
+
+				<section>
+					<h2>Block Layout Screen</h2>
+					<img src="img/block-layout.png" alt="Block Layout">
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Greece-by-the-cactus-by-the-sea.jpg" data-transition="zoom">
@@ -789,6 +807,16 @@
 					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:70%;">You can also use this approach with other front end frameworks and scripts -- Singularity, Foundation, Slick, etc...</p>
 				</section>
 
+				<section>
+					<h2>Many thanks to:</h2>
+					<ul>
+						<li><a href="http://jeroen.pro">Jeroen Bobbeldijk</a>, <a href="https://www.drupal.org/vdmi">.VDMi/</a>, <a href="https://www.drupal.org/md-systems">MD Systems</a> for supporting the <a href="https://www.drupal.org/project/paragraphs">Paragraphs module</a>.</li>
+						<li>Les Lim and David Needham's presentation <a href="https://www.youtube.com/watch?v=nRB4n09Ekpg">Using Paragraphs to Weave a Beautiful Content Tapestry</a></li>
+						<li>Morten, Danny Englander, Greg Boggs, Mark Conroy, and everyone else in the <a href="https://slackinvite.me/to/drupaltwig">Drupal Twig Slack</a></li>
+						<li>So many people in Stack Overflow, especially Scott Reeves (Cottser)!</li>
+					</ul>
+				</section>
+
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-Xeno.jpg" data-transition="zoom">
 					<div class="fragment">
 						<h1 class="box" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);"><a href="http://www.xenomedia.com">Xeno Media</a></h1>
@@ -804,77 +832,6 @@
 					</ul>
 				</section>
 
-				<section style="text-align:left;" data-background="img/about-zoomdata.png" data-background-position="center top" data-transition="zoom">
-				</section>
-
-				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-Zoomdata.jpg">
-					<h1 class="box" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);"><a href="https://www.zoomdata.com">Zoomdata</a></h1>
-					<div class="fragment">
-						<div style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:47%;float:left;">
-							<ul>
-								<li><strong>Founded:</strong> 2012</li>
-								<li><strong>Employees:</strong> 125</li>
-								<li><strong>Offices:</strong>
-									<ul>
-										<li>San Mateo, CA</li>
-										<li>Reston, VA</li>
-										<li>New York, NY</li>
-										<li>Kyiv, Ukraine</li>
-									</ul>
-								</li>
-							</ul>
-							<p><strong>Zoomdata is Hiring!</strong><br>Visit <a href="https://www.zoomdata.com">zoomdata.com/careers</a></p>
-						</div>
-						<div style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px 20px 60px;width:44.4%;float:left;">
-							<ul>
-								<li><strong>Customers:</strong>
-									<ul>
-										<li>Goldman Sachs</li>
-										<li>Amazon</li>
-										<li>Cisco</li>
-										<li>Juniper</li>
-										<li>Deloitte</li>
-										<li>Abbvie</li>
-										<li>DHS</li>
-										<li>ClickFox</li>
-									</ul>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</section>
-
-				<section>
-					<h2>Many thanks to:</h2>
-					<ul>
-						<li><a href="http://jeroen.pro">Jeroen Bobbeldijk</a>, <a href="https://www.drupal.org/vdmi">.VDMi/</a>, <a href="https://www.drupal.org/md-systems">MD Systems</a> for supporting the <a href="https://www.drupal.org/project/paragraphs">Paragraphs module</a>.</li>
-						<li>Les Lim and David Needham's presentation <a href="https://www.youtube.com/watch?v=nRB4n09Ekpg">Using Paragraphs to Weave a Beautiful Content Tapestry</a></li>
-						<li>Morten, Danny Englander, Greg Boggs, Mark Conroy, and everyone else in the <a href="https://slackinvite.me/to/drupaltwig">Drupal Twig Slack</a></li>
-						<li>So many people in Stack Overflow, especially Scott Reeves (Cottser)!</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Join Us for Contribution Sprints</h2>
-					<h3>Friday, April 28, 2017</h3>
-					<div style="float: left; width: 32%;margin-bottom: 30px;">
-						<strong>First-Time Sprinter Workshop</strong><br>
-						9:00am-12:00pm<br>
-						Room: 307-308
-					</div>
-					<div style="float: left; padding-left: 1%; width: 32%;margin-bottom: 30px;">
-						<strong>Mentored Core Sprint</strong><br>
-						9:00am-12:00pm<br>
-						Room: 301-303
-					</div>
-					<div style="float: left; padding-left: 1%; width: 32%;margin-bottom: 30px;">
-						<strong>General Sprints</strong><br><br>
-						9:00am-6:00pm<br>
-						Room: 309-310
-					</div>
-					<h4 style="clear: left;">#drupalsprints</h4>
-				</section>
-
 				<section style="text-align: left;" data-background="img/Lego-Uncle-Jim-at-Sunset.jpg">
 					<h1 style="padding-left:20px;">The End</h1>
 					<h3 style="padding-left:20px;">Continuing the conversation:</h3>
@@ -882,8 +839,7 @@
 						<a href="http://jimbir.ch/presentations/bootstrap-paragraphs/">jimbir.ch/bp</a><br>
 						<a href="http://twitter.com/thejimbirch">@thejimbirch</a><br>
 						<a href="http://www.xenomedia.com">Xeno Media, Inc.</a><br>
-						<a href="https://events.drupal.org/baltimore2017/sessions/bootstrap-paragraphs">Leave feedback about this presentation</a><br>
-						<a href="https://www.surveymonkey.com/r/drupalconbaltimore">Take the DrupalCon survey</a>
+						<a href="https://joind.in/event/texas-camp/bootstrap-paragraphs">Review me on joind.in!</a>
 					</div>
 				</section>
 
