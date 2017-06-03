@@ -149,6 +149,7 @@ Redirect 301 /optimizing http://jimbir.ch/presentations/optimizing-drupal-7-html
 Redirect 301 /cmd http://jimbir.ch/presentations/command-line
 Redirect 301 /holistic-seo http://jimbir.ch/presentations/holistic-seo
 Redirect 301 /bsp http://jimbir.ch/presentations/bootstrap-paragraphs
+Redirect 301 /bp http://jimbir.ch/presentations/bootstrap-paragraphs
 #
 # from http://cgit.drupalcode.org/advagg/tree/README.txt#n556
 #
