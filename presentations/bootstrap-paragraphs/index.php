@@ -138,7 +138,7 @@
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-the-Pool-Waterfall.jpg" data-transition="zoom">
 					<h1 style="font-size:2.25em;padding-left:20px;width:75%">Bootstrap Paragraphs</h1>
 					<div style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.7);padding-left:20px;width:75%">
-						<a href="https://joind.in/event/texas-camp/bootstrap-paragraphs"><img src="img/texas-camp-300.jpg" alt="Texas Camp 2017" style="padding:32px 20px;background: #fff;float: left; width: 200px; height: auto;"></a><br>
+						<a href="https://joind.in/event/texas-camp/bootstrap-paragraphs"><img src="img/texas-camp-300.jpg" alt="Texas Camp 2017" style="float: left; width: 200px; height: auto;"></a><br>
 						<div class="box" style="float: left;padding-left:20px;padding-bottom:20px;margin-top:-30px">Created by <a href="http://jimbir.ch">Jim Birch</a><br>
 							<a href="http://jimbir.ch/presentations/bootstrap-paragraphs/">jimbir.ch/bp</a><br>
 							<a href="http://twitter.com/thejimbirch">@thejimbirch</a><br>
