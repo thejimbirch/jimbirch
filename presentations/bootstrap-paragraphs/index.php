@@ -2,13 +2,13 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Bootstrap Paragraphs | Web Development Presentation | Drupalcon Baltimore 2017</title>
+		<title>Bootstrap Paragraphs | Web Development Presentation | Texas Camp 2017</title>
 		<meta name="description" content="This presentation covers the Bootstrap Paragraphs Drupal module which provides a suite of content and layout Paragraph bundles made with the Bootstrap front-end framework."/>
 		<link rel="canonical" href="http://jimbir.ch/presentations/bootstrap-paragraphs/"/>
 		<meta property="og:site_name" content="Jim Birch"/>
 		<meta property="og:type" content="public_figure"/>
 		<meta property="og:url" content="http://jimbir.ch/presentations/bootstrap-paragraphs/"/>
-		<meta property="og:title" content="Bootstrap and Paragraphs | Web Development Presentation | Drupalcon Baltimore 2017"/>
+		<meta property="og:title" content="Bootstrap and Paragraphs | Web Development Presentation | Texas Camp 2017"/>
 		<meta property="og:description" content="This presentation covers the Bootstrap Paragraphs Drupal module which provides a suite of content and layout Paragraph bundles made with the Bootstrap front-end framework."/>
 		<meta property="og:image" content="http://jimbir.ch/sites/default/files/img/presentations/presentation-bootstrap-paragraphs-720.jpg"/>
 		<meta name="twitter:site" content="@thejimbirch"/>
@@ -16,10 +16,10 @@
 		<meta name="twitter:creator" content="@thejimbirch"/>
 		<meta name="twitter:creator:id" content="2989027096"/>
 		<meta name="twitter:url" content="http://jimbir.ch/presentations/bootstrap-paragraphs/"/>
-		<meta name="twitter:title" content="Bootstrap and Paragraphs | Web Development Presentation | Drupalcon Baltimore 2017"/>
+		<meta name="twitter:title" content="Bootstrap and Paragraphs | Web Development Presentation | Texas Camp 2017"/>
 		<meta name="twitter:description" content="This presentation covers the Bootstrap Paragraphs Drupal module which provides a suite of content and layout Paragraph bundles made with the Bootstrap front-end framework."/>
 		<meta name="twitter:image:src" content="http://jimbir.ch/sites/default/files/img/presentations/presentation-bootstrap-paragraphs-720.jpg"/>
-		<meta itemprop="name" content="Bootstrap and Paragraphs | Web Development Presentation | Drupalcon Baltimore 2017"/>
+		<meta itemprop="name" content="Bootstrap and Paragraphs | Web Development Presentation | Texas Camp 2017"/>
 		<meta itemprop="description" content="This presentation covers the Bootstrap Paragraphs Drupal module which provides a suite of content and layout Paragraph bundles made with the Bootstrap front-end framework."/>
 		<meta itemprop="image" content="http://jimbir.ch/sites/default/files/img/presentations/presentation-bootstrap-paragraphs-720.jpg"/>
 		<meta name="author" content="Jim Birch">
@@ -138,7 +138,7 @@
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-the-Pool-Waterfall.jpg" data-transition="zoom">
 					<h1 style="font-size:2.25em;padding-left:20px;width:75%">Bootstrap Paragraphs</h1>
 					<div style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.7);padding-left:20px;width:75%">
-						<a href="https://joind.in/event/texas-camp/bootstrap-paragraphs"><img src="img/texas-camp-300.png" alt="Texas Camp 2017" style="padding:32px 20px;background: #fff;float: left; width: 200px; height: auto;"></a><br>
+						<a href="https://joind.in/event/texas-camp/bootstrap-paragraphs"><img src="img/texas-camp-300.jpg" alt="Texas Camp 2017" style="padding:32px 20px;background: #fff;float: left; width: 200px; height: auto;"></a><br>
 						<div class="box" style="float: left;padding-left:20px;padding-bottom:20px;margin-top:-30px">Created by <a href="http://jimbir.ch">Jim Birch</a><br>
 							<a href="http://jimbir.ch/presentations/bootstrap-paragraphs/">jimbir.ch/bp</a><br>
 							<a href="http://twitter.com/thejimbirch">@thejimbirch</a><br>
@@ -391,7 +391,7 @@
 				<section>
 					<h2>Column Wrapper</h2>
 					<div style="float: left; margin: 0 30px 30px 0;width:340px;">
-						<img src="img/texas-camp-300.png" alt="Texas Camp" style="border:0;box-shadow:none;">
+						<img src="img/texas-camp-300.jpg" alt="Texas Camp" style="border:0;box-shadow:none;">
 						<p><small><i>New for Texas Camp!</i></small></p>
 					</div>
 					<p style="text-align:left;">Allows you to add multiple Paragraphs in a column.  Basically, it is another level of nesting, if you need to add an image and a simple to a column.</p>
