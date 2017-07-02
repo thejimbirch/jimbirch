@@ -5,9 +5,9 @@ dependencies[] = advagg
 package = Advanced CSS/JS Aggregation
 configure = admin/config/development/performance/advagg/font
 
-; Information added by Drupal.org packaging script on 2017-01-05
-version = "7.x-2.20"
+; Information added by Drupal.org packaging script on 2017-06-16
+version = "7.x-2.25"
 core = "7.x"
 project = "advagg"
-datestamp = "1483576452"
+datestamp = "1497645246"
 

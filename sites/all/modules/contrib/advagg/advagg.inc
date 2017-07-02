@@ -7,7 +7,6 @@
  * These functions are needed for cache misses.
  */
 
-// Database operations.
 /**
  * Insert/Update data in advagg tables.
  *
@@ -321,10 +320,12 @@ function advagg_does_js_start_with_use_strict($filename) {
     list($contents) = advagg_get_js_aggregate_contents($file_aggregate, $aggregate_settings);
 
     // See if the js file starts with "use strict";.
-    $use_strict = stripos(trim($contents), '"use strict";');
+    $length = variable_get('advagg_js_header_length', ADVAGG_JS_HEADER_LENGTH);
+    $header = advagg_get_js_header($contents, $length);
+    $use_strict = stripos(trim($header), '"use strict";');
     $strict_js = FALSE;
     if ($use_strict === FALSE) {
-      $use_strict = stripos(trim($contents), "'use strict';");
+      $use_strict = stripos(trim($header), "'use strict';");
     }
     if ($use_strict !== FALSE) {
       if ($use_strict == 0) {
@@ -332,31 +333,18 @@ function advagg_does_js_start_with_use_strict($filename) {
       }
       else {
         // Get all text before "use strict";.
-        $substr = substr($contents, 0, $use_strict);
+        $substr = substr($header, 0, $use_strict);
         // Check if there are any comments.
         $single_line_comment = strpos($substr, '//');
         $multi_line_comment = strpos($substr, '/*');
         $in_function = strpos($substr, '{');
         if ($single_line_comment !== FALSE || $multi_line_comment !== FALSE) {
-          // Include jsminplus.inc and advagg_js_compress.advagg.inc.
-          if (!function_exists('advagg_js_compress_jsminplus')) {
-            include_once drupal_get_path('module', 'advagg') . '/advagg_js_compress/advagg_js_compress.advagg.inc';
-            if (!class_exists('JSMinPlus')) {
-              include drupal_get_path('module', 'advagg') . '/advagg_js_compress/jsminplus.inc';
-              $nesting_level = ini_get('xdebug.max_nesting_level');
-              if (!empty($nesting_level) && $nesting_level < 200) {
-                ini_set('xdebug.max_nesting_level', 200);
-              }
-            }
-          }
-          // Jsminplus strips all comments.
-          // Suppress any errors; only js fragments are being processed.
-          @advagg_js_compress_jsminplus($contents, FALSE);
-          $use_strict = stripos($contents, '"use strict";');
+
+          $use_strict = stripos($header, '"use strict";');
           if ($use_strict === FALSE) {
-            $use_strict = stripos($contents, "'use strict';");
+            $use_strict = stripos($header, "'use strict';");
           }
-          $substr = substr($contents, 0, $use_strict);
+          $substr = substr($header, 0, $use_strict);
           // Check if there is a function before this.
           $in_function = strpos($substr, '{');
         }
@@ -365,12 +353,62 @@ function advagg_does_js_start_with_use_strict($filename) {
         }
       }
     }
+
     $files[$filename] = $strict_js;
   }
   return $files[$filename];
 }
 
-// File operations.
+/**
+ * Read only the first 8192 bytes to get the file header.
+ *
+ * @param string $content
+ *   JS string to cut.
+ * @param int $length
+ *   The number of bytes to grab. See advagg_js_header_length variable.
+ *
+ * @return string
+ *   The shortened JS string.
+ */
+function advagg_get_js_header($content, $length) {
+  // Only grab the first X bytes.
+  if (function_exists('mb_strcut')) {
+    $header = mb_strcut($content, 0, $length);
+  }
+  else {
+    $header = substr($content, 0, $length);
+  }
+
+  // Remove js comments.
+  advagg_remove_js_comments($header);
+  return $header;
+}
+
+/**
+ * Remove comments from JavaScript.
+ *
+ * @param string $content
+ *   JS string to minify.
+ */
+function advagg_remove_js_comments(&$content) {
+  // Remove comments.
+  $content = preg_replace('/(?:(?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:(?<!\:|\\\|\'|\")\/\/.*))/', '', $content);
+  // Remove space after colons.
+  // Remove space before equal signs.
+  // Remove space after equal signs.
+  $content = str_replace(
+    array(': ', ' =', '= '),
+    array(':', '=', '='),
+    $content
+  );
+  // Remove excessive whitespace.
+  $content = str_replace(
+    array("\r\n\r\n", "\n\n", "\r\r", '\t', '  ', '    ', '    '),
+    '',
+    $content
+  );
+}
+
 /**
  * Given a group of files calculate what the aggregate filename will be.
  *
@@ -617,8 +655,7 @@ function advagg_get_info_on_files(array $files, $bypass_cache = FALSE, $run_alte
 
     if ($ext === 'css') {
       // Get the number of selectors.
-      // http://stackoverflow.com/a/12567381/125684
-      $linecount = preg_match_all('/\{.+?\}|,/s', $file_contents, $matched);
+      $linecount = advagg_count_css_selectors($file_contents);
     }
     else {
       // Get the number of lines.
@@ -743,7 +780,6 @@ function advagg_clearstatcache($filename = NULL) {
   }
 }
 
-// Modify CSS/JS arrays.
 /**
  * Group the CSS/JS into the biggest buckets possible.
  *
@@ -1000,205 +1036,278 @@ function advagg_generate_groups(array $files_to_aggregate, $type) {
  *
  * @param array $file_info
  *   File info array from advagg_get_info_on_file().
+ * @param string $file_contents
+ *   CSS file contents.
  *
  * @return array
  *   Array with advagg_get_info_on_file data and split data.
  */
-function advagg_split_css_file(array $file_info) {
+function advagg_split_css_file(array $file_info, $file_contents = '') {
   // Make advagg_parse_media_blocks() available.
   module_load_include('inc', 'advagg', 'advagg.missing');
 
   // Get the CSS file and break up by media queries.
-  $file_contents = (string) @file_get_contents($file_info['data']);
+  if (empty($file_contents)) {
+    $file_contents = (string) @file_get_contents($file_info['data']);
+  }
   $media_blocks = advagg_parse_media_blocks($file_contents);
 
-  // Get 98% of the advagg_ie_css_selector_limiter_value; usually 4013.
-  $selector_split_value = (int) max(floor(variable_get('advagg_ie_css_selector_limiter_value', ADVAGG_IE_CSS_SELECTOR_LIMITER_VALUE) * 0.98), 100);
-  $part_selector_count = 0;
-  $major_chunks = array();
-  $counter = 0;
+  // Get the advagg_ie_css_selector_limiter_value.
+  $selector_limit = (int) max(variable_get('advagg_ie_css_selector_limiter_value', ADVAGG_IE_CSS_SELECTOR_LIMITER_VALUE), 100);
+
   // Group media queries together.
+  $part_selector_count = 0;
+  $counter = 0;
+  $values = array();
   foreach ($media_blocks as $media_block) {
-    $matched = array();
     // Get the number of selectors.
-    // http://stackoverflow.com/a/12567381/125684
-    $selector_count = preg_match_all('/\{.+?\}|,/s', $media_block, $matched);
-    $part_selector_count += $selector_count;
+    $selector_count = advagg_count_css_selectors($media_block);
 
-    if ($part_selector_count > $selector_split_value) {
-      if (isset($major_chunks[$counter])) {
-        ++$counter;
-        $major_chunks[$counter] = $media_block;
-      }
-      else {
-        $major_chunks[$counter] = $media_block;
-      }
-      ++$counter;
-      $part_selector_count = 0;
-    }
-    else {
-      if (isset($major_chunks[$counter])) {
-        $major_chunks[$counter] .= "\n" . $media_block;
-      }
-      else {
-        $major_chunks[$counter] = $media_block;
-      }
-    }
-  }
+    // This chunk is bigger than $selector_limit. It needs to be split.
+    if ($selector_count > $selector_limit) {
+      $inner_selector_count = 0;
+      // Split css string.
+      list($media_query, $split_css_strings) = advagg_split_css_string($media_block, $selector_limit);
+      foreach ($split_css_strings as $split_css_strings) {
+        $counter_changed = FALSE;
+        if (empty($split_css_strings)) {
+          continue;
+        }
 
-  $parts = array();
-  $overall_split = 0;
-  $split_at = $selector_split_value;
-  $chunk_split_value = (int) variable_get('advagg_ie_css_selector_limiter_value', ADVAGG_IE_CSS_SELECTOR_LIMITER_VALUE) - $selector_split_value - 1;
-  foreach ($major_chunks as $chunk_key => $chunks) {
-    $last_chunk = FALSE;
-    $file_info['split_last_part'] = FALSE;
-    if (count($major_chunks) - 1 == $chunk_key) {
-      $last_chunk = TRUE;
-    }
+        // Make sure selector count doesn't go over selector limit.
+        $inner_selector_count = advagg_count_css_selectors($split_css_strings);
+        $part_selector_count += $inner_selector_count;
+        if ($part_selector_count > $selector_limit) {
+          if (!empty($values[$counter])) {
+            ++$counter;
+          }
+          $counter_changed = TRUE;
+          $part_selector_count = $inner_selector_count;
+        }
 
-    // Get the number of selectors.
-    $matches = array();
-    $selector_count = preg_match_all('/\{.+?\}|,/s', $chunks, $matches);
-
-    // Pass through if selector count is low.
-    if ($selector_count < $selector_split_value) {
-      $overall_split += $selector_count;
-      if ($last_chunk) {
-        $file_info['split_last_part'] = TRUE;
+        // Add to output array.
+        if (isset($values[$counter])) {
+          if (!empty($media_query)) {
+            $values[$counter] .= "\n$media_query { $split_css_strings } ";
+          }
+          else {
+            $values[$counter] .= "$split_css_strings";
+          }
+        }
+        else {
+          if (!empty($media_query)) {
+            $values[$counter] = "$media_query { $split_css_strings } ";
+          }
+          else {
+            $values[$counter] = $split_css_strings;
+          }
+        }
       }
-      $subfile = advagg_create_subfile($chunks, $overall_split, $file_info);
-      if (empty($subfile)) {
-        // Somthing broke; do not create a subfile.
-        watchdog('advagg', 'Spliting up a CSS file failed. File info: <code>@info</code>', array('@info' => var_export($file_info, TRUE)));
-        return array();
+      // Add to current selector counter and go to the next value.
+      if (!$counter_changed) {
+        $part_selector_count += $inner_selector_count;
       }
-      $parts[] = $subfile;
       continue;
     }
 
-    $media_query = '';
-    if (strpos($chunks, '@media') !== FALSE) {
-      $media_query_pos = strpos($chunks, '{');
-      $media_query = substr($chunks, 0, $media_query_pos);
-      $chunks = substr($chunks, $media_query_pos + 1);
+    $part_selector_count += $selector_count;
+    if ($part_selector_count > $selector_limit) {
+      if (!empty($values[$counter])) {
+        ++$counter;
+      }
+      $values[$counter] = $media_block;
+      $part_selector_count = $selector_count;
     }
-
-    // Split CSS into selector chunks.
-    $split = preg_split('/(\{.+?\}|,)/si', $chunks, -1, PREG_SPLIT_DELIM_CAPTURE);
-
-    // Setup and handle media queries.
-    $new_css_chunk = array(0 => '');
-    $selector_chunk_counter = 0;
-    $counter = 0;
-    if (!empty($media_query)) {
-      $new_css_chunk[0] = $media_query . '{';
-      $new_css_chunk[1] = '';
-      ++$selector_chunk_counter;
-      ++$counter;
-    }
-    // Have the key value be the running selector count and put split array semi
-    // back together.
-    foreach ($split as $value) {
-      $new_css_chunk[$counter] .= $value;
-      if (strpos($value, '}') === FALSE) {
-        ++$selector_chunk_counter;
+    else {
+      if (isset($values[$counter])) {
+        $values[$counter] .= "\n$media_block";
       }
       else {
-        if ($counter + 1 < $selector_chunk_counter) {
-          $selector_chunk_counter += ($counter - $selector_chunk_counter + 1) / 2;
-        }
-        $counter = $selector_chunk_counter;
-        if (!isset($new_css_chunk[$counter])) {
-          $new_css_chunk[$counter] = '';
-        }
+        $values[$counter] = $media_block;
       }
-    }
-
-    // Group selectors.
-    $first = TRUE;
-    while (!empty($new_css_chunk)) {
-      // Find where to split the array.
-      $string_to_write = '';
-      while (array_key_exists($split_at, $new_css_chunk) === FALSE) {
-        --$split_at;
-      }
-
-      // Combine parts of the css so that it can be saved to disk.
-      foreach ($new_css_chunk as $key => $value) {
-        if ($key !== $split_at) {
-          // Move this css row to the $string_to_write variable.
-          $string_to_write .= $value;
-          unset($new_css_chunk[$key]);
-        }
-        // We are at the split point.
-        else {
-          // Get the number of selectors in this chunk.
-          $matched = array();
-          $chunk_selector_count = preg_match_all('/\{.+?\}|,/s', $new_css_chunk[$key], $matched);
-          if ($chunk_selector_count < $chunk_split_value) {
-            // The number of selectors at this point is below the threshold;
-            // move this chunk to the write variable and break out of the loop.
-            $string_to_write .= $value;
-            unset($new_css_chunk[$key]);
-            $overall_split = $split_at;
-            $split_at += $selector_split_value;
-          }
-          else {
-            // The number of selectors with this chunk included is over the
-            // threshold; do not move it. Change split position so the next
-            // iteration of the while loop ends at the correct spot. Because we
-            // skip unset here, this chunk will start the next part file.
-            $overall_split = $split_at;
-            $split_at += $selector_split_value - $chunk_selector_count;
-          }
-          break;
-        }
-      }
-
-      // Handle media queries.
-      if (!empty($media_query)) {
-        // See if brackets need a new line.
-        if (strpos($string_to_write, "\n") === 0) {
-          $open_bracket = '{';
-        }
-        else {
-          $open_bracket = "{\n";
-        }
-        if (strrpos($string_to_write, "\n") === strlen($string_to_write)) {
-          $close_bracket = '}';
-        }
-        else {
-          $close_bracket = "\n}";
-        }
-
-        // Fix syntax around media queries.
-        if ($first) {
-          $string_to_write .= $close_bracket;
-        }
-        elseif (empty($new_css_chunk)) {
-          $string_to_write = $media_query . $open_bracket . $string_to_write;
-        }
-        else {
-          $string_to_write = $media_query . $open_bracket . $string_to_write . $close_bracket;
-        }
-      }
-      // Handle the last split part.
-      if (empty($new_css_chunk) && $last_chunk) {
-        $file_info['split_last_part'] = TRUE;
-      }
-      // Write the data.
-      $subfile = advagg_create_subfile($string_to_write, $overall_split, $file_info);
-      if (empty($subfile)) {
-        // Somthing broke; do not create a subfile.
-        watchdog('advagg', 'Spliting up a CSS file failed. File info: <code>@info</code>', array('@info' => var_export($file_info, TRUE)));
-        return array();
-      }
-      $parts[] = $subfile;
-      $first = FALSE;
     }
   }
+
+  // Save data.
+  $parts = array();
+  $overall_counter = 0;
+  foreach ($values as $key => $value) {
+    $last_chunk = FALSE;
+    $file_info['split_last_part'] = FALSE;
+    if (count($values) - 1 == $key) {
+      $last_chunk = TRUE;
+    }
+    if ($last_chunk) {
+      $file_info['split_last_part'] = TRUE;
+    }
+
+    // Get the number of selectors.
+    $selector_count = advagg_count_css_selectors($value);
+    $overall_counter += $selector_count;
+
+    // Save file.
+    $subfile = advagg_create_subfile($value, $overall_counter, $file_info);
+    if (empty($subfile)) {
+      // Somthing broke; do not create a subfile.
+      watchdog('advagg', 'Spliting up a CSS file failed. File info: <code>@info</code>', array('@info' => var_export($file_info, TRUE)));
+      return array();
+    }
+    $parts[] = $subfile;
+  }
   return $parts;
+}
+
+/**
+ * Count the number of selectors inside of a CSS string.
+ *
+ * @param string $css_string
+ *   CSS string.
+ *
+ * @return int
+ *   The number of CSS selectors.
+ */
+function advagg_count_css_selectors($css_string) {
+  return substr_count($css_string, ',') + substr_count($css_string, '{') - substr_count($css_string, '@media');
+}
+
+/**
+ * Given a css string it will split it if it's over the selector limit.
+ *
+ * @param string $css_string
+ *   CSS string.
+ * @param int $selector_limit
+ *   How many selectors can be grouped together.
+ *
+ * @return array
+ *   Array that contains the $media_query and the $css_array.
+ */
+function advagg_split_css_string($css_string, $selector_limit) {
+  // See if this css string is wrapped in a @media statement.
+  $media_query = '';
+  $media_query_pos = strpos($css_string, '@media');
+  if ($media_query_pos !== FALSE) {
+    // Get the opening bracket.
+    $open_bracket_pos = strpos($css_string, "{", $media_query_pos);
+    // Skip if there is a syntax error.
+    if ($open_bracket_pos === FALSE) {
+      return array();
+    }
+    $media_query = substr($css_string, $media_query_pos, $open_bracket_pos - $media_query_pos);
+    $css_string_inside = substr($css_string, $open_bracket_pos + 1);
+  }
+  else {
+    $css_string_inside = $css_string;
+  }
+
+  // Split CSS into selector chunks.
+  $split = preg_split('/(\{.+?\}|,)/si', $css_string_inside, -1, PREG_SPLIT_DELIM_CAPTURE);
+
+  $new_css_chunk = array(0 => '');
+  $selector_chunk_counter = 0;
+  $counter = 0;
+  // Have the key value be the running selector count and put split array semi
+  // back together.
+  foreach ($split as $value) {
+    $new_css_chunk[$counter] .= $value;
+    if (strpos($value, '}') === FALSE) {
+      ++$selector_chunk_counter;
+    }
+    else {
+      if ($counter + 1 < $selector_chunk_counter) {
+        $selector_chunk_counter += ($counter - $selector_chunk_counter + 1) / 2;
+      }
+      $counter = $selector_chunk_counter;
+      if (!isset($new_css_chunk[$counter])) {
+        $new_css_chunk[$counter] = '';
+      }
+    }
+  }
+
+  // Generate output array in this function.
+  $css_array = array();
+  $keys = array_keys($new_css_chunk);
+  $counter = 0;
+  $chunk_counter = 0;
+  foreach (array_keys($keys) as $key) {
+    // Get out of loop if at the end of the array.
+    if (!isset($keys[$key + 1])) {
+      break;
+    }
+
+    // Get values, keys and counts.
+    $this_value = $new_css_chunk[$keys[$key]];
+    $this_key = $keys[$key];
+    $next_key = $keys[$key + 1];
+    $this_selector_count = $next_key - $this_key;
+
+    // Single rule is bigger than the selector limit.
+    if ($this_selector_count > $selector_limit) {
+      // Get css rules for these selectors.
+      $open_bracket_pos = strpos($this_value, "{");
+      $css_rule = ' ' . substr($this_value, $open_bracket_pos);
+
+      // Split on selectors.
+      $split = preg_split('/(\,)/si', $this_value, NULL, PREG_SPLIT_OFFSET_CAPTURE);
+      $index = 0;
+      $counter = 0;
+      while (isset($split[$index][1])) {
+        // Get starting and ending positions of the selectors given the selector
+        // limit.
+        $next_index = $index + $selector_limit - 1;
+        $start = $split[$index][1];
+        if (isset($split[$next_index][1])) {
+          $end = $split[$next_index][1];
+        }
+        else {
+          // Last one.
+          $temp = end($split);
+          $split_key = key($split);
+          $counter = $split_key % $selector_limit;
+          $end_open_bracket_pos = (int) strpos($temp[0], "{");
+          $end = $temp[1] + $end_open_bracket_pos;
+        }
+
+        // Extract substr.
+        $sub_this_value = substr($this_value, $start, $end - $start - 1) . $css_rule;
+
+        // Save substr.
+        ++$chunk_counter;
+        $key_output = $selector_limit;
+        if (!empty($counter)) {
+          $key_output = $selector_limit - $counter;
+        }
+        $css_array["$chunk_counter $key_output"] = '';
+
+        if (!isset($css_array[$chunk_counter])) {
+          $css_array[$chunk_counter] = $sub_this_value;
+        }
+        else {
+          $css_array[$chunk_counter] .= $sub_this_value;
+        }
+
+        // Move counter.
+        $index = $next_index;
+      }
+      continue;
+    }
+
+    $counter += $this_selector_count;
+    if ($counter > $selector_limit) {
+      $key_output = $counter - $this_selector_count;
+      $css_array["$chunk_counter $key_output"] = '';
+      $counter = $next_key - $this_key;
+      ++$chunk_counter;
+    }
+    if (!isset($css_array[$chunk_counter])) {
+      $css_array[$chunk_counter] = $this_value;
+    }
+    else {
+      $css_array[$chunk_counter] .= $this_value;
+    }
+  }
+
+  // Group into sets smaller than $selector_limit.
+  return array($media_query, $css_array);
 }
 
 /**
@@ -1257,14 +1366,14 @@ function advagg_create_subfile($css, $overall_split, array $file_info) {
   file_prepare_directory($dirname, FILE_CREATE_DIRECTORY);
 
   // Get info on the file that was just created.
-  $part = advagg_get_info_on_file($parts_path . '/' . $new_filename) + $file_info;
+  $part = advagg_get_info_on_file($parts_path . '/' . $new_filename, TRUE) + $file_info;
   $part['split'] = TRUE;
   $part['split_location'] = $overall_split;
   $part['split_original'] = $file_info['data'];
 
   // Overwrite/create file if hash doesn't match.
   $hash = drupal_hash_base64($css);
-  if ($part['content_hash'] != $hash) {
+  if ($part['content_hash'] !== $hash) {
     advagg_save_data($part_uri, $css, TRUE);
     $part = advagg_get_info_on_file($parts_path . '/' . $new_filename, TRUE) + $file_info;
     $part['split'] = TRUE;
@@ -1500,7 +1609,17 @@ function advagg_load_css_stylesheet($file, $optimize = TRUE, array $aggregate_se
   // Replace the old base path with the one that was passed in.
   $pos = strpos($css_base_url, $old_base_path);
   if ($pos !== FALSE) {
-    $css_base_url = substr_replace($css_base_url, $GLOBALS['base_path'], $pos, strlen($old_base_path));
+    $parsed_url = parse_url($css_base_url);
+    if (!empty($parsed_url['path'])) {
+      // Make sure path starts with a slash.
+      $parsed_url['path'] = str_replace('//', '/', '/' . $parsed_url['path']);
+      // Get newly recalculated position.
+      $pos = strpos($parsed_url['path'], $old_base_path);
+
+      // Replace.
+      $parsed_url['path'] = substr_replace($parsed_url['path'], $GLOBALS['base_path'], $pos, strlen($old_base_path));
+      $css_base_url = advagg_glue_url($parsed_url);
+    }
   }
 
   _advagg_build_css_path(array(), $css_base_url . '/', $aggregate_settings);
@@ -1570,6 +1689,19 @@ function _advagg_build_css_path(array $matches, $base = '', array $aggregate_set
 
   // Prefix with base and remove '../' segments where possible.
   $url = $_base . $matches[1];
+  if (variable_get('advagg_skip_file_create_url_inside_css', ADVAGG_SKIP_FILE_CREATE_URL_INSIDE_CSS)) {
+    $new_base_path = $GLOBALS['base_path'];
+    if (isset($_aggregate_settings['variables']['base_path'])) {
+      $new_base_path = $_aggregate_settings['variables']['base_path'];
+    }
+    $pos = strpos($_base, $new_base_path);
+    if ($pos !== FALSE) {
+      $url = substr($_base, $pos) . $matches[1];
+    }
+    else {
+      $url = $new_base_path . $_base . $matches[1];
+    }
+  }
   $last = '';
   while ($url != $last) {
     $last = $url;
@@ -1578,7 +1710,7 @@ function _advagg_build_css_path(array $matches, $base = '', array $aggregate_set
 
   // Parse and build back the url without the query and fragment parts.
   $parsed_url = parse_url($url);
-  $base_url  = advagg_glue_url($parsed_url, TRUE);
+  $base_url = advagg_glue_url($parsed_url, TRUE);
 
   $query = isset($parsed_url['query']) ? $parsed_url['query'] : '';
   // In the case of certain URLs, we may have simply a '?' character without
@@ -1591,19 +1723,9 @@ function _advagg_build_css_path(array $matches, $base = '', array $aggregate_set
   }
   $fragment = isset($parsed_url['fragment']) ? '#' . $parsed_url['fragment'] : '';
 
-  if (variable_get('advagg_skip_file_create_url_inside_css', ADVAGG_SKIP_FILE_CREATE_URL_INSIDE_CSS)) {
-    if (isset($_aggregate_settings['variables']['base_path'])) {
-      $url = $_aggregate_settings['variables']['base_path'] . $url;
-    }
-    else {
-      $url = $GLOBALS['base_path'] . $url;
-    }
-    $query = '';
-    $fragment = '';
-  }
-  else {
-    $url = advagg_file_create_url($base_url, $_aggregate_settings);
+  if (!variable_get('advagg_skip_file_create_url_inside_css', ADVAGG_SKIP_FILE_CREATE_URL_INSIDE_CSS)) {
+    $base_url = advagg_file_create_url($base_url, $_aggregate_settings);
   }
 
-  return 'url(' . $url . $query . $fragment . ')';
+  return 'url(' . $base_url . $query . $fragment . ')';
 }
