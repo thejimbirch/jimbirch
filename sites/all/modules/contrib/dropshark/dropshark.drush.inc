@@ -28,14 +28,12 @@ function drush_dropshark_collect() {
   if (!$url = drush_get_option('url', FALSE)) {
     $url = url('', array('absolute' => TRUE));
     if ($url == 'http://default/') {
-      drush_log(dt('Unable to determine site URL.'), 'error');
-      return;
+      return drush_set_error(dt('Unable to determine site URL.'));
     }
   }
 
   if (!valid_url($url)) {
-    drush_log(dt('Invalid site URL.'), 'error');
-    return;
+    return drush_set_error(dt('Invalid site URL.'));
   }
 
   $debug = drush_get_option('debug', FALSE);
@@ -43,9 +41,16 @@ function drush_dropshark_collect() {
     drush_log(dt('Attempting HTTP request to initiate data collection.'), 'ok');
   }
 
+  $key = variable_get('dropshark_site_id');
+  $token = variable_get('dropshark_site_token');
+
+  // Need site_id and site_token.
+  if (!$key || !$token) {
+    return drush_set_error(dt('DropShark not properly registered.'));
+  }
+
   if (!$key = variable_get('dropshark_site_id')) {
-    drush_log(dt('DropShark not properly registered.'), 'error');
-    return;
+    return drush_set_error(dt('DropShark not properly registered.'));
   }
 
   $params['key'] = $key;
@@ -57,8 +62,7 @@ function drush_dropshark_collect() {
     drush_log(print_r($result, TRUE), 'ok');
   }
   if ($result->code != 200) {
-    drush_log(dt('HTTP request failed !code.', array('!code' => $result->code)), 'error');
-    return;
+    return drush_set_error(dt('HTTP request failed !code.', array('!code' => $result->code)));
   }
 
   if ($debug) {

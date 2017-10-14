@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Class DropSharkLinfoCollector.
+ *
+ * Base class for collectors which utilize the Linfo library for collecting
+ * server stats.
+ */
 abstract class DropSharkLinfoCollector extends DropSharkCollectorBase {
 
   /**
@@ -16,8 +22,11 @@ abstract class DropSharkLinfoCollector extends DropSharkCollectorBase {
    */
   protected $parser;
 
-  public function __construct($definition, $queue) {
-    parent::__construct($definition, $queue);
+  /**
+   * {@inheritdoc}
+   */
+  public function __construct($definition, $queue, $siteId) {
+    parent::__construct($definition, $queue, $siteId);
 
     if ($this->linfo = dropshark_get_linfo()) {
       $this->parser = $this->linfo->getParser();
@@ -30,7 +39,7 @@ abstract class DropSharkLinfoCollector extends DropSharkCollectorBase {
    * @para array $data
    *   Collector result array.
    *
-   * @return boolean
+   * @return bool
    *   Indicates whether or not Linfo is available.
    */
   protected function checkLinfo($data) {

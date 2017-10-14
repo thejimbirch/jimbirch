@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Class DropSharkMemoryCollector.
+ *
+ * Collects memory usage information.
+ */
 class DropSharkMemoryCollector extends DropSharkLinfoCollector {
 
   protected $events = array('system');
@@ -8,7 +13,7 @@ class DropSharkMemoryCollector extends DropSharkLinfoCollector {
   /**
    * {@inheritdoc}
    */
-  public function collect($event, $data = array()) {
+  public function collect($event, array $data = array()) {
 
     if (!$this->respond($event)) {
       return;
@@ -39,7 +44,7 @@ class DropSharkMemoryCollector extends DropSharkLinfoCollector {
    * Get memory usage information from the OS.
    *
    * @return array
-   *  Memory usage information, keyed by type ("Mem:", "Swap:").
+   *   Memory usage information, keyed by type ("Mem:", "Swap:").
    */
   protected function getData() {
     static $data = NULL;

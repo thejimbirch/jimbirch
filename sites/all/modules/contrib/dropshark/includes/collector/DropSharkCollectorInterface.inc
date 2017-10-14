@@ -8,7 +8,7 @@ interface DropSharkCollectorInterface {
   /**
    * Indicates a successful collection of data.
    *
-   * Other return values
+   * A non-zero return value indicates the collection did not occur properly.
    */
   const STATUS_SUCCESS = 0;
 
@@ -23,7 +23,7 @@ interface DropSharkCollectorInterface {
    *   is likely information to indicate which server on which a collection is
    *   being ran, or to indicate which instance of a collection is being ran.
    */
-  public function collect($event, $data = array());
+  public function collect($event, array $data = array());
 
   /**
    * Perform any processing upon finalizing the page request.

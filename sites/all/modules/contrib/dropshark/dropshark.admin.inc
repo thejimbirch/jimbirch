@@ -10,15 +10,15 @@
  */
 function dropshark_admin_config($form, &$form_state) {
 
-  if (!$token = variable_get('dropshark_site_token')) {
-    $form['instructions']['#markup'] = t('In order to register your site with the DropShark service, you\'ll need to enter your credentials and site identifier.');
+  if (!variable_get('dropshark_site_token')) {
+    $form['instructions']['#markup'] = t("In order to register your site with the DropShark service, you'll need to enter your credentials and site identifier.");
     $form['instructions']['#prefix'] = '<p>';
     $form['instructions']['#suffix'] = '</p>';
 
     $form['email'] = array(
       '#type' => 'textfield',
       '#title' => t('Email address'),
-      '#description' => t('Enter the email address which you\'ve registered for DropShark.'),
+      '#description' => t("Enter the email address which you've registered for DropShark."),
       '#required' => TRUE,
     );
 
@@ -42,8 +42,9 @@ function dropshark_admin_config($form, &$form_state) {
       '#type' => 'submit',
       '#element_validate' => array('dropshark_admin_config_register_validate'),
     );
-  } else {
-    $params['!link'] = l('DropShark', 'http://app.dropshark.io');
+  }
+  else {
+    $params['!link'] = l(t('DropShark'), 'http://app.dropshark.io');
     $form['instructions']['#markup'] = t('Your site is registered and will send data to DropShark. Log in to !link to analyze your data.', $params);
     $form['instructions']['#prefix'] = '<p>';
     $form['instructions']['#suffix'] = '</p>';
@@ -71,7 +72,7 @@ function dropshark_admin_config($form, &$form_state) {
       '#title' => t('Reset token'),
       '#type' => 'fieldset',
     );
-    $form['reset']['instructions']['#markup'] = t('If you\'re having trouble connecting to DropShark, try resetting the token then re-registering the site.');
+    $form['reset']['instructions']['#markup'] = t("If you're having trouble connecting to DropShark, try resetting the token then re-registering the site.");
     $form['reset']['instructions']['#prefix'] = '<p>';
     $form['reset']['instructions']['#suffix'] = '</p>';
     $form['reset']['submit'] = array(
@@ -84,7 +85,7 @@ function dropshark_admin_config($form, &$form_state) {
       '#title' => t('Collect'),
       '#type' => 'fieldset',
     );
-    $form['collect']['instructions'][0]['#markup'] = t('DropShark will attempt to submit your data during Drupal\'s cron. You may also want to set up a dedicated cron task dedicated to collecting DropShark data.');
+    $form['collect']['instructions'][0]['#markup'] = t("DropShark will attempt to submit your data during Drupal's cron. You may also want to set up a dedicated cron task dedicated to collecting DropShark data.");
     $form['collect']['instructions'][0]['#prefix'] = '<p>';
     $form['collect']['instructions'][0]['#suffix'] = '</p>';
     $form['collect']['instructions'][1]['#markup'] = t('Use this function to perform a real time collection of data from your site.');
@@ -117,11 +118,13 @@ function dropshark_admin_config_register_validate($form, &$form_state) {
       if (!empty($result->data->error)) {
         $params['@message'] = $result->data->error;
         $message = t('Unable to register your site: @message. Please check your information and try again. If you continue to experience issues, please contact DropShark support.', $params);
-      } else {
+      }
+      else {
         $message = t('Unable to register your site, please check your information and try again. If you continue to experience issues, please contact DropShark support.');
       }
       form_set_error('', $message);
-    } else {
+    }
+    else {
       $form_state['storage']['token'] = $result->data->token;
       drupal_set_message(t('Your site has been registered with DropShark.'));
     }
@@ -135,6 +138,8 @@ function dropshark_admin_config_register_validate($form, &$form_state) {
 function dropshark_admin_config_submit(&$element, &$form_state) {
   variable_set('dropshark_site_id', $form_state['values']['site_id']);
   variable_set('dropshark_site_token', $form_state['storage']['token']);
+  dropshark_handle_event('all', array(), TRUE);
+  dropshark_get_request()->setToken($form_state['storage']['token']);
 }
 
 /**
@@ -146,7 +151,8 @@ function dropshark_admin_config_check_submit() {
 
   if (empty($result->data->site_id)) {
     drupal_set_message(t('Unable to verify the site connection.'), 'error');
-  } else {
+  }
+  else {
     drupal_set_message(t('Connection successfully verified.'));
   }
 }

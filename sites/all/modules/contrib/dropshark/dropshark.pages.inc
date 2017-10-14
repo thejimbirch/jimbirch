@@ -11,7 +11,16 @@
 function dropshark_collect_page() {
   drupal_page_is_cacheable(FALSE);
 
-  if (empty($_GET['key']) || variable_get('dropshark_site_id', NULL) != $_GET['key']) {
+  $key = variable_get('dropshark_site_id');
+  $token = variable_get('dropshark_site_token');
+
+  // Ensure key, site ID, and token are all present.
+  if (empty($_GET['key']) || empty($key) || empty($token)) {
+    return MENU_NOT_FOUND;
+  }
+
+  // Validate key matches site ID.
+  if ($_GET['key'] != $key) {
     return MENU_NOT_FOUND;
   }
 

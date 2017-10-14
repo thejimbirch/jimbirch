@@ -2,6 +2,8 @@
 
 /**
  * Class DropSharkDiskCollector.
+ *
+ * Collects disk usage information.
  */
 class DropSharkDiskCollector extends DropSharkLinfoCollector {
 
@@ -11,7 +13,7 @@ class DropSharkDiskCollector extends DropSharkLinfoCollector {
   /**
    * {@inheritdoc}
    */
-  public function collect($event, $data = array()) {
+  public function collect($event, array $data = array()) {
 
     if (!$this->respond($event)) {
       return;

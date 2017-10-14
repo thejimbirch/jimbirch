@@ -16,6 +16,16 @@ function advagg_mod_admin_settings_form() {
   drupal_set_title(t('AdvAgg: Modifications'));
   $config_path = advagg_admin_config_root_path();
 
+  // Tell user to update library if a new version is available.
+  $library_name = 'loadCSS';
+  $module_name = 'advagg_mod';
+  list($description) = advagg_get_version_description($library_name, $module_name);
+  if (!empty($description)) {
+    $form['advagg_version_msg'] = array(
+      '#markup' => "<p>{$description}</p>",
+    );
+  }
+
   $form = array();
   $form['js'] = array(
     '#type' => 'fieldset',
@@ -79,7 +89,10 @@ function advagg_mod_admin_settings_form() {
     '#default_value' => variable_get('advagg_mod_js_adjust_sort_browsers', ADVAGG_MOD_JS_ADJUST_SORT_BROWSERS),
     '#description' => t('This will group all browser conditional JavaScript to be in the lowest group of that conditional rule.'),
   );
-  if (module_exists('googleanalytics')) {
+  if (module_exists('googleanalytics')
+    && is_callable('googleanalytics_api')
+    && is_callable('_googleanalytics_cache')
+  ) {
     $form['js']['adjust_sort']['expert'] = array(
       '#type' => 'fieldset',
       '#title' => t('Experimental Settings'),
@@ -90,6 +103,7 @@ function advagg_mod_admin_settings_form() {
       '#type' => 'checkbox',
       '#title' => t('Move Google Analytics analytics.js code from inline to be a file'),
       '#default_value' => variable_get('advagg_mod_ga_inline_to_file', ADVAGG_MOD_GA_INLINE_TO_FILE),
+      '#description' => t('The AdvAgg Relocate module is more capable. Recommend using it if you are using this functionality. This setting will soon be deprecated.'),
     );
     $form['js']['adjust_sort']['expert']['advagg_mod_prefetch'] = array(
       '#type' => 'checkbox',
@@ -206,14 +220,11 @@ function advagg_mod_admin_settings_form() {
     '#default_value' => variable_get('advagg_mod_defer_inline_js_skip_list', ADVAGG_MOD_DEFER_INLINE_JS_SKIP_LIST),
     '#description' => t("If the inline JavaScript matches a given string then the whole inline script will not be wrapped. Enter one per line."),
   );
-  if (!module_exists('jquery_update') || variable_get('jquery_update_jquery_cdn', 'none') === 'none') {
-    $GLOBALS['conf']['advagg_mod_js_defer_jquery'] = FALSE;
-  }
   $form['js']['placement']['expert'] = array(
     '#type' => 'fieldset',
     '#title' => t('Experimental Settings'),
     '#collapsible' => TRUE,
-    '#collapsed' => !variable_get('advagg_mod_js_async', ADVAGG_MOD_JS_ASYNC) && !variable_get('advagg_mod_js_defer_jquery', ADVAGG_MOD_JS_DEFER_JQUERY),
+    '#collapsed' => !variable_get('advagg_mod_js_async', ADVAGG_MOD_JS_ASYNC),
   );
   $form['js']['placement']['expert']['advagg_mod_js_async'] = array(
     '#type' => 'checkbox',
@@ -223,21 +234,6 @@ function advagg_mod_admin_settings_form() {
       '@link' => 'http://peter.sh/experiments/asynchronous-and-deferred-javascript-execution-explained/',
     )),
   );
-  if (module_exists('jquery_update') && variable_get('jquery_update_jquery_cdn', 'none') !== 'none') {
-    $form['js']['placement']['expert']['advagg_mod_js_defer_jquery'] = array(
-      '#type' => 'checkbox',
-      '#title' => t('Defer CDN version of jquery.js from jquery update'),
-      '#default_value' => variable_get('advagg_mod_js_defer_jquery', ADVAGG_MOD_JS_DEFER_JQUERY),
-      '#description' => t('By default the CDN version of jquery is not defered; this allows for jquery to be defered. Requires the "Deferred inline JavaScript Execution: Put a wrapper around inline JS so it runs from a setTimeout call" setting to be enalbed in order to be used. Not using a CDN in <a href="@url">jQuery Update</a> also means that defer works and does not require this experimental setting.', array(
-        '@url' => url('admin/config/development/jquery_update'),
-      )),
-      '#states' => array(
-        'disabled' => array(
-          ':input[name="advagg_mod_js_defer_inline_alter"]' => array('checked' => FALSE),
-        ),
-      ),
-    );
-  }
   // Outdated settings.
   $form['js']['old'] = array(
     '#type' => 'fieldset',
@@ -263,6 +259,13 @@ function advagg_mod_admin_settings_form() {
     '#description' => t('Force all CSS to have the preprocess attribute be set to TRUE. All CSS files will be aggregated if enabled.'),
   );
   $form['css']['advagg_mod_css_preprocess']['#description'] .= module_exists('advagg_bundler') ? ' ' . t('You might want to increase the <a href="@link">CSS Bundles Per Page</a> if this is checked.', array('@link' => url($config_path . '/advagg/bundler'))) : '';
+  if (is_callable('omega_extension_enabled')
+    && is_callable('omega_theme_get_setting')
+    && omega_extension_enabled('development')
+    && omega_theme_get_setting('omega_livereload', TRUE)
+  ) {
+    $form['css']['advagg_mod_css_preprocess']['#description'] .= ' ' . t('The omega theme is in development mode and livereload is also enabled. This setting combination disables CSS aggregation. If you wish to have CSS aggregation turned on, go to the <a href="@url">theme settings page</a>, select the Omega theme/subtheme and turn off LiveReload and/or turn off the Development extension.', array('@url' => url('admin/appearance/settings')));
+  }
   // Only test the translate option if
   // the locale function is defined OR
   // the locale_custom_strings variable is not empty.
@@ -646,7 +649,7 @@ function advagg_mod_admin_test_css_files() {
       continue;
     }
     // Load CSS file.
-    $file_contents = advagg_load_stylesheet_content((string) @file_get_contents($filename), TRUE);
+    $file_contents = advagg_load_stylesheet_content((string) @advagg_file_get_contents($filename), TRUE);
 
     // Code taken from drupal_load_stylesheet_content().
     // Regexp to match double quoted strings.

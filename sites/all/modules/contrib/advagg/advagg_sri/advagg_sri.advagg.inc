@@ -193,6 +193,7 @@ function advagg_sri_get_filenames_hashes(array $filenames) {
   foreach ($not_in_db as $file) {
     $filepath = array_search($file, $filenames);
     if (is_readable($filepath)) {
+      // Do not use advagg_file_get_contents here.
       $contents = (string) @file_get_contents($filepath);
       if (!empty($contents)) {
         $hashes[$file] = advagg_sri_compute_hashes($contents);

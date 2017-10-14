@@ -19,14 +19,23 @@ use Patchwork\JSqueeze;
 function advagg_js_compress_jshrink(&$contents, $log_errors = TRUE) {
   $contents_before = $contents;
 
-  // Only include jshrink.inc if the JShrink\Minifier class doesn't exist.
+  // Set max nesting level.
   if (!class_exists('JShrink\Minifier')) {
-    include drupal_get_path('module', 'advagg_js_compress') . '/jshrink.inc';
     $nesting_level = ini_get('xdebug.max_nesting_level');
     if (!empty($nesting_level) && $nesting_level < 200) {
       ini_set('xdebug.max_nesting_level', 200);
     }
   }
+
+  // Try libraries for JShrink.
+  if (is_callable('libraries_load')) {
+    libraries_load('JShrink');
+  }
+  // Only include jshrink.inc if the JShrink\Minifier class doesn't exist.
+  if (!class_exists('JShrink\Minifier')) {
+    include drupal_get_path('module', 'advagg_js_compress') . '/jshrink.inc';
+  }
+
   ob_start();
   try {
     // JShrink the contents of the aggregated file.
@@ -64,14 +73,23 @@ function advagg_js_compress_jshrink(&$contents, $log_errors = TRUE) {
 function advagg_js_compress_jsqueeze(&$contents, $log_errors = TRUE, array $aggregate_settings = array()) {
   $contents_before = $contents;
 
-  // Only include jshrink.inc if the Patchwork\JSqueeze class doesn't exist.
+  // Set max nesting level.
   if (!class_exists('Patchwork\JSqueeze')) {
-    include drupal_get_path('module', 'advagg_js_compress') . '/jsqueeze.inc';
     $nesting_level = ini_get('xdebug.max_nesting_level');
     if (!empty($nesting_level) && $nesting_level < 200) {
       ini_set('xdebug.max_nesting_level', 200);
     }
   }
+
+  // Try libraries for jsqueeze.
+  if (is_callable('libraries_load')) {
+    libraries_load('jsqueeze');
+  }
+  if (!class_exists('Patchwork\JSqueeze')) {
+    // Only include jshrink.inc if the Patchwork\JSqueeze class doesn't exist.
+    include drupal_get_path('module', 'advagg_js_compress') . '/jsqueeze.inc';
+  }
+
   ob_start();
   try {
     $add_license_setting = isset($aggregate_settings['variables']['advagg_js_compress_add_license']) ? $aggregate_settings['variables']['advagg_js_compress_add_license'] : variable_get('advagg_js_compress_add_license', ADVAGG_JS_COMPRESS_ADD_LICENSE);

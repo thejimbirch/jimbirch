@@ -42,7 +42,7 @@ class DropSharkRequest implements DropSharkRequestInterface {
   /**
    * {@inheritdoc}
    */
-  public function get($endpoint, $data = array()) {
+  public function get($endpoint, array $data = array()) {
     $url = $this->host . '/' . $endpoint;
 
     if ($data) {
@@ -55,7 +55,7 @@ class DropSharkRequest implements DropSharkRequestInterface {
   /**
    * {@inheritdoc}
    */
-  public function post($endpoint, $data = array()) {
+  public function post($endpoint, array $data = array()) {
     $url = $this->host . '/' . $endpoint;
     $options['method'] = 'POST';
     $options['headers']['Content-Type'] = 'application/x-www-form-urlencoded';
@@ -70,7 +70,7 @@ class DropSharkRequest implements DropSharkRequestInterface {
   /**
    * Execute the HTTP request.
    *
-   * @param $url
+   * @param string $url
    *   The URL which is being requested.
    * @param array $options
    *   An array of options to send to drupal_http_request().
@@ -78,7 +78,7 @@ class DropSharkRequest implements DropSharkRequestInterface {
    * @return object
    *   The result from drupal_http_request().
    */
-  protected function execute($url, $options = array()) {
+  protected function execute($url, array $options = array()) {
     $options = $this->setAuth($options);
     $result = drupal_http_request($url, $options);
     if (isset($result->data)) {
@@ -90,18 +90,25 @@ class DropSharkRequest implements DropSharkRequestInterface {
   /**
    * Sets the site token into the request header.
    *
-   * @param $options
+   * @param array $options
    *   The drupal_http_request() $options array.
    *
    * @return mixed
    *   The resulting drupal_http_request() $options array.
    */
-  protected function setAuth($options) {
+  protected function setAuth(array $options) {
     if ($this->auth) {
       $options['headers']['Authorization'] = $this->auth;
     }
 
     return $options;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function setToken($token) {
+    $this->auth = $token;
   }
 
 }

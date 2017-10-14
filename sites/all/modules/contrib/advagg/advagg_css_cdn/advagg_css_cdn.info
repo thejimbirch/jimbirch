@@ -4,9 +4,9 @@ package = Advanced CSS/JS Aggregation
 core = 7.x
 dependencies[] = advagg
 
-; Information added by Drupal.org packaging script on 2017-06-16
-version = "7.x-2.25"
+; Information added by Drupal.org packaging script on 2017-09-29
+version = "7.x-2.27"
 core = "7.x"
 project = "advagg"
-datestamp = "1497645246"
+datestamp = "1506646149"
 

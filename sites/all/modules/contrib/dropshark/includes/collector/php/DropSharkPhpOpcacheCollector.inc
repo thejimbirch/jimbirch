@@ -2,13 +2,18 @@
 
 /**
  * Class DropSharkPhpOpcacheCollector.
+ *
+ * Collects data pertaining to OpCache usage.
  */
 class DropSharkPhpOpcacheCollector extends DropSharkCollectorBase {
 
   protected $events = array('system');
   protected $type = 'opcache';
 
-  public function collect($event, $data = array()) {
+  /**
+   * {@inheritdoc}
+   */
+  public function collect($event, array $data = array()) {
     if (!$this->respond($event)) {
       return;
     }

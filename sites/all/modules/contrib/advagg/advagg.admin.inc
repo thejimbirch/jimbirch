@@ -76,6 +76,31 @@ function advagg_admin_settings_form($form, $form_state) {
       '!description' => $description,
     )),
   );
+  $stream_wrappers = file_get_stream_wrappers();
+  $prefix = variable_get('advagg_root_dir_prefix', ADVAGG_ROOT_DIR_PREFIX);
+  if ($prefix !== 'public://'
+    || $stream_wrappers['public']['class'] !== 'DrupalPublicStreamWrapper'
+    || count($stream_wrappers) > 2
+    || file_default_scheme() !== 'public'
+  ) {
+    $stream_wrappers_string = array();
+    foreach ($stream_wrappers as $key => $values) {
+      $stream_wrappers_string[] = t("<strong>@key://</strong> uses @class; @description", array(
+        '@key' => $key,
+        '@class' => $values['class'],
+        '@description' => $values['description'],
+      ));
+    }
+    $stream_wrappers_string = implode("<br>\n", $stream_wrappers_string);
+    $form['global']['advagg_root_dir_prefix'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Stream wrapper for AdvAgg.'),
+      '#default_value' => $prefix,
+      '#description' => t("Options:<br>\n!stream_wrappers", array(
+        '!stream_wrappers' => $stream_wrappers_string,
+      )),
+    );
+  }
 
   $form['global']['dev_container'] = array(
     '#type' => 'container',
@@ -413,7 +438,7 @@ function advagg_admin_settings_form($form, $form_state) {
     $form['global']['obscure']['advagg_brotli']['#disabled'] = TRUE;
     $form['global']['obscure']['advagg_brotli']['#description'] .= ' ' . t('The <a href="@url">PHP brotli extension</a> is needed in order to enable this feature.', array('@url' => 'https://github.com/kjdev/php-ext-brotli'));
     if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
-      $form['global']['obscure']['advagg_brotli']['#description'] .= ' ' . t('If running on windows this is a helpful guide on how to compile <a href="@url">PHP extensions</a>. Also noted that <a href"@iis">IIS has a Brotli extension</a>,', array(
+      $form['global']['obscure']['advagg_brotli']['#description'] .= ' ' . t('If running on windows this is a helpful guide on how to compile <a href="@url">PHP extensions</a>. Also noted that <a href="@iis">IIS has a Brotli extension</a>,', array(
         '@url' => 'https://wiki.php.net/internals/windows/stepbystepbuild',
         '@iis' => 'https://www.iis.net/downloads/community/2016/03/iis-brotli',
       ));
@@ -523,30 +548,6 @@ function advagg_admin_settings_form($form, $form_state) {
       )),
     );
   }
-  $stream_wrappers = file_get_stream_wrappers();
-  $prefix = variable_get('advagg_root_dir_prefix', ADVAGG_ROOT_DIR_PREFIX);
-  if ($prefix !== 'public://'
-    || $stream_wrappers['public']['class'] !== 'DrupalPublicStreamWrapper'
-    || count($stream_wrappers) > 2
-  ) {
-    $stream_wrappers_string = array();
-    foreach ($stream_wrappers as $key => $values) {
-      $stream_wrappers_string[] = t("<strong>@key://</strong> uses @class; @description", array(
-        '@key' => $key,
-        '@class' => $values['class'],
-        '@description' => $values['description'],
-      ));
-    }
-    $stream_wrappers_string = implode("<br>\n", $stream_wrappers_string);
-    $form['global']['obscure']['advagg_root_dir_prefix'] = array(
-      '#type' => 'textfield',
-      '#title' => t('Stream wrapper for AdvAgg.'),
-      '#default_value' => $prefix,
-      '#description' => t("Options:<br>\n!stream_wrappers", array(
-        '!stream_wrappers' => $stream_wrappers_string,
-      )),
-    );
-  }
 
   $form['css'] = array(
     '#type' => 'fieldset',
@@ -621,6 +622,16 @@ function advagg_admin_settings_form($form, $form_state) {
     '#default_value' => variable_get('advagg_js_remove_empty_files', ADVAGG_JS_REMOVE_EMPTY_FILES),
     '#description' => t('If an empty JS file ends up being in its own aggregate, that aggregate can end up as a 404.'),
   );
+  $form['js']['advagg_scripts_scope_anywhere'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Allow for JS to be added to blocks and views'),
+    '#default_value' => variable_get('advagg_scripts_scope_anywhere', ADVAGG_SCRIPTS_SCOPE_ANYWHERE),
+    '#description' => t('The scope key when using drupal_add_js and friends can be used to insert script tags throughout the html body. To see posible insertion points set <code>@theme_debug</code> in your settings.php file and view the page source while looking for @comment html comments. Some example scopes: <p><code>!example</code></p>', array(
+      '@theme_debug' => '$conf[\'theme_debug\'] = TRUE;',
+      '@comment' => '<!-- AdvAgg * tag -->',
+      '!example' => "page_top:prefix<br />block:prefix:system:powered-by<br />view:suffix:frontpage:page",
+    )),
+  );
 
   // Clear the cache bins on submit.
   $form['#submit'][] = 'advagg_admin_settings_form_submit';
@@ -685,11 +696,29 @@ function advagg_admin_operations_form($form, $form_state) {
   );
   $form['#attached']['js'][] = drupal_get_path('module', 'advagg') . '/advagg.admin.js';
 
+  // Regenerate .htaccess files.
+  if (variable_get('advagg_htaccess_check_generate', ADVAGG_HTACCESS_CHECK_GENERATE)) {
+    list($css_path, $js_path) = advagg_get_root_files_dir();
+    $form['htaccess'] = array(
+      '#type' => 'fieldset',
+      '#title' => t('Regenerate .htaccess files'),
+      '#description' => t('<code>@advagg_css_htaccess</code><br><code>@advagg_js_htaccess</code>', array(
+        '@advagg_css_htaccess' => $css_path[1] . '/.htaccess',
+        '@advagg_js_htaccess' => $js_path[1] . '/.htaccess',
+      )),
+    );
+    $form['htaccess']['advagg_regenerate_htaccess'] = array(
+      '#type' => 'submit',
+      '#value' => t('Recreate htaccess files'),
+      '#submit' => array('advagg_admin_regenerate_htaccess_button'),
+    );
+  }
+
   // Tasks run by cron.
   $form['cron'] = array(
     '#type' => 'fieldset',
     '#title' => t('Cron Maintenance Tasks'),
-    '#description' => t('The following 6 operations are ran on cron but you can run them manually here.'),
+    '#description' => t('The following 7 operations are ran on cron but you can run them manually here.'),
   );
   $form['cron']['smart_file_flush'] = array(
     '#type' => 'fieldset',
@@ -1102,6 +1131,13 @@ function advagg_admin_system_performance_settings_form(&$form, $form_state) {
       '@code' => '?advagg=0',
     ));
   }
+  if (is_callable('omega_extension_enabled')
+    && is_callable('omega_theme_get_setting')
+    && omega_extension_enabled('development')
+    && omega_theme_get_setting('omega_livereload', TRUE)
+  ) {
+    $msg .= ' ' . t('The omega theme is in development mode and livereload is also enabled. This setting combination disables CSS aggregation. If you wish to have CSS aggregation turned on, go to the <a href="@url">theme settings page</a>, select the Omega theme/subtheme and turn off LiveReload and/or turn off the Development extension.', array('@url' => url('admin/appearance/settings')));
+  }
 
   $form['bandwidth_optimization']['advagg_note'] = array(
     '#markup' => $msg,
@@ -1363,6 +1399,31 @@ function advagg_admin_get_file_info($filename) {
  */
 function advagg_admin_resource_hints_preload_reset() {
   variable_del('advagg_resource_hints_preload_settings');
+}
+
+/**
+ * Recreate the advagg htaccess files.
+ */
+function advagg_admin_regenerate_htaccess_button() {
+  // Get paths to .htaccess file.
+  list($css_path, $js_path) = advagg_get_root_files_dir();
+  $files['css'] = $css_path[0] . '/.htaccess';
+  $files['js'] = $js_path[0] . '/.htaccess';
+
+  // Make the advagg_htaccess_check_generate() function available.
+  module_load_include('inc', 'advagg', 'advagg.missing');
+
+  // Generate new .htaccess files in advagg dirs.
+  $errors = array();
+  foreach ($files as $type => $uri) {
+    $errors += advagg_htaccess_check_generate(array($uri => $type), $type, TRUE);
+  }
+  if (empty($errors)) {
+    drupal_set_message(t('The .htaccess files have been regenerated.'));
+  }
+  else {
+    drupal_set_message(t('The .htaccess files failed to be regenerated. @errors', array('@errors' => implode(', ', $errors))));
+  }
 }
 
 /**

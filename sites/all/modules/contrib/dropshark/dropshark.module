@@ -5,6 +5,9 @@
  * DropShark module code.
  */
 
+use Linfo\Linfo;
+
+define('DROPSHARK_API_VERSION', '0.0.1');
 define('DROPSHARK_HOST_DEFAULT', 'https://data.dropshark.io');
 define('DROPSHARK_QUEUE_DEFAULT', 'DropSharkDbQueue');
 define('DROPSHARK_QUEUE_LOCK_MAX_DEFAULT', 300);
@@ -31,6 +34,7 @@ function dropshark_menu() {
     'title' => 'DropShark',
     'description' => 'Endpoint to trigger data collection.',
     'page callback' => 'dropshark_collect_page',
+    // Access control/DoS prevention is enforced in page callback.
     'access callback' => TRUE,
     'file' => 'dropshark.pages.inc',
   );
@@ -107,6 +111,12 @@ function dropshark_finalize_request() {
 
 /**
  * Get information on available data collectors.
+ *
+ * @param bool $reset
+ *   Indicates if cached collector should be reset and rebuilt.
+ *
+ * @return array
+ *   An array of information describing the installed collectors.
  */
 function dropshark_get_collector_info($reset = FALSE) {
   $collectors = drupal_static(__FUNCTION__);
@@ -114,7 +124,8 @@ function dropshark_get_collector_info($reset = FALSE) {
   if ($reset || ($collectors === NULL)) {
     if ((!$reset) && $cache = cache_get('dropshark_collector_info')) {
       $collectors = $cache->data;
-    } else {
+    }
+    else {
       $hook = 'dropshark_collector_info';
       $collectors = array();
       foreach (module_implements($hook) as $module) {
@@ -134,18 +145,20 @@ function dropshark_get_collector_info($reset = FALSE) {
  *
  * @param string $collector_id
  *   The collector's ID.
- * @param \DropSharkQueueInterface
+ * @param \DropSharkQueueInterface $queue
  *   A queue handling object.
+ * @param string $site_id
+ *   The site ID.
  *
  * @return \DropSharkCollectorInterface
  *   The collector.
  */
-function dropshark_get_collector($collector_id, $queue) {
+function dropshark_get_collector($collector_id, \DropSharkQueueInterface $queue, $site_id) {
   $collectors = dropshark_get_collector_info();
 
   if (!empty($collectors[$collector_id]['class'])) {
     $class = $collectors[$collector_id]['class'];
-    return new $class($collectors[$collector_id], $queue);
+    return new $class($collectors[$collector_id], $queue, $site_id);
   }
 }
 
@@ -181,28 +194,12 @@ function dropshark_dropshark_collector_info() {
     'class' => 'DropSharkMemoryCollector',
   );
 
-  $collectors['node'] = array(
-    'class' => 'DropSharkNodeCollector',
-  );
-
   $collectors['opcache'] = array(
     'class' => 'DropSharkPhpOpcacheCollector',
   );
 
   $collectors['swap'] = array(
     'class' => 'DropSharkSwapCollector',
-  );
-
-  $collectors['user'] = array(
-    'class' => 'DropSharkUserCollector',
-  );
-
-  $collectors['user_pass_reset'] = array(
-    'class' => 'DropSharkUserPassResetCollector',
-  );
-
-  $collectors['user_sessions'] = array(
-    'class' => 'DropSharkUserSessionCollector',
   );
 
   return $collectors;
@@ -221,20 +218,17 @@ function dropshark_dropshark_collector_info() {
  * @param bool $immediate
  *   Indicates if the data should be transmitted as a part of this HTTP request.
  */
-function dropshark_handle_event($event, $data = array(), $immediate = FALSE) {
+function dropshark_handle_event($event, array $data = array(), $immediate = FALSE) {
   $queue = dropshark_get_queue();
+  $site_id = variable_get('dropshark_site_id');
 
   foreach (dropshark_get_collector_info() as $name => $info) {
-    $collector = dropshark_get_collector($name, $queue);
+    $collector = dropshark_get_collector($name, $queue, $site_id);
     $collector->collect($event, $data);
   }
 
   if ($immediate) {
     $queue->setImmediateTransmit();
-  }
-
-  if ($queue->needsImmediateTransmit() || $queue->hasDeferred()) {
-    dropshark_set_shutdown_function();
   }
 }
 
@@ -264,7 +258,7 @@ function dropshark_get_linfo() {
       return $linfo = FALSE;
     }
 
-    $linfo = new \Linfo\Linfo($settings);
+    $linfo = new Linfo($settings);
   }
 
   return $linfo;
@@ -288,6 +282,7 @@ function dropshark_cron() {
  * other, likely non-production, environments.
  *
  * @return string
+ *   The fingerprint for the site and environment.
  */
 function dropshark_site_fingerprint() {
   $fingerprint = &drupal_static(__FUNCTION__);
@@ -309,86 +304,4 @@ function dropshark_site_fingerprint() {
   }
 
   return $fingerprint;
-}
-
-/**
- * Implements hook_node_insert().
- */
-function dropshark_node_insert($node) {
-  dropshark_handle_event('node_insert', $node);
-}
-
-/**
- * Implements hook_node_update().
- */
-function dropshark_node_update($node) {
-  dropshark_handle_event('node_update', $node);
-}
-
-/**
- * Implements hook_node_delete().
- */
-function dropshark_node_delete($node) {
-  dropshark_handle_event('node_delete', $node);
-}
-
-/**
- * Implements hook_user_login().
- */
-function dropshark_user_login(&$edit, $account) {
-  dropshark_handle_event('user_login', $account);
-}
-
-/**
- * Implements hook_user_logout().
- */
-function dropshark_user_logout($account) {
-  dropshark_handle_event('user_logout', $account);
-}
-
-/**
- * Implements hook_user_insert().
- */
-function dropshark_user_insert(&$edit, $account, $category) {
-  $data['edit'] = $edit;
-  $data['account'] = $account;
-  $data['category'] = $category;
-  dropshark_handle_event('user_insert', $data);
-}
-
-/**
- * Implements hook_user_update().
- */
-function dropshark_user_update(&$edit, $account, $category) {
-  $data['edit'] = $edit;
-  $data['account'] = $account;
-  $data['category'] = $category;
-  dropshark_handle_event('user_update', $data);
-}
-
-/**
- * Implements hook_user_cancel().
- */
-function dropshark_user_cancel($edit, $account, $method) {
-  $data['edit'] = $edit;
-  $data['account'] = $account;
-  $data['method'] = $method;
-  dropshark_handle_event('user_cancel', $data);
-}
-
-/**
- * Implements hook_form_FORM_ID_alter().
- */
-function dropshark_form_user_pass_alter(&$form) {
-  if (!in_array('dropshark_user_pass_reset', $form['#submit'])) {
-    $form['#submit'][] = 'dropshark_user_pass_reset';
-  }
-}
-
-/**
- * Submit callback for user_pass form.
- */
-function dropshark_user_pass_reset($form, $form_state) {
-  $account = $form_state['values']['account'];
-  dropshark_handle_event('user_pass_reset', $account);
 }

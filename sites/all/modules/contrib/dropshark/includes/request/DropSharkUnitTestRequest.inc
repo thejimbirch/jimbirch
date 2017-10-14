@@ -30,7 +30,7 @@ class DropSharkUnitTestRequest extends DropSharkRequest {
   /**
    * {@inheritdoc}
    */
-  public function post($endpoint, $data = array()) {
+  public function post($endpoint, array $data = array()) {
     $request = new stdClass();
 
     switch ($this->scenario) {

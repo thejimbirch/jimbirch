@@ -46,7 +46,7 @@
     if( w.attachEvent ){
       w.attachEvent( "onload", function(){
         w.clearInterval( run );
-      } )
+      } );
     }
   }
 }( this ));

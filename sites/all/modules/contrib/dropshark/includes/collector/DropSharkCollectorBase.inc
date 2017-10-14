@@ -27,6 +27,13 @@ abstract class DropSharkCollectorBase implements DropSharkCollectorInterface {
   protected $queue;
 
   /**
+   * The site ID.
+   *
+   * @var string
+   */
+  protected $siteId;
+
+  /**
    * A machine name indicating the collector's type.
    *
    * @var string|null
@@ -40,10 +47,13 @@ abstract class DropSharkCollectorBase implements DropSharkCollectorInterface {
    *   Collector definition obtained from hook_dropshark_collector_info().
    * @param \DropSharkQueueInterface $queue
    *   The queue used for handling collected data.
+   * @param string $siteId
+   *   The site ID.
    */
-  public function __construct($definition, DropSharkQueueInterface $queue) {
+  public function __construct(array $definition, DropSharkQueueInterface $queue, $siteId) {
     $this->definition = $definition;
     $this->queue = $queue;
+    $this->siteId = $siteId;
   }
 
   /**
@@ -65,7 +75,7 @@ abstract class DropSharkCollectorBase implements DropSharkCollectorInterface {
    * Alternatively, an extending collector may override this method to perform
    * more sophisticated logic or elect to not use this check.
    *
-   * @param $event
+   * @param string $event
    *   The event or type of event for which the collector is being polled.
    *
    * @return bool
@@ -84,6 +94,7 @@ abstract class DropSharkCollectorBase implements DropSharkCollectorInterface {
    * from.
    *
    * @return string
+   *   The server identifier.
    */
   public function getServer() {
     // TODO: make this dynamic, configurable.
@@ -103,6 +114,7 @@ abstract class DropSharkCollectorBase implements DropSharkCollectorInterface {
    *   The type indicator of the data being collected.
    *
    * @return array
+   *   A generic result array.
    */
   protected function defaultResult($type = NULL) {
     $result = array();
@@ -111,11 +123,13 @@ abstract class DropSharkCollectorBase implements DropSharkCollectorInterface {
       $type = $this->type;
     }
 
+    $result['site_id'] = $this->siteId;
     $result['type'] = $type;
     $result['server'] = $this->getServer();
     $result['ds_collector_id'] = "{$result['type']}|{$result['server']}";
     $result['code'] = 'unknown_error';
     $result['fingerprint'] = dropshark_site_fingerprint();
+    $result['ds_api_version'] = DROPSHARK_API_VERSION;
 
     return $result;
   }

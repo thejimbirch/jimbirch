@@ -1,7 +1,7 @@
 name = DropShark
 description = Integration with DropShark.io monitoring, trending and alerts service.
 core = 7.x
-php = 5.2
+php = 5.3
 configure = admin/config/services/dropshark
 
 files[] = includes/collector/DropSharkCollectorInterface.inc
@@ -9,7 +9,6 @@ files[] = includes/collector/DropSharkCollectorBase.inc
 files[] = includes/collector/drupal/DropSharkDrupalStatusCollector.inc
 files[] = includes/collector/drupal/DropSharkDrupalUpdateStatusCollector.inc
 files[] = includes/collector/memcache/DropSharkMemcacheCollector.inc
-files[] = includes/collector/node/DropSharkNodeCollector.inc
 files[] = includes/collector/php/DropSharkPhpApcCollector.inc
 files[] = includes/collector/php/DropSharkPhpOpcacheCollector.inc
 files[] = includes/collector/system/DropSharkDiskCollector.inc
@@ -17,9 +16,6 @@ files[] = includes/collector/system/DropSharkLinfoCollector.inc
 files[] = includes/collector/system/DropSharkLoadCollector.inc
 files[] = includes/collector/system/DropSharkMemoryCollector.inc
 files[] = includes/collector/system/DropSharkSwapCollector.inc
-files[] = includes/collector/user/DropSharkUserCollector.inc
-files[] = includes/collector/user/DropSharkUserPassResetCollector.inc
-files[] = includes/collector/user/DropSharkUserSessionCollector.inc
 
 files[] = includes/queue/DropSharkQueueInterface.inc
 files[] = includes/queue/DropSharkDbQueue.inc
@@ -31,9 +27,9 @@ files[] = includes/request/DropSharkWebTestRequest.inc
 files[] = tests/DropSharkAdminTestCase.test
 files[] = tests/DropSharkDbQueueTestCase.test
 
-; Information added by Drupal.org packaging script on 2016-12-12
-version = "7.x-1.0-beta4"
+; Information added by Drupal.org packaging script on 2017-07-26
+version = "7.x-1.0-rc1"
 core = "7.x"
 project = "dropshark"
-datestamp = "1481563990"
+datestamp = "1501066745"
 

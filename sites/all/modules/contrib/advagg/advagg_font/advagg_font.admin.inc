@@ -16,21 +16,23 @@ function advagg_font_admin_settings_form() {
   drupal_set_title(t('AdvAgg: Async Font Loader'));
   $form = array();
 
-  module_load_include('advagg.inc', 'advagg_font');
-  $version = advagg_update_github_versions('fontfaceobserver');
+  $versions = advagg_get_remote_libraries_versions();
+  $library = advagg_library('fontfaceobserver', 'advagg_font');
+  if (empty($versions['fontfaceobserver']['remote'])) {
+    $versions['fontfaceobserver']['remote'] = 'NULL';
+  }
   $options = array(
     0 => t('Disabled'),
-    6 => t('Externally load the latest from github (version: @version)', array('@version' => $version)),
+    6 => t('Externally load the latest from github (version: @version)', array('@version' => $versions['fontfaceobserver']['remote'])),
   );
   $description = t('This will use the fallback font until the font has been downloaded. See <a href="@link">fontfaceobserver</a> for more info.', array(
-    '@link' => 'https://github.com/bramstein/fontfaceobserver',
+    '@link' => $library['vendor url'],
   ));
   if (function_exists('libraries_info')) {
-    $lib_info = libraries_detect('fontfaceobserver');
-    if ($lib_info['installed']) {
+    if ($library['installed']) {
       $options += array(
-        2 => t('Inline javascript (version: @version)', array('@version' => $lib_info['version'])),
-        4 => t('Local file included in aggregate (version: @version)', array('@version' => $lib_info['version'])),
+        2 => t('Inline javascript (version: @version)', array('@version' => $library['version'])),
+        4 => t('Local file included in aggregate (version: @version)', array('@version' => $library['version'])),
       );
     }
     elseif (!is_readable('sites/all/libraries/fontfaceobserver/fontfaceobserver.js')) {
@@ -107,7 +109,7 @@ function advagg_font_admin_settings_form() {
       continue;
     }
     // Get the file contents.
-    $file_contents = (string) @file_get_contents($row['filename']);
+    $file_contents = (string) @advagg_file_get_contents($row['filename']);
     // Get font names.
     $replacements = advagg_font_get_replacements_array($file_contents);
     if (!empty($replacements)) {

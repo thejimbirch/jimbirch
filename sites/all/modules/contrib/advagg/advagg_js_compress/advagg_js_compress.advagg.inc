@@ -443,14 +443,23 @@ function advagg_js_compress_string_contains_multibyte_characters($string) {
 function advagg_js_compress_jsminplus(&$contents, $log_errors = TRUE) {
   $contents_before = $contents;
 
-  // Only include jsminplus.inc if the JSMinPlus class doesn't exist.
+  // Set max nesting level.
   if (!class_exists('JSMinPlus')) {
-    include drupal_get_path('module', 'advagg_js_compress') . '/jsminplus.inc';
     $nesting_level = ini_get('xdebug.max_nesting_level');
     if (!empty($nesting_level) && $nesting_level < 200) {
       ini_set('xdebug.max_nesting_level', 200);
     }
   }
+
+  // Try libraries for jsminplus.
+  if (is_callable('libraries_load')) {
+    libraries_load('jsminplus');
+  }
+  // Only include jsminplus.inc if the JSMinPlus class doesn't exist.
+  if (!class_exists('JSMinPlus')) {
+    include drupal_get_path('module', 'advagg_js_compress') . '/jsminplus.inc';
+  }
+
   ob_start();
   try {
     // JSMin+ the contents of the aggregated file.
@@ -482,7 +491,10 @@ function advagg_js_compress_jsminplus(&$contents, $log_errors = TRUE) {
  *   Javascript string.
  */
 function advagg_js_compress_jspacker(&$contents) {
-  // Use Packer on the contents of the aggregated file.
+  // Try libraries for jspacker.
+  if (is_callable('libraries_load')) {
+    libraries_load('jspacker');
+  }
   if (!class_exists('JavaScriptPacker')) {
     include drupal_get_path('module', 'advagg_js_compress') . '/jspacker.inc';
   }
@@ -491,6 +503,7 @@ function advagg_js_compress_jspacker(&$contents) {
   $contents = str_replace("}\n", "};\n", $contents);
   $contents = str_replace("\nfunction", ";\nfunction", $contents);
 
+  // Use Packer on the contents of the aggregated file.
   $packer = new JavaScriptPacker($contents, 62, TRUE, FALSE);
   $contents = $packer->pack();
 }

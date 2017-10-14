@@ -199,7 +199,7 @@ function advagg_ext_compress_string(&$contents, $type, $log_errors) {
   drupal_chmod($new_temp_file);
   $debug = array();
   $output = advagg_ext_compress_execute_cmd($temp_file_full, $type, $debug);
-  $new_contents = file_get_contents($output);
+  $new_contents = advagg_file_get_contents($output);
   if (strpos($new_contents, 'Error') === 0) {
     if ($log_errors) {
       watchdog('advagg_ext_compress', "@a \n<br>\n<br> @b", array(

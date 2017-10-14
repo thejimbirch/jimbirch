@@ -8,39 +8,42 @@ class DropSharkWebTestRequest extends DropSharkRequest {
   /**
    * {@inheritdoc}
    */
-  protected function execute($url, $options = array()) {
+  protected function execute($url, array $options = array()) {
     $options = $this->setAuth($options);
 
     if (isset($options['method']) && $options['method'] == 'POST') {
       return $this->handlePost($url, $options);
-    } else {
+    }
+    else {
       return $this->handleGet($url, $options);
     }
-
   }
 
   /**
    * Route GET requests.
    *
-   * @param $url
-   * @param $options
+   * @param string $url
+   *   The URL being queried.
+   * @param array $options
+   *   Request options.
    *
-   * @return \stdClass
+   * @return object
+   *   The response object.
    */
-  protected function handleGet($url, $options) {
-
+  protected function handleGet($url, array $options) {
     $parts = parse_url($url);
     $result = new stdClass();
     $result->code = 200;
 
     switch ($parts['path']) {
       case '/sites/token':
-        return $this->getSiteToken($options, $result);
+        $result = $this->getSiteToken($options, $result);
         break;
-    }
 
-    $result->code = 404;
-    $result->error = 'Not Found';
+      default:
+        $result->code = 404;
+        $result->error = 'Not Found';
+    }
 
     return $result;
   }
@@ -48,41 +51,55 @@ class DropSharkWebTestRequest extends DropSharkRequest {
   /**
    * Route POST requests.
    *
-   * @param $url
-   * @param $options
+   * @param string $url
+   *   The URL being queried.
+   * @param array $options
+   *   Request options.
    *
-   * @return \stdClass
+   * @return object
+   *   The response object.
    */
-  protected function handlePost($url, $options) {
+  protected function handlePost($url, array $options) {
     $parts = parse_url($url);
     $result = new stdClass();
     $result->code = 200;
 
     if (!empty($options['data'])) {
       parse_str($options['data'], $options['data']);
-    } else {
+    }
+    else {
       $options['data'] = array();
     }
 
     switch ($parts['path']) {
       case '/data':
-        return $this->postData($options, $result);
+        $result = $this->postData($options, $result);
         break;
-      case '/sites/token':
-        return $this->postSiteToken($options, $result);
-        break;
-    }
 
-    $result->code = 404;
-    $result->error = 'Not Found';
+      case '/sites/token':
+        $result = $this->postSiteToken($options, $result);
+        break;
+
+      default:
+        $result->code = 404;
+        $result->error = 'Not Found';
+    }
 
     return $result;
   }
 
   /**
    * Simulate a request submit site data.
+   *
+   * @param array $options
+   *   Request options.
+   * @param object $result
+   *   A successful result object.
+   *
+   * @return object
+   *   The result object after validation and processing.
    */
-  protected function postData($options, $result) {
+  protected function postData(array $options, $result) {
     if (empty($options['headers']['Authorization']) || $options['headers']['Authorization'] != 'valid_token') {
       $result->code = 400;
       $result->error = 'Bad Request';
@@ -96,8 +113,16 @@ class DropSharkWebTestRequest extends DropSharkRequest {
 
   /**
    * Simulate a request to verify a site token.
+   *
+   * @param array $options
+   *   Request options.
+   * @param object $result
+   *   A successful result object.
+   *
+   * @return object
+   *   The result object after validation and processing.
    */
-  protected function getSiteToken($options, $result) {
+  protected function getSiteToken(array $options, $result) {
     if (empty($options['headers']['Authorization']) || $options['headers']['Authorization'] != 'valid_token') {
       $result->code = 400;
       $result->error = 'Bad Request';
@@ -112,8 +137,16 @@ class DropSharkWebTestRequest extends DropSharkRequest {
 
   /**
    * Simulate a request to obtain a site token.
+   *
+   * @param array $options
+   *   Request options.
+   * @param object $result
+   *   A successful result object.
+   *
+   * @return object
+   *   The result object after validation and processing.
    */
-  protected function postSiteToken($options, $result) {
+  protected function postSiteToken(array $options, $result) {
     if (empty($options['data']['user']) || empty($options['data']['password']) || empty($options['data']['site_id'])) {
       $result->code = 400;
       $result->error = 'Bad Request';

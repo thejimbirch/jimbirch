@@ -10,10 +10,10 @@ interface DropSharkQueueInterface {
    *
    * @param \DropSharkRequestInterface $request
    *   A request used by the queue.
-   * @param integer $site_id
+   * @param int $siteId
    *   The DropShark site ID.
    */
-  public function __construct($request, $site_id);
+  public function __construct(DropSharkRequestInterface $request, $siteId);
 
   /**
    * Add items to the DropShark queue.
@@ -21,12 +21,14 @@ interface DropSharkQueueInterface {
    * @param array $data
    *   Data to be added to the queue.
    */
-  public function add($data);
+  public function add(array $data);
 
   /**
    * Indicates if the queue has deferred collectors.
    *
    * @return bool
+   *   Indicates if the queue contains collectors which have deferred
+   *   collection.
    */
   public function hasDeferred();
 
@@ -38,6 +40,13 @@ interface DropSharkQueueInterface {
    * immediately or some other process initiates a transmission.
    *
    * @return bool
+   *   Indicates if the data should be transmitted to the backend as a part of
+   *   the current request. If any collector in the current request indicates it
+   *   should be immediately transmitted or the process that invokes the
+   *   collection requires it, the data will be sent to the backend as the
+   *   request completes. Otherwise, the data will be saved to the persistent
+   *   queue and will be transmitted to the backend upon subsequent data
+   *   collections requiring transmit.
    */
   public function needsImmediateTransmit();
 
@@ -57,7 +66,7 @@ interface DropSharkQueueInterface {
    * @param \DropSharkCollectorInterface $collector
    *   The collector to queue for deferred check.
    */
-  public function setDeferred($collector);
+  public function setDeferred(DropSharkCollectorInterface $collector);
 
   /**
    * Set the queue to be transmitted immediately.

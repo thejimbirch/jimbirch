@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Class DropSharkDrupalStatusCollector.
+ *
+ * Collects data pertaining to the Drupal status report.
+ */
 class DropSharkDrupalStatusCollector extends DropSharkCollectorBase {
 
   protected $events = array('drupal');
@@ -8,7 +13,7 @@ class DropSharkDrupalStatusCollector extends DropSharkCollectorBase {
   /**
    * {@inheritdoc}
    */
-  public function collect($event, $data = array()) {
+  public function collect($event, array $data = array()) {
 
     if (!$this->respond($event)) {
       return;
@@ -16,7 +21,7 @@ class DropSharkDrupalStatusCollector extends DropSharkCollectorBase {
 
     $data = $this->defaultResult();
 
-    // Load .install files
+    // Load .install files.
     include_once DRUPAL_ROOT . '/includes/install.inc';
     drupal_load_updates();
 
@@ -43,7 +48,8 @@ class DropSharkDrupalStatusCollector extends DropSharkCollectorBase {
       if (isset($requirement['severity'])) {
         $key = $severities_map[$requirement['severity']];
         $severities[$key]++;
-      } else {
+      }
+      else {
         $severities['none']++;
       }
     }

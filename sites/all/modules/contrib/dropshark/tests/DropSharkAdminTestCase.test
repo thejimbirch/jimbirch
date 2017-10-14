@@ -16,6 +16,7 @@ class DropSharkAdminTestCase extends DrupalWebTestCase {
    * Defines test information.
    *
    * @return array
+   *   Test definition info.
    */
   public static function getInfo() {
     return array(
@@ -28,7 +29,7 @@ class DropSharkAdminTestCase extends DrupalWebTestCase {
   /**
    * {@inheritdoc}
    */
-  function setUp() {
+  protected function setUp() {
     parent::setUp('dropshark');
     variable_set('dropshark_request_class', 'DropSharkWebTestRequest');
     $this->adminUser = $this->drupalCreateUser(array('administer site configuration'));
@@ -37,7 +38,7 @@ class DropSharkAdminTestCase extends DrupalWebTestCase {
   /**
    * Tests the configuration screen found at admin/config/services/dropshark.
    */
-  function testConfigScreen() {
+  public function testConfigScreen() {
     $initial_help_text = 'In order to register your site with the DropShark service, you\'ll need to enter your credentials and site identifier.';
     $configured_help_text = 'Your site is registered and will send data to DropShark. Log in to DropShark to analyze your data.';
 
@@ -83,31 +84,31 @@ class DropSharkAdminTestCase extends DrupalWebTestCase {
   /**
    * Tests requirements set on status report page.
    */
-  function testRequirements() {
+  public function testRequirements() {
     $reg_text = 'Information collected from your site cannot be submitted to DropShark. Please register your site to utilize DropShark.';
     $conn_text = 'Information collected from your site cannot be submitted to DropShark. Please check your DropShark configuration.';
-    $ok_text = '<td class="status-title">DropShark</td>';
+    $ok_text = 'Your site is successfully communicating with DropShark.';
 
     // Un-registered.
     $this->drupalLogin($this->adminUser);
     $this->drupalGet('admin/reports/status');
     $this->assertText($reg_text);
     $this->assertNoText($conn_text);
-    $this->assertNoRaw($ok_text);
+    $this->assertNoText($ok_text);
 
     // Registered, but unable to connect.
     variable_set('dropshark_site_token', 'invalid_token');
     $this->drupalGet('admin/reports/status');
     $this->assertNoText($reg_text);
     $this->assertText($conn_text);
-    $this->assertNoRaw($ok_text);
+    $this->assertNoText($ok_text);
 
     // Successful connection.
     variable_set('dropshark_site_token', 'valid_token');
     $this->drupalGet('admin/reports/status');
     $this->assertNoText($reg_text);
     $this->assertNoText($conn_text);
-    $this->assertRaw($ok_text);
+    $this->assertText($ok_text);
   }
 
 }

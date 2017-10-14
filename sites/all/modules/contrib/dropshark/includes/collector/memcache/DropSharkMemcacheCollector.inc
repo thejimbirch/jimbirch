@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Class DropSharkMemcacheCollector.
+ *
+ * Collects data pertaining to memcache usage.
+ */
 class DropSharkMemcacheCollector extends DropSharkCollectorBase {
 
   protected $events = array('system');
@@ -8,7 +13,7 @@ class DropSharkMemcacheCollector extends DropSharkCollectorBase {
   /**
    * {@inheritdoc}
    */
-  public function collect($event, $data = array()) {
+  public function collect($event, array $data = array()) {
 
     if (!$this->respond($event)) {
       return;
@@ -25,9 +30,11 @@ class DropSharkMemcacheCollector extends DropSharkCollectorBase {
     $mc = dmemcache_object('default');
     if ($mc instanceof Memcached) {
       $extension = 'Memcached';
-    } elseif ($mc instanceof Memcache) {
+    }
+    elseif ($mc instanceof Memcache) {
       $extension = 'Memcache';
-    } else {
+    }
+    else {
       $data['code'] = 'unknown_pecl_extension';
       $this->queue->add($data);
       return;

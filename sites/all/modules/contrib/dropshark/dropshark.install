@@ -54,6 +54,7 @@ function dropshark_uninstall() {
   variable_del('dropshark_queue_max_process');
   variable_del('dropshark_request_class');
   variable_del('dropshark_site_id');
+  variable_del('dropshark_site_token');
 }
 
 /**
@@ -61,39 +62,43 @@ function dropshark_uninstall() {
  */
 function dropshark_requirements($phase) {
   $requirements = array();
+  $t = get_t();
 
   if ($phase == 'runtime') {
     if (!variable_get('dropshark_site_token')) {
-      $link = l(t('register'), 'admin/config/services/dropshark');
-      $requirements['dropshark_register']['title'] = t('DropShark registration');
-      $requirements['dropshark_register']['value'] = t('Not registered');
+      $link = l($t('register'), 'admin/config/services/dropshark');
+      $requirements['dropshark_register']['title'] = $t('DropShark registration');
+      $requirements['dropshark_register']['value'] = $t('Not registered');
       $requirements['dropshark_register']['severity'] = REQUIREMENT_ERROR;
-      $requirements['dropshark_register']['description'] = t('Information collected from your site cannot be submitted to DropShark. Please !link your site to utilize DropShark.', array('!link' => $link));
-    } else {
+      $requirements['dropshark_register']['description'] = $t('Information collected from your site cannot be submitted to DropShark. Please !link your site to utilize DropShark.', array('!link' => $link));
+    }
+    else {
       $r = dropshark_get_request();
       $result = $r->get('sites/token');
 
       if (empty($result->data->site_id)) {
-        $link = l(t('configuration'), 'admin/config/services/dropshark');
-        $requirements['dropshark_connection']['title'] = t('DropShark connection');
-        $requirements['dropshark_connection']['value'] = t('Unable to connect');
+        $link = l($t('configuration'), 'admin/config/services/dropshark');
+        $requirements['dropshark_connection']['title'] = $t('DropShark connection');
+        $requirements['dropshark_connection']['value'] = $t('Unable to connect');
         $requirements['dropshark_connection']['severity'] = REQUIREMENT_ERROR;
-        $requirements['dropshark_connection']['description'] = t('Information collected from your site cannot be submitted to DropShark. Please check your DropShark !link.', array('!link' => $link));
-      } else {
-        $requirements['dropshark']['title'] = t('DropShark');
-        $requirements['dropshark']['value'] = t('OK');
+        $requirements['dropshark_connection']['description'] = $t('Information collected from your site cannot be submitted to DropShark. Please check your DropShark !link.', array('!link' => $link));
+      }
+      else {
+        $requirements['dropshark']['title'] = $t('DropShark');
+        $requirements['dropshark']['value'] = $t('Your site is successfully communicating with DropShark.');
         $requirements['dropshark']['severity'] = REQUIREMENT_OK;
       }
     }
 
-    $requirements['dropshark_linfo']['title'] = t('Linfo PHP library');
+    $requirements['dropshark_linfo']['title'] = $t('Linfo PHP library');
     if ($linfo = dropshark_get_linfo()) {
-      $requirements['dropshark_linfo']['value'] = t('Installed: %version', array('%version' => $linfo->getVersion()));
+      $requirements['dropshark_linfo']['value'] = $t('Installed: %version', array('%version' => $linfo->getVersion()));
       $requirements['dropshark_linfo']['severity'] = REQUIREMENT_OK;
-    } else {
-      $requirements['dropshark_linfo']['value'] = t('Not found');
+    }
+    else {
+      $requirements['dropshark_linfo']['value'] = $t('Not found');
       $requirements['dropshark_linfo']['severity'] = REQUIREMENT_WARNING;
-      $requirements['dropshark_linfo']['description'] = t('The DropShark module needs the Linfo library in order to collect system data.');
+      $requirements['dropshark_linfo']['description'] = $t('The DropShark module needs the Linfo library in order to collect system data.');
     }
   }
 

@@ -23,6 +23,16 @@ function advagg_css_compress_admin_settings_form($form, $form_state) {
     );
   }
 
+  // Tell user to update library if a new version is available.
+  $library_name = 'YUI-CSS-compressor-PHP-port';
+  $module_name = 'advagg_css_compress';
+  list($description) = advagg_get_version_description($library_name, $module_name);
+  if (!empty($description)) {
+    $form['advagg_version_msg'] = array(
+      '#markup' => "<p>{$description}</p>",
+    );
+  }
+
   list($options, $description) = advagg_css_compress_configuration();
 
   $form['advagg_css_compressor'] = array(

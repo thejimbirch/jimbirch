@@ -12,7 +12,11 @@
  *   An array of collector definitions, keyed by machine name.
  */
 function hook_dropshark_collector_info() {
+  $collectors['php_version'] = array(
+    'class' => 'PhpVersionCollector',
+  );
 
+  return $collectors;
 }
 
 /**
@@ -23,6 +27,6 @@ function hook_dropshark_collector_info() {
  *
  * @see hook_dropshark_collector_info()
  */
-function hook_dropshark_collector_info_alter(&$collectors) {
-
+function hook_dropshark_collector_info_alter(array &$collectors) {
+  $collectors['php_version']['class'] = 'CustomPhpVersionCollector';
 }

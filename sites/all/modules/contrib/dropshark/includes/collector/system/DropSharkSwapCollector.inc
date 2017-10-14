@@ -2,6 +2,8 @@
 
 /**
  * Class DropSharkSwapCollector.
+ *
+ * Collects swap usage information.
  */
 class DropSharkSwapCollector extends DropSharkMemoryCollector {
 
@@ -11,7 +13,7 @@ class DropSharkSwapCollector extends DropSharkMemoryCollector {
   /**
    * {@inheritdoc}
    */
-  public function collect($event, $data = array()) {
+  public function collect($event, array $data = array()) {
 
     if (!$this->respond($event)) {
       return;

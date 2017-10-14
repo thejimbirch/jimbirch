@@ -356,6 +356,7 @@ Both `drupal_add_js` + `drupal_add_css` - additional keys for $options.
 
  - `scope_lock`: TRUE - Make sure the scope of this will not ever change.
  - `movable`: FALSE - Make sure the ordering of this will not ever change.
+ - `preprocess_lock`: TRUE - Make sure the preprocess key will not ever change.
 
 
 JSMIN PHP EXTENSION
@@ -520,23 +521,26 @@ Go to `admin/config/development/performance/advagg`
 Install AdvAgg Modifier if not enabled and go to
 `admin/config/development/performance/advagg/mod`
 
- - Check "Enable preprocess on all JS/CSS"
+*JS*
+
+ - Check "Enable preprocess on all JS"
  - Check "Resource hint src attributes found in the HTML content"
- - Enable every checkbox under "Optimize JavaScript/CSS Ordering"
- - Under "Move JS to the footer" Select
-   "All but what is in the $all_in_footer_list"
+ - Enable every checkbox under "Optimize JavaScript Ordering"
+ - Under "Move JS to the footer" Select "All but what is in the
+   $all_in_footer_list"
  - Under "Deferred JavaScript Execution: Add The defer Tag To All Script Tags"
    Select "All but external scripts"
  - Check "Put a wrapper around inline JS if it was added in the content section
    incorrectly"
- - Check "Deferred inline JavaScript Execution: Put a wrapper around inline JS
-   so it runs from a setTimeout call."
+
+*CSS*
+
+ - Check "Enable preprocess on all CSS"
+ - Enable every checkbox under "Optimize CSS Ordering"
  - Under "Deferred CSS Execution: Use JS to load CSS" select "All in head, use
    link rel="preload" (If enabled this is recommended)"
- - Under "Defer CSS only on specific pages" select
-   "All pages except those listed"
- - Under "Do not defer the first css file" select
-   "Inline CSS (no more than 12K)"
+ - Under "Defer CSS only on specific pages" select "Only the listed pages" and
+   type in <front> in the box below
 
 Install AdvAgg Compress Javascript if not enabled and go to
 `admin/config/development/performance/advagg/js-compress`
@@ -549,7 +553,115 @@ Install AdvAgg Async Font Loader if not enabled and go to
  - Select Inline javascript (version: X.X.X). If this option is not available
    follow the directions right below the options on how to install it.
  - Check "Set a cookie so the flash of unstyled text (FOUT) only happens once."
- - Check "Prevent the Flash of Unstyled Text."
+
+Install AdvAgg Bundler if not enabled and go to
+`admin/config/development/performance/advagg/bundler`. Knowing your audience is
+key to understanding if optimizing for H2 is right for you currently.
+
+*HTTP/2.0 Settings*
+
+ - Under "Target Number Of CSS Bundles Per Page" select 15
+ - Under "Target Number Of JS Bundles Per Page" select 15
+ - Under "Grouping logic" select "File size"
+
+*HTTP/1.1 Settings*
+
+ - Under "Target Number Of CSS Bundles Per Page" select 2
+ - Under "Target Number Of JS Bundles Per Page" select 5
+ - Under "Grouping logic" select "File size"
+
+Install AdvAgg Relocate if not enabled and go to
+`admin/config/development/performance/advagg/relocate`
+
+ - Move external JS files to a local JS file
+ - Only cache external JavaScript files if the browser cache TTL is under this
+   amount: 1 week
+
+Check the boxes for the various js scripts that are used. If you are using
+google analytics then you should check this box as an example *Move inline
+google analytics inline analytics.js loader code to drupal_add_js*
+
+ - Move external CSS files to a local CSS file
+ - Move external CSS font files to inline CSS
+ - Inline @import CSS font files in local .css files
+
+Once this has been setup go to
+https://www.drupal.org/node/2862336#comment-12176803 and copy that code into
+your themes template.php file under hook_page_alter() like so
+
+    /**
+     * Implements hook_page_alter().
+     */
+    function themename_page_alter(&$page) {
+      // Get critical css file.
+      $filename = FALSE;
+      $current_path = current_path();
+      $path = drupal_get_path('theme', $GLOBALS['theme']);
+      // Detect frontpage.
+      if (!$filename
+        && drupal_is_front_page()
+        && is_readable("$path/critical-css/urls/front.css")
+      ) {
+        $filename = "$path/critical-css/urls/front";
+      }
+      // Detect specific urls.
+      if (!$filename
+        && is_readable("$path/critical-css/urls/{$current_path}.css")
+      ) {
+        $filename = "$path/critical-css/urls/{$current_path}";
+      }
+      // Detection by node type.
+      if (!$filename) {
+        $object = menu_get_object();
+        if (isset($object->nid)
+          && is_readable("$path/critical-css/node_type/{$object->type}.css")
+        ) {
+          $filename = "$path/critical-css/node_type/{$object->type}";
+        }
+      }
+
+      // Add inline critical css for front page.
+      if (!empty($filename)) {
+        $inline_css = advagg_load_stylesheet("$filename.css", TRUE);
+        $page['content']['#attached']['css']["$filename.css"] = array(
+          'data' => $inline_css,
+          'type' => 'inline',
+          'group' => CSS_SYSTEM - 1,
+          'weight' => -50000,
+          'movable' => FALSE,
+          'critical-css' => TRUE,
+        );
+        // Add in domain prefetch.
+        if (is_readable("$filename.dns")) {
+          $domains = file("$filename.dns", FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+          $domains = array_unique($domains);
+          foreach ($domains as $domain) {
+            advagg_add_dns_prefetch($domain);
+          }
+        }
+      }
+    }
+
+Note that future versions of AdvAgg will not require the above step as the code
+will be in the module.
+
+Go to https://www.sitelocity.com/critical-path-css-generator and input the front
+page URL and copy the generated CSS (minus the style tags) into
+sites/all/themes/THEMENAME/critical-css/urls/front.css. You can do this for as
+many pages or node types as needed.
+
+http://example.com/user
+sites/all/themes/THEMENAME/critical-css/urls/user.css
+
+http://example.com/user/login
+sites/all/themes/THEMENAME/critical-css/urls/user/login.css
+
+All urls with of node type of page
+sites/all/themes/THEMENAME/critical-css/urls/node_type/page.css
+
+If you want some sort of automated way to generate these css files fourkitchens
+has an excellent article on how to set that up:
+https://fourword.fourkitchens.com/article/use-grunt-and-advagg-inline-critical-css-drupal-7-theme
 
 **Other things to consider**
 
@@ -558,34 +670,11 @@ setting "Remove unused JavaScript tags if possible". This is a backport of D8
 where it will not add any JS to the page if it is not being used.
 https://drupal.org/node/1279226
 
-The AdvAgg Bundler module on the
-`admin/config/development/performance/advagg/bundler` page. The bundler provides
-intelligent bundling of CSS and JS files by grouping files that belong together.
-This does what core tried to do; group CSS & JS files together that get used
-together. Using this will make your pagespeed score go down as there will be
-more css/js files to download but if different css/js files are used on
-different pages of your site this will be a net win as a new full aggregate will
-not have to be downloaded, instead a smaller aggregate can be downloaded,
-ideally with only the css/js that is different on that page. You can select how
-many bundles to create and the bundler will do it's best to meet that goal; if
-using browser css/js conditionals (js browser conditionals backported from D8
-https://drupal.org/node/865536) then the bundler might not meet your set value.
-
-Current recommendations for the bundler:
-
- - Under "Target Number Of CSS Bundles Per Page" select 2
- - Under "Target Number Of JS Bundles Per Page" select 5
- - Under "Grouping logic" select "File size"
-
 
 SETTINGS THAT DRUPAL.ORG USES
 -----------------------------
 
 Issue: https://www.drupal.org/node/2493801
-These will not give you the best PageSpeed score but they will give the best
-real world performance on slower connections. To expand on this, fourkitchens
-has an excellent article on inlining critical css:
-https://fourword.fourkitchens.com/article/use-grunt-and-advagg-inline-critical-css-drupal-7-theme
 
 Configuration:
 
@@ -623,6 +712,11 @@ Modifications:
    external scripts
  - Deferred inline JavaScript Execution: Put a wrapper around inline JS so it
    runs from a setTimeout call: Checked
+
+Relocate:
+
+ - Check Move external CSS font files to inline CSS
+ - Check Inline @import CSS font files in local .css files
 
 
 NGINX CONFIGURATION

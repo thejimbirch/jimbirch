@@ -9,6 +9,7 @@ class DropSharkQueueTestCase extends DrupalWebTestCase {
    * Defines test information.
    *
    * @return array
+   *   Test definition info.
    */
   public static function getInfo() {
     return array(
@@ -21,7 +22,7 @@ class DropSharkQueueTestCase extends DrupalWebTestCase {
   /**
    * {@inheritdoc}
    */
-  function setUp() {
+  protected function setUp() {
     $modules = array('dropshark');
     parent::setUp($modules);
   }
@@ -29,7 +30,7 @@ class DropSharkQueueTestCase extends DrupalWebTestCase {
   /**
    * Tests functionality of the queue.
    */
-  function testQueue() {
+  public function testQueue() {
     $request = new DropSharkUnitTestRequest('host', 'token');
     $request->setScenario('queue_transmit');
     $q = new DropSharkDbQueue($request, 'site-id');

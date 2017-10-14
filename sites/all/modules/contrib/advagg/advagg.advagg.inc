@@ -52,6 +52,17 @@ function advagg_advagg_save_aggregate_alter(array &$files_to_save, array $aggreg
     return;
   }
 
+  // Special S3 handling.
+  $s3fs = FALSE;
+  $files_to_save_keys = array_keys($files_to_save);
+  foreach ($files_to_save_keys as $uri) {
+    $wrapper = file_stream_wrapper_get_instance_by_uri($uri);
+    if ($wrapper && get_class($wrapper) === 'S3fsStreamWrapper') {
+      $s3fs = TRUE;
+      break;
+    }
+  }
+
   foreach ($file_types as $ext => $settings) {
     // See if a file already exists with this extension.
     $ext_exists = FALSE;
@@ -83,7 +94,17 @@ function advagg_advagg_save_aggregate_alter(array &$files_to_save, array $aggreg
       $settings[0] = $data;
       $compressed = call_user_func_array($callback, $settings);
       if (!empty($compressed)) {
-        $files_to_save[$uri . $ext] = $compressed;
+        if ($s3fs && $ext === '.gz') {
+          // Only serve gzip files from S3.
+          $files_to_save[$uri] = $compressed;
+        }
+        elseif ($s3fs && $ext === '.br' && !isset($file_types['.gz'])) {
+          // Only serve br files from S3.
+          $files_to_save[$uri] = $compressed;
+        }
+        else {
+          $files_to_save[$uri . $ext] = $compressed;
+        }
       }
     }
   }
@@ -286,7 +307,7 @@ function advagg_advagg_get_info_on_files_alter(&$return, $cached_data, $bypass_c
         continue;
       }
       // Get the file contents.
-      $file_contents = (string) @file_get_contents($info['data']);
+      $file_contents = (string) @advagg_file_get_contents($info['data']);
 
       // Get domain names and external assets in this css file.
       $hosts = array();
