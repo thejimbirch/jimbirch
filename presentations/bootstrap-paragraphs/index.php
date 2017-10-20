@@ -2,13 +2,13 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Bootstrap Paragraphs | Web Development Presentation | Texas Camp 2017</title>
+		<title>Bootstrap Paragraphs | Web Development Presentation | BADcamp 2017</title>
 		<meta name="description" content="This presentation covers the Bootstrap Paragraphs Drupal module which provides a suite of content and layout Paragraph bundles made with the Bootstrap front-end framework."/>
 		<link rel="canonical" href="http://jimbir.ch/presentations/bootstrap-paragraphs/"/>
 		<meta property="og:site_name" content="Jim Birch"/>
 		<meta property="og:type" content="public_figure"/>
 		<meta property="og:url" content="http://jimbir.ch/presentations/bootstrap-paragraphs/"/>
-		<meta property="og:title" content="Bootstrap and Paragraphs | Web Development Presentation | Texas Camp 2017"/>
+		<meta property="og:title" content="Bootstrap and Paragraphs | Web Development Presentation | BADcamp 2017"/>
 		<meta property="og:description" content="This presentation covers the Bootstrap Paragraphs Drupal module which provides a suite of content and layout Paragraph bundles made with the Bootstrap front-end framework."/>
 		<meta property="og:image" content="http://jimbir.ch/sites/default/files/img/presentations/presentation-bootstrap-paragraphs-720.jpg"/>
 		<meta name="twitter:site" content="@thejimbirch"/>
@@ -16,10 +16,10 @@
 		<meta name="twitter:creator" content="@thejimbirch"/>
 		<meta name="twitter:creator:id" content="2989027096"/>
 		<meta name="twitter:url" content="http://jimbir.ch/presentations/bootstrap-paragraphs/"/>
-		<meta name="twitter:title" content="Bootstrap and Paragraphs | Web Development Presentation | Texas Camp 2017"/>
+		<meta name="twitter:title" content="Bootstrap and Paragraphs | Web Development Presentation | BADcamp 2017"/>
 		<meta name="twitter:description" content="This presentation covers the Bootstrap Paragraphs Drupal module which provides a suite of content and layout Paragraph bundles made with the Bootstrap front-end framework."/>
 		<meta name="twitter:image:src" content="http://jimbir.ch/sites/default/files/img/presentations/presentation-bootstrap-paragraphs-720.jpg"/>
-		<meta itemprop="name" content="Bootstrap and Paragraphs | Web Development Presentation | Texas Camp 2017"/>
+		<meta itemprop="name" content="Bootstrap and Paragraphs | Web Development Presentation | BADcamp 2017"/>
 		<meta itemprop="description" content="This presentation covers the Bootstrap Paragraphs Drupal module which provides a suite of content and layout Paragraph bundles made with the Bootstrap front-end framework."/>
 		<meta itemprop="image" content="http://jimbir.ch/sites/default/files/img/presentations/presentation-bootstrap-paragraphs-720.jpg"/>
 		<meta name="author" content="Jim Birch">
@@ -49,12 +49,14 @@
 			}
 
 			.reveal .box a,
-			.fixed-footer a {
+			.fixed-footer a,
+			.reveal h1 a {
 		    color: #9dcccc;
 			}
 
 			.reveal .box a:hover,
-			.fixed-footer a:hover {
+			.fixed-footer a:hover,
+			.reveal h1 a {
 		    color: #fff;
 			}
 
@@ -132,31 +134,95 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="fixed-footer">
 				<div style="float:left;"><a href="http://jimbir.ch/presentations/bootstrap-paragraphs/">jimbir.ch/bp</a> | <a href="http://www.twitter.com/thejimbirch" title="@thejimbirch">@thejimbirch</a></div>
-				<div style="float:right;"><a href="http://www.xenomedia.com" title="Xeno Media, Inc"><img src="img/xeno-media-logo.png" alt="Xeno Media, Inc" style="height:14px;width:auto;"></a></div>
+				<!-- <div style="float:right;"><a href="http://www.xenomedia.com" title="Xeno Media, Inc"><img src="img/xeno-media-logo.png" alt="Xeno Media, Inc" style="height:14px;width:auto;"></a></div> -->
 			</div>
 			<div class="slides">
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-the-Pool-Waterfall.jpg" data-transition="zoom">
-					<h1 style="font-size:2.25em;padding-left:20px;width:75%">Bootstrap Paragraphs</h1>
+					<h1 style="font-size:2.25em;padding-left:20px;width:75%"><a href="https://www.drupal.org/project/bootstrap_paragraphs">Bootstrap Paragraphs</a></h1>
 					<div style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.7);padding-left:20px;width:75%">
-						<a href="https://joind.in/event/texas-camp/bootstrap-paragraphs"><img src="img/texas-camp-300.jpg" alt="Texas Camp 2017" style="float: left; width: 200px; height: auto;"></a><br>
-						<div class="box" style="float: left;padding-left:20px;padding-bottom:20px;margin-top:-30px">Created by <a href="http://jimbir.ch">Jim Birch</a><br>
-							<a href="http://jimbir.ch/presentations/bootstrap-paragraphs/">jimbir.ch/bp</a><br>
+						<img src="img/badcamp.png" alt="BADcamp 2017" style="background-color: #fff;float: left; width: 200px; height: auto;"><br>
+						<div class="box" style="float: left;padding-left:20px;padding-bottom:20px;margin-top:-30px">
+							<a href="http://jimbir.ch">Jim Birch</a><br>
 							<a href="http://twitter.com/thejimbirch">@thejimbirch</a><br>
-							<a href="http://www.xenomedia.com">Xeno Media, Inc.</a>
+							<a href="http://jimbir.ch/presentations/bootstrap-paragraphs/">jimbir.ch/bp</a> - Presentation<br>
+							<a href="http://bp.jimbir.ch/">bp.jimbir.ch</a> - Demo site<br>
 						</div>
 					</div>
 				</section>
 
-				<section style="text-align:left;" data-background="img/bootstrap-paragraphs-module.jpg">
+				<section style="text-align:left;" data-background="img/bootstrap-paragraphs-module-2017.jpg">
 					<div class="fragment">
-						<h1 class="box" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:65%;"><a href="https://www.drupal.org/project/bootstrap_paragraphs">Bootstrap Paragraphs Module</a></h1>
-						<p style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px 0 20px 20px;width:65%;">The Bootstrap Paragraphs module provides a suite of content and layout Paragraph bundles made with the Bootstrap front-end framework.</p>
+						<h1 class="box" style="padding-left:20px;background: rgba(0, 0, 0, 0.9);width:65%;"><a href="https://www.drupal.org/project/bootstrap_paragraphs">Bootstrap Paragraphs Module</a></h1>
+						<p style="color:#fff;background: rgba(0, 0, 0, 0.9);padding:20px 0 20px 20px;width:65%;">The Bootstrap Paragraphs module provides a suite of content and layout Paragraph bundles made with the Bootstrap front-end framework.</p>
 					</div>
 				</section>
 
 				<section>
 					<h2 class="box"><a href="http://bp.jimbir.ch">Demo Site</a></h2>
 					<a href="http://bp.jimbir.ch"><img src="img/bootstrap-paragraphs-demo.gif" alt="Boostrap Paragraphs Demo"></a>
+				</section>
+
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-Waterfall.jpg" data-transition="zoom">
+					<h1 style="padding-left:20px;background: rgba(0, 0, 0, 0.8);">Drupal Paragraphs</h1>
+					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Paragraphs is a contrib module for Drupal that allows creation, administration, and display of customizable content components.</p>
+				</section>
+
+				<section>
+					<h2>Why Paragraphs</h2>
+					<ul>
+						<li class="fragment">Different widths for different content elements
+							<ul>
+								<li>Better typography - Best readability at 60 to 70 characters wide</li>
+								<li>But wanting Images and Videos wider</li>
+							</ul>
+						</li>
+						<li class="fragment">Structured content
+							<ul>
+								<li>Frustrated with Rich Text Editors since '97</li>
+								<li>WYSIWYG integration with Media, was buggy at best</li>
+								<li>Ability to add semantic markup, Schema.org, JSON-LD</li>
+							</ul>
+						</li>
+						<li class="fragment">Easy to administer layouts
+							<ul>
+								<li>Multiple columns</li>
+								<li>Quickly restructuring rows</li>
+								<li>Heros, Slideshows and more!</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-the-controls.jpg" data-transition="zoom">
+					<h1 class="box" style="padding-left:20px;padding-right:20px;background: rgba(0, 0, 0, 0.8);width:60%;"><a href="http://getbootstrap.com/">Bootstrap Framework</a></h1>
+					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.</p>
+				</section>
+
+				<section>
+					<h2>Why Bootstrap</h2>
+					<ul>
+						<li class="fragment">Core functionality
+							<ul>
+				    		<li>Responsive Grid Markup and CSS</li>
+				    		<li>Themable Content and Javascript Components</li>
+				    		<li>Readable Typography base</li>
+				    	</ul>
+				    </li>
+						<li class="fragment">Documentation
+							<ul>
+				    		<li>Standardization helps teams become more productive</li>
+				    		<li>Onboarding new developers is quicker</li>
+				    	</ul>
+				    </li>
+			    	<li class="fragment">Customizable
+							<ul>
+					    	<li>Completely customizable for large projects</li>
+					    	<li>Mixins for adding existing styles to semantic html</li>
+					    </ul>
+					  </li>
+					  <li class="fragment">Best practices for small/low budget projects</li>
+			    	<li class="fragment">Open Source - MIT License</li>
+			    </ul>
 				</section>
 
 				<section>
@@ -193,69 +259,6 @@
 					</div>
 				</section>
 
-				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-Waterfall.jpg" data-transition="zoom">
-					<h1 style="padding-left:20px;background: rgba(0, 0, 0, 0.8);">Drupal Paragraphs</h1>
-					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Paragraphs is a contrib module for Drupal that allows creation, administration, and display of customizable content components.</p>
-				</section>
-
-				<section>
-					<h2>Why we use Paragraphs</h2>
-					<ul>
-						<li class="fragment">Different widths for different content elements
-							<ul>
-								<li>Better typography - Best readability at 60 to 70 characters wide</li>
-								<li>But wanting Images and Videos wider</li>
-							</ul>
-						</li>
-						<li class="fragment">Structured content
-							<ul>
-								<li>Frustrated with Rich Text Editors since '97</li>
-								<li>WYSIWYG integration with Media, was buggy at best</li>
-								<li>Ability to add semantic markup, Schema.org, JSON-LD</li>
-							</ul>
-						</li>
-						<li class="fragment">Easy to administer layouts
-							<ul>
-								<li>Multiple columns</li>
-								<li>Quickly restructuring rows</li>
-								<li>Heros, Slideshows and more!</li>
-							</ul>
-						</li>
-					</ul>
-				</section>
-
-				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-the-controls.jpg" data-transition="zoom">
-					<h1 class="box" style="padding-left:20px;padding-right:20px;background: rgba(0, 0, 0, 0.8);width:60%;"><a href="http://getbootstrap.com/">Bootstrap Framework</a></h1>
-					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.</p>
-				</section>
-
-				<section>
-					<h2>Why we use Bootstrap</h2>
-					<ul>
-						<li class="fragment">Core functionality
-							<ul>
-				    		<li>Responsive Grid Markup and CSS</li>
-				    		<li>Themable Content and Javascript Components</li>
-				    		<li>Readable Typography base</li>
-				    	</ul>
-				    </li>
-						<li class="fragment">Documentation
-							<ul>
-				    		<li>Standardization helps teams become more productive</li>
-				    		<li>Onboarding new developers is quicker</li>
-				    	</ul>
-				    </li>
-			    	<li class="fragment">Customizable
-							<ul>
-					    	<li>Completely customizable for large projects</li>
-					    	<li>Mixins for adding existing styles to semantic html</li>
-					    </ul>
-					  </li>
-					  <li class="fragment">Best practices for small/low budget projects</li>
-			    	<li class="fragment">Open Source - MIT License</li>
-			    </ul>
-				</section>
-
 				<section>
 					<h2>Inspiration</h2>
 					<p>Thanks to Les Lim and David Needham's great presentation <a href="https://www.youtube.com/watch?v=nRB4n09Ekpg">Using Paragraphs to Weave a Beautiful Content Tapestry</a>, I learned the idea of separating paragraph bundles into Content, Layout and Ponies categories.</p>
@@ -269,9 +272,9 @@
 						<li>Simple HTML</li>
 						<li>Image</li>
 						<li>Blank</li>
-						<li>Contact Form</li>
 						<li>Drupal Blocks</li>
 						<li>Views</li>
+						<li>Contact Forms/Webforms are Submodules</li>
 						<li>Media <small style="padding-top:12px;">(Coming soon to a core near you!)</small></li>
 					</ul>
 				</section>
@@ -308,13 +311,6 @@
 					<h2>Blank</h2>
 					<p>The Blank Paragraphs type is perfect for less restrictive HTML and JavaScript.&nbsp; I use these paragraphs for things like scripts from external services like <a href="https://mailchimp.com/">Mailchimp</a>, <a href="http://www.pardot.com/">Pardot</a>, <a href="https://www.oracle.com/marketingcloud/products/marketing-automation/index.html">Eloqua</a>, <a href="https://www.marketo.com/">Marketo</a>; and adding page specific <a href="http://json-ld.org/">JSON-LD</a> for SEO.</p>
 					<img src="img/Bootstrap-Paragraphs-Bundle-Type-Blank.jpg" alt="Bootstrap Paragraphs - Blank">
-				</section>
-
-				<section>
-					<h2>Contact Form</h2>
-					<p>The Bootstrap Paragraphs Contact Form type allows you to embed one of Drupal 8 core's Contact Forms anywhere you need it, including inside of Accordions, Carousels, Columns, Modals, and Tabs. This is possible thanks to the <a href="https://www.drupal.org/project/contact_formatter">Contact Formatter module</a>.</p>
-					<p>Add <a href="https://www.drupal.org/project/inline_entity_form">Inline Entity Form</a> to allow your administrators to add new, or select existing Contact Forms.</p>
-					<img src="img/Bootstrap-Paragraphs-Type-Contact-Form.jpg" alt="Bootstrap Paragraphs - Contact Form">
 				</section>
 
 				<section>
@@ -390,10 +386,6 @@
 
 				<section>
 					<h2>Column Wrapper</h2>
-					<div style="float: left; margin: 0 30px 30px 0;width:340px;">
-						<img src="img/texas-camp-300.jpg" alt="Texas Camp" style="border:0;box-shadow:none;">
-						<p><small><i>New for Texas Camp!</i></small></p>
-					</div>
 					<p style="text-align:left;">Allows you to add multiple Paragraphs in a column.  Basically, it is another level of nesting, if you need to add an image and a simple to a column.</p>
 					<p style="text-align:left;">Works in all three column types.</p>
 				</section>
@@ -446,6 +438,23 @@
 				<section>
 					<h2>Those are the basic Paragraph Types</h2>
 					<img src="https://media.giphy.com/media/cHqUlvvPvperS/giphy.gif" alt="Dancing Cat">
+				</section>
+
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-Texas-camp.jpg" data-transition="zoom">
+					<h1 style="padding-left:20px;padding-right:20px;background: rgba(0, 0, 0, 0.9);width:70%;">Submodules</h1>
+					<div class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.9);padding:20px;width:70%;">There are two additional submodules included in Bootstrap Paragraphs that you can enable for additional functionality.</div>
+				</section>
+
+				<section>
+					<h2>Contact Form</h2>
+					<p>The Bootstrap Paragraphs Contact Form submodule installs a Paragraph bundle that allows you to embed one of Drupal 8 core's Contact Forms anywhere you need it, including inside of Accordions, Carousels, Columns, Modals, and Tabs. This is possible thanks to the <a href="https://www.drupal.org/project/contact_formatter">Contact Formatter module</a>.</p>
+					<p>Add <a href="https://www.drupal.org/project/inline_entity_form">Inline Entity Form</a> to allow your administrators to add new, or select existing Contact Forms.</p>
+					<img src="img/Bootstrap-Paragraphs-Type-Contact-Form.jpg" alt="Bootstrap Paragraphs - Contact Form">
+				</section>
+
+				<section>
+					<h2>Webform</h2>
+					<p>The Bootstrap Paragraphs Webform submodule installs a Paragraph bundle that allows you to embed a Webform anywhere you need it, including inside of Accordions, Carousels, Columns, Modals, and Tabs.</p>
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-the-Water.jpg" data-background-position="center top" data-transition="zoom">
@@ -557,8 +566,76 @@
 
 				<section>
 					<h2>Drupal Asset libraries</h2>
-					<p>In our Paragraphs templates we use a library to load our two CSS files only on pages that need it.</p>
-					<small><code>{{ attach_library('bootstrap_paragraphs/bootstrap-paragraphs') }}</code></small>
+					<p>In our Paragraphs templates we use a libraries to load the CSS files only on pages that need it.</p>
+					<pre><code>
+{{ attach_library('bootstrap_paragraphs/bootstrap-paragraphs') }}
+{% if paragraph.bundle == 'bp_columns' %}
+  {{ attach_library('bootstrap_paragraphs/bp-columns') }}
+{% endif %}
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Drupal Asset libraries</h2>
+					<p>Additional libraries are loaded in specific bundle template files.</p>
+					<pre><code>
+{{ attach_library('bootstrap_paragraphs/bootstrap-paragraphs') }}
+{{ attach_library('bootstrap_paragraphs/bp-tabs') }}
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Drupal Asset libraries</h2>
+					<p>All libraries are loaded minified.  Specialty libraries have the preprocess: false; flag which means they will be loaded by them sleves and not part of the aggregated CSS.</p>
+					<pre><code>
+bootstrap-paragraphs:
+  css:
+    component:
+      css/bootstrap-paragraphs.min.css: { minified: true }
+      css/bootstrap-paragraphs-columns.min.css: { minified: true }
+      css/bootstrap-paragraphs-colors.min.css: { minified: true }
+bp-accordion:
+  css:
+    component:
+      css/bootstrap-paragraphs-accordion.min.css: { preprocess: false, minified: true }
+  dependencies:
+    - core/jquery
+bp-carousel:
+  css:
+    component:
+      css/bootstrap-paragraphs-carousel.min.css: { preprocess: false, minified: true }
+  dependencies:
+    - core/jquery
+bp-columns:
+  css:
+    component:
+      css/bootstrap-paragraphs-columns.min.css: { preprocess: false, minified: true }
+bp-columns-two:
+  css:
+    component:
+      css/bootstrap-paragraphs-columns-two.min.css: { preprocess: false, minified: true }
+bp-columns-three:
+  css:
+    component:
+      css/bootstrap-paragraphs-columns-three.min.css: { preprocess: false, minified: true }
+bp-image:
+  css:
+    component:
+      css/bootstrap-paragraphs-image.min.css: { preprocess: false, minified: true }
+bp-modal:
+  css:
+    component:
+      css/bootstrap-paragraphs-modal.min.css: { preprocess: false, minified: true }
+  dependencies:
+    - core/jquery
+bp-tabs:
+  css:
+    component:
+      css/bootstrap-paragraphs-tabs.min.css: { preprocess: false, minified: true }
+  dependencies:
+    - core/jquery
+
+					</code></pre>
 				</section>
 
 				<section>
@@ -618,7 +695,7 @@
 					<h2>Uninstall this module!</h2>
 					<p>In fact, you can uninstall this module after installation and still keep all the functionality.</p>
 					<ul>
-						<li class="fragment">Move the templates to your theme, and remove the <code>attach_library</code> call.</li>
+						<li class="fragment">Move the templates to your theme, and remove the <code>attach_library</code> calls.</li>
 						<li class="fragment">Move the CSS files to your theme and call them from your theme's library file.</li>
 					</ul>
 				</section>
@@ -812,16 +889,9 @@
 					<ul>
 						<li><a href="http://jeroen.pro">Jeroen Bobbeldijk</a>, <a href="https://www.drupal.org/vdmi">.VDMi/</a>, <a href="https://www.drupal.org/md-systems">MD Systems</a> for supporting the <a href="https://www.drupal.org/project/paragraphs">Paragraphs module</a>.</li>
 						<li>Les Lim and David Needham's presentation <a href="https://www.youtube.com/watch?v=nRB4n09Ekpg">Using Paragraphs to Weave a Beautiful Content Tapestry</a></li>
-						<li>Morten, Danny Englander, Greg Boggs, Mark Conroy, and everyone else in the <a href="https://slackinvite.me/to/drupaltwig">Drupal Twig Slack</a></li>
+						<li>All the people in the <a href="https://slackinvite.me/to/drupaltwig">Drupal Twig Slack</a></li>
 						<li>So many people in Stack Overflow, especially Scott Reeves (Cottser)!</li>
 					</ul>
-				</section>
-
-				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-Xeno.jpg" data-transition="zoom">
-					<div class="fragment">
-						<h1 class="box" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);"><a href="http://www.xenomedia.com">Xeno Media</a></h1>
-						<p style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Xeno Media, Inc. is a Chicago-based agency providing Drupal Development, Web Consulting and Design to the world's greatest clients.</p>
-					</div>
 				</section>
 
 				<section>
@@ -836,10 +906,10 @@
 					<h1 style="padding-left:20px;">The End</h1>
 					<h3 style="padding-left:20px;">Continuing the conversation:</h3>
 					<div class="box" style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.7);padding:20px;">
-						<a href="http://jimbir.ch/presentations/bootstrap-paragraphs/">jimbir.ch/bp</a><br>
+						<a href="http://jimbir.ch">Jim Birch</a><br>
 						<a href="http://twitter.com/thejimbirch">@thejimbirch</a><br>
-						<a href="http://www.xenomedia.com">Xeno Media, Inc.</a><br>
-						<a href="https://joind.in/event/texas-camp/bootstrap-paragraphs">Review me on joind.in!</a>
+						<a href="http://jimbir.ch/presentations/bootstrap-paragraphs/">jimbir.ch/bp</a> - Presentation<br>
+						<a href="http://bp.jimbir.ch/">bp.jimbir.ch</a> - Demo site<br>
 					</div>
 				</section>
 
