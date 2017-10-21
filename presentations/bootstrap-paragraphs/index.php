@@ -306,6 +306,10 @@
 					<img src="img/bp_colors.jpg" alt="Bootstrap Paragraphs - Colors" style="width:75%;">
 				</section>
 
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Iceland.jpg" data-transition="zoom">
+					<h1 style="padding-left:20px;padding-right:20px;background: rgba(0, 0, 0, 0.9);width:70%;">Paragraph Bundle Types</h1>
+				</section>
+
 				<section>
 					<h2>Content bundles</h2>
 					<p>Common semantically organized fields, and reference fields to common entities.</p>
@@ -330,10 +334,6 @@
 						<li>Modal</li>
 						<li>Tabs</li>
 					</ul>
-				</section>
-
-				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Iceland.jpg" data-transition="zoom">
-					<h1 style="padding-left:20px;padding-right:20px;background: rgba(0, 0, 0, 0.9);width:70%;">Paragraph Bundle Types</h1>
 				</section>
 
 				<section>
