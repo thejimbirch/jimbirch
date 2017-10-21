@@ -706,7 +706,7 @@ bp-tabs:
 				</section>
 
 				<section>
-					<h2>Play us off keyboard cat</h2>
+					<h2>Next, let's build on top of this base</h2>
 					<img src="https://media.giphy.com/media/bMLZaUFVmgu6k/giphy.gif" alt="Keyboard Cat">
 				</section>
 
@@ -902,6 +902,7 @@ bp-tabs:
 				<section>
 					<h2>Many thanks to:</h2>
 					<ul>
+						<li>All of the people who have helped in the Issue queue.</li>
 						<li>All my amazing co-workers and clients at Xeno Media.</li>
 						<li>Albert Jankowski (<a href="https://www.drupal.org/u/albertski">albertski</a>) for helping me develop this module and always helping me debug all the Drupal 8 things!</li>
 					</ul>
