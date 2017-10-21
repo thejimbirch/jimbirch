@@ -158,7 +158,7 @@
 				</section>
 
 				<section>
-					<h2 class="box"><a href="http://bp.jimbir.ch">Demo Site</a></h2>
+					<h2 class="box"><a href="http://bp.jimbir.ch">Building a better page builder</a></h2>
 					<a href="http://bp.jimbir.ch"><img src="img/bootstrap-paragraphs-demo.gif" alt="Boostrap Paragraphs Demo"></a>
 				</section>
 
@@ -265,6 +265,47 @@
 					<p>This idea helped me solidify the structure of this module.</p>
 				</section>
 
+				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-the-Water.jpg" data-background-position="center top" data-transition="zoom">
+					<h1 style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:80%;">Global Settings</h1>
+					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Every paragraph, whether content or layout has the option to set background color and one of five widths, from narrow to full using List/Text Select fields.</p>
+				</section>
+
+				<section>
+					<h2>Widths</h2>
+					<p>Each Paragraph has an option where you can set one of 5 widths.  As the width gets narrower, the content becomes centered using Bootstraps offset classes.  The widths are:</p>
+					<ul>
+				    <li><strong>Tiny</strong>: col-4, offset-4</li>
+				    <li><strong>Narrow</strong>: col-6, offset-3</li>
+				    <li><strong>Medium</strong>: col-8, offset-2</li>
+				    <li><strong>Wide</strong>: col-10, offset-1</li>
+				    <li><strong>Full</strong>: col-12</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Widths</h2>
+					<img src="img/bp_widths.jpg" alt="Bootstrap Paragraphs - Widths" style="width: 28%;">
+				</section>
+
+				<section>
+					<h2>Background Colors</h2>
+					<p>Each Paragraph has a background color option. Included are over 50 background colors and five empty background classes for you to customize in your own theme.</p>
+					<p>Empty classes follow the Bootstrap nomenclature:</p>
+					<ul>
+						<li>.paragraph--color--primary</li>
+						<li>.paragraph--color--secondary</li>
+						<li>.paragraph--color--success</li>
+						<li>.paragraph--color--info</li>
+						<li>.paragraph--color--warning</li>
+						<li>.paragraph--color--danger</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Background Colors</h2>
+					<img src="img/bp_colors.jpg" alt="Bootstrap Paragraphs - Colors" style="width:75%;">
+				</section>
+
 				<section>
 					<h2>Content bundles</h2>
 					<p>Common semantically organized fields, and reference fields to common entities.</p>
@@ -321,7 +362,7 @@
 				</section>
 
 				<section>
-					<p>Some <strong>Drupal blocks</strong> do not render.&nbsp; Here is the list of working/not working blocks as of April, 2017.</p>
+					<p>Some <strong>Drupal blocks</strong> do not render.&nbsp; Here is the list of working/not working blocks as of October, 2017.</p>
 					<div style="width:47%;float:left;">
 						<p><strong>Working</strong></p>
 						<ul>
@@ -457,45 +498,9 @@
 					<p>The Bootstrap Paragraphs Webform submodule installs a Paragraph bundle that allows you to embed a Webform anywhere you need it, including inside of Accordions, Carousels, Columns, Modals, and Tabs.</p>
 				</section>
 
-				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-the-Water.jpg" data-background-position="center top" data-transition="zoom">
-					<h1 style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:80%;">Global Settings</h1>
-					<p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">Every paragraph, whether content or layout has the option to set background color and one of five widths, from narrow to full using List/Text Select fields.</p>
-				</section>
-
 				<section>
-					<h2>Widths</h2>
-					<p>Each Paragraph has an option where you can set one of 5 widths.  As the width gets narrower, the content becomes centered using Bootstraps offset classes.  The widths are:</p>
-					<ul>
-				    <li><strong>Tiny</strong>: col-4, offset-4</li>
-				    <li><strong>Narrow</strong>: col-6, offset-3</li>
-				    <li><strong>Medium</strong>: col-8, offset-2</li>
-				    <li><strong>Wide</strong>: col-10, offset-1</li>
-				    <li><strong>Full</strong>: col-12</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Widths</h2>
-					<img src="img/bp_widths.jpg" alt="Bootstrap Paragraphs - Widths" style="width: 28%;">
-				</section>
-
-				<section>
-					<h2>Background Colors</h2>
-					<p>Each Paragraph has a background color option. Included are over 50 background colors and five empty background classes for you to customize in your own theme.</p>
-					<p>Empty classes follow the Bootstrap nomenclature:</p>
-					<ul>
-						<li>.paragraph--color--primary</li>
-						<li>.paragraph--color--secondary</li>
-						<li>.paragraph--color--success</li>
-						<li>.paragraph--color--info</li>
-						<li>.paragraph--color--warning</li>
-						<li>.paragraph--color--danger</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Background Colors</h2>
-					<img src="img/bp_colors.jpg" alt="Bootstrap Paragraphs - Colors" style="width:75%;">
+					<h2>Now our site builders can get their clients their mail!</h2>
+					<img src="https://media.giphy.com/media/pAAG71U1NKwuY/giphy.gif" alt="Cat gets the mail!">
 				</section>
 
 				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Berkeley.jpg" data-transition="zoom">
@@ -586,7 +591,7 @@
 
 				<section>
 					<h2>Drupal Asset libraries</h2>
-					<p>All libraries are loaded minified.  Specialty libraries have the preprocess: false; flag which means they will be loaded by them sleves and not part of the aggregated CSS.</p>
+					<p>All libraries are loaded minified.  Specialty libraries have the preprocess: false; flag which means they will be loaded by themselves and not part of the aggregated CSS.</p>
 					<pre><code>
 bootstrap-paragraphs:
   css:
