@@ -11,7 +11,7 @@
     <meta property="og:url" content="http://jimbir.ch/presentations/holistic-seo/"/>
     <meta property="og:title" content="Holistic SEO and Drupal 8 | Web Development Presentation"/>
     <meta property="og:description" content="This presentation reviews the most common search engine ranking factors and how to take a holistic approach to SEO best practices when developing in Drupal."/>
-    <meta property="og:image" content="http://jimbir.ch/presentations/holistic-seo/img/Lego-Uncle-Jim-reads-email.jpg"/>
+    <meta property="og:image" content="http://jimbir.ch/presentations/holistic-seo/img/Lego-Uncle-Jim-Blogs.jpg"/>
     <meta name="twitter:site" content="@thejimbirch"/>
     <meta name="twitter:site:id" content="2989027096"/>
     <meta name="twitter:creator" content="@thejimbirch"/>
@@ -19,10 +19,10 @@
     <meta name="twitter:url" content="http://jimbir.ch/presentations/holistic-seo/"/>
     <meta name="twitter:title" content="Holistic SEO and Drupal 8 | Web Development Presentation"/>
     <meta name="twitter:description" content="This presentation reviews the most common search engine ranking factors and how to take a holistic approach to SEO best practices when developing in Drupal."/>
-    <meta name="twitter:image:src" content="http://jimbir.ch/presentations/holistic-seo/img/Lego-Uncle-Jim-reads-email.jpg"/>
+    <meta name="twitter:image:src" content="http://jimbir.ch/presentations/holistic-seo/img/Lego-Uncle-Jim-Blogs.jpg"/>
     <meta itemprop="name" content="Holistic SEO and Drupal 8 | Web Development Presentation"/>
     <meta itemprop="description" content="This presentation reviews the most common search engine ranking factors and how to take a holistic approach to SEO best practices when developing in Drupal."/>
-    <meta itemprop="image" content="http://jimbir.ch/presentations/holistic-seo/img/Lego-Uncle-Jim-reads-email.jpg"/>
+    <meta itemprop="image" content="http://jimbir.ch/presentations/holistic-seo/img/Lego-Uncle-Jim-Blogs.jpg"/>
     <meta name="author" content="Jim Birch">
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -50,41 +50,168 @@
     <![endif]-->
 
     <style type="text/css">
-      .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
-        background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+      .reveal h1,
+      .reveal h2,
+      .reveal h3,
+      .reveal h4,
+      .reveal h5,
+      .reveal h6,
+      .reveal .box {
+        background: rgba(0, 0, 0, 0.85) none repeat scroll 0 0;
+        border-radius: 5px;
         color: #fff;
-        text-shadow: 1px 1px 1px rgba(0,0,0,0.4)
+        padding: 20px;
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
       }
 
-      .backgrounds .slide-background{
+      .reveal .box a {
+        border-bottom: 1px dotted #ededed;
+        color: #fff;
+      }
+
+      .reveal .box--width-50 {
+        float: left;
+        width: 50%;
+      }
+
+      .reveal .box--width-60 {
+        float: left;
+        width: 60%;
+      }
+
+      .reveal .box--width-65 {
+        float: left;
+        width: 65%;
+      }
+
+      .reveal .box--width-70 {
+        float: left;
+        width: 70%;
+      }
+
+      .reveal .box--width-75 {
+        float: left;
+        width: 75%;
+      }
+
+      .reveal .box--width-80 {
+        float: left;
+        width: 80%;
+      }
+
+      .reveal .box--width-85 {
+        float: left;
+        width: 85%;
+      }
+
+      .reveal section img {
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      .reveal section img.logo--dark {
+        background: rgba(0, 0, 0, 0.85) none repeat scroll 0 0;
+      }
+
+      .reveal .columns {
+        clear: left;
+      }
+
+      .reveal .column--50 {
+        float: left;
+        margin-left: 2%;
+        width: 49%;
+      }
+
+      .reveal .column--50:first-child {
+        margin-left: 0;
+      }
+
+      .reveal .logos {
+        display: block;
+        width: 100%;
+      }
+
+      .reveal .logos img {
+        float: left;
+        margin-bottom: 15px;
+        margin-left: 2%;
+        max-height: 100%;
+        max-width: 100%;
+        width: 31.7%;
+      }
+
+      .reveal .logos img:first-child,
+      .reveal .logos img:nth-child(4),
+      .reveal .logos img:nth-child(7) {
+        margin-left: 0;
+      }
+
+      .backgrounds .slide-background {
         background-position: bottom center;
+      }
+
+      html.background--top .backgrounds .slide-background {
+        background-position: top center;
       }
 
       .reveal .controls {
         bottom: 14px;
       }
 
-      .navigate-down, .navigate-up {
+      .navigate-down,
+      .navigate-up {
         display: none;
       }
 
       .fixed-footer {
-        position:fixed;
-        bottom:20px;
-        left:30px;
-        width:95%;
-        margin:0 auto;
-        z-index:1000;
+        position: fixed;
+        bottom: 20px;
+        left: 30px;
+        width: 95%;
+        margin: 0 auto;
+        z-index: 1000;
+      }
+
+      .fixed-footer a {
+        color: #111;
+      }
+
+      .fixed-footer .fixed-footer--left {
+        float: left;
+      }
+
+      .fixed-footer .fixed-footer--right {
+        float: right;
       }
 
       .fixed-footer > div {
         font-size: 16px;
       }
 
+      .fixed-footer .fixed-footer--logo {
+        height: 14px;
+        width: auto;
+      }
+
       @media print {
         .fixed-footer {
-            display: none;
+          display: none;
         }
+      }
+
+      .text--left {
+        text-align: left;
+      }
+
+      .text--red {
+        color: #ff0000;
+      }
+
+      .text--huge {
+        font-size: 600%;
       }
     </style>
 
@@ -105,48 +232,50 @@
     <div class="reveal">
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="fixed-footer">
-        <div style="float:left;"><a href="http://jimbir.ch/presentations/holistic-seo/" style="color:#111;">jimbir.ch/holistic-seo</a> | <a href="http://www.twitter.com/thejimbirch" title="@thejimbirch" style="color:#111;">@thejimbirch</a></div>
-        <div style="float:right;"><a href="http://www.xenomedia.com" title="Xeno Media, Inc"><img src="img/xeno-media-logo.png" alt="Xeno Media, Inc" style="height:14px;width:auto;"></a></div>
+        <div class="fixed-footer--left"><a href="http://jimbir.ch/presentations/holistic-seo/">jimbir.ch/holistic-seo</a> | <a href="http://www.twitter.com/thejimbirch" title="@thejimbirch">@thejimbirch</a></div>
+        <div class="fixed-footer--right"><a href="http://www.xenomedia.com" title="Xeno Media, Inc"><img src="img/xeno-media-logo.png" alt="Xeno Media, Inc" class="fixed-footer--logo"></a></div>
       </div>
       <div class="slides">
-        <section style="text-align:left;" data-background="img/Lego-Uncle-Jim-reads-email.jpg">
-          <h1 style="padding-left:20px;">Holistic SEO and Drupal 8</h1>
-          <h3 style="float:left;padding-left:20px;width:75%;">Best practices for an ever changing search landscape</h3>
-          <p style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.5);padding:20px;">Created by <a href="http://jimbir.ch" style="color: #fff; border-bottom: 1px dotted #ededed;">Jim Birch</a><br>
-          <a href="http://jimbir.ch/presentations/holistic-seo" style="color: #fff; border-bottom: 1px dotted #ededed;">jimbir.ch/holistic-seo</a><br>
-          <a href="http://twitter.com/thejimbirch" style="color: #fff; border-bottom: 1px dotted #ededed;">@thejimbirch</a><br>
-          <a href="http://www.xenomedia.com" style="color: #fff; border-bottom: 1px dotted #ededed;">Xeno Media, Inc.</a></p>
+        <section class="text--left" data-background="img/Lego-Uncle-Jim-Blogs.jpg" data-state="background--top">
+          <h1 class="box--width-65">Holistic SEO &amp; Drupal 8</h1>
+          <h4 class="box box--width-65"">Best practices for an ever changing search landscape</h4>
+          <div class="box box--width-65">
+            Created by <a href="http://jimbir.ch">Jim Birch</a><br>
+            <a href="http://jimbir.ch/presentations/holistic-seo">jimbir.ch/holistic-seo</a><br>
+            <a href="http://twitter.com/thejimbirch">@thejimbirch</a><br>
+            <a href="http://www.xenomedia.com">Xeno Media, Inc.</a>
+          </div>
         </section>
 
-        <section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Greece-by-the-steps.jpg">
-          <p class="fragment" style="display:inline-block;color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;"><strong>Holistic SEO</strong> is a term used to describe development in which content, marketing, technical SEO, performance, security, user experience and user intent come together to create an ideal url on the internet, about a certain topic.</p>
+        <section class="text--left" data-background="img/Lego-Uncle-Jim-in-Greece-by-the-steps.jpg">
+          <p class="fragment box box--width-60"><strong>Holistic SEO</strong> is a term used to describe development in which content, marketing, technical SEO, performance, security, user experience and user intent come together to create an ideal url on the internet, about a certain topic.</p>
         </section>
 
-        <section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-Xeno.jpg">
-          <h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);">Why take a Holistic approach to seo?</h1>
-          <p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">It defines a set of repeatable, best practices that aids development and ultimately benefits the user.</p>
-          <p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;">As search engine algorithms get more personalized, complex and intelligent, we won't be able to control or predict changes.</p>
+        <section class="text--left" data-background="img/Lego-Uncle-Jim-at-Xeno.jpg">
+          <h1 class="fragment box">Why take a Holistic approach to seo?</h1>
+          <p class="fragment box box--width-85">It defines a set of repeatable, best practices that aids development and ultimately benefits the user.</p>
+          <p class="fragment box box--width-85">As search engine algorithms get more personalized, complex and intelligent, we won't be able to control or predict changes.</p>
         </section>
 
         <section>
           <h2>This presentation is for those responsible for:</h2>
-          <div class="fragment" style="float: left; width: 50%;">
-            <h3>Content</h3>
-            <ul>
-              <li>Research</li>
-              <li>Create &amp; Analyze</li>
-              <li>Report</li>
-              <li>Refine</li>
-            </ul>
-          </div>
-          <div class="fragment" style="float: left; width: 50%";>
-            <h3>Development</h3>
-            <ul>
-              <li>Plan</li>
-              <li>Build</li>
-              <li>Test</li>
-              <li>Refine</li>
-            </ul>
+          <div class="columns">
+            <div class="fragment column--50">
+              <h3>Content</h3>
+              <ul>
+                <li>Research</li>
+                <li>Create &amp; Analyze</li>
+                <li>Report &amp; Refine</li>
+              </ul>
+            </div>
+            <div class="fragment column--50">
+              <h3>Development</h3>
+              <ul>
+                <li>Plan</li>
+                <li>Build</li>
+                <li>Test</li>
+              </ul>
+            </div>
           </div>
         </section>
 
@@ -183,8 +312,8 @@
           <p>Optimizing content (videos, products, posts, etc..) published on these sites is similar to what we do for the web.</p>
         </section>
 
-        <section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Greece-Bay-View.jpg">
-          <h1 class="fragment" style="padding:20px;background: rgba(0, 0, 0, 0.8);width:60%;">The scale of search</h1>
+        <section class="text--left" data-background="img/Lego-Uncle-Jim-in-Greece-Bay-View.jpg">
+          <h1 class="fragment box--width-60">The scale of search</h1>
         </section>
 
         <section>
@@ -214,7 +343,7 @@
         <section>
           <div class="logos">
             <img src="img/logo--moz.png" alt="Moz">
-            <img src="img/logo--jumpshot.png" alt="Moz" style="background: #111;">
+            <img src="img/logo--jumpshot.png" alt="Moz" class="logo--dark">
           </div>
           <p>Some great analysis has been done by Rand Fishkin on Moz.com using Clickstream Data from Jumpshot.  Looking at this chart of estimated US searches, the numbers seem to be increasing.</p>
         </section>
@@ -224,9 +353,9 @@
           <p><small><a href="https://moz.com/rand/seo-opportunity-growing-shrinking/">Is SEO Opportunity Growing or Shrinking? - Rand Fishkin, Moz Founder December 17th, 2017</a></small></p>
         </section>
 
-        <section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-the-cabana.jpg">
-          <h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:85%;">Search Engine Ranking Factors</h1>
-          <p class="fragment" style="display:inline-block;color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:60%;"><strong>Search engine ranking factors</strong> are on- and off-site items that search engines use to evaluate a web property's placement in the search results for a certain query.</p>
+        <section class="text--left" data-background="img/Lego-Uncle-Jim-in-the-cabana.jpg">
+          <h1 class="fragment box box--width-85">Search Engine Ranking Factors</h1>
+          <p class="fragment box box--width-60"><strong>Search engine ranking factors</strong> are on- and off-site items that search engines use to evaluate a web property's placement in the search results for a certain query.</p>
         </section>
 
         <section>
@@ -249,7 +378,7 @@
 
         <section>
           <h3>There are possibly</h3>
-          <h4><span style="font-size: 600%;">200</span></h4>
+          <h4 class="text--huge">200</h4>
           <h3>ranking factors</h3>
           <p>
             <small><a href="http://backlinko.com/google-ranking-factors">Google’s 200 Ranking Factors: The Complete List - Backlinko</a></small><br>
@@ -317,7 +446,7 @@
 
         <section>
           <p><small><a href="http://www.searchmetrics.com/knowledge-base/ranking-factors/">2016 Searchmetrics General Search Ranking Factors</a></small></p>
-          <a href="http://www.searchmetrics.com/knowledge-base/ranking-factors/"><img src="http://www.searchmetrics.com/wp-content/uploads/Searchmetrics-Ranking-Factors-Infographic-EN.jpg?x98318" alt="Searchmetrics General Ranking Factors 2016" style="width:80%;"></a>
+          <a href="http://www.searchmetrics.com/knowledge-base/ranking-factors/"><img src="http://www.searchmetrics.com/wp-content/uploads/Searchmetrics-Ranking-Factors-Infographic-EN.jpg?x98318" alt="Searchmetrics General Ranking Factors 2016"></a>
         </section>
 
         <section>
@@ -333,7 +462,7 @@
         </section>
 
         <section>
-          <a href="http://searchengineland.com/seotable"><img src="http://searchengineland.com/figz/wp-content/seloads/2011/06/periodic-table-of-seo-2015.png" alt="The Periodic Table Of SEO Success Factors" style="width:80%;"></a>
+          <a href="http://searchengineland.com/seotable"><img src="http://searchengineland.com/figz/wp-content/seloads/2011/06/periodic-table-of-seo-2015.png" alt="The Periodic Table Of SEO Success Factors"></a>
           <p><small><a href="http://searchengineland.com/seotable">Search Engine Land - The Periodic Table Of SEO Success Factors</a></small></p>
         </section>
 
@@ -344,13 +473,13 @@
         </section>
 
         <section>
-          <img src="img/logo--backlinko.png" alt="Backlinko" style="background:#111;">
+          <img src="img/logo--backlinko.png" alt="Backlinko" class="logo--dark">
           <h2>According to Backlinko, there are over 200 Search Engine Ranking Factors</h2>
           <p>"Some are proven. Some are controversial. Others are SEO nerd speculation. But they’re all here." - <a href="http://backlinko.com/google-ranking-factors">Google’s 200 Ranking Factors: The Complete List by Brian Dean</a>
         </section>
 
-        <section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-Fermilab.jpg">
-          <h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8); width: 60%;">The search</h1>
+        <section class="text--left" data-background="img/Lego-Uncle-Jim-at-Fermilab.jpg">
+          <h1 class="fragment box box--width-60">The search</h1>
         </section>
 
         <section>
@@ -369,7 +498,7 @@
         </section>
 
         <section>
-          <img src="img/exact-match-page.jpg" alt="a page we created containing a very specific search term" style="width:60%;">
+          <img src="img/exact-match-page.jpg" alt="a page we created containing a very specific search term">
           <p>Once upon a time, we were able to create small pieces of keyword specific content...</p>
           <p><small><a href="http://jimbir.ch/kr2fowdogudo999dvwdlkvnldkvn">kr2fowdogudo999dvwdlkvnldkvn</a></small></p>
         </section>
@@ -413,7 +542,7 @@
 
         <section>
           <h2>hardwood floor finishes<br>1st Result</h2>
-          <ul style="width:55%;">
+          <ul>
             <li class="fragment">Primarily Informational, but also has Transactional elements</li>
             <li class="fragment">Lots of informative links, and a shopping box.</li>
             <li class="fragment">We also have similar results for "wood floor finish"</li>
@@ -430,7 +559,7 @@
         </section>
 
         <section>
-          <h2><span style="font-size:80%;">how to finish a hardwood floor</span><br>8th Result</h2>
+          <h2>how to finish a hardwood floor<br>8th Result</h2>
           <p>Informational Search</p>
           <ul>
             <li class="fragment">Knowledge box and videos all are "How to"</li>
@@ -467,23 +596,23 @@
 
         <section>
           <h2>little bub fireplace</h2>
-          <img src="img/lil-bub-video-search-result.jpg" alt="searching for little bub fireplace on google" style="width:60%;">
+          <img src="img/lil-bub-video-search-result.jpg" alt="searching for little bub fireplace on google">
           <p>Now, Google knows the piece of content I need, even if I get 2 of the 3 words wrong!</p>
           <p><small>"little" nor "fireplace" exist on the page, yet I get the result.</small></p>
         </section>
 
         <section>
-          <iframe width="640" height="360" src="https://www.youtube.com/embed/ZuHZSbPJhaY" frameborder="0" allowfullscreen></iframe>
-          <h2>Google is</h2>
+          <iframe width="555" height="312" src="https://www.youtube.com/embed/ZuHZSbPJhaY" frameborder="0" allowfullscreen></iframe>
+          <p class="text--left">Google is</p>
           <ul>
-            <li class="fragment"><strong>Topic based</strong> - Returns good content that is related, but not specific to the search term.</li>
-            <li class="fragment"><strong>Semantic</strong> - Understands synonyms, pluralities, misspellings, homonyms and more</li>
-            <li class="fragment">Focused on <strong>User Intent</strong> - What the user is trying to acheive by searching</li>
+            <li class="fragment"><strong>Topic based</strong>: Returns good content that is related, but not specific to the search term.</li>
+            <li class="fragment"><strong>Semantic</strong>: Understands synonyms, pluralities, misspellings, homonyms and more</li>
+            <li class="fragment">Focused on <strong>User Intent</strong>: What the user is trying to achieve.</li>
           </ul>
         </section>
 
-        <section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-the-Jungle.jpg">
-          <h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8); width: 75%;">Search Engine Results Pages (SERPs)</h1>
+        <section class="text--left" data-background="img/Lego-Uncle-Jim-in-the-Jungle.jpg">
+          <h1 class="fragment box--width-75">Search Engine Results Pages (SERPs)</h1>
         </section>
 
         <section>
@@ -504,17 +633,16 @@
 
 
 
-        <section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-the-Parthenon.jpg">
-          <h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:70%;">Tools for Content</h1>
+        <section class="text--left" data-background="img/Lego-Uncle-Jim-at-the-Parthenon.jpg">
+          <h1 class="fragment box--width-70">Tools for Content</h1>
         </section>
 
         <section>
-          <h2>Stages for those responsible for Content</h2>
+          <h2>Tools for those responsible for Content</h2>
           <ul>
-            <li class="fragment">Research</li>
-            <li class="fragment">Create &amp; Analyze</li>
-            <li class="fragment">Report</li>
-            <li class="fragment">Refine</li>
+            <li>Research</li>
+            <li>Create &amp; Analyze</li>
+            <li>Report &amp; Refine</li>
           </ul>
         </section>
 
@@ -539,51 +667,69 @@
         </section>
 
         <section>
-          <h2>Report</h2>
+          <h2>Report &amp; Refine</h2>
           <h3>Tools to report on performance</h3>
           <ul>
             <li></li>
           </ul>
         </section>
 
-        <section>
-          <h2>Refine</h2>
-        </section>
-
-        <section style="text-align:left;" data-background="img/Lego-Uncle-Jim-and-the-Acheivement-Duck.jpg">
-          <h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:70%;">Tools for Development</h1>
+        <section class="text--left" data-background="img/Lego-Uncle-Jim-and-the-Acheivement-Duck.jpg">
+          <h1 class="fragment box--width-70">Tools for Development</h1>
         </section>
 
         <section>
-          <h2>Determine Structure</h2>
-          <h3>Drupal Tools</h3>
-          <p>Once you can define your Content Types and Entities, you can use these Drupal tools to connect them.</p>
+          <h2>Tips &amp; Tools for Developers</h2>
           <ul>
-            <li class="fragment"><a href="https://www.drupal.org/project/references">Entity Reference Fields</a> can be used to render other entities inside your main entity</li>
-            <li class="fragment"><a href="https://www.drupal.org/project/inline_entity_form">Inline Entity Form</a> can be used on top of reference fields to allow the user to add new, or select existing entities.</li>
-            <li class="fragment"><a href="https://www.drupal.org/project/paragraphs">Paragraphs</a>, and <a href="https://www.drupal.org/project/eck">Entity Construction Kit (ECK)</a> are great modules to build reorderable, custom entities that reference other structured data entities</li>
-            <li class="fragment"><a href="https://www.drupal.org/project/token">Token module</a> can be used to bridge your entities fields and Metatag fields, Views and more</li>
+            <li class="fragment"><a href="https://developers.google.com/web/">Google Defines Best Practices</a></li>
+            <li class="fragment"><a href="https://search.google.com/structured-data/testing-tool/u/0/">Google Structured Data Testing Tool (Schema)</a></li>
+            <li class="fragment"><a href="https://www.google.com/webmasters/markup-helper/u/1/?hl=en">Google Structured Data Markup Helper (Schema)</a></li>
+            <li class="fragment"><a href="https://developers.google.com/speed/pagespeed/insights/">Google PageSpeed Insights</a></li>
+            <li class="fragment"><a href="https://www.google.com/webmasters/tools/mobile-friendly/">Google Mobile-Friendly Test</a></li>
+            <li class="fragment"><a href="https://www.google.com/webmasters/markup-tester/u/1?hl=en">Google Email Markup Tester</a></li>
+            <li class="fragment"><a href="https://www.google.com/webmasters/#?modal_active=none">Google Search Console</a></li>
+            <li class="fragment"><a href="https://search.google.com/search-console/amp">Google Amp Test</a></li>
+            <li class="fragment">Lighthouse</li>
+            <li class="fragment">A11Y/Axe CLI</li>
           </ul>
         </section>
 
         <section>
+          <h2>Google Search Console</h2>
+          <p>Has the following tools:</p>
+          <ul>
+            <li>View (and fix) Crawl Errors</li>
+            <li>Fetch as Google</li>
+            <li>robots.txt Tester</li>
+            <li>Submit Sitemaps</li>
+            <li>Configure URL Parameters</li>
+          </ul>
+        </section>
+
+        <section class="text--left" data-background="img/Lego-Uncle-Jim-at-the-Turkish-Cafe.jpg">
+          <h1 class="fragment box--width-75">Technical SEO best practices in Drupal 8</h1>
+        </section>
+
+        <section>
           <h2>Ranking Factor Categories</h2>
-          <div style="float:left;width: 50%">
-            <h3>On Site</h3>
-            <ul>
-              <li>Content</li>
-              <li>Architecture</li>
-              <li>HTML</li>
-            </ul>
-          </div>
-          <div style="float:left;width: 50%">
-            <h3>Off Site</h3>
-            <ul>
-              <li>Trust</li>
-              <li>Links</li>
-              <li>Personal</li>
-              <li>Social</li>
-            </ul>
+          <div class="columns">
+            <div class="column--50">
+              <h3>On Site</h3>
+              <ul>
+                <li>Content</li>
+                <li>Architecture</li>
+                <li>HTML</li>
+              </ul>
+            </div>
+            <div class="column--50">
+              <h3>Off Site</h3>
+              <ul>
+                <li>Trust</li>
+                <li>Links</li>
+                <li>Personal</li>
+                <li>Social</li>
+              </ul>
+            </div>
           </div>
         </section>
 
@@ -595,7 +741,7 @@
             <li class="fragment">Is the content new?</li>
             <li class="fragment">Does the content include related content (Images, News, Video, etc)?</li>
             <li class="fragment">Does the content answer questions?</li>
-            <li class="fragment" style="color: #ff0000;">Negative Factor: Is the Content thin?</li>
+            <li class="fragment text--red">Negative Factor: Is the Content thin?</li>
           </ul>
         </section>
 
@@ -656,7 +802,7 @@
         <section>
           <h2>Architecture</h2>
           <h3>Cloaking</h3>
-          <p style="color: #ff0000;">Negative Factor: Showing different content to humans and search engines.</p>
+          <p class="text--red">Negative Factor: Showing different content to humans and search engines.</p>
         </section>
 
         <section>
@@ -789,10 +935,10 @@
 
         <section>
           <h2>HTML</h2>
-          <h3 style="color: #ff0000;">Negative Factors: Hiding and Stuffing</h3>
+          <h3 class="text--red">Negative Factors: Hiding and Stuffing</h3>
           <ul>
-            <li style="color: #ff0000;">Don't overuse keywords just for Search engines.</li>
-            <li style="color: #ff0000;">Don't use CSS or JS to hide words you want to be ranked for.</li>
+            <li class="text--red">Don't overuse keywords just for Search engines.</li>
+            <li class="text--red">Don't use CSS or JS to hide words you want to be ranked for.</li>
           </ul>
         </section>
 
@@ -804,8 +950,8 @@
             <li><b>Engage:</b> Bounce Rate</li>
             <li><b>History:</b> Has the domain/site been around?</li>
             <li><b>Identity:</b> </li>
-            <li style="color: #ff0000;"><b>Negative Factor - Piracy:</b> Flagged for pirated content</li>
-            <li style="color: #ff0000;"><b>Negative Factor - Ads:</b> Too many ads above the fold</li>
+            <li class="text--red"><b>Negative Factor - Piracy:</b> Flagged for pirated content</li>
+            <li class="text--red"><b>Negative Factor - Ads:</b> Too many ads above the fold</li>
           </ul>
         </section>
 
@@ -816,8 +962,8 @@
             <li><b>Quality:</b> Links, shares, social</li>
             <li><b>Text:</b> Bounce Rate</li>
             <li><b>Number:</b> Has the domain/site been around?</li>
-            <li style="color: #ff0000;"><b>Negative Factor - Paid Links:</b> Don't buy links!</li>
-            <li style="color: #ff0000;"><b>Negative Factor - Spam:</b> Comment/Forum Spam</li>
+            <li class="text--red"><b>Negative Factor - Paid Links:</b> Don't buy links!</li>
+            <li class="text--red"><b>Negative Factor - Spam:</b> Comment/Forum Spam</li>
           </ul>
         </section>
 
@@ -841,36 +987,6 @@
           </ul>
         </section>
 
-        <section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-the-Turkish-Cafe.jpg">
-          <h1 class="fragment" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:75%;">Tips &amp; Tools for Developers</h1>
-        </section>
-
-        <section>
-          <h2>Tips &amp; Tools for Developers</h2>
-          <ul>
-            <li class="fragment"><a href="https://developers.google.com/web/">Google Defines Best Practices</a></li>
-            <li class="fragment"><a href="https://search.google.com/structured-data/testing-tool/u/0/">Google Structured Data Testing Tool (Schema)</a></li>
-            <li class="fragment"><a href="https://www.google.com/webmasters/markup-helper/u/1/?hl=en">Google Structured Data Markup Helper (Schema)</a></li>
-            <li class="fragment"><a href="https://developers.google.com/speed/pagespeed/insights/">Google PageSpeed Insights</a></li>
-            <li class="fragment"><a href="https://www.google.com/webmasters/tools/mobile-friendly/">Google Mobile-Friendly Test</a></li>
-            <li class="fragment"><a href="https://www.google.com/webmasters/markup-tester/u/1?hl=en">Google Email Markup Tester</a></li>
-            <li class="fragment"><a href="https://www.google.com/webmasters/#?modal_active=none">Google Search Console</a></li>
-            <li class="fragment"><a href="https://search.google.com/search-console/amp">Google Amp Test</a></li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Google Search Console</h2>
-          <p>Has the following tools:</p>
-          <ul>
-            <li>View (and fix) Crawl Errors</li>
-            <li>Fetch as Google</li>
-            <li>robots.txt Tester</li>
-            <li>Submit Sitemaps</li>
-            <li>Configure URL Parameters</li>
-          </ul>
-        </section>
-
         <section>
           <h2>Stay up to date:</h2>
           <ul>
@@ -881,13 +997,15 @@
             <li><a href="https://webmasters.googleblog.com/">Google Webmasters</a></li>
         </section>
 
-        <section style="text-align: left;" data-background="img/Lego-Uncle-Jim-at-Sunset.jpg">
-          <h1 style="padding-left:20px;">THE END</h1>
-          <h3 style="padding-left:20px;">Continuing the conversation:</h3>
-          <p style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.5);padding:20px;">Created by <a href="http://jimbir.ch" style="color: #fff; border-bottom: 1px dotted #ededed;">Jim Birch</a><br>
-          <a href="http://jimbir.ch/presentations/holistic-seo" style="color: #fff; border-bottom: 1px dotted #ededed;">jimbir.ch/holistic-seo</a><br>
-          <a href="http://twitter.com/thejimbirch" style="color: #fff; border-bottom: 1px dotted #ededed;">@thejimbirch</a><br>
-          <a href="http://www.xenomedia.com" style="color: #fff; border-bottom: 1px dotted #ededed;">Xeno Media, Inc.</a></p>
+        <section class="text--left" data-background="img/Lego-Uncle-Jim-at-Sunset.jpg">
+          <h1>THE END</h1>
+          <h3>Continuing the conversation:</h3>
+          <p class="box box--width-60">
+            Created by <a href="http://jimbir.ch">Jim Birch</a><br>
+            <a href="http://jimbir.ch/presentations/holistic-seo">jimbir.ch/holistic-seo</a><br>
+            <a href="http://twitter.com/thejimbirch">@thejimbirch</a><br>
+            <a href="http://www.xenomedia.com">Xeno Media, Inc.</a>
+          </p>
         </section>
 
       </div>
