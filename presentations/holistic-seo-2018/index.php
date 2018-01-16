@@ -129,6 +129,17 @@
         margin-left: 0;
       }
 
+      .reveal .column--75-25 {
+        float: left;
+        width: 74%;
+      }
+
+      .reveal .column--25-75 {
+        float: left;
+        margin-left: 2%;
+        width: 24%;
+      }
+
       .reveal .logos {
         display: block;
         width: 100%;
@@ -202,15 +213,15 @@
         }
       }
 
-      .text--left {
+      .reveal .text--left {
         text-align: left;
       }
 
-      .text--red {
+      .reveal .text--red {
         color: #ff0000;
       }
 
-      .text--huge {
+      .reveal .text--huge {
         font-size: 600%;
       }
     </style>
@@ -341,10 +352,8 @@
         </section>
 
         <section>
-          <div class="logos">
-            <img src="img/logo--moz.png" alt="Moz">
-            <img src="img/logo--jumpshot.png" alt="Moz" class="logo--dark">
-          </div>
+          <img src="img/logo--moz.png" alt="Moz">
+          <img src="img/logo--jumpshot.png" alt="Moz" class="logo--dark">
           <p>Some great analysis has been done by Rand Fishkin on Moz.com using Clickstream Data from Jumpshot.  Looking at this chart of estimated US searches, the numbers seem to be increasing.</p>
         </section>
 
@@ -353,132 +362,7 @@
           <p><small><a href="https://moz.com/rand/seo-opportunity-growing-shrinking/">Is SEO Opportunity Growing or Shrinking? - Rand Fishkin, Moz Founder December 17th, 2017</a></small></p>
         </section>
 
-        <section class="text--left" data-background="img/Lego-Uncle-Jim-in-the-cabana.jpg">
-          <h1 class="fragment box box--width-85">Search Engine Ranking Factors</h1>
-          <p class="fragment box box--width-60"><strong>Search engine ranking factors</strong> are on- and off-site items that search engines use to evaluate a web property's placement in the search results for a certain query.</p>
-        </section>
-
-        <section>
-          <h2>Search Engine Ranking Factors</h2>
-          <ul>
-            <li class="fragment">Each search engine has their own algorithm to how they weigh factors.</li>
-            <li class="fragment">On occasion, Google will publish factors. Pay attention!
-              <ul>
-                <li><a href="https://webmasters.googleblog.com/2015/02/finding-more-mobile-friendly-search.html" target="_blank">Mobilegeddon</a></li>
-                <li><a href="https://webmasters.googleblog.com/2014/05/making-your-site-more-mobile-friendly.html" target="_blank">Page Speed</a></li>
-                <li><a href="https://webmasters.googleblog.com/2015/12/indexing-https-pages-by-default.html">HTTPS</a></li>
-                <li><a href="https://webmasters.googleblog.com/2016/08/amp-your-content-preview-of-amped.html" target="_blank">AMP'ed results in Search</a></li>
-                <li><a href="https://webmasters.googleblog.com/2017/12/rich-results-tester.html">Schema markup</a> (<a href="https://webmasters.googleblog.com/2016/09/showcase-your-sites-reviews-in-search.html">Reviews in Search</a>), (<a href="https://webmasters.googleblog.com/2016/05/introducing-rich-cards.html">Rich cards</a>)</li>
-                <li><a href="http://searchengineland.com/google-divide-index-giving-mobile-users-better-fresher-content-261037">Separate Mobile Search Index</a> (<a href="https://webmasters.googleblog.com/2017/12/getting-your-site-ready-for-mobile.html">Getting ready</a>)</li>
-              </ul>
-            </li>
-            <li class="fragment">Factors can be ranked differently for each and every search based on multiple factors like, location, device, time, perceived user intent, etc!</li>
-          </ul>
-        </section>
-
-        <section>
-          <h3>There are possibly</h3>
-          <h4 class="text--huge">200</h4>
-          <h3>ranking factors</h3>
-          <p>
-            <small><a href="http://backlinko.com/google-ranking-factors">Google’s 200 Ranking Factors: The Complete List - Backlinko</a></small><br>
-            <small><a href="https://www.searchenginejournal.com/infographic-googles-200-ranking-factors/64316/">Google's 200 Ranking Factors - Search Engine Journal</a></small><br>
-            <small><a href="https://webmasters.googleblog.com/2016/09/penguin-is-now-part-of-our-core.html">Penguin is now part of our core algorithm - Google Webmaster Central Blog</a></small>
-          </p>
-        </section>
-
-        <section>
-          <img src="img/logo--search-engine-land.png" alt="Search Engine Land">
-          <p>On Mar 23, 2016 Google's Andrey Lipattsevm stated that <strong>links</strong>, <strong>content</strong> and <strong>RankBrain</strong> are the top three ranking signals in Google's search algorithm.</p>
-          <p><small><a href="http://searchengineland.com/now-know-googles-top-three-search-ranking-factors-245882">Now we know: Here are Google's top 3 search ranking factors - Barry Schwartz, Search Engine Land</a></small></p>
-        </section>
-
-        <section>
-          <h2>Links</h2>
-          <ul>
-            <li class="fragment">Quality of links</li>
-            <li class="fragment">Keywords in links</li>
-            <li class="fragment">Quantity</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Content</h2>
-          <ul>
-            <li class="fragment">Quality writing</li>
-            <li class="fragment">Keyword Research</li>
-            <li class="fragment">Freshness</li>
-            <li class="fragment">Images, Video, News related to content or vertical</li>
-            <li class="fragment">Does the content answer questions?</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>What is Rankbrain?</h2>
-          <ul>
-            <li class="fragment">RankBrain is a machine learning artificial intelligence system ... </li>
-            <li class="fragment">If RankBrain sees a word or phrase it isn’t familiar with, the machine can make a guess as to what words or phrases might have a similar meaning and filter the result accordingly, making it more effective at handling never-before-seen search queries or keywords. - <a href="https://en.wikipedia.org/wiki/RankBrain">Wikipedia</a></li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Learn more about Rankbrain</h2>
-          <ul>
-            <li><a href="https://www.searchenginejournal.com/google-rankbrain-affect-seo-2016/162153/">How to Use Google RankBrain in SEO</a></li>
-            <li><a href="http://searchengineland.com/faq-all-about-the-new-google-rankbrain-algorithm-234440">FAQ: All About The New Google RankBrain Algorithm</a></li>
-            <li><a href="http://techcrunch.com/2016/06/04/artificial-intelligence-is-changing-seo-faster-than-you-think/">Artificial intelligence is changing SEO faster than you think</a></li>
-            <li><a href="https://moz.com/blog/optimizing-for-rankbrain-whiteboard-friday">Optimizing for RankBrain... Should We Do It? (Is It Even Possible?)</a></li>
-            <li><a href="https://moz.com/blog/seo-trek-the-search-for-google-rankbrain-new-data">SEO Trek: The Search for Google RankBrain* [New Data]</a></li>
-            <li><a href="http://www.outbrain.com/blog/content-marketing-and-seo">Content Marketing and SEO</a></li>
-            <li><a href="http://searchengineland.com/four-pillars-future-seo-259590">The four pillars of the future of SEO</a></li>
-            <li><a href="https://moz.com/learn/seo/google-rankbrain">What is Google Rankbrain?</a></li>
-        </section>
-
-        <section>
-          <h2>Those who monitor and decipher Search Engine Ranking Factors</h2>
-          <ul>
-            <li class="fragment"><a href="http://searchengineland.com/now-know-googles-top-three-search-ranking-factors-245882">Search Engine Land</a></li>
-            <li class="fragment"><a href="http://www.searchmetrics.com/knowledge-base/ranking-factors/">Searchmetrics</a></li>
-            <li class="fragment"><a href="https://moz.com/search-ranking-factors">Moz</a></li>
-            <li class="fragment"><a href="http://backlinko.com/google-ranking-factors">Backlinko</li>
-          </ul>
-        </section>
-
-        <section>
-          <p><small><a href="http://www.searchmetrics.com/knowledge-base/ranking-factors/">2016 Searchmetrics General Search Ranking Factors</a></small></p>
-          <a href="http://www.searchmetrics.com/knowledge-base/ranking-factors/"><img src="http://www.searchmetrics.com/wp-content/uploads/Searchmetrics-Ranking-Factors-Infographic-EN.jpg?x98318" alt="Searchmetrics General Ranking Factors 2016"></a>
-        </section>
-
-        <section>
-          <img alt="Searchmetrics" src="img/logo--searchmetrics.png">
-          <p>After 2016, Searchmetrics started publishing <a href="https://www.searchmetrics.com/knowledge-base/ranking-factors-industry/">detailed industry reports</a> to show the difference in factors by industry.</p>
-          <ul>
-            <li>Travel</li>
-            <li>eCommerce</li>
-            <li>Finance</li>
-            <li>Health</li>
-            <li>Media</li>
-          </ul>
-        </section>
-
-        <section>
-          <a href="http://searchengineland.com/seotable"><img src="http://searchengineland.com/figz/wp-content/seloads/2011/06/periodic-table-of-seo-2015.png" alt="The Periodic Table Of SEO Success Factors"></a>
-          <p><small><a href="http://searchengineland.com/seotable">Search Engine Land - The Periodic Table Of SEO Success Factors</a></small></p>
-        </section>
-
-        <section>
-          <img alt="Moz" src="img/logo--moz.png">
-          <p><a href="https://moz.com/search-ranking-factors">Search Engine Ranking Factors 2015<br>Expert Survey and Correlation Data</a></p>
-          <p>"Every two years, Moz surveys the opinions of dozens of the world's brightest search marketers and runs correlation studies to better understand the workings of search engine algorithms."</p>
-        </section>
-
-        <section>
-          <img src="img/logo--backlinko.png" alt="Backlinko" class="logo--dark">
-          <h2>According to Backlinko, there are over 200 Search Engine Ranking Factors</h2>
-          <p>"Some are proven. Some are controversial. Others are SEO nerd speculation. But they’re all here." - <a href="http://backlinko.com/google-ranking-factors">Google’s 200 Ranking Factors: The Complete List by Brian Dean</a>
-        </section>
-
-        <section class="text--left" data-background="img/Lego-Uncle-Jim-at-Fermilab.jpg">
+                <section class="text--left" data-background="img/Lego-Uncle-Jim-at-Fermilab.jpg">
           <h1 class="fragment box box--width-60">The search</h1>
         </section>
 
@@ -486,21 +370,21 @@
           <h2>Three basic types of searches</h2>
           <ul>
             <li class="fragment">Navigational<br>
-              <small class="fragment">Searcher want to go somewhere, online or offline.</small>
+              <small>Searcher want to go somewhere, online or offline.</small>
             </li>
             <li class="fragment">Informational<br>
-              <small class="fragment">Searcher want to learn something.</small>
+              <small>Searcher want to learn something.</small>
             </li>
             <li class="fragment">Transactional<br>
-              <small class="fragment">Searcher want to buy, sell, sign up, etc.</small>
+              <small>Searcher want to buy, sell, sign up, etc.</small>
             </li>
           </ul>
         </section>
 
         <section>
           <img src="img/exact-match-page.jpg" alt="a page we created containing a very specific search term">
-          <p>Once upon a time, we were able to create small pieces of keyword specific content...</p>
-          <p><small><a href="http://jimbir.ch/kr2fowdogudo999dvwdlkvnldkvn">kr2fowdogudo999dvwdlkvnldkvn</a></small></p>
+          <p>Once upon a time, we were able to create small pieces of keyword specific content...<br>
+          <small><a href="http://jimbir.ch/kr2fowdogudo999dvwdlkvnldkvn">kr2fowdogudo999dvwdlkvnldkvn</a></small></p>
         </section>
 
         <section>
@@ -516,37 +400,41 @@
         <section>
           <p>HouseLogic.com's <a href="https://www.houselogic.com/remodel/windows-doors-and-floors/hardwood-floor-finishes/">Guide to Hardwood Floor Finishes</a></p>
           <p>Is listed for the following search terms:</p>
-          <ul>
-            <li class="fragment">hardwood floor finishes</li>
-            <li class="fragment">wood floor finish</li>
-            <li class="fragment">how to finish a hardwood floor</li>
-            <li class="fragment">wood floor finishing</li>
+          <ul class="fragment">
+            <li>hardwood floor finishes</li>
+            <li>wood floor finish</li>
+            <li>how to finish a hardwood floor</li>
+            <li>wood floor finishing</li>
           </ul>
         </section>
 
         <section>
-          <p>It is a very well written article in an excellently architected site, from a domain with value.</p>
-          <ul>
-            <li class="fragment">Nice big image</li>
-            <li class="fragment">Over 1000 words</li>
-            <li class="fragment">Great meta tags</li>
-            <li class="fragment">JSON-LD Markup</li>
-            <li class="fragment">Fast</li>
-            <li class="fragment">Mobile</li>
-            <li class="fragment">and more</li>
+          <p>It is a very well written article in an excellently architected site from a domain with value that has lots of links to it.</p>
+          <ul class="fragment">
+            <li>Nice big image</li>
+            <li>Over 1000 words</li>
+            <li>Great meta tags</li>
+            <li>JSON-LD Markup</li>
+            <li>Fast</li>
+            <li>Mobile</li>
+            <li>and more</li>
         </section>
 
         <section>
-          <img src="img/floor-finish/hardwood-floor-finishes.png" alt="search results - hardwood floor finishes">
-        </section>
-
-        <section>
-          <h2>hardwood floor finishes<br>1st Result</h2>
-          <ul>
-            <li class="fragment">Primarily Informational, but also has Transactional elements</li>
-            <li class="fragment">Lots of informative links, and a shopping box.</li>
-            <li class="fragment">We also have similar results for "wood floor finish"</li>
-          </ul>
+          <div class="columns">
+            <div class="column--50">
+              <img src="img/floor-finish/hardwood-floor-finishes.png" alt="search results - hardwood floor finishes">
+            </div>
+            <div class="column--50">
+              <h3>hardwood floor finishes</h3>
+              <ul>
+                <li class="fragment">Primarily Informational</li>
+                <li class="fragment">Has some Transactional elements</li>
+                <li class="fragment">Lots of informative links, and a shopping box.</li>
+                <li class="fragment">We also have similar results for "wood floor finish"</li>
+              </ul>
+            </div>
+          </div>
         </section>
 
         <section>
@@ -554,33 +442,38 @@
         </section>
 
         <section>
-          <p>Here's where it gets interesting:<br>"how to finish a hardwood floor"</p>
-          <img src="img/floor-finish/how-to-finish-a-hardwood-floor.png" alt="search results - how to finish a hardwood floor">
+          <div class="columns">
+            <div class="column--50">
+              <img src="img/floor-finish/how-to-finish-a-hardwood-floor.png" alt="search results - how to finish a hardwood floor">
+            </div>
+            <div class="column--50">
+              <h3>how to finish a hardwood floor</h3>
+              <p>Informational Search</p>
+              <ul>
+                <li class="fragment">Knowledge box and videos all are "How to"</li>
+                <li class="fragment">Knowledge box is from the 7th result, same site as our page</li>
+                <li class="fragment">Our page is a product guide, not a How to, but the information is still percieved as valuable.</li>
+              </ul>
+            </div>
+          </div>
         </section>
 
         <section>
-          <h2>how to finish a hardwood floor<br>8th Result</h2>
-          <p>Informational Search</p>
-          <ul>
-            <li class="fragment">Knowledge box and videos all are "How to"</li>
-            <li class="fragment">Knowledge box is from the 7th result, same site as our page</li>
-            <li class="fragment">Our page is a product guide, not a How to, but the information is still percieved as valuable.</li>
-          </ul>
-        </section>
-
-        <section>
-          <img src="img/floor-finish/wood-floor-finishing.png" alt="search results - wood floor finishing">
-        </section>
-
-        <section>
-          <h2>Wood Floor Finishing<br>3rd Result</h2>
-          <p>Transactional Search</p>
-          <ul>
-            <li class="fragment">Business listing showing local floor finishing companies</li>
-            <li class="fragment">Yelp business reviews, and Home advisor business listings</li>
-            <li class="fragment">Contractor websites</li>
-            <li class="fragment">The page in question does not fit in with Transactions, but is still listed!</li>
-          </ul>
+          <div class="columns">
+            <div class="column--50">
+              <img src="img/floor-finish/wood-floor-finishing.png" alt="search results - wood floor finishing">
+            </div>
+            <div class="column--50">
+              <h3>Wood Floor Finishing</h3>
+              <p>Transactional Search</p>
+              <ul>
+                <li class="fragment">Business listing showing companies near me</li>
+                <li class="fragment">Yelp business reviews, and Home advisor business listings</li>
+                <li class="fragment">Contractor websites</li>
+                <li class="fragment">The page in question does not fit in with Transactions, but is still listed!</li>
+              </ul>
+            </div>
+          </div>
         </section>
 
         <section>
@@ -626,6 +519,156 @@
         <section>
           <h2>Featured snippets</h2>
         </section>
+
+        <section class="text--left" data-background="img/Lego-Uncle-Jim-in-the-cabana.jpg">
+          <h1 class="fragment box box--width-85">Search Engine Ranking Factors</h1>
+          <p class="fragment box box--width-60"><strong>Search engine ranking factors</strong> are on- and off-site items that search engines use to evaluate a web property's placement in the search results for a certain query.</p>
+        </section>
+
+        <section>
+          <ul>
+            <li>Each search engine has their own algorithm to how they weigh factors.</li>
+            <li class="fragment">On occasion, Google will publish factors. Pay attention!
+              <ul>
+                <li><a href="https://webmasters.googleblog.com/2015/02/finding-more-mobile-friendly-search.html" target="_blank">Mobilegeddon</a></li>
+                <li><a href="https://webmasters.googleblog.com/2014/05/making-your-site-more-mobile-friendly.html" target="_blank">Page Speed</a></li>
+                <li><a href="https://webmasters.googleblog.com/2015/12/indexing-https-pages-by-default.html">HTTPS</a></li>
+                <li><a href="https://webmasters.googleblog.com/2016/08/amp-your-content-preview-of-amped.html" target="_blank">AMP'ed results in Search</a></li>
+                <li><a href="https://webmasters.googleblog.com/2017/12/rich-results-tester.html">Schema markup</a> (<a href="https://webmasters.googleblog.com/2016/09/showcase-your-sites-reviews-in-search.html">Reviews in Search</a>), (<a href="https://webmasters.googleblog.com/2016/05/introducing-rich-cards.html">Rich cards</a>)</li>
+                <li><a href="http://searchengineland.com/google-divide-index-giving-mobile-users-better-fresher-content-261037">Separate Mobile Search Index</a> (<a href="https://webmasters.googleblog.com/2017/12/getting-your-site-ready-for-mobile.html">Getting ready</a>)</li>
+              </ul>
+            </li>
+            <li class="fragment">Factors can be ranked differently for each and every search based on multiple factors like, location, device, time, perceived user intent, etc!</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>There are possibly</h3>
+          <h4 class="text--huge">200</h4>
+          <h3>ranking factors</h3>
+          <p>
+            <small><a href="http://backlinko.com/google-ranking-factors">Google’s 200 Ranking Factors: The Complete List - Backlinko</a></small><br>
+            <small><a href="https://www.searchenginejournal.com/infographic-googles-200-ranking-factors/64316/">Google's 200 Ranking Factors - Search Engine Journal</a></small><br>
+            <small><a href="https://webmasters.googleblog.com/2016/09/penguin-is-now-part-of-our-core.html">Penguin is now part of our core algorithm - Google Webmaster Central Blog</a></small>
+          </p>
+        </section>
+
+        <section>
+          <h2>Those who monitor and interpret Search Engine Ranking Factors</h2>
+          <ul>
+            <li class="fragment"><a href="http://backlinko.com/google-ranking-factors">Backlinko</li>
+            <li class="fragment"><a href="http://searchengineland.com/now-know-googles-top-three-search-ranking-factors-245882">Search Engine Land</a></li>
+            <li class="fragment"><a href="http://www.searchmetrics.com/knowledge-base/ranking-factors/">Searchmetrics</a></li>
+            <li class="fragment"><a href="https://moz.com/search-ranking-factors">Moz</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <img src="img/logo--backlinko.png" alt="Backlinko" class="logo--dark">
+          <h2>According to Backlinko, there are over 200 Search Engine Ranking Factors</h2>
+          <p>"Some are proven. Some are controversial. Others are SEO nerd speculation. But they’re all here." - <a href="http://backlinko.com/google-ranking-factors">Google’s 200 Ranking Factors: The Complete List by Brian Dean</a>
+        </section>
+
+        <section>
+          <a href="http://searchengineland.com/seotable"><img src="http://searchengineland.com/figz/wp-content/seloads/2011/06/periodic-table-of-seo-2015.png" alt="The Periodic Table Of SEO Success Factors"></a>
+          <p><small><a href="http://searchengineland.com/seotable">Search Engine Land - The Periodic Table Of SEO Success Factors</a></small></p>
+        </section>
+
+        <section>
+          <p><small><a href="http://www.searchmetrics.com/knowledge-base/ranking-factors/">2016 Searchmetrics General Search Ranking Factors</a></small></p>
+          <a href="http://www.searchmetrics.com/knowledge-base/ranking-factors/"><img src="http://www.searchmetrics.com/wp-content/uploads/Searchmetrics-Ranking-Factors-Infographic-EN.jpg?x98318" alt="Searchmetrics General Ranking Factors 2016"></a>
+        </section>
+
+        <section>
+          <img alt="Searchmetrics" src="img/logo--searchmetrics.png">
+          <p>After 2016, Searchmetrics started publishing <a href="https://www.searchmetrics.com/knowledge-base/ranking-factors-industry/">detailed industry reports</a> to show the difference in factors by industry.</p>
+          <ul>
+            <li>Travel</li>
+            <li>eCommerce</li>
+            <li>Finance</li>
+            <li>Health</li>
+            <li>Media</li>
+          </ul>
+        </section>
+
+        <section>
+          <img alt="Moz" src="img/logo--moz.png">
+          <p><a href="https://moz.com/search-ranking-factors">Search Engine Ranking Factors 2015<br>Expert Survey and Correlation Data</a></p>
+          <p>"Every two years, Moz surveys the opinions of dozens of the world's brightest search marketers and runs correlation studies to better understand the workings of search engine algorithms."</p>
+        </section>
+
+        <section>
+          <img src="img/logo--search-engine-land.png" alt="Search Engine Land">
+          <p>On Mar 23, 2016 Google's Andrey Lipattsevm stated that <strong>links</strong>, <strong>content</strong> and <strong>RankBrain</strong> are the top three ranking signals in Google's search algorithm.</p>
+          <p><small><a href="http://searchengineland.com/now-know-googles-top-three-search-ranking-factors-245882">Now we know: Here are Google's top 3 search ranking factors - Barry Schwartz, Search Engine Land</a></small></p>
+        </section>
+
+        <section>
+          <h2>Links</h2>
+          <ul>
+            <li class="fragment">
+              Quality of links<br>
+              <small>Each link is graded on where it comes from, quality of domain, URL, place on page, etc...</small>
+            </li>
+            <li class="fragment">
+              Keywords in links<br>
+              <small>Are the keywords for the topic in the link to your page?</small>
+            </li>
+            <li class="fragment">
+              Quantity<br>
+              <small>How many links does your piece of content need?</small>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Content</h2>
+          <ul>
+            <li class="fragment">
+              Quality writing<br>
+              <small>Are you smarter than a 5th grader?  Your content should be.</small>
+            </li>
+            <li class="fragment">
+              Keyword Research<br>
+              <small>Is your writing using enough keywords from the topic your searchers are looking for?</small>
+            </li>
+            <li class="fragment">
+              Freshness<br>
+              <small>Is the content new, or has it been updated recently?</small>
+            </li>
+            <li class="fragment">
+              Images, Video, News related to content or vertical<br>
+              <small>Does the content provide other value beyond words about the topic?</small>
+            </li>
+            <li class="fragment">
+              Does the content answer questions?<br>
+              <small>For informational searches, people are entering questions into Google.  Answer them!</small>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>What is Rankbrain?</h2>
+          <ul>
+            <li class="fragment">RankBrain is a machine learning artificial intelligence system ... </li>
+            <li class="fragment">If RankBrain sees a word or phrase it isn’t familiar with, the machine can make a guess as to what words or phrases might have a similar meaning and filter the result accordingly, making it more effective at handling never-before-seen search queries or keywords. - <a href="https://en.wikipedia.org/wiki/RankBrain">Wikipedia</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Learn more about Rankbrain</h2>
+          <ul>
+            <li><a href="https://www.searchenginejournal.com/google-rankbrain-affect-seo-2016/162153/">How to Use Google RankBrain in SEO</a></li>
+            <li><a href="http://searchengineland.com/faq-all-about-the-new-google-rankbrain-algorithm-234440">FAQ: All About The New Google RankBrain Algorithm</a></li>
+            <li><a href="http://techcrunch.com/2016/06/04/artificial-intelligence-is-changing-seo-faster-than-you-think/">Artificial intelligence is changing SEO faster than you think</a></li>
+            <li><a href="https://moz.com/blog/optimizing-for-rankbrain-whiteboard-friday">Optimizing for RankBrain... Should We Do It? (Is It Even Possible?)</a></li>
+            <li><a href="https://moz.com/blog/seo-trek-the-search-for-google-rankbrain-new-data">SEO Trek: The Search for Google RankBrain* [New Data]</a></li>
+            <li><a href="http://www.outbrain.com/blog/content-marketing-and-seo">Content Marketing and SEO</a></li>
+            <li><a href="http://searchengineland.com/four-pillars-future-seo-259590">The four pillars of the future of SEO</a></li>
+            <li><a href="https://moz.com/learn/seo/google-rankbrain">What is Google Rankbrain?</a></li>
+        </section>
+
+
 
 
 
