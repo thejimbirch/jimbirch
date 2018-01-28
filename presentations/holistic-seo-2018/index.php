@@ -329,7 +329,7 @@
 
         <section>
           <img src="img/logo--search-engine-land.png" alt="Search Engine Land">
-          <h2>On May 24th, 2016 Google revealed that users make at least <em><u>2 trillion</u></em> searches per year</h2>
+          <h2>On May 24th, 2016 Google revealed that users make at least <em><u>2 trillion</u></em> searches per year worldwide</h2>
           <p><small><a href="http://searchengineland.com/google-now-handles-2-999-trillion-searches-per-year-250247">Google now handles at least 2 trillion searches per year - Danny Sullivan, Search Engine Land</a></small></p>
         </section>
 
@@ -348,13 +348,15 @@
         </section>
 
         <section>
-          <p>Since then no one from Google has talked about the number of searches.</p>
+          <p style="margin: 0 auto; width: 50%;">Since then no one from Google has talked about the number of searches.</p>
         </section>
 
         <section>
           <img src="img/logo--moz.png" alt="Moz">
           <img src="img/logo--jumpshot.png" alt="Moz" class="logo--dark">
-          <p>Some great analysis has been done by Rand Fishkin on Moz.com using Clickstream Data from Jumpshot.  Looking at this chart of estimated US searches, the numbers seem to be increasing.</p>
+          <p>Some great analysis has been done by Rand Fishkin on Moz.com using estimated Clickstream Data from Jumpshot.</p>
+          <p>The following chart shows an increase in search volume of US searches with an average well over 40B per month.</p>
+          <p>That would be +/-1/2 trillion annual US searches.</p>
         </section>
 
         <section>
@@ -362,7 +364,7 @@
           <p><small><a href="https://moz.com/rand/seo-opportunity-growing-shrinking/">Is SEO Opportunity Growing or Shrinking? - Rand Fishkin, Moz Founder December 17th, 2017</a></small></p>
         </section>
 
-                <section class="text--left" data-background="img/Lego-Uncle-Jim-at-Fermilab.jpg">
+        <section class="text--left" data-background="img/Lego-Uncle-Jim-at-Fermilab.jpg">
           <h1 class="fragment box box--width-60">The search</h1>
         </section>
 
@@ -570,6 +572,7 @@
         </section>
 
         <section>
+          <p><small><a href="http://searchengineland.com/seotable">The Periodic Table of SEO Success Factors</a></small></p>
           <a href="http://searchengineland.com/seotable"><img src="http://searchengineland.com/figz/wp-content/seloads/2011/06/periodic-table-of-seo-2015.png" alt="The Periodic Table Of SEO Success Factors"></a>
           <p><small><a href="http://searchengineland.com/seotable">Search Engine Land - The Periodic Table Of SEO Success Factors</a></small></p>
         </section>
@@ -668,14 +671,6 @@
             <li><a href="https://moz.com/learn/seo/google-rankbrain">What is Google Rankbrain?</a></li>
         </section>
 
-
-
-
-
-
-
-
-
         <section class="text--left" data-background="img/Lego-Uncle-Jim-at-the-Parthenon.jpg">
           <h1 class="fragment box--width-70">Tools for Content</h1>
         </section>
@@ -691,12 +686,31 @@
 
         <section>
           <h2>Research</h2>
-          <h3>Tools to Analyze SERPS</h3>
+          <h3>Tools to Analyze Keywords/Topics/SERPS</h3>
           <ul>
-            <li><a href="https://moz.com/products/pro/keyword-explorer">Moz Pro Keyword Explorer</a></li>
+            <li><a href="https://ahrefs.com/keywords-explorer/">Ahrefs Keywords Explorer</a></li>
             <li><a href="https://adwords.google.com/KeywordPlanner">Google AdWords Keyword Planner</a></li>
-            <li><a href="https://readability-score.com/">Readability Score</a></li>
+            <li><a href="http://longtailpro.com/">Long Tail Pro</a></li>
+            <li><a href="https://moz.com/products/pro/keyword-explorer">Moz Keyword Explorer</a></li>
+            <li><a href="https://www.searchmetrics.com/essentials/">Searchmetrics Essentials</li>
+            <li><a href="https://www.seoquake.com/index.html">SEO Quake Browser Plugin</a></li>
+            <li><a href="https://www.spyfu.com/keyword/serp-analysis">SpyFu SERP Analysis</a></li>
           </ul>
+        </section>
+
+        <section>
+          <h2>Research</h2>
+          <h3>Competitor/Topic Analysis</h3>
+          <ul>
+            <li><a href="https://www.alexa.com/">Alexa</a></li>
+            <li><a href="http://buzzsumo.com/">Buzzsumo</a></li>
+            <li><a href="https://www.ispionage.com/">iSpionage</a></li>
+            <li><a href="https://majestic.com/">Majestic</a></li>
+            <li><a href="https://moz.com/researchtools/ose/">Moz Open Site Explorer</a></li>
+            <li><a href="https://www.semrush.com/">SEMrush</a></li>
+            <li><a href="https://www.similarweb.com/">SimilarWeb</a></li>
+          </ul>
+          <p>See also: Robbie Richards' <a href="http://www.robbierichards.com/seo/best-seo-tools/">The Best SEO Tools: 143 SEO Experts Cast Their Votes (Plus Leaderboard)</a>.</p>
         </section>
 
         <section>
@@ -705,6 +719,8 @@
           <ul>
             <li><a href="https://www.drupal.org/project/yoast_seo">Real-time SEO for Drupal</a></li>
             <li><a href="https://www.drupal.org/project/yoast_seo/issues/2917280">Real-time SEO for Drupal (Node Preview Sandbox)</a></li>
+            <li><a href="https://readability-score.com/">Readability Score</a></li>
+            <li><a href="https://datayze.com/readability-analyzer.php">Readability Analyzer</a></li>
             <li><a href="https://www.searchmetrics.com/content/">Searchmetrics Content Experience</a></li>
           </ul>
         </section>
@@ -713,7 +729,10 @@
           <h2>Report &amp; Refine</h2>
           <h3>Tools to report on performance</h3>
           <ul>
-            <li></li>
+            <li><a href="https://analytics.google.com">Google Analytics</a></li>
+            <li><a href="https://www.google.com/webmasters/tools/">Google Search Console</a></li>
+            <li><a href="https://matomo.org/">Matomo (Formerly Piwik)</a></li>
+            <li><a href="https://www.bing.com/toolbox/webmaster">Bing Webmaster Tools</a></li>
           </ul>
         </section>
 
@@ -724,16 +743,18 @@
         <section>
           <h2>Tips &amp; Tools for Developers</h2>
           <ul>
-            <li class="fragment"><a href="https://developers.google.com/web/">Google Defines Best Practices</a></li>
-            <li class="fragment"><a href="https://search.google.com/structured-data/testing-tool/u/0/">Google Structured Data Testing Tool (Schema)</a></li>
-            <li class="fragment"><a href="https://www.google.com/webmasters/markup-helper/u/1/?hl=en">Google Structured Data Markup Helper (Schema)</a></li>
-            <li class="fragment"><a href="https://developers.google.com/speed/pagespeed/insights/">Google PageSpeed Insights</a></li>
-            <li class="fragment"><a href="https://www.google.com/webmasters/tools/mobile-friendly/">Google Mobile-Friendly Test</a></li>
-            <li class="fragment"><a href="https://www.google.com/webmasters/markup-tester/u/1?hl=en">Google Email Markup Tester</a></li>
-            <li class="fragment"><a href="https://www.google.com/webmasters/#?modal_active=none">Google Search Console</a></li>
-            <li class="fragment"><a href="https://search.google.com/search-console/amp">Google Amp Test</a></li>
-            <li class="fragment">Lighthouse</li>
-            <li class="fragment">A11Y/Axe CLI</li>
+            <li><a href="https://builtwith.com/">BuiltWith</a></li>
+            <li><a href="https://developers.facebook.com/tools/debug/">Facebook Sharing Debugger (Open Graph Protocol)</a></li>
+            <li><a href="https://cards-dev.twitter.com/validator">Twitter's Card validator</a></li>
+            <li><a href="https://developers.google.com/web/">Google Defines Best Practices</a></li>
+            <li><a href="https://search.google.com/structured-data/testing-tool/u/0/">Google Structured Data Testing Tool (Schema)</a></li>
+            <li><a href="https://www.google.com/webmasters/markup-helper/u/1/?hl=en">Google Structured Data Markup Helper (Schema)</a></li>
+            <li><a href="https://developers.google.com/speed/pagespeed/insights/">Google PageSpeed Insights</a></li>
+            <li><a href="https://www.google.com/webmasters/tools/mobile-friendly/">Google Mobile-Friendly Test</a></li>
+            <li><a href="https://www.google.com/webmasters/markup-tester/u/1?hl=en">Google Email Markup Tester</a></li>
+            <li><a href="https://www.google.com/webmasters/#?modal_active=none">Google Search Console</a></li>
+            <li><a href="https://search.google.com/search-console/amp">Google Amp Test</a></li>
+            <li>Lighthouse</li>
           </ul>
         </section>
 
@@ -746,6 +767,15 @@
             <li>robots.txt Tester</li>
             <li>Submit Sitemaps</li>
             <li>Configure URL Parameters</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Google Search Quality Raters</h2>
+          <ul>
+            <li><a href="https://searchengineland.com/library/google/google-search-quality-raters">Google contracts with over 10,000 search quality raters worldwide to evaluate its search results.</a></li>
+            <li class="fragment"><a href="https://moz.com/blog/google-search-quality-raters-guidelines">Quality raters themselves have no bearing on the rankings of the sites they rate.</a></li>
+            <li class="fragment"><a href="https://static.googleusercontent.com/media/www.google.com/en//insidesearch/howsearchworks/assets/searchqualityevaluatorguidelines.pdf">Google Search Quality Evaluator Guidelines (160 Page PDF)</a></li>
           </ul>
         </section>
 
