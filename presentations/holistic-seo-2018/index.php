@@ -486,7 +486,7 @@
 
         <section>
           <img src="img/lil-bub-video.jpg" alt="Little Bub Video">
-          <p>One more example showing how semantic Google is.</p></p>
+          <p>An example showing how semantic Google is.</p></p>
         </section>
 
         <section>
@@ -494,6 +494,20 @@
           <img src="img/lil-bub-video-search-result.jpg" alt="searching for little bub fireplace on google">
           <p>Now, Google knows the piece of content I need, even if I get 2 of the 3 words wrong!</p>
           <p><small>"little" nor "fireplace" exist on the page, yet I get the result.</small></p>
+        </section>
+
+        <section>
+          <div class="columns">
+            <div class="column--50">Add Search result screenshot</div>
+            <div class="column--50">
+              <h2>Wedding dresses</h2>
+              <p>Transactional Search</p>
+              <ul>
+                <li class="fragment">Category pages on retailer/manufacturer sites.</li>
+                <li class="fragment">What else?</li>
+                <li class="fragment"><small>Note: No big topic pages.  Searcher intent is to find dresses, not learn about the history, or how to make, etc...</small></li>
+              </ul>
+            </div>
         </section>
 
         <section>
@@ -512,14 +526,48 @@
 
         <section>
           <h2>Anatomy of a SERP</h2>
+          <ul>
+            <li class="fragment">List of results</li>
+            <li class="fragment">Ads</li>
+            <li class="fragment">Search Features</li>
+            <li class="fragment">Related Searches</li>
+          </ul>
         </section>
 
         <section>
           <h2>Analysis of a Result</h2>
+          <ul>
+            <li class="fragment">Title</li>
+            <li class="fragment">Description</li>
+            <li class="fragment">Breadcrumbs</li>
+            <li class="fragment">Sitelinks</li>
+            <li class="fragment">Site Search</li>
+            <li class="fragment">Google Cache link</li>
+          </ul>
         </section>
 
         <section>
-          <h2>Featured snippets</h2>
+          <h2>Search features</h2>
+          <p class="text--left">Also known as Featured Snippets, Search features one way Google is trying to provide their users with answers faster.</p>
+        </section>
+
+        <section>
+          <h2>How to rank for Search features</h2>
+          <ul>
+            <li class="fragment">Topic Research</li>
+            <li class="fragment">Write copy that answers questions</li>
+            <li class="fragment">Semantic HTML including ordered and unordered lists, tables and paragraphs</li>
+            <li class="fragment">Structured markup using Schema.org vocabularies inline or using JSON-LD</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Learn more about Search features</h2>
+          <ul>
+            <li class="fragment"><a href="https://developers.google.com/search/docs/guides/search-gallery">Google Search Feature Gallery</a></li>
+            <li class="fragment"><a href="https://blog.google/products/search/reintroduction-googles-featured-snippets/">A reintroduction to Google’s featured snippets</a></li>
+            <li class="fragment"><a href="https://www.semrush.com/blog/large-scale-study-how-to-rank-for-featured-snippets-in-2018/">Large-Scale Study: How to Rank for Featured Snippets in 2018</a></li>
+          </ul>
         </section>
 
         <section class="text--left" data-background="img/Lego-Uncle-Jim-in-the-cabana.jpg">
@@ -671,114 +719,6 @@
             <li><a href="https://moz.com/learn/seo/google-rankbrain">What is Google Rankbrain?</a></li>
         </section>
 
-        <section class="text--left" data-background="img/Lego-Uncle-Jim-at-the-Parthenon.jpg">
-          <h1 class="fragment box--width-70">Tools for Content</h1>
-        </section>
-
-        <section>
-          <h2>Tools for those responsible for Content</h2>
-          <ul>
-            <li>Research</li>
-            <li>Create &amp; Analyze</li>
-            <li>Report &amp; Refine</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Research</h2>
-          <h3>Tools to Analyze Keywords/Topics/SERPS</h3>
-          <ul>
-            <li><a href="https://ahrefs.com/keywords-explorer/">Ahrefs Keywords Explorer</a></li>
-            <li><a href="https://adwords.google.com/KeywordPlanner">Google AdWords Keyword Planner</a></li>
-            <li><a href="http://longtailpro.com/">Long Tail Pro</a></li>
-            <li><a href="https://moz.com/products/pro/keyword-explorer">Moz Keyword Explorer</a></li>
-            <li><a href="https://www.searchmetrics.com/essentials/">Searchmetrics Essentials</li>
-            <li><a href="https://www.seoquake.com/index.html">SEO Quake Browser Plugin</a></li>
-            <li><a href="https://www.spyfu.com/keyword/serp-analysis">SpyFu SERP Analysis</a></li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Research</h2>
-          <h3>Competitor/Topic Analysis</h3>
-          <ul>
-            <li><a href="https://www.alexa.com/">Alexa</a></li>
-            <li><a href="http://buzzsumo.com/">Buzzsumo</a></li>
-            <li><a href="https://www.ispionage.com/">iSpionage</a></li>
-            <li><a href="https://majestic.com/">Majestic</a></li>
-            <li><a href="https://moz.com/researchtools/ose/">Moz Open Site Explorer</a></li>
-            <li><a href="https://www.semrush.com/">SEMrush</a></li>
-            <li><a href="https://www.similarweb.com/">SimilarWeb</a></li>
-          </ul>
-          <p>See also: Robbie Richards' <a href="http://www.robbierichards.com/seo/best-seo-tools/">The Best SEO Tools: 143 SEO Experts Cast Their Votes (Plus Leaderboard)</a>.</p>
-        </section>
-
-        <section>
-          <h2>Create &amp; Analyze</h2>
-          <h3>Tools to analyze content</h3>
-          <ul>
-            <li><a href="https://www.drupal.org/project/yoast_seo">Real-time SEO for Drupal</a></li>
-            <li><a href="https://www.drupal.org/project/yoast_seo/issues/2917280">Real-time SEO for Drupal (Node Preview Sandbox)</a></li>
-            <li><a href="https://readability-score.com/">Readability Score</a></li>
-            <li><a href="https://datayze.com/readability-analyzer.php">Readability Analyzer</a></li>
-            <li><a href="https://www.searchmetrics.com/content/">Searchmetrics Content Experience</a></li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Report &amp; Refine</h2>
-          <h3>Tools to report on performance</h3>
-          <ul>
-            <li><a href="https://analytics.google.com">Google Analytics</a></li>
-            <li><a href="https://www.google.com/webmasters/tools/">Google Search Console</a></li>
-            <li><a href="https://matomo.org/">Matomo (Formerly Piwik)</a></li>
-            <li><a href="https://www.bing.com/toolbox/webmaster">Bing Webmaster Tools</a></li>
-          </ul>
-        </section>
-
-        <section class="text--left" data-background="img/Lego-Uncle-Jim-and-the-Acheivement-Duck.jpg">
-          <h1 class="fragment box--width-70">Tools for Development</h1>
-        </section>
-
-        <section>
-          <h2>Tips &amp; Tools for Developers</h2>
-          <ul>
-            <li><a href="https://builtwith.com/">BuiltWith</a></li>
-            <li><a href="https://developers.facebook.com/tools/debug/">Facebook Sharing Debugger (Open Graph Protocol)</a></li>
-            <li><a href="https://cards-dev.twitter.com/validator">Twitter's Card validator</a></li>
-            <li><a href="https://developers.google.com/web/">Google Defines Best Practices</a></li>
-            <li><a href="https://search.google.com/structured-data/testing-tool/u/0/">Google Structured Data Testing Tool (Schema)</a></li>
-            <li><a href="https://www.google.com/webmasters/markup-helper/u/1/?hl=en">Google Structured Data Markup Helper (Schema)</a></li>
-            <li><a href="https://developers.google.com/speed/pagespeed/insights/">Google PageSpeed Insights</a></li>
-            <li><a href="https://www.google.com/webmasters/tools/mobile-friendly/">Google Mobile-Friendly Test</a></li>
-            <li><a href="https://www.google.com/webmasters/markup-tester/u/1?hl=en">Google Email Markup Tester</a></li>
-            <li><a href="https://www.google.com/webmasters/#?modal_active=none">Google Search Console</a></li>
-            <li><a href="https://search.google.com/search-console/amp">Google Amp Test</a></li>
-            <li>Lighthouse</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Google Search Console</h2>
-          <p>Has the following tools:</p>
-          <ul>
-            <li>View (and fix) Crawl Errors</li>
-            <li>Fetch as Google</li>
-            <li>robots.txt Tester</li>
-            <li>Submit Sitemaps</li>
-            <li>Configure URL Parameters</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Google Search Quality Raters</h2>
-          <ul>
-            <li><a href="https://searchengineland.com/library/google/google-search-quality-raters">Google contracts with over 10,000 search quality raters worldwide to evaluate its search results.</a></li>
-            <li class="fragment"><a href="https://moz.com/blog/google-search-quality-raters-guidelines">Quality raters themselves have no bearing on the rankings of the sites they rate.</a></li>
-            <li class="fragment"><a href="https://static.googleusercontent.com/media/www.google.com/en//insidesearch/howsearchworks/assets/searchqualityevaluatorguidelines.pdf">Google Search Quality Evaluator Guidelines (160 Page PDF)</a></li>
-          </ul>
-        </section>
-
         <section class="text--left" data-background="img/Lego-Uncle-Jim-at-the-Turkish-Cafe.jpg">
           <h1 class="fragment box--width-75">Technical SEO best practices in Drupal 8</h1>
         </section>
@@ -810,7 +750,7 @@
           <h2>Content</h2>
           <ul>
             <li class="fragment">Are the pages well written?</li>
-            <li class="fragment">Does is include keywords and phrases around your topic?</li>
+            <li class="fragment">Does it include keywords and phrases around your topic?</li>
             <li class="fragment">Is the content new?</li>
             <li class="fragment">Does the content include related content (Images, News, Video, etc)?</li>
             <li class="fragment">Does the content answer questions?</li>
@@ -822,10 +762,12 @@
           <h2>Architecture</h2>
           <h3>Is the site easily crawlable?</h3>
           <ul>
-            <li class="fragment">Well thought out menu</li>
+            <li class="fragment">Well thought out, keyboard navigable menu</li>
             <li class="fragment">Breadcrumbs with <a href="https://schema.org/BreadcrumbList">Schema.org Markup</a></li>
-            <li class="fragment"><a href="https://www.drupal.org/project/xmlsitemap">XML Sitemap module</a></li>
-            <li class="fragment">Friendly URLs from <a href="https://www.drupal.org/project/pathauto">Pathauto module</a></li>
+            <li class="fragment"><a href="https://www.drupal.org/project/sitemap">Drupal Sitemap module (HTML)</a></li>
+            <li class="fragment"><a href="https://www.drupal.org/project/simple_sitemap">Drupal Simple XML Sitemap module (D8)</a></li>
+            <li class="fragment"><a href="https://www.drupal.org/project/xmlsitemap">Drupal XML Sitemap module (D7)</a></li>
+            <li class="fragment">Friendly URLs from <a href="https://www.drupal.org/project/pathauto">Drupal Pathauto module</a></li>
           </ul>
         </section>
 
@@ -834,7 +776,12 @@
           <h3>No Duplicate content</h3>
           <ul>
             <li class="fragment"><a href="https://www.drupal.org/project/redirect">Redirect module</a></li>
-            <li class="fragment"><a href="https://www.drupal.org/project/metatag">Metatag module</a>, set Canonical URL</li>
+            <li class="fragment"><a href="https://www.drupal.org/project/metatag">Metatag module</a>
+              <ul>
+                <li class="fragment">Set Canonical URL</li>
+                <li class="fragment">Set Robots noindex, nofollow tags where needed</li>
+              </ul>
+            </li>
           </ul>
         </section>
 
@@ -1057,6 +1004,114 @@
           <ul>
             <li><b>Reputation:</b> Is your site respected on social networks?</li>
             <li><b>Shares:</b> Content shares</li>
+          </ul>
+        </section>
+
+<section class="text--left" data-background="img/Lego-Uncle-Jim-at-the-Parthenon.jpg">
+          <h1 class="fragment box--width-70">Tools for Content</h1>
+        </section>
+
+        <section>
+          <h2>Tools for those responsible for Content</h2>
+          <ul>
+            <li>Research</li>
+            <li>Create &amp; Analyze</li>
+            <li>Report &amp; Refine</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Research</h2>
+          <h3>Tools to Analyze Keywords/Topics/SERPS</h3>
+          <ul>
+            <li><a href="https://ahrefs.com/keywords-explorer/">Ahrefs Keywords Explorer</a></li>
+            <li><a href="https://adwords.google.com/KeywordPlanner">Google AdWords Keyword Planner</a></li>
+            <li><a href="http://longtailpro.com/">Long Tail Pro</a></li>
+            <li><a href="https://moz.com/products/pro/keyword-explorer">Moz Keyword Explorer</a></li>
+            <li><a href="https://www.searchmetrics.com/essentials/">Searchmetrics Essentials</li>
+            <li><a href="https://www.seoquake.com/index.html">SEO Quake Browser Plugin</a></li>
+            <li><a href="https://www.spyfu.com/keyword/serp-analysis">SpyFu SERP Analysis</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Research</h2>
+          <h3>Competitor/Topic Analysis</h3>
+          <ul>
+            <li><a href="https://www.alexa.com/">Alexa</a></li>
+            <li><a href="http://buzzsumo.com/">Buzzsumo</a></li>
+            <li><a href="https://www.ispionage.com/">iSpionage</a></li>
+            <li><a href="https://majestic.com/">Majestic</a></li>
+            <li><a href="https://moz.com/researchtools/ose/">Moz Open Site Explorer</a></li>
+            <li><a href="https://www.semrush.com/">SEMrush</a></li>
+            <li><a href="https://www.similarweb.com/">SimilarWeb</a></li>
+          </ul>
+          <p>See also: Robbie Richards' <a href="http://www.robbierichards.com/seo/best-seo-tools/">The Best SEO Tools: 143 SEO Experts Cast Their Votes (Plus Leaderboard)</a>.</p>
+        </section>
+
+        <section>
+          <h2>Create &amp; Analyze</h2>
+          <h3>Tools to analyze content</h3>
+          <ul>
+            <li><a href="https://www.drupal.org/project/yoast_seo">Real-time SEO for Drupal</a></li>
+            <li><a href="https://www.drupal.org/project/yoast_seo/issues/2917280">Real-time SEO for Drupal (Node Preview Sandbox)</a></li>
+            <li><a href="https://readability-score.com/">Readability Score</a></li>
+            <li><a href="https://datayze.com/readability-analyzer.php">Readability Analyzer</a></li>
+            <li><a href="https://www.searchmetrics.com/content/">Searchmetrics Content Experience</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Report &amp; Refine</h2>
+          <h3>Tools to report on performance</h3>
+          <ul>
+            <li><a href="https://analytics.google.com">Google Analytics</a></li>
+            <li><a href="https://www.google.com/webmasters/tools/">Google Search Console</a></li>
+            <li><a href="https://matomo.org/">Matomo (Formerly Piwik)</a></li>
+            <li><a href="https://www.bing.com/toolbox/webmaster">Bing Webmaster Tools</a></li>
+          </ul>
+        </section>
+
+        <section class="text--left" data-background="img/Lego-Uncle-Jim-and-the-Acheivement-Duck.jpg">
+          <h1 class="fragment box--width-70">Tools for Development</h1>
+        </section>
+
+        <section>
+          <h2>Tips &amp; Tools for Developers</h2>
+          <ul>
+            <li><a href="https://builtwith.com/">BuiltWith</a></li>
+            <li><a href="https://developers.facebook.com/tools/debug/">Facebook Sharing Debugger (Open Graph Protocol)</a></li>
+            <li><a href="https://cards-dev.twitter.com/validator">Twitter's Card validator</a></li>
+            <li><a href="https://developers.google.com/web/">Google Defines Best Practices</a></li>
+            <li><a href="https://search.google.com/structured-data/testing-tool/u/0/">Google Structured Data Testing Tool (Schema)</a></li>
+            <li><a href="https://www.google.com/webmasters/markup-helper/u/1/?hl=en">Google Structured Data Markup Helper (Schema)</a></li>
+            <li><a href="https://developers.google.com/speed/pagespeed/insights/">Google PageSpeed Insights</a></li>
+            <li><a href="https://www.google.com/webmasters/tools/mobile-friendly/">Google Mobile-Friendly Test</a></li>
+            <li><a href="https://www.google.com/webmasters/markup-tester/u/1?hl=en">Google Email Markup Tester</a></li>
+            <li><a href="https://www.google.com/webmasters/#?modal_active=none">Google Search Console</a></li>
+            <li><a href="https://search.google.com/search-console/amp">Google Amp Test</a></li>
+            <li>Lighthouse</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Google Search Console</h2>
+          <p>Has the following tools:</p>
+          <ul>
+            <li>View (and fix) Crawl Errors</li>
+            <li>Fetch as Google</li>
+            <li>robots.txt Tester</li>
+            <li>Submit Sitemaps</li>
+            <li>Configure URL Parameters</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Google Search Quality Raters</h2>
+          <ul>
+            <li><a href="https://searchengineland.com/library/google/google-search-quality-raters">Google contracts with over 10,000 search quality raters worldwide to evaluate its search results.</a></li>
+            <li class="fragment"><a href="https://moz.com/blog/google-search-quality-raters-guidelines">Quality raters themselves have no bearing on the rankings of the sites they rate.</a></li>
+            <li class="fragment"><a href="https://static.googleusercontent.com/media/www.google.com/en//insidesearch/howsearchworks/assets/searchqualityevaluatorguidelines.pdf">Google Search Quality Evaluator Guidelines (160 Page PDF)</a></li>
           </ul>
         </section>
 
