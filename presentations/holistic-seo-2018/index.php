@@ -396,7 +396,7 @@
 
         <section>
           <img src="img/floor-finish/Hardwood-Floor-Finishes-Best-Hardwood-Floor-Finish-HouseLogic-top.png" alt="Floor Finish Guide">
-          <p>These days, one piece of holisticly created content can be returned for different worded search terms.</p>
+          <p>These days, one piece of content can be returned for different worded search terms.</p>
         </section>
 
         <section>
@@ -498,16 +498,21 @@
 
         <section>
           <div class="columns">
-            <div class="column--50">Add Search result screenshot</div>
+            <div class="column--50"><img src="img/screenshot--results-wedding-dresses.png" alt="Wedding Dresses Search Results"></div>
             <div class="column--50">
               <h2>Wedding dresses</h2>
               <p>Transactional Search</p>
               <ul>
+                <li class="fragment">Ads, Local Ads, Sidebar Ads</li>
                 <li class="fragment">Category pages on retailer/manufacturer sites.</li>
-                <li class="fragment">What else?</li>
                 <li class="fragment"><small>Note: No big topic pages.  Searcher intent is to find dresses, not learn about the history, or how to make, etc...</small></li>
               </ul>
             </div>
+        </section>
+
+        <section>
+          <h3>Wedding Dresses Results Page</h3>
+          <img src="img/screenshot--davids-bridal.png" alt="Wedding Dresses Results Page" style="width: 50%;">
         </section>
 
         <section>
@@ -526,45 +531,120 @@
 
         <section>
           <h2>Anatomy of a SERP</h2>
+          <h3>Ads</h3>
+          <img src="img/screenshot--drupal-development-01-ads.jpg" alt="Ads">
+        </section>
+
+        <section>
+          <h2>Anatomy of a SERP</h2>
+          <h3>Features</h3>
+          <img src="img/screenshot--drupal-development-02-search-features.jpg" alt="Search Features">
+        </section>
+
+        <section>
+          <h2>Anatomy of a SERP</h2>
+          <h3>List of results</h3>
+          <img src="img/screenshot--drupal-development-03-listings.jpg" alt="Search Listings">
+        </section>
+
+        <section>
+          <h2>Anatomy of a SERP</h2>
+          <h3>Related Searches</h3>
+          <img src="img/screenshot--drupal-development-04-related-searches.jpg" alt="Related Searches">
+        </section>
+
+        <section>
+          <h2>Analysis of a Result</h2>
+          <img src="img/screenshot--serp-item-01.jpg" alt="Search listing Title, Breadcrumb, Description">
           <ul>
-            <li class="fragment">List of results</li>
-            <li class="fragment">Ads</li>
-            <li class="fragment">Search Features</li>
-            <li class="fragment">Related Searches</li>
+            <li>Title</li>
+            <li>URL -or- Breadcrumbs</li>
+            <li>Description</li>
           </ul>
         </section>
 
         <section>
           <h2>Analysis of a Result</h2>
+          <img src="img/screenshot--serp-item-02.jpg" alt="Search listing Google Cache/Related Links">
           <ul>
-            <li class="fragment">Title</li>
-            <li class="fragment">Description</li>
-            <li class="fragment">Breadcrumbs</li>
-            <li class="fragment">Sitelinks</li>
-            <li class="fragment">Site Search</li>
-            <li class="fragment">Google Cache link</li>
+            <li>Google Cache</li>
+            <li>Related Links</li>
           </ul>
+        </section>
+
+        <section>
+          <h2>Analysis of a Result</h2>
+          <img src="img/screenshot--serp-item-03.jpg" alt="Search listing Sitelinks, Site Search">
+          <ul>
+            <li>Site Search</li>
+            <li>Sitelinks</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Search features and Featured Snippets</h2>
+          <p class="text--left">Google will show Search features and Featured Snippets for certain terms to provide their users with answers faster.</p>
+          <div class="columns">
+            <div class="column--50">
+              <img src="https://developers.google.com/search/docs/data-types/images/logo01.png" alt="Logo Image">
+            </div>
+            <div class="column--50">
+              <img src="https://developers.google.com/search/docs/guides/images/search-gallery-events.png" alt="Events Image">
+            </div>
+          </div>
         </section>
 
         <section>
           <h2>Search features</h2>
-          <p class="text--left">Also known as Featured Snippets, Search features one way Google is trying to provide their users with answers faster.</p>
+          <p class="text--left">
+            Breadcrumb,
+            Corporate Contact,
+            Carousel,
+            Dataset,
+            Logo,
+            Sitelinks Searchbox,
+            Social Profile,
+            Article,
+            Book,
+            Course,
+            Event,
+            Fact Check,
+            Job Posting,
+            Local Musiness,
+            Music,
+            Occupation,
+            Podcast,
+            Product,
+            Recipe,
+            Review,
+            TV and Movie,
+            Video<br>
+          </p>
         </section>
 
         <section>
           <h2>How to rank for Search features</h2>
+          <p class="text--left">Structured markup using Schema.org vocabularies inline or using JSON-LD</p>
+          <p class="text--left">View the full list, and implementation guide in the <a href="https://developers.google.com/search/docs/guides/search-gallery">Google Search Feature Gallery</a></p>
+        </section>
+
+        <section>
+          <h2>Featured Snippets</h2>
+          <img src="img/screenshot--drupal-development-02-search-features.jpg" alt="Search Features">
+        </section>
+
+        <section>
+          <h2>How to rank for Featured Snippets</h2>
           <ul>
             <li class="fragment">Topic Research</li>
             <li class="fragment">Write copy that answers questions</li>
             <li class="fragment">Semantic HTML including ordered and unordered lists, tables and paragraphs</li>
-            <li class="fragment">Structured markup using Schema.org vocabularies inline or using JSON-LD</li>
           </ul>
         </section>
 
         <section>
-          <h2>Learn more about Search features</h2>
+          <h2>Learn more about Featured Snippets</h2>
           <ul>
-            <li class="fragment"><a href="https://developers.google.com/search/docs/guides/search-gallery">Google Search Feature Gallery</a></li>
             <li class="fragment"><a href="https://blog.google/products/search/reintroduction-googles-featured-snippets/">A reintroduction to Google’s featured snippets</a></li>
             <li class="fragment"><a href="https://www.semrush.com/blog/large-scale-study-how-to-rank-for-featured-snippets-in-2018/">Large-Scale Study: How to Rank for Featured Snippets in 2018</a></li>
           </ul>
@@ -621,7 +701,7 @@
 
         <section>
           <p><small><a href="http://searchengineland.com/seotable">The Periodic Table of SEO Success Factors</a></small></p>
-          <a href="http://searchengineland.com/seotable"><img src="http://searchengineland.com/figz/wp-content/seloads/2011/06/periodic-table-of-seo-2015.png" alt="The Periodic Table Of SEO Success Factors"></a>
+          <a href="http://searchengineland.com/seotable"><img src="https://searchengineland.com/figz/wp-content/seloads/2017/06/2017-SEO_Periodic_Table_1920x1080.png" alt="The Periodic Table Of SEO Success Factors"></a>
           <p><small><a href="http://searchengineland.com/seotable">Search Engine Land - The Periodic Table Of SEO Success Factors</a></small></p>
         </section>
 
@@ -759,6 +839,17 @@
         </section>
 
         <section>
+          <h2>Content</h2>
+          <h3>Images</h3>
+          <p class="text--left"><a href="https://moz.com/blog/seo-photos-visuals-graphics-whiteboard-friday">A third of all searches performed in Google are for images and 12.5% of SERPs show Image Pack results</a></p>
+          <ul>
+            <li class="fragment">Drupal core Responsive Image module</li>
+            <li class="fragment">Require Alt text on all image entities</li>
+            <li class="fragment"><a href="https://www.drupal.org/project/imageapi_optimize">Drupal Image Optimize (or ImageAPI Optimize) module</a></li>
+          </ul>
+        </section>
+
+        <section>
           <h2>Architecture</h2>
           <h3>Is the site easily crawlable?</h3>
           <ul>
@@ -769,6 +860,13 @@
             <li class="fragment"><a href="https://www.drupal.org/project/xmlsitemap">Drupal XML Sitemap module (D7)</a></li>
             <li class="fragment">Friendly URLs from <a href="https://www.drupal.org/project/pathauto">Drupal Pathauto module</a></li>
           </ul>
+        </section>
+
+        <section>
+          <h2>Architecture</h2>
+          <h3>Does the site work on mobile?</h3>
+          <p>Make sure you use a responsive theme, and it passes the <a href="https://www.google.com/webmasters/tools/mobile-friendly/">Google Mobile-Friendly Test</a></p>
+          <p class="fragment">Consider adding Accelerated Mobile Pages (AMP) structured markup to your site. <a href="https://www.drupal.org/project/amp">Drupal AMP module</a>.</p>
         </section>
 
         <section>
@@ -787,16 +885,10 @@
 
         <section>
           <h2>Architecture</h2>
-          <h3>Does the site work on mobile?</h3>
-          <p>Make sure you use a responsive theme, and it passes the <a href="https://www.google.com/webmasters/tools/mobile-friendly/">Google Mobile-Friendly Test</a></p>
-          <p class="fragment">Consider adding Accelerated Mobile Pages (AMP) structured markup to your site. <a href="https://www.drupal.org/project/amp">Drupal AMP module</a>.</p>
-        </section>
-
-        <section>
-          <h2>Architecture</h2>
           <h3>Does the site load quickly?</h3>
           <ul>
             <li class="fragment">So many different types of Caching available in Drupal.</li>
+            <li class="fragment"><a href="https://www.drupal.org/project/advagg">Drupal Advanced CSS/JS Aggregation Module</a> and the <a href="https://groups.drupal.org/node/517292">Get 100 on PageSpeed Insights tutorial</a></li>
             <li class="fragment">CDN like <a href="https://www.cloudflare.com">Cloudflare</a></li>
             <li class="fragment">Responsive Images/Small image sizes in Image Presets</li>
           </ul>
@@ -815,7 +907,7 @@
             <li class="fragment">Use HTTPS with an SSL certificate for all sites here on out.</li>
             <li class="fragment">Keep core and all modules up to date</li>
             <li class="fragment">Limit server access, and keep server up to date if not managed</li>
-            <li class="fragment">Require strong passwords - <a href="https://www.drupal.org/project/password_policy">Require Strong Passwords module</a></li>
+            <li class="fragment">Require strong passwords - <a href="https://www.drupal.org/project/password_policy">Drupal Password Policy module</a></li>
           </ul>
         </section>
 
@@ -828,7 +920,7 @@
         <section>
           <h2>HTML</h2>
           <h3>Does the Page Title contain keywords?</h3>
-          <p>Properly set up html title using Token values in Metatag module</p>
+          <p>Properly set up html title using the Drupal Token module's values in the Metatag module</p>
         </section>
 
         <section>
@@ -841,15 +933,13 @@
         </section>
 
         <section>
-          <h2>HTML</h2>
-          <h3>Does the Meta Description describe the pages?</h3>
-          <img src="img/teaser-and-image-field.png" alt="Teaser and Image Field on XenoMedia.com">
+          <img src="img/screenshot--teaser-featured-image.png" alt="Teaser Featured Image fields">
         </section>
 
         <section>
           <h2>HTML</h2>
           <h3>Does the site use Structured data?</h3>
-          <p><a href="http://schema.org/">Schema.org</a> markup in content &amp; themes</p>
+          <p><a href="http://schema.org/">Schema.org</a> markup in content &amp; theme templates</p>
             <pre>
               <code>
 <div itemscope itemtype="http://schema.org/BroadcastService">
@@ -868,7 +958,7 @@
         <section>
           <h2>HTML</h2>
           <h3>Does the site use Structured data?</h3>
-          <p><a href="http://json-ld.org/">JavaScript Object Notation for Linked Data (JSON-LD)</a><br>View block/pane using a contextual filter</p>
+          <p><a href="http://json-ld.org/">JavaScript Object Notation for Linked Data (JSON-LD)</a><br>using the <a href="https://www.drupal.org/project/schema_metatag">Drupal Schema.org Metatag module</a></p>
             <pre>
               <code>
 <script type="application/ld+json">
@@ -890,10 +980,24 @@
         </section>
 
         <section>
+          <p>Now is the time to add every <a href="http://schema.org/">Schema.org</a> markup you can. Every site should have:</p>
+          <ul>
+            <li class="fragment"><a href="https://schema.org/WebSite">Website/Site Search</a></li>
+            <li class="fragment"><a href="https://schema.org/Organization">Organization</a></li>
+            <li class="fragment"><a href="https://schema.org/Person">Person</a></li>
+            <li class="fragment"><a href="https://schema.org/BreadcrumbList">BreadcrumbList</a></li>
+            <li class="fragment"><a href="https://schema.org/SiteNavigationElement">SiteNavigationElement</a></li>
+            <li class="fragment"><a href="https://schema.org/VideoObject">VideoObject</a></li>
+          </ul>
+          <p class="fragment text--left">In addition to the content specific Schemas you should add for Google Search features.</p>
+        </section>
+
+        <section>
           <h2>HTML</h2>
           <h3>Does the site use Structured data?</h3>
-          <p><a href="http://ogp.me/">Open Graph Protocol</a><br>The Open Graph protocol enables any web page to become a rich object in a social graph.</p>
-          <p><small><a href="https://developers.facebook.com/tools/debug/">Facebook Debugger</a></small></p>
+          <p>The <a href="http://ogp.me/">Open Graph Protocol</a> enables any web page to become a rich object in a social graph.</p>
+          <p>Add using the Drupal Metatag Open Graph Submodule</p>
+          <p><small>Debug using the <a href="https://developers.facebook.com/tools/debug/">Facebook Debugger</a></small></p>
           <pre>
             <code>
 <meta property="og:site_name" content="jimbir.ch"/>
@@ -909,8 +1013,9 @@
         <section>
           <h2>HTML</h2>
           <h3>Does the site use Structured data?</h3>
-          <p><a href="https://dev.twitter.com/cards/overview">Twitter Cards</a><br>With Twitter Cards, you can attach rich photos, videos and media experiences to Tweets.</p>
-          <p><small><a href="https://cards-dev.twitter.com/validator">Twitter Card Validator</a></small></p>
+          <p>Using <a href="https://dev.twitter.com/cards/overview">Twitter Cards</a> you can attach rich photos, videos and media experiences to Tweets.</p>
+          <p>Add using the Drupal Metatag Twittercard Submodule</p>
+          <p><small>Debug using the <a href="https://cards-dev.twitter.com/validator">Twitter Card Validator</a></small></p>
           <pre>
             <code>
 <meta name="twitter:card" content="summary_large_image"/>
@@ -969,7 +1074,6 @@
             <li><b>Authority:</b> Is the site a trusted authority? External links</li>
             <li><b>Engage:</b> Bounce Rate</li>
             <li><b>History:</b> Has the domain/site been around?</li>
-            <li><b>Identity:</b> </li>
             <li class="text--red"><b>Negative Factor - Piracy:</b> Flagged for pirated content</li>
             <li class="text--red"><b>Negative Factor - Ads:</b> Too many ads above the fold</li>
           </ul>
@@ -980,7 +1084,7 @@
           <h3>Links</h3>
           <ul>
             <li><b>Quality:</b> Links, shares, social</li>
-            <li><b>Text:</b> Bounce Rate</li>
+            <li><b>Text:</b> Keywords in the link title</li>
             <li><b>Number:</b> Has the domain/site been around?</li>
             <li class="text--red"><b>Negative Factor - Paid Links:</b> Don't buy links!</li>
             <li class="text--red"><b>Negative Factor - Spam:</b> Comment/Forum Spam</li>
@@ -1079,9 +1183,6 @@
         <section>
           <h2>Tips &amp; Tools for Developers</h2>
           <ul>
-            <li><a href="https://builtwith.com/">BuiltWith</a></li>
-            <li><a href="https://developers.facebook.com/tools/debug/">Facebook Sharing Debugger (Open Graph Protocol)</a></li>
-            <li><a href="https://cards-dev.twitter.com/validator">Twitter's Card validator</a></li>
             <li><a href="https://developers.google.com/web/">Google Defines Best Practices</a></li>
             <li><a href="https://search.google.com/structured-data/testing-tool/u/0/">Google Structured Data Testing Tool (Schema)</a></li>
             <li><a href="https://www.google.com/webmasters/markup-helper/u/1/?hl=en">Google Structured Data Markup Helper (Schema)</a></li>
@@ -1090,19 +1191,9 @@
             <li><a href="https://www.google.com/webmasters/markup-tester/u/1?hl=en">Google Email Markup Tester</a></li>
             <li><a href="https://www.google.com/webmasters/#?modal_active=none">Google Search Console</a></li>
             <li><a href="https://search.google.com/search-console/amp">Google Amp Test</a></li>
-            <li>Lighthouse</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Google Search Console</h2>
-          <p>Has the following tools:</p>
-          <ul>
-            <li>View (and fix) Crawl Errors</li>
-            <li>Fetch as Google</li>
-            <li>robots.txt Tester</li>
-            <li>Submit Sitemaps</li>
-            <li>Configure URL Parameters</li>
+            <li><a href="https://developers.google.com/web/tools/lighthouse/">Google Lighthouse</a></li>
+            <li><a href="https://technicalseo.com/">TechnicalSEO.com</a></li>
+            <li><a href="https://www.webpagetest.org/">WebPageTest</a></li>
           </ul>
         </section>
 
