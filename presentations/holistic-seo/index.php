@@ -828,7 +828,7 @@
               Does the content answer questions?<br>
               <small>For informational searches, people are entering questions into Google.  Answer them!</small>
             </li>
-            <li class="fragment text--red">Negative Factor: Is the Content thin?</li>
+            <li class="fragment text--red"><b>Negative Factor - Thin:</b> Does the content lack substance?</li>
           </ul>
         </section>
 
@@ -922,7 +922,7 @@
         <section>
           <h2>Architecture</h2>
           <h3>Cloaking</h3>
-          <p class="text--red">Negative Factor: Showing different content to humans and search engines.</p>
+          <p class="text--red"><b>Negative Factor - Cloaking:</b> Don't show different content to humans that you show to search engines.</p>
         </section>
 
         <section>
@@ -1054,8 +1054,8 @@
             <li class="fragment">Proper, ordered use of h1, h2, h3</li>
             <li class="fragment"><a href="https://drupal.stackexchange.com/questions/222103/how-to-disable-h1-heading-in-ckeditor">Remove h1 from WYSIWYG</a> since it is set in template</li>
             <li class="fragment">In the theme, remove h3 from block headers, to reserve for content use.</li>
-            <li class="fragment text--red"><b>Negative Factor - Stuffing:</b>Don't overuse keywords just for Search engines.</li>
-            <li class="fragment text--red"><b>Negative Factor - Hidden:</b>Don't use CSS or JS to hide words you want to be ranked for.</li>
+            <li class="fragment text--red"><b>Negative Factor - Stuffing:</b> Don't overuse keywords just for Search engines.</li>
+            <li class="fragment text--red"><b>Negative Factor - Hidden:</b> Don't use CSS or JS to hide words you want to be ranked for.</li>
           </ul>
         </section>
 
@@ -1088,7 +1088,7 @@
               <small>How many links does your piece of content need?</small>
             </li>
             <li class="fragment text--red"><b>Negative Factor - Paid Links:</b> Don't buy links!</li>
-            <li class="fragment text--red"><b>Negative Factor - Spam:</b> Comment/Forum Spam</li>
+            <li class="fragment text--red"><b>Negative Factor - Spam:</b> Don't allow Comment/Forum Spam</li>
           </ul>
         </section>
 
