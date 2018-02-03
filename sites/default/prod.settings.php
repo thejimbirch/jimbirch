@@ -61,7 +61,7 @@ if ($_use_nodesquirrel) {
   );
 }
 
-$base_url = 'http://jimbir.ch';  // NO trailing slash!
+$base_url = 'https://jimbir.ch';  // NO trailing slash!
 
 // Cloudflare Module
 if (isset($_SERVER['HTTP_CF_CONNECTING_IP'])) {

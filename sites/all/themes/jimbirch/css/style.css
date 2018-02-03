@@ -1,5 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Lora);
-@import url(http://fonts.googleapis.com/css?family=Lato:900);
+@import url(https://fonts.googleapis.com/css?family=Lora);
+@import url(https://fonts.googleapis.com/css?family=Lato:900);
 
 html {
     background: #000;
@@ -317,7 +317,7 @@ div.form-item div.password-suggestions {
 /* Admin Page Theming */
 .page-admin-appearance-styleguide,
 .page-node-add {
-    background: rgba(0, 0, 0, 0) url("http://jimbir.ch/sites/default/files/styles/background/public/img/page/Jim%20Playing%20Theremin.jpg?itok=eHhZG3bm") no-repeat fixed center center;
+    background: rgba(0, 0, 0, 0) url("https://jimbir.ch/sites/default/files/styles/background/public/img/page/Jim%20Playing%20Theremin.jpg?itok=eHhZG3bm") no-repeat fixed center center;
     background-size: cover !important;
 }
 
