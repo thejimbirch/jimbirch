@@ -244,7 +244,7 @@
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="fixed-footer">
         <div class="fixed-footer--left"><a href="http://jimbir.ch/presentations/holistic-seo/">jimbir.ch/holistic-seo</a> | <a href="http://www.twitter.com/thejimbirch" title="@thejimbirch">@thejimbirch</a></div>
-        <div class="fixed-footer--right"><a href="http://www.xenomedia.com" title="Xeno Media, Inc"><img src="img/xeno-media-logo.png" alt="Xeno Media, Inc" class="fixed-footer--logo"></a></div>
+        <div class="fixed-footer--right"></div>
       </div>
       <div class="slides">
         <section class="text--left" data-background="img/Lego-Uncle-Jim-Blogs.jpg" data-state="background--top">
