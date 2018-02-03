@@ -729,7 +729,7 @@
 
         <section>
           <p><small><a href="http://www.searchmetrics.com/knowledge-base/ranking-factors/">2016 Searchmetrics General Search Ranking Factors</a></small></p>
-          <a href="http://www.searchmetrics.com/knowledge-base/ranking-factors/"><img src="http://www.searchmetrics.com/wp-content/uploads/Searchmetrics-Ranking-Factors-Infographic-EN.jpg?x98318" alt="Searchmetrics General Ranking Factors 2016"></a>
+          <a href="http://www.searchmetrics.com/knowledge-base/ranking-factors/"><img src="https://www.searchmetrics.com/wp-content/uploads/Searchmetrics-Ranking-Factors-Infographic-EN.jpg?x98318" alt="Searchmetrics General Ranking Factors 2016"></a>
         </section>
 
         <section>
