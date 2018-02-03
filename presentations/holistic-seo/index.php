@@ -1052,7 +1052,7 @@
           <h3>Proper use of headers</h3>
           <ul>
             <li class="fragment">Proper, ordered use of h1, h2, h3</li>
-            <li class="fragment">Remove h1 from WYSIWYG if set by template</li>
+            <li class="fragment"><a href="https://drupal.stackexchange.com/questions/222103/how-to-disable-h1-heading-in-ckeditor">Remove h1 from WYSIWYG</a> since it is set in template</li>
             <li class="fragment">In the theme, remove h3 from block headers, to reserve for content use.</li>
           </ul>
           <p class="fragment">This is also good for Accessibility.  As a rule of thumb, what is good for A11Y is good for SEO.</p>
