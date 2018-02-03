@@ -111,6 +111,15 @@
         margin-bottom: 0;
       }
 
+      .reveal section img.no-border {
+        background: transparent;
+        border: none;
+        border-radius: 5px;
+        box-shadow: none;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
       .reveal section img.logo--dark {
         background: rgba(0, 0, 0, 0.85) none repeat scroll 0 0;
       }
@@ -223,6 +232,18 @@
 
       .reveal .text--huge {
         font-size: 600%;
+      }
+
+      .btn.btn-primary {
+        background: #2a76dd;
+        border-radius: 4px;
+        color: #fff;
+        padding: 10px 20px;
+      }
+
+      .btn.btn-primary:hover {
+        box-shadow: inset 2px 2px 5px 0 rgba(0,0,0,0.75);
+        color: #ededed;
       }
     </style>
 
@@ -486,7 +507,7 @@
 
         <section>
           <img src="img/screenshot--lil-bub-video.jpg" alt="Little Bub Video">
-          <p>An example showing how semantic Google is.</p></p>
+          <p>An example showing how semantic Google is. Two out of three words I search for are not on the resulting page.</p></p>
         </section>
 
         <section>
@@ -620,12 +641,13 @@
             TV and Movie,
             Video<br>
           </p>
+          <p><a href="https://developers.google.com/search/docs/guides/search-gallery" class="btn btn-primary" target="_blank" rel="noopener">View all</a></p>
         </section>
 
         <section>
           <h2>How to rank for Search features</h2>
-          <p class="text--left">Structured markup using Schema.org vocabularies inline or using JSON-LD</p>
-          <p class="text--left">View the full list, and implementation guide in the <a href="https://developers.google.com/search/docs/guides/search-gallery">Google Search Feature Gallery</a></p>
+          <p class="text--left">Structured markup using <a href="https://schema.org/docs/full.html" target="_blank" rel="noopener">Schema.org vocabularies</a> inline or using JSON-LD</p>
+          <p class="text--left">View the full list of Google search features, and implementation guide in the <a href="https://developers.google.com/search/docs/guides/search-gallery">Google Search Feature Gallery</a></p>
         </section>
 
         <section>
@@ -735,51 +757,7 @@
         </section>
 
         <section>
-          <h2>Links</h2>
-          <ul>
-            <li class="fragment">
-              Quality of links<br>
-              <small>Each link is graded on where it comes from, quality of domain, URL, place on page, etc...</small>
-            </li>
-            <li class="fragment">
-              Keywords in links<br>
-              <small>Are the keywords for the topic in the link to your page?</small>
-            </li>
-            <li class="fragment">
-              Quantity<br>
-              <small>How many links does your piece of content need?</small>
-            </li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Content</h2>
-          <ul>
-            <li class="fragment">
-              Quality writing<br>
-              <small>Are you smarter than a 5th grader?  Your content should be.</small>
-            </li>
-            <li class="fragment">
-              Keyword Research<br>
-              <small>Is your writing using enough keywords from the topic your searchers are looking for?</small>
-            </li>
-            <li class="fragment">
-              Freshness<br>
-              <small>Is the content new, or has it been updated recently?</small>
-            </li>
-            <li class="fragment">
-              Images, Video, News related to content or vertical<br>
-              <small>Does the content provide other value beyond words about the topic?</small>
-            </li>
-            <li class="fragment">
-              Does the content answer questions?<br>
-              <small>For informational searches, people are entering questions into Google.  Answer them!</small>
-            </li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>What is Rankbrain?</h2>
+          <h2><a href="https://en.wikipedia.org/wiki/PageRank"><s>Pagerank</s></a> Rankbrain</h2>
           <ul>
             <li class="fragment">RankBrain is a machine learning artificial intelligence system ... </li>
             <li class="fragment">If RankBrain sees a word or phrase it isn’t familiar with, the machine can make a guess as to what words or phrases might have a similar meaning and filter the result accordingly, making it more effective at handling never-before-seen search queries or keywords. - <a href="https://en.wikipedia.org/wiki/RankBrain">Wikipedia</a></li>
@@ -797,6 +775,7 @@
             <li><a href="http://www.outbrain.com/blog/content-marketing-and-seo">Content Marketing and SEO</a></li>
             <li><a href="http://searchengineland.com/four-pillars-future-seo-259590">The four pillars of the future of SEO</a></li>
             <li><a href="https://moz.com/learn/seo/google-rankbrain">What is Google Rankbrain?</a></li>
+          </ul>
         </section>
 
         <section class="text--left" data-background="img/Lego-Uncle-Jim-at-the-Turkish-Cafe.jpg">
@@ -829,11 +808,26 @@
         <section>
           <h2>Content</h2>
           <ul>
-            <li class="fragment">Are the pages well written?</li>
-            <li class="fragment">Does it include keywords and phrases around your topic?</li>
-            <li class="fragment">Is the content new?</li>
-            <li class="fragment">Does the content include related content (Images, News, Video, etc)?</li>
-            <li class="fragment">Does the content answer questions?</li>
+            <li class="fragment">
+              Quality writing<br>
+              <small>Are you smarter than a 5th grader?  Your content should be.</small>
+            </li>
+            <li class="fragment">
+              Keyword Research<br>
+              <small>Is your writing using enough keywords from the topic your searchers are looking for?</small>
+            </li>
+            <li class="fragment">
+              Freshness<br>
+              <small>Is the content new, or has it been updated recently?</small>
+            </li>
+            <li class="fragment">
+              Images, Video, News related to content or vertical<br>
+              <small>Does the content provide other value beyond words about the topic?</small>
+            </li>
+            <li class="fragment">
+              Does the content answer questions?<br>
+              <small>For informational searches, people are entering questions into Google.  Answer them!</small>
+            </li>
             <li class="fragment text--red">Negative Factor: Is the Content thin?</li>
           </ul>
         </section>
@@ -864,6 +858,12 @@
 
         <section>
           <h2>Architecture</h2>
+          <h3>Is the site easily crawlable?</h3>
+          <p class="text--left">Have you ever crawled your site?  Use a tool like <a href="https://www.screamingfrog.co.uk/seo-spider/">Screaming Frog SEO Spider</a> to see what you have actually created, and build reports on areas where you can improve.</p>
+        </section>
+
+        <section>
+          <h2>Architecture</h2>
           <h3>Does the site work on mobile?</h3>
           <p>Make sure you use a responsive theme, and it passes the <a href="https://www.google.com/webmasters/tools/mobile-friendly/">Google Mobile-Friendly Test</a></p>
           <p class="fragment">Consider adding Accelerated Mobile Pages (AMP) structured markup to your site. <a href="https://www.drupal.org/project/amp">Drupal AMP module</a>.</p>
@@ -889,7 +889,7 @@
           <ul>
             <li class="fragment">So many different types of Caching available in Drupal.</li>
             <li class="fragment"><a href="https://www.drupal.org/project/advagg">Drupal Advanced CSS/JS Aggregation Module</a> and the <a href="https://groups.drupal.org/node/517292">Get 100 on PageSpeed Insights tutorial</a></li>
-            <li class="fragment">CDN like <a href="https://www.cloudflare.com">Cloudflare</a></li>
+            <li class="fragment">CDN like <a href="https://www.cloudflare.com">Cloudflare</a>, <a href="https://www.fastly.com/">Fastly</a>, etc...</li>
             <li class="fragment">Responsive Images/Small image sizes in Image Presets</li>
           </ul>
         </section>
@@ -897,7 +897,15 @@
         <section>
           <h2>Architecture</h2>
           <h3>Does the site contain keywords in the url?</h3>
-          <p>Use the <a href="https://www.drupal.org/project/pathauto">Pathauto module</a> to set friendly URLs</p>
+          <ul>
+            <li class="fragment">Use the <a href="https://www.drupal.org/project/pathauto">Pathauto module</a> to set friendly URLs
+              <ul>
+                <li class="fragment">Set default patterns for all content types</li>
+                <li class="fragment">Configure global settings</li>
+                <li class="fragment">Train content editors to manually configure for page</li>
+              </ul>
+            </li>
+          </ul>
         </section>
 
         <section>
@@ -1041,14 +1049,6 @@
 
         <section>
           <h2>HTML</h2>
-          <h3>Does the site use Structured data?</h3>
-          <p><a href="https://instantarticles.fb.com/">Facebook Instant Articles</a><br>Allows publishers to create fast, interactive articles <u>on Facebook</u>.<br>
-          <small><a href="https://www.drupal.org/project/fb_instant_articles">Facebook Instant Articles Drupal Module</a></small></p>
-          <img src="img/screenshot--drupal-facebook-instant-articles.png" alt="Facebook Instant Articles Drupal Module">
-        </section>
-
-        <section>
-          <h2>HTML</h2>
           <h3>Proper use of headers</h3>
           <ul>
             <li class="fragment">Proper, ordered use of h1, h2, h3</li>
@@ -1083,11 +1083,20 @@
           <h2>Offsite Factors</h2>
           <h3>Links</h3>
           <ul>
-            <li><b>Quality:</b> Links, shares, social</li>
-            <li><b>Text:</b> Keywords in the link title</li>
-            <li><b>Number:</b> Has the domain/site been around?</li>
-            <li class="text--red"><b>Negative Factor - Paid Links:</b> Don't buy links!</li>
-            <li class="text--red"><b>Negative Factor - Spam:</b> Comment/Forum Spam</li>
+            <li class="fragment">
+              Quality of links<br>
+              <small>Each link is graded on where it comes from, quality of domain, URL, place on page, etc...</small>
+            </li>
+            <li class="fragment">
+              Keywords in links<br>
+              <small>Are the keywords for the topic in the link to your page?</small>
+            </li>
+            <li class="fragment">
+              Quantity<br>
+              <small>How many links does your piece of content need?</small>
+            </li>
+            <li class="fragment text--red"><b>Negative Factor - Paid Links:</b> Don't buy links!</li>
+            <li class="fragment text--red"><b>Negative Factor - Spam:</b> Comment/Forum Spam</li>
           </ul>
         </section>
 
@@ -1207,17 +1216,35 @@
         </section>
 
         <section>
+          <div class="columns">
+            <div class="column--50">
+              <a href="https://www.volacci.com/drupal-8-seo-book"><img src="img/drupal-8-seo-book.png" alt="Drupal 8 SEO Book" class="no-border"></a>
+            </div>
+            <div class="column--50">
+              <h2><a href="https://www.volacci.com/drupal-8-seo-book">Drupal 8 SEO Book by Ben Finklea</a></h2>
+              <p>Great resource, step by step guide to configuring Drupal 8 SEO basics.</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2><a href="https://www.drupal.org/project/seo_starter">Drupal SEO Starter Module</a></h2>
+          <a href="https://www.drupal.org/project/seo_starter"></a><img src="img/screenshot--seo-starter.png" alt="Drupal SEO Starter module"></a>
+        </section>
+
+        <section>
           <h2>Stay up to date:</h2>
           <ul>
             <li><a href="http://searchengineland.com/">Search Engine Land</a></li>
             <li><a href="http://searchenginejournal.com/">Search Engine Journal</a></li>
             <li><a href="http://blog.searchmetrics.com/us/">Searchmetrics Blog</a></li>
             <li><a href="https://moz.com/blog">Moz Blog</a></li>
-            <li><a href="https://webmasters.googleblog.com/">Google Webmasters</a></li>
+            <li><a href="https://webmasters.googleblog.com/">Google Webmaster Central Blog</a></li>
+            <li><a href="https://twitter.com/thejimbirch">@thejimbirch on Twitter</a></li>
         </section>
 
         <section class="text--left" data-background="img/Lego-Uncle-Jim-at-Sunset.jpg">
-          <h1>THE END</h1>
+          <h1>The end</h1>
           <h3>Continuing the conversation:</h3>
           <p class="box box--width-60">
             Created by <a href="http://jimbir.ch">Jim Birch</a><br>
