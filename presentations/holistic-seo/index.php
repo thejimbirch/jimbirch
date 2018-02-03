@@ -1054,8 +1054,8 @@
             <li class="fragment">Proper, ordered use of h1, h2, h3</li>
             <li class="fragment"><a href="https://drupal.stackexchange.com/questions/222103/how-to-disable-h1-heading-in-ckeditor">Remove h1 from WYSIWYG</a> since it is set in template</li>
             <li class="fragment">In the theme, remove h3 from block headers, to reserve for content use.</li>
-            <li class="fragment text--red">Don't overuse keywords just for Search engines.</li>
-            <li class="fragment text--red">Don't use CSS or JS to hide words you want to be ranked for.</li>
+            <li class="fragment text--red"><b>Negative Factor - Stuffing:</b>Don't overuse keywords just for Search engines.</li>
+            <li class="fragment text--red"><b>Negative Factor - Hidden:</b>Don't use CSS or JS to hide words you want to be ranked for.</li>
           </ul>
         </section>
 
