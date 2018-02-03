@@ -1054,16 +1054,8 @@
             <li class="fragment">Proper, ordered use of h1, h2, h3</li>
             <li class="fragment"><a href="https://drupal.stackexchange.com/questions/222103/how-to-disable-h1-heading-in-ckeditor">Remove h1 from WYSIWYG</a> since it is set in template</li>
             <li class="fragment">In the theme, remove h3 from block headers, to reserve for content use.</li>
-          </ul>
-          <p class="fragment">This is also good for Accessibility.  As a rule of thumb, what is good for A11Y is good for SEO.</p>
-        </section>
-
-        <section>
-          <h2>HTML</h2>
-          <h3 class="text--red">Negative Factors: Hiding and Stuffing</h3>
-          <ul>
-            <li class="text--red">Don't overuse keywords just for Search engines.</li>
-            <li class="text--red">Don't use CSS or JS to hide words you want to be ranked for.</li>
+            <li class="fragment text--red">Don't overuse keywords just for Search engines.</li>
+            <li class="fragment text--red">Don't use CSS or JS to hide words you want to be ranked for.</li>
           </ul>
         </section>
 
