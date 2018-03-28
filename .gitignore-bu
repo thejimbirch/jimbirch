@@ -11,3 +11,4 @@ nbproject
 nbproject/*
 Drupal.sublime-projectcompletions
 dploy.yaml
+.DS_Store

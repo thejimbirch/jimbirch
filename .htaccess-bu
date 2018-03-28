@@ -145,11 +145,12 @@ DirectoryIndex index.php index.html index.htm
 </IfModule>
 
 # Permanent URL redirect
-Redirect 301 /optimizing http://jimbir.ch/presentations/optimizing-drupal-7-html-markup
-Redirect 301 /cmd http://jimbir.ch/presentations/command-line
-Redirect 301 /holistic-seo http://jimbir.ch/presentations/holistic-seo
-Redirect 301 /bsp http://jimbir.ch/presentations/bootstrap-paragraphs
-Redirect 301 /bp http://jimbir.ch/presentations/bootstrap-paragraphs
+Redirect 301 /optimizing https://jimbir.ch/presentations/optimizing-drupal-7-html-markup
+Redirect 301 /cmd https://jimbir.ch/presentations/command-line
+Redirect 301 /holistic-seo https://jimbir.ch/presentations/holistic-seo
+Redirect 301 /bsp https://jimbir.ch/presentations/bootstrap-paragraphs
+Redirect 301 /bp https://jimbir.ch/presentations/bootstrap-paragraphs
+
 #
 # from http://cgit.drupalcode.org/advagg/tree/README.txt#n556
 #
@@ -186,6 +187,7 @@ Redirect 301 /bp http://jimbir.ch/presentations/bootstrap-paragraphs
     </IfModule>
   </IfModule>
 </FilesMatch>
+
 # Force advagg .js file to have the type of application/javascript.
 <FilesMatch "^js__[A-Za-z0-9-_]{43}__[A-Za-z0-9-_]{43}__[A-Za-z0-9-_]{43}.js(\.gz)?">
   ForceType application/javascript
