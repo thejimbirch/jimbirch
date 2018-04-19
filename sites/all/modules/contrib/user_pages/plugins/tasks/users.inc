@@ -51,7 +51,7 @@ function user_pages_user_users_menu_alter(&$items, $task) {
 
 function user_pages_user_users() {
   // Load my task plugin
-  $task = page_manager_get_task('user_login');
+  $task = page_manager_get_task('users');
 
   ctools_include('context');
   ctools_include('context-task-handler');
@@ -64,7 +64,7 @@ function user_pages_user_users() {
   $function = 'user_page';
   foreach (module_implements('page_manager_override') as $module) {
     $call = $module . '_page_manager_override';
-    if (($rc = $call('user_login')) && function_exists($rc)) {
+    if (($rc = $call('users')) && function_exists($rc)) {
       $function = $rc;
       break;
     }

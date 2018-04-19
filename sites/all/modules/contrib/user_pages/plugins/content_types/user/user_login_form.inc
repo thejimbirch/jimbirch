@@ -27,7 +27,7 @@ function ctools_user_login_form_content_type_render($subtype, $conf, $panel_args
   module_load_include('inc', 'user', 'user.pages');
   
   $block = new stdClass();
-  $block->title = t('User Login');
+  $block->title = t('Log in');
   $block->content = drupal_get_form('user_login');
   return $block;
 }

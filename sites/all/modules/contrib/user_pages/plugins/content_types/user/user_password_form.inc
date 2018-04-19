@@ -27,7 +27,7 @@ function ctools_user_password_form_content_type_render($subtype, $conf, $panel_a
   module_load_include('inc', 'user', 'user.pages');
   
   $block = new stdClass();
-  $block->title = t('User Password');
+  $block->title = t('Request new password');
   $block->content = drupal_get_form('user_pass');
   return $block;
 }

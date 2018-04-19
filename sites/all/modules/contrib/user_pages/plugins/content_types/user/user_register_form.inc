@@ -27,7 +27,7 @@ function ctools_user_register_form_content_type_render($subtype, $conf, $panel_a
   module_load_include('inc', 'user', 'user.pages');
   
   $block = new stdClass();
-  $block->title = t('User Register');
+  $block->title = t('Create new account');
   $block->content = drupal_get_form('user_register_form');
   return $block;
 }

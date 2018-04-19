@@ -87,7 +87,9 @@ function advagg_css_compress_yui_cssmin(&$data) {
   }
   if (!isset($cssmin)) {
     // Load CSSMin.inc if the CSSmin class variable is not set.
-    include drupal_get_path('module', 'advagg_css_compress') . '/yui/CSSMin.inc';
+    if (!class_exists('CSSmin')) {
+      include drupal_get_path('module', 'advagg_css_compress') . '/yui/CSSMin.inc';
+    }
     $cssmin = new CSSmin();
   }
   if (!isset($cssmin)) {
