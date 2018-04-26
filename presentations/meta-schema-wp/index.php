@@ -241,6 +241,18 @@
           </ul>
         </section>
 
+        <meta name="description" content="This session will review implementing Schema.org schemas for structured data and current best practice meta tags in WordPress."/>
+
+        <section>
+          <h3>&lt;meta></h3>
+          <h4>Name => Value(content)</h4>
+          <p>
+            &lt;meta
+            <span class="fragment">name="description" </span>
+            <span class="fragment">content="This session will review implementing Schema.org schemas for structured data and current best practice meta tags in WordPress."></span>
+          </p>
+        </section>
+
         <section>
           <h3>&lt;meta></h3>
           <h4>Attributes</h4>
