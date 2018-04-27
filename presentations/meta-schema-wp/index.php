@@ -150,17 +150,20 @@
 					</div>
 				</section>
 
-				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-MidCamp.jpg" data-background-position="center top">
+				<section style="text-align: left;" data-background="img/Lego-Uncle-Jim-at-MidCamp.jpg" data-background-position="center top">
 					<div class="fragment">
 						<h1 class="box" style="float:right;padding-left:20px;background: rgba(0, 0, 0, 0.9);width:50%;">Meta</h1>
 						<p style="color:#fff;background: rgba(0, 0, 0, 0.9);padding:20px 0 20px 20px;width:50%;float:right;">Meta (from the Greek preposition and prefix meta- (μετά-) meaning "after", or "beyond") is a prefix used in English to indicate a concept which is an abstraction behind another concept, used to complete or add to the latter. - <a href="https://en.wikipedia.org/wiki/Meta">Wikipedia</a></p>
 					</div>
 				</section>
 
+        <section>
+          <img src="img/meta-images-and-logos.jpg" alt="Screenshots of pages shared on social networks and search engine results">
+        </section>
+
 				<section>
-					<h2 class="box"><a href="https://www.w3.org/TR/html/document-metadata.html#document-metadata">W3C HTML5 Specification</a></h2>
-          <h3>HTML 5.2<br>W3C Recommendation, 14 December 2017</h3>
-          <h4>4.2. Document metadata</h4>
+					<h2 class="box"><a href="https://www.w3.org/TR/html/document-metadata.html#document-metadata">W3C HTML 5.2 Specification</a></h2>
+          <h3>4.2. Document metadata</h3>
 					<div class="fragment">
             <pre><code>
               &lt;head>&lt;/head>
@@ -174,7 +177,7 @@
 				</section>
 
         <section>
-          <h3>&lt;head></h3>
+          <h3>&lt;head>&lt;/head></h3>
           <p>The head element represents a collection of metadata for the Document.</p>
           <ul>
             <li>As the first element in an html element.</li>
@@ -183,7 +186,7 @@
         </section>
 
         <section>
-          <h3>&lt;title></h3>
+          <h3>&lt;title>&lt;/title></h3>
           <p>The title element represents the document’s title or name.</p>
           <ul>
             <li>In a head element containing no other title elements.</li>
@@ -222,7 +225,7 @@
         </section>
 
         <section>
-          <h3>&lt;style></h3>
+          <h3>&lt;style>&lt;/style></h3>
           <p>Allows authors to embed style information in their documents.</p>
           <ul>
             <li>In head, body, or noscript</li>
@@ -257,10 +260,9 @@
           <h3>&lt;meta></h3>
           <h4>Attributes</h4>
           <ul>
-            <li>Global attributes</li>
             <li>name — Metadata name</li>
-            <li>http-equiv — Pragma directive</li>
             <li>content — Value of the element</li>
+            <li>http-equiv — Pragma directive</li>
             <li>charset — Character encoding declaration</li>
           </ul>
         </section>
@@ -269,12 +271,12 @@
           <h3>&lt;meta></h3>
           <h4>Standard metadata names</h4>
           <ul style="font-size:80%">
-            <li>application-name - The value must be a short free-form string giving the name of the Web application that the page represents.</li>
-            <li>author - The value must be a free-form string giving the name of one of the page’s authors.</li>
-            <li>description - The value must be a free-form string that describes the page.</li>
-            <li>generator - The value must be a free-form string that identifies one of the software packages used to generate the document.</li>
-            <li>keywords - The value must be a set of comma-separated tokens, each of which is a keyword relevant to the page.</li>
-            <li>referrer - The value must be a referrer policy, which defines the default referrer policy for the Document.</li>
+            <li><strong>application-name</strong> - The value must be a short free-form string giving the name of the Web application that the page represents.</li>
+            <li><strong>author</strong> - The value must be a free-form string giving the name of one of the page’s authors.</li>
+            <li><strong>description</strong> - The value must be a free-form string that describes the page.</li>
+            <li><strong>generator</strong> - The value must be a free-form string that identifies one of the software packages used to generate the document.</li>
+            <li><strong>keywords</strong> - The value must be a set of comma-separated tokens, each of which is a keyword relevant to the page.</li>
+            <li><strong>referrer</strong> - The value must be a referrer policy, which defines the default referrer policy for the Document.</li>
           </ul>
         </section>
 
@@ -283,13 +285,13 @@
           <h4>Pragma directives</h4>
           <p>In computer programming, a directive or pragma (from "pragmatic") is a language construct that specifies how a compiler (or other translator) should process its input. - <a href="https://en.wikipedia.org/wiki/Directive_(programming)">Wikipedia</a></p>
           <ul style="font-size:60%">
-            <li>content-language - This pragma sets the pragma-set default language. This feature is non-conforming. Authors are encouraged to use the lang attribute instead.</li>
-            <li>content-type - an alternative form of setting the charset attribute.</li>
-            <li>default-style - sets the name of the default alternative style sheet set.</li>
-            <li>refresh - acts as timed redirect.</li>
-            <li>set-cookie - sets an HTTP cookie. This feature is non-conforming. Real HTTP headers should be used instead.</li>
-            <li>x-ua-compatible - In practice, this pragma encourages Internet Explorer to more closely follow the specifications.</li>
-            <li>content-security-policy - enforces a Content Security Policy.</li>
+            <li><strong>content-language</strong> - This pragma sets the pragma-set default language. This feature is non-conforming. Authors are encouraged to use the lang attribute instead.</li>
+            <li><strong>content-type</strong> - an alternative form of setting the charset attribute.</li>
+            <li><strong>default-style</strong> - sets the name of the default alternative style sheet set.</li>
+            <li><strong>refresh</strong> - acts as timed redirect.</li>
+            <li><strong>set-cookie</strong> - sets an HTTP cookie. This feature is non-conforming. Real HTTP headers should be used instead.</li>
+            <li><strong>x-ua-compatible</strong> - In practice, this pragma encourages Internet Explorer to more closely follow the specifications.</li>
+            <li><strong>content-security-policy</strong> - enforces a Content Security Policy.</li>
           </ul>
         </section>
 
@@ -323,14 +325,37 @@
         </section>
 
         <section>
-          <h3>Open Graph Protocol</h3>
-          <img src="http://ogp.me/logo.png" alt="Open Graph Protocol">
-          <p>The Open Graph protocol enables any web page to become a rich object in a social graph. For instance, this is used on Facebook to allow any web page to have the same functionality as any other object on Facebook.</p>
+          <h3><a href="http://ogp.me/">Open Graph Protocol</a></h3>
+          <img src="img/result-facebook.png" alt="Facebook card" style="width:360px;">
+          <p>The Open Graph protocol enables any web page to become a rich object in a social graph. Used by Facebook, LinkedIn, Pinterest, &amp; Google+</p>
         </section>
 
         <section>
           <h3>Open Graph Protocol</h3>
-          <p>Used by LinkedIn, Pinterest, Google+</p>
+          <h4>Required fields</h4>
+          <ul>
+            <li><code>og:title</code> - The title of your object as it should appear within the graph,
+            e.g., "The Rock".</li>
+            <li><code>og:type</code> - The <a href="#types">type</a> of your object, e.g., "video.movie".  Depending on
+            the type you specify, other properties may also be required.</li>
+            <li><code>og:image</code> - An image URL which should represent your object within the
+            graph.</li>
+            <li><code>og:url</code> - The canonical URL of your object that will be used as its
+            permanent ID in the graph, e.g., "http://www.imdb.com/title/tt0117500/".</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Open Graph Protocol</h3>
+          <h4>Types</h4>
+          <ul>
+            <li>Music</li>
+            <li>Video</li>
+            <li>Article</li>
+            <li>Book</li>
+            <li>Profile</li>
+            <li>Website</li>
+          </ul>
         </section>
 
         <section>
@@ -343,11 +368,19 @@
         </section>
 
         <section>
-          <h3>Twitter Cards</h3>
+          <h3><a href="https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards">Twitter Cards</a></h3>
+          <img src="img/result-twitter.png" alt="Twitter card" style="width:360px;">
+          <p>With Twitter Cards, you can attach rich photos, videos and media experiences to Tweets, helping to drive traffic to your website.</p>
         </section>
 
         <section>
           <h3>Twitter Cards</h3>
+          <ul>
+            <li>Summary card</li>
+            <li>Summary with large image</li>
+            <li>Player card</li>
+            <li>App card</li>
+          </ul>
         </section>
 
         <section>
@@ -359,11 +392,38 @@
 
         <section>
           <h3>Implementing in WordPress</h3>
+          <h4>Plugins</h4>
+          <p><a href="https://yoast.com/wordpress/plugins/seo/">Yoast SEO</a></p>
+          <img src="img/yoast-open-graph.png" style="width: 75%;">
         </section>
 
         <section>
-          <h2>Schema.org</h2>
-          <p>Schema.org is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond.</p>
+          <h3>Implementing in WordPress</h3>
+          <h4>Plugins</h4>
+          <p><a href="https://yoast.com/wordpress/plugins/seo/">Yoast SEO</a></p>
+          <img src="img/yoast-twitter.png" style="width: 75%;">
+        </section>
+
+        <section>
+          <h3>Implementing in WordPress</h3>
+          <h4>Theme</h4>
+          <pre><code>
+&lt;?php if ( has_post_thumbnail() && is_single() ) { ?>
+    &lt;?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+        <meta property="og:image" content="<?php echo $url; ?>" />
+    &lt;?php } elseif ( has_post_thumbnail() && is_front_page() ) { ?>
+        <meta property="og:image" content="/wp-content/uploads/2015/01/VColony2.jpg" />
+    &lt;?php } else { ?>
+        <meta property="og:image" content="/wp-content/themes/wordpress-bootstrap-child/library/img/Cats-In-My-Yard-Logo-1024.png" />
+&lt;?php }?>
+          </code></pre>
+        </section>
+
+        <section style="text-align: left;" data-background="img/Lego-Uncle-Jim-at-Philly-City-Hall.jpg" data-background-position="center bottom">
+          <div class="fragment">
+            <h1 class="box" style="float:right;padding-left:20px;background: rgba(0, 0, 0, 0.9);width:50%;">Schema</h1>
+            <p style="color:#fff;background: rgba(0, 0, 0, 0.9);padding:20px 0 20px 20px;width:50%;float:right;">Schema.org is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond.</p>
+          </div>
         </section>
 
         <section>
@@ -383,7 +443,60 @@
         </section>
 
         <section>
-          <h3>Inline, RDFA, or JSON-LD</h3>
+          <h3>Inline</h3>
+          <pre><code>
+<div itemscope itemtype="http://schema.org/SportsTeam">
+  <span itemprop="name">San Francisco 49ers</span>
+  <div itemprop="member" itemscope itemtype="http://schema.org/OrganizationRole">
+    <div itemprop="member" itemscope itemtype="http://schema.org/Person">
+      <span itemprop="name">Joe Montana</span>
+    </div>
+    <span itemprop="startDate">1979</span>
+    <span itemprop="endDate">1992</span>
+    <span itemprop="roleName">Quarterback</span>
+  </div>
+</div>
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>RDFa</h3>
+          <pre><code>
+<div vocab="http://schema.org/" typeof="SportsTeam">
+  <span property="name">San Francisco 49ers</span>
+  <div property="member" typeof="OrganizationRole">
+    <div property="member" typeof="http://schema.org/Person">
+      <span property="name">Joe Montana</span>
+    </div>
+    <span property="startDate">1979</span>
+    <span property="endDate">1992</span>
+    <span property="roleName">Quarterback</span>
+  </div>
+</div>
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>JSON-LD</h3>
+          <pre><code>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "SportsTeam",
+  "name": "San Francisco 49ers",
+  "member": {
+    "@type": "OrganizationRole",
+    "member": {
+      "@type": "Person",
+      "name": "Joe Montana"
+    },
+    "startDate": "1979",
+    "endDate": "1992",
+    "roleName": "Quarterback"
+  }
+}
+</script>
+          </code></pre>
         </section>
 
         <section>
@@ -393,6 +506,48 @@
 
         <section>
           <h3>Implementing in WordPress</h3>
+          <h4>Plugins</h4>
+          <p><a href="https://yoast.com/wordpress/plugins/seo/">Yoast SEO</a></p>
+          <img src="img/yoast-knowledge-graph.png" style="width: 75%;">
+        </section>
+
+        <section>
+          <h3>Implementing in WordPress</h3>
+          <h4>Plugins</h4>
+          <p><a href="https://yoast.com/wordpress/plugins/seo/">Yoast SEO</a></p>
+          <img src="img/yoast-social-sameas.png" style="width: 75%;">
+        </section>
+
+        <section>
+          <h3>Implementing in WordPress</h3>
+          <h4>Plugins</h4>
+          <p><a href="https://yoast.com/wordpress/plugins/seo/">Yoast SEO</a></p>
+          <img src="img/yoast-social-sameas.png" style="width: 75%;">
+        </section>
+
+        <section>
+          <h3>Implementing in WordPress</h3>
+          <h4>Plugins</h4>
+          <p><a href="https://wordpress.org/plugins/schema/">Schema</a> plugin supports these schema.org types, and can be extended.</p>
+          <ul style="font-size:70%;">
+            <li>
+              Article
+              <ul>
+                <li>General</li>
+                <li>BlogPosting</li>
+                <li>NewsArticle</li>
+                <li>Report</li>
+                <li>ScholarlyArticle</li>
+                <li>TechArticle</li>
+              </ul>
+            </li>
+            <li>Blog (for Blog posts list page)</li>
+            <li>BreadcrumbList (for Breadcrumbs)</li>
+            <li>CollectionPage (for Categories)</li>
+            <li>AboutPage (for the about page)</li>
+            <li>ContactPage (for the contact page)</li>
+            <li>Person (author archive)</li>
+          </ul>
         </section>
 
         <section>
