@@ -152,8 +152,8 @@
 
 				<section style="text-align: left;" data-background="img/Lego-Uncle-Jim-at-MidCamp.jpg" data-background-position="center top">
 					<div class="fragment">
-						<h1 class="box" style="float:right;padding-left:20px;background: rgba(0, 0, 0, 0.9);width:50%;">Meta</h1>
-						<p style="color:#fff;background: rgba(0, 0, 0, 0.9);padding:20px 0 20px 20px;width:50%;float:right;">Meta (from the Greek preposition and prefix meta- (μετά-) meaning "after", or "beyond") is a prefix used in English to indicate a concept which is an abstraction behind another concept, used to complete or add to the latter. - <a href="https://en.wikipedia.org/wiki/Meta">Wikipedia</a></p>
+						<h1 class="box" style="float:right;padding:20px;background: rgba(0, 0, 0, 0.9);width:50%;">Meta</h1>
+						<p style="color:#fff;background: rgba(0, 0, 0, 0.9);padding:20px;width:50%;float:right;">Meta (from the Greek preposition and prefix meta- (μετά-) meaning "after", or "beyond") is a prefix used in English to indicate a concept which is an abstraction behind another concept, used to complete or add to the latter. - <a href="https://en.wikipedia.org/wiki/Meta">Wikipedia</a></p>
 					</div>
 				</section>
 
@@ -161,23 +161,40 @@
           <img src="img/meta-images-and-logos.jpg" alt="Screenshots of pages shared on social networks and search engine results">
         </section>
 
+        <section style="text-align: left;" data-background="https://upload.wikimedia.org/wikipedia/commons/f/f0/Card_Division_of_the_Library_of_Congress_3c18631u_original.jpg" data-background-position="center center">
+          <div style="color:#fff;background: rgba(0, 0, 0, 0.9);padding:20px;width:50%;float:right;">People working in Card Division in the Library of Congress, Washington, D.C., 1910s or 1920s - <a href="https://en.wikipedia.org/wiki/Library_catalog">Image Source</a></div>
+        </section>
+
+        <section style="text-align: left;" data-background="https://upload.wikimedia.org/wikipedia/commons/7/7e/Schlagwortkatalog.jpg" data-background-position="center top">
+          <div style="color:#fff;background: rgba(0, 0, 0, 0.9);padding:20px;width:50%;float:right;">The subject catalogue of the University Library of Graz. The card shown refers to a text by Hans Schleimer who made up the rules for this catalogue. - <a href="https://en.wikipedia.org/wiki/Library_catalog">Image Source</a></div>
+        </section>
+
+        <section style="text-align: left;" data-background="https://upload.wikimedia.org/wikipedia/commons/c/cb/Librarian_at_the_card_files_at_a_senior_high_school_in_New_Ulm%2C_Minnesota.jpg" data-background-position="center top">
+          <div style="color:#fff;background: rgba(0, 0, 0, 0.9);padding:20px;width:50%;float:right;">Librarian at the card files at a senior high school in New Ulm, Minnesota (1974) - <a href="https://en.wikipedia.org/wiki/Library_catalog">Image Source</a></div>
+        </section>
+
+        <section style="text-align: left;" data-background="https://upload.wikimedia.org/wikipedia/commons/5/51/Dynix-Main-Menu-via-Telnet.jpg" data-background-position="center center">
+          <div style="color:#fff;background: rgba(0, 0, 0, 0.9);padding:20px;width:50%;float:right;">Dynix, an early but popular and long-lasting online catalog - <a href="https://en.wikipedia.org/wiki/Library_catalog">Image Source</a></div>
+        </section>
+
 				<section>
 					<h2 class="box"><a href="https://www.w3.org/TR/html/document-metadata.html#document-metadata">W3C HTML 5.2 Specification</a></h2>
           <h3>4.2. Document metadata</h3>
+          <img src="img/w3c.svg" alt="W3C logo" style="width:240px;height:auto;border:none;border-radius:5px;">
 					<div class="fragment">
-            <pre><code>
-              &lt;head>&lt;/head>
-              <title></title>
-              <base>
-              <link>
-              <meta>
-              <style></style>
-            </code></pre>
+            <p><code>
+              &lt;head>&lt;/head><br>
+              &lt;title>&lt;/title><br>
+              &lt;base><br>
+              &lt;link><br>
+              &lt;meta><br>
+              &lt;style>&lt;/style>
+            </code></p>
           </div>
 				</section>
 
         <section>
-          <h3>&lt;head>&lt;/head></h3>
+          <h3><code>&lt;head>&lt;/head></code></h3>
           <p>The head element represents a collection of metadata for the Document.</p>
           <ul>
             <li>As the first element in an html element.</li>
@@ -186,7 +203,7 @@
         </section>
 
         <section>
-          <h3>&lt;title>&lt;/title></h3>
+          <h3><code>&lt;title>&lt;/title></code></h3>
           <p>The title element represents the document’s title or name.</p>
           <ul>
             <li>In a head element containing no other title elements.</li>
@@ -195,7 +212,7 @@
         </section>
 
         <section>
-          <h3>&lt;base></h3>
+          <h3><code>&lt;base></code></h3>
           <p>The base element allows authors to specify the document base URL for the purposes of Parsing URLs, and the name of the default browsing context for the purposes of following hyperlinks.</p>
           <ul>
             <li>A base element must have either an href attribute, a target attribute, or both.</li>
@@ -205,7 +222,7 @@
         </section>
 
         <section>
-          <h3>&lt;link></h3>
+          <h3><code>&lt;link></code></h3>
           <p>The link element allows authors to link their document to other resources.</p>
           <h4>Attributes</h4>
           <ul style="font-size:60%">
@@ -225,7 +242,7 @@
         </section>
 
         <section>
-          <h3>&lt;style>&lt;/style></h3>
+          <h3><code>&lt;style>&lt;/style></code></h3>
           <p>Allows authors to embed style information in their documents.</p>
           <ul>
             <li>In head, body, or noscript</li>
@@ -234,7 +251,7 @@
         </section>
 
         <section>
-          <h3>&lt;meta></h3>
+          <h3><code>&lt;meta></code></h3>
           <p>The meta element represents various kinds of metadata that cannot be expressed using the title, base, link, style, and script elements.</p>
 
           <p>Document metadata is expressed in terms of name-value pairs, the name attribute on the meta element giving the name, and the content attribute on the same element giving the value.</p>
@@ -244,31 +261,19 @@
           </ul>
         </section>
 
-        <meta name="description" content="This session will review implementing Schema.org schemas for structured data and current best practice meta tags in WordPress."/>
-
         <section>
-          <h3>&lt;meta></h3>
+          <h3><code>&lt;meta></code></h3>
           <h4>Name => Value(content)</h4>
-          <p>
+          <p><code>
             &lt;meta
             <span class="fragment">name="description" </span>
             <span class="fragment">content="This session will review implementing Schema.org schemas for structured data and current best practice meta tags in WordPress."></span>
+            </code>
           </p>
         </section>
 
         <section>
-          <h3>&lt;meta></h3>
-          <h4>Attributes</h4>
-          <ul>
-            <li>name — Metadata name</li>
-            <li>content — Value of the element</li>
-            <li>http-equiv — Pragma directive</li>
-            <li>charset — Character encoding declaration</li>
-          </ul>
-        </section>
-
-        <section>
-          <h3>&lt;meta></h3>
+          <h3><code>&lt;meta></code></h3>
           <h4>Standard metadata names</h4>
           <ul style="font-size:80%">
             <li><strong>application-name</strong> - The value must be a short free-form string giving the name of the Web application that the page represents.</li>
@@ -281,7 +286,7 @@
         </section>
 
         <section>
-          <h3>&lt;meta></h3>
+          <h3><code>&lt;meta></code></h3>
           <h4>Pragma directives</h4>
           <p>In computer programming, a directive or pragma (from "pragmatic") is a language construct that specifies how a compiler (or other translator) should process its input. - <a href="https://en.wikipedia.org/wiki/Directive_(programming)">Wikipedia</a></p>
           <ul style="font-size:60%">
@@ -296,15 +301,30 @@
         </section>
 
         <section>
-          <h3>&lt;meta></h3>
+          <h3><code>&lt;meta></code></h3>
           <h4>Other metadata names</h4>
           <p><a href="https://wiki.whatwg.org/wiki/MetaExtensions">Web Hypertext Application Technology Working Group (WHATWG) Meta Extensions</a></p>
+        </section>
+
+        <section>
+          <h3><code>&lt;meta></code></h3>
+          <h4>Make your own if you need to</h4>
+          <ul>
+            <li>&lt;meta name="category" content="Category One"></li>
+            <li>&lt;meta name="tags" content="Tag 1, Tag 2"></li>
+          </ul>
         </section>
 
         <section>
           <h3>Test and Verify</h3>
           <a href="https://w3c.github.io/developers/tools/"></a><img src="https://w3c.github.io/developers/img/W3C-Developers-Light.svg" alt="W3C Developers">
           <p><a href="https://w3c.github.io/developers/tools/">W3C Developer Tools Test Suite</a></p>
+        </section>
+
+        <section>
+          <img src="img/logo-google.jpg" alt="Google" style="border:0;box-shadow:none;width:320px;">
+          <h3><a href="https://support.google.com/webmasters/answer/79812?hl=en">Meta tags that Google understands</a></h3>
+          <img src="img/result-google.png" alt="Google Search Result">
         </section>
 
         <section>
@@ -336,7 +356,7 @@
           <ul>
             <li><code>og:title</code> - The title of your object as it should appear within the graph,
             e.g., "The Rock".</li>
-            <li><code>og:type</code> - The <a href="#types">type</a> of your object, e.g., "video.movie".  Depending on
+            <li><code>og:type</code> - The type of your object, e.g., "video.movie".  Depending on
             the type you specify, other properties may also be required.</li>
             <li><code>og:image</code> - An image URL which should represent your object within the
             graph.</li>
@@ -421,8 +441,8 @@
 
         <section style="text-align: left;" data-background="img/Lego-Uncle-Jim-at-Philly-City-Hall.jpg" data-background-position="center bottom">
           <div class="fragment">
-            <h1 class="box" style="float:right;padding-left:20px;background: rgba(0, 0, 0, 0.9);width:50%;">Schema</h1>
-            <p style="color:#fff;background: rgba(0, 0, 0, 0.9);padding:20px 0 20px 20px;width:50%;float:right;">Schema.org is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond.</p>
+            <h1 class="box" style="float:right;padding:20px;background: rgba(0, 0, 0, 0.9);width:50%;">Schema</h1>
+            <p style="color:#fff;background: rgba(0, 0, 0, 0.9);padding:20px;width:50%;float:right;">Schema.org is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond.</p>
           </div>
         </section>
 
@@ -445,90 +465,88 @@
         <section>
           <h3>Inline</h3>
           <pre><code>
-<div itemscope itemtype="http://schema.org/SportsTeam">
-  <span itemprop="name">San Francisco 49ers</span>
-  <div itemprop="member" itemscope itemtype="http://schema.org/OrganizationRole">
-    <div itemprop="member" itemscope itemtype="http://schema.org/Person">
-      <span itemprop="name">Joe Montana</span>
+    <div itemscope itemtype="http://schema.org/SportsTeam">
+      <span itemprop="name">San Francisco 49ers</span>
+      <div itemprop="member" itemscope itemtype="http://schema.org/OrganizationRole">
+        <div itemprop="member" itemscope itemtype="http://schema.org/Person">
+          <span itemprop="name">Joe Montana</span>
+        </div>
+        <span itemprop="startDate">1979</span>
+        <span itemprop="endDate">1992</span>
+        <span itemprop="roleName">Quarterback</span>
+      </div>
     </div>
-    <span itemprop="startDate">1979</span>
-    <span itemprop="endDate">1992</span>
-    <span itemprop="roleName">Quarterback</span>
-  </div>
-</div>
           </code></pre>
         </section>
 
         <section>
           <h3>RDFa</h3>
           <pre><code>
-<div vocab="http://schema.org/" typeof="SportsTeam">
-  <span property="name">San Francisco 49ers</span>
-  <div property="member" typeof="OrganizationRole">
-    <div property="member" typeof="http://schema.org/Person">
-      <span property="name">Joe Montana</span>
+    <div vocab="http://schema.org/" typeof="SportsTeam">
+      <span property="name">San Francisco 49ers</span>
+      <div property="member" typeof="OrganizationRole">
+        <div property="member" typeof="http://schema.org/Person">
+          <span property="name">Joe Montana</span>
+        </div>
+        <span property="startDate">1979</span>
+        <span property="endDate">1992</span>
+        <span property="roleName">Quarterback</span>
+      </div>
     </div>
-    <span property="startDate">1979</span>
-    <span property="endDate">1992</span>
-    <span property="roleName">Quarterback</span>
-  </div>
-</div>
           </code></pre>
         </section>
 
         <section>
           <h3>JSON-LD</h3>
           <pre><code>
-<script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "SportsTeam",
-  "name": "San Francisco 49ers",
-  "member": {
-    "@type": "OrganizationRole",
-    "member": {
-      "@type": "Person",
-      "name": "Joe Montana"
-    },
-    "startDate": "1979",
-    "endDate": "1992",
-    "roleName": "Quarterback"
-  }
-}
-</script>
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "SportsTeam",
+      "name": "San Francisco 49ers",
+      "member": {
+        "@type": "OrganizationRole",
+        "member": {
+          "@type": "Person",
+          "name": "Joe Montana"
+        },
+        "startDate": "1979",
+        "endDate": "1992",
+        "roleName": "Quarterback"
+      }
+    }
+    </script>
           </code></pre>
         </section>
 
         <section>
+          <img src="img/logo-google.jpg" alt="Google" style="border:0;box-shadow:none;width:320px;">
           <h3>What does Google care about?</h3>
           <p><a href="https://developers.google.com/search/docs/guides/search-gallery">Google Search Gallery</a></p>
         </section>
 
         <section>
           <h3>Implementing in WordPress</h3>
-          <h4>Plugins</h4>
-          <p><a href="https://yoast.com/wordpress/plugins/seo/">Yoast SEO</a></p>
+        </section>
+
+        <section>
+          <h3><a href="https://yoast.com/wordpress/plugins/seo/">Yoast SEO Plugin</a></h3>
           <img src="img/yoast-knowledge-graph.png" style="width: 75%;">
         </section>
 
         <section>
-          <h3>Implementing in WordPress</h3>
-          <h4>Plugins</h4>
-          <p><a href="https://yoast.com/wordpress/plugins/seo/">Yoast SEO</a></p>
+          <h3><a href="https://yoast.com/wordpress/plugins/seo/">Yoast SEO Plugin</a></h3>
           <img src="img/yoast-social-sameas.png" style="width: 75%;">
         </section>
 
         <section>
-          <h3>Implementing in WordPress</h3>
-          <h4>Plugins</h4>
-          <p><a href="https://yoast.com/wordpress/plugins/seo/">Yoast SEO</a></p>
-          <img src="img/yoast-social-sameas.png" style="width: 75%;">
+          <h3><a href="https://yoast.com/wordpress/plugins/seo/">Yoast SEO Plugin</a></h3>
+          <img src="img/yoast-twitter.png" style="width: 75%;">
         </section>
 
         <section>
-          <h3>Implementing in WordPress</h3>
-          <h4>Plugins</h4>
-          <p><a href="https://wordpress.org/plugins/schema/">Schema</a> plugin supports these schema.org types, and can be extended.</p>
+          <h3><a href="https://wordpress.org/plugins/schema/">Schema Plugin</a></h3>
+          <p>Supports these schema.org types, and can be extended.</p>
           <ul style="font-size:70%;">
             <li>
               Article
@@ -548,6 +566,63 @@
             <li>ContactPage (for the contact page)</li>
             <li>Person (author archive)</li>
           </ul>
+        </section>
+
+        <section>
+          <h3><a href="https://wordpress.org/plugins/schema/">Schema Plugin</a></h3>
+          <img src="img/schema-plugin-general.png" style="width: 75%;">
+        </section>
+
+        <section>
+          <h3><a href="https://wordpress.org/plugins/schema/">Schema Plugin</a></h3>
+          <img src="img/schema-plugin-content.png" style="width: 75%;">
+        </section>
+
+        <section>
+          <h3><a href="https://wordpress.org/plugins/schema/">Schema Plugin</a></h3>
+          <img src="img/schema-plugin-knowledge-graph.png" style="width: 75%;">
+        </section>
+
+        <section>
+          <h3><a href="https://wordpress.org/plugins/schema/">Schema Plugin</a></h3>
+          <img src="img/schema-plugin-search-results.png" style="width: 75%;">
+        </section>
+
+        <section>
+          <h3><a href="https://wordpress.org/plugins/schema/">Schema Plugin</a></h3>
+          <img src="img/schema-plugin-types.png" style="width: 75%;">
+        </section>
+
+        <section>
+          <h3><a href="https://wordpress.org/plugins/schema/">Schema Plugin</a></h3>
+          <img src="img/schema-plugin-add-new-type.png" style="width: 75%;">
+        </section>
+
+        <section>
+          <h3>Widget</h3>
+          <p><a href="https://www.jamesdflynn.com/json-ld-schema-generator/">Generate your own JSON-LD</a> and add it in a widget</p>
+          <pre><code>
+    <script type='application/ld+json'>
+    {
+      "@context": "http://www.schema.org",
+      "@type": "FoodEstablishment",
+      "name": "Yummy Food Place",
+      "url": "http://www.yummyfoodplace.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 4th Street",
+        "addressLocality": "Chicago",
+        "addressRegion": "IL",
+        "postalCode": "60647",
+        "addressCountry": "USA"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-312-867-5309"
+      }
+    }
+     </script>
+          </code></pre>
         </section>
 
         <section>
