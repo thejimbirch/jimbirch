@@ -165,7 +165,7 @@
 						<div class="box" style="float: left;padding-left:20px;padding-bottom:20px;margin-top:-30px">
 							<a href="http://jimbir.ch">Jim Birch</a><br>
 							<a href="http://twitter.com/thejimbirch">@thejimbirch</a><br>
-							<a href="http://jimbir.ch/presentations/meta-schema-wp/">jimbir.ch/meta-schema-wp</a><br>
+							<a href="http://jimbir.ch/presentations/meta-schema-wp/">jimbir.ch/meta-schema-wp</a>
 						</div>
 					</div>
 				</section>
@@ -185,7 +185,7 @@
             <div class="column--50">
               <h4>Specifications</h4>
               <ul>
-                <li><a href="https://www.w3.org/TR/html/document-metadata.html#document-metadata">W3C HTML 5.2 Specification</a></li>
+                <li><a href="https://www.w3.org/TR/html/document-metadata.html#document-metadata">W3C HTML 5.2 Specs</a></li>
                 <li><a href="https://wiki.whatwg.org/wiki/MetaExtensions">WHATWG Meta Extensions</a></li>
                 <li><a href="http://ogp.me/">Open Graph Protocol</a></li>
                 <li><a href="https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards">Twitter Cards</a></li>
@@ -195,12 +195,11 @@
             <div class="column--50">
               <h4>Validators</h4>
               <ul>
-                <li><a href="https://w3c.github.io/developers/tools/">W3C Developer Tools Test Suite</a></li>
+                <li><a href="https://w3c.github.io/developers/tools/">W3C Developer Tools</a></li>
                 <li><a href="https://developers.facebook.com/tools/debug/">Facebook Debugger</a></li>
                 <li><a href="http://developers.pinterest.com/rich_pins/validator/">Pinterest Validator</a></li>
-                <li><a href="https://cards-dev.twitter.com/validator" rel="nofollow">Twitter Developer Card validator</a></li>
+                <li><a href="https://cards-dev.twitter.com/validator" rel="nofollow">Twitter Card validator</a></li>
                 <li><a href="https://developers.google.com/search/docs/guides/search-gallery">Google Search Gallery</a></li>
-                <li><a href="https://developers.google.com/web/">Google Developers - Web</a></li>
               </ul>
             </div>
           </div>
@@ -370,7 +369,7 @@
         <section>
           <h3>Test and Verify</h3>
           <a href="https://w3c.github.io/developers/tools/"><img src="https://w3c.github.io/developers/img/W3C-Developers-Light.svg" alt="W3C Developers"></a>
-          <p><a href="https://w3c.github.io/developers/tools/">W3C Developer Tools Test Suite</a></p>
+          <p><a href="https://w3c.github.io/developers/tools/">W3C Developer Tools</a></p>
         </section>
 
         <section>
@@ -457,27 +456,26 @@
         <section>
           <h3>Test and Verify</h3>
           <ul>
-            <li><a href="https://cards-dev.twitter.com/validator" rel="nofollow">Twitter Developer Card validator</a></li>
+            <li><a href="https://cards-dev.twitter.com/validator" rel="nofollow">Twitter Card validator</a></li>
           </ul>
         </section>
 
+        <section style="text-align: left;" data-background="img/Lego-Uncle-Jim-by-the-Iceland-Map.jpg" data-background-position="center bottom">
+          <h2 style="padding:20px;width:60%;">Implementing Meta Tags in WordPress</h2>
+        </section>
+
         <section>
-          <h3>Implementing in WordPress</h3>
-          <h4>Plugins</h4>
-          <p><a href="https://yoast.com/wordpress/plugins/seo/">Yoast SEO</a></p>
+          <h3><a href="https://yoast.com/wordpress/plugins/seo/">Yoast SEO Plugin</a></h3>
           <img src="img/yoast-open-graph.png" style="width: 75%;">
         </section>
 
         <section>
-          <h3>Implementing in WordPress</h3>
-          <h4>Plugins</h4>
-          <p><a href="https://yoast.com/wordpress/plugins/seo/">Yoast SEO</a></p>
+          <h3><a href="https://yoast.com/wordpress/plugins/seo/">Yoast SEO Plugin</a></h3>
           <img src="img/yoast-twitter.png" style="width: 75%;">
         </section>
 
         <section>
-          <h3>Implementing in WordPress</h3>
-          <h4>Theme</h4>
+          <h3>Theme</h3>
           <pre><code>
 &lt;?php if ( has_post_thumbnail() && is_single() ) { ?>
     &lt;?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
@@ -576,8 +574,8 @@
           <p><a href="https://developers.google.com/search/docs/guides/search-gallery">Google Search Gallery</a></p>
         </section>
 
-        <section>
-          <h3>Implementing in WordPress</h3>
+        <section style="text-align: left;" data-background="img/Lego-Uncle-Jim-Diane-and-the-Cats.jpg" data-background-position="center bottom">
+          <h2 style="padding:20px;width:45%;">Implementing Schema.org in WordPress</h2>
         </section>
 
         <section>
@@ -682,9 +680,47 @@
 
         <section>
           <h3>Theme</h3>
-          <p>Add inline markeup to your custom theme</p>
+          <p>Add inline markup to your custom theme</p>
           <pre><code>
-
+    <div itemscope itemtype="http://schema.org/Product">
+      <div class="content--standard">
+        <div class="content--standard__image">
+          {% if content.field_image_product|render %}
+            <span itemprop="image">
+              {{ content.field_image_product }}
+            </span>
+          {% endif %}
+        </div>
+        <div class="content--standard__content">
+          {{ title_prefix }}
+            <h1 itemprop="name">{{ label }}</h1>
+          {{ title_suffix }}
+          {% if content.body|render %}
+            <div itemprop="description">
+              {{ content.body }}
+            </div>
+          {% endif %}
+          <ul>
+            {% if content.field_ref_producer|render %}
+              <li>Producer:
+                <span itemprop="brand" itemscope itemtype="http://schema.org/Brand">
+                  <span itemprop="name">
+                    {{ content.field_ref_producer }}
+                  </span>
+                </span>
+              </li>
+            {% endif %}
+            {% if content.field_sku|render %}
+              <li>SKU:
+                <span itemprop="sku">
+                  {{ content.field_sku }}
+                </span>
+              </li>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+    </div>
           </code></pre>
         </section>
 
@@ -693,14 +729,20 @@
           <p><a href="https://search.google.com/structured-data/testing-tool/u/0/">Google Structured Data Testing Tool</a></p>
         </section>
 
+        <section>
+          <blockquote class="imgur-embed-pub" lang="en" data-id="MKZwVkb"><a href="//imgur.com/MKZwVkb">Meta Cat</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+        </section>
+
 				<section style="text-align: left;" data-background="img/Lego-Uncle-Jim-at-Sunset.jpg">
 					<h1 style="padding-left:20px;">The End</h1>
 					<h3 style="padding-left:20px;">Continuing the conversation:</h3>
-					<div class="box" style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.7);padding:20px;">
-						<a href="http://jimbir.ch">Jim Birch</a><br>
-						<a href="http://twitter.com/thejimbirch">@thejimbirch</a><br>
-						<a href="http://jimbir.ch/presentations/meta-schema-wp/">jimbir.ch/meta-schema-wp</a> - Presentation<br>
-					</div>
+					<div style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.7);padding-left:20px;width:70%">
+            <img src="img/wordcamp-chicago-2018.png" alt="WordCamp Chicago 2018" style="float: left; width: 130px; padding:10px;height: auto;"><br>
+            <div class="box" style="float: left;padding-left:20px;margin-top:-30px">
+              <a href="http://jimbir.ch">Jim Birch</a><br>
+              <a href="http://twitter.com/thejimbirch">@thejimbirch</a><br>
+              <a href="http://jimbir.ch/presentations/meta-schema-wp/">jimbir.ch/meta-schema-wp</a>
+            </div>
 				</section>
 
 			</div>
