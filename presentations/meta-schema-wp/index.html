@@ -50,7 +50,10 @@
 
 			.reveal .box a,
 			.fixed-footer a,
-			.reveal h1 a {
+			.reveal h1 a,
+      .reveal h2 a,
+      .reveal h3 a,
+      .reveal h4 a {
 		    color: #9dcccc;
 			}
 
@@ -73,18 +76,20 @@
 			}
 
 			.fixed-footer {
-				color: #9dcccc;
-				position:fixed;
-				bottom:20px;
-				left:30px;
-				width:95%;
-				margin:0 auto;
-				z-index:1000;
-			}
+        color: #9dcccc;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin: 0 auto;
+        z-index: 1000;
+        background: rgba(0, 0, 0, 0.7) none repeat scroll 0 0;
+      }
 
 			.fixed-footer > div,
 			.fixed-footer > div > a {
 				font-size: 16px;
+        padding: 10px;
 			}
 
 			@media print {
@@ -93,18 +98,33 @@
 		    }
 			}
 
-			.grid-item {
-				float: left;
-				min-height: 250px;
-				width: 25%
-			}
+			.reveal .columns {
+        clear: left;
+      }
 
-			.reveal section .grid-item img {
-				margin: 0;
-			}
+      .reveal .column--50 {
+        float: left;
+        margin-left: 2%;
+        width: 49%;
+      }
+
+      .reveal .column--50:first-child {
+        margin-left: 0;
+      }
+
+      .reveal .column--75-25 {
+        float: left;
+        width: 74%;
+      }
+
+      .reveal .column--25-75 {
+        float: left;
+        margin-left: 2%;
+        width: 24%;
+      }
 
 			code {
-				color: #ffa837;
+				color: #FF741D;
 			}
 
 			.reveal pre {
@@ -133,7 +153,7 @@
 		<div class="reveal">
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="fixed-footer">
-				<div style="float:left;"><a href="http://jimbir.ch/presentations/meta-schema-wp/">jimbir.ch/meta-schema-wp</a></div>
+				<div style="float:left;"><a href="http://jimbir.ch/presentations/meta-schema-wp/">jimbir.ch/meta-schema-wp</a> <a href="https://twitter.com/search?q=%23WCCHI">#WCCHI</a></div>
         <div style="float:right;"><a href="http://www.twitter.com/thejimbirch" title="@thejimbirch">@thejimbirch</a></div>
 			</div>
 			<div class="slides">
@@ -150,16 +170,48 @@
 					</div>
 				</section>
 
+        <section>
+          <h3>We know how our website looks on our server</h3>
+          <img src="img/wordcamp-chicago-website.png" alt="Screenshot of WordCamp Chicago 2018 Home page">
+        </section>
+
+        <section>
+          <img src="img/meta-images-and-logos.jpg" alt="Screenshots of pages shared on social networks and search engine results">
+        </section>
+
+        <section>
+          <h3><abbr title="Too Long Didn't Read">TLDR</abbr> &nbsp;/&nbsp; <abbr title="Bottom Line Up Front">BLUF</abbr></h3>
+          <div class="columns">
+            <div class="column--50">
+              <h4>Specifications</h4>
+              <ul>
+                <li><a href="https://www.w3.org/TR/html/document-metadata.html#document-metadata">W3C HTML 5.2 Specification</a></li>
+                <li><a href="https://wiki.whatwg.org/wiki/MetaExtensions">WHATWG Meta Extensions</a></li>
+                <li><a href="http://ogp.me/">Open Graph Protocol</a></li>
+                <li><a href="https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards">Twitter Cards</a></li>
+                <li><a href="http://schema.org/">Schema.org</a></li>
+              </ul>
+            </div>
+            <div class="column--50">
+              <h4>Validators</h4>
+              <ul>
+                <li><a href="https://w3c.github.io/developers/tools/">W3C Developer Tools Test Suite</a></li>
+                <li><a href="https://developers.facebook.com/tools/debug/">Facebook Debugger</a></li>
+                <li><a href="http://developers.pinterest.com/rich_pins/validator/">Pinterest Validator</a></li>
+                <li><a href="https://cards-dev.twitter.com/validator" rel="nofollow">Twitter Developer Card validator</a></li>
+                <li><a href="https://developers.google.com/search/docs/guides/search-gallery">Google Search Gallery</a></li>
+                <li><a href="https://developers.google.com/web/">Google Developers - Web</a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
 				<section style="text-align: left;" data-background="img/Lego-Uncle-Jim-at-MidCamp.jpg" data-background-position="center top">
 					<div class="fragment">
 						<h1 class="box" style="float:right;padding:20px;background: rgba(0, 0, 0, 0.9);width:50%;">Meta</h1>
 						<p style="color:#fff;background: rgba(0, 0, 0, 0.9);padding:20px;width:50%;float:right;">Meta (from the Greek preposition and prefix meta- (μετά-) meaning "after", or "beyond") is a prefix used in English to indicate a concept which is an abstraction behind another concept, used to complete or add to the latter. - <a href="https://en.wikipedia.org/wiki/Meta">Wikipedia</a></p>
 					</div>
 				</section>
-
-        <section>
-          <img src="img/meta-images-and-logos.jpg" alt="Screenshots of pages shared on social networks and search engine results">
-        </section>
 
         <section style="text-align: left;" data-background="https://upload.wikimedia.org/wikipedia/commons/f/f0/Card_Division_of_the_Library_of_Congress_3c18631u_original.jpg" data-background-position="center center">
           <div style="color:#fff;background: rgba(0, 0, 0, 0.9);padding:20px;width:50%;float:right;">People working in Card Division in the Library of Congress, Washington, D.C., 1910s or 1920s - <a href="https://en.wikipedia.org/wiki/Library_catalog">Image Source</a></div>
@@ -317,7 +369,7 @@
 
         <section>
           <h3>Test and Verify</h3>
-          <a href="https://w3c.github.io/developers/tools/"></a><img src="https://w3c.github.io/developers/img/W3C-Developers-Light.svg" alt="W3C Developers">
+          <a href="https://w3c.github.io/developers/tools/"><img src="https://w3c.github.io/developers/img/W3C-Developers-Light.svg" alt="W3C Developers"></a>
           <p><a href="https://w3c.github.io/developers/tools/">W3C Developer Tools Test Suite</a></p>
         </section>
 
@@ -329,18 +381,17 @@
 
         <section>
           <h3><a href="https://support.google.com/webmasters/answer/79812?hl=en">Meta tags that Google understands</a></h3>
-          <p>Google understands the following meta tags (and related items):</p>
           <ul>
-            <li>&lt;meta name="description"</li>
-            <li>&lt;title>The Title of the Page</li>
-            <li>&lt;meta name="robots"</li>
-            <li>&lt;meta name="googlebot"</li>
-            <li>&lt;meta name="google" content="nositelinkssearchbox"</li>
-            <li>&lt;meta name="google" content="notranslate"</li>
-            <li>&lt;meta name="google-site-verification"</li>
-            <li>&lt;meta http-equiv="Content-Type"</li>
-            <li>&lt;meta charset="</li>
-            <li>&lt;meta http-equiv="refresh"</li>
+            <li><code>&lt;meta name="description"</code></li>
+            <li><code>&lt;title>The Title of the Page</code></li>
+            <li><code>&lt;meta name="robots"</code></li>
+            <li><code>&lt;meta name="googlebot"</code></li>
+            <li><code>&lt;meta name="google" content="nositelinkssearchbox"</code></li>
+            <li><code>&lt;meta name="google" content="notranslate"</code></li>
+            <li><code>&lt;meta name="google-site-verification"</code></li>
+            <li><code>&lt;meta http-equiv="Content-Type"</code></li>
+            <li><code>&lt;meta charset="</code></li>
+            <li><code>&lt;meta http-equiv="refresh"</code></li>
           </ul>
         </section>
 
@@ -432,9 +483,9 @@
     &lt;?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
         <meta property="og:image" content="<?php echo $url; ?>" />
     &lt;?php } elseif ( has_post_thumbnail() && is_front_page() ) { ?>
-        <meta property="og:image" content="/wp-content/uploads/2015/01/VColony2.jpg" />
+        <meta property="og:image" content="/wp-content/uploads/2012/01/awesome-image--home.jpg" />
     &lt;?php } else { ?>
-        <meta property="og:image" content="/wp-content/themes/wordpress-bootstrap-child/library/img/Cats-In-My-Yard-Logo-1024.png" />
+        <meta property="og:image" content="/wp-content/uploads/2012/01/awesome-image.jpg" />
 &lt;?php }?>
           </code></pre>
         </section>
@@ -442,7 +493,7 @@
         <section style="text-align: left;" data-background="img/Lego-Uncle-Jim-at-Philly-City-Hall.jpg" data-background-position="center bottom">
           <div class="fragment">
             <h1 class="box" style="float:right;padding:20px;background: rgba(0, 0, 0, 0.9);width:50%;">Schema</h1>
-            <p style="color:#fff;background: rgba(0, 0, 0, 0.9);padding:20px;width:50%;float:right;">Schema.org is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond.</p>
+            <p style="color:#fff;background: rgba(0, 0, 0, 0.9);padding:20px;width:50%;float:right;"><a href="http://schema.org/">Schema.org</a> is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond.</p>
           </div>
         </section>
 
@@ -600,7 +651,11 @@
 
         <section>
           <h3>Widget</h3>
-          <p><a href="https://www.jamesdflynn.com/json-ld-schema-generator/">Generate your own JSON-LD</a> and add it in a widget</p>
+          <p>Generate your own JSON-LD and add it in a widget</p>
+          <ul>
+            <li><a href="https://www.google.com/webmasters/markup-helper/u/1/?hl=en">Google Structured Data Markup Helper</a></li>
+            <li><a href="https://www.jamesdflynn.com/json-ld-schema-generator/">JSON-LD Schema Markup Generator</a></li>
+          </ul>
           <pre><code>
     <script type='application/ld+json'>
     {
@@ -622,6 +677,14 @@
       }
     }
      </script>
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>Theme</h3>
+          <p>Add inline markeup to your custom theme</p>
+          <pre><code>
+
           </code></pre>
         </section>
 
