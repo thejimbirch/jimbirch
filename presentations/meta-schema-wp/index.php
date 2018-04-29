@@ -212,20 +212,20 @@
           </div>
         </section>
 
-        <section style="text-align: left;" data-background="https://upload.wikimedia.org/wikipedia/commons/f/f0/Card_Division_of_the_Library_of_Congress_3c18631u_original.jpg" data-background-position="center center" data-transition="side-in fade-out">
-          <div style="color:#fff;background: rgba(0, 0, 0, 0.9);padding:20px;width:50%;float:right;">People working in Card Division in the Library of Congress, Washington, D.C., 1910s or 1920s - <a href="https://en.wikipedia.org/wiki/Library_catalog">Image Source</a></div>
-        </section>
-
         <section style="text-align: left;" data-background="https://upload.wikimedia.org/wikipedia/commons/7/7e/Schlagwortkatalog.jpg" data-background-position="center top" data-transition="side-in fade-out">
           <div style="color:#fff;background: rgba(0, 0, 0, 0.9);padding:20px;width:50%;float:right;">The subject catalogue of the University Library of Graz. The card shown refers to a text by Hans Schleimer who made up the rules for this catalogue. - <a href="https://en.wikipedia.org/wiki/Library_catalog">Image Source</a></div>
         </section>
 
-        <section style="text-align: left;" data-background="https://upload.wikimedia.org/wikipedia/commons/c/cb/Librarian_at_the_card_files_at_a_senior_high_school_in_New_Ulm%2C_Minnesota.jpg" data-background-position="center top" data-transition="side-in fade-out">
-          <div style="color:#fff;background: rgba(0, 0, 0, 0.9);padding:20px;width:50%;float:right;">Librarian at the card files at a senior high school in New Ulm, Minnesota (1974) - <a href="https://en.wikipedia.org/wiki/Library_catalog">Image Source</a></div>
+        <section style="text-align: left;" data-background="https://upload.wikimedia.org/wikipedia/commons/f/f0/Card_Division_of_the_Library_of_Congress_3c18631u_original.jpg" data-background-position="center center" data-transition="side-in fade-out">
+          <div style="color:#fff;background: rgba(0, 0, 0, 0.9);padding:20px;width:50%;float:right;">People working in Card Division in the Library of Congress, Washington, D.C., 1910s or 1920s - <a href="https://en.wikipedia.org/wiki/Library_catalog">Image Source</a></div>
         </section>
 
         <section style="text-align: left;" data-background="https://upload.wikimedia.org/wikipedia/commons/5/51/Dynix-Main-Menu-via-Telnet.jpg" data-background-position="center center" data-transition="side-in fade-out">
           <div style="color:#fff;background: rgba(0, 0, 0, 0.9);padding:20px;width:50%;float:right;">Dynix, an early but popular and long-lasting online catalog - <a href="https://en.wikipedia.org/wiki/Library_catalog">Image Source</a></div>
+        </section>
+
+        <section style="text-align: left;" data-background="https://upload.wikimedia.org/wikipedia/commons/c/cb/Librarian_at_the_card_files_at_a_senior_high_school_in_New_Ulm%2C_Minnesota.jpg" data-background-position="center top" data-transition="side-in fade-out">
+          <div style="color:#fff;background: rgba(0, 0, 0, 0.9);padding:20px;width:50%;float:right;">Librarian at the card files at a senior high school in New Ulm, Minnesota (1974) - <a href="https://en.wikipedia.org/wiki/Library_catalog">Image Source</a></div>
         </section>
 
         <section>
@@ -493,6 +493,10 @@
           </code></pre>
         </section>
 
+        <section>
+          <blockquote class="imgur-embed-pub" lang="en" data-id="MKZwVkb"><a href="//imgur.com/MKZwVkb">Meta Cat</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+        </section>
+
         <section style="text-align: left;" data-background="img/Lego-Uncle-Jim-at-Philly-City-Hall.jpg" data-background-position="center bottom" data-transition="zoom">
           <div class="fragment">
             <h1 class="box" style="float:right;padding:20px;background: rgba(0, 0, 0, 0.9);width:50%;">Schema</h1>
@@ -730,7 +734,7 @@
         </section>
 
         <section>
-          <blockquote class="imgur-embed-pub" lang="en" data-id="MKZwVkb"><a href="//imgur.com/MKZwVkb">Meta Cat</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+          <iframe src="https://giphy.com/embed/bYUbS6XYDi3Ze" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cute-cats-bYUbS6XYDi3Ze">via GIPHY</a></p>
         </section>
 
         <section style="text-align: left;" data-background="img/Lego-Uncle-Jim-at-Sunset.jpg">
