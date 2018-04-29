@@ -10,7 +10,7 @@
     <meta property="og:url" content="http://jimbir.ch/presentations/meta-schema-wp/"/>
     <meta property="og:title" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | WordCamp Chicago 2018"/>
     <meta property="og:description" content="This session reviews implementing Schema.org schemas for structured data and current best practice meta tags in WordPress."/>
-    <meta property="og:image" content="img/meta-schema-wp-720.jpg"/>
+    <meta property="og:image" content="http://jimbir.ch/presentations/meta-schema-wp/img/meta-schema-wp-720.jpg"/>
     <meta name="twitter:site" content="@thejimbirch"/>
     <meta name="twitter:site:id" content="2989027096"/>
     <meta name="twitter:creator" content="@thejimbirch"/>
@@ -18,10 +18,10 @@
     <meta name="twitter:url" content="http://jimbir.ch/presentations/meta-schema-wp/"/>
     <meta name="twitter:title" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | WordCamp Chicago 2018"/>
     <meta name="twitter:description" content="This session reviews implementing Schema.org schemas for structured data and current best practice meta tags in WordPress."/>
-    <meta name="twitter:image:src" content="img/meta-schema-wp-720.jpg"/>
+    <meta name="twitter:image:src" content="http://jimbir.ch/presentations/meta-schema-wp/img/meta-schema-wp-720.jpg"/>
     <meta itemprop="name" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | WordCamp Chicago 2018"/>
     <meta itemprop="description" content="This session reviews implementing Schema.org schemas for structured data and current best practice meta tags in WordPress."/>
-    <meta itemprop="image" content="img/meta-schema-wp-720.jpg"/>
+    <meta itemprop="image" content="http://jimbir.ch/presentations/meta-schema-wp/img/meta-schema-wp-720.jpg"/>
     <meta name="author" content="Jim Birch">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
