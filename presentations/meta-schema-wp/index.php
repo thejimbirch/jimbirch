@@ -212,26 +212,26 @@
           </div>
         </section>
 
-        <section style="text-align: left;" data-background="https://upload.wikimedia.org/wikipedia/commons/f/f0/Card_Division_of_the_Library_of_Congress_3c18631u_original.jpg" data-background-position="center center">
+        <section style="text-align: left;" data-background="https://upload.wikimedia.org/wikipedia/commons/f/f0/Card_Division_of_the_Library_of_Congress_3c18631u_original.jpg" data-background-position="center center" data-transition="side-in fade-out">
           <div style="color:#fff;background: rgba(0, 0, 0, 0.9);padding:20px;width:50%;float:right;">People working in Card Division in the Library of Congress, Washington, D.C., 1910s or 1920s - <a href="https://en.wikipedia.org/wiki/Library_catalog">Image Source</a></div>
         </section>
 
-        <section style="text-align: left;" data-background="https://upload.wikimedia.org/wikipedia/commons/7/7e/Schlagwortkatalog.jpg" data-background-position="center top">
+        <section style="text-align: left;" data-background="https://upload.wikimedia.org/wikipedia/commons/7/7e/Schlagwortkatalog.jpg" data-background-position="center top" data-transition="side-in fade-out">
           <div style="color:#fff;background: rgba(0, 0, 0, 0.9);padding:20px;width:50%;float:right;">The subject catalogue of the University Library of Graz. The card shown refers to a text by Hans Schleimer who made up the rules for this catalogue. - <a href="https://en.wikipedia.org/wiki/Library_catalog">Image Source</a></div>
         </section>
 
-        <section style="text-align: left;" data-background="https://upload.wikimedia.org/wikipedia/commons/c/cb/Librarian_at_the_card_files_at_a_senior_high_school_in_New_Ulm%2C_Minnesota.jpg" data-background-position="center top">
+        <section style="text-align: left;" data-background="https://upload.wikimedia.org/wikipedia/commons/c/cb/Librarian_at_the_card_files_at_a_senior_high_school_in_New_Ulm%2C_Minnesota.jpg" data-background-position="center top" data-transition="side-in fade-out">
           <div style="color:#fff;background: rgba(0, 0, 0, 0.9);padding:20px;width:50%;float:right;">Librarian at the card files at a senior high school in New Ulm, Minnesota (1974) - <a href="https://en.wikipedia.org/wiki/Library_catalog">Image Source</a></div>
         </section>
 
-        <section style="text-align: left;" data-background="https://upload.wikimedia.org/wikipedia/commons/5/51/Dynix-Main-Menu-via-Telnet.jpg" data-background-position="center center">
+        <section style="text-align: left;" data-background="https://upload.wikimedia.org/wikipedia/commons/5/51/Dynix-Main-Menu-via-Telnet.jpg" data-background-position="center center" data-transition="side-in fade-out">
           <div style="color:#fff;background: rgba(0, 0, 0, 0.9);padding:20px;width:50%;float:right;">Dynix, an early but popular and long-lasting online catalog - <a href="https://en.wikipedia.org/wiki/Library_catalog">Image Source</a></div>
         </section>
 
         <section>
           <h2 class="box"><a href="https://www.w3.org/TR/html/document-metadata.html#document-metadata">W3C HTML 5.2 Specification</a></h2>
           <h3>4.2. Document metadata</h3>
-          <img src="img/w3c.svg" alt="W3C logo" style="width:240px;height:auto;border:none;border-radius:5px;">
+          <img src="img/W3C.svg" alt="W3C logo" style="width:240px;height:auto;border:none;border-radius:5px;">
           <div class="fragment">
             <p><code>
               &lt;head>&lt;/head><br>
