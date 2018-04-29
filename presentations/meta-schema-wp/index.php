@@ -1,81 +1,81 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>Meta and Schema: Defining the Content about your Content | Web Development Presentation | WordCamp Chicago 2018</title>
-		<meta name="description" content="This session will review implementing Schema.org schemas for structured data and current best practice meta tags in WordPress."/>
-		<link rel="canonical" href="http://jimbir.ch/presentations/meta-schema-wp/"/>
-		<meta property="og:site_name" content="Jim Birch"/>
-		<meta property="og:type" content="public_figure"/>
-		<meta property="og:url" content="http://jimbir.ch/presentations/meta-schema-wp/"/>
-		<meta property="og:title" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | WordCamp Chicago 2018"/>
-		<meta property="og:description" content="This session will review implementing Schema.org schemas for structured data and current best practice meta tags in WordPress."/>
-		<meta property="og:image" content="img/meta-schema-wp-720.jpg"/>
-		<meta name="twitter:site" content="@thejimbirch"/>
-		<meta name="twitter:site:id" content="2989027096"/>
-		<meta name="twitter:creator" content="@thejimbirch"/>
-		<meta name="twitter:creator:id" content="2989027096"/>
-		<meta name="twitter:url" content="http://jimbir.ch/presentations/meta-schema-wp/"/>
-		<meta name="twitter:title" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | WordCamp Chicago 2018"/>
-		<meta name="twitter:description" content="This session will review implementing Schema.org schemas for structured data and current best practice meta tags in WordPress."/>
-		<meta name="twitter:image:src" content="img/meta-schema-wp-720.jpg"/>
-		<meta itemprop="name" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | WordCamp Chicago 2018"/>
-		<meta itemprop="description" content="This session will review implementing Schema.org schemas for structured data and current best practice meta tags in WordPress."/>
-		<meta itemprop="image" content="img/img/meta-schema-wp-720.jpg"/>
-		<meta name="author" content="Jim Birch">
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/white.css" id="theme">
-		<!-- Code syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-		<style type="text/css">
-			.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
-				background: rgba(0, 0, 0, 0.7) none repeat scroll 0 0;
-				color: #fff;
-				text-shadow: 1px 1px 1px rgba(0,0,0,0.4)
-			}
+  <head>
+    <meta charset="utf-8">
+    <title>Meta and Schema: Defining the Content about your Content | Web Development Presentation | WordCamp Chicago 2018</title>
+    <meta name="description" content="This session reviews implementing Schema.org schemas for structured data and current best practice meta tags in WordPress."/>
+    <link rel="canonical" href="http://jimbir.ch/presentations/meta-schema-wp/"/>
+    <meta property="og:site_name" content="Jim Birch"/>
+    <meta property="og:type" content="public_figure"/>
+    <meta property="og:url" content="http://jimbir.ch/presentations/meta-schema-wp/"/>
+    <meta property="og:title" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | WordCamp Chicago 2018"/>
+    <meta property="og:description" content="This session reviews implementing Schema.org schemas for structured data and current best practice meta tags in WordPress."/>
+    <meta property="og:image" content="img/meta-schema-wp-720.jpg"/>
+    <meta name="twitter:site" content="@thejimbirch"/>
+    <meta name="twitter:site:id" content="2989027096"/>
+    <meta name="twitter:creator" content="@thejimbirch"/>
+    <meta name="twitter:creator:id" content="2989027096"/>
+    <meta name="twitter:url" content="http://jimbir.ch/presentations/meta-schema-wp/"/>
+    <meta name="twitter:title" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | WordCamp Chicago 2018"/>
+    <meta name="twitter:description" content="This session reviews implementing Schema.org schemas for structured data and current best practice meta tags in WordPress."/>
+    <meta name="twitter:image:src" content="img/meta-schema-wp-720.jpg"/>
+    <meta itemprop="name" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | WordCamp Chicago 2018"/>
+    <meta itemprop="description" content="This session reviews implementing Schema.org schemas for structured data and current best practice meta tags in WordPress."/>
+    <meta itemprop="image" content="img/meta-schema-wp-720.jpg"/>
+    <meta name="author" content="Jim Birch">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css" id="theme">
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+    <style type="text/css">
+      .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+        background: rgba(0, 0, 0, 0.7) none repeat scroll 0 0;
+        color: #fff;
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.4)
+      }
 
-			.reveal .box a,
-			.fixed-footer a,
-			.reveal h1 a,
+      .reveal .box a,
+      .fixed-footer a,
+      .reveal h1 a,
       .reveal h2 a,
       .reveal h3 a,
       .reveal h4 a {
-		    color: #9dcccc;
-			}
+        color: #9dcccc;
+      }
 
-			.reveal .box a:hover,
-			.fixed-footer a:hover,
-			.reveal h1 a {
-		    color: #fff;
-			}
+      .reveal .box a:hover,
+      .fixed-footer a:hover,
+      .reveal h1 a {
+        color: #fff;
+      }
 
-			.backgrounds .slide-background {
-				background-position: bottom center;
-			}
+      .backgrounds .slide-background {
+        background-position: bottom center;
+      }
 
-			.reveal .controls {
-				bottom: 14px;
-			}
+      .reveal .controls {
+        bottom: 14px;
+      }
 
-			.navigate-down, .navigate-up {
-				display: none;
-			}
+      .navigate-down, .navigate-up {
+        display: none;
+      }
 
-			.fixed-footer {
+      .fixed-footer {
         color: #9dcccc;
         position: fixed;
         bottom: 0;
@@ -86,19 +86,19 @@
         background: rgba(0, 0, 0, 0.7) none repeat scroll 0 0;
       }
 
-			.fixed-footer > div,
-			.fixed-footer > div > a {
-				font-size: 16px;
+      .fixed-footer > div,
+      .fixed-footer > div > a {
+        font-size: 16px;
         padding: 10px;
-			}
+      }
 
-			@media print {
-		    .fixed-footer {
-		        display: none;
-		    }
-			}
+      @media print {
+        .fixed-footer {
+            display: none;
+        }
+      }
 
-			.reveal .columns {
+      .reveal .columns {
         clear: left;
       }
 
@@ -123,52 +123,51 @@
         width: 24%;
       }
 
-			code {
-				color: #FF741D;
-			}
+      code {
+        color: #FF741D;
+      }
 
-			.reveal pre {
-				margin: 0 auto 0 -12.5%;
-				width: 125%;
-			}
+      .reveal pre {
+        margin: 0 auto 0 -12.5%;
+        width: 125%;
+      }
 
-			.reveal pre code {
-				max-height: none;
-			}
+      .reveal pre code {
+        max-height: none;
+      }
+    </style>
 
-		</style>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-9711088-12', 'auto');
+      ga('send', 'pageview');
 
-		  ga('create', 'UA-9711088-12', 'auto');
-		  ga('send', 'pageview');
-
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="fixed-footer">
-				<div style="float:left;"><a href="http://jimbir.ch/presentations/meta-schema-wp/">jimbir.ch/meta-schema-wp</a> <a href="https://twitter.com/search?q=%23WCCHI">#WCCHI</a></div>
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="fixed-footer">
+        <div style="float:left;"><a href="http://jimbir.ch/presentations/meta-schema-wp/">jimbir.ch/meta-schema-wp</a> <a href="https://twitter.com/search?q=%23WCCHI">#WCCHI</a></div>
         <div style="float:right;"><a href="http://www.twitter.com/thejimbirch" title="@thejimbirch">@thejimbirch</a></div>
-			</div>
-			<div class="slides">
-				<section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Iceland.jpg" data-transition="zoom">
-					<h1 style="font-size:2.25em;padding-left:20px;width:75%">Meta and Schema</h1>
+      </div>
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Iceland.jpg" data-transition="zoom">
+          <h1 style="font-size:2.25em;padding-left:20px;">Meta and Schema</h1>
           <h2 style="padding-left:20px;width:70%">Defining the Content about your Content</h1>
-					<div style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.7);padding-left:20px;width:70%">
-						<img src="img/wordcamp-chicago-2018.png" alt="WordCamp Chicago 2018" style="float: left; width: 130px; padding:10px;height: auto;"><br>
-						<div class="box" style="float: left;padding-left:20px;padding-bottom:20px;margin-top:-30px">
-							<a href="http://jimbir.ch">Jim Birch</a><br>
-							<a href="http://twitter.com/thejimbirch">@thejimbirch</a><br>
-							<a href="http://jimbir.ch/presentations/meta-schema-wp/">jimbir.ch/meta-schema-wp</a>
-						</div>
-					</div>
-				</section>
+          <div style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.7);padding-left:20px;width:70%">
+            <img src="img/wordcamp-chicago-2018.png" alt="WordCamp Chicago 2018" style="float: left; width: 130px; padding:10px;height: auto;"><br>
+            <div class="box" style="float: left;padding-left:20px;padding-bottom:20px;margin-top:-30px">
+              <a href="http://jimbir.ch">Jim Birch</a><br>
+              <a href="http://twitter.com/thejimbirch">@thejimbirch</a><br>
+              <a href="http://jimbir.ch/presentations/meta-schema-wp/">jimbir.ch/meta-schema-wp</a>
+            </div>
+          </div>
+        </section>
 
         <section>
           <h3>We know how our website looks on our server</h3>
@@ -176,6 +175,7 @@
         </section>
 
         <section>
+          <h3>How does it look on others?</h3>
           <img src="img/meta-images-and-logos.jpg" alt="Screenshots of pages shared on social networks and search engine results">
         </section>
 
@@ -205,12 +205,12 @@
           </div>
         </section>
 
-				<section style="text-align: left;" data-background="img/Lego-Uncle-Jim-at-MidCamp.jpg" data-background-position="center top">
-					<div class="fragment">
-						<h1 class="box" style="float:right;padding:20px;background: rgba(0, 0, 0, 0.9);width:50%;">Meta</h1>
-						<p style="color:#fff;background: rgba(0, 0, 0, 0.9);padding:20px;width:50%;float:right;">Meta (from the Greek preposition and prefix meta- (μετά-) meaning "after", or "beyond") is a prefix used in English to indicate a concept which is an abstraction behind another concept, used to complete or add to the latter. - <a href="https://en.wikipedia.org/wiki/Meta">Wikipedia</a></p>
-					</div>
-				</section>
+        <section style="text-align: left;" data-background="img/Lego-Uncle-Jim-at-MidCamp.jpg" data-background-position="center top" data-transition="zoom">
+          <div class="fragment">
+            <h1 class="box" style="float:right;padding:20px;background: rgba(0, 0, 0, 0.9);width:50%;">Meta</h1>
+            <p style="color:#fff;background: rgba(0, 0, 0, 0.9);padding:20px;width:50%;float:right;">Meta (from the Greek preposition and prefix meta- (μετά-) meaning "after", or "beyond") is a prefix used in English to indicate a concept which is an abstraction behind another concept, used to complete or add to the latter. - <a href="https://en.wikipedia.org/wiki/Meta">Wikipedia</a></p>
+          </div>
+        </section>
 
         <section style="text-align: left;" data-background="https://upload.wikimedia.org/wikipedia/commons/f/f0/Card_Division_of_the_Library_of_Congress_3c18631u_original.jpg" data-background-position="center center">
           <div style="color:#fff;background: rgba(0, 0, 0, 0.9);padding:20px;width:50%;float:right;">People working in Card Division in the Library of Congress, Washington, D.C., 1910s or 1920s - <a href="https://en.wikipedia.org/wiki/Library_catalog">Image Source</a></div>
@@ -228,11 +228,11 @@
           <div style="color:#fff;background: rgba(0, 0, 0, 0.9);padding:20px;width:50%;float:right;">Dynix, an early but popular and long-lasting online catalog - <a href="https://en.wikipedia.org/wiki/Library_catalog">Image Source</a></div>
         </section>
 
-				<section>
-					<h2 class="box"><a href="https://www.w3.org/TR/html/document-metadata.html#document-metadata">W3C HTML 5.2 Specification</a></h2>
+        <section>
+          <h2 class="box"><a href="https://www.w3.org/TR/html/document-metadata.html#document-metadata">W3C HTML 5.2 Specification</a></h2>
           <h3>4.2. Document metadata</h3>
           <img src="img/w3c.svg" alt="W3C logo" style="width:240px;height:auto;border:none;border-radius:5px;">
-					<div class="fragment">
+          <div class="fragment">
             <p><code>
               &lt;head>&lt;/head><br>
               &lt;title>&lt;/title><br>
@@ -242,7 +242,7 @@
               &lt;style>&lt;/style>
             </code></p>
           </div>
-				</section>
+        </section>
 
         <section>
           <h3><code>&lt;head>&lt;/head></code></h3>
@@ -318,7 +318,7 @@
           <p><code>
             &lt;meta
             <span class="fragment">name="description" </span>
-            <span class="fragment">content="This session will review implementing Schema.org schemas for structured data and current best practice meta tags in WordPress."></span>
+            <span class="fragment">content="This session reviews implementing Schema.org schemas for structured data and current best practice meta tags in WordPress."></span>
             </code>
           </p>
         </section>
@@ -460,7 +460,7 @@
           </ul>
         </section>
 
-        <section style="text-align: left;" data-background="img/Lego-Uncle-Jim-by-the-Iceland-Map.jpg" data-background-position="center bottom">
+        <section style="text-align: left;" data-background="img/Lego-Uncle-Jim-by-the-Iceland-Map.jpg" data-background-position="center bottom" data-transition="zoom">
           <h2 style="padding:20px;width:60%;">Implementing Meta Tags in WordPress</h2>
         </section>
 
@@ -488,7 +488,7 @@
           </code></pre>
         </section>
 
-        <section style="text-align: left;" data-background="img/Lego-Uncle-Jim-at-Philly-City-Hall.jpg" data-background-position="center bottom">
+        <section style="text-align: left;" data-background="img/Lego-Uncle-Jim-at-Philly-City-Hall.jpg" data-background-position="center bottom" data-transition="zoom">
           <div class="fragment">
             <h1 class="box" style="float:right;padding:20px;background: rgba(0, 0, 0, 0.9);width:50%;">Schema</h1>
             <p style="color:#fff;background: rgba(0, 0, 0, 0.9);padding:20px;width:50%;float:right;"><a href="http://schema.org/">Schema.org</a> is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond.</p>
@@ -574,7 +574,7 @@
           <p><a href="https://developers.google.com/search/docs/guides/search-gallery">Google Search Gallery</a></p>
         </section>
 
-        <section style="text-align: left;" data-background="img/Lego-Uncle-Jim-Diane-and-the-Cats.jpg" data-background-position="center bottom">
+        <section style="text-align: left;" data-background="img/Lego-Uncle-Jim-Diane-and-the-Cats.jpg" data-background-position="center bottom" data-transition="zoom">
           <h2 style="padding:20px;width:45%;">Implementing Schema.org in WordPress</h2>
         </section>
 
@@ -733,49 +733,49 @@
           <blockquote class="imgur-embed-pub" lang="en" data-id="MKZwVkb"><a href="//imgur.com/MKZwVkb">Meta Cat</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
         </section>
 
-				<section style="text-align: left;" data-background="img/Lego-Uncle-Jim-at-Sunset.jpg">
-					<h1 style="padding-left:20px;">The End</h1>
-					<h3 style="padding-left:20px;">Continuing the conversation:</h3>
-					<div style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.7);padding-left:20px;width:70%">
+        <section style="text-align: left;" data-background="img/Lego-Uncle-Jim-at-Sunset.jpg">
+          <h1 style="padding-left:20px;">The End</h1>
+          <h3 style="padding-left:20px;">Continuing the conversation:</h3>
+          <div style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.7);padding-left:20px;width:70%">
             <img src="img/wordcamp-chicago-2018.png" alt="WordCamp Chicago 2018" style="float: left; width: 130px; padding:10px;height: auto;"><br>
             <div class="box" style="float: left;padding-left:20px;margin-top:-30px">
               <a href="http://jimbir.ch">Jim Birch</a><br>
               <a href="http://twitter.com/thejimbirch">@thejimbirch</a><br>
               <a href="http://jimbir.ch/presentations/meta-schema-wp/">jimbir.ch/meta-schema-wp</a>
             </div>
-				</section>
+        </section>
 
-			</div>
+      </div>
 
-		</div>
+    </div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
 
-		<script>
+    <script>
 
-			// Full list of configuration options available at:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
 
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
 
-				// Optional reveal.js plugins
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
-			});
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true }
+        ]
+      });
 
-		</script>
+    </script>
 
-	</body>
+  </body>
 </html>
