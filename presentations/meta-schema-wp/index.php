@@ -199,7 +199,7 @@
                 <li><a href="https://developers.facebook.com/tools/debug/">Facebook Debugger</a></li>
                 <li><a href="http://developers.pinterest.com/rich_pins/validator/">Pinterest Validator</a></li>
                 <li><a href="https://cards-dev.twitter.com/validator" rel="nofollow">Twitter Card validator</a></li>
-                <li><a href="https://developers.google.com/search/docs/guides/search-gallery">Google Search Gallery</a></li>
+                <li><a href="https://search.google.com/structured-data/testing-tool/u/0/">Google Structured Data Testing Tool</a></li>
               </ul>
             </div>
           </div>
