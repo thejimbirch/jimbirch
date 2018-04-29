@@ -466,6 +466,11 @@
 
         <section>
           <h3><a href="https://yoast.com/wordpress/plugins/seo/">Yoast SEO Plugin</a></h3>
+          <img src="img/yoast-meta.png" style="width: 75%;">
+        </section>
+
+        <section>
+          <h3><a href="https://yoast.com/wordpress/plugins/seo/">Yoast SEO Plugin</a></h3>
           <img src="img/yoast-open-graph.png" style="width: 75%;">
         </section>
 
@@ -586,11 +591,6 @@
         <section>
           <h3><a href="https://yoast.com/wordpress/plugins/seo/">Yoast SEO Plugin</a></h3>
           <img src="img/yoast-social-sameas.png" style="width: 75%;">
-        </section>
-
-        <section>
-          <h3><a href="https://yoast.com/wordpress/plugins/seo/">Yoast SEO Plugin</a></h3>
-          <img src="img/yoast-twitter.png" style="width: 75%;">
         </section>
 
         <section>
