@@ -54,7 +54,7 @@
       .reveal h2 a,
       .reveal h3 a,
       .reveal h4 a {
-        color: #9dcccc;
+        color: #97d217;
       }
 
       .reveal .box a:hover,
@@ -76,20 +76,42 @@
       }
 
       .fixed-footer {
-        color: #9dcccc;
+        color: #428440;
         position: fixed;
         bottom: 0;
         left: 0;
         width: 100%;
         margin: 0 auto;
         z-index: 1000;
-        background: rgba(0, 0, 0, 0.7) none repeat scroll 0 0;
+        background: rgba(255, 255, 255, 0.7) none repeat scroll 0 0;
       }
 
-      .fixed-footer > div,
-      .fixed-footer > div > a {
+      .fixed-footer .fixed-footer__first {
+        float: left;
         font-size: 16px;
-        padding: 10px;
+        padding: 14px 0 8px 20px;
+      }
+
+      .fixed-footer .fixed-footer__first a {
+        margin-right: 20px;
+      }
+
+      .fixed-footer .fixed-footer__second {
+        float: right;
+        padding: 4px 20px 2px 0;
+      }
+
+      .fixed-footer > div > a {
+        color: #428440;
+      }
+
+      .fixed-footer > div > a:hover {
+        color: #00553f;
+      }
+
+      .fixed-footer > div img {
+        height: 32px;
+        width: auto;
       }
 
       @media print {
@@ -151,16 +173,16 @@
   <body>
     <div class="reveal">
       <div class="fixed-footer">
-        <div style="float:left;"><a href="http://jimbir.ch/presentations/meta-schema-drupal/">jimbir.ch/meta-schema-drupal</a> <a href="https://twitter.com/search?q=%23WCCHI">#WCCHI</a></div>
-        <div style="float:right;"><a href="http://www.twitter.com/thejimbirch" title="@thejimbirch">@thejimbirch</a></div>
+        <div class="fixed-footer__first"><a href="http://jimbir.ch/presentations/meta-schema-drupal/">jimbir.ch/meta-schema-drupal</a> <a href="http://www.twitter.com/thejimbirch" title="@thejimbirch">@thejimbirch</a> <a href="https://twitter.com/search?q=%23D4DBoston">#D4DBoston</a></div>
+        <div class="fixed-footer__second"><a href="https://www.kanopistudios.com/"><img src="img/kanopi-logo.png" alt="Kanopi Studios"></a></div>
       </div>
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
-        <section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Iceland.jpg" data-transition="zoom">
-          <h1 style="font-size:2.25em;padding-left:20px;">Meta and Schema</h1>
-          <h2 style="padding-left:20px;width:70%">Defining the Content about your Content</h1>
-          <div style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.7);padding-left:20px;width:70%">
-            <img src="img/wordcamp-chicago-2018.png" alt="Design 4 Drupal 2018" style="float: left; width: 130px; padding:10px;height: auto;"><br>
+        <section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-the-infinity-pool.jpg" data-transition="zoom">
+          <h1 style="font-size:2em;padding-left:20px;width:72%;">Meta and Schema</h1>
+          <h2 style="padding-left:20px;width:72%;">Defining the Content about your Content</h1>
+          <div style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.7);padding-left:20px;width:72%">
+            <img src="img/D4D.svg" alt="Design 4 Drupal 2018" style="float: left; width: 130px; padding:10px;height: auto;"><br>
             <div class="box" style="float: left;padding-left:20px;padding-bottom:20px;margin-top:-30px">
               <a href="http://jimbir.ch">Jim Birch</a><br>
               <a href="http://twitter.com/thejimbirch">@thejimbirch</a><br>
@@ -740,8 +762,8 @@
         <section style="text-align: left;" data-background="img/Lego-Uncle-Jim-at-Sunset.jpg">
           <h1 style="padding-left:20px;">The End</h1>
           <h3 style="padding-left:20px;">Continuing the conversation:</h3>
-          <div style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.7);padding-left:20px;width:70%">
-            <img src="img/wordcamp-chicago-2018.png" alt="Design 4 Drupal 2018" style="float: left; width: 130px; padding:10px;height: auto;"><br>
+          <div style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.7);padding-left:20px;width:75%">
+            <img src="img/D4D.svg" alt="Design 4 Drupal 2018" style="float: left; width: 130px; padding:10px;height: auto;"><br>
             <div class="box" style="float: left;padding-left:20px;margin-top:-30px">
               <a href="http://jimbir.ch">Jim Birch</a><br>
               <a href="http://twitter.com/thejimbirch">@thejimbirch</a><br>
