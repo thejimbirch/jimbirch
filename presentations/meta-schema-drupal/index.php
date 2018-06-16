@@ -11,6 +11,7 @@
     <meta property="og:title" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | Design 4 Drupal 2018"/>
     <meta property="og:description" content="This session reviews implementing Schema.org schemas for structured data and current best practice meta tags in Drupal."/>
     <meta property="og:image" content="http://jimbir.ch/presentations/meta-schema-drupal/img/meta-schema-drupal-720.jpg"/>
+    <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:site" content="@thejimbirch"/>
     <meta name="twitter:site:id" content="2989027096"/>
     <meta name="twitter:creator" content="@thejimbirch"/>
