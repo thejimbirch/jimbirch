@@ -194,7 +194,7 @@
 
         <section>
           <h3>We know how our website looks on our server</h3>
-          <img src="img/wordcamp-chicago-website.png" alt="Screenshot of Design 4 Drupal 2018 Home page">
+          <img src="img/post-on-my-site.jpg" alt="Screenshot of this presentations's Home page">
         </section>
 
         <section>
@@ -419,7 +419,7 @@
 
         <section>
           <h3><a href="http://ogp.me/">Open Graph Protocol</a></h3>
-          <img src="img/result-facebook.png" alt="Facebook card" style="width:360px;">
+          <img src="img/post-on-facebook.png" alt="Facebook card" style="width:360px;">
           <p>The Open Graph protocol enables any web page to become a rich object in a social graph. Used by Facebook, LinkedIn, Pinterest, &amp; Google+</p>
         </section>
 
@@ -462,7 +462,7 @@
 
         <section>
           <h3><a href="https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards">Twitter Cards</a></h3>
-          <img src="img/result-twitter.png" alt="Twitter card" style="width:360px;">
+          <img src="img/post-on-twitter.png" alt="Twitter card" style="width:360px;">
           <p>With Twitter Cards, you can attach rich photos, videos and media experiences to Tweets, helping to drive traffic to your website.</p>
         </section>
 
