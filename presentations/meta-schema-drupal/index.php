@@ -165,6 +165,12 @@
       .reveal pre code {
         max-height: none;
       }
+
+      section.image--byline.present {
+        bottom: 0;
+        top: auto !important;
+        text-align: right;
+      }
     </style>
 
     <script>
@@ -411,16 +417,16 @@
         <section>
           <h3><a href="https://support.google.com/webmasters/answer/79812?hl=en">Meta tags that Google understands</a></h3>
           <ul>
-            <li><code>&lt;meta name="description"</code></li>
             <li><code>&lt;title>The Title of the Page</code></li>
-            <li><code>&lt;meta name="robots"</code></li>
-            <li><code>&lt;meta name="googlebot"</code></li>
-            <li><code>&lt;meta name="google" content="nositelinkssearchbox"</code></li>
-            <li><code>&lt;meta name="google" content="notranslate"</code></li>
-            <li><code>&lt;meta name="google-site-verification"</code></li>
-            <li><code>&lt;meta http-equiv="Content-Type"</code></li>
-            <li><code>&lt;meta charset="</code></li>
-            <li><code>&lt;meta http-equiv="refresh"</code></li>
+            <li><code>name="description"</code></li>
+            <li><code>name="robots"</code></li>
+            <li><code>name="googlebot"</code></li>
+            <li><code>name="google" content="nositelinkssearchbox"</code></li>
+            <li><code>name="google" content="notranslate"</code></li>
+            <li><code>name="google-site-verification"</code></li>
+            <li><code>http-equiv="Content-Type"</code></li>
+            <li><code>charset="</code></li>
+            <li><code>http-equiv="refresh"</code></li>
           </ul>
         </section>
 
@@ -495,12 +501,17 @@
         </section>
 
         <section>
-          <h3><a href="https://yoast.com/Drupal/plugins/seo/">Metatag</a></h3>
-          <img src="img/drupal-metatag-module--defaults.png" style="width: 75%;">
+          <h3><a href="https://www.drupal.org/project/metatag">Metatag Module</a></h3>
+          <img src="img/drupal-metatag-module--modules.png" style="width: 75%;">
         </section>
 
         <section>
-          <blockquote class="imgur-embed-pub" lang="en" data-id="MKZwVkb"><a href="//imgur.com/MKZwVkb">Meta Cat</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+          <h3><a href="https://www.drupal.org/project/metatag">Metatag Module - Defaults</a></h3>
+          <img src="img/drupal-metatag-module--defaults.png" style="width: 75%;">
+        </section>
+
+        <section data-background="http://i.imgur.com/MKZwVkb.gif" class="image--byline">
+          <small><a href="https://imgur.com/MKZwVkb">Image via Imgur</a></small>
         </section>
 
         <section style="text-align: left;" data-background="img/Lego-Uncle-Jim-at-Philly-City-Hall.jpg" data-background-position="center bottom" data-transition="zoom">
@@ -594,144 +605,8 @@
         </section>
 
         <section>
-          <h3><a href="https://yoast.com/Drupal/plugins/seo/">Yoast SEO Plugin</a></h3>
-          <img src="img/yoast-knowledge-graph.png" style="width: 75%;">
-        </section>
-
-        <section>
-          <h3><a href="https://yoast.com/Drupal/plugins/seo/">Yoast SEO Plugin</a></h3>
-          <img src="img/yoast-social-sameas.png" style="width: 75%;">
-        </section>
-
-        <section>
-          <h3><a href="https://Drupal.org/plugins/schema/">Schema Plugin</a></h3>
-          <p>Supports these schema.org types, and can be extended.</p>
-          <ul style="font-size:70%;">
-            <li>
-              Article
-              <ul>
-                <li>General</li>
-                <li>BlogPosting</li>
-                <li>NewsArticle</li>
-                <li>Report</li>
-                <li>ScholarlyArticle</li>
-                <li>TechArticle</li>
-              </ul>
-            </li>
-            <li>Blog (for Blog posts list page)</li>
-            <li>BreadcrumbList (for Breadcrumbs)</li>
-            <li>CollectionPage (for Categories)</li>
-            <li>AboutPage (for the about page)</li>
-            <li>ContactPage (for the contact page)</li>
-            <li>Person (author archive)</li>
-          </ul>
-        </section>
-
-        <section>
-          <h3><a href="https://Drupal.org/plugins/schema/">Schema Plugin</a></h3>
-          <img src="img/schema-plugin-general.png" style="width: 75%;">
-        </section>
-
-        <section>
-          <h3><a href="https://Drupal.org/plugins/schema/">Schema Plugin</a></h3>
-          <img src="img/schema-plugin-content.png" style="width: 75%;">
-        </section>
-
-        <section>
-          <h3><a href="https://Drupal.org/plugins/schema/">Schema Plugin</a></h3>
-          <img src="img/schema-plugin-knowledge-graph.png" style="width: 75%;">
-        </section>
-
-        <section>
-          <h3><a href="https://Drupal.org/plugins/schema/">Schema Plugin</a></h3>
-          <img src="img/schema-plugin-search-results.png" style="width: 75%;">
-        </section>
-
-        <section>
-          <h3><a href="https://Drupal.org/plugins/schema/">Schema Plugin</a></h3>
-          <img src="img/schema-plugin-types.png" style="width: 75%;">
-        </section>
-
-        <section>
-          <h3><a href="https://Drupal.org/plugins/schema/">Schema Plugin</a></h3>
-          <img src="img/schema-plugin-add-new-type.png" style="width: 75%;">
-        </section>
-
-        <section>
-          <h3>Widget</h3>
-          <p>Generate your own JSON-LD and add it in a widget</p>
-          <ul>
-            <li><a href="https://www.google.com/webmasters/markup-helper/u/1/?hl=en">Google Structured Data Markup Helper</a></li>
-            <li><a href="https://www.jamesdflynn.com/json-ld-schema-generator/">JSON-LD Schema Markup Generator</a></li>
-          </ul>
-          <pre><code>
-    <script type='application/ld+json'>
-    {
-      "@context": "http://www.schema.org",
-      "@type": "FoodEstablishment",
-      "name": "Yummy Food Place",
-      "url": "http://www.yummyfoodplace.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "123 4th Street",
-        "addressLocality": "Chicago",
-        "addressRegion": "IL",
-        "postalCode": "60647",
-        "addressCountry": "USA"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+1-312-867-5309"
-      }
-    }
-     </script>
-          </code></pre>
-        </section>
-
-        <section>
-          <h3>Theme</h3>
-          <p>Add inline markup to your custom theme</p>
-          <pre><code>
-    <div itemscope itemtype="http://schema.org/Product">
-      <div class="content--standard">
-        <div class="content--standard__image">
-          {% if content.field_image_product|render %}
-            <span itemprop="image">
-              {{ content.field_image_product }}
-            </span>
-          {% endif %}
-        </div>
-        <div class="content--standard__content">
-          {{ title_prefix }}
-            <h1 itemprop="name">{{ label }}</h1>
-          {{ title_suffix }}
-          {% if content.body|render %}
-            <div itemprop="description">
-              {{ content.body }}
-            </div>
-          {% endif %}
-          <ul>
-            {% if content.field_ref_producer|render %}
-              <li>Producer:
-                <span itemprop="brand" itemscope itemtype="http://schema.org/Brand">
-                  <span itemprop="name">
-                    {{ content.field_ref_producer }}
-                  </span>
-                </span>
-              </li>
-            {% endif %}
-            {% if content.field_sku|render %}
-              <li>SKU:
-                <span itemprop="sku">
-                  {{ content.field_sku }}
-                </span>
-              </li>
-            {% endif %}
-          </ul>
-        </div>
-      </div>
-    </div>
-          </code></pre>
+          <h3><a href="https://www.drupal.org/project/schema_metatag">Schema.org Metatag Module</a></h3>
+          <img src="img/drupal-schema-org-metatag-module--modules.png">
         </section>
 
         <section>
@@ -739,8 +614,8 @@
           <p><a href="https://search.google.com/structured-data/testing-tool/u/0/">Google Structured Data Testing Tool</a></p>
         </section>
 
-        <section>
-          <iframe src="https://giphy.com/embed/bYUbS6XYDi3Ze" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cute-cats-bYUbS6XYDi3Ze">via GIPHY</a></p>
+        <section data-background="https://media.giphy.com/media/bYUbS6XYDi3Ze/giphy.gif" class="image--byline">
+          <small><a href="https://giphy.com/gifs/cute-cats-bYUbS6XYDi3Ze">Image via GIPHY</a></small>
         </section>
 
         <section style="text-align: left;" data-background="img/Lego-Uncle-Jim-at-the-infinity-pool-2.jpg">
