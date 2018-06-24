@@ -171,6 +171,10 @@
         top: auto !important;
         text-align: right;
       }
+
+      .diff .hljs-deletion, .hljs-string, .hljs-tag .hljs-value, .hljs-preprocessor, .hljs-pragma, .hljs-built_in, .sql .hljs-aggregate, .hljs-javadoc, .smalltalk .hljs-class, .smalltalk .hljs-localvars, .smalltalk .hljs-array, .css .hljs-rules .hljs-value, .hljs-attr_selector, .hljs-pseudo, .apache .hljs-cbracket, .tex .hljs-formula, .coffeescript .hljs-attribute {
+        color: #fff;
+      }
     </style>
 
     <script>
@@ -506,8 +510,105 @@
         </section>
 
         <section>
-          <h3><a href="https://www.drupal.org/project/metatag">Metatag Module - Defaults</a></h3>
-          <img src="img/drupal-metatag-module--defaults.png" style="width: 75%;">
+          <h3>Metatag Defaults</h3>
+          <ul style="font-size: 75%;">
+            <li>Set any meta tag for all instances of the entity</li>
+            <li>Can be attached to any entities</li>
+            <li>Children inherent the settings of parent (Cascading)</li>
+            <li>Use Tokens to set values dynamically from entities</li>
+          </ul>
+          <img src="img/drupal-metatag-module--defaults.png" style="width: 50%;" alt="Metatag defaults">
+        </section>
+
+        <section>
+          <h3>Metatag Form</h3>
+          <img src="img/drupal-metatag-edit-form.png" alt="Metatag form" style="width: 75%;">
+        </section>
+
+        <section>
+          <h3>Settings</h3>
+          <img src="img/drupal-meta-tag-content-settings.png" alt="Drupal metatag content field settings" style="width: 75%;">
+        </section>
+
+        <section>
+          <h3>Metatag Config</h3>
+          <pre><code style="font-size:85%;line-height:1.25">
+    langcode: en
+    status: true
+    dependencies: {  }
+    id: node
+    label: Content
+    tags:
+      title: '[node:title] | [site:name]'
+      image_src: '[node:field_image:entity:image]'
+      description: '[node:summary]'
+      og_image_height: '[node:field_image:entity:image:height]'
+      og_type: article
+      og_image: '[node:field_image:entity:image]'
+      og_description: '[node:summary]'
+      article_modified_time: '[node:changed:custom:c]'
+      og_updated_time: '[node:changed:custom:c]'
+      og_title: '[node:title] | [site:name]'
+      og_image_width: '[node:field_image:entity:image:width]'
+      og_image_type: '[node:field_image:entity:image:mimetype]'
+      article_published_time: '[node:changed:custom:c]'
+      twitter_cards_image: '[node:field_image:entity:image]'
+      twitter_cards_title: '[node:title] | [site:name]'
+      twitter_cards_image_height: '[node:field_image:entity:image:height]'
+      twitter_cards_image_width: '[node:field_image:entity:image:width]'
+      twitter_cards_description: '[node:summary]'
+      twitter_cards_type: summary
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>So many fields!</h3>
+          <img src="img/metatag-full-of-fields.gif" alt="Drupal Metatag module fields">
+          <p><small>Enabled Modules: Metatag, Metatag: Open Graph, Metatag: Twitter Cards</small></p>
+        </section>
+
+        <section>
+          <h3>Metatag field</h3>
+          <img src="img/adding-a-drupal-metatag-field.png" alt="Adding a meta tag field to a content type in Drupal">
+        </section>
+
+        <section>
+          <h3>Metatag field</h3>
+          <img src="img/drupal-metatag-field-on-node.gif" alt="Drupal meta tag field on a node">
+        </section>
+
+        <section>
+          <h3>Things to think about for admins:</h3>
+          <ul>
+            <li class="fragment">Can be overwhelming for content creators</li>
+            <li class="fragment">Can lead to mismanagement</li>
+            <li class="fragment">Too many forms on the edit screen can be a performance issue.  <a href="https://www.drupal.org/project/metatag/issues/2691313">Patch that adds a settings form where you can identify the specific groups you want to display</a>.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Add fields for commonly<br>updated meta tags</h3>
+          <ul>
+            <li class="fragment">Teaser/Description</li>
+            <li class="fragment">Image</li>
+            <li class="fragment">* Image preset for Facebook (1200x628)</li>
+            <li class="fragment">* Image preset for Twitter (1024x512)</li>
+            <li class="fragment">Add Field Group to organize the edit form</li>
+          </ul>
+        </section>
+
+        <section>
+          <img src="img/teaser-image-field-on-drupal-edit-form.png" alt="Teaser and image field on a Drupal edit form">
+        </section>
+
+        <section>
+          <h3>Summary</h3>
+          <ul>
+            <li>Install metatag module, enable any submodules needed</li>
+            <li>Add fields needed to content types for items needing individual setting</li>
+            <li>Set global meta tags</li>
+            <li>Test and verify</li>
+          </ul>
         </section>
 
         <section data-background="http://i.imgur.com/MKZwVkb.gif" class="image--byline">
