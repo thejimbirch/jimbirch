@@ -210,6 +210,10 @@
         </section>
 
         <section>
+          Add section about Kanopi
+        </section>
+
+        <section>
           <h3>We know how our website looks on our server</h3>
           <img src="img/post-on-my-site.jpg" alt="Screenshot of this presentations's Home page">
         </section>
@@ -230,6 +234,7 @@
                 <li><a href="http://ogp.me/">Open Graph Protocol</a></li>
                 <li><a href="https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards">Twitter Cards</a></li>
                 <li><a href="http://schema.org/">Schema.org</a></li>
+                <li><a href="https://developers.google.com/search/docs/guides/search-gallery">Google Search Gallery</a></li>
               </ul>
             </div>
             <div class="column--50">
@@ -532,7 +537,7 @@
 
         <section>
           <h3>Metatag Config</h3>
-          <pre><code style="font-size:85%;line-height:1.25">
+          <pre><code style="font-size: 85%;line-height: 1.25;">
     langcode: en
     status: true
     dependencies: {  }
@@ -701,7 +706,12 @@
           <p><a href="https://developers.google.com/search/docs/guides/search-gallery">Google Search Gallery</a></p>
         </section>
 
-        <section style="text-align: left;" data-background="img/Lego-Uncle-Jim-Diane-and-the-Cats.jpg" data-background-position="center bottom" data-transition="zoom">
+        <section>
+          <h3>Test and Verify</h3>
+          <p><a href="https://search.google.com/structured-data/testing-tool/u/0/">Google Structured Data Testing Tool</a></p>
+        </section>
+
+        <section style="text-align: left;" data-background="img/Lego-Uncle-Jim-at-Mini-Golfing.jpg" data-background-position="center top" data-transition="zoom">
           <h2 style="padding:20px;width:45%;">Implementing Schema.org in Drupal</h2>
         </section>
 
@@ -711,8 +721,138 @@
         </section>
 
         <section>
-          <h3>Test and Verify</h3>
-          <p><a href="https://search.google.com/structured-data/testing-tool/u/0/">Google Structured Data Testing Tool</a></p>
+          <h3><a href="https://www.drupal.org/project/schema_metatag">Schema.org Metatag Module</a></h3>
+          <ul>
+            <li class="fragment">Extends the Metatag module</li>
+            <li class="fragment">Add new forms to any meta tag defaults</li>
+            <li class="fragment">Adds markup as JSON LD in the HEAD</li>
+            <li class="fragment">Easily extendable</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Schema.org top-level object types</h3>
+          <ul style="font-size: 65%;">
+            <li><a href="https://schema.org/Article" rel="nofollow">Schema.org/Article</a></li>
+            <li><a href="https://schema.org/Organization" rel="nofollow">Schema.org/Organization </a></li>
+            <li><a href="https://schema.org/Person" rel="nofollow">Schema.org/Person </a></li>
+            <li><a href="https://schema.org/VideoObject" rel="nofollow">Schema.org/VideoObject </a></li>
+            <li><a href="https://schema.org/ImageObject" rel="nofollow">Schema.org/ImageObject </a></li>
+            <li><a href="https://schema.org/Event" rel="nofollow">Schema.org/Event</a></li>
+            <li><a href="https://schema.org/Movie" rel="nofollow">Schema.org/Movie</a></li>
+            <li><a href="https://schema.org/TVSeries" rel="nofollow">Schema.org/TVSeries</a></li>
+            <li><a href="https://schema.org/TVSeason" rel="nofollow">Schema.org/TVSeason</a></li>
+            <li><a href="https://schema.org/TVEpisode" rel="nofollow">Schema.org/TVEpisode</a></li>
+            <li><a href="https://schema.org/JobPosting" rel="nofollow">Schema.org/JobPosting</a></li>
+            <li><a href="https://schema.org/Recipe" rel="nofollow">Schema.org/Recipe</a></li>
+            <li><a href="https://schema.org/Product" rel="nofollow">Schema.org/Product</a></li>
+            <li><a href="https://schema.org/Service" rel="nofollow">Schema.org/Service</a></li>
+            <li><a href="https://schema.org/Review" rel="nofollow">Schema.org/Review</a></li>
+            <li><a href="https://schema.org/WebSite" rel="nofollow">Schema.org/WebSite </a></li>
+            <li><a href="https://schema.org/WebPage" rel="nofollow">Schema.org/WebPage </a></li>
+            <li><a href="https://schema.org/ItemList" rel="nofollow">Schema.org/ItemList </a> (for Views)</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Schema.org second-level object types</h3>
+          <ul style="font-size: 65%;">
+            <li><a href="https://schema.org/Action" rel="nofollow">Schema.org/Action</a></li>
+            <li><a href="https://schema.org/Address" rel="nofollow">Schema.org/Address</a></li>
+            <li><a href="https://schema.org/Brand" rel="nofollow">Schema.org/Brand</a></li>
+            <li><a href="https://schema.org/BreadcrumbList" rel="nofollow">Schema.org/BreadcrumbList</a></li>
+            <li><a href="https://schema.org/Country" rel="nofollow">Schema.org/Country</a></li>
+            <li><a href="https://schema.org/MonetaryAmount" rel="nofollow">Schema.org/MonetaryAmount</a></li>
+            <li><a href="https://schema.org/NutritionInformation" rel="nofollow">Schema.org/NutritionInformation</a></li>
+            <li><a href="https://schema.org/Offer" rel="nofollow">Schema.org/Offer</a></li>
+            <li><a href="https://schema.org/OpeningHoursSpecification" rel="nofollow">Schema.org/OpeningHoursSpecification</a></li>
+            <li><a href="https://schema.org/Organization" rel="nofollow">Schema.org/Organization</a></li>
+            <li><a href="https://schema.org/Person" rel="nofollow">Schema.org/Person</a></li>
+            <li><a href="https://schema.org/Place" rel="nofollow">Schema.org/Place</a></li>
+            <li><a href="https://schema.org/ProgramMembership" rel="nofollow">Schema.org/ProgramMembership</a></li>
+            <li><a href="https://schema.org/Rating" rel="nofollow">Schema.org/Rating</a></li>
+            <li><a href="https://schema.org/Rating" rel="nofollow">Schema.org/Review</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Schemas every site needs</h3>
+          <ul>
+            <li>Breadcrumbs</li>
+            <li>Organization</li>
+            <li>* Corporate Contact</li>
+            <li>* Logo</li>
+            <li>* Social Profile (sameAs)</li>
+            <li>WebSite</li>
+            <li>* SearchAction</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Content specific schemas</h3>
+          <ul>
+            <li>Article</li>
+            <li>Book</li>
+            <li>Course</li>
+            <li>Dateset</li>
+            <li>Events</li>
+            <li>Fact Check</li>
+            <li>Job Posting</li>
+            <li>Local Business</li>
+            <li>Occupation</li>
+            <li>Podcast</li>
+            <li>Product</li>
+            <li>Recipe</li>
+            <li>Review</li>
+            <li>Video</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Schema.org Website Form</h3>
+          <img src="img/drupal-schema-metatag-website-form.png" alt="Schema.org Website Form" style="width:60%">
+        </section>
+
+        <section>
+          <h3>Schema.org Website Output</h3>
+          <pre><code>
+            <script type="application/ld+json">{
+              "@context": "https://schema.org",
+              "@graph": [
+                  {
+                      "@type": "WebSite",
+                      "@id": "https://bp.jimbir.ch/",
+                      "name": "Bootstrap Paragraphs",
+                      "url": "https://bp.jimbir.ch/",
+                      "potentialAction": {
+                          "@type": "SearchAction",
+                          "query": "https://bp.jimbir.ch/search?q={search_term_string}",
+                          "query-input": "search_term_string"
+                      },
+                      "publisher": {
+                          "@type": "Person",
+                          "@id": "https://bp.jimbir.ch/",
+                          "name": "Jim Birch",
+                          "url": "https://bp.jimbir.ch/",
+                          "sameAs": "https://www.drupal.org/project/bootstrap_paragraphs"
+                      }
+                  }
+              ]
+            }</script>
+          </code></pre>
+        </section>
+
+        <section>
+          Add section about content types
+        </section>
+
+        <section>
+          <h3>Summary</h3>
+          <ul>
+            <li>Install Schema.org metatag module, enable any submodules needed</li>
+            <li>Set metatag defaults</li>
+            <li>Test and verify</li>
+          </ul>
         </section>
 
         <section data-background="https://media.giphy.com/media/bYUbS6XYDi3Ze/giphy.gif" class="image--byline">
