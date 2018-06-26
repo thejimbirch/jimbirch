@@ -196,7 +196,7 @@
       </div>
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
-        <section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-the-infinity-pool.jpg" data-transition="zoom">
+        <section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-the-infinity-pool.jpg" data-transition="zoom-in fade-out">
           <h1 style="font-size:2em;padding-left:20px;width:72%;">Meta and Schema</h1>
           <h2 style="padding-left:20px;width:72%;">Defining the Content about your Content</h1>
           <div style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.7);padding-left:20px;width:72%">
@@ -209,8 +209,9 @@
           </div>
         </section>
 
-        <section>
-          Add section about Kanopi
+        <section data-background="img/kanopi-workflow.svg" data-background="img/kanopi-logo-square.png" data-background-position="bottom 46px right" data-background-size="50%" data-transition="zoom-in fade-out">
+          <img src="img/kanopi-logo-square.png" alt="Kanopi Logo" style="border:none;width:10%;box-shadow:none;margin-top:-80px;">
+          <img src="img/kanopi-team.png" alt="Kanopi Team" style="border:none;box-shadow:none">
         </section>
 
         <section>
@@ -843,14 +844,20 @@
         </section>
 
         <section>
-          Add section about content types
+          <h3>Metatag defaults<br>for each content type</h3>
+          <img src="img/metatag-defaults-content-types.png" alt="Drupal meta tag defaults separated by content type">
+        </section>
+
+        <section>
+          <h3>Drupal Schema.org Person Metatag</h3>
+          <img src="img/drupal-schema-metatag-author.gif" alt="Drupal Schema.org Person Metatag">
         </section>
 
         <section>
           <h3>Summary</h3>
           <ul>
             <li>Install Schema.org metatag module, enable any submodules needed</li>
-            <li>Set metatag defaults</li>
+            <li>Configure metatag defaults per content type</li>
             <li>Test and verify</li>
           </ul>
         </section>
