@@ -2,30 +2,49 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Bootstrap Paragraphs | Web Development Presentation | Design4Drupal 2018</title>
+    <title>Building a Better Page Builder with Bootstrap Paragraphs | Web Development Presentation | Design4Drupal 2018</title>
     <meta name="description" content="This presentation covers the Bootstrap Paragraphs Drupal module which provides a suite of content and layout Paragraph bundles made with the Bootstrap front-end framework."/>
     <link rel="canonical" href="http://jimbir.ch/presentations/bootstrap-paragraphs/"/>
     <meta property="og:site_name" content="Jim Birch"/>
     <meta property="og:type" content="public_figure"/>
     <meta property="og:url" content="http://jimbir.ch/presentations/bootstrap-paragraphs/"/>
-    <meta property="og:title" content="Bootstrap and Paragraphs | Web Development Presentation | Design4Drupal 2018"/>
+    <meta property="og:title" content="Building a Better Page Builder with Bootstrap Paragraphs | Web Development Presentation | Design4Drupal 2018"/>
     <meta property="og:description" content="This presentation covers the Bootstrap Paragraphs Drupal module which provides a suite of content and layout Paragraph bundles made with the Bootstrap front-end framework."/>
-    <meta property="og:image" content="http://jimbir.ch/sites/default/files/img/presentations/presentation-bootstrap-paragraphs-720.jpg"/>
+    <meta property="og:image" content="http://jimbir.ch/sites/default/files/img/presentations/presentation-bootstrap-paragraphs-2018-open-graph.jpg"/>
     <meta name="twitter:site" content="@thejimbirch"/>
     <meta name="twitter:site:id" content="2989027096"/>
     <meta name="twitter:creator" content="@thejimbirch"/>
     <meta name="twitter:creator:id" content="2989027096"/>
     <meta name="twitter:url" content="http://jimbir.ch/presentations/bootstrap-paragraphs/"/>
-    <meta name="twitter:title" content="Bootstrap and Paragraphs | Web Development Presentation | Design4Drupal 2018"/>
+    <meta name="twitter:title" content="Building a Better Page Builder with Bootstrap Paragraphs | Web Development Presentation | Design4Drupal 2018"/>
     <meta name="twitter:description" content="This presentation covers the Bootstrap Paragraphs Drupal module which provides a suite of content and layout Paragraph bundles made with the Bootstrap front-end framework."/>
-    <meta name="twitter:image:src" content="http://jimbir.ch/sites/default/files/img/presentations/presentation-bootstrap-paragraphs-720.jpg"/>
-    <meta itemprop="name" content="Bootstrap and Paragraphs | Web Development Presentation | Design4Drupal 2018"/>
+    <meta name="twitter:image:src" content="http://jimbir.ch/sites/default/files/img/presentations/presentation-bootstrap-paragraphs-2018-twitter.jpg"/>
     <meta itemprop="description" content="This presentation covers the Bootstrap Paragraphs Drupal module which provides a suite of content and layout Paragraph bundles made with the Bootstrap front-end framework."/>
-    <meta itemprop="image" content="http://jimbir.ch/sites/default/files/img/presentations/presentation-bootstrap-paragraphs-720.jpg"/>
+    <meta itemprop="image" content="http://jimbir.ch/sites/default/files/img/presentations/presentation-bootstrap-paragraphs-2018-1920.jpg"/>
     <meta name="author" content="Jim Birch">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/sites/all/themes/jimbirch/icons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/sites/all/themes/jimbirch/icons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/sites/all/themes/jimbirch/icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/sites/all/themes/jimbirch/icons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/sites/all/themes/jimbirch/icons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/sites/all/themes/jimbirch/icons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/sites/all/themes/jimbirch/icons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/sites/all/themes/jimbirch/icons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/sites/all/themes/jimbirch/icons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/sites/all/themes/jimbirch/icons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/sites/all/themes/jimbirch/icons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/sites/all/themes/jimbirch/icons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/sites/all/themes/jimbirch/icons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/sites/all/themes/jimbirch/icons/manifest.json">
+    <link rel="mask-icon" href="/sites/all/themes/jimbirch/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="/sites/all/themes/jimbirch/icons/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/white.css" id="theme">
     <!-- Code syntax highlighting -->
@@ -51,7 +70,7 @@
       .reveal .box a,
       .fixed-footer a,
       .reveal h1 a {
-        color: #9dcccc;
+        color: #97d217;
       }
 
       .reveal .box a:hover,
@@ -128,7 +147,14 @@
       }
 
       code {
-        color: #ffa837;
+        color: #666666;
+      }
+
+      h1 code,
+      h2 code,
+      h3 code,
+      h4 code {
+        color: #ededed;
       }
 
       .reveal pre {
@@ -138,6 +164,16 @@
 
       .reveal pre code {
         max-height: none;
+      }
+
+      section.image--byline.present {
+        bottom: 0;
+        top: auto !important;
+        text-align: right;
+      }
+
+      .diff .hljs-deletion, .hljs-string, .hljs-tag .hljs-value, .hljs-preprocessor, .hljs-pragma, .hljs-built_in, .sql .hljs-aggregate, .hljs-javadoc, .smalltalk .hljs-class, .smalltalk .hljs-localvars, .smalltalk .hljs-array, .css .hljs-rules .hljs-value, .hljs-attr_selector, .hljs-pseudo, .apache .hljs-cbracket, .tex .hljs-formula, .coffeescript .hljs-attribute {
+        color: #fff;
       }
 
     </style>
@@ -161,9 +197,9 @@
         <div class="fixed-footer__second"><a href="https://www.kanopistudios.com/"><img src="img/kanopi-logo.png" alt="Kanopi Studios"></a></div>
       </div>
       <div class="slides">
-        <section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-the-Pool-Waterfall.jpg" data-transition="zoom">
-          <h1 style="font-size:2.25em;padding-left:20px;width:75%"><a href="https://www.drupal.org/project/bootstrap_paragraphs">Bootstrap Paragraphs</a></h1>
-          <div style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.7);padding-left:20px;width:75%">
+        <section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-the-beach-in-Akumel.jpg" data-transition="zoom">
+          <h1 style="font-size:1.6em;padding:20px;"><a href="https://www.drupal.org/project/bootstrap_paragraphs">Building a Better Page Builder with Bootstrap Paragraphs</a></h1>
+          <div style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.7);padding:20px;width:68%">
             <img src="img/D4D.svg" alt="Design 4 Drupal 2018" style="float: left; width: 175px; padding:10px;height: auto;"><br>
             <div class="box" style="float: left;padding-left:20px;padding-bottom:20px;margin-top:-30px">
               <a href="http://jimbir.ch">Jim Birch</a><br>
@@ -179,7 +215,7 @@
           <img src="img/kanopi-team.png" alt="Kanopi Team" style="border:none;box-shadow:none">
         </section>
 
-        <section style="text-align:left;" data-background="img/bootstrap-paragraphs-module-2017.jpg">
+        <section style="text-align:left;" data-background="img/bootstrap-paragraphs-module-2018.jpg" data-background-position="top center">
           <div class="fragment">
             <h1 class="box" style="padding-left:20px;background: rgba(0, 0, 0, 0.9);width:65%;"><a href="https://www.drupal.org/project/bootstrap_paragraphs">Bootstrap Paragraphs Module</a></h1>
             <p style="color:#fff;background: rgba(0, 0, 0, 0.9);padding:20px 0 20px 20px;width:65%;">The Bootstrap Paragraphs module provides a suite of content and layout Paragraph bundles made with the Bootstrap front-end framework.</p>
@@ -277,7 +313,7 @@
         </section>
 
         <section style="text-align:left;" data-background="img/Lego-Uncle-Jim-Blogs.jpg" data-transition="zoom">
-          <h1 style="padding-left:20px;padding-right:20px;background: rgba(0, 0, 0, 0.9);width:70%;">Module Strategy</h1>
+          <h1 style="padding-left:20px;padding-right:20px;background: rgba(0, 0, 0, 0.9);width:70%;">Strategy</h1>
           <div class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.9);padding:20px;width:70%;">
             <ul>
               <li>Create a module that would make the basic paragraphs needed for every site.</li>
@@ -792,78 +828,18 @@ bp-tabs:
         </section>
 
         <section>
-          <h2>Up next, the hero</h2>
-          <img src="https://media.giphy.com/media/56Vd97ywRR2Cs/giphy.gif" alt="Cat in a box GIF">
-        </section>
-
-        <section>
-          <h2>Hero</h2>
-          <p>Here is a more complex example for a Hero Paragraph bundle which has:</p>
-          <ul>
-            <li>Paragraph Reference field for content</li>
-            <li>Background Image</li>
-            <li>Parallax Option</li>
-            <li>Image Overlay Option</li>
-            <li>Image Overlay Invert Option</li>
-            <li>Zoom/Ken Burns Effect Option</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Hero</h2>
-          <img src="img/hero-paragraphs.jpg" alt="Hero Paragraph">
-        </section>
-
-        <section>
-          <h2>Hero - Fields</h2>
-          <img src="img/hero-paragraphs-fields.jpg" alt="Hero Paragraph Fields">
-        </section>
-
-        <section>
-          <h2>Hero - Display</h2>
-          <img src="img/hero-paragraphs-display.jpg" alt="Hero Paragraph Displays">
-        </section>
-
-        <section>
-          <h2>Hero - Overlay</h2>
-          <img src="img/hero-paragraphs-template-1-library-overlay.jpg" alt="Hero Paragraph Template">
-        </section>
-
-        <section>
-          <h2>Hero - Parallax</h2>
-          <img src="img/hero-paragraphs-template-2-parallax.jpg" alt="Hero Paragraph Template">
-        </section>
-
-        <section>
-          <h2>Hero - Invert</h2>
-          <img src="img/hero-paragraphs-template-3-invert.jpg" alt="Hero Paragraph Template">
-        </section>
-
-        <section>
-          <h2>Hero - Zoom</h2>
-          <img src="img/hero-paragraphs-template-4-zoom.jpg" alt="Hero Paragraph Template">
-        </section>
-
-        <section>
-          <h2>Hero - Putting it all together</h2>
-          <script src="https://gist.github.com/thejimbirch/fb0485b82e82ae85c85c64ecdbe67e4f.js"></script>
-        </section>
-
-        <section>
           <h2>Up next, working globally</h2>
           <img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" alt="Cat GIF">
         </section>
 
         <section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Iceland-Mike-Miles.jpg" data-transition="zoom">
-          <h1 class="box" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:60%;">Building a module using config</h1>
+          <h1 class="box" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:67%;">Building a module from config</h1>
         </section>
 
         <section>
-          <h2>Building a module using config</h2>
-          <p>Create Once, Reuse Everywhere!</p>
-          <p>Build a custom module to install a Paragraph bundle.</p>
+          <h2>Building a module from config</h2>
           <ul>
-            <li>Create bundle structure in a blank Drupal install</li>
+            <li>Create functionality in a blank Drupal install</li>
             <li>Create module structure</li>
             <li>Add Templates, CSS, and JS</li>
             <li>Add Function to override Template</li>
@@ -872,19 +848,19 @@ bp-tabs:
         </section>
 
         <section>
-          <h2>Create bundle structure in a blank Drupal install</h2>
-          <p>Spin up a sandbox on your favorite hosting platform or on your local dev environment and build your bundle.</p>
+          <h2>Create functionality in a blank Drupal install</h2>
+          <p>Spin up a sandbox on your favorite hosting platform or on your local dev environment and build your functionality.</p>
         </section>
 
         <section>
           <h2>Create module structure</h2>
-          <img src="img/hero-paragraphs-module-structure.jpg" alt="Hero Paragraph Module Structure">
+          <img src="img/bootstrap-pages-module-structure.png" alt="Bootstrap Pages Module Structure">
         </section>
 
         <section>
           <h2>Add Templates, CSS, and JS</h2>
           <ul>
-            <li>Copy and rename the default template from the Bootstrap Paragraphs module.</li>
+            <li>Add any templates you need.</li>
             <li>Add a CSS file.</li>
             <li>Add a JS file if needed.</li>
             <li>Configure them in the module's .libraries file.</li>
@@ -892,19 +868,31 @@ bp-tabs:
         </section>
 
         <section>
-          <h2>Add Function to override Template in .module file</h2>
-          <img src="img/hero-paragraphs-module.jpg" alt="Hero Paragraph Function">
-        </section>
-
-        <section>
           <h2>Export Config, delete UUIDs, Name space/change file names</h2>
-          <img src="img/hero-paragraphs-config.jpg" alt="Hero Paragraph Config">
+          <img src="img/bootstrap-pages-config-example.png" alt="Bootstrap Pages Config Example">
         </section>
 
         <section>
-          <h2>Install, Test, &amp; Share the finished product</h2>
-          <p>This example can be found at <a href="https://github.com/xenomedia/xeno_hero">Xeno Hero</a> on Github.</p>
-          <img src="img/xeno-hero.jpg" alt="Xeno Hero on Github">
+          <h2>If needed, add function to override Template in .module</h2>
+          <img src="img/bootstrap-pages-module-hook-theme.png" alt="Bootstrap Pages Module Hook Theme" style="width:75%;">
+        </section>
+
+        <section>
+          <h2>Bootstrap Pages</h2>
+          <p>Install, Test, &amp; Share the finished product</p>
+          <img src="img/bootstrap-pages-module-page.png" alt="Bootstrap Pages">
+        </section>
+
+        <section>
+          <h2>Bootstrap Pages</h2>
+          <ul>
+            <li class="fragment">
+              <b>Content Types</b><br>Article, Author, Landing Page<br>
+              <i>Meta tags and Schema.org markup; optimized, responsive images, preconfigured friendly URLs; and an organized administration</i>
+            </li>
+            <li class="fragment"><b>Taxonomies</b><br>Category, Topic, Type</li>
+            <li class="fragment"><b>Views</b><br>All Articles, Articles by Terms</li>
+          </ul>
         </section>
 
         <section>
@@ -914,7 +902,7 @@ bp-tabs:
 
         <section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-Fermilab.jpg" data-transition="zoom">
           <h1 class="box" style="padding-left:20px;background: rgba(0, 0, 0, 0.8);width:100%;">To Sum Up</h1>
-          <p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:70%;">Using frameworks benefits productivity (Drupal, Bootstrap, Paragraphs).  That is what I was trying to achieve by building this module.</p>
+          <p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:70%;">Using frameworks benefits productivity (Drupal, Bootstrap, Paragraphs).  That is what I was trying to achieve by building these modules.</p>
           <p class="fragment" style="color:#fff;background: rgba(0, 0, 0, 0.8);padding:20px;width:70%;">You can also use this approach with other front end frameworks and scripts -- Singularity, Foundation, Slick, etc...</p>
         </section>
 
