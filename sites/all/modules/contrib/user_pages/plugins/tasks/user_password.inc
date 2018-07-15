@@ -2,7 +2,7 @@
 
 /*
  * @file
- * 
+ *
  * Plugin to allow page manager to take over the user login page.
  *
  */
@@ -29,10 +29,10 @@ function user_pages_user_user_password_menu_alter(&$items, $task) {
   if (variable_get('user_pages_user_user_password_disabled', TRUE)) {
     return;
   }
-  
+
   //Since user/password is by default a local task, we need to do a little probing to find the callback.
   $is_default = ($items['user/password']['page callback'] == 'drupal_get_form' &&  $items['user/password']['page arguments'] == array('user_pass'));
-  
+
   // Override the menu item to point to our own function.
   if ($is_default || variable_get('user_pages_override_anyway', FALSE)) {
     $items['user/password']['page callback'] = 'user_pages_user_user_password';
@@ -51,12 +51,6 @@ function user_pages_user_user_password_menu_alter(&$items, $task) {
 }
 
 function user_pages_user_user_password() {
-   // If we aren't admin but already logged on, go to the user page instead.
-  global $user;
-  $admin = user_access('administer users');
-  if (!$admin && $user->uid) {
-    drupal_goto('user/'. $user->uid);
-  }
   // Load my task plugin
   $task = page_manager_get_task('user_password');
 
@@ -68,7 +62,7 @@ function user_pages_user_user_password() {
     return $output;
   }
 
-  module_load_include('inc', 'user', 'user.pages'); 
+  module_load_include('inc', 'user', 'user.pages');
   $function = NULL;
   foreach (module_implements('page_manager_override') as $module) {
     $call = $module . '_page_manager_override';
@@ -77,7 +71,7 @@ function user_pages_user_user_password() {
       break;
     }
   }
-  
+
   if($function) {
     return $function();
   }

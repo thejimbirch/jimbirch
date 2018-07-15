@@ -6,9 +6,8 @@ dependencies[] = ctools
 dependencies[] = page_manager
 dependencies[] = panels
 
-; Information added by Drupal.org packaging script on 2018-01-30
-version = "7.x-1.1"
+; Information added by Drupal.org packaging script on 2018-07-11
+version = "7.x-1.2"
 core = "7.x"
 project = "user_pages"
-datestamp = "1517327889"
-
+datestamp = "1531310629"
