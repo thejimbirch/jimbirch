@@ -4,25 +4,25 @@
     <meta charset="utf-8">
     <title>Meta and Schema: Defining the Content about your Content | Web Development Presentation | Design 4 Drupal 2018</title>
     <meta name="description" content="This session reviews implementing Schema.org schemas for structured data and current best practice meta tags in Drupal."/>
-    <link rel="canonical" href="http://jimbir.ch/presentations/meta-schema-drupal/"/>
+    <link rel="canonical" href="https://jimbir.ch/presentations/meta-schema-drupal/"/>
     <meta property="og:site_name" content="Jim Birch"/>
     <meta property="og:type" content="public_figure"/>
-    <meta property="og:url" content="http://jimbir.ch/presentations/meta-schema-drupal/"/>
+    <meta property="og:url" content="https://jimbir.ch/presentations/meta-schema-drupal/"/>
     <meta property="og:title" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | Design 4 Drupal 2018"/>
     <meta property="og:description" content="This session reviews implementing Schema.org schemas for structured data and current best practice meta tags in Drupal."/>
-    <meta property="og:image" content="http://jimbir.ch/presentations/meta-schema-drupal/img/meta-schema-drupal-720.jpg"/>
+    <meta property="og:image" content="https://jimbir.ch/presentations/meta-schema-drupal/img/meta-schema-drupal-720.jpg"/>
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:site" content="@thejimbirch"/>
     <meta name="twitter:site:id" content="2989027096"/>
     <meta name="twitter:creator" content="@thejimbirch"/>
     <meta name="twitter:creator:id" content="2989027096"/>
-    <meta name="twitter:url" content="http://jimbir.ch/presentations/meta-schema-drupal/"/>
+    <meta name="twitter:url" content="https://jimbir.ch/presentations/meta-schema-drupal/"/>
     <meta name="twitter:title" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | Design 4 Drupal 2018"/>
     <meta name="twitter:description" content="This session reviews implementing Schema.org schemas for structured data and current best practice meta tags in Drupal."/>
-    <meta name="twitter:image:src" content="http://jimbir.ch/presentations/meta-schema-drupal/img/meta-schema-drupal-720.jpg"/>
+    <meta name="twitter:image:src" content="https://jimbir.ch/presentations/meta-schema-drupal/img/meta-schema-drupal-720.jpg"/>
     <meta itemprop="name" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | Design 4 Drupal 2018"/>
     <meta itemprop="description" content="This session reviews implementing Schema.org schemas for structured data and current best practice meta tags in Drupal."/>
-    <meta itemprop="image" content="http://jimbir.ch/presentations/meta-schema-drupal/img/meta-schema-drupal-720.jpg"/>
+    <meta itemprop="image" content="https://jimbir.ch/presentations/meta-schema-drupal/img/meta-schema-drupal-720.jpg"/>
     <meta name="author" content="Jim Birch">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -211,7 +211,7 @@
   <body>
     <div class="reveal">
       <div class="fixed-footer">
-        <div class="fixed-footer__first"><a href="http://jimbir.ch/presentations/meta-schema-drupal/">jimbir.ch/meta-schema-drupal</a> <a href="http://www.twitter.com/thejimbirch" title="@thejimbirch">@thejimbirch</a> <a href="https://twitter.com/search?q=%23D4DBoston">#D4DBoston</a></div>
+        <div class="fixed-footer__first"><a href="https://jimbir.ch/presentations/meta-schema-drupal/">jimbir.ch/meta-schema-drupal</a> <a href="https://www.twitter.com/thejimbirch" title="@thejimbirch">@thejimbirch</a> <a href="https://twitter.com/search?q=%23D4DBoston">#D4DBoston</a></div>
         <div class="fixed-footer__second"><a href="https://www.kanopistudios.com/"><img src="img/kanopi-logo.png" alt="Kanopi Studios"></a></div>
       </div>
       <!-- Any section element inside of this container is displayed as a slide -->
@@ -222,9 +222,9 @@
           <div style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.7);padding-left:20px;width:72%">
             <img src="img/D4D.svg" alt="Design 4 Drupal 2018" style="float: left; width: 130px; padding:10px;height: auto;"><br>
             <div class="box" style="float: left;padding-left:20px;padding-bottom:20px;margin-top:-30px">
-              <a href="http://jimbir.ch">Jim Birch</a><br>
-              <a href="http://twitter.com/thejimbirch">@thejimbirch</a><br>
-              <a href="http://jimbir.ch/presentations/meta-schema-drupal/">jimbir.ch/meta-schema-drupal</a>
+              <a href="https://jimbir.ch">Jim Birch</a><br>
+              <a href="https://twitter.com/thejimbirch">@thejimbirch</a><br>
+              <a href="https://jimbir.ch/presentations/meta-schema-drupal/">jimbir.ch/meta-schema-drupal</a>
             </div>
           </div>
         </section>
@@ -252,9 +252,9 @@
               <ul>
                 <li><a href="https://www.w3.org/TR/html/document-metadata.html#document-metadata">W3C HTML 5.2 Specs</a></li>
                 <li><a href="https://wiki.whatwg.org/wiki/MetaExtensions">WHATWG Meta Extensions</a></li>
-                <li><a href="http://ogp.me/">Open Graph Protocol</a></li>
+                <li><a href="https://ogp.me/">Open Graph Protocol</a></li>
                 <li><a href="https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards">Twitter Cards</a></li>
-                <li><a href="http://schema.org/">Schema.org</a></li>
+                <li><a href="https://schema.org/">Schema.org</a></li>
                 <li><a href="https://developers.google.com/search/docs/guides/search-gallery">Google Search Gallery</a></li>
               </ul>
             </div>
@@ -263,7 +263,7 @@
               <ul>
                 <li><a href="https://w3c.github.io/developers/tools/">W3C Developer Tools</a></li>
                 <li><a href="https://developers.facebook.com/tools/debug/">Facebook Debugger</a></li>
-                <li><a href="http://developers.pinterest.com/rich_pins/validator/">Pinterest Validator</a></li>
+                <li><a href="https://developers.pinterest.com/rich_pins/validator/">Pinterest Validator</a></li>
                 <li><a href="https://cards-dev.twitter.com/validator" rel="nofollow">Twitter Card validator</a></li>
                 <li><a href="https://search.google.com/structured-data/testing-tool/u/0/">Google Structured Data Testing Tool</a></li>
               </ul>
@@ -461,7 +461,7 @@
         </section>
 
         <section>
-          <h3><a href="http://ogp.me/">Open Graph Protocol</a></h3>
+          <h3><a href="https://ogp.me/">Open Graph Protocol</a></h3>
           <img src="img/post-on-facebook.png" alt="Facebook card" style="width:360px;">
           <p>The Open Graph protocol enables any web page to become a rich object in a social graph. Used by Facebook, LinkedIn, Pinterest, &amp; Google+</p>
         </section>
@@ -477,7 +477,7 @@
             <li><code>og:image</code> - An image URL which should represent your object within the
             graph.</li>
             <li><code>og:url</code> - The canonical URL of your object that will be used as its
-            permanent ID in the graph, e.g., "http://www.imdb.com/title/tt0117500/".</li>
+            permanent ID in the graph, e.g., "https://www.imdb.com/title/tt0117500/".</li>
           </ul>
         </section>
 
@@ -498,7 +498,7 @@
           <h3>Test and Verify</h3>
           <ul>
             <li><a href="https://developers.facebook.com/tools/debug/" rel="nofollow">Facebook Debugger</a></li>
-            <li><a href="http://developers.pinterest.com/rich_pins/validator/" rel="nofollow">Pinterest Validator</a></li>
+            <li><a href="https://developers.pinterest.com/rich_pins/validator/" rel="nofollow">Pinterest Validator</a></li>
             <li>LinkedIn - Share on linked in.  The revalidate, put a random variable at the end of a URL (like ?hjhjhj) to force them to refetch</li>
           </ul>
         </section>
@@ -637,40 +637,40 @@
           </ul>
         </section>
 
-        <section data-background="http://i.imgur.com/MKZwVkb.gif" class="image--byline">
+        <section data-background="https://i.imgur.com/MKZwVkb.gif" class="image--byline">
           <small><a href="https://imgur.com/MKZwVkb">Image via Imgur</a></small>
         </section>
 
         <section style="text-align: left;" data-background="img/Lego-Uncle-Jim-at-Philly-City-Hall.jpg" data-background-position="center bottom" data-transition="zoom">
           <div class="fragment">
             <h1 class="box" style="float:right;padding:20px;background: rgba(0, 0, 0, 0.9);width:50%;">Schema</h1>
-            <p style="color:#fff;background: rgba(0, 0, 0, 0.9);padding:20px;width:50%;float:right;"><a href="http://schema.org/">Schema.org</a> is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond.</p>
+            <p style="color:#fff;background: rgba(0, 0, 0, 0.9);padding:20px;width:50%;float:right;"><a href="https://schema.org/">Schema.org</a> is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond.</p>
           </div>
         </section>
 
         <section>
           <h3>Most commonly used schemas</h3>
           <ul>
-            <li>Creative works: <a href="http://schema.org/CreativeWork">CreativeWork</a>, <a href="http://schema.org/Book">Book</a>, <a href="http://schema.org/Movie">Movie</a>, <a href="http://schema.org/MusicRecording">MusicRecording</a>, <a href="http://schema.org/Recipe">Recipe</a>, <a href="http://schema.org/TVSeries">TVSeries</a> ...</li>
-            <li>Embedded non-text objects: <a href="http://schema.org/AudioObject">AudioObject</a>, <a href="http://schema.org/ImageObject">ImageObject</a>, <a href="http://schema.org/VideoObject">VideoObject</a></li>
-            <li><a href="http://schema.org/Event">Event</a></li>
-            <li><a href="http://schema.org/docs/meddocs.html">Health and medical types</a>: notes on the health and medical types under <a href="http://schema.org/MedicalEntity">MedicalEntity</a>.</li>
-            <li><a href="http://schema.org/Organization">Organization</a></li>
-            <li><a href="http://schema.org/Person">Person</a></li>
-            <li><a href="http://schema.org/Place">Place</a>, <a href="http://schema.org/LocalBusiness">LocalBusiness</a>, <a href="http://schema.org/Restaurant">Restaurant</a> ...</li>
-            <li><a href="http://schema.org/Product">Product</a>, <a href="http://schema.org/Offer">Offer</a>, <a href="http://schema.org/AggregateOffer">AggregateOffer</a></li>
-            <li><a href="http://schema.org/Review">Review</a>, <a href="../AggregateRating">AggregateRating</a></li>
-            <li><a href="http://schema.org/Action">Action</a></li>
+            <li>Creative works: <a href="https://schema.org/CreativeWork">CreativeWork</a>, <a href="https://schema.org/Book">Book</a>, <a href="https://schema.org/Movie">Movie</a>, <a href="https://schema.org/MusicRecording">MusicRecording</a>, <a href="https://schema.org/Recipe">Recipe</a>, <a href="https://schema.org/TVSeries">TVSeries</a> ...</li>
+            <li>Embedded non-text objects: <a href="https://schema.org/AudioObject">AudioObject</a>, <a href="https://schema.org/ImageObject">ImageObject</a>, <a href="https://schema.org/VideoObject">VideoObject</a></li>
+            <li><a href="https://schema.org/Event">Event</a></li>
+            <li><a href="https://schema.org/docs/meddocs.html">Health and medical types</a>: notes on the health and medical types under <a href="https://schema.org/MedicalEntity">MedicalEntity</a>.</li>
+            <li><a href="https://schema.org/Organization">Organization</a></li>
+            <li><a href="https://schema.org/Person">Person</a></li>
+            <li><a href="https://schema.org/Place">Place</a>, <a href="https://schema.org/LocalBusiness">LocalBusiness</a>, <a href="https://schema.org/Restaurant">Restaurant</a> ...</li>
+            <li><a href="https://schema.org/Product">Product</a>, <a href="https://schema.org/Offer">Offer</a>, <a href="https://schema.org/AggregateOffer">AggregateOffer</a></li>
+            <li><a href="https://schema.org/Review">Review</a>, <a href="../AggregateRating">AggregateRating</a></li>
+            <li><a href="https://schema.org/Action">Action</a></li>
           </ul>
         </section>
 
         <section>
           <h3>Inline</h3>
           <pre><code>
-    <div itemscope itemtype="http://schema.org/SportsTeam">
+    <div itemscope itemtype="https://schema.org/SportsTeam">
       <span itemprop="name">San Francisco 49ers</span>
-      <div itemprop="member" itemscope itemtype="http://schema.org/OrganizationRole">
-        <div itemprop="member" itemscope itemtype="http://schema.org/Person">
+      <div itemprop="member" itemscope itemtype="https://schema.org/OrganizationRole">
+        <div itemprop="member" itemscope itemtype="https://schema.org/Person">
           <span itemprop="name">Joe Montana</span>
         </div>
         <span itemprop="startDate">1979</span>
@@ -684,10 +684,10 @@
         <section>
           <h3>RDFa</h3>
           <pre><code>
-    <div vocab="http://schema.org/" typeof="SportsTeam">
+    <div vocab="https://schema.org/" typeof="SportsTeam">
       <span property="name">San Francisco 49ers</span>
       <div property="member" typeof="OrganizationRole">
-        <div property="member" typeof="http://schema.org/Person">
+        <div property="member" typeof="https://schema.org/Person">
           <span property="name">Joe Montana</span>
         </div>
         <span property="startDate">1979</span>
@@ -703,7 +703,7 @@
           <pre><code>
     <script type="application/ld+json">
     {
-      "@context": "http://schema.org",
+      "@context": "https://schema.org",
       "@type": "SportsTeam",
       "name": "San Francisco 49ers",
       "member": {
@@ -892,9 +892,9 @@
           <div style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.7);padding-left:20px;width:75%">
             <img src="img/D4D.svg" alt="Design 4 Drupal 2018" style="float: left; width: 130px; padding:10px;height: auto;"><br>
             <div class="box" style="float: left;padding-left:20px;margin-top:-30px">
-              <a href="http://jimbir.ch">Jim Birch</a><br>
-              <a href="http://twitter.com/thejimbirch">@thejimbirch</a><br>
-              <a href="http://jimbir.ch/presentations/meta-schema-drupal/">jimbir.ch/meta-schema-drupal</a>
+              <a href="https://jimbir.ch">Jim Birch</a><br>
+              <a href="https://twitter.com/thejimbirch">@thejimbirch</a><br>
+              <a href="https://jimbir.ch/presentations/meta-schema-drupal/">jimbir.ch/meta-schema-drupal</a>
             </div>
         </section>
 
