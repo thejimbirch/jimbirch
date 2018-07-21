@@ -2,30 +2,51 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Meta and Schema: Defining the Content about your Content | Web Development Presentation | WordCamp Chicago 2018</title>
+    <title>Meta and Schema: Defining the Content about your Content | Web Development Presentation | WordCamp for Publishers 2018</title>
     <meta name="description" content="This session reviews implementing Schema.org schemas for structured data and current best practice meta tags in WordPress."/>
     <link rel="canonical" href="http://jimbir.ch/presentations/meta-schema-wp/"/>
     <meta property="og:site_name" content="Jim Birch"/>
     <meta property="og:type" content="public_figure"/>
     <meta property="og:url" content="http://jimbir.ch/presentations/meta-schema-wp/"/>
-    <meta property="og:title" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | WordCamp Chicago 2018"/>
+    <meta property="og:title" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | WordCamp for Publishers 2018"/>
     <meta property="og:description" content="This session reviews implementing Schema.org schemas for structured data and current best practice meta tags in WordPress."/>
-    <meta property="og:image" content="http://jimbir.ch/presentations/meta-schema-wp/img/meta-schema-wp-720.jpg"/>
+    <meta property="og:image" content="/sites/default/files/img/presentations/presentation-meta-schema-wp-1200.jpg"/>
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@thejimbirch"/>
     <meta name="twitter:site:id" content="2989027096"/>
     <meta name="twitter:creator" content="@thejimbirch"/>
     <meta name="twitter:creator:id" content="2989027096"/>
     <meta name="twitter:url" content="http://jimbir.ch/presentations/meta-schema-wp/"/>
-    <meta name="twitter:title" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | WordCamp Chicago 2018"/>
+    <meta name="twitter:title" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | WordCamp for Publishers 2018"/>
     <meta name="twitter:description" content="This session reviews implementing Schema.org schemas for structured data and current best practice meta tags in WordPress."/>
-    <meta name="twitter:image:src" content="http://jimbir.ch/presentations/meta-schema-wp/img/meta-schema-wp-720.jpg"/>
-    <meta itemprop="name" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | WordCamp Chicago 2018"/>
+    <meta name="twitter:image:src" content="/sites/default/files/img/presentations/presentation-meta-schema-wp-1200.jpg"/>
+    <meta itemprop="name" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | WordCamp for Publishers 2018"/>
     <meta itemprop="description" content="This session reviews implementing Schema.org schemas for structured data and current best practice meta tags in WordPress."/>
-    <meta itemprop="image" content="http://jimbir.ch/presentations/meta-schema-wp/img/meta-schema-wp-720.jpg"/>
+    <meta itemprop="image" content="/sites/default/files/img/presentations/presentation-meta-schema-wp-1200.jpg"/>
     <meta name="author" content="Jim Birch">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/sites/all/themes/jimbirch/icons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/sites/all/themes/jimbirch/icons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/sites/all/themes/jimbirch/icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/sites/all/themes/jimbirch/icons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/sites/all/themes/jimbirch/icons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/sites/all/themes/jimbirch/icons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/sites/all/themes/jimbirch/icons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/sites/all/themes/jimbirch/icons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/sites/all/themes/jimbirch/icons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/sites/all/themes/jimbirch/icons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/sites/all/themes/jimbirch/icons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/sites/all/themes/jimbirch/icons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/sites/all/themes/jimbirch/icons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/sites/all/themes/jimbirch/icons/manifest.json">
+    <link rel="mask-icon" href="/sites/all/themes/jimbirch/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="/sites/all/themes/jimbirch/icons/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/white.css" id="theme">
     <!-- Code syntax highlighting -->
@@ -160,7 +181,7 @@
           <h1 style="font-size:2.25em;padding-left:20px;">Meta and Schema</h1>
           <h2 style="padding-left:20px;width:70%">Defining the Content about your Content</h1>
           <div style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.7);padding-left:20px;width:70%">
-            <img src="img/wordcamp-chicago-2018.png" alt="WordCamp Chicago 2018" style="float: left; width: 130px; padding:10px;height: auto;"><br>
+            <img src="img/wordcamp-publishers-2018.png" alt="WordCamp for Publishers 2018" style="float: left; width: 130px; padding:10px;height: auto;"><br>
             <div class="box" style="float: left;padding-left:20px;padding-bottom:20px;margin-top:-30px">
               <a href="http://jimbir.ch">Jim Birch</a><br>
               <a href="http://twitter.com/thejimbirch">@thejimbirch</a><br>
@@ -171,7 +192,7 @@
 
         <section>
           <h3>We know how our website looks on our server</h3>
-          <img src="img/wordcamp-chicago-website.png" alt="Screenshot of WordCamp Chicago 2018 Home page">
+          <img src="img/wordcamp-chicago-website.png" alt="Screenshot of WordCamp for Publishers 2018 Home page">
         </section>
 
         <section>
@@ -741,7 +762,7 @@
           <h1 style="padding-left:20px;">The End</h1>
           <h3 style="padding-left:20px;">Continuing the conversation:</h3>
           <div style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.7);padding-left:20px;width:70%">
-            <img src="img/wordcamp-chicago-2018.png" alt="WordCamp Chicago 2018" style="float: left; width: 130px; padding:10px;height: auto;"><br>
+            <img src="img/wordcamp-publishers-2018.png" alt="WordCamp for Publishers 2018" style="float: left; width: 130px; padding:10px;height: auto;"><br>
             <div class="box" style="float: left;padding-left:20px;margin-top:-30px">
               <a href="http://jimbir.ch">Jim Birch</a><br>
               <a href="http://twitter.com/thejimbirch">@thejimbirch</a><br>
