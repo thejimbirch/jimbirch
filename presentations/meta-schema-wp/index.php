@@ -11,7 +11,7 @@
     <meta property="og:url" content="https://jimbir.ch/presentations/meta-schema-wp/"/>
     <meta property="og:title" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | WordCamp for Publishers 2018"/>
     <meta property="og:description" content="This session reviews implementing Schema.org schemas for structured data and current best practice meta tags in WordPress."/>
-    <meta property="og:image" content="/sites/default/files/img/presentations/presentation-meta-schema-wp-1200.jpg"/>
+    <meta property="og:image" content="https://jimbir.ch/sites/default/files/img/presentations/presentation-meta-schema-wp-1200.jpg"/>
 
     <!-- Twitter Card. -->
     <meta name="twitter:card" content="summary_large_image"/>
@@ -22,12 +22,12 @@
     <meta name="twitter:url" content="https://jimbir.ch/presentations/meta-schema-wp/"/>
     <meta name="twitter:title" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | WordCamp for Publishers 2018"/>
     <meta name="twitter:description" content="This session reviews implementing Schema.org schemas for structured data and current best practice meta tags in WordPress."/>
-    <meta name="twitter:image:src" content="/sites/default/files/img/presentations/presentation-meta-schema-wp-1200.jpg"/>
+    <meta name="twitter:image:src" content="https://jimbir.ch/sites/default/files/img/presentations/presentation-meta-schema-wp-1200.jpg"/>
 
     <!-- Standard Meta. -->
     <meta itemprop="name" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | WordCamp for Publishers 2018"/>
     <meta itemprop="description" content="This session reviews implementing Schema.org schemas for structured data and current best practice meta tags in WordPress."/>
-    <meta itemprop="image" content="/sites/default/files/img/presentations/presentation-meta-schema-wp-1200.jpg"/>
+    <meta itemprop="image" content="https://jimbir.ch/sites/default/files/img/presentations/presentation-meta-schema-wp-1200.jpg"/>
     <meta name="author" content="Jim Birch">
 
     <!-- Mobile. -->
@@ -36,23 +36,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
     <!-- Icons. -->
-    <link rel="apple-touch-icon" sizes="57x57" href="/sites/all/themes/jimbirch/icons/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/sites/all/themes/jimbirch/icons/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/sites/all/themes/jimbirch/icons/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/sites/all/themes/jimbirch/icons/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/sites/all/themes/jimbirch/icons/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/sites/all/themes/jimbirch/icons/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/sites/all/themes/jimbirch/icons/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/sites/all/themes/jimbirch/icons/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/sites/all/themes/jimbirch/icons/apple-touch-icon-180x180.png">
-    <link rel="icon" type="image/png" href="/sites/all/themes/jimbirch/icons/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/sites/all/themes/jimbirch/icons/android-chrome-192x192.png" sizes="192x192">
-    <link rel="icon" type="image/png" href="/sites/all/themes/jimbirch/icons/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="/sites/all/themes/jimbirch/icons/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="/sites/all/themes/jimbirch/icons/manifest.json">
-    <link rel="mask-icon" href="/sites/all/themes/jimbirch/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="57x57" href="https://jimbir.ch/sites/all/themes/jimbirch/icons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://jimbir.ch/sites/all/themes/jimbirch/icons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://jimbir.ch/sites/all/themes/jimbirch/icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://jimbir.ch/sites/all/themes/jimbirch/icons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://jimbir.ch/sites/all/themes/jimbirch/icons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://jimbir.ch/sites/all/themes/jimbirch/icons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://jimbir.ch/sites/all/themes/jimbirch/icons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://jimbir.ch/sites/all/themes/jimbirch/icons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://jimbir.ch/sites/all/themes/jimbirch/icons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="https://jimbir.ch/sites/all/themes/jimbirch/icons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://jimbir.ch/sites/all/themes/jimbirch/icons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="https://jimbir.ch/sites/all/themes/jimbirch/icons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="https://jimbir.ch/sites/all/themes/jimbirch/icons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="https://jimbir.ch/sites/all/themes/jimbirch/icons/manifest.json">
+    <link rel="mask-icon" href="https://jimbir.ch/sites/all/themes/jimbirch/icons/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-TileImage" content="/sites/all/themes/jimbirch/icons/mstile-144x144.png">
+    <meta name="msapplication-TileImage" content="https://jimbir.ch/sites/all/themes/jimbirch/icons/mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
     <link rel="stylesheet" href="css/reveal.css">
