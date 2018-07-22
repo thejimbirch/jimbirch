@@ -83,7 +83,7 @@
       .reveal h2 a,
       .reveal h3 a,
       .reveal h4 a {
-        color: #9dcccc;
+        color: #97d217;
       }
 
       .reveal .box a:hover,
@@ -105,20 +105,42 @@
       }
 
       .fixed-footer {
-        color: #9dcccc;
+        color: #428440;
         position: fixed;
         bottom: 0;
         left: 0;
         width: 100%;
         margin: 0 auto;
         z-index: 1000;
-        background: rgba(0, 0, 0, 0.7) none repeat scroll 0 0;
+        background: rgba(255, 255, 255, 0.7) none repeat scroll 0 0;
       }
 
-      .fixed-footer > div,
-      .fixed-footer > div > a {
+      .fixed-footer .fixed-footer__first {
+        float: left;
         font-size: 16px;
-        padding: 10px;
+        padding: 14px 0 8px 20px;
+      }
+
+      .fixed-footer .fixed-footer__first a {
+        margin-right: 20px;
+      }
+
+      .fixed-footer .fixed-footer__second {
+        float: right;
+        padding: 4px 20px 2px 0;
+      }
+
+      .fixed-footer > div > a {
+        color: #428440;
+      }
+
+      .fixed-footer > div > a:hover {
+        color: #00553f;
+      }
+
+      .fixed-footer > div img {
+        height: 32px;
+        width: auto;
       }
 
       @media print {
@@ -153,7 +175,14 @@
       }
 
       code {
-        color: #FF741D;
+        color: #666666;
+      }
+
+      h1 code,
+      h2 code,
+      h3 code,
+      h4 code {
+        color: #ededed;
       }
 
       .reveal pre {
@@ -163,6 +192,16 @@
 
       .reveal pre code {
         max-height: none;
+      }
+
+      section.image--byline.present {
+        bottom: 0;
+        top: auto !important;
+        text-align: right;
+      }
+
+      .diff .hljs-deletion, .hljs-string, .hljs-tag .hljs-value, .hljs-preprocessor, .hljs-pragma, .hljs-built_in, .sql .hljs-aggregate, .hljs-javadoc, .smalltalk .hljs-class, .smalltalk .hljs-localvars, .smalltalk .hljs-array, .css .hljs-rules .hljs-value, .hljs-attr_selector, .hljs-pseudo, .apache .hljs-cbracket, .tex .hljs-formula, .coffeescript .hljs-attribute {
+        color: #fff;
       }
     </style>
 
@@ -180,8 +219,8 @@
   <body>
     <div class="reveal">
       <div class="fixed-footer">
-        <div style="float:left;"><a href="https://jimbir.ch/presentations/meta-schema-wp/">jimbir.ch/meta-schema-wp</a> <a href="https://twitter.com/search?q=%23WCCHI">#WCCHI</a></div>
-        <div style="float:right;"><a href="https://www.twitter.com/thejimbirch" title="@thejimbirch">@thejimbirch</a></div>
+        <div class="fixed-footer__first"><a href="https://jimbir.ch/presentations/meta-schema-wp/">jimbir.ch/meta-schema-wp</a> <a href="https://www.twitter.com/thejimbirch" title="@thejimbirch">@thejimbirch</a> <a href="https://twitter.com/search?q=%23wcpub">#wcpub</a></div>
+        <div class="fixed-footer__second"><a href="https://www.kanopistudios.com/"><img src="img/kanopi-logo.png" alt="Kanopi Studios"></a></div>
       </div>
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
@@ -200,7 +239,7 @@
 
         <section>
           <h3>We know how our website looks on our server</h3>
-          <img src="img/wordcamp-chicago-website.png" alt="Screenshot of WordCamp for Publishers 2018 Home page">
+          <img src="img/this-presentation-fullscreen.jpg" alt="Screenshot of this web page." style="width:80%;">
         </section>
 
         <section>
