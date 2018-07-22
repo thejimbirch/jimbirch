@@ -441,7 +441,7 @@
         </section>
 
         <section>
-          <img src="img/logo-google.jpg" alt="Google" style="border:0;box-shadow:none;width:320px;">
+          <img src="img/logo-google.jpg" alt="Google" style="margin-top:-40px;border:0;box-shadow:none;width:320px;">
           <h3><a href="https://support.google.com/webmasters/answer/79812?hl=en">Meta tags that Google understands</a></h3>
           <img src="img/result-google.png" alt="Google Search Result">
         </section>
@@ -464,7 +464,7 @@
 
         <section>
           <h3><a href="https://ogp.me/">Open Graph Protocol</a></h3>
-          <img src="img/result-facebook.png" alt="Facebook card" style="width:360px;">
+          <img src="img/this-page-shared-on-facebook.png" alt="Facebook card" style="width:360px;">
           <p>The Open Graph protocol enables any web page to become a rich object in a social graph. Used by Facebook, LinkedIn, Pinterest, &amp; Google+</p>
         </section>
 
@@ -507,7 +507,7 @@
 
         <section>
           <h3><a href="https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards">Twitter Cards</a></h3>
-          <img src="img/result-twitter.png" alt="Twitter card" style="width:360px;">
+          <img src="img/this-page-shared-on-twitter.png" alt="Twitter card" style="width:360px;">
           <p>With Twitter Cards, you can attach rich photos, videos and media experiences to Tweets, helping to drive traffic to your website.</p>
         </section>
 
@@ -561,8 +561,8 @@
           </code></pre>
         </section>
 
-        <section>
-          <blockquote class="imgur-embed-pub" lang="en" data-id="MKZwVkb"><a href="//imgur.com/MKZwVkb">Meta Cat</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+        <section data-background="https://i.imgur.com/MKZwVkb.gif" class="image--byline present" data-background-image="https://i.imgur.com/MKZwVkb.gif" style="top: 285.5px; display: block;">
+          <small><a href="https://imgur.com/MKZwVkb">Image via Imgur</a></small>
         </section>
 
         <section style="text-align: left;" data-background="img/Lego-Uncle-Jim-at-Philly-City-Hall.jpg" data-background-position="center bottom" data-transition="zoom">
@@ -589,7 +589,7 @@
         </section>
 
         <section>
-          <h3>Inline</h3>
+          <h3>Microdata</h3>
           <pre><code>
     <div itemscope itemtype="https://schema.org/SportsTeam">
       <span itemprop="name">San Francisco 49ers</span>
@@ -606,7 +606,8 @@
         </section>
 
         <section>
-          <h3>RDFa</h3>
+          <h3><a href="https://www.w3.org/TR/rdfa-primer/">RDFa</a></h3>
+          <p>Resource Description Framework in Attributes</p>
           <pre><code>
     <div vocab="https://schema.org/" typeof="SportsTeam">
       <span property="name">San Francisco 49ers</span>
@@ -624,6 +625,7 @@
 
         <section>
           <h3>JSON-LD</h3>
+          <p>JavaScript Object Notation for Linked Data</p>
           <pre><code>
     <script type="application/ld+json">
     {
@@ -801,8 +803,8 @@
           <p><a href="https://search.google.com/structured-data/testing-tool/u/0/">Google Structured Data Testing Tool</a></p>
         </section>
 
-        <section>
-          <iframe src="https://giphy.com/embed/bYUbS6XYDi3Ze" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cute-cats-bYUbS6XYDi3Ze">via GIPHY</a></p>
+        <section data-background="https://media.giphy.com/media/bYUbS6XYDi3Ze/giphy.gif" class="image--byline future" data-background-image="https://media.giphy.com/media/bYUbS6XYDi3Ze/giphy.gif" hidden="" aria-hidden="true" style="top: 330px; display: none;">
+          <small><a href="https://giphy.com/gifs/cute-cats-bYUbS6XYDi3Ze">Image via GIPHY</a></small>
         </section>
 
         <section style="text-align: left;" data-background="img/Lego-Uncle-Jim-at-Sunset.jpg">
