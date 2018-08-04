@@ -815,7 +815,7 @@
             <li>Article</li>
             <li>Book</li>
             <li>Course</li>
-            <li>Dateset</li>
+            <li>Dataset</li>
             <li>Events</li>
             <li>Fact Check</li>
             <li>Job Posting</li>
