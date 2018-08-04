@@ -191,6 +191,7 @@
       }
 
       .reveal pre code {
+        color: #fff;
         max-height: none;
       }
 
@@ -202,6 +203,10 @@
 
       .diff .hljs-deletion, .hljs-string, .hljs-tag .hljs-value, .hljs-preprocessor, .hljs-pragma, .hljs-built_in, .sql .hljs-aggregate, .hljs-javadoc, .smalltalk .hljs-class, .smalltalk .hljs-localvars, .smalltalk .hljs-array, .css .hljs-rules .hljs-value, .hljs-attr_selector, .hljs-pseudo, .apache .hljs-cbracket, .tex .hljs-formula, .coffeescript .hljs-attribute {
         color: #fff;
+      }
+
+      .coffeescript .javascript, .javascript .xml, .tex .hljs-formula, .xml .javascript, .xml .vbscript, .xml .css, .xml .hljs-cdata {
+        opacity: 1;
       }
     </style>
 
@@ -561,6 +566,134 @@
           </code></pre>
         </section>
 
+        <section>
+          <img src="img/wsj-logo.svg" alt="Wall Street Journal Logo" style="padding: 20px;">
+          <h3>Article Example - Base tags</h3>
+          <pre><code>
+&lt;meta name="author" content="Nick Timiraos" />
+&lt;meta name="description" content="The Trump administration expects the annual budget deficits to rise nearly $100 billion more than previously forecast in each of the next three years, pushing the federal deficit above $1 trillion starting next year." />
+&lt;meta name="keywords" content="u.s. budget deficit,economic performance,indicators,budget account,government finance,government budget,taxation,economic news,political,general news,politics,international relations,domestic politics" />
+&lt;meta name="robots" content="noarchive,noodp" />
+&lt;meta name="language" content="en-US" />
+&lt;meta name="referrer" content="always"/>
+          </code></pre>
+        </section>
+
+        <section>
+          <img src="img/wsj-logo.svg" alt="Wall Street Journal Logo" style="padding: 20px;">
+          <h3>Facebook and Open Graph tags</h3>
+          <pre><code>
+&lt;meta name="fb:app_id" content="368513495882" />
+&lt;meta property="fb:pages" content="8304333127" />
+
+&lt;meta name="og:type" content="article" />
+&lt;meta property="og:image" content="https://images.wsj.net/im-18685/social" />
+&lt;meta property="og:image:width" content="900" />
+&lt;meta property="og:image:height" content="471" />
+&lt;meta property="og:locale" content="en_US" />
+&lt;meta property="og:type" content="article" />
+&lt;meta property="og:site_name" content="WSJ" />
+&lt;meta property="og:title" content="Deficit Projected to Top $1 Trillion Starting Next Year " />
+&lt;meta property="og:description" content="The Trump administration expects the annual budget deficits to rise nearly $100 billion more than previously forecast in each of the next three years, pushing the federal deficit above $1 trillion starting next year." />
+&lt;meta property="og:url" content="https://www.wsj.com/articles/deficit-projected-to-top-1-trillion-starting-next-year-1531950742" />
+          </code></pre>
+        </section>
+
+        <section>
+          <img src="img/wsj-logo.svg" alt="Wall Street Journal Logo" style="padding: 20px;">
+          <h3>Twitter Card tags</h3>
+          <pre><code>
+&lt;meta name="twitter:title" content="Deficit Projected to Top $1 Trillion Starting Next Year " />
+&lt;meta name="twitter:description" content="The Trump administration expects the annual budget deficits to rise nearly $100 billion more than previously forecast in each of the next three years, pushing the federal deficit above $1 trillion starting next year." />
+&lt;meta property="twitter:image" content="https://images.wsj.net/im-18685/social" />
+&lt;meta name="twitter:card" content="summary_large_image" />
+&lt;meta name="twitter:image:alt" content="Deficit Projected to Top $1 Trillion Starting Next Year " />
+&lt;meta name="twitter:creator" content="@NickTimiraos" />
+&lt;meta name="twitter:site" content="@WSJ" />
+&lt;meta name="twitter:domain" content="wsj.com" />
+          </code></pre>
+        </section>
+
+        <section>
+          <img src="img/wsj-logo.svg" alt="Wall Street Journal Logo" style="padding: 20px;">
+          <h3>RDFa</h3>
+          <pre><code>
+&lt;meta itemprop="datePublished" content="2018-07-18T22:18:00.000Z" />
+&lt;meta itemprop="dateModified" content="2018-07-18T22:18:00.000Z" />
+&lt;meta itemprop="dateCreated" content="2018-07-18T21:52:00.000Z" />
+&lt;meta itemprop="description" content="The Trump administration expects the annual budget deficits to rise nearly $100 billion more than previously forecast in each of the next three years, pushing the federal deficit above $1 trillion starting next year." />
+&lt;meta itemprop="image" content="https://images.wsj.net/im-18685/social" />
+&lt;meta itemprop="inLanguage" content="en-US" />
+          </code></pre>
+        </section>
+
+        <section>
+          <img src="img/wsj-logo.svg" alt="Wall Street Journal Logo" style="padding: 20px;">
+          <h3>App and Google News tags</h3>
+          <pre><code>
+&lt;meta name="news_keywords" content="u.s. budget deficit,economic performance,indicators,budget account,government finance,government budget,taxation,economic news,political,general news" />
+
+<!-- https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/PromotingAppswithAppBanners/PromotingAppswithAppBanners.html -->
+&lt;meta name="apple-itunes-app" content="app-id=364387007,app-argument=wsj://launch?articleid=SB11844760329771014194004584355302732529822&headline=Deficit%20Projected%20to%20Top%20%241%20Trillion%20Starting%20Next%20Year&weburl=http://www.wsj.com/articles/SB11844760329771014194004584355302732529822" />
+&lt;meta name="al:ios:url" content="wsj://launch?articleid=SB11844760329771014194004584355302732529822&headline=Deficit%20Projected%20to%20Top%20%241%20Trillion%20Starting%20Next%20Year&weburl=http://www.wsj.com/articles/SB11844760329771014194004584355302732529822" />
+          </code></pre>
+        </section>
+
+        <section>
+          <img src="img/wsj-logo.svg" alt="Wall Street Journal Logo" style="padding: 20px;">
+          <h3>Advertising and Personalization tags</h3>
+          <pre><code>
+&lt;meta name="dj.asn" content="i-0628" />
+&lt;meta name="cx_shield" content="{&quot;campaign&quot;:10,&quot;placement&quot;:&quot;cx-snippetad&quot;,&quot;tag&quot;:&quot;default&quot;,&quot;type&quot;:&quot;personalized&quot;}" />
+&lt;meta name="cXenseParse:wsj-primary-inset" content="image" />
+&lt;meta name="cXenseParse:wsj-newsletter-inset" />
+&lt;meta name="cXenseParse:wsj-keywords" content="u.s. budget deficit,economic performance,indicators,budget account,government finance,government budget,taxation,economic news,political,general news,politics,international relations,domestic politics" />
+&lt;meta name="cXenseParse:poptart:image" content="https://si.wsj.net/public/resources/images/S1-AR529_BUDGET_D_20180718171450.jpg">
+&lt;meta name="cXenseParse:candybar:image" content="https://si.wsj.net/public/resources/images/S1-AR529_BUDGET_E_20180718171450.jpg">
+          </code></pre>
+        </section>
+
+        <section>
+          <img src="img/wsj-logo.svg" alt="Wall Street Journal Logo" style="padding: 20px;">
+          <h3>Custom tags</h3>
+          <pre><code>
+&lt;meta name="user.type" content="nonsubscriber" />
+&lt;meta name="user.exp" content="default" />
+
+&lt;meta name="page.section" content="Article" />
+&lt;meta name="page.content.type" content="Article" />
+&lt;meta name="page.content.format" content="responsive" />
+&lt;meta name="page.content.source" content="WSJ Online" />
+&lt;meta name="page.site" content="wsj" />
+&lt;meta name="page.site.product" content="WSJ" />
+&lt;meta name="page.region" content="na,us" />
+          </code></pre>
+        </section>
+
+        <section>
+          <img src="img/wsj-logo.svg" alt="Wall Street Journal Logo" style="padding: 20px;">
+          <h3>Custom tags</h3>
+          <pre><code>
+&lt;meta name="article.template" content="snippet" />
+&lt;meta name="article.id" content="SB11844760329771014194004584355302732529822" />
+&lt;meta name="article.type" content="U.S. News" />
+&lt;meta name="article.type.display" content="U.S." />
+&lt;meta name="article.access" content="paid" />
+&lt;meta name="article.origheadline" content="Deficit Projected to Top $1 Trillion Starting Next Year " />
+&lt;meta name="article.headline" content="Deficit Projected to Top $1 Trillion Starting Next Year " />
+&lt;meta name="article.summary" content="The Trump administration expects the annual budget deficits to rise nearly $100 billion more than previously forecast in each of the next three years, pushing the federal deficit above $1 trillion starting next year." />
+&lt;meta name="article.page" content="US" />
+&lt;meta name="article.section" content="US" />
+&lt;meta name="article.published" content="2018-07-18T22:18:00.000Z" />
+&lt;meta name="article.updated" content="2018-07-18T22:18:00.000Z" />
+&lt;meta name="article.created" content="2018-07-18T21:52:00.000Z" />
+&lt;meta property="article:word_count" content="659" />
+&lt;meta property="article:image_count" content="1" />
+&lt;meta property="article:internal_link_count" content="1" />
+&lt;meta property="article:publisher" content="https://www.facebook.com/wsj" />
+          </code></pre>
+        </section>
+
         <section data-background="https://i.imgur.com/MKZwVkb.gif" class="image--byline present" data-background-image="https://i.imgur.com/MKZwVkb.gif" style="top: 285.5px; display: block;">
           <small><a href="https://imgur.com/MKZwVkb">Image via Imgur</a></small>
         </section>
@@ -574,7 +707,7 @@
 
         <section>
           <h3>Most commonly used schemas</h3>
-          <ul>
+          <ul style="font-size: 80%;">
             <li>Creative works: <a href="https://schema.org/CreativeWork">CreativeWork</a>, <a href="https://schema.org/Book">Book</a>, <a href="https://schema.org/Movie">Movie</a>, <a href="https://schema.org/MusicRecording">MusicRecording</a>, <a href="https://schema.org/Recipe">Recipe</a>, <a href="https://schema.org/TVSeries">TVSeries</a> ...</li>
             <li>Embedded non-text objects: <a href="https://schema.org/AudioObject">AudioObject</a>, <a href="https://schema.org/ImageObject">ImageObject</a>, <a href="https://schema.org/VideoObject">VideoObject</a></li>
             <li><a href="https://schema.org/Event">Event</a></li>
@@ -651,6 +784,26 @@
           <img src="img/logo-google.jpg" alt="Google" style="border:0;box-shadow:none;width:320px;">
           <h3>What does Google care about?</h3>
           <p><a href="https://developers.google.com/search/docs/guides/search-gallery">Google Search Gallery</a></p>
+        </section>
+
+        <section>
+          <img src="img/logo-google.jpg" alt="Google" style="border:0;box-shadow:none;width:320px;">
+          <h3>New/Beta features being added</h3>
+          <ul>
+            <li class="fragment"><a href="https://webmasters.googleblog.com/2018/07/hey-google-whats-latest-news.html">Speakable (Google Webmaster Central Blog)</a></li>
+            <li class="fragment"><a href="https://www.blog.google/outreach-initiatives/google-news-initiative/making-it-easier-discover-data-search/">Dataset (The Keyword Blog)</a></li>
+            <li class="fragment"><a href="https://searchengineland.com/google-confirms-new-faqs-qa-and-how-tos-for-search-results-snippets-303116">FAQs, Q&A and How-Tos (Search Engine Land)</a></li>
+            <li class="fragment"><a href="https://developers.google.com/search/docs/data-types/top-places-list">Top Places List (No announcement)</a></li>
+            <li class="fragment"><a href="https://webmasters.googleblog.com/2018/04/we-updated-our-job-posting-guidelines.html">JobPosting (Google Webmaster Central Blog)</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Keeping Up</h3>
+          <ul>
+            <li class="fragment"><a href="https://pending.schema.org/">pending.schema.org</a></li>
+            <li class="fragment"><a href="https://github.com/schemaorg/schemaorg/issues">schemaorg issue queue on GitHub</a></li>
+          </ul>
         </section>
 
         <section style="text-align: left;" data-background="img/Lego-Uncle-Jim-Diane-and-the-Cats.jpg" data-background-position="center bottom" data-transition="zoom">
@@ -801,6 +954,92 @@
         <section>
           <h3>Test and Verify</h3>
           <p><a href="https://search.google.com/structured-data/testing-tool/u/0/">Google Structured Data Testing Tool</a></p>
+        </section>
+
+        <section>
+          <img src="img/wsj-logo.svg" alt="Wall Street Journal Logo" style="padding: 20px;">
+          <h3>Home Page</h3>
+          <pre><code>
+&lt;script type="application/ld+json" data-reactid=".291qs3vxr7q.0.h:$e">{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "articleSection": "US Home Page",
+  "author": "Wall Street Journal",
+  "thumbnailUrl": "//ore.wsj.net/fp/cdn/fp/assets/images/ico/WSJ_facebook.png",
+  "headline": "The Wall Street Journal & Breaking News, Business, Financial and Economic News, World News and Video",
+  "url": "https://www.wsj.com/",
+  "description": "WSJ online coverage of breaking news and current headlines from the US and around the world. Top stories, photos, videos, detailed analysis and in-depth reporting.",
+  "keywords": ["News","breaking news","latest news","US news","headlines","world news","business","finances","politics","WSJ","WSJ news","WSJ.com","Wall Street Journal"
+  ]
+}&lt;/script>
+          </code></pre>
+        </section>
+
+        <section>
+          <img src="img/wsj-logo.svg" alt="Wall Street Journal Logo" style="margin-top:-100px;padding: 20px;">
+          <h3>Article</h3>
+          <pre><code style="font-size: 50%; line-height: 1.2;">
+&lt;script type="application/ld+json"> {
+  "@context": "http://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.wsj.com/articles/deficit-projected-to-top-1-trillion-starting-next-year-1531950742"
+  },
+  "headline": "Deficit Projected to Top $1 Trillion Starting Next Year ",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://si.wsj.net/public/resources/images/S1-AR529_BUDGET_G_20180718171450.jpg",
+    "width": 553,
+    "height": 369
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Nick Timiraos"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Wall Street Journal",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://s.wsj.net/media/wsj_amp_masthead_lg.png",
+      "width": 576,
+      "height": 60
+    }
+  },
+  "isAccessibleForFree": "false",
+  "hasPart": {
+    "@type": "WebPageElement",
+    "isAccessibleForFree": "false",
+    "cssSelector" : ".paywall"
+  },
+  "datePublished": "2018-07-18T21:52:00.000Z",
+  "dateModified": "2018-07-18T22:18:00.000Z",
+  "url": "https://www.wsj.com/articles/deficit-projected-to-top-1-trillion-starting-next-year-1531950742",
+  "thumbnailUrl": "https://si.wsj.net/public/resources/images/S1-AR529_BUDGET_G_20180718171450.jpg",
+  "dateCreated": "2018-07-18T21:52:00.000Z",
+  "articleSection": "US",
+  "creator": ["Nick Timiraos"],
+  "keywords": ["u.s. budget deficit","economic performance","indicators","budget account","government finance","government budget","taxation","economic news","political","general news","politics","international relations","domestic politics"]
+}&lt;/script>
+          </code></pre>
+        </section>
+
+        <section>
+          <img src="img/wsj-logo.svg" alt="Wall Street Journal Logo" style="padding: 20px;">
+          <h3>Author</h3>
+          <pre><code>
+&lt;script type="application/ld+json"> {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "author": "Wall Street Journal",
+  "thumbnailUrl": "//ore.wsj.net/fp/cdn/fp/assets/images/ico/WSJ_facebook.png",
+  "url": "http://www.wsj.com/news/author/5585",
+  "articleSection": "Collection",
+  "headline": "Nick Timiraos - News, Articles, Biography, Photos  - WSJ.com",
+  "description": "Nick Timiraos - profile from the Wall Street Journal. News, articles, biography and photos."
+}&lt;/script>
+          </code></pre>
         </section>
 
         <section data-background="https://media.giphy.com/media/bYUbS6XYDi3Ze/giphy.gif" class="image--byline future" data-background-image="https://media.giphy.com/media/bYUbS6XYDi3Ze/giphy.gif" hidden="" aria-hidden="true" style="top: 330px; display: none;">
