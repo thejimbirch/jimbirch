@@ -787,6 +787,39 @@
         </section>
 
         <section>
+          <h3>Schemas every site needs</h3>
+          <ul>
+            <li>Breadcrumbs</li>
+            <li>Organization</li>
+            <li>* Corporate Contact</li>
+            <li>* Logo</li>
+            <li>* Social Profile (sameAs)</li>
+            <li>WebSite</li>
+            <li>* SearchAction</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Content specific schemas</h3>
+          <ul>
+            <li>Article</li>
+            <li>Book</li>
+            <li>Course</li>
+            <li>Dateset</li>
+            <li>Events</li>
+            <li>Fact Check</li>
+            <li>Job Posting</li>
+            <li>Local Business</li>
+            <li>Occupation</li>
+            <li>Podcast</li>
+            <li>Product</li>
+            <li>Recipe</li>
+            <li>Review</li>
+            <li>Video</li>
+          </ul>
+        </section>
+
+        <section>
           <img src="img/logo-google.jpg" alt="Google" style="border:0;box-shadow:none;width:320px;">
           <h3>New/Beta features being added</h3>
           <ul>
@@ -801,6 +834,8 @@
         <section>
           <h3>Keeping Up</h3>
           <ul>
+            <li><a href="https://webmasters.googleblog.com">Google Webmaster Central Blog</a></li>
+            <li class="fragment"><a href="https://www.blog.google/">The Keyword</a></li>
             <li class="fragment"><a href="https://pending.schema.org/">pending.schema.org</a></li>
             <li class="fragment"><a href="https://github.com/schemaorg/schemaorg/issues">schemaorg issue queue on GitHub</a></li>
           </ul>
