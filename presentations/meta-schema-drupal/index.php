@@ -2,13 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Meta and Schema: Defining the Content about your Content | Web Development Presentation | Design 4 Drupal 2018</title>
+    <title>Meta and Schema: Defining the Content about your Content | Web Development Presentation | BADCamp 2018</title>
     <meta name="description" content="This session reviews implementing Schema.org schemas for structured data and current best practice meta tags in Drupal."/>
     <link rel="canonical" href="https://jimbir.ch/presentations/meta-schema-drupal/"/>
     <meta property="og:site_name" content="Jim Birch"/>
     <meta property="og:type" content="public_figure"/>
     <meta property="og:url" content="https://jimbir.ch/presentations/meta-schema-drupal/"/>
-    <meta property="og:title" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | Design 4 Drupal 2018"/>
+    <meta property="og:title" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | BADCamp 2018"/>
     <meta property="og:description" content="This session reviews implementing Schema.org schemas for structured data and current best practice meta tags in Drupal."/>
     <meta property="og:image" content="https://jimbir.ch/presentations/meta-schema-drupal/img/meta-schema-drupal-720.jpg"/>
     <meta name="twitter:card" content="summary_large_image"/>
@@ -17,10 +17,10 @@
     <meta name="twitter:creator" content="@thejimbirch"/>
     <meta name="twitter:creator:id" content="2989027096"/>
     <meta name="twitter:url" content="https://jimbir.ch/presentations/meta-schema-drupal/"/>
-    <meta name="twitter:title" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | Design 4 Drupal 2018"/>
+    <meta name="twitter:title" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | BADCamp 2018"/>
     <meta name="twitter:description" content="This session reviews implementing Schema.org schemas for structured data and current best practice meta tags in Drupal."/>
     <meta name="twitter:image:src" content="https://jimbir.ch/presentations/meta-schema-drupal/img/meta-schema-drupal-720.jpg"/>
-    <meta itemprop="name" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | Design 4 Drupal 2018"/>
+    <meta itemprop="name" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | BADCamp 2018"/>
     <meta itemprop="description" content="This session reviews implementing Schema.org schemas for structured data and current best practice meta tags in Drupal."/>
     <meta itemprop="image" content="https://jimbir.ch/presentations/meta-schema-drupal/img/meta-schema-drupal-720.jpg"/>
     <meta name="author" content="Jim Birch">
@@ -66,7 +66,18 @@
       .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
         background: rgba(0, 0, 0, 0.7) none repeat scroll 0 0;
         color: #fff;
+        padding: 20px;
         text-shadow: 1px 1px 1px rgba(0,0,0,0.4)
+      }
+      .reveal h1 {
+        font-size: 1.5em;
+      }
+
+      .reveal .box {
+        background: rgba(0, 0, 0, 0.7) none repeat scroll 0 0;
+        color: #fff;
+        padding: 20px;
+        width: fit-content;
       }
 
       .reveal .box a,
@@ -137,7 +148,7 @@
 
       @media print {
         .fixed-footer {
-            display: none;
+          display: none;
         }
       }
 
@@ -211,37 +222,64 @@
   <body>
     <div class="reveal">
       <div class="fixed-footer">
-        <div class="fixed-footer__first"><a href="https://jimbir.ch/presentations/meta-schema-drupal/">jimbir.ch/meta-schema-drupal</a> <a href="https://www.twitter.com/thejimbirch" title="@thejimbirch">@thejimbirch</a> <a href="https://twitter.com/search?q=%23D4DBoston">#D4DBoston</a></div>
+        <div class="fixed-footer__first"><a href="https://jimbir.ch/presentations/meta-schema-drupal/">jimbir.ch/meta-schema-drupal</a> <a href="https://www.twitter.com/thejimbirch" title="@thejimbirch">@thejimbirch</a> <a href="https://twitter.com/search?q=%23BADCamp18">#BADCamp18</a></div>
         <div class="fixed-footer__second"><a href="https://www.kanopistudios.com/"><img src="img/kanopi-logo.png" alt="Kanopi Studios"></a></div>
       </div>
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
-        <section style="text-align:left;" data-background="img/Lego-Uncle-Jim-at-the-infinity-pool.jpg" data-transition="zoom-in fade-out">
-          <h1 style="font-size:2em;padding-left:20px;width:72%;">Meta and Schema</h1>
-          <h2 style="padding-left:20px;width:72%;">Defining the Content about your Content</h1>
-          <div style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.7);padding-left:20px;width:72%">
-            <img src="img/D4D.svg" alt="Design 4 Drupal 2018" style="float: left; width: 130px; padding:10px;height: auto;"><br>
-            <div class="box" style="float: left;padding-left:20px;padding-bottom:20px;margin-top:-30px">
-              <a href="https://jimbir.ch">Jim Birch</a><br>
-              <a href="https://twitter.com/thejimbirch">@thejimbirch</a><br>
-              <a href="https://jimbir.ch/presentations/meta-schema-drupal/">jimbir.ch/meta-schema-drupal</a>
-            </div>
+        <section style="text-align: left;" data-background="img/Lego-Uncle-Jim-at-the-infinity-pool.jpg" data-transition="zoom-in fade-out">
+          <h1 style="font-size: 2em; width: 72%;">Meta and Schema</h1>
+          <h2 style="width: 72%;">Defining the Content about your Content</h1>
+          <div class="box" style="width: 72%">
+            <img src="img/badcamp-logo.png" alt="BADCamp 2018" style="float: left; width: 160px; height: auto; margin: 0 20px 0 0;">
+            <p style="margin-top: 0;"><a href="https://jimbir.ch">Jim Birch</a><br>
+            <a href="https://twitter.com/thejimbirch">@thejimbirch</a><br>
+            <a href="https://jimbir.ch/presentations/meta-schema-drupal/">jimbir.ch/meta-schema-drupal</a></p>
           </div>
         </section>
 
         <section data-background="img/kanopi-workflow.svg" data-background="img/kanopi-logo-square.png" data-background-position="bottom 46px right" data-background-size="50%" data-transition="zoom-in fade-out">
           <img src="img/kanopi-logo-square.png" alt="Kanopi Logo" style="border:none;width:10%;box-shadow:none;margin-top:-80px;">
-          <img src="img/kanopi-team.png" alt="Kanopi Team" style="border:none;box-shadow:none">
+          <img src="img/kanopi-team.jpg" alt="Kanopi Team" style="border:none;box-shadow:none">
         </section>
 
         <section>
           <h3>We know how our website looks on our server</h3>
-          <img src="img/post-on-my-site.jpg" alt="Screenshot of this presentations's Home page">
+          <img src="img/meta-schema-drupal-1280.jpg" alt="Screenshot of this presentations's Home page">
         </section>
 
         <section>
           <h3>How does it look on others?</h3>
           <img src="img/meta-images-and-logos.jpg" alt="Screenshots of pages shared on social networks and search engine results">
+        </section>
+
+        <section>
+          <img src="img/logo--sparktoro.svg" alt="Sparktoro" style="border: 0; box-shadow: none; width: 320px;">
+          <blockquote>
+            <p>Reality: Google is a near-monopoly, with more than</p>
+            <p style="font-size: 8rem; font-weight: bold; line-height: .75;">90%</p>
+            <p>of web search volume</p>
+            <p style="font-size: 65%"><cite><a href="https://sparktoro.com/blog/2018-search-market-share-myths-vs-realities-of-google-bing-amazon-facebook-duckduckgo-more/">2018 Search Market Share: Myths vs. Realities of Google, Bing, Amazon, Facebook, DuckDuckGo, & More<br>Rand Fishkin, Sparktoro October 16th, 2018</a></cite></p>
+          </blockquote>
+        </section>
+
+        <section>
+          <img src="img/logo-google.jpg" alt="Google" style="border:0;box-shadow:none;width:320px;">
+          <div style="min-height: 400px; height: 100%; position: relative;">
+            <img src="img/answer-1.png" alt="Google Answer" class="fragment" style="width:50%;height:auto;position:absolute;top:0;left:0;">
+            <img src="img/answer-2.png" alt="Google Answer" class="fragment" style="width:50%;height:auto;position:absolute;top:0;right:0;">
+            <img src="img/answer-3.png" alt="Google Answer" class="fragment" style="width:50%;height:auto;position:absolute;bottom:0;left:0;">
+            <img src="img/answer-4.png" alt="Google Answer" class="fragment" style="width:50%;height:auto;position:absolute;bottom:0;right:0;">
+            <img src="img/answer-5.png" alt="Google Answer" class="fragment" style="width:50%;height:auto;position:absolute;top:50%;left:50%;">
+            <img src="img/answer-6.png" alt="Google Answer" class="fragment" style="width:50%;height:auto;position:absolute;top:25%;left:25%;">
+            <img src="img/answer-7.png" alt="Google Answer" class="fragment" style="width:50%;height:auto;position:absolute;top:75%;left:75%;">
+            <img src="img/answer-8.png" alt="Google Answer" class="fragment" style="width:50%;height:auto;position:absolute;top:50%;left:50%;">
+            <img src="img/answer-9.png" alt="Google Answer" class="fragment" style="width:50%;height:auto;position:absolute;bottom:0;left:0;">
+          </div>
+        </section>
+
+        <section data-background="https://media.giphy.com/media/56Vd97ywRR2Cs/giphy.gif" class="image--byline">
+          <small><a href="https://giphy.com/gifs/cute-cats-bYUbS6XYDi3Ze">Image via GIPHY</a></small>
         </section>
 
         <section>
@@ -295,7 +333,7 @@
         </section>
 
         <section>
-          <h2 class="box"><a href="https://www.w3.org/TR/html/document-metadata.html#document-metadata">W3C HTML 5.2 Specification</a></h2>
+          <h2><a href="https://www.w3.org/TR/html/document-metadata.html#document-metadata">W3C HTML 5.2 Specification</a></h2>
           <h3>4.2. Document metadata</h3>
           <img src="img/W3C.svg" alt="W3C logo" style="width:240px;height:auto;border:none;border-radius:5px;">
           <div class="fragment">
@@ -342,7 +380,7 @@
           <h3><code>&lt;link></code></h3>
           <p>The link element allows authors to link their document to other resources.</p>
           <h4>Attributes</h4>
-          <ul style="font-size:60%">
+          <ul style="font-size: 60%;">
             <li>Global Attributes</li>
             <li>href — Address of the hyperlink</li>
             <li>crossorigin — How the element handles crossorigin requests</li>
@@ -552,7 +590,7 @@
         </section>
 
         <section>
-          <h3>Settings</h3>
+          <h3>Metatag Default Settings</h3>
           <img src="img/drupal-meta-tag-content-settings.png" alt="Drupal metatag content field settings" style="width: 75%;">
         </section>
 
@@ -608,8 +646,13 @@
           <ul>
             <li class="fragment">Can be overwhelming for content creators</li>
             <li class="fragment">Can lead to mismanagement</li>
-            <li class="fragment">Too many forms on the edit screen can be a performance issue.  <a href="https://www.drupal.org/project/metatag/issues/2691313">Patch that adds a settings form where you can identify the specific groups you want to display</a>.</li>
+            <li class="fragment">Too many forms on the edit screen can be a performance issue</li>
           </ul>
+        </section>
+
+        <section>
+          <h3>Metatag field settings</h3>
+          <img src="img/drupal-metatag-field-settings.png" alt="Drupal meta tag field on a node">
         </section>
 
         <section>
@@ -728,8 +771,58 @@
         </section>
 
         <section>
-          <h3>Test and Verify</h3>
-          <p><a href="https://search.google.com/structured-data/testing-tool/u/0/">Google Structured Data Testing Tool</a></p>
+          <h3>Schemas every site needs</h3>
+          <ul>
+            <li>Breadcrumbs</li>
+            <li>Organization</li>
+            <li>* Corporate Contact</li>
+            <li>* Logo</li>
+            <li>* Social Profile (sameAs)</li>
+            <li>WebSite</li>
+            <li>* SearchAction</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Content specific schemas</h3>
+          <ul>
+            <li>Article</li>
+            <li>Book</li>
+            <li>Course</li>
+            <li>Dataset</li>
+            <li>Events</li>
+            <li>Fact Check</li>
+            <li>Job Posting</li>
+            <li>Local Business</li>
+            <li>Occupation</li>
+            <li>Podcast</li>
+            <li>Product</li>
+            <li>Recipe</li>
+            <li>Review</li>
+            <li>Video</li>
+          </ul>
+        </section>
+
+        <section>
+          <img src="img/logo-google.jpg" alt="Google" style="border:0;box-shadow:none;width:320px;">
+          <h3>New/Beta features being added</h3>
+          <ul>
+            <li class="fragment"><a href="https://webmasters.googleblog.com/2018/07/hey-google-whats-latest-news.html">Speakable (Google Webmaster Central Blog)</a></li>
+            <li class="fragment"><a href="https://www.blog.google/outreach-initiatives/google-news-initiative/making-it-easier-discover-data-search/">Dataset (The Keyword Blog)</a></li>
+            <li class="fragment"><a href="https://searchengineland.com/google-confirms-new-faqs-qa-and-how-tos-for-search-results-snippets-303116">FAQs, Q&A and How-Tos (Search Engine Land)</a></li>
+            <li class="fragment"><a href="https://developers.google.com/search/docs/data-types/top-places-list">Top Places List (No announcement)</a></li>
+            <li class="fragment"><a href="https://webmasters.googleblog.com/2018/04/we-updated-our-job-posting-guidelines.html">JobPosting (Google Webmaster Central Blog)</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Keeping Up</h3>
+          <ul>
+            <li><a href="https://webmasters.googleblog.com">Google Webmaster Central Blog</a></li>
+            <li class="fragment"><a href="https://www.blog.google/">The Keyword</a></li>
+            <li class="fragment"><a href="https://pending.schema.org/">pending.schema.org</a></li>
+            <li class="fragment"><a href="https://github.com/schemaorg/schemaorg/issues">schemaorg issue queue on GitHub</a></li>
+          </ul>
         </section>
 
         <section style="text-align: left;" data-background="img/Lego-Uncle-Jim-at-Mini-Golfing.jpg" data-background-position="center top" data-transition="zoom">
@@ -797,39 +890,6 @@
         </section>
 
         <section>
-          <h3>Schemas every site needs</h3>
-          <ul>
-            <li>Breadcrumbs</li>
-            <li>Organization</li>
-            <li>* Corporate Contact</li>
-            <li>* Logo</li>
-            <li>* Social Profile (sameAs)</li>
-            <li>WebSite</li>
-            <li>* SearchAction</li>
-          </ul>
-        </section>
-
-        <section>
-          <h3>Content specific schemas</h3>
-          <ul>
-            <li>Article</li>
-            <li>Book</li>
-            <li>Course</li>
-            <li>Dataset</li>
-            <li>Events</li>
-            <li>Fact Check</li>
-            <li>Job Posting</li>
-            <li>Local Business</li>
-            <li>Occupation</li>
-            <li>Podcast</li>
-            <li>Product</li>
-            <li>Recipe</li>
-            <li>Review</li>
-            <li>Video</li>
-          </ul>
-        </section>
-
-        <section>
           <h3>Schema.org Website Form</h3>
           <img src="img/drupal-schema-metatag-website-form.png" alt="Schema.org Website Form" style="width:60%">
         </section>
@@ -874,6 +934,11 @@
         </section>
 
         <section>
+          <h3>Test and Verify</h3>
+          <p><a href="https://search.google.com/structured-data/testing-tool/u/0/">Google Structured Data Testing Tool</a></p>
+        </section>
+
+        <section>
           <h3>Summary</h3>
           <ul>
             <li>Install Schema.org metatag module, enable any submodules needed</li>
@@ -887,15 +952,14 @@
         </section>
 
         <section style="text-align: left;" data-background="img/Lego-Uncle-Jim-at-the-infinity-pool-2.jpg">
-          <h1 style="padding-left:20px;">The End</h1>
-          <h3 style="padding-left:20px;">Continuing the conversation:</h3>
-          <div style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.7);padding-left:20px;width:75%">
-            <img src="img/D4D.svg" alt="Design 4 Drupal 2018" style="float: left; width: 130px; padding:10px;height: auto;"><br>
-            <div class="box" style="float: left;padding-left:20px;margin-top:-30px">
-              <a href="https://jimbir.ch">Jim Birch</a><br>
-              <a href="https://twitter.com/thejimbirch">@thejimbirch</a><br>
-              <a href="https://jimbir.ch/presentations/meta-schema-drupal/">jimbir.ch/meta-schema-drupal</a>
-            </div>
+          <h1 style="width: 72%">The End</h1>
+          <h3 style="width: 72%">Continuing the conversation:</h3>
+          <div class="box" style="width: 72%">
+            <img src="img/badcamp-logo.png" alt="BADCamp 2018" style="float: left; width: 160px; height: auto; margin: 0 20px 0 0;">
+            <p style="margin-top: 0;"><a href="https://jimbir.ch">Jim Birch</a><br>
+            <a href="https://twitter.com/thejimbirch">@thejimbirch</a><br>
+            <a href="https://jimbir.ch/presentations/meta-schema-drupal/">jimbir.ch/meta-schema-drupal</a></p>
+          </div>
         </section>
 
       </div>
