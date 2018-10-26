@@ -264,18 +264,27 @@
         </section>
 
         <section>
-          <img src="img/logo-google.jpg" alt="Google" style="border:0;box-shadow:none;width:320px;">
+          <img src="img/logo-google.jpg" alt="Google" style="border:0;box-shadow:none;width:320px;margin-top:-120px;">
           <div style="min-height: 400px; height: 100%; position: relative;">
             <img src="img/answer-1.png" alt="Google Answer" class="fragment" style="width:50%;height:auto;position:absolute;top:0;left:0;">
             <img src="img/answer-2.png" alt="Google Answer" class="fragment" style="width:50%;height:auto;position:absolute;top:0;right:0;">
             <img src="img/answer-3.png" alt="Google Answer" class="fragment" style="width:50%;height:auto;position:absolute;bottom:0;left:0;">
             <img src="img/answer-4.png" alt="Google Answer" class="fragment" style="width:50%;height:auto;position:absolute;bottom:0;right:0;">
-            <img src="img/answer-5.png" alt="Google Answer" class="fragment" style="width:50%;height:auto;position:absolute;top:50%;left:50%;">
-            <img src="img/answer-6.png" alt="Google Answer" class="fragment" style="width:50%;height:auto;position:absolute;top:25%;left:25%;">
-            <img src="img/answer-7.png" alt="Google Answer" class="fragment" style="width:50%;height:auto;position:absolute;top:75%;left:75%;">
-            <img src="img/answer-8.png" alt="Google Answer" class="fragment" style="width:50%;height:auto;position:absolute;top:50%;left:50%;">
+            <img src="img/answer-5.png" alt="Google Answer" class="fragment" style="width:50%;height:auto;position:absolute;top:0;left:50%;">
+            <img src="img/answer-6.png" alt="Google Answer" class="fragment" style="width:30%;height:auto;position:absolute;top:0;left:25%;">
+            <img src="img/answer-7.png" alt="Google Answer" class="fragment" style="width:50%;height:auto;position:absolute;top:0;left:0;">
+            <img src="img/answer-8.png" alt="Google Answer" class="fragment" style="width:50%;height:auto;position:absolute;top:0;left:50%;">
             <img src="img/answer-9.png" alt="Google Answer" class="fragment" style="width:50%;height:auto;position:absolute;bottom:0;left:0;">
           </div>
+        </section>
+
+        <section data-background="img/devices-you-search-with-voice.jpg" data-background-position="center top">
+          <h3>What if there is only one search result?</h3>
+        </section>
+
+        <section>
+          <h3>Get in the game with structured markup</h3>
+          <img src="img/page-marked-up-w-schema.jpg" style="width: 60%;">
         </section>
 
         <section data-background="https://media.giphy.com/media/56Vd97ywRR2Cs/giphy.gif" class="image--byline">
