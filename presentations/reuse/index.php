@@ -444,7 +444,7 @@ function seo_starter_install() {
           <ul>
             <li class="fragment">Documentation like <a href="https://docs.google.com/spreadsheets/d/1dAWAbIsS0v7COEWQ3gFj_md7x3rhFJslpVWQI2upvgM/edit#gid=233425812">Drupal 8 Build Spec</a></li>
             <li class="fragment">Increase Productivity</li>
-            <li class="fragment">Help streamline and accurately estimate projects</li>
+            <li class="fragment">Help streamline and <a href="https://docs.google.com/spreadsheets/d/1h5SxygFZK2rRRIrSu0Kbe2pGcFBZE8-zI_wCg5H1qME/edit#gid=740588976">accurately estimate projects</a></li>
           </ul>
         </section>
 
