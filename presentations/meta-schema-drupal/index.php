@@ -10,7 +10,7 @@
     <meta property="og:url" content="https://jimbir.ch/presentations/meta-schema-drupal/"/>
     <meta property="og:title" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | NEDCamp 2018"/>
     <meta property="og:description" content="This session reviews implementing Schema.org schemas for structured data and current best practice meta tags in Drupal."/>
-    <meta property="og:image" content="https://jimbir.ch/presentations/meta-schema-drupal/img/meta-schema-drupal-720.jpg"/>
+    <meta property="og:image" content="https://jimbir.ch/presentations/meta-schema-drupal/img/meta-schema-drupal-1280.jpg"/>
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:site" content="@thejimbirch"/>
     <meta name="twitter:site:id" content="2989027096"/>
@@ -19,10 +19,10 @@
     <meta name="twitter:url" content="https://jimbir.ch/presentations/meta-schema-drupal/"/>
     <meta name="twitter:title" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | NEDCamp 2018"/>
     <meta name="twitter:description" content="This session reviews implementing Schema.org schemas for structured data and current best practice meta tags in Drupal."/>
-    <meta name="twitter:image:src" content="https://jimbir.ch/presentations/meta-schema-drupal/img/meta-schema-drupal-720.jpg"/>
+    <meta name="twitter:image:src" content="https://jimbir.ch/presentations/meta-schema-drupal/img/meta-schema-drupal-1280.jpg"/>
     <meta itemprop="name" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | NEDCamp 2018"/>
     <meta itemprop="description" content="This session reviews implementing Schema.org schemas for structured data and current best practice meta tags in Drupal."/>
-    <meta itemprop="image" content="https://jimbir.ch/presentations/meta-schema-drupal/img/meta-schema-drupal-720.jpg"/>
+    <meta itemprop="image" content="https://jimbir.ch/presentations/meta-schema-drupal/img/meta-schema-drupal-1280.jpg"/>
     <meta name="author" content="Jim Birch">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
