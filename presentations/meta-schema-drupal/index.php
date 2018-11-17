@@ -222,7 +222,7 @@
   <body>
     <div class="reveal">
       <div class="fixed-footer">
-        <div class="fixed-footer__first"><a href="https://jimbir.ch/presentations/meta-schema-drupal/">jimbir.ch/meta-schema-drupal</a> <a href="https://www.twitter.com/thejimbirch" title="@thejimbirch">@thejimbirch</a> <a href="https://twitter.com/search?q=%23NEDCamp18">#NEDCamp18</a></div>
+        <div class="fixed-footer__first"><a href="https://jimbir.ch/presentations/meta-schema-drupal/">jimbir.ch/meta-schema-drupal</a> <a href="https://www.twitter.com/thejimbirch" title="@thejimbirch">@thejimbirch</a> <a href="https://twitter.com/search?q=%23NedCamp2018">#NedCamp2018</a></div>
         <div class="fixed-footer__second"><a href="https://www.kanopistudios.com/"><img src="img/kanopi-logo.png" alt="Kanopi Studios"></a></div>
       </div>
       <!-- Any section element inside of this container is displayed as a slide -->
