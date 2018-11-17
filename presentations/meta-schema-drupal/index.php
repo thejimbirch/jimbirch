@@ -2,13 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Meta and Schema: Defining the Content about your Content | Web Development Presentation | BADCamp 2018</title>
+    <title>Meta and Schema: Defining the Content about your Content | Web Development Presentation | NEDCamp 2018</title>
     <meta name="description" content="This session reviews implementing Schema.org schemas for structured data and current best practice meta tags in Drupal."/>
     <link rel="canonical" href="https://jimbir.ch/presentations/meta-schema-drupal/"/>
     <meta property="og:site_name" content="Jim Birch"/>
     <meta property="og:type" content="public_figure"/>
     <meta property="og:url" content="https://jimbir.ch/presentations/meta-schema-drupal/"/>
-    <meta property="og:title" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | BADCamp 2018"/>
+    <meta property="og:title" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | NEDCamp 2018"/>
     <meta property="og:description" content="This session reviews implementing Schema.org schemas for structured data and current best practice meta tags in Drupal."/>
     <meta property="og:image" content="https://jimbir.ch/presentations/meta-schema-drupal/img/meta-schema-drupal-720.jpg"/>
     <meta name="twitter:card" content="summary_large_image"/>
@@ -17,10 +17,10 @@
     <meta name="twitter:creator" content="@thejimbirch"/>
     <meta name="twitter:creator:id" content="2989027096"/>
     <meta name="twitter:url" content="https://jimbir.ch/presentations/meta-schema-drupal/"/>
-    <meta name="twitter:title" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | BADCamp 2018"/>
+    <meta name="twitter:title" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | NEDCamp 2018"/>
     <meta name="twitter:description" content="This session reviews implementing Schema.org schemas for structured data and current best practice meta tags in Drupal."/>
     <meta name="twitter:image:src" content="https://jimbir.ch/presentations/meta-schema-drupal/img/meta-schema-drupal-720.jpg"/>
-    <meta itemprop="name" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | BADCamp 2018"/>
+    <meta itemprop="name" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | NEDCamp 2018"/>
     <meta itemprop="description" content="This session reviews implementing Schema.org schemas for structured data and current best practice meta tags in Drupal."/>
     <meta itemprop="image" content="https://jimbir.ch/presentations/meta-schema-drupal/img/meta-schema-drupal-720.jpg"/>
     <meta name="author" content="Jim Birch">
@@ -222,7 +222,7 @@
   <body>
     <div class="reveal">
       <div class="fixed-footer">
-        <div class="fixed-footer__first"><a href="https://jimbir.ch/presentations/meta-schema-drupal/">jimbir.ch/meta-schema-drupal</a> <a href="https://www.twitter.com/thejimbirch" title="@thejimbirch">@thejimbirch</a> <a href="https://twitter.com/search?q=%23BADCamp18">#BADCamp18</a></div>
+        <div class="fixed-footer__first"><a href="https://jimbir.ch/presentations/meta-schema-drupal/">jimbir.ch/meta-schema-drupal</a> <a href="https://www.twitter.com/thejimbirch" title="@thejimbirch">@thejimbirch</a> <a href="https://twitter.com/search?q=%23NEDCamp18">#NEDCamp18</a></div>
         <div class="fixed-footer__second"><a href="https://www.kanopistudios.com/"><img src="img/kanopi-logo.png" alt="Kanopi Studios"></a></div>
       </div>
       <!-- Any section element inside of this container is displayed as a slide -->
@@ -231,7 +231,7 @@
           <h1 style="font-size: 2em; width: 72%;">Meta and Schema</h1>
           <h2 style="width: 72%;">Defining the Content about your Content</h1>
           <div class="box" style="width: 72%">
-            <img src="img/badcamp-logo.png" alt="BADCamp 2018" style="float: left; width: 160px; height: auto; margin: 0 20px 0 0;">
+            <img src="img/nedcamp--logo.jpeg" alt="NEDCamp 2018" style="float: left; width: 160px; height: auto; margin: 0 20px 0 0;">
             <p style="margin-top: 0;"><a href="https://jimbir.ch">Jim Birch</a><br>
             <a href="https://twitter.com/thejimbirch">@thejimbirch</a><br>
             <a href="https://jimbir.ch/presentations/meta-schema-drupal/">jimbir.ch/meta-schema-drupal</a></p>
@@ -964,7 +964,7 @@
           <h1 style="width: 72%">The End</h1>
           <h3 style="width: 72%">Continuing the conversation:</h3>
           <div class="box" style="width: 72%">
-            <img src="img/badcamp-logo.png" alt="BADCamp 2018" style="float: left; width: 160px; height: auto; margin: 0 20px 0 0;">
+            <img src="img/nedcamp--logo.jpeg" alt="NEDCamp 2018" style="float: left; width: 160px; height: auto; margin: 0 20px 0 0;">
             <p style="margin-top: 0;"><a href="https://jimbir.ch">Jim Birch</a><br>
             <a href="https://twitter.com/thejimbirch">@thejimbirch</a><br>
             <a href="https://jimbir.ch/presentations/meta-schema-drupal/">jimbir.ch/meta-schema-drupal</a></p>
