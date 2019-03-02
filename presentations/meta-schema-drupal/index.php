@@ -2,13 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Meta and Schema: Defining the Content about your Content | Web Development Presentation | NEDCamp 2018</title>
+    <title>Meta and Schema: Defining the Content about your Content | Web Development Presentation | NERD Summit 2019</title>
     <meta name="description" content="This session reviews implementing Schema.org schemas for structured data and current best practice meta tags in Drupal."/>
     <link rel="canonical" href="https://jimbir.ch/presentations/meta-schema-drupal/"/>
     <meta property="og:site_name" content="Jim Birch"/>
     <meta property="og:type" content="public_figure"/>
     <meta property="og:url" content="https://jimbir.ch/presentations/meta-schema-drupal/"/>
-    <meta property="og:title" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | NEDCamp 2018"/>
+    <meta property="og:title" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | NERD Summit 2019"/>
     <meta property="og:description" content="This session reviews implementing Schema.org schemas for structured data and current best practice meta tags in Drupal."/>
     <meta property="og:image" content="https://jimbir.ch/presentations/meta-schema-drupal/img/meta-schema-drupal-1280.jpg"/>
     <meta name="twitter:card" content="summary_large_image"/>
@@ -17,10 +17,10 @@
     <meta name="twitter:creator" content="@thejimbirch"/>
     <meta name="twitter:creator:id" content="2989027096"/>
     <meta name="twitter:url" content="https://jimbir.ch/presentations/meta-schema-drupal/"/>
-    <meta name="twitter:title" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | NEDCamp 2018"/>
+    <meta name="twitter:title" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | NERD Summit 2019"/>
     <meta name="twitter:description" content="This session reviews implementing Schema.org schemas for structured data and current best practice meta tags in Drupal."/>
     <meta name="twitter:image:src" content="https://jimbir.ch/presentations/meta-schema-drupal/img/meta-schema-drupal-1280.jpg"/>
-    <meta itemprop="name" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | NEDCamp 2018"/>
+    <meta itemprop="name" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | NERD Summit 2019"/>
     <meta itemprop="description" content="This session reviews implementing Schema.org schemas for structured data and current best practice meta tags in Drupal."/>
     <meta itemprop="image" content="https://jimbir.ch/presentations/meta-schema-drupal/img/meta-schema-drupal-1280.jpg"/>
     <meta name="author" content="Jim Birch">
@@ -222,7 +222,7 @@
   <body>
     <div class="reveal">
       <div class="fixed-footer">
-        <div class="fixed-footer__first"><a href="https://jimbir.ch/presentations/meta-schema-drupal/">jimbir.ch/meta-schema-drupal</a> <a href="https://www.twitter.com/thejimbirch" title="@thejimbirch">@thejimbirch</a> <a href="https://twitter.com/search?q=%23NedCamp2018">#NedCamp2018</a></div>
+        <div class="fixed-footer__first"><a href="https://jimbir.ch/presentations/meta-schema-drupal/">jimbir.ch/meta-schema-drupal</a> <a href="https://www.twitter.com/thejimbirch" title="@thejimbirch">@thejimbirch</a> <a href="https://twitter.com/search?q=%23nerds19">#nerds19</a></div>
         <div class="fixed-footer__second"><a href="https://www.kanopistudios.com/"><img src="img/kanopi-logo.png" alt="Kanopi Studios"></a></div>
       </div>
       <!-- Any section element inside of this container is displayed as a slide -->
@@ -231,16 +231,14 @@
           <h1 style="font-size: 2em; width: 72%;">Meta and Schema</h1>
           <h2 style="width: 72%;">Defining the Content about your Content</h1>
           <div class="box" style="width: 72%">
-            <img src="img/nedcamp--logo.jpeg" alt="NEDCamp 2018" style="float: left; width: 160px; height: auto; margin: 0 20px 0 0;">
+            <img src="img/nerd-summit--logo.png" alt="NERD Summit 2019" style="float: left; width: 160px; height: auto; margin: 0 20px 0 0;">
             <p style="margin-top: 0;"><a href="https://jimbir.ch">Jim Birch</a><br>
             <a href="https://twitter.com/thejimbirch">@thejimbirch</a><br>
             <a href="https://jimbir.ch/presentations/meta-schema-drupal/">jimbir.ch/meta-schema-drupal</a></p>
           </div>
         </section>
 
-        <section data-background="img/kanopi-workflow.svg" data-background="img/kanopi-logo-square.png" data-background-position="bottom 46px right" data-background-size="50%" data-transition="zoom-in fade-out">
-          <img src="img/kanopi-logo-square.png" alt="Kanopi Logo" style="border:none;width:10%;box-shadow:none;margin-top:-80px;">
-          <img src="img/kanopi-team.jpg" alt="Kanopi Team" style="border:none;box-shadow:none">
+        <section data-background="img/kanopi-team-2019-narrow.jpg" data-transition="zoom-in fade-out" data-background-size="contain">
         </section>
 
         <section>
@@ -720,13 +718,13 @@
           <h3>Inline</h3>
           <pre><code>
     <div itemscope itemtype="https://schema.org/SportsTeam">
-      <span itemprop="name">San Francisco 49ers</span>
+      <span itemprop="name">New England Patriots</span>
       <div itemprop="member" itemscope itemtype="https://schema.org/OrganizationRole">
         <div itemprop="member" itemscope itemtype="https://schema.org/Person">
-          <span itemprop="name">Joe Montana</span>
+          <span itemprop="name">Tom Brady</span>
         </div>
-        <span itemprop="startDate">1979</span>
-        <span itemprop="endDate">1992</span>
+        <span itemprop="startDate">2000</span>
+        <span itemprop="endDate">Never</span>
         <span itemprop="roleName">Quarterback</span>
       </div>
     </div>
@@ -737,13 +735,13 @@
           <h3>RDFa</h3>
           <pre><code>
     <div vocab="https://schema.org/" typeof="SportsTeam">
-      <span property="name">San Francisco 49ers</span>
+      <span property="name">New England Patriots</span>
       <div property="member" typeof="OrganizationRole">
         <div property="member" typeof="https://schema.org/Person">
-          <span property="name">Joe Montana</span>
+          <span property="name">Tom Brady</span>
         </div>
-        <span property="startDate">1979</span>
-        <span property="endDate">1992</span>
+        <span property="startDate">2000</span>
+        <span property="endDate">Never</span>
         <span property="roleName">Quarterback</span>
       </div>
     </div>
@@ -757,15 +755,15 @@
     {
       "@context": "https://schema.org",
       "@type": "SportsTeam",
-      "name": "San Francisco 49ers",
+      "name": "New England Patriots",
       "member": {
         "@type": "OrganizationRole",
         "member": {
           "@type": "Person",
-          "name": "Joe Montana"
+          "name": "Tom Brady"
         },
-        "startDate": "1979",
-        "endDate": "1992",
+        "startDate": "2000",
+        "endDate": "Never",
         "roleName": "Quarterback"
       }
     }
@@ -787,6 +785,7 @@
             <li>* Corporate Contact</li>
             <li>* Logo</li>
             <li>* Social Profile (sameAs)</li>
+            <li>Sitelinks Searchbox</li>
             <li>WebSite</li>
             <li>* SearchAction</li>
           </ul>
@@ -794,26 +793,34 @@
 
         <section>
           <h3>Content specific schemas</h3>
-          <ul>
-            <li>Article</li>
+          <ul style="columns: 2;-webkit-columns: 2;-moz-columns: 2;font-size: 80%;">
+            <li>Article / Carousel</li>
             <li>Book</li>
             <li>Course</li>
+            <li>Critic review</li>
             <li>Dataset</li>
-            <li>Events</li>
+            <li>Event</li>
             <li>Fact Check</li>
             <li>Job Posting</li>
+            <li>Livestream</li>
             <li>Local Business</li>
+            <li>Media Actions (Limited Access)</li>
             <li>Occupation</li>
             <li>Podcast</li>
             <li>Product</li>
+            <li>Q&A Page</li>
             <li>Recipe</li>
-            <li>Review</li>
+            <li>Review/Review snippet</li>
+            <li>Software App (Beta)</li>
+            <li>Speakable (Beta)</li>
+            <li>Subscription and paywalled content</li>
+            <li>Top Places List (Beta)</li>
             <li>Video</li>
           </ul>
         </section>
 
         <section>
-          <img src="img/logo-google.jpg" alt="Google" style="border:0;box-shadow:none;width:320px;">
+          <img src="img/logo-google.jpg" alt="Google" style="border:0;box-shadow:none;width:320px;margin-top:-80px">
           <h3>New/Beta features being added</h3>
           <ul>
             <li class="fragment"><a href="https://webmasters.googleblog.com/2018/07/hey-google-whats-latest-news.html">Speakable (Google Webmaster Central Blog)</a></li>
@@ -821,6 +828,8 @@
             <li class="fragment"><a href="https://searchengineland.com/google-confirms-new-faqs-qa-and-how-tos-for-search-results-snippets-303116">FAQs, Q&A and How-Tos (Search Engine Land)</a></li>
             <li class="fragment"><a href="https://developers.google.com/search/docs/data-types/top-places-list">Top Places List (No announcement)</a></li>
             <li class="fragment"><a href="https://webmasters.googleblog.com/2018/04/we-updated-our-job-posting-guidelines.html">JobPosting (Google Webmaster Central Blog)</a></li>
+            <li class="fragment"><a href="https://webmasters.googleblog.com/2018/12/introducing-indexing-api-and-structured.html">Livestream (Google Webmaster Central Blog)</a></li>
+            <li class="fragment"><a href="https://webmasters.googleblog.com/2018/12/rich-results-expands-for-question.html">Rich Results expands for Question & Answer pages (Google Webmaster Central Blog)</a></li>
           </ul>
         </section>
 
@@ -964,7 +973,7 @@
           <h1 style="width: 72%">The End</h1>
           <h3 style="width: 72%">Continuing the conversation:</h3>
           <div class="box" style="width: 72%">
-            <img src="img/nedcamp--logo.jpeg" alt="NEDCamp 2018" style="float: left; width: 160px; height: auto; margin: 0 20px 0 0;">
+            <img src="img/nerd-summit--logo.png" alt="NERD Summit 2019" style="float: left; width: 160px; height: auto; margin: 0 20px 0 0;">
             <p style="margin-top: 0;"><a href="https://jimbir.ch">Jim Birch</a><br>
             <a href="https://twitter.com/thejimbirch">@thejimbirch</a><br>
             <a href="https://jimbir.ch/presentations/meta-schema-drupal/">jimbir.ch/meta-schema-drupal</a></p>
