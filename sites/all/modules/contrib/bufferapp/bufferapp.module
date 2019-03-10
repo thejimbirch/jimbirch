@@ -1,70 +1,73 @@
 <?php
 
 /**
- * @file Main file for Bufferapp module
+ * @file
+ * Main file for Bufferapp module.
  */
-require_once 'lib/BufferPHP.inc';
+
+module_load_include('php', 'bufferapp', 'lib/BufferPHP');
+
+use jcnventura\BufferPHP\BufferPHP;
 
 /**
- * Implements  hook_menu().
+ * Implements hook_menu().
  */
 function bufferapp_menu() {
   $items = array();
 
   $items['admin/config/services/bufferapp'] = array(
-      'title' => ('Buffer'),
-      'description' => ('Set Buffer configurations.'),
-      'page callback' => 'drupal_get_form',
-      'page arguments' => array('bufferapp_settings_form'),
-      'access arguments' => array('administer site configuration'),
-      'type' => MENU_NORMAL_ITEM,
-      'file' => 'bufferapp.admin.inc',
+    'title' => ('Buffer'),
+    'description' => ('Set Buffer configurations.'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('bufferapp_settings_form'),
+    'access arguments' => array('administer site configuration'),
+    'type' => MENU_NORMAL_ITEM,
+    'file' => 'bufferapp.admin.inc',
   );
 
   return $items;
 }
 
 /**
- * Implements hook_permission.
+ * Implements hook_permission().
  */
 function bufferapp_permission() {
   return array(
-      'send bufferapp updates' => array(
-          'title' => t('Send Buffer updates'),
-          'description' => t('Send Buffer updates when user creates new publish nodes.'),
-      ),
+    'send bufferapp updates' => array(
+      'title' => t('Send Buffer updates'),
+      'description' => t('Send Buffer updates when user creates new publish nodes.'),
+    ),
   );
 }
 
 /**
- * Implements  hook_form_FORM_ID_alter().
+ * Implements hook_form_FORM_ID_alter().
  */
 function bufferapp_form_node_form_alter(&$form, $form_state) {
   $type = $form['#node']->type;
   if (variable_get('bufferapp_enable_' . $type) == 1 && !isset($form['nid']['#value'])) {
     $form['bufferapp'] = array(
-        '#access' => 1,
-        '#type' => 'fieldset',
-        '#title' => t('Bufferapp'),
-        '#group' => 'additional_settings',
-        '#collapsed' => TRUE,
-        '#coppapsible' => TRUE,
+      '#access' => 1,
+      '#type' => 'fieldset',
+      '#title' => t('Bufferapp'),
+      '#group' => 'additional_settings',
+      '#collapsed' => TRUE,
+      '#coppapsible' => TRUE,
     );
 
     $form['bufferapp']['bufferapp_enabled'] = array(
-        '#type' => 'checkbox',
-        '#title' => t('Send to Buffer'),
-        '#default_value' => 1,
+      '#type' => 'checkbox',
+      '#title' => t('Send to Buffer'),
+      '#default_value' => 1,
     );
 
     if (variable_get('bufferapp_share_schedulable_' . $type, 0) == 1) {
-
       $form['#validate'][] = 'buffer_node_submit_validate';
 
       $form['bufferapp']['bufferapp_scheduled'] = array(
-          '#type' => 'checkbox',
-          '#title' => t('Scheduled update'),
-          '#default_value' => 0,
+        '#type' => 'checkbox',
+        '#title' => t('Scheduled update'),
+        '#default_value' => 0,
       );
 
       $date_format = 'Y-m-d H:i';
@@ -75,32 +78,35 @@ function bufferapp_form_node_form_alter(&$form, $form_state) {
       $date_default_value = date($date_format);
 
       $form['bufferapp']['bufferapp_scheduled_at'] = array(
-          '#type' => $date_type,
-          '#date_format' => $date_format,
-          '#title' => t('Scheduled time'),
-          '#default_value' => $date_default_value,
-          '#size' => 10,
-          '#states' => array(
-              'visible' => array(
-                  ':input[name="bufferapp_scheduled"]' => array('checked' => TRUE),
-              ),
+        '#type' => $date_type,
+        '#date_format' => $date_format,
+        '#title' => t('Scheduled time'),
+        '#default_value' => $date_default_value,
+        '#size' => 10,
+        '#states' => array(
+          'visible' => array(
+            ':input[name="bufferapp_scheduled"]' => array('checked' => TRUE),
           ),
-          '#description' => t('Insert a date in the future for at least 1 our. ATTENCTION: if the "Share now" checkbox is enabled for this content type, it will be disabled for this node.'),
+        ),
+        '#description' => t('Insert a date in the future for at least 1 our. ATTENTION: if the "Share now" checkbox is enabled for this content type, it will be disabled for this node.'),
       );
     }
   }
 }
 
 /**
- * Add validation to submit form if scheduled is enabled
- * @param type $form
- * @param type $form_state
+ * Add validation to submit form if scheduled is enabled.
+ *
+ * @param mixed $form
+ *   Nested array of form elements that comprise the form.
+ * @param mixed $form_state
+ *   A keyed array containing the current state of the form.
  */
 function buffer_node_submit_validate($form, $form_state) {
   if ($form_state['values']['bufferapp_scheduled'] == 1) {
     $scheduled_at = $form_state['values']['bufferapp_scheduled_at'];
 
-    // Check if the scheduled date and time is in the future
+    // Check if the scheduled date and time is in the future.
     if (strtotime($scheduled_at) < strtotime(date('Y-m-d H:i') . '+ 59minutes')) {
       form_set_error('bufferapp_scheduled_at', t('Attenction, Bufferapp schedule time must be in the future at least for 1 our.'));
     }
@@ -111,93 +117,93 @@ function buffer_node_submit_validate($form, $form_state) {
  * Implements hook_form_FORM_ID_alter().
  */
 function bufferapp_form_node_type_form_alter(&$form, $form_state) {
-
   $form['bufferapp'] = array(
-      '#type' => 'fieldset',
-      '#group' => 'additional_settings',
-      '#title' => t('Buffer'),
-      '#collapsible' => TRUE,
-      '#collapsed' => FALSE,
+    '#type' => 'fieldset',
+    '#group' => 'additional_settings',
+    '#title' => t('Buffer'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
   );
 
   $node_type = $form['#node_type']->orig_type;
 
   $form['bufferapp']['bufferapp_enable'] = array(
-      '#type' => 'checkbox',
-      '#title' => t('Post updates'),
-      '#default_value' => variable_get('bufferapp_enable_' . $node_type, 0),
-      '#description' => t('Enable buffer update for every new pubished node.'),
+    '#type' => 'checkbox',
+    '#title' => t('Post updates'),
+    '#default_value' => variable_get('bufferapp_enable_' . $node_type, 0),
+    '#description' => t('Enable buffer update for every new pubished node.'),
   );
 
   $form['bufferapp']['bufferapp_share_now'] = array(
-      '#type' => 'checkbox',
-      '#title' => t('Share now'),
-      '#default_value' => variable_get('bufferapp_share_now_' . $node_type, 0),
-      '#description' => t('Send Buffer update immediatelly after the node is published'),
+    '#type' => 'checkbox',
+    '#title' => t('Share now'),
+    '#default_value' => variable_get('bufferapp_share_now_' . $node_type, 0),
+    '#description' => t('Send Buffer update immediatelly after the node is published'),
   );
 
   $form['bufferapp']['bufferapp_share_schedulable'] = array(
-      '#type' => 'checkbox',
-      '#title' => t('Scheduled'),
-      '#default_value' => variable_get('bufferapp_share_schedulable_' . $node_type, 0),
-      '#description' => t('Give users to add scheduled date and time for update. If user schedules date and time
+    '#type' => 'checkbox',
+    '#title' => t('Scheduled'),
+    '#default_value' => variable_get('bufferapp_share_schedulable_' . $node_type, 0),
+    '#description' => t('Give users to add scheduled date and time for update. If user schedules date and time
         the "Share now" option is disabled for that node.'),
   );
 
   $form['bufferapp']['bufferapp_text'] = array(
-      '#type' => 'textfield',
-      '#title' => t('Text'),
-      '#default_value' => variable_get('bufferapp_text_' . $node_type, '[node:title] - [node:url:absolute]'),
-      '#description' => t('Set text for update. This field accepts tokens (see replacements below)'),
+    '#type' => 'textfield',
+    '#title' => t('Text'),
+    '#default_value' => variable_get('bufferapp_text_' . $node_type, '[node:title] - [node:url:absolute]'),
+    '#description' => t('Set text for update. This field accepts tokens (see replacements below)'),
   );
 
   $form['bufferapp']['attachment'] = array(
-      '#title' => t('Attachment'),
-      '#type' => 'fieldset',
-      '#collapsible' => TRUE,
-      '#collapsed' => FALSE,
+    '#title' => t('Attachment'),
+    '#type' => 'fieldset',
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
   );
 
   $options = array(
-      'none' => t('No attachment'),
-      'link' => t('Link'),
-      'media' => t('Media (image)'),
+    'none' => t('No attachment'),
+    'link' => t('Link'),
+    'media' => t('Media (image)'),
   );
 
   $form['bufferapp']['attachment']['bufferapp_link'] = array(
-      '#type' => 'radios',
-      '#options' => $options,
-      '#requried' => TRUE,
-      '#default_value' => variable_get('bufferapp_link_' . $node_type, 'none'),
-      '#description' => t("Attach to Buffer update a link or an image. Link option doesn't works for Twitter profiles, so if you use Twitter profiles remember to add the node URL token for text."),
+    '#type' => 'radios',
+    '#options' => $options,
+    '#requried' => TRUE,
+    '#default_value' => variable_get('bufferapp_link_' . $node_type, 'none'),
+    '#description' => t("Attach to Buffer update a link or an image. Link option doesn't works for Twitter profiles, so if you use Twitter profiles remember to add the node URL token for text."),
   );
 
   $form['bufferapp']['attachment']['bufferapp_link_title'] = array(
-      '#type' => 'textfield',
-      '#title' => t('Title link'),
-      '#default_value' => variable_get('bufferapp_link_title_' . $node_type, '[node:title]'),
-      '#description' => t('Set text for update. This field accepts tokens (see replacements below).'),
-      '#states' => array(
-          'visible' => array(
-              ':input[name="bufferapp_link"]' => array('value' => 'link'),
-          ),
+    '#type' => 'textfield',
+    '#title' => t('Title link'),
+    '#default_value' => variable_get('bufferapp_link_title_' . $node_type, '[node:title]'),
+    '#description' => t('Set text for update. This field accepts tokens (see replacements below).'),
+    '#states' => array(
+      'visible' => array(
+        ':input[name="bufferapp_link"]' => array('value' => 'link'),
       ),
+    ),
   );
 
   $form['bufferapp']['attachment']['bufferapp_link_description'] = array(
-      '#type' => 'textarea',
-      '#title' => t('Description link'),
-      '#default_value' => variable_get('bufferapp_link_description_' . $node_type, '[node:summary]'),
-      '#description' => t('Set description for link. HTML tagas will be stripped.<br />This field accepts tokens (see replacements below).'),
-      '#states' => array(
-          'visible' => array(
-              ':input[name="bufferapp_link"]' => array('value' => 'link'),
-          ),
+    '#type' => 'textarea',
+    '#title' => t('Description link'),
+    '#default_value' => variable_get('bufferapp_link_description_' . $node_type, '[node:summary]'),
+    '#description' => t('Set description for link. HTML tagas will be stripped.<br />This field accepts tokens (see replacements below).'),
+    '#states' => array(
+      'visible' => array(
+        ':input[name="bufferapp_link"]' => array('value' => 'link'),
       ),
+    ),
   );
 
-  // Get images field for content type
+  // Get images field for content type.
   $instances = field_info_instances('node', $node_type);
+  $options_image = array();
   foreach ($instances as $field_name => $value) {
     $field = field_info_field($field_name);
     if ($field['type'] == 'image') {
@@ -206,20 +212,20 @@ function bufferapp_form_node_type_form_alter(&$form, $form_state) {
   }
 
   $form['bufferapp']['attachment']['bufferapp_link_media'] = array(
-      '#type' => 'select',
-      '#title' => t('Image field'),
-      '#options' => $options_image,
-      '#default_value' => variable_get('bufferapp_link_media_' . $node_type),
-      '#description' => t('Select image field for attachment (allowed only field of "image" type).'),
-      '#states' => array(
-          'visible' => array(
-              ':input[name="bufferapp_link"]' => array('value' => 'media'),
-          ),
+    '#type' => 'select',
+    '#title' => t('Image field'),
+    '#options' => $options_image,
+    '#default_value' => variable_get('bufferapp_link_media_' . $node_type),
+    '#description' => t('Select image field for attachment (allowed only field of "image" type).'),
+    '#states' => array(
+      'visible' => array(
+        ':input[name="bufferapp_link"]' => array('value' => 'media'),
       ),
+    ),
   );
 
-  // Get images styles
-  $image_styles = array('_none' => t('None'),);
+  // Get images styles.
+  $image_styles = array('_none' => t('None'));
   $styles = image_styles();
 
   foreach ($styles as $key => $value) {
@@ -227,58 +233,59 @@ function bufferapp_form_node_type_form_alter(&$form, $form_state) {
   }
 
   $form['bufferapp']['attachment']['bufferapp_link_media_image_style'] = array(
-      '#type' => 'select',
-      '#title' => t('Image style'),
-      '#options' => $image_styles,
-      '#default_value' => variable_get('bufferapp_link_media_image_style_' . $node_type),
-      '#description' => t('Select image style.'),
-      '#states' => array(
-          'visible' => array(
-              ':input[name="bufferapp_link"]' => array('value' => 'media'),
-          ),
+    '#type' => 'select',
+    '#title' => t('Image style'),
+    '#options' => $image_styles,
+    '#default_value' => variable_get('bufferapp_link_media_image_style_' . $node_type),
+    '#description' => t('Select image style.'),
+    '#states' => array(
+      'visible' => array(
+        ':input[name="bufferapp_link"]' => array('value' => 'media'),
       ),
+    ),
   );
 
   if (module_exists('token')) {
     $form['bufferapp']['token_help'] = array(
-        '#title' => t('Replacement patterns'),
-        '#type' => 'fieldset',
-        '#collapsible' => TRUE,
-        '#collapsed' => TRUE,
+      '#title' => t('Replacement patterns'),
+      '#type' => 'fieldset',
+      '#collapsible' => TRUE,
+      '#collapsed' => TRUE,
     );
 
     $form['bufferapp']['token_help']['help'] = array(
-        '#theme' => 'token_tree',
-        '#token_types' => array('site', 'node'),
+      '#theme' => 'token_tree',
+      '#token_types' => array('site', 'node'),
     );
   }
 }
 
 /**
- * Implements hook_node_insert
+ * Implements hook_node_insert().
  */
 function bufferapp_node_insert($node) {
-
   if (user_access('send bufferapp updates')
+          && isset($node->bufferapp_enabled)
           && $node->bufferapp_enabled == 1
           && $node->status == 1
           && variable_get('bufferapp_enable_' . $node->type) == 1) {
     $text = strip_tags(token_replace(variable_get('bufferapp_text_' . $node->type), array('node' => $node)));
 
-    // Prepare scheduled post
+    // Prepare scheduled post.
     $scheduled_at = FALSE;
     if (isset($node->bufferapp_scheduled) && $node->bufferapp_scheduled == 1) {
       $scheduled_at = strtotime($node->bufferapp_scheduled_at);
     }
-    // Prepare media array if enabled
+    // Prepare media array if enabled.
+    $media = array();
     $attachment = variable_get('bufferapp_link_' . $node->type, NULL);
     if (is_string($attachment) && $attachment != 'none') {
       switch ($attachment) {
         case 'link':
           $media = array(
-              'link' => url('node/' . $node->nid, array('absolute' => TRUE)),
-              'title' => token_replace(variable_get('bufferapp_link_title_' . $node->type), array('node' => $node)),
-              'description' => token_replace(variable_get('bufferapp_link_description_' . $node->type), array('node' => $node)),
+            'link' => url('node/' . $node->nid, array('absolute' => TRUE)),
+            'title' => token_replace(variable_get('bufferapp_link_title_' . $node->type), array('node' => $node)),
+            'description' => token_replace(variable_get('bufferapp_link_description_' . $node->type), array('node' => $node)),
           );
           break;
 
@@ -289,7 +296,7 @@ function bufferapp_node_insert($node) {
             $image = reset($image);
             $url_image = file_create_url($image->uri);
 
-            // Check if there is a image style
+            // Check if there is an image style.
             $image_style_name = variable_get('bufferapp_link_media_image_style_' . $node->type, FALSE);
             if (is_string($image_style_name)) {
               $image_style = image_style_load($image_style_name);
@@ -299,8 +306,8 @@ function bufferapp_node_insert($node) {
             }
 
             $media = array(
-                'thumbnail' => $url_image,
-                'picture' => $url_image,
+              'thumbnail' => $url_image,
+              'picture' => $url_image,
             );
           }
 
@@ -314,8 +321,10 @@ function bufferapp_node_insert($node) {
 }
 
 /**
- * Start Buffer connection
- * @return object
+ * Start Buffer connection.
+ *
+ * @return BufferPHP
+ *   Buffer connection.
  */
 function bufferapp_connection() {
   $bufferapp = new BufferPHP(variable_get('bufferapp_access_token'));
@@ -323,11 +332,15 @@ function bufferapp_connection() {
 }
 
 /**
- * Get Buffer profiles
- * @param object
- * @return array
+ * Get Buffer profiles.
+ *
+ * @param BufferPHP $bufferapp
+ *   Buffer connection.
+ *
+ * @return object
+ *   Buffer profiles.
  */
-function bufferapp_profiles($bufferapp = NULL) {
+function bufferapp_profiles(BufferPHP $bufferapp = NULL) {
   if (!$bufferapp) {
     $bufferapp = bufferapp_connection();
   }
@@ -335,15 +348,37 @@ function bufferapp_profiles($bufferapp = NULL) {
 }
 
 /**
- * Prepare data before sending to Buffer
- * See README.txt for more informations.
+ * Prepare data before sending to Buffer.
+ *
  * @param bool $send
+ *   If TRUE send update, if FALSE return a formatted $data array.
  * @param object $node
+ *   The object origins of data (useful when using HOOK_buffer_data_alter).
  * @param string $text
+ *   Text to publish (html tags will be automatically stripped).
  * @param array $media
- * @param bool $now 
+ *   An array that contains info about 'media'.
+ *   For images, $media must have two options:
+ *   $media = array(
+ *     'picture' => 'url-to-image',
+ *     'thumbnail' => 'url-to-thumb',
+ *   );
+ *   For links, $media must have "link" option and other options not mandatory:
+ *   $media = array(
+ *     'link' => 'link-url',
+ *     'title' => 'title of link',
+ *     'description' => 'description of link',
+ *     'picture' => 'url-to-image',
+ *   );.
+ * @param bool $now
+ *   If TRUE tells Buffer to publish immediately the update.
+ * @param int|bool $scheduled_at
+ *   If set, scheduled date time and time post (must be timestamp value).
+ *
+ * @return object|array
+ *   If send is TRUE, return the post result. Otherwise, return $data array.
  */
-function bufferapp_data($send = TRUE, $node = NULL, $text, $media = array(), $now = FALSE, $scheduled_at = FALSE) {
+function bufferapp_data($send = TRUE, $node = NULL, $text = '', array $media = array(), $now = FALSE, $scheduled_at = FALSE) {
   $data['text'] = $text;
   $data['media'] = $media;
   $data['now'] = $now;
@@ -353,7 +388,7 @@ function bufferapp_data($send = TRUE, $node = NULL, $text, $media = array(), $no
     $data['scheduled_at'] = $scheduled_at;
   }
 
-  // Get enabled profiles
+  // Get enabled profiles.
   $bufferapp_profiles = bufferapp_profiles();
   $bufferapp_enabled = variable_get('bufferapp_selected_profiles');
   foreach ($bufferapp_profiles as $profile) {
@@ -363,41 +398,47 @@ function bufferapp_data($send = TRUE, $node = NULL, $text, $media = array(), $no
   }
   $data['profile_ids'] = array_keys($bufferapp_enabled);
 
-  // Call hooks from other modules
+  // Call hooks from other modules.
   drupal_alter('bufferapp_data', $data, $node);
 
   if ($send) {
-    bufferapp_send_update($data);
-  } else {
+    return bufferapp_send_update($data);
+  }
+  else {
     return $data;
   }
 }
 
 /**
- * Send updates to Buffer
- * @param type $data
+ * Send updates to Buffer.
+ *
+ * @param array $data
+ *   Data to send to Buffer.
+ *
+ * @return object|null
+ *   If send is successful, return the post result. Otherwise return null.
  */
-function bufferapp_send_update($data) {
-
-  // Open Buffer connection
+function bufferapp_send_update(array $data) {
+  // Open Buffer connection.
   $bufferapp = bufferapp_connection();
 
-  $debug_mode = variable_get('bufferapp_debug', 0);
-
-  if ($debug_mode) {
-    watchdog('bufferapp', t('Debug: <pre>@print_r</pre>', array('@print_r', print_r($data, TRUE))));
-  } else {
-
-    // Send updates to Buffer
+  if (variable_get('bufferapp_debug', 0)) {
+    watchdog('bufferapp', 'Debug: <pre>!print_r</pre>', array('!print_r' => print_r($data, TRUE)));
+  }
+  else {
+    // Send updates to Buffer.
     $send = $bufferapp->post('updates/create', $data);
 
-    // Log send status, if enabled
-    $log_enabled = variable_get('bufferapp_log', FALSE);
-
-    if ($send->success && $log_enabled) {
-      watchdog('bufferapp', 'Sent Buffer update. Content: "@text"', array('@text' => $data['text']), WATCHDOG_INFO);
-    } else if (!$send->success && $log_enabled) {
-      watchdog('bufferapp', 'Buffer update not sent. Error: "@error"', array('@error' => $send->message), WATCHDOG_ERROR);
+    // Log send status, if enabled.
+    if (variable_get('bufferapp_log', FALSE)) {
+      if ($send->success) {
+        watchdog('bufferapp', 'Sent Buffer update. Content: "!text"', array('!text' => $data['text']), WATCHDOG_INFO);
+      }
+      else {
+        watchdog('bufferapp', 'Buffer update not sent. Error: "!error"', array('!error' => $send->message), WATCHDOG_ERROR);
+      }
     }
+    return $send;
   }
+  return NULL;
 }
