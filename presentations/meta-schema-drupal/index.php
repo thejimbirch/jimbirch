@@ -785,9 +785,8 @@
             <li>* Corporate Contact</li>
             <li>* Logo</li>
             <li>* Social Profile (sameAs)</li>
-            <li>Sitelinks Searchbox</li>
             <li>WebSite</li>
-            <li>* SearchAction</li>
+            <li>* Sitelinks Searchbox (SearchAction)</li>
           </ul>
         </section>
 
