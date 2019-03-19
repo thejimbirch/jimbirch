@@ -10,7 +10,7 @@
     <meta property="og:url" content="https://jimbir.ch/presentations/drupal-7-configuration-management/"/>
     <meta property="og:title" content="Drupal 8 style configuration management for Drupal 7 | Web Development Presentation"/>
     <meta property="og:description" content="This session reviews implementing the Features Builder module for Drupal 8 style configuration management in Drupal 7."/>
-    <meta property="og:image" content="https://jimbir.ch/presentations/drupal-7-configuration-management/img/meta-schema-drupal-1280.jpg"/>
+    <meta property="og:image" content="https://jimbir.ch/presentations/drupal-7-configuration-management/img/features-builder-presentation-1200.jpg"/>
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:site" content="@thejimbirch"/>
     <meta name="twitter:site:id" content="2989027096"/>
@@ -19,10 +19,10 @@
     <meta name="twitter:url" content="https://jimbir.ch/presentations/drupal-7-configuration-management/"/>
     <meta name="twitter:title" content="Drupal 8 style configuration management for Drupal 7 | Web Development Presentation"/>
     <meta name="twitter:description" content="This session reviews implementing the Features Builder module for Drupal 8 style configuration management in Drupal 7."/>
-    <meta name="twitter:image:src" content="https://jimbir.ch/presentations/drupal-7-configuration-management/img/meta-schema-drupal-1280.jpg"/>
+    <meta name="twitter:image:src" content="https://jimbir.ch/presentations/drupal-7-configuration-management/img/features-builder-presentation-1200.jpg"/>
     <meta itemprop="name" content="Drupal 8 style configuration management for Drupal 7 | Web Development Presentation"/>
     <meta itemprop="description" content="This session reviews implementing the Features Builder module for Drupal 8 style configuration management in Drupal 7."/>
-    <meta itemprop="image" content="https://jimbir.ch/presentations/drupal-7-configuration-management/img/meta-schema-drupal-1280.jpg"/>
+    <meta itemprop="image" content="https://jimbir.ch/presentations/drupal-7-configuration-management/img/features-builder-presentation-1200.jpg"/>
     <meta name="author" content="Jim Birch">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
