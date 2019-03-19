@@ -154,6 +154,7 @@ Redirect 301 /meta-schema-wp https://jimbir.ch/presentations/meta-schema-wp
 Redirect 301 /meta-schema-drupal https://jimbir.ch/presentations/meta-schema-drupal
 Redirect 301 /meta-schema https://jimbir.ch/presentations/meta-schema
 Redirect 301 /reuse https://jimbir.ch/presentations/reuse
+Redirect 301 /fb https://jimbir.ch/presentations/drupal-7-configuration-management
 
 #
 # from http://cgit.drupalcode.org/advagg/tree/README.txt#n556
