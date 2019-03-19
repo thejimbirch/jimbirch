@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * jb_seo.features.inc

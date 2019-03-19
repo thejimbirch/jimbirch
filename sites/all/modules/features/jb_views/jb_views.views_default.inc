@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * jb_views.views_default.inc

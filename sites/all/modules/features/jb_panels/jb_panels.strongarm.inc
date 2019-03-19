@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * jb_panels.strongarm.inc

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * jb_media.file_default_displays.inc

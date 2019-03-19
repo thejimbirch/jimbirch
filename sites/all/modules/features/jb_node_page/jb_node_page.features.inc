@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * jb_node_page.features.inc

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * jb_media.features.ckeditor_profile.inc

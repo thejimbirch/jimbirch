@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * jb_media.features.inc
@@ -162,6 +163,22 @@ function jb_media_image_default_styles() {
           'width' => 220,
           'height' => 220,
           'upscale' => 1,
+        ),
+        'weight' => 0,
+      ),
+    ),
+  );
+
+  // Exported image style: square_thumbnail.
+  $styles['square_thumbnail'] = array(
+    'label' => 'square_thumbnail',
+    'effects' => array(
+      1 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 100,
+          'height' => 100,
+          'weight' => 0,
         ),
         'weight' => 0,
       ),

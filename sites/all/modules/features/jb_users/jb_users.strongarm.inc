@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * jb_users.strongarm.inc

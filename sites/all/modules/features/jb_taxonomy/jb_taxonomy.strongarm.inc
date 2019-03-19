@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * jb_taxonomy.strongarm.inc

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * jb_users.features.user_permission.inc
@@ -113,6 +114,15 @@ function jb_users_user_default_permissions() {
       'Administrator' => 'Administrator',
     ),
     'module' => 'environment_indicator',
+  );
+
+  // Exported permission: 'access library reports'.
+  $permissions['access library reports'] = array(
+    'name' => 'access library reports',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'libraries',
   );
 
   // Exported permission: 'access media browser'.
@@ -530,12 +540,33 @@ function jb_users_user_default_permissions() {
     'module' => 'panels',
   );
 
+  // Exported permission: 'administer panels display styles'.
+  $permissions['administer panels display styles'] = array(
+    'name' => 'administer panels display styles',
+    'roles' => array(),
+    'module' => 'panels',
+  );
+
   // Exported permission: 'administer panels layouts'.
   $permissions['administer panels layouts'] = array(
     'name' => 'administer panels layouts',
     'roles' => array(
       'Administrator' => 'Administrator',
     ),
+    'module' => 'panels',
+  );
+
+  // Exported permission: 'administer panels pane styles'.
+  $permissions['administer panels pane styles'] = array(
+    'name' => 'administer panels pane styles',
+    'roles' => array(),
+    'module' => 'panels',
+  );
+
+  // Exported permission: 'administer panels region styles'.
+  $permissions['administer panels region styles'] = array(
+    'name' => 'administer panels region styles',
+    'roles' => array(),
     'module' => 'panels',
   );
 
@@ -1597,6 +1628,13 @@ function jb_users_user_default_permissions() {
       'Administrator' => 'Administrator',
     ),
     'module' => 'filter',
+  );
+
+  // Exported permission: 'use xmlsitemap'.
+  $permissions['use xmlsitemap'] = array(
+    'name' => 'use xmlsitemap',
+    'roles' => array(),
+    'module' => 'xmlsitemap',
   );
 
   // Exported permission: 'view any checklistapi checklist'.

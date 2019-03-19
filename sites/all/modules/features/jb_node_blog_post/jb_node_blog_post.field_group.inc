@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * jb_node_blog_post.field_group.inc

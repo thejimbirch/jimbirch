@@ -63,6 +63,7 @@ features[image][] = large
 features[image][] = linkit_thumb
 features[image][] = media_thumbnail
 features[image][] = medium
+features[image][] = square_thumbnail
 features[image][] = teaser
 features[image][] = thumbnail
 features[linkit_profiles][] = content_creator

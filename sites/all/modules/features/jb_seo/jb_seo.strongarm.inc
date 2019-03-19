@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * jb_seo.strongarm.inc
