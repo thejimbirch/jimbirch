@@ -206,6 +206,10 @@
       .diff .hljs-deletion, .hljs-string, .hljs-tag .hljs-value, .hljs-preprocessor, .hljs-pragma, .hljs-built_in, .sql .hljs-aggregate, .hljs-javadoc, .smalltalk .hljs-class, .smalltalk .hljs-localvars, .smalltalk .hljs-array, .css .hljs-rules .hljs-value, .hljs-attr_selector, .hljs-pseudo, .apache .hljs-cbracket, .tex .hljs-formula, .coffeescript .hljs-attribute {
         color: #fff;
       }
+
+      .coffeescript .javascript, .javascript .xml, .tex .hljs-formula, .xml .javascript, .xml .vbscript, .xml .css, .xml .hljs-cdata {
+        opacity: 1;
+      }
     </style>
 
     <script>
@@ -732,7 +736,8 @@
         </section>
 
         <section>
-          <h3>RDFa</h3>
+          <h3><a href="https://www.w3.org/TR/rdfa-primer/">RDFa</a></h3>
+          <p>Resource Description Framework in Attributes</p>
           <pre><code>
     <div vocab="https://schema.org/" typeof="SportsTeam">
       <span property="name">New England Patriots</span>
@@ -750,6 +755,7 @@
 
         <section>
           <h3>JSON-LD</h3>
+          <p>JavaScript Object Notation for Linked Data</p>
           <pre><code>
     <script type="application/ld+json">
     {
@@ -821,7 +827,8 @@
         <section>
           <img src="img/logo-google.jpg" alt="Google" style="border:0;box-shadow:none;width:320px;margin-top:-80px">
           <h3>New/Beta features being added</h3>
-          <ul>
+          <ul style="font-size: 80%;">
+            <li class="fragment"><a href="https://webmasters.googleblog.com/2019/03/help-google-search-know-best-date-for.html">datePublished and dateModified (Google Webmaster Central Blog)</a></li>
             <li class="fragment"><a href="https://webmasters.googleblog.com/2018/07/hey-google-whats-latest-news.html">Speakable (Google Webmaster Central Blog)</a></li>
             <li class="fragment"><a href="https://www.blog.google/outreach-initiatives/google-news-initiative/making-it-easier-discover-data-search/">Dataset (The Keyword Blog)</a></li>
             <li class="fragment"><a href="https://searchengineland.com/google-confirms-new-faqs-qa-and-how-tos-for-search-results-snippets-303116">FAQs, Q&A and How-Tos (Search Engine Land)</a></li>

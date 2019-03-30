@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Meta and Schema: Defining the Content about your Content | Web Development Presentation | WordCamp for Publishers 2018</title>
+    <title>Meta and Schema: Defining the Content about your Content | WordPress Web Development Presentation</title>
     <meta name="description" content="This session reviews implementing Schema.org schemas for structured data and current best practice meta tags in WordPress."/>
     <link rel="canonical" href="https://jimbir.ch/presentations/meta-schema-wp/"/>
     <!-- Open Graph. -->
     <meta property="og:site_name" content="Jim Birch"/>
     <meta property="og:type" content="public_figure"/>
     <meta property="og:url" content="https://jimbir.ch/presentations/meta-schema-wp/"/>
-    <meta property="og:title" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | WordCamp for Publishers 2018"/>
+    <meta property="og:title" content="Meta and Schema: Defining the Content about your Content | WordPress Web Development Presentation"/>
     <meta property="og:description" content="This session reviews implementing Schema.org schemas for structured data and current best practice meta tags in WordPress."/>
     <meta property="og:image" content="https://jimbir.ch/sites/default/files/img/presentations/presentation-meta-schema-wp-1200.jpg"/>
 
@@ -20,12 +20,12 @@
     <meta name="twitter:creator" content="@thejimbirch"/>
     <meta name="twitter:creator:id" content="2989027096"/>
     <meta name="twitter:url" content="https://jimbir.ch/presentations/meta-schema-wp/"/>
-    <meta name="twitter:title" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | WordCamp for Publishers 2018"/>
+    <meta name="twitter:title" content="Meta and Schema: Defining the Content about your Content | WordPress Web Development Presentation"/>
     <meta name="twitter:description" content="This session reviews implementing Schema.org schemas for structured data and current best practice meta tags in WordPress."/>
     <meta name="twitter:image:src" content="https://jimbir.ch/sites/default/files/img/presentations/presentation-meta-schema-wp-1200.jpg"/>
 
     <!-- Standard Meta. -->
-    <meta itemprop="name" content="Meta and Schema: Defining the Content about your Content | Web Development Presentation | WordCamp for Publishers 2018"/>
+    <meta itemprop="name" content="Meta and Schema: Defining the Content about your Content | WordPress Web Development Presentation"/>
     <meta itemprop="description" content="This session reviews implementing Schema.org schemas for structured data and current best practice meta tags in WordPress."/>
     <meta itemprop="image" content="https://jimbir.ch/sites/default/files/img/presentations/presentation-meta-schema-wp-1200.jpg"/>
     <meta name="author" content="Jim Birch">
@@ -74,7 +74,18 @@
       .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
         background: rgba(0, 0, 0, 0.7) none repeat scroll 0 0;
         color: #fff;
+        padding: 20px;
         text-shadow: 1px 1px 1px rgba(0,0,0,0.4)
+      }
+      .reveal h1 {
+        font-size: 1.5em;
+      }
+
+      .reveal .box {
+        background: rgba(0, 0, 0, 0.7) none repeat scroll 0 0;
+        color: #fff;
+        padding: 20px;
+        width: fit-content;
       }
 
       .reveal .box a,
@@ -145,7 +156,7 @@
 
       @media print {
         .fixed-footer {
-            display: none;
+          display: none;
         }
       }
 
@@ -191,7 +202,6 @@
       }
 
       .reveal pre code {
-        color: #fff;
         max-height: none;
       }
 
@@ -224,7 +234,7 @@
   <body>
     <div class="reveal">
       <div class="fixed-footer">
-        <div class="fixed-footer__first"><a href="https://jimbir.ch/presentations/meta-schema-wp/">jimbir.ch/meta-schema-wp</a> <a href="https://www.twitter.com/thejimbirch" title="@thejimbirch">@thejimbirch</a> <a href="https://twitter.com/search?q=%23wcpub">#wcpub</a></div>
+        <div class="fixed-footer__first"><a href="https://jimbir.ch/presentations/meta-schema-wp/">jimbir.ch/meta-schema-wp</a> <a href="https://www.twitter.com/thejimbirch" title="@thejimbirch">@thejimbirch</a></div>
         <div class="fixed-footer__second"><a href="https://www.kanopistudios.com/"><img src="img/kanopi-logo.png" alt="Kanopi Studios"></a></div>
       </div>
       <!-- Any section element inside of this container is displayed as a slide -->
@@ -232,14 +242,15 @@
         <section style="text-align:left;" data-background="img/Lego-Uncle-Jim-in-Iceland.jpg" data-transition="zoom">
           <h1 style="font-size:2.25em;padding-left:20px;">Meta and Schema</h1>
           <h2 style="padding-left:20px;width:70%">Defining the Content about your Content</h1>
-          <div style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.7);padding-left:20px;width:70%">
-            <img src="img/wordcamp-publishers-2018.png" alt="WordCamp for Publishers 2018" style="float: left; width: 130px; padding:10px;height: auto;"><br>
-            <div class="box" style="float: left;padding-left:20px;padding-bottom:20px;margin-top:-30px">
-              <a href="https://jimbir.ch">Jim Birch</a><br>
-              <a href="https://twitter.com/thejimbirch">@thejimbirch</a><br>
-              <a href="https://jimbir.ch/presentations/meta-schema-wp/">jimbir.ch/meta-schema-wp</a>
-            </div>
+          <div class="box" style="width: 70%;">
+            <img src="img/kanopi-logo-square.png" alt="Kanopi Studios" style="float: left; width: 160px; height: auto; margin: 0 20px 0 0; padding: 20px; background: #fff;">
+            <p style="margin-top: 0; padding-bottom:20px;"><a href="https://jimbir.ch">Jim Birch</a><br>
+            <a href="https://twitter.com/thejimbirch">@thejimbirch</a><br>
+            <a href="https://jimbir.ch/presentations/meta-schema-wp/">jimbir.ch/meta-schema-wp</a></p>
           </div>
+        </section>
+
+        <section data-background="img/kanopi-team-2019-narrow.jpg" data-transition="zoom-in fade-out" data-background-size="contain">
         </section>
 
         <section>
@@ -250,6 +261,44 @@
         <section>
           <h3>How does it look on others?</h3>
           <img src="img/meta-images-and-logos.jpg" alt="Screenshots of pages shared on social networks and search engine results">
+        </section>
+
+        <section>
+          <img src="img/logo--sparktoro.svg" alt="Sparktoro" style="border: 0; box-shadow: none; width: 320px;">
+          <blockquote>
+            <p>Reality: Google is a near-monopoly, with more than</p>
+            <p style="font-size: 8rem; font-weight: bold; line-height: .75;">90%</p>
+            <p>of web search volume</p>
+            <p style="font-size: 65%"><cite><a href="https://sparktoro.com/blog/2018-search-market-share-myths-vs-realities-of-google-bing-amazon-facebook-duckduckgo-more/">2018 Search Market Share: Myths vs. Realities of Google, Bing, Amazon, Facebook, DuckDuckGo, & More<br>Rand Fishkin, Sparktoro October 16th, 2018</a></cite></p>
+          </blockquote>
+        </section>
+
+        <section>
+          <img src="img/logo-google.jpg" alt="Google" style="border:0;box-shadow:none;width:320px;margin-top:-120px;">
+          <div style="min-height: 400px; height: 100%; position: relative;">
+            <img src="img/answer-1.png" alt="Google Answer" class="fragment" style="width:50%;height:auto;position:absolute;top:0;left:0;">
+            <img src="img/answer-2.png" alt="Google Answer" class="fragment" style="width:50%;height:auto;position:absolute;top:0;right:0;">
+            <img src="img/answer-3.png" alt="Google Answer" class="fragment" style="width:50%;height:auto;position:absolute;bottom:0;left:0;">
+            <img src="img/answer-4.png" alt="Google Answer" class="fragment" style="width:50%;height:auto;position:absolute;bottom:0;right:0;">
+            <img src="img/answer-5.png" alt="Google Answer" class="fragment" style="width:50%;height:auto;position:absolute;top:0;left:50%;">
+            <img src="img/answer-6.png" alt="Google Answer" class="fragment" style="width:30%;height:auto;position:absolute;top:0;left:25%;">
+            <img src="img/answer-7.png" alt="Google Answer" class="fragment" style="width:50%;height:auto;position:absolute;top:0;left:0;">
+            <img src="img/answer-8.png" alt="Google Answer" class="fragment" style="width:50%;height:auto;position:absolute;top:0;left:50%;">
+            <img src="img/answer-9.png" alt="Google Answer" class="fragment" style="width:50%;height:auto;position:absolute;bottom:0;left:0;">
+          </div>
+        </section>
+
+        <section data-background="img/devices-you-search-with-voice.jpg" data-background-position="center top">
+          <h3>What if there is only one search result?</h3>
+        </section>
+
+        <section>
+          <h3>Get in the game with meta data and structured markup</h3>
+          <img src="img/page-marked-up-w-schema.jpg" style="width: 60%;">
+        </section>
+
+        <section data-background="https://media.giphy.com/media/56Vd97ywRR2Cs/giphy.gif" class="image--byline">
+          <small><a href="https://giphy.com/gifs/cute-cats-bYUbS6XYDi3Ze">Image via GIPHY</a></small>
         </section>
 
         <section>
@@ -302,7 +351,7 @@
         </section>
 
         <section>
-          <h2 class="box"><a href="https://www.w3.org/TR/html/document-metadata.html#document-metadata">W3C HTML 5.2 Specification</a></h2>
+          <h2><a href="https://www.w3.org/TR/html/document-metadata.html#document-metadata">W3C HTML 5.2 Specification</a></h2>
           <h3>4.2. Document metadata</h3>
           <img src="img/W3C.svg" alt="W3C logo" style="width:240px;height:auto;border:none;border-radius:5px;">
           <div class="fragment">
@@ -722,16 +771,16 @@
         </section>
 
         <section>
-          <h3>Microdata</h3>
+          <h3>Inline</h3>
           <pre><code>
     <div itemscope itemtype="https://schema.org/SportsTeam">
-      <span itemprop="name">San Francisco 49ers</span>
+      <span itemprop="name">New England Patriots</span>
       <div itemprop="member" itemscope itemtype="https://schema.org/OrganizationRole">
         <div itemprop="member" itemscope itemtype="https://schema.org/Person">
-          <span itemprop="name">Joe Montana</span>
+          <span itemprop="name">Tom Brady</span>
         </div>
-        <span itemprop="startDate">1979</span>
-        <span itemprop="endDate">1992</span>
+        <span itemprop="startDate">2000</span>
+        <span itemprop="endDate">Never</span>
         <span itemprop="roleName">Quarterback</span>
       </div>
     </div>
@@ -743,13 +792,13 @@
           <p>Resource Description Framework in Attributes</p>
           <pre><code>
     <div vocab="https://schema.org/" typeof="SportsTeam">
-      <span property="name">San Francisco 49ers</span>
+      <span property="name">New England Patriots</span>
       <div property="member" typeof="OrganizationRole">
         <div property="member" typeof="https://schema.org/Person">
-          <span property="name">Joe Montana</span>
+          <span property="name">Tom Brady</span>
         </div>
-        <span property="startDate">1979</span>
-        <span property="endDate">1992</span>
+        <span property="startDate">2000</span>
+        <span property="endDate">Never</span>
         <span property="roleName">Quarterback</span>
       </div>
     </div>
@@ -764,15 +813,15 @@
     {
       "@context": "https://schema.org",
       "@type": "SportsTeam",
-      "name": "San Francisco 49ers",
+      "name": "New England Patriots",
       "member": {
         "@type": "OrganizationRole",
         "member": {
           "@type": "Person",
-          "name": "Joe Montana"
+          "name": "Tom Brady"
         },
-        "startDate": "1979",
-        "endDate": "1992",
+        "startDate": "2000",
+        "endDate": "Never",
         "roleName": "Quarterback"
       }
     }
@@ -795,39 +844,50 @@
             <li>* Logo</li>
             <li>* Social Profile (sameAs)</li>
             <li>WebSite</li>
-            <li>* SearchAction</li>
+            <li>* Sitelinks Searchbox (SearchAction)</li>
           </ul>
         </section>
 
         <section>
           <h3>Content specific schemas</h3>
-          <ul>
-            <li>Article</li>
+          <ul style="columns: 2;-webkit-columns: 2;-moz-columns: 2;font-size: 80%;">
+            <li>Article / Carousel</li>
             <li>Book</li>
             <li>Course</li>
-            <li>Dateset</li>
-            <li>Events</li>
+            <li>Critic review</li>
+            <li>Dataset</li>
+            <li>Event</li>
             <li>Fact Check</li>
             <li>Job Posting</li>
+            <li>Livestream</li>
             <li>Local Business</li>
+            <li>Media Actions (Limited Access)</li>
             <li>Occupation</li>
             <li>Podcast</li>
             <li>Product</li>
+            <li>Q&A Page</li>
             <li>Recipe</li>
-            <li>Review</li>
+            <li>Review/Review snippet</li>
+            <li>Software App (Beta)</li>
+            <li>Speakable (Beta)</li>
+            <li>Subscription and paywalled content</li>
+            <li>Top Places List (Beta)</li>
             <li>Video</li>
           </ul>
         </section>
 
         <section>
-          <img src="img/logo-google.jpg" alt="Google" style="border:0;box-shadow:none;width:320px;">
+          <img src="img/logo-google.jpg" alt="Google" style="border:0;box-shadow:none;width:320px;margin-top:-80px">
           <h3>New/Beta features being added</h3>
-          <ul>
+          <ul style="font-size: 80%;">
+            <li class="fragment"><a href="https://webmasters.googleblog.com/2019/03/help-google-search-know-best-date-for.html">datePublished and dateModified (Google Webmaster Central Blog)</a></li>
             <li class="fragment"><a href="https://webmasters.googleblog.com/2018/07/hey-google-whats-latest-news.html">Speakable (Google Webmaster Central Blog)</a></li>
             <li class="fragment"><a href="https://www.blog.google/outreach-initiatives/google-news-initiative/making-it-easier-discover-data-search/">Dataset (The Keyword Blog)</a></li>
             <li class="fragment"><a href="https://searchengineland.com/google-confirms-new-faqs-qa-and-how-tos-for-search-results-snippets-303116">FAQs, Q&A and How-Tos (Search Engine Land)</a></li>
             <li class="fragment"><a href="https://developers.google.com/search/docs/data-types/top-places-list">Top Places List (No announcement)</a></li>
             <li class="fragment"><a href="https://webmasters.googleblog.com/2018/04/we-updated-our-job-posting-guidelines.html">JobPosting (Google Webmaster Central Blog)</a></li>
+            <li class="fragment"><a href="https://webmasters.googleblog.com/2018/12/introducing-indexing-api-and-structured.html">Livestream (Google Webmaster Central Blog)</a></li>
+            <li class="fragment"><a href="https://webmasters.googleblog.com/2018/12/rich-results-expands-for-question.html">Rich Results expands for Question & Answer pages (Google Webmaster Central Blog)</a></li>
           </ul>
         </section>
 
@@ -841,7 +901,7 @@
           </ul>
         </section>
 
-        <section style="text-align: left;" data-background="img/Lego-Uncle-Jim-Diane-and-the-Cats.jpg" data-background-position="center bottom" data-transition="zoom">
+        <section style="text-align: left;" data-background="img/Lego-Uncle-Jim-at-Mini-Golfing.jpg" data-background-position="center top" data-transition="zoom">
           <h2 style="padding:20px;width:45%;">Implementing Schema.org in WordPress</h2>
         </section>
 
@@ -987,6 +1047,114 @@
         </section>
 
         <section>
+          <h3>Advanced Custom Fields (ACF)</h3>
+          <p>Add fields for global data using <code>wp_head</code></p>
+          <p><a href="https://css-tricks.com/working-with-schemas-wordpress/">Working with Schemas in WordPress by Pascal Klau</a><br>
+            <a href="https://github.com/PascalAOMS/wp-acf-schema-template">PascalAOMS/wp-acf-schema-template Github repository</a></p>
+        </section>
+
+        <section>
+          <h3>Advanced Custom Fields (ACF)</h3>
+          <p>Create a General options page.</p>
+          <pre><code>
+  // Create a General Options admin page
+  // `options_page` is going to be the name of ACF group we use to set up the fields
+  // We can use that as a conditional statement to create the page against
+  if (function_exists('acf_add_options_page')) {
+    acf_add_options_page(array(
+      'page_title' => 'General Options',
+      'menu_title' => 'General Options',
+      'menu_slug'  => 'general-options',
+      'capability' => 'edit_posts',
+      'redirect'   => false
+    ));
+  }
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>Advanced Custom Fields (ACF)</h3>
+          <p>Create the fields.</p>
+          <img src="https://res.cloudinary.com/css-tricks/image/upload/c_scale,w_763,f_auto,q_auto/v1504370790/schema-wordpress-custom-page_wqgoir.png" alt="Create a General options page">
+        </section>
+
+        <section>
+          <h3><code>wp_head</code></h3>
+          <p>Create the fields.</p>
+          <pre><code style="font-size: 80%;line-height: 1;">
+  // Using `wp_head` to inject to the document <head>
+  add_action('wp_head', function() {
+    $schema = array(
+      // Tell search engines that this is structured data
+      '@context'  => "http://schema.org",
+      // Tell search engines the content type it is looking at
+      '@type'     => get_field('schema_type', 'options'),
+      // Provide search engines with the site name and address
+      'name'      => get_bloginfo('name'),
+      'url'       => get_home_url(),
+      // Provide the company address
+      'telephone' => '+49' . get_field('company_phone', 'options'), //needs country code
+      'address'   => array(
+        '@type'           => 'PostalAddress',
+        'streetAddress'   => get_field('address_street', 'option'),
+        'postalCode'      => get_field('address_postal', 'option'),
+        'addressLocality' => get_field('address_locality', 'option'),
+        'addressRegion'   => get_field('address_region', 'option'),
+        'addressCountry'  => get_field('address_country', 'option')
+      )
+    );
+  }
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>The output</h3>
+          <pre><code style="font-size: 50%; line-height: 1.2;">
+  <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Store",
+    "name": "My Store",
+    "url": "https://my-domain.com",
+    "telephone": "+49 1234 567",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Musterstraße",
+        "postalCode": "13123",
+        "addressLocality": "Berlin",
+        "addressRegion": "Berlin",
+        "addressCountry": "Deutschland"
+    },
+    "sameAs": ["https://facebook.com/my-profile"],
+    "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Mo", "Tu", "We", "Th", "Fr"],
+        "opens": "07:00",
+        "closes": "20:00"
+    }, {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Sa", "Su"],
+        "opens": "00:00",
+        "closes": "00:00"
+    }, {
+        "@type": "OpeningHoursSpecification",
+        "validFrom": "2017-08-12",
+        "validThrough": "2017-08-12",
+        "opens": "10:00",
+        "closes": "12:00"
+    }],
+    "contactPoint": [{
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "telephone": "+491527381923",
+        "contactOption": ["HearingImpairedSupported"]
+    }]
+}
+</script>
+          </code></pre>
+        </section>
+
+        <section>
           <h3>Test and Verify</h3>
           <p><a href="https://search.google.com/structured-data/testing-tool/u/0/">Google Structured Data Testing Tool</a></p>
         </section>
@@ -1084,13 +1252,12 @@
         <section style="text-align: left;" data-background="img/Lego-Uncle-Jim-at-Sunset.jpg">
           <h1 style="padding-left:20px;">The End</h1>
           <h3 style="padding-left:20px;">Continuing the conversation:</h3>
-          <div style="color:#fff;display:inline-block;background: rgba(0, 0, 0, 0.7);padding-left:20px;width:70%">
-            <img src="img/wordcamp-publishers-2018.png" alt="WordCamp for Publishers 2018" style="float: left; width: 130px; padding:10px;height: auto;"><br>
-            <div class="box" style="float: left;padding-left:20px;margin-top:-30px">
-              <a href="https://jimbir.ch">Jim Birch</a><br>
-              <a href="https://twitter.com/thejimbirch">@thejimbirch</a><br>
-              <a href="https://jimbir.ch/presentations/meta-schema-wp/">jimbir.ch/meta-schema-wp</a>
-            </div>
+          <div class="box" style="width: 70%;">
+            <img src="img/kanopi-logo-square.png" alt="Kanopi Studios" style="float: left; width: 160px; height: auto; margin: 0 20px 0 0; padding: 20px; background: #fff;">
+            <p style="margin-top: 0; padding-bottom:20px;"><a href="https://jimbir.ch">Jim Birch</a><br>
+            <a href="https://twitter.com/thejimbirch">@thejimbirch</a><br>
+            <a href="https://jimbir.ch/presentations/meta-schema-wp/">jimbir.ch/meta-schema-wp</a></p>
+          </div>
         </section>
 
       </div>
