@@ -155,6 +155,9 @@ Redirect 301 /meta-schema-drupal https://jimbir.ch/presentations/meta-schema-dru
 Redirect 301 /meta-schema https://jimbir.ch/presentations/meta-schema
 Redirect 301 /reuse https://jimbir.ch/presentations/reuse
 Redirect 301 /fb https://jimbir.ch/presentations/drupal-7-configuration-management
+Redirect 301 /seo-ux https://docs.google.com/presentation/d/15q3yTr1i9Swz5PdVrEAx0leh3n-tXQQcba9wXiCqKqA
+Redirect 301 /drupal-images https://docs.google.com/presentation/d/1-S5Q1nwF3aqxIFv9a-plfUoYkEkfmeSqralGpBR7eJg
+Redirect 301 /seo-2020 https://docs.google.com/presentation/d/1yC2dNLAWef_rFmArfN64b11wRFmaecp0omnuOJcGB68/edit#slide=id.g6543e6bde4_0_780
 
 #
 # from http://cgit.drupalcode.org/advagg/tree/README.txt#n556
