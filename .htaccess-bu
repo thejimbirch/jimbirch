@@ -196,6 +196,23 @@ Redirect 301 /seo-2020 https://docs.google.com/presentation/d/1yC2dNLAWef_rFmArf
   </IfModule>
 </FilesMatch>
 
+# Permanent URL redirect
+Redirect 301 /optimizing https://jimbir.ch/presentations/optimizing-drupal-7-html-markup
+Redirect 301 /cmd https://jimbir.ch/presentations/command-line
+Redirect 301 /holistic-seo https://jimbir.ch/presentations/holistic-seo
+Redirect 301 /bsp https://jimbir.ch/presentations/bootstrap-paragraphs
+Redirect 301 /bp https://jimbir.ch/presentations/bootstrap-paragraphs
+Redirect 301 /meta-schema-wp https://jimbir.ch/presentations/meta-schema-wp
+Redirect 301 /meta-schema-drupal https://jimbir.ch/presentations/meta-schema-drupal
+Redirect 301 /meta-schema https://jimbir.ch/presentations/meta-schema
+Redirect 301 /reuse https://jimbir.ch/presentations/reuse
+Redirect 301 /fb https://jimbir.ch/presentations/drupal-7-configuration-management
+Redirect 301 /seo-ux https://docs.google.com/presentation/d/15q3yTr1i9Swz5PdVrEAx0leh3n-tXQQcba9wXiCqKqA
+Redirect 301 /drupal-images https://docs.google.com/presentation/d/1-S5Q1nwF3aqxIFv9a-plfUoYkEkfmeSqralGpBR7eJg
+Redirect 301 /seo-2020 https://docs.google.com/presentation/d/1yC2dNLAWef_rFmArfN64b11wRFmaecp0omnuOJcGB68/edit#slide=id.g6543e6bde4_0_780
+Redirect 301 /drupal-meta-tags https://docs.google.com/presentation/d/1q_vQFiqdFLwhpNLhQaBm05gPrHzOBdshSbQnqLhN8Vw/edit?usp=sharing
+Redirect 301 /winterwebinar https://docs.google.com/presentation/d/1q_vQFiqdFLwhpNLhQaBm05gPrHzOBdshSbQnqLhN8Vw/edit?usp=sharing
+
 # Force advagg .js file to have the type of application/javascript.
 <FilesMatch "^js__[A-Za-z0-9-_]{43}__[A-Za-z0-9-_]{43}__[A-Za-z0-9-_]{43}.js(\.gz)?">
   ForceType application/javascript
