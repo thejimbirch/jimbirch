@@ -161,7 +161,7 @@ Redirect 301 /seo-2020 https://docs.google.com/presentation/d/1yC2dNLAWef_rFmArf
 Redirect 301 /drupal-meta-tags https://docs.google.com/presentation/d/1q_vQFiqdFLwhpNLhQaBm05gPrHzOBdshSbQnqLhN8Vw/edit?usp=shar$
 Redirect 301 /winterwebinar https://docs.google.com/presentation/d/1kLd3fHk-cKWINLCS_kiUgAGG3-g9xcbZaQDPNT5fl-k/edit?usp=sharing
 Redirect 301 /drupal-tours https://docs.google.com/presentation/d/1j5QH4Jx6fSKLr5_dvZUhSWG0iAf_M4-4QVBhE6eAo_8/edit?usp=sharing
-
+Redirect 301 /drupal-tours-transcriptions https://thisten.co/jezcq/MMl9aKSQPXQolvSO0ytBKlJizgETkTslvZz5Kkg5
 #
 # from http://cgit.drupalcode.org/advagg/tree/README.txt#n556
 #
